@@ -45,7 +45,7 @@ eos
 end
 
 def check_version_manager
-  has_rvm = execute_command('rbenv -v')
+  has_rvm = execute_command('rvm -v')
   has_rbenv = execute_command('rbenv -v')
 
   puts grey('>> Checking for version manager...')
