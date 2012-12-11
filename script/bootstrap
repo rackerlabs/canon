@@ -5,7 +5,9 @@ require 'open3'
 REQUIRED_RUBY_VERSION = /1.9.*/
 
 def execute_command(command)
-  Open3.popen3(command)
+  Open3.popen3(command) do |stdin, stdout, stderr, thread|
+    thread.value
+  end
 rescue
   false
 end
