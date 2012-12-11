@@ -1,9 +1,5 @@
 #!/usr/bin/env ruby
 
-# Redirect command output to file.
-# Check for success before continuing.
-# Clean up log after success.
-
 require 'open3'
 
 REQUIRED_RUBY_VERSION = /1.9.*/
