@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'rack'
+require 'rack/contrib/try_static'
+require 'sprockets'
+require 'thin'
+
+root_path = File.expand_path('..', File.dirname(__FILE__))
+asset_path = File.expand_path('lib/canon', root_path)
+example_path = File.expand_path('examples', root_path)
+
+environment = Sprockets::Environment.new(root_path)
+environment.append_path(asset_path)
+
+app = Rack::Builder.new do
+  use Rack::Lint
+  use Rack::CommonLogger
+  use Rack::TryStatic, :urls => [''], :root => example_path, :index => 'index.html'
+
+  map '/assets' do
+    run environment
+  end
+end
+
+server = Thin::Server.new('0.0.0.0', 3000, app)
+server.start
