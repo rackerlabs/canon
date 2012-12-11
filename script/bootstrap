@@ -1,0 +1,89 @@
+#!/usr/bin/env ruby
+
+require 'open3'
+
+REQUIRED_RUBY_VERSION = /1.9.*/
+
+def execute_command(command)
+  Open3.popen3(command)
+rescue
+  false
+end
+
+def red(text)
+  "\e[31m#{text}\e[0m"
+end
+
+def green(text)
+  "\e[32m#{text}\e[0m"
+end
+
+def yellow(text)
+  "\e[33m#{text}\e[0m"
+end
+
+def grey(text)
+  "\e[37m#{text}\e[0m"
+end
+
+def show_welcome_message
+  puts <<-eos
+
+\e[36mWelcome to Canon!\e[0m
+
+Before you get started contributing to Canon, let's make sure that your
+development environment has all the necessary dependencies. This script will:
+
+  - Check for RVM or rbenv
+  - Check for Ruby 1.9.x
+  - Install Bundler + dependencies
+
+Press ENTER to continue.
+eos
+
+  gets
+end
+
+def check_version_manager
+  has_rvm = execute_command('rvm -v')
+  has_rbenv = execute_command('rbenv -v')
+
+  puts grey('>> Checking for version manager...')
+
+  unless has_rvm || has_rbenv
+    puts yellow("\n   You don't have a version manager installed. Proceed with caution.\n")
+  end
+end
+
+def check_ruby_version
+  puts grey('>> Checking Ruby version...')
+
+  unless REQUIRED_RUBY_VERSION.match(RUBY_VERSION)
+    abort red("\n   Canon requires Ruby 1.9.x. Please update Ruby and try again.\n")
+  end
+end
+
+def install_bundler
+  puts grey('>> Installing Bundler...')
+
+  execute_command('gem install bundler')
+end
+
+def install_gems
+  puts grey('>> Installing dependencies...')
+
+  execute_command('bundle install')
+end
+
+def show_completed_message
+  puts green("\nCanon setup completed successfully!\n")
+end
+
+show_welcome_message
+
+check_version_manager
+check_ruby_version
+install_bundler
+install_gems
+
+show_completed_message
