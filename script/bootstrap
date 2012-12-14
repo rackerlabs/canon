@@ -3,6 +3,7 @@
 require 'open3'
 
 REQUIRED_RUBY_VERSION = /1.9.*/
+REQUIRED_NODE_VERSION = /0.[678].*/
 
 def execute_command(command)
   Open3.popen3(command) do |stdin, stdout, stderr, thread|
@@ -38,7 +39,10 @@ development environment has all the necessary dependencies. This script will:
 
   - Check for RVM or rbenv
   - Check for Ruby 1.9.x
-  - Install Bundler + dependencies
+  - Check for Node 0.6.0 or higher
+  - Install Bundler
+  - Install Ruby dependencies
+  - Install Node dependencies
 
 Press ENTER to continue.
 eos
@@ -65,6 +69,14 @@ def check_ruby_version
   end
 end
 
+def check_node_version
+  puts grey('>> Checking Node version...')
+
+  unless REQUIRED_NODE_VERSION.match(%x[node -v])
+    abort red("\n   Canon required Node 0.6.0 or higher. Please update Node and try again.\n")
+  end
+end
+
 def install_bundler
   puts grey('>> Installing Bundler...')
 
@@ -72,9 +84,15 @@ def install_bundler
 end
 
 def install_gems
-  puts grey('>> Installing dependencies...')
+  puts grey('>> Installing Ruby dependencies...')
 
   execute_command('bundle install')
+end
+
+def install_packages
+  puts grey('>> Installing Node dependencies...')
+
+  execute_command('npm install')
 end
 
 def show_completed_message
@@ -85,7 +103,10 @@ show_welcome_message
 
 check_version_manager
 check_ruby_version
+check_node_version
+
 install_bundler
 install_gems
+install_packages
 
 show_completed_message
