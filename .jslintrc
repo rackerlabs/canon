@@ -1,0 +1,26 @@
+{
+  // Options
+  "camelcase": true,
+  "eqeqeq": true,
+  "forin": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "nonew": true,
+  "regexp": true,
+  "undef": true,
+  "unused": true,
+  "trailing": true,
+
+  // Environments
+  "browser": true,
+  "node": false,
+
+  // Predefined Variables
+  "predef": [
+    "exports",
+    "module",
+    "require"
+  ]
+}
