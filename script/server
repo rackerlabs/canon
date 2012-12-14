@@ -3,22 +3,26 @@
 require 'rack'
 require 'rack/contrib/try_static'
 require 'sprockets'
+require 'sprockets-less'
 require 'thin'
 
 root_path = File.expand_path('..', File.dirname(__FILE__))
-asset_path = File.expand_path('lib/canon', root_path)
-example_path = File.expand_path('examples', root_path)
 
-environment = Sprockets::Environment.new(root_path)
-environment.append_path(asset_path)
+sprockets = Sprockets::Environment.new(root_path)
+sprockets.append_path(File.expand_path('lib', root_path))
+sprockets.append_path(File.expand_path('vendor', root_path))
 
 app = Rack::Builder.new do
   use Rack::Lint
   use Rack::CommonLogger
-  use Rack::TryStatic, :urls => [''], :root => example_path, :index => 'index.html'
+  use Rack::TryStatic, {
+    :urls => [''],
+    :root => File.expand_path('examples', root_path),
+    :index => 'index.html'
+  }
 
   map '/assets' do
-    run environment
+    run sprockets
   end
 end
 

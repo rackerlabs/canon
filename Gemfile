@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'less-rails'
+gem 'libv8'
 gem 'rack'
 gem 'rack-contrib'
 gem 'rake'
 gem 'sprockets'
+gem 'sprockets-less'
+gem 'therubyracer'
 gem 'thin'
