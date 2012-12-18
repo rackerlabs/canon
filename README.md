@@ -4,6 +4,7 @@ canon
 ## SYSTEM REQUIREMENTS
 
 - Ruby 1.9.x
+- Node 0.6 or higher
 - [RVM](https://rvm.io) or [rbenv](https://github.com/sstephenson/rbenv) (Highly Recommended)
 
 ## SETUP
