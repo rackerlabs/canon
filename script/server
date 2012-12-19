@@ -3,7 +3,6 @@
 require 'rack'
 require 'rack/contrib/try_static'
 require 'sprockets'
-require 'sprockets-less'
 require 'thin'
 
 root_path = File.expand_path('..', File.dirname(__FILE__))
