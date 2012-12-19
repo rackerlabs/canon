@@ -1,8 +1,13 @@
 #!/usr/bin/env ruby
 
+# TODO: Setup sprite compilation with Compass.
+# TODO: Setup asset compilation with Compass.
+
+require 'compass'
 require 'rack'
 require 'rack/contrib/try_static'
 require 'sprockets'
+require 'sprockets/sass'
 require 'thin'
 
 root_path = File.expand_path('..', File.dirname(__FILE__))
