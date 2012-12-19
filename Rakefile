@@ -6,6 +6,12 @@ namespace :lint do
   task :javascripts do
     system('node_modules/.bin/jshint lib/canon/javascripts/ --show-non-errors')
   end
+
+  desc 'Lint stylesheets with Recess'
+  task :stylesheets => 'assets:compile' do
+    system('node_modules/.bin/recess build/*.css')
+    Rake::Task['assets:clean'].invoke
+  end
 end
 
 namespace :assets do
