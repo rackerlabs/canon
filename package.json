@@ -2,6 +2,7 @@
   "name": "canon",
   "version": "0.1.0",
   "dependencies": {
-    "jshint": "0.9.1"
+    "jshint": "0.9.1",
+    "recess": "1.1.6"
   }
 }
