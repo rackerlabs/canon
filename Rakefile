@@ -18,9 +18,16 @@ end
 namespace :assets do
   desc 'Compile all assets'
   task :compile => 'assets:clean' do
+    # Compile assets.
     FileUtils.mkdir(Canon.build_path)
     File.write(File.join(Canon.build_path, 'canon.js'), Canon.sprockets['canon.js'])
     File.write(File.join(Canon.build_path, 'canon.css'), Canon.sprockets['canon.css'])
+
+    # Minify assets.
+    Canon.sprockets.css_compressor = :yui
+    Canon.sprockets.js_compressor = :uglifier
+    File.write(File.join(Canon.build_path, 'canon.min.js'), Canon.sprockets['canon.js'])
+    File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.sprockets['canon.css'])
 
     FileList[Canon.images_path + '/*.png'].each do |image|
       FileUtils.copy(image, Canon.build_path)
