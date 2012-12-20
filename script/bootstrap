@@ -73,7 +73,7 @@ def check_node_version
   puts grey('>> Checking Node version...')
 
   unless REQUIRED_NODE_VERSION.match(%x[node -v])
-    abort red("\n   Canon required Node 0.6.0 or higher. Please update Node and try again.\n")
+    abort red("\n   Canon requires Node 0.6.0 or higher. Please update Node and try again.\n")
   end
 end
 
