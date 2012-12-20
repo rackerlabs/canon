@@ -1,13 +1,7 @@
 require 'compass'
 require 'sprockets'
 require 'sprockets/sass'
-
-Compass.configuration do |c|
-  c.project_path = File.expand_path('lib/canon', Dir.pwd)
-  c.images_dir = 'images'
-  c.javascripts_dir = 'javascripts'
-  c.sass_dir = 'stylesheets'
-end
+require File.expand_path('../lib/canon', __FILE__)
 
 namespace :lint do
   desc 'Lint javascripts with JSHint'
@@ -24,20 +18,14 @@ namespace :lint do
 end
 
 namespace :assets do
-  sprite_path = File.join(Dir.pwd, 'lib/canon/images')
-  build_path = File.join(Dir.pwd, 'build')
-  environment = Sprockets::Environment.new(Dir.pwd)
-  environment.append_path(File.join(Dir.pwd, 'lib/canon/images'))
-  environment.append_path(File.join(Dir.pwd, 'lib/canon/javascripts'))
-  environment.append_path(File.join(Dir.pwd, 'lib/canon/stylesheets'))
-  environment.append_path(File.join(Dir.pwd, 'vendor'))
-  manifest = Sprockets::Manifest.new(environment, build_path)
+  manifest = Sprockets::Manifest.new(Canon.sprockets, Canon.build_path)
 
   desc 'Compile all assets'
   task :compile do
     manifest.compile('canon.js', 'canon.css')
-    FileList[sprite_path + '/*.png'].each do |sprite|
-      FileUtils.copy(sprite, build_path)
+
+    FileList[Canon.images_path + '/*.png'].each do |image|
+      FileUtils.copy(image, Canon.build_path)
     end
   end
 
