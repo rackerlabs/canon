@@ -1,0 +1,11 @@
+@import "compass";
+@import "compass/reset";
+@import "glyphicons/*.png";
+
+@include all-glyphicons-sprites;
+
+body {
+  h1 {
+    color: red;
+  }
+}

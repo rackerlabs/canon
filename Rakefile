@@ -1,5 +1,7 @@
+require 'compass'
 require 'sprockets'
-require 'sprockets-less'
+require 'sprockets/sass'
+require File.expand_path('../lib/canon', __FILE__)
 
 namespace :lint do
   desc 'Lint javascripts with JSHint'
@@ -9,21 +11,20 @@ namespace :lint do
 
   desc 'Lint stylesheets with Recess'
   task :stylesheets => 'assets:compile' do
-    system('node_modules/.bin/recess build/*.css')
-    Rake::Task['assets:clean'].invoke
+    system('node_modules/.bin/csslint build/*.css --quiet')
   end
 end
 
 namespace :assets do
-  environment = Sprockets::Environment.new(Dir.pwd)
-  environment.append_path(File.join(Dir.pwd, 'lib/canon/javascripts'))
-  environment.append_path(File.join(Dir.pwd, 'lib/canon/stylesheets'))
-  environment.append_path(File.join(Dir.pwd, 'vendor'))
-  manifest = Sprockets::Manifest.new(environment, File.join(Dir.pwd, 'build'))
+  manifest = Sprockets::Manifest.new(Canon.sprockets, Canon.build_path)
 
   desc 'Compile all assets'
   task :compile do
     manifest.compile('canon.js', 'canon.css')
+
+    FileList[Canon.images_path + '/*.png'].each do |image|
+      FileUtils.copy(image, Canon.build_path)
+    end
   end
 
   desc 'Clean compiled assets'

@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'libv8'
+gem 'compass'
 gem 'rack'
 gem 'rack-contrib'
 gem 'rake'
 gem 'sprockets'
-gem 'sprockets-less'
-gem 'therubyracer'
+gem 'sprockets-sass'
 gem 'thin'

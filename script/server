@@ -1,28 +1,26 @@
 #!/usr/bin/env ruby
 
+# TODO: Relative asset paths for sprites.
+
+require 'compass'
 require 'rack'
 require 'rack/contrib/try_static'
 require 'sprockets'
-require 'sprockets-less'
+require 'sprockets/sass'
 require 'thin'
-
-root_path = File.expand_path('..', File.dirname(__FILE__))
-
-sprockets = Sprockets::Environment.new(root_path)
-sprockets.append_path(File.expand_path('lib', root_path))
-sprockets.append_path(File.expand_path('vendor', root_path))
+require File.expand_path('../../lib/canon', __FILE__)
 
 app = Rack::Builder.new do
   use Rack::Lint
   use Rack::CommonLogger
   use Rack::TryStatic, {
-    :urls => [''],
-    :root => File.expand_path('examples', root_path),
-    :index => 'index.html'
+    urls: [''],
+    root: Canon.examples_path,
+    index: 'index.html'
   }
 
   map '/assets' do
-    run sprockets
+    run Canon.sprockets
   end
 end
 
