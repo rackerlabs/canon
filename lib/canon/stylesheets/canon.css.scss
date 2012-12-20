@@ -1,9 +1,10 @@
 @import "compass";
+@import "compass/reset";
+
 @import "settings";
 @import "mixins";
-@import "compass/reset";
 @import "base";
 @import "layout";
-@import "glyphicons/*.png";
 
+@import "glyphicons/*.png";
 @include all-glyphicons-sprites;
