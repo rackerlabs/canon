@@ -1,11 +1,9 @@
 @import "compass";
+@import "settings";
+@import "mixins";
 @import "compass/reset";
+@import "base";
+@import "layout";
 @import "glyphicons/*.png";
 
 @include all-glyphicons-sprites;
-
-body {
-  h1 {
-    color: red;
-  }
-}
