@@ -10,6 +10,7 @@ module Canon
         c.images_dir = 'images'
         c.javascripts_dir = 'javascripts'
         c.sass_dir = 'stylesheets'
+        c.relative_assets = true
       end
 
       nil
