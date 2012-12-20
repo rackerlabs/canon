@@ -10,10 +10,8 @@ namespace :lint do
   end
 
   desc 'Lint stylesheets with Recess'
-  task :stylesheets do
-    Rake::Task['assets:compile'].invoke
+  task :stylesheets => 'assets:compile' do
     system('node_modules/.bin/csslint build/*.css --quiet')
-    Rake::Task['assets:clean'].invoke
   end
 end
 
