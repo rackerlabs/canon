@@ -3,6 +3,8 @@ require 'sprockets'
 require 'sprockets/sass'
 require File.expand_path('../lib/canon', __FILE__)
 
+CANON_ENV = ENV['CANON_ENV'] || 'development'
+
 namespace :assets do
   desc 'Compile all assets'
   task :compile => 'assets:clean' do
@@ -29,17 +31,27 @@ namespace :assets do
 end
 
 desc 'Lint javascripts and stylesheets'
-task :lint => ['lint:javascripts', 'lint:stylesheets']
+task :lint => ['lint:stylesheets', 'lint:javascripts']
 
 namespace :lint do
   desc 'Lint javascripts with JSHint'
   task :javascripts do
-    system('node_modules/.bin/jshint lib/canon/javascripts/ --show-non-errors')
+    jshint_command = 'node_modules/.bin/jshint lib/canon/javascripts/'
+    if (CANON_ENV == 'test')
+      jshint_command += ' --checkstyle-reporter > ' + Canon.build_path + '/jshint.xml'
+    end
+
+    system(jshint_command)
   end
 
-  desc 'Lint stylesheets with Recess'
+  desc 'Lint stylesheets with CSS Lint'
   task :stylesheets => 'assets:compile' do
-    system('node_modules/.bin/csslint build/*.css --quiet')
+    csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet'
+    if (CANON_ENV == 'test')
+      csslint_command += ' --format=checkstyle-xml > ' + Canon.build_path + '/csslint.xml'
+    end
+
+    system(csslint_command)
   end
 end
 
