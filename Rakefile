@@ -46,7 +46,7 @@ namespace :lint do
 
   desc 'Lint stylesheets with CSS Lint'
   task :stylesheets => 'assets:compile' do
-    csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet'
+    csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet --ignore="unique-headings"'
     if (CANON_ENV == 'test')
       csslint_command += ' --format=checkstyle-xml > ' + Canon.build_path + '/csslint.xml'
     end
