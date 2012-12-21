@@ -16,11 +16,18 @@ namespace :lint do
 end
 
 namespace :assets do
-  manifest = Sprockets::Manifest.new(Canon.sprockets, Canon.build_path)
-
   desc 'Compile all assets'
-  task :compile do
-    manifest.compile('canon.js', 'canon.css')
+  task :compile => 'assets:clean' do
+    # Compile assets.
+    FileUtils.mkdir(Canon.build_path)
+    File.write(File.join(Canon.build_path, 'canon.js'), Canon.sprockets['canon.js'])
+    File.write(File.join(Canon.build_path, 'canon.css'), Canon.sprockets['canon.css'])
+
+    # Minify assets.
+    Canon.sprockets.css_compressor = :yui
+    Canon.sprockets.js_compressor = :uglifier
+    File.write(File.join(Canon.build_path, 'canon.min.js'), Canon.sprockets['canon.js'])
+    File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.sprockets['canon.css'])
 
     FileList[Canon.images_path + '/*.png'].each do |image|
       FileUtils.copy(image, Canon.build_path)
@@ -29,6 +36,6 @@ namespace :assets do
 
   desc 'Clean compiled assets'
   task :clean do
-    manifest.clobber
+    FileUtils.remove_dir(Canon.build_path, true)
   end
 end
