@@ -5,29 +5,27 @@ require File.expand_path('../lib/canon', __FILE__)
 
 CANON_ENV = ENV['CANON_ENV'] || 'development'
 
-namespace :assets do
-  desc 'Compile all assets'
-  task :compile => 'assets:clean' do
-    # Compile assets.
-    FileUtils.mkdir(Canon.build_path)
-    File.write(File.join(Canon.build_path, 'canon.js'), Canon.sprockets['canon.js'])
-    File.write(File.join(Canon.build_path, 'canon.css'), Canon.sprockets['canon.css'])
+desc 'Compile all assets'
+task :compile => 'clean' do
+  # Compile assets.
+  FileUtils.mkdir(Canon.build_path)
+  File.write(File.join(Canon.build_path, 'canon.js'), Canon.sprockets['canon.js'])
+  File.write(File.join(Canon.build_path, 'canon.css'), Canon.sprockets['canon.css'])
 
-    # Minify assets.
-    Canon.sprockets.css_compressor = :yui
-    Canon.sprockets.js_compressor = :uglifier
-    File.write(File.join(Canon.build_path, 'canon.min.js'), Canon.sprockets['canon.js'])
-    File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.sprockets['canon.css'])
+  # Minify assets.
+  Canon.sprockets.css_compressor = :yui
+  Canon.sprockets.js_compressor = :uglifier
+  File.write(File.join(Canon.build_path, 'canon.min.js'), Canon.sprockets['canon.js'])
+  File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.sprockets['canon.css'])
 
-    FileList[Canon.images_path + '/*.png'].each do |image|
-      FileUtils.copy(image, Canon.build_path)
-    end
+  FileList[Canon.images_path + '/*.png'].each do |image|
+    FileUtils.copy(image, Canon.build_path)
   end
+end
 
-  desc 'Clean compiled assets'
-  task :clean do
-    FileUtils.remove_dir(Canon.build_path, true)
-  end
+desc 'Clean build output'
+task :clean do
+  FileUtils.remove_dir(Canon.build_path, true)
 end
 
 desc 'Lint javascripts and stylesheets'
@@ -45,7 +43,7 @@ namespace :lint do
   end
 
   desc 'Lint stylesheets with CSS Lint'
-  task :stylesheets => 'assets:compile' do
+  task :stylesheets => 'compile' do
     csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet --ignore="unique-headings"'
     if (CANON_ENV == 'test')
       csslint_command += ' --format=checkstyle-xml > ' + Canon.build_path + '/csslint.xml'
@@ -55,4 +53,4 @@ namespace :lint do
   end
 end
 
-task :default => ['assets:compile', 'lint']
+task :default => ['compile', 'lint']
