@@ -3,18 +3,6 @@ require 'sprockets'
 require 'sprockets/sass'
 require File.expand_path('../lib/canon', __FILE__)
 
-namespace :lint do
-  desc 'Lint javascripts with JSHint'
-  task :javascripts do
-    system('node_modules/.bin/jshint lib/canon/javascripts/ --show-non-errors')
-  end
-
-  desc 'Lint stylesheets with Recess'
-  task :stylesheets => 'assets:compile' do
-    system('node_modules/.bin/csslint build/*.css --quiet')
-  end
-end
-
 namespace :assets do
   desc 'Compile all assets'
   task :compile => 'assets:clean' do
@@ -39,3 +27,20 @@ namespace :assets do
     FileUtils.remove_dir(Canon.build_path, true)
   end
 end
+
+desc 'Lint javascripts and stylesheets'
+task :lint => ['lint:javascripts', 'lint:stylesheets']
+
+namespace :lint do
+  desc 'Lint javascripts with JSHint'
+  task :javascripts do
+    system('node_modules/.bin/jshint lib/canon/javascripts/ --show-non-errors')
+  end
+
+  desc 'Lint stylesheets with Recess'
+  task :stylesheets => 'assets:compile' do
+    system('node_modules/.bin/csslint build/*.css --quiet')
+  end
+end
+
+task :default => ['assets:compile', 'lint']
