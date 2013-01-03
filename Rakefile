@@ -46,10 +46,10 @@ namespace :lint do
     log('Linting javascripts') do
       jshint_command = 'node_modules/.bin/jshint lib/canon/javascripts/'
       if (CANON_ENV == 'test')
-        jslint_command += ' --checkstyle-reporter > ' + Canon.build_path + '/jshint.xml'
+        jshint_command += ' --checkstyle-reporter > ' + Canon.build_path + '/jshint.xml'
       end
 
-      system(jslint_command)
+      system(jshint_command)
     end
   end
 
