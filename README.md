@@ -18,3 +18,4 @@ Setting up your Canon development environment is easy:
 The Canon server is now running at http://0.0.0.0:3000. If you run into any issues, 
 check the [wiki](https://github.rackspace.com/canon/canon/wiki) or send an email to 
 canon@lists.rackspace.com.
+ 
