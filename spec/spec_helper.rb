@@ -10,5 +10,5 @@ end
 
 GreenOnion.configure do |config|
   config.driver = :selenium
-  config.threshold = 0
+  config.threshold = 0.5
 end
