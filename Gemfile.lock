@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.rackspace.com/michael-jackson/merlot.git
+  revision: 92ab857700a49c992592ecbeede742bc8a1ef5ba
+  specs:
+    merlot (2.0.0)
+      require_relative
+      selenium-webdriver (>= 2.24.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,6 +38,7 @@ GEM
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
     rake (10.0.2)
+    require_relative (1.0.3)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -70,6 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass
+  merlot!
   rack
   rack-contrib
   rake

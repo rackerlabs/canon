@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'compass'
+gem 'merlot', :git => 'git://github.rackspace.com/michael-jackson/merlot.git'
 gem 'rack'
 gem 'rack-contrib'
 gem 'rake'
