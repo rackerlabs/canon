@@ -1,3 +1,5 @@
 .sass-cache/
 build/
 node_modules/
+spec/skins/*_diff.png
+spec/skins/*_fresh.png
