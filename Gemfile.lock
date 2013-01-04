@@ -5,24 +5,57 @@ GEM
       Platform (>= 0.4.0)
       open4
     Platform (0.4.0)
+    addressable (2.3.2)
+    capybara (2.0.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 1.0.0)
+    childprocess (0.3.6)
+      ffi (~> 1.0, >= 1.0.6)
     chunky_png (1.2.6)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
     daemons (1.1.9)
+    diff-lcs (1.1.3)
     eventmachine (1.0.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    ffi (1.2.0)
     fssm (0.2.9)
     hike (1.2.1)
+    libwebsocket (0.1.7.1)
+      addressable
+      websocket
+    mime-types (1.19)
     multi_json (1.5.0)
+    nokogiri (1.5.6)
     open4 (1.3.0)
     rack (1.4.1)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
+    rack-test (0.6.2)
+      rack (>= 1.0)
     rake (10.0.2)
+    rspec (2.12.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+    rspec-core (2.12.2)
+    rspec-expectations (2.12.1)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.12.1)
+    rubyzip (0.9.9)
     sass (3.2.3)
+    selenium-webdriver (2.27.2)
+      childprocess (>= 0.2.5)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
+      rubyzip
     sprockets (2.8.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -39,6 +72,9 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    websocket (1.0.6)
+    xpath (1.0.0)
+      nokogiri (~> 1.3)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
 
@@ -46,10 +82,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
   compass
   rack
   rack-contrib
   rake
+  rspec
   sprockets (~> 2.8.2)
   sprockets-sass
   thin
