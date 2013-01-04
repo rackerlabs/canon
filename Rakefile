@@ -70,6 +70,11 @@ namespace :spec do
   RSpec::Core::RakeTask.new(:functional) do |t|
     t.pattern = 'spec/functional/**/*_spec.rb'
   end
+
+  desc 'Run screenshot tests'
+  RSpec::Core::RakeTask.new(:screenshot) do |t|
+    t.pattern = 'spec/screenshot/**/*_spec.rb'
+  end
 end
 
 task :default => ['compile', 'lint', 'spec:functional']
