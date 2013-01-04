@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'capybara'
 gem 'compass'
 gem 'rack'
 gem 'rack-contrib'
 gem 'rake'
 gem 'rspec'
+gem 'selenium-webdriver'
 gem 'sprockets', '~> 2.8.2'
 gem 'sprockets-sass'
 gem 'thin'
