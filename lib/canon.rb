@@ -1,4 +1,6 @@
 require 'compass'
+require 'rack'
+require 'rack/contrib/try_static'
 require 'sprockets'
 require 'sprockets/sass'
 
@@ -14,6 +16,22 @@ module Canon
       end
 
       nil
+    end
+
+    def app
+      @app ||= Rack::Builder.new do
+        use Rack::Lint
+        use Rack::CommonLogger
+        use Rack::TryStatic, {
+          urls: [''],
+          root: Canon.examples_path,
+          index: 'index.html'
+        }
+
+        map '/assets' do
+          run Canon.sprockets
+        end
+      end
     end
 
     def sprockets

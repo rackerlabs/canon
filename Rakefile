@@ -1,12 +1,11 @@
 require 'compass'
+require 'rspec/core/rake_task'
 require 'sprockets'
 require 'sprockets/sass'
 require File.expand_path('../lib/canon', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)
 
 CANON_ENV = ENV['CANON_ENV'] || 'development'
-
-# TODO: Environment debug mode.
 
 desc 'Compile all assets'
 task :compile => 'clean' do
@@ -45,7 +44,7 @@ namespace :lint do
   task :javascripts do
     log('Linting javascripts') do
       jshint_command = 'node_modules/.bin/jshint lib/canon/javascripts/'
-      if (CANON_ENV == 'test')
+      if CANON_ENV == 'test'
         jshint_command += ' --checkstyle-reporter > ' + Canon.build_path + '/jshint.xml'
       end
 
@@ -57,12 +56,19 @@ namespace :lint do
   task :stylesheets => 'compile' do
     log('Linting stylesheets') do
       csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet --ignore="unique-headings"'
-      if (CANON_ENV == 'test')
+      if CANON_ENV == 'test'
         csslint_command += ' --format=checkstyle-xml > ' + Canon.build_path + '/csslint.xml'
       end
 
       system(csslint_command)
     end
+  end
+end
+
+namespace :spec do
+  desc 'Run functional tests'
+  RSpec::Core::RakeTask.new(:functional) do |t|
+    t.pattern = 'spec/functional/**/*_spec.rb'
   end
 end
 
