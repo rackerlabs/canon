@@ -5,6 +5,7 @@ canon
 
 - Ruby 1.9.x
 - Node 0.6 or higher
+- ImageMagick 6.5.x or 6.6.x
 - [RVM](https://rvm.io) or [rbenv](https://github.com/sstephenson/rbenv) (Highly Recommended)
 
 ## SETUP
