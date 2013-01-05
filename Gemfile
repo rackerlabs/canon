@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'ci_reporter'
 gem 'compass'
 gem 'merlot', :git => 'git://github.rackspace.com/michael-jackson/merlot.git'
 gem 'rack'

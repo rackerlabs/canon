@@ -1,3 +1,4 @@
+require 'ci/reporter/rake/rspec'
 require 'compass'
 require 'rspec/core/rake_task'
 require 'sprockets'
@@ -64,6 +65,8 @@ namespace :lint do
 end
 
 namespace :spec do
+  Rake::Task['ci:setup:rspec'].invoke if Canon.environment == 'test'
+
   desc 'Run functional tests'
   RSpec::Core::RakeTask.new(:functional) do |t|
     t.pattern = 'spec/functional/**/*_spec.rb'
