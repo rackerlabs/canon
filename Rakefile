@@ -77,4 +77,4 @@ namespace :spec do
   end
 end
 
-task :default => ['compile', 'lint', 'spec:functional']
+task :default => ['compile', 'lint', 'spec:functional', 'spec:screenshot']
