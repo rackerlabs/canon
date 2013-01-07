@@ -76,6 +76,11 @@ namespace :spec do
     t.pattern = 'spec/functional/**/*_spec.rb'
   end
 
+  desc 'Run screenshot tests'
+  RSpec::Core::RakeTask.new(:screenshot) do |t|
+    t.pattern = 'spec/screenshot/**/*_spec.rb'
+  end
+
   desc 'Run unit tests'
   task :unit do
     url = 'http://0.0.0.0:3000/test'
@@ -90,4 +95,4 @@ namespace :spec do
   end
 end
 
-task :default => ['compile', 'lint', 'spec:unit', 'spec:functional']
+task :default => ['compile', 'lint', 'spec:unit', 'spec:functional', 'spec:screenshot']
