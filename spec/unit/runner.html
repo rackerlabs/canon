@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Canon | Unit Tests</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/mocha/mocha.css">
+
+  <script type="text/javascript" src="/assets/chai/chai.js"></script>
+  <script type="text/javascript" src="/assets/mocha/mocha.js"></script>
+  <script type="text/javascript" src="/assets/sinon/lib/sinon.js"></script>
+  <script type="text/javascript" src="/assets/sinon-chai/lib/sinon-chai.js"></script>
+
+  <script type="text/javascript">
+
+    var should;
+
+    mocha.reporter('html');
+    mocha.setup('bdd');
+
+    chai.Assertion.includeStack = true;
+
+    should = chai.should();
+  </script>
+
+  <script type="text/javascript" src="/assets/runner.js"></script>
+</head>
+<body>
+  <div id="mocha"></div>
+
+  <script type="text/javascript">
+    if (window.mochaPhantomJS) {
+      mochaPhantomJS.run();
+    }
+    else {
+      mocha.run();
+    }
+  </script>
+</body>
+</html>

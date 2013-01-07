@@ -31,6 +31,10 @@ module Canon
         map '/assets' do
           run Canon.sprockets
         end
+
+        map '/test' do
+          run Rack::File.new(File.join(Canon.root_path, 'spec/unit/runner.html'))
+        end
       end
     end
 
@@ -39,7 +43,14 @@ module Canon
         e.append_path(File.expand_path('images', library_path))
         e.append_path(File.expand_path('javascripts', library_path))
         e.append_path(File.expand_path('stylesheets', library_path))
+
+        e.append_path(File.expand_path('node_modules', root_path))
+        e.append_path(File.expand_path('spec/unit', root_path))
       end
+    end
+
+    def environment
+      ENV['CANON_ENV'] || 'development'
     end
 
     def root_path

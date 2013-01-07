@@ -1,3 +1,4 @@
+require 'ci/reporter/rake/rspec'
 require 'compass'
 require 'rspec/core/rake_task'
 require 'sprockets'
@@ -5,7 +6,11 @@ require 'sprockets/sass'
 require File.expand_path('../lib/canon', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)
 
-CANON_ENV = ENV['CANON_ENV'] || 'development'
+ENV['CI_REPORTS'] = Canon.build_path
+
+if Canon.environment == 'test'
+  Rake::Task['ci:setup:rspec'].invoke
+end
 
 desc 'Compile all assets'
 task :compile => 'clean' do
@@ -44,7 +49,7 @@ namespace :lint do
   task :javascripts do
     log('Linting javascripts') do
       jshint_command = 'node_modules/.bin/jshint lib/canon/javascripts/'
-      if CANON_ENV == 'test'
+      if Canon.environment == 'test'
         jshint_command += ' --checkstyle-reporter > ' + Canon.build_path + '/jshint.xml'
       end
 
@@ -56,7 +61,7 @@ namespace :lint do
   task :stylesheets => 'compile' do
     log('Linting stylesheets') do
       csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet --ignore="unique-headings"'
-      if CANON_ENV == 'test'
+      if Canon.environment == 'test'
         csslint_command += ' --format=checkstyle-xml > ' + Canon.build_path + '/csslint.xml'
       end
 
@@ -75,6 +80,19 @@ namespace :spec do
   RSpec::Core::RakeTask.new(:screenshot) do |t|
     t.pattern = 'spec/screenshot/**/*_spec.rb'
   end
+
+  desc 'Run unit tests'
+  task :unit do
+    url = 'http://0.0.0.0:3000/test'
+    reporter = Canon.environment == 'test' ? 'xunit' : 'dot'
+    mocha_command = "node_modules/.bin/mocha-phantomjs --reporter #{reporter} #{url}"
+
+    if Canon.environment == 'test'
+      mocha_command += ' > ' + Canon.build_path + '/unit.xml'
+    end
+
+    system(mocha_command)
+  end
 end
 
-task :default => ['compile', 'lint', 'spec:functional', 'spec:screenshot']
+task :default => ['compile', 'lint', 'spec:unit', 'spec:functional', 'spec:screenshot']
