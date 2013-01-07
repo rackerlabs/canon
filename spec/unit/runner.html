@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+
   <title>Canon | Unit Tests</title>
 
   <link rel="stylesheet" type="text/css" href="/assets/mocha/mocha.css">
@@ -11,12 +13,15 @@
   <script type="text/javascript" src="/assets/sinon-chai/lib/sinon-chai.js"></script>
 
   <script type="text/javascript">
+
+    var should;
+
     mocha.reporter('html');
     mocha.setup('bdd');
 
     chai.Assertion.includeStack = true;
 
-    window.should = chai.should();
+    should = chai.should();
   </script>
 
   <script type="text/javascript" src="/assets/runner.js"></script>
@@ -25,7 +30,12 @@
   <div id="mocha"></div>
 
   <script type="text/javascript">
-    mocha.run();
+    if (window.mochaPhantomJS) {
+      mochaPhantomJS.run();
+    }
+    else {
+      mocha.run();
+    }
   </script>
 </body>
 </html>
