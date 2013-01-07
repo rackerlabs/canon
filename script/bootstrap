@@ -4,6 +4,7 @@ require 'open3'
 
 REQUIRED_RUBY_VERSION = /1.9.*/
 REQUIRED_NODE_VERSION = /0.[678].*/
+REQUIRED_PHANTOM_JS_VERSION = /1.[78].*/
 
 def execute_command(command)
   Open3.popen3(command) do |stdin, stdout, stderr, thread|
@@ -40,6 +41,7 @@ development environment has all the necessary dependencies. This script will:
   - Check for RVM or rbenv
   - Check for Ruby 1.9.x
   - Check for Node 0.6.0 or higher
+  - Check for PhantomJS 1.7.0 or higher
   - Install Bundler
   - Install Ruby dependencies
   - Install Node dependencies
@@ -77,6 +79,14 @@ def check_node_version
   end
 end
 
+def check_phantom_js_version
+  puts grey('>> Checking PhantomJS version...')
+
+  unless REQUIRED_PHANTOM_JS_VERSION.match(%x[phantomjs -v])
+    abort red("\n   Canon requires PhantomJS 1.7.0 or higher. Please update PhantomJS and try again.\n")
+  end
+end
+
 def install_bundler
   puts grey('>> Installing Bundler...')
 
@@ -104,6 +114,7 @@ show_welcome_message
 check_version_manager
 check_ruby_version
 check_node_version
+check_phantom_js_version
 
 install_bundler
 install_gems

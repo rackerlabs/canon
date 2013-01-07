@@ -6,6 +6,12 @@ require 'sprockets/sass'
 require File.expand_path('../lib/canon', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)
 
+ENV['CI_REPORTS'] = Canon.build_path
+
+if Canon.environment == 'test'
+  Rake::Task['ci:setup:rspec'].invoke
+end
+
 desc 'Compile all assets'
 task :compile => 'clean' do
   log('Compiling assets') do
@@ -65,12 +71,23 @@ namespace :lint do
 end
 
 namespace :spec do
-  Rake::Task['ci:setup:rspec'].invoke if Canon.environment == 'test'
-
   desc 'Run functional tests'
   RSpec::Core::RakeTask.new(:functional) do |t|
     t.pattern = 'spec/functional/**/*_spec.rb'
   end
+
+  desc 'Run unit tests'
+  task :unit do
+    url = 'http://0.0.0.0:3000/test'
+    reporter = Canon.environment == 'test' ? 'xunit' : 'dot'
+    mocha_command = "node_modules/.bin/mocha-phantomjs --reporter #{reporter} #{url}"
+
+    if Canon.environment == 'test'
+      mocha_command += ' > ' + Canon.build_path + '/unit.xml'
+    end
+
+    system(mocha_command)
+  end
 end
 
-task :default => ['compile', 'lint', 'spec:functional']
+task :default => ['compile', 'lint', 'spec:unit', 'spec:functional']
