@@ -6,6 +6,7 @@ require 'sprockets/sass'
 
 require File.expand_path('../lib/canon', __FILE__)
 require File.expand_path('../lib/tasks/csslint_task', __FILE__)
+require File.expand_path('../lib/tasks/jshint_task', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)
 
 desc 'Compile all assets'
@@ -41,15 +42,13 @@ desc 'Lint javascripts and stylesheets'
 task :lint => ['lint:stylesheets', 'lint:javascripts']
 
 namespace :lint do
-  desc 'Lint javascripts with JSHint'
-  task :javascripts do
-    log('Linting javascripts') do
-      jshint_command = 'node_modules/.bin/jshint lib/canon/javascripts/'
-      if Canon.environment == 'test'
-        jshint_command += ' --checkstyle-reporter > ' + Canon.build_path + '/jshint.xml'
-      end
+  JSHintTask.new(:javascripts) do |t|
+    t.binary = 'node_modules/.bin/jshint'
+    t.pattern = 'lib/canon/javascripts/'
 
-      system(jshint_command)
+    if Canon.environment == 'test'
+      t.reporter = 'checkstyle-reporter'
+      t.output = File.join(Canon.build_path, 'jshint.xml')
     end
   end
 
