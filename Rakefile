@@ -3,7 +3,9 @@ require 'compass'
 require 'rspec/core/rake_task'
 require 'sprockets'
 require 'sprockets/sass'
+
 require File.expand_path('../lib/canon', __FILE__)
+require File.expand_path('../lib/tasks/csslint_task', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)
 
 desc 'Compile all assets'
@@ -51,15 +53,15 @@ namespace :lint do
     end
   end
 
-  desc 'Lint stylesheets with CSS Lint'
-  task :stylesheets => 'compile' do
-    log('Linting stylesheets') do
-      csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet --ignore="unique-headings"'
-      if Canon.environment == 'test'
-        csslint_command += ' --format=checkstyle-xml > ' + Canon.build_path + '/csslint.xml'
-      end
+  CSSLintTask.new(:stylesheets => :compile) do |t|
+    t.binary = 'node_modules/.bin/csslint'
+    t.pattern = 'build/*.css'
+    t.quiet = true
+    t.ignore << 'unique-headings'
 
-      system(csslint_command)
+    if Canon.environment == 'test'
+      t.format = 'checkstyle-xml'
+      t.output = File.join(Canon.build_path, 'csslint.xml')
     end
   end
 end
