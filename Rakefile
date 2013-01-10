@@ -44,7 +44,7 @@ task :lint => ['lint:stylesheets', 'lint:javascripts']
 namespace :lint do
   JSHintTask.new(:javascripts) do |t|
     t.binary = 'node_modules/.bin/jshint'
-    t.pattern = 'lib/canon/javascripts/'
+    t.pattern = 'lib/canon/javascripts/ spec/unit/'
 
     if Canon.environment == 'test'
       t.reporter = 'checkstyle-reporter'
