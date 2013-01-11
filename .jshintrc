@@ -21,6 +21,8 @@
   "predef": [
     "exports",
     "module",
-    "require"
+    "require",
+    "describe",
+    "it"
   ]
 }

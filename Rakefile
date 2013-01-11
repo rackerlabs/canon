@@ -3,7 +3,10 @@ require 'compass'
 require 'rspec/core/rake_task'
 require 'sprockets'
 require 'sprockets/sass'
+
 require File.expand_path('../lib/canon', __FILE__)
+require File.expand_path('../lib/tasks/csslint_task', __FILE__)
+require File.expand_path('../lib/tasks/jshint_task', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)
 
 desc 'Compile all assets'
@@ -39,27 +42,25 @@ desc 'Lint javascripts and stylesheets'
 task :lint => ['lint:stylesheets', 'lint:javascripts']
 
 namespace :lint do
-  desc 'Lint javascripts with JSHint'
-  task :javascripts do
-    log('Linting javascripts') do
-      jshint_command = 'node_modules/.bin/jshint lib/canon/javascripts/'
-      if Canon.environment == 'test'
-        jshint_command += ' --checkstyle-reporter > ' + Canon.build_path + '/jshint.xml'
-      end
+  JSHintTask.new(:javascripts) do |t|
+    t.binary = 'node_modules/.bin/jshint'
+    t.pattern = 'lib/canon/javascripts/ spec/unit/'
 
-      system(jshint_command)
+    if Canon.environment == 'test'
+      t.reporter = 'checkstyle-reporter'
+      t.output = File.join(Canon.build_path, 'jshint.xml')
     end
   end
 
-  desc 'Lint stylesheets with CSS Lint'
-  task :stylesheets => 'compile' do
-    log('Linting stylesheets') do
-      csslint_command = 'node_modules/.bin/csslint build/canon.css --quiet --ignore="unique-headings"'
-      if Canon.environment == 'test'
-        csslint_command += ' --format=checkstyle-xml > ' + Canon.build_path + '/csslint.xml'
-      end
+  CSSLintTask.new(:stylesheets => :compile) do |t|
+    t.binary = 'node_modules/.bin/csslint'
+    t.pattern = 'build/*.css'
+    t.quiet = true
+    t.ignore << 'unique-headings'
 
-      system(csslint_command)
+    if Canon.environment == 'test'
+      t.format = 'checkstyle-xml'
+      t.output = File.join(Canon.build_path, 'csslint.xml')
     end
   end
 end
