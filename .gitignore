@@ -1,6 +1,7 @@
 .sass-cache/
 build/
 node_modules/
+package/
 spec/reports/
 spec/skins/*_diff.png
 spec/skins/*_fresh.png
