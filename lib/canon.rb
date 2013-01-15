@@ -5,6 +5,8 @@ require 'sprockets'
 require 'sprockets/sass'
 
 module Canon
+  VERSION = '0.1.0'
+
   class << self
     def configure!
       Compass.configuration do |c|

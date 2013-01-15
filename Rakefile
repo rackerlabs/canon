@@ -1,5 +1,6 @@
 require 'ci/reporter/rake/rspec'
 require 'compass'
+require 'fog'
 require 'rspec/core/rake_task'
 require 'sprockets'
 require 'sprockets/sass'
@@ -89,6 +90,27 @@ namespace :spec do
     end
 
     system(mocha_command)
+  end
+end
+
+task :release do
+  if Canon.environment != 'test'
+    puts "\e[31mRelease should only happen in the test environment!\e[0m"
+    exit
+  end
+
+  connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['CANON_USERNAME'], :rackspace_api_key => ENV['CANON_API_KEY'])
+  directory = connection.directories.get('cdn.canon.rackspace.com')
+
+  files_to_upload = Dir.glob('build/*.css') + Dir.glob('build/*.js')
+  files_to_upload.each do |file|
+    base_name = File.basename(file)
+    versioned_name = "#{Canon::VERSION}/#{base_name}"
+
+    log("Uploading #{base_name} to CDN") do
+      raise "#{base_name} already exists!" if directory.files.head(versioned_name)
+      directory.files.create(:key => versioned_name, :body => File.open(file), :public => true)
+    end
   end
 end
 
