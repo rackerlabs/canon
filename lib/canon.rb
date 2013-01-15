@@ -82,6 +82,10 @@ module Canon
     def stylesheets_path
       File.join(library_path, 'stylesheets')
     end
+
+    def package_path
+      File.join(root_path, 'package')
+    end
   end
 end
 
