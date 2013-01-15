@@ -110,28 +110,16 @@ task :release do
   end
 
   connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['CANON_USERNAME'], :rackspace_api_key => ENV['CANON_API_KEY'])
-  cdn_directory = connection.directories.get('cdn.canon.rackspace.com')
-  download_directory = connection.directories.get('downloads.canon.rackspace.com')
+  directory = connection.directories.get('cdn.canon.rackspace.com')
 
-  files_to_upload = Dir.glob('build/*.css') + Dir.glob('build/*.js')
+  files_to_upload = Dir.glob('build/*.css') + Dir.glob('build/*.js') + Dir.glob('package/*.tar.gz') + Dir.glob('package/*.zip')
   files_to_upload.each do |file|
     base_name = File.basename(file)
     versioned_name = "#{Canon::VERSION}/#{base_name}"
 
     log("Uploading #{base_name} to CDN") do
-      raise "#{base_name} already exists!" if cdn_directory.files.head(versioned_name)
-      cdn_directory.files.create(:key => versioned_name, :body => File.open(file), :public => true)
-    end
-  end
-
-  packages_to_upload = Dir.glob('package/*.tar.gz') + Dir.glob('package/*.zip')
-  packages_to_upload.each do |package|
-    base_name = File.basename(package)
-    versioned_name = "#{Canon::VERSION}/#{base_name}"
-
-    log("Uploading #{base_name} to downloads") do
-      raise "#{base_name} already exists!" if download_directory.files.head(versioned_name)
-      download_directory.files.create(:key => versioned_name, :body => File.open(package), :public => true)
+      raise "#{base_name} already exists!" if directory.files.head(versioned_name)
+      directory.files.create(:key => versioned_name, :body => File.open(file), :public => true)
     end
   end
 end
