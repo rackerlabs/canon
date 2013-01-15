@@ -36,6 +36,7 @@ desc 'Clean build output'
 task :clean do
   log('Cleaning all build output') do
     FileUtils.remove_dir(Canon.build_path, true)
+    FileUtils.remove_dir(Canon.package_path, true)
   end
 end
 
