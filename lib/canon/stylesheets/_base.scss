@@ -1,0 +1,84 @@
+body {
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+a {
+  color: #1e6ec1;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1, h2 {
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+ol, ul {
+  margin: 0 0 20px 25px;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: square;
+}
+
+dl {
+  margin: 0 0 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 0 10px;
+}
+
+hr {
+  margin: 0 0 20px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
