@@ -3,8 +3,8 @@ describe 'Example Functional Test' do
     driver = Selenium::WebDriver.for(:firefox)
     driver.navigate.to('http://0.0.0.0:3000')
 
-    title = driver.find_element(:id, 'page-title')
-    title.text.should == 'Welcome to Canon!'
+    title = driver.find_element(:tag_name, 'h1')
+    title.text.should == 'Typography'
 
     driver.quit
   end
