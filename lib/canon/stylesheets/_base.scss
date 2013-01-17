@@ -1,12 +1,12 @@
 body {
-  color: #333;
-  font-family: 'Arial', sans-serif;
-  font-size: 13px;
-  line-height: 20px;
+  color: $grey-darker;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 
 a {
-  color: #1e6ec1;
+  color: $blue;
   text-decoration: none;
 
   &:hover {
@@ -23,7 +23,7 @@ strong {
 }
 
 p {
-  margin: 0 0 20px;
+  margin: 0 0 $base-line-height;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2 {
-  margin: 0 0 20px;
+  margin: 0 0 $base-line-height;
 }
 
 h1 {
@@ -47,7 +47,7 @@ h3 {
 }
 
 ol, ul {
-  margin: 0 0 20px 25px;
+  margin: 0 0 $base-line-height 25px;
 }
 
 ol ol,
@@ -66,7 +66,7 @@ ul {
 }
 
 dl {
-  margin: 0 0 20px;
+  margin: 0 0 $base-line-height;
 }
 
 dt {
@@ -74,11 +74,11 @@ dt {
 }
 
 dd {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 25px;
 }
 
 hr {
-  margin: 0 0 20px;
+  margin: 0 0 $base-line-height;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid $grey-light;
 }
