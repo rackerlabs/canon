@@ -1,0 +1,85 @@
+body {
+  color: $grey-darker;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 $base-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1, h2 {
+  margin: 0 0 $base-line-height;
+  line-height: $base-line-height * 1.5;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+ol, ul {
+  margin: 0 0 $base-line-height 25px;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: square;
+}
+
+dl {
+  margin: 0 0 $base-line-height;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 0 25px;
+}
+
+hr {
+  margin: 0 0 $base-line-height;
+  border: 0;
+  border-top: 1px solid $grey-light;
+}
