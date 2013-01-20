@@ -36,6 +36,7 @@ desc 'Clean build output'
 task :clean do
   log('Cleaning all build output') do
     FileUtils.remove_dir(Canon.build_path, true)
+    FileUtils.remove_dir(Canon.package_path, true)
   end
 end
 
@@ -99,10 +100,19 @@ task :release do
     exit
   end
 
+  log('Creating Canon packages') do
+    FileUtils.remove_dir(Canon.package_path, true)
+    FileUtils.mkdir(Canon.package_path)
+    FileUtils.copy_entry(Canon.build_path, File.join(Canon.package_path, 'canon'))
+
+    system("cd #{Canon.package_path} && tar -czf canon.tar.gz canon")
+    system("cd #{Canon.package_path} && zip -q canon.zip canon/*")
+  end
+
   connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['CANON_USERNAME'], :rackspace_api_key => ENV['CANON_API_KEY'])
   directory = connection.directories.get('cdn.canon.rackspace.com')
 
-  files_to_upload = Dir.glob('build/*.css') + Dir.glob('build/*.js')
+  files_to_upload = Dir.glob('build/*.css') + Dir.glob('build/*.js') + Dir.glob('package/*.tar.gz') + Dir.glob('package/*.zip')
   files_to_upload.each do |file|
     base_name = File.basename(file)
     versioned_name = "#{Canon::VERSION}/#{base_name}"
