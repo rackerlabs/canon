@@ -1,0 +1,60 @@
+body {
+  min-width: 1050px; // fixes layout issues when users have to horizontally scroll
+}
+
+html, body { 
+  height: 100%;
+}
+
+body > .l-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto (-$app-footer-height);
+  background: #ddd;
+}
+
+// .l-push must be the same height as .l-footer
+.l-push {
+  height: $app-footer-height;
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: $grey-darker;
+  overflow: hidden;
+  height: $app-header-height;
+  z-index: 10;
+}
+
+.l-body {
+ padding-top: $app-header-height;
+}
+
+.l-footer {
+  background: $grey-darker;
+  height: $app-footer-height;
+}
+
+.l-inner {
+  padding: 0 10px;
+}
+
+.l-content {
+  width: 1030px;
+  margin: 0 auto;
+}
+
+// height based media query to remove app-frame for shorter view ports
+@media only screen and (max-height: 600px){
+  .l-header {
+    position: relative;
+  }
+  .l-body {
+    padding-top: 0;
+  }
+}
