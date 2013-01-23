@@ -115,7 +115,7 @@ task :release do
   files_to_upload = Dir.glob('build/*.css') + Dir.glob('build/*.js') + Dir.glob('package/*.tar.gz') + Dir.glob('package/*.zip')
   files_to_upload.each do |file|
     base_name = File.basename(file)
-    versioned_name = "#{Canon::VERSION}/#{base_name}"
+    versioned_name = "v#{Canon::VERSION}/#{base_name}"
 
     log("Uploading #{base_name} to CDN") do
       raise "#{base_name} already exists!" if directory.files.head(versioned_name)
