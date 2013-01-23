@@ -5,7 +5,7 @@ require 'sprockets'
 require 'sprockets/sass'
 
 module Canon
-  VERSION = '0.1.1'
+  VERSION = '0.0.0'
 
   class << self
     def configure!
