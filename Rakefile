@@ -58,7 +58,7 @@ namespace :lint do
     t.binary = 'node_modules/.bin/csslint'
     t.pattern = 'build/*.css'
     t.quiet = true
-    t.ignore << 'unique-headings'
+    t.ignore.push('unique-headings','important')
 
     if Canon.environment == 'test'
       t.format = 'checkstyle-xml'
