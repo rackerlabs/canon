@@ -1,5 +1,6 @@
 require 'compass'
 require 'rack'
+require 'rack/contrib/not_found'
 require 'rack/contrib/try_static'
 require 'sprockets'
 require 'sprockets/sass'
@@ -32,6 +33,15 @@ module Canon
 
         map '/assets' do
           run Canon.sprockets
+        end
+
+        map '/screenshots' do
+          use Rack::TryStatic, {
+            urls: [''],
+            root: Canon.screenshot_path
+          }
+
+          run lambda { |env| [404, { 'Content-Type' => 'text/plain' }, ['Not Found']] }
         end
 
         map '/test' do
@@ -85,6 +95,10 @@ module Canon
 
     def package_path
       File.join(root_path, 'package')
+    end
+
+    def screenshot_path
+      File.join(root_path, 'spec', 'screenshot')
     end
   end
 end
