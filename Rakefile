@@ -84,7 +84,7 @@ namespace :spec do
   task :unit do
     url = 'http://0.0.0.0:3000/test'
     reporter = Canon.environment == 'test' ? 'xunit' : 'dot'
-    mocha_command = "node_modules/mocha-phantomjs/bin/mocha-phantomjs --reporter #{reporter} #{url}"
+    mocha_command = "node_modules/.bin/mocha-phantomjs --reporter #{reporter} #{url}"
 
     if Canon.environment == 'test'
       mocha_command += ' > ' + Canon.build_path + '/unit.xml'
