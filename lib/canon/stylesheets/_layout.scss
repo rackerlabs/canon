@@ -26,8 +26,8 @@ html, body {
   right: 0;
   width: 100%;
   background: $grey-darker;
-  overflow: hidden;
   height: $app-header-height;
+  overflow: visible;
   z-index: 10;
 }
 
