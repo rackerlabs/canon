@@ -1,0 +1,14 @@
+@mixin clearfix {
+  // For modern browsers
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }  &:after {
+    clear:both;
+  }  
+  // For IE 7 (trigger hasLayout)
+  & {
+    zoom:1;
+  }
+}

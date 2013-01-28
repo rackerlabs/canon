@@ -1,12 +1,10 @@
-// navbar wrapper
-
 .navbar {
-	@include background-image(linear-gradient(#fff, #ececec));
-	@include filter-gradient(#fff, #ececec);
+	overflow: hidden;
+	@include background-image(linear-gradient($white, #ececec));
+	@include filter-gradient($white, #ececec);
 	@include box-shadow(rgba(0, 0, 0, .15) 0px 2px 3px 0px);
 }
 
-// nav (menu)
 .nav {
 	list-style: none;
 	overflow: hidden;
@@ -27,23 +25,36 @@
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 
+		&.is-active {
+			background-color: $white;
+			border-color: #CCC;
+			font-weight: bold;
+			& > a, & > a:hover {
+				color: $navbar-link-active;
+			}
+
+		}
+
 		&:first-child {
 			margin-left: 220px;
 		}
 
   	& > a {
   		line-height: 1em;
-			color: #888;
+			color: $navbar-link;
 			font-size: 14px;
 			display: inline-block;
 			padding: 9px;
 			text-decoration: none;
-			text-shadow: 0 1px #fff;
+			text-shadow: 0 1px $white;
+			&:hover {
+				color: $navbar-link-hover;
+			}
   	}
   }
 }
 
-.nav-logo {
+.nav-brand {
 	position: relative;
 
 	a {
@@ -62,6 +73,7 @@
 			-webkit-border-radius: 2px 2px 0 0;
 		}
 	}
+
 	span {
 		background: transparent url(./logo-rackspace.png) no-repeat center center;
 		width: 190px;
@@ -70,6 +82,7 @@
 	}
 }
 
+// placeholder for the top nav
 .nav-top {
 	height: 39px;
 }
