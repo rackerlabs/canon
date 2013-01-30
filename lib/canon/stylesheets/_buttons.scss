@@ -105,3 +105,27 @@ input::-moz-focus-inner {
     border-color: #a60004;
   }
 }
+
+.btn-link {
+  color: $blue;
+  background: transparent;
+  border: 0;
+
+  &:hover,
+  &.hover {
+    text-decoration: underline;
+    background: transparent;
+  }
+
+  &:active,
+  &.active {
+    background: transparent;
+    @include box-shadow(none);
+  }
+
+  &[disabled],
+  &.disabled {
+    text-decoration: none;
+    background: transparent;
+  }
+}
