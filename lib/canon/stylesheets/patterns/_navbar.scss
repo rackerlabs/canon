@@ -1,59 +1,70 @@
+// base class
+.nav {
+	list-style: none;
+	& > li {
+		& > a {
+	  	display: block;
+	  	&:hover {
+	  		text-decoration: none;
+	  	}
+		}
+	}
+
+	&.pull-right {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+// main nav
 .navbar {
 	overflow: hidden;
 	@include background-image(linear-gradient($white, #ececec));
 	@include filter-gradient($white, #ececec);
 	@include box-shadow(rgba(0, 0, 0, .15) 0px 2px 3px 0px);
-}
 
-.nav {
-	list-style: none;
-	overflow: hidden;
-
-  &.pull-right {
-    float: right;
-    margin-right: 0;
-  }
-
-  & > li {
-  	float: left;
-  	margin: 15px 10px;
-		font-size: 14px;
-		font-weight: bold;
-		line-height: 8px;
-		border: 1px solid transparent;
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-
-		&.is-active {
-			background-color: $white;
-			border-color: #CCC;
-			font-weight: bold;
-			& > a, & > a:hover {
-				color: $navbar-link-active;
-			}
-
-		}
-
-		&:first-child {
-			margin-left: 220px;
-		}
-
-  	& > a {
-  		line-height: 1em;
-			color: $navbar-link;
+	.nav {
+	  & > li {
+	  	float: left;
+	  	margin: 15px 10px;
 			font-size: 14px;
-			display: inline-block;
-			padding: 7px 9px;
-			text-decoration: none;
-			text-shadow: 0 1px $white;
-			&:hover {
-				color: $navbar-link-hover;
+			font-weight: bold;
+			line-height: 8px;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+
+			&.is-active {
+				background-color: $white;
+				border-color: #CCC;
+				font-weight: bold;
+				& > a, & > a:hover {
+					color: $navbar-link-active;
+				}
+
 			}
-  	}
-  }
+
+			.nav-brand + &:first-child {
+				margin-left: 220px;
+			}
+
+	  	& > a {
+	  		line-height: 1em;
+				color: $navbar-link;
+				font-size: 14px;
+				padding: 7px 9px;
+				text-decoration: none;
+				text-shadow: 0 1px $white;
+				&:hover {
+					color: $navbar-link-hover;
+				}
+	  	}
+	  }
+	}
 }
 
+// rackspace logo
 .nav-brand {
 	position: relative;
 
@@ -85,4 +96,9 @@
 // placeholder for the top nav
 .nav-top {
 	height: 39px;
+	.nav {
+		& > li {
+			float: left;
+		}
+	}
 }
