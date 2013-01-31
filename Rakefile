@@ -69,10 +69,12 @@ namespace :lint do
       'vendor-prefix'
     ]
     t.ignore = [
+      'adjoining-classes',
       'important',
       'star-property-hack',
       'underscore-property-hack',
-      'unique-headings'
+      'unique-headings',
+      'unqualified-attributes'
     ]
 
     if Canon.environment == 'test'
