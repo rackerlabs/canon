@@ -68,7 +68,12 @@ namespace :lint do
       'known-properties',
       'vendor-prefix'
     ]
-    t.ignore = ['unique-headings', 'important']
+    t.ignore = [
+      'important',
+      'star-property-hack',
+      'underscore-property-hack',
+      'unique-headings'
+    ]
 
     if Canon.environment == 'test'
       t.format = 'checkstyle-xml'
