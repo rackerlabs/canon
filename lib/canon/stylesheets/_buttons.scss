@@ -16,7 +16,6 @@ input::-moz-focus-inner {
   vertical-align: middle;
   background-color: #c5c5c5;
   border: 1px solid $grey;
-  box-sizing: border-box;
   cursor: pointer;
 
   @include inline-block;
@@ -100,7 +99,7 @@ input::-moz-focus-inner {
 
   &[disabled],
   &.disabled {
-    color: rgba(255, 255, 255, 0.6);
+    color: #df9faa;
     background: #d81436;
     border-color: #a60004;
   }
