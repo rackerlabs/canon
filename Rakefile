@@ -56,7 +56,7 @@ namespace :lint do
 
   CSSLintTask.new(:stylesheets => :compile) do |t|
     t.binary = 'node_modules/.bin/csslint'
-    t.pattern = 'build/*.css'
+    t.pattern = 'build/canon.css'
     t.quiet = true
 
     t.errors = [
