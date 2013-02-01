@@ -58,3 +58,12 @@ html, body {
     padding-top: 0;
   }
 }
+// width based media query to remove app-frame
+@media only screen and (max-width: 1060px) {
+  .l-header {
+    position: relative;
+  }
+  .l-body {
+    padding-top: 0;
+  }
+}
