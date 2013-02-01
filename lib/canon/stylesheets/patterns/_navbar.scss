@@ -16,7 +16,7 @@
 	overflow: hidden;
 	@include background-image(linear-gradient($white, #ececec));
 	@include filter-gradient($white, #ececec);
-	@include box-shadow(rgba(0, 0, 0, .15) 0px 2px 3px 0px);
+	@include box-shadow(rgba(0, 0, 0, .15) 0 2px 3px 0);
 
 	.nav {
 	  & > li {
