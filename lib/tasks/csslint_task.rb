@@ -35,6 +35,7 @@ class CSSLintTask < Rake::TaskLib
     command += " --errors=#{rule_list(@errors)}" unless @errors.empty?
     command += " --warnings=#{rule_list(@warnings)}" unless @warnings.empty?
     command += " --ignore=#{rule_list(@ignore)}" unless @ignore.empty?
+    command += " --format=#{@format}"
     command += " > #{@output}" unless @output.nil?
     command
   end

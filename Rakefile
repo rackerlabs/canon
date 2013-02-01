@@ -56,9 +56,26 @@ namespace :lint do
 
   CSSLintTask.new(:stylesheets => :compile) do |t|
     t.binary = 'node_modules/.bin/csslint'
-    t.pattern = 'build/*.css'
+    t.pattern = 'build/canon.css'
     t.quiet = true
-    t.ignore.push('unique-headings','important')
+
+    t.errors = [
+      'box-sizing',
+      'compatible-vendor-prefixes',
+      'empty-rules',
+      'fallback-colors',
+      'ids',
+      'known-properties',
+      'vendor-prefix'
+    ]
+    t.ignore = [
+      'adjoining-classes',
+      'important',
+      'star-property-hack',
+      'underscore-property-hack',
+      'unique-headings',
+      'unqualified-attributes'
+    ]
 
     if Canon.environment == 'test'
       t.format = 'checkstyle-xml'
