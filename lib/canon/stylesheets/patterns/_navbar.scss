@@ -19,6 +19,7 @@
 	@include box-shadow(rgba(0, 0, 0, .15) 0 2px 3px 0);
 
 	.nav {
+		@extend .l-content;
 	  & > li {
 	  	float: left;
 	  	margin: 15px 10px;
@@ -61,6 +62,7 @@
 
 // rackspace logo
 .nav-brand {
+	@extend .l-content;
 	position: relative;
 
 	a {
