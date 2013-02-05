@@ -5,4 +5,6 @@ screenshots:
     url: screenshots/layout.html
   - name: Buttons
     url: screenshots/buttons.html
+  - name: Forms
+    url: screenshots/forms.html
 
