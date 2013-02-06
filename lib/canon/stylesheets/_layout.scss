@@ -47,6 +47,7 @@ html, body {
 .l-content {
   width: 1030px;
   margin: 0 auto;
+  @include micro-clearfix();
 }
 
 // height based media query to remove app-frame for shorter view ports
