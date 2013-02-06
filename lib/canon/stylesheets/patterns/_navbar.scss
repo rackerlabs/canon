@@ -1,6 +1,7 @@
 // base class
 .nav {
 	list-style: none;
+	margin: 0;
 	& > li {
 		& > a {
 	  	display: block;
@@ -86,12 +87,63 @@
 	}
 }
 
-// placeholder for the top nav
-.nav-top {
+// Utility Nav
+.nav-utility {
 	height: 39px;
-	.nav {
+	font-size: 12px;
+	line-height: 14px;
+	.l-content > .nav {
+		margin: 2px 0 0 0;
+		float: right;
 		& > li {
 			float: left;
+			position: relative;
+			margin: 0 0 0 10px;
+			& > a {
+				padding: 10px;
+				color: #999;
+				position: relative;
+				top: 1;
+				border: 1px solid transparent;
+				&:hover {
+					color: #ccc;
+				}
+			}
+			&.menu {
+				& > a:hover, & > a.active {
+					@include border-radius(3px 3px 0 0);
+					background: #FFF;
+					z-index: 100;
+					color: #333;
+					border: 1px solid #ccc;
+					border-bottom: none;
+						&:hover {
+							color: #333;
+						}
+						& + .dropdown {
+							display: block;
+						}
+					}
+			}
+		}
+	}
+}
+
+.dropdown {
+	display: none;
+	min-width: 110px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 10;
+	padding: 4px 10px 1px;
+	border: 1px solid #ccc;
+	@include border-radius(3px 0 3px 3px);
+	@include box-shadow(2px 2px 4px 0 rgba(0, 0, 0, 0.4));
+	.nav {
+		& > li {
+			margin: 5px 0 6px;
 		}
 	}
 }
