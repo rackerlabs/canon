@@ -1,0 +1,25 @@
+// Utility Nav
+.nav-utility {
+	height: $app-nav-utility;
+	font-size: 12px;
+
+	.l-content > .nav {
+		margin: 2px 0 0 0;
+		float: right;
+		& > li {
+			float: left;
+			position: relative;
+			margin: 0 0 0 10px;
+			& > a {
+				padding: 7px 10px;
+				color: #999;
+				position: relative;
+				top: 1;
+				border: 1px solid transparent;
+				&:hover {
+					color: #ccc;
+				}
+			}
+		}
+	}
+}

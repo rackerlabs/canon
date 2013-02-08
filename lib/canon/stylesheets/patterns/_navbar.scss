@@ -1,6 +1,7 @@
 // base class
 .nav {
 	list-style: none;
+	margin: 0;
 	& > li {
 		& > a {
 	  	display: block;
@@ -22,10 +23,9 @@
 		@extend .l-content;
 	  & > li {
 	  	float: left;
-	  	margin: 15px 10px;
+	  	margin: 14px 10px;
 			font-size: 14px;
 			font-weight: bold;
-			line-height: 8px;
 			border: 1px solid transparent;
 			@include border-radius(5px);
 
@@ -40,7 +40,7 @@
 			}
 
 			.nav-brand + &:first-child {
-				margin-left: 220px;
+				margin-left: 210px;
 			}
 
 	  	& > a {
@@ -60,14 +60,15 @@
 
 // rackspace logo
 .nav-brand {
-	@extend .l-content;
+	margin: 0 auto;
+	width: 1030px;
 	position: relative;
 
 	a {
 		display: block;
 		position: absolute;
 		left: 0;
-		top: -20px;
+		top: -19px;
 		&:before {
 			content: '';
 			display: block;
@@ -83,15 +84,5 @@
 		width: 190px;
 		height: 70px;
 		display: block;
-	}
-}
-
-// placeholder for the top nav
-.nav-top {
-	height: 39px;
-	.nav {
-		& > li {
-			float: left;
-		}
 	}
 }
