@@ -13,7 +13,7 @@
 }
 
 // main nav
-.navbar {
+.nav-primary {
 	overflow: hidden;
 	@include background-image(linear-gradient($white, #ececec));
 	@include filter-gradient($white, #ececec);
@@ -34,7 +34,7 @@
 				border-color: #CCC;
 				font-weight: bold;
 				& > a, & > a:hover {
-					color: $navbar-link-active;
+					color: $nav-primary-link-active;
 				}
 
 			}
@@ -45,13 +45,13 @@
 
 	  	& > a {
 	  		line-height: 1em;
-				color: $navbar-link;
+				color: $nav-primary-link;
 				font-size: 14px;
 				padding: 7px 9px;
 				text-decoration: none;
 				text-shadow: 0 1px $white;
 				&:hover {
-					color: $navbar-link-hover;
+					color: $nav-primary-link-hover;
 				}
 	  	}
 	  }
