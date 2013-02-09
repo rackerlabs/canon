@@ -16,6 +16,7 @@
 
 // main nav
 .nav-primary {
+	height: $app-nav-primary;
 	overflow: hidden;
 	@include background-image(linear-gradient($white, #ececec));
 	@include filter-gradient($white, #ececec);
