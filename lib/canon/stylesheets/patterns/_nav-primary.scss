@@ -2,7 +2,9 @@
 .nav {
 	list-style: none;
 	margin: 0;
+	@include micro-clearfix();
 	& > li {
+		float: left;
 		& > a {
 	  	display: block;
 	  	&:hover {
@@ -20,9 +22,8 @@
 	@include box-shadow(rgba(0, 0, 0, .15) 0 2px 3px 0);
 
 	.nav {
-		@extend .l-content;
+
 	  & > li {
-	  	float: left;
 	  	margin: 14px 10px;
 			font-size: 14px;
 			font-weight: bold;
