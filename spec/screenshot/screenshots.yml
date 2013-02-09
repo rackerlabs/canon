@@ -3,6 +3,8 @@ port: 3000
 screenshots:
   - name: Layout
     url: screenshots/layout.html
+  - name: Nav-Secondary
+    url: screenshots/nav-secondary.html
   - name: Buttons
     url: screenshots/buttons.html
   - name: Forms
