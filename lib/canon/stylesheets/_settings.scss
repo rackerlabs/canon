@@ -19,9 +19,11 @@ $base-line-height: 20px;
 
 // Layout
 
-$app-header-height: 98px;
-$app-footer-height: 40px;
+$app-nav-primary: 58px;
+$app-nav-secondary: 32px;
 $app-nav-utility: 40px;
+$app-header-height: $app-nav-primary + $app-nav-utility;
+$app-footer-height: 40px;
 
 // Patterns
 
