@@ -6,9 +6,18 @@
     display:table;
   }  &:after {
     clear:both;
-  }  
+  }
   // For IE 7 (trigger hasLayout)
   & {
     zoom:1;
   }
+}
+
+@mixin fixed-top($top: 0) {
+  position: fixed;
+  top: $top;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
 }
