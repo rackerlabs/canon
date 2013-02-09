@@ -1,8 +1,9 @@
 // Utility Nav
 .nav-utility {
-	height: $app-nav-utility;
+	height: $app-nav-utility-height;
 	font-size: 12px;
 	background: #333;
+	@include fixed-top();
 
 	.l-content > .nav {
 		margin: 2px 0 0 0;
