@@ -2,7 +2,9 @@
 .nav {
 	list-style: none;
 	margin: 0;
+	@include micro-clearfix();
 	& > li {
+		float: left;
 		& > a {
 	  	display: block;
 	  	&:hover {
@@ -13,16 +15,16 @@
 }
 
 // main nav
-.navbar {
-	overflow: hidden;
+.nav-primary {
+	height: $app-nav-primary-height;
+	@include fixed-top($app-nav-utility-height);
 	@include background-image(linear-gradient($white, #ececec));
 	@include filter-gradient($white, #ececec);
 	@include box-shadow(rgba(0, 0, 0, .15) 0 2px 3px 0);
 
 	.nav {
-		@extend .l-content;
+
 	  & > li {
-	  	float: left;
 	  	margin: 14px 10px;
 			font-size: 14px;
 			font-weight: bold;
@@ -34,24 +36,24 @@
 				border-color: #CCC;
 				font-weight: bold;
 				& > a, & > a:hover {
-					color: $navbar-link-active;
+					color: $nav-primary-link-active;
 				}
 
 			}
 
-			.nav-brand + &:first-child {
+			&:first-child {
 				margin-left: 210px;
 			}
 
 	  	& > a {
 	  		line-height: 1em;
-				color: $navbar-link;
+				color: $nav-primary-link;
 				font-size: 14px;
 				padding: 7px 9px;
 				text-decoration: none;
 				text-shadow: 0 1px $white;
 				&:hover {
-					color: $navbar-link-hover;
+					color: $nav-primary-link-hover;
 				}
 	  	}
 	  }
@@ -60,8 +62,6 @@
 
 // rackspace logo
 .nav-brand {
-	margin: 0 auto;
-	width: 1030px;
 	position: relative;
 
 	a {

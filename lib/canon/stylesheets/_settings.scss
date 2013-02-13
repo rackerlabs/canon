@@ -19,12 +19,14 @@ $base-line-height: 20px;
 
 // Layout
 
-$app-header-height: 98px;
+$app-nav-primary-height: 58px;
+$app-nav-secondary-height: 32px;
+$app-nav-utility-height: 40px;
+$app-header-height: $app-nav-primary-height + $app-nav-utility-height;
 $app-footer-height: 40px;
-$app-nav-utility: 40px;
 
 // Patterns
 
-$navbar-link: #888;
-$navbar-link-hover: $red;
-$navbar-link-active: $grey-darker;
+$nav-primary-link: #888;
+$nav-primary-link-hover: $red;
+$nav-primary-link-active: $grey-darker;
