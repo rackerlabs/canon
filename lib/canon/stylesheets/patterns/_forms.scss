@@ -101,3 +101,27 @@ select[multiple] {
   display: inline-block;
   margin-right: 10px;
 }
+
+/* Horizontal Forms */
+.form-horizontal {
+  .control-group {
+    margin-bottom: 10px;
+  }
+
+  .control-label {
+    float: left;
+    width: 160px;
+  }
+
+  .controls {
+    margin-left: 180px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="file"],
+  select,
+  textarea {
+    margin-bottom: 0;
+  }
+}
