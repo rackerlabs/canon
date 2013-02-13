@@ -1,3 +1,4 @@
+/* Base Form Styles */
 fieldset {
   margin: 0 0 $base-line-height;
 }
@@ -19,6 +20,13 @@ textarea {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+}
+
+label,
+input[type="checkbox"],
+input[type="radio"],
+select {
+  cursor: pointer;
 }
 
 label {
@@ -47,4 +55,22 @@ textarea {
 
 select[multiple] {
   height: auto;
+}
+
+/* Checkbox and Radio Groups */
+.checkbox,
+.radio {
+  padding-left: 20px;
+}
+
+.checkbox > input[type="checkbox"],
+.radio > input[type="radio"] {
+  float: left;
+  margin-left: -20px;
+}
+
+.checkbox.inline,
+.radio.inline {
+  display: inline-block;
+  margin-right: 10px;
 }
