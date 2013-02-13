@@ -34,6 +34,10 @@ label {
   margin: 0 0 5px;
 }
 
+label:after {
+  content: ":";
+}
+
 input[type="text"],
 input[type="password"],
 input[type="file"],
@@ -88,12 +92,16 @@ select[multiple] {
 .checkbox,
 .radio {
   padding-left: 20px;
-}
 
-.checkbox > input[type="checkbox"],
-.radio > input[type="radio"] {
-  float: left;
-  margin-left: -20px;
+  &:after {
+    content: none;
+  }
+
+  & > input[type="checkbox"],
+  & > input[type="radio"] {
+    float: left;
+    margin-left: -20px;
+  }
 }
 
 .checkbox.inline,
