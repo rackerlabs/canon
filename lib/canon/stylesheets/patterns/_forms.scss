@@ -31,19 +31,21 @@ select {
 
 label {
   display: block;
+  margin: 0 0 5px;
 }
 
 input[type="text"],
 input[type="password"],
+input[type="file"],
 select,
 textarea {
-  vertical-align: middle;
+  margin: 0 0 10px;
+  vertical-align: middle
 }
 
 input[type="text"],
 input[type="password"],
 textarea {
-  margin: 0;
   padding: 2px 4px;
   height: 25px;
   border: 1px solid $grey;
