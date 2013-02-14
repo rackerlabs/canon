@@ -87,16 +87,18 @@
       <div class="control-group">
         <label class="control-label">One</label>
         <div class="controls">
-          <input type="text"><span class="help-inline">This is inline help text.</span>
+          <input type="text">
+          <span class="help-inline">This is inline help text.</span>
         </div>
       </div>
-      <div class="control-group">
+      <div class="control-group success">
         <label class="control-label">Two</label>
         <div class="controls">
           <select>
             <option>One</option>
             <option>Two</option>
           </select>
+          <span class="validation-inline"><i class="icon-ok-circle"></i>Everything works!</span>
         </div>
       </div>
       <div class="control-group error">
@@ -112,6 +114,7 @@
             <strong>B</strong>
             <span class="help-block">B-Sub</span>
           </label>
+          <span class="validation-block"><i class="icon-exclamation-sign"></i>You should at least select one item.</span>
         </div>
       </div>
       <div class="control-group">
@@ -140,40 +143,6 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
       </div>
     </fieldset>
-    <fieldset>
-      <legend>Validation</legend>
-      <div class="control-group success">
-        <label class="control-label">Success</label>
-        <div class="controls">
-          <input type="text">
-          <span class="help-inline">This is inline help.</span>
-          <span class="validation-inline"><i class="icon-ok-circle"></i>This is an inline success.</span>
-        </div>
-      </div>
-      <div class="control-group success">
-        <label class="control-label">Success</label>
-        <div class="controls">
-          <input type="text">
-          <span class="help-block">This is block help.</span>
-          <span class="validation-block"><i class="icon-ok-circle"></i>This is a block success.</span>
-        </div>
-      </div>
-      <div class="control-group error">
-        <label class="control-label">Error</label>
-        <div class="controls">
-          <input type="text">
-          <span class="help-inline">This is inline help.</span>
-          <span class="validation-inline"><i class="icon-exclamation-sign"></i>This is an inline error.</span>
-        </div>
-      </div>
-      <div class="control-group error">
-        <label class="control-label">Error</label>
-        <div class="controls">
-          <input type="text">
-          <span class="help-block">This is block help.</span>
-          <span class="validation-block"><i class="icon-exclamation-sign"></i>This is a block error.</span>
-        </div>
-      </div>
   </form>
 </body>
 </html>
