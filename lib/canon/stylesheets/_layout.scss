@@ -45,7 +45,7 @@ html, body {
 
 // height based media query to remove app-frame for shorter view ports
 @media only screen and (max-height: 600px){
-  .nav-primary, .nav-secondary, .nav-utility {
+  .nav-primary, .nav-secondary, .nav-utility, .l-footer {
     position: static !important;
   }
   .l-body {
@@ -54,7 +54,7 @@ html, body {
 }
 // width based media query to remove app-frame
 @media only screen and (max-width: 1060px) {
-  .nav-primary, .nav-secondary, .nav-utility {
+  .nav-primary, .nav-secondary, .nav-utility, .l-footer {
     position: static !important;
   }
   .l-body {

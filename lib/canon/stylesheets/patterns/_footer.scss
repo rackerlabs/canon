@@ -1,0 +1,41 @@
+// footer
+
+.footer {
+  color: #999;
+  font-size: 12px;
+
+  a {
+    color: #999;
+  }
+
+  .link {
+    margin: 0;
+    padding: 10px 0;
+    display: inline-block;
+  }
+
+  .links {
+    margin: 0;
+    float: left;
+    padding: 10px 0;
+    list-style: none;
+
+    & > li {
+      float: left;
+      padding: 0 0 0 5px;
+      & > a {
+        display: inline-block;
+      }
+      &:before {
+        content: "\2022";
+        padding-right: 5px;
+      }
+      &:first-child {
+        padding-left: 0;
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+}
