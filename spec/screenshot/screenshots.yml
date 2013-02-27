@@ -7,6 +7,12 @@ screenshots:
     url: screenshots/nav-secondary.html
   - name: Footer
     url: screenshots/footer.html
+  - name: Content Full
+    url: screenshots/content-full.html
+  - name: Content List
+    url: screenshots/content-list.html
+  - name: Content Detail
+    url: screenshots/content-detail.html
   - name: Buttons
     url: screenshots/buttons.html
   - name: Forms
