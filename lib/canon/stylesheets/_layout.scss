@@ -28,7 +28,6 @@ html, body {
   }
 
   .l-inner {
-    padding-top: 20px;
     padding-bottom: 30px;
   }
 }
@@ -48,6 +47,11 @@ html, body {
   @include micro-clearfix();
 }
 
+// Main Content & Sidebar
+.main {
+  padding-top: 20px;
+}
+
 .sidebar {
   width: 170px;
   float: left;
@@ -61,7 +65,7 @@ html, body {
   }
 }
 
-.main {
+.content {
   background: $white;
   border: 1px solid #CCC;
   padding: 30px;
