@@ -1,23 +1,18 @@
-// TODO: Demo for normal and stretched lists.
-
 .list-table {
-  border: 1px solid #ccc;
-  border-bottom: 0;
-  border-collapse: collapse;
-
   table {
     width: 100%;
+    border-collapse: collapse;
   }
 
   th {
     padding: 0 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     color: #999;
   }
 
   td {
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
   }
 
   th > a,
@@ -38,7 +33,7 @@
   .table-status {
     padding: 0;
     width: 10px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #eee;
   }
 
   .table-status-ok {
@@ -78,8 +73,7 @@
     right: 0;
     bottom: 0;
     overflow-y: scroll;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #eee;
   }
 }
 
