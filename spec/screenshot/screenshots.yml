@@ -15,4 +15,10 @@ screenshots:
     url: screenshots/list-table.html
   - name: List Table (Stretchy)
     url: screenshots/list-table-stretched.html
+  - name: List Table (Loading)
+    url: screenshots/list-table-loading.html
+  - name: List Table (Error)
+    url: screenshots/list-table-error.html
+  - name: List Table (Empty)
+    url: screenshots/list-table-empty.html
 

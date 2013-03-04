@@ -29,6 +29,10 @@ task :compile => 'clean' do
     FileList[Canon.images_path + '/*.png'].each do |image|
       FileUtils.copy(image, Canon.build_path)
     end
+
+    FileList[Canon.images_path + '/*.gif'].each do |image|
+      FileUtils.copy(image, Canon.build_path)
+    end
   end
 end
 
