@@ -1,0 +1,42 @@
+// View Section
+.content-view-section {
+  padding: 30px;
+}
+
+.content-view-section + .content-view-section {
+  border-top: 1px solid #eee;
+}
+
+.content-view-section-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.content-view-section-content {
+  margin-top: 15px;
+}
+
+// Header Section
+.content-view-header {
+  @extend .content-view-section;
+}
+
+.content-view-header-actions {
+  @extend .pull-right;
+}
+
+.content-view-header-title,
+.content-view-header-subtitle {
+  font-weight: bold;
+}
+
+.content-view-header-title {
+  font-size: 24px;
+}
+
+.content-view-header-subtitle {
+  margin: 0 0 5px;
+  color: $grey;
+  font-size: 12px;
+  text-transform: uppercase;
+}

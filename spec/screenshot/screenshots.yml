@@ -21,4 +21,5 @@ screenshots:
     url: screenshots/list-table-error.html
   - name: List Table (Empty)
     url: screenshots/list-table-empty.html
-
+  - name: Content View
+    url: screenshots/content-view.html
