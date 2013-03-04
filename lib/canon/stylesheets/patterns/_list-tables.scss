@@ -145,3 +145,17 @@
 .table-overlay-loading {
   background: url('loading-indicator.gif') center center no-repeat;
 }
+
+.table-overlay-error .table-overlay-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin: -10px auto 0;
+  text-align: center;
+}
+
+.table-overlay-error .table-overlay-message {
+  display: inline;
+  padding-left: 20px;
+  color: $red;
+}
