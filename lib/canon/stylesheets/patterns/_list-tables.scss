@@ -1,3 +1,4 @@
+// List Table
 .list-table {
   position: relative;
 
@@ -52,6 +53,7 @@
   }
 }
 
+// Stretched List Table
 .list-table-stretched {
   position: absolute;
   top: 0;
@@ -88,6 +90,7 @@
   }
 }
 
+// Sort Links
 .table-sort {
   color: #999;
 
@@ -134,6 +137,7 @@
   @include icon-sprite(sort-descending-hover);
 }
 
+// Base Table Overlay
 .table-overlay {
   position: absolute;
   top: 20px;
@@ -146,42 +150,49 @@
   text-align: center;
 }
 
+// Loading Overlay
 .table-overlay-loading {
   background: url('loading-indicator.gif') center center no-repeat;
 }
 
-.table-overlay-error .table-overlay-content {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  margin: -10px auto 0;
+// Error Overlay
+.table-overlay-error {
+  .table-overlay-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: -10px auto 0;
+  }
+
+  .table-overlay-message {
+    display: inline;
+    padding-left: 20px;
+    color: $red;
+  }
 }
 
-.table-overlay-error .table-overlay-message {
-  display: inline;
-  padding-left: 20px;
-  color: $red;
-}
+// Empty Overlay
+.table-overlay-empty {
+  .table-overlay-content {
+    margin-top: 30px;
+  }
 
-.table-overlay-empty .table-overlay-content {
-  margin-top: 30px;
-}
+  .table-overlay-title,
+  .table-overlay-subtitle {
+    margin-bottom: 5px;
+    color: $grey-dark;
+    font-weight: bold;
+  }
 
-.table-overlay-empty .table-overlay-title,
-.table-overlay-empty .table-overlay-subtitle {
-  margin-bottom: 5px;
-  color: $grey-dark;
-  font-weight: bold;
-}
+  .table-overlay-title {
+    font-size: 24px;
+  }
 
-.table-overlay-empty .table-overlay-title {
-  font-size: 24px;
-}
+  .table-overlay-subtitle {
+    font-size: 18px;
+  }
 
-.table-overlay-empty .table-overlay-subtitle {
-  font-size: 18px;
-}
-
-.table-overlay-empty .table-overlay-message {
-  color: $grey;
+  .table-overlay-message {
+    color: $grey;
+  }
 }
