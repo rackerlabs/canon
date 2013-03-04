@@ -142,6 +142,10 @@
   bottom: 0;
 }
 
+.table-overlay-content {
+  text-align: center;
+}
+
 .table-overlay-loading {
   background: url('loading-indicator.gif') center center no-repeat;
 }
@@ -151,11 +155,33 @@
   top: 50%;
   width: 100%;
   margin: -10px auto 0;
-  text-align: center;
 }
 
 .table-overlay-error .table-overlay-message {
   display: inline;
   padding-left: 20px;
   color: $red;
+}
+
+.table-overlay-empty .table-overlay-content {
+  margin-top: 30px;
+}
+
+.table-overlay-empty .table-overlay-title,
+.table-overlay-empty .table-overlay-subtitle {
+  margin-bottom: 5px;
+  color: $grey-dark;
+  font-weight: bold;
+}
+
+.table-overlay-empty .table-overlay-title {
+  font-size: 24px;
+}
+
+.table-overlay-empty .table-overlay-subtitle {
+  font-size: 18px;
+}
+
+.table-overlay-empty .table-overlay-message {
+  color: $grey;
 }
