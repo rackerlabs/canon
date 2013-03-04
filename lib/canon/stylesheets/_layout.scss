@@ -25,6 +25,14 @@ html, body {
 
   .nav-secondary + & {
     padding-top: $app-header-height + $app-nav-secondary-height;
+
+    .main {
+      padding-top: 15px;
+    }
+  }
+
+  .l-inner {
+    padding-bottom: 30px;
   }
 }
 
@@ -41,6 +49,41 @@ html, body {
   width: 1030px;
   margin: 0 auto;
   @include micro-clearfix();
+}
+
+// Main Content & Sidebar
+.main {
+  margin: 30px 0;
+}
+
+.sidebar {
+  width: 170px;
+  float: left;
+  padding-right: 40px;
+  min-height: 100px;
+
+  &.pull-right {
+    float: right;
+    width: 240px;
+    padding: 0 0 0 20px;
+  }
+}
+
+.content {
+  background: $white;
+  border: 1px solid #CCC;
+  padding: 30px;
+
+  .sidebar + & {
+    padding: 25px;
+    float: left;
+    width: 768px;
+  }
+
+  .sidebar.pull-right + & {
+    padding: 30px;
+    width: 708px;
+  }
 }
 
 // height based media query to remove app-frame for shorter view ports
