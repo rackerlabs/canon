@@ -11,4 +11,8 @@ screenshots:
     url: screenshots/buttons.html
   - name: Forms
     url: screenshots/forms.html
+  - name: List Table
+    url: screenshots/list-table.html
+  - name: List Table (Stretchy)
+    url: screenshots/list-table-stretched.html
 

@@ -1,0 +1,133 @@
+.list-table {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    padding: 0 10px;
+    border-bottom: 1px solid #eee;
+    color: #999;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  th > a,
+  td > a {
+    display: block;
+  }
+
+  th > a {
+    margin: 0 -10px;
+    padding: 0 10px;
+  }
+
+  td > a {
+    margin: -10px;
+    padding: 10px;
+  }
+
+  .table-status {
+    padding: 0;
+    width: 10px;
+    border-right: 1px solid #eee;
+  }
+
+  .table-status-ok {
+    background-color: $green;
+  }
+
+  .table-status-warning {
+    background-color: $yellow;
+    background-image: url('progress-background.gif');
+  }
+
+  .table-status-error {
+    background-color: $red;
+  }
+}
+
+.list-table-stretched {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  thead {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  tbody {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    border-top: 1px solid #eee;
+  }
+
+  tr {
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+
+  th, td {
+    border: none;
+  }
+}
+
+.table-sort {
+  color: #999;
+
+  &.hover,
+  &:hover {
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+.table-sort-text,
+.table-sort-indicator {
+  display: inline-block;
+}
+
+.table-sort-indicator {
+  width: 9px;
+  height: 5px;
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+
+.table-sort-asc,
+.table-sort-desc {
+  color: #333;
+  font-weight: bold;
+}
+
+.table-sort-asc > .table-sort-indicator {
+  @include icon-sprite(sort-ascending);
+}
+
+.table-sort-asc.hover > .table-sort-indicator,
+.table-sort-asc:hover > .table-sort-indicator {
+  @include icon-sprite(sort-ascending-hover);
+}
+
+.table-sort-desc > .table-sort-indicator {
+  @include icon-sprite(sort-descending);
+}
+
+.table-sort-desc.hover > .table-sort-indicator,
+.table-sort-desc:hover > .table-sort-indicator {
+  @include icon-sprite(sort-descending-hover);
+}
