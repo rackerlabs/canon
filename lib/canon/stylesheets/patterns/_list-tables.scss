@@ -1,4 +1,6 @@
 .list-table {
+  position: relative;
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -130,4 +132,16 @@
 .table-sort-desc.hover > .table-sort-indicator,
 .table-sort-desc:hover > .table-sort-indicator {
   @include icon-sprite(sort-descending-hover);
+}
+
+.table-overlay {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.table-overlay-loading {
+  background: url('loading-indicator.gif') center center no-repeat;
 }
