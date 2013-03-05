@@ -52,7 +52,7 @@ namespace :lint do
     t.binary = 'node_modules/.bin/jshint'
     t.pattern = 'lib/canon/javascripts/ spec/unit/'
 
-    if Canon.environment == 'test'
+    if Canon.test?
       t.reporter = 'checkstyle-reporter'
       t.output = File.join(Canon.build_path, 'jshint.xml')
     end
@@ -81,7 +81,7 @@ namespace :lint do
       'unqualified-attributes'
     ]
 
-    if Canon.environment == 'test'
+    if Canon.test?
       t.format = 'checkstyle-xml'
       t.output = File.join(Canon.build_path, 'csslint.xml')
     end
@@ -89,7 +89,7 @@ namespace :lint do
 end
 
 namespace :spec do
-  Rake::Task['ci:setup:rspec'].invoke if Canon.environment == 'test'
+  Rake::Task['ci:setup:rspec'].invoke if Canon.test?
 
   desc 'Run functional tests'
   RSpec::Core::RakeTask.new(:functional) do |t|
@@ -104,10 +104,10 @@ namespace :spec do
   desc 'Run unit tests'
   task :unit do
     url = 'http://0.0.0.0:3000/test'
-    reporter = Canon.environment == 'test' ? 'xunit' : 'dot'
+    reporter = Canon.test? ? 'xunit' : 'dot'
     mocha_command = "node_modules/.bin/mocha-phantomjs --reporter #{reporter} #{url}"
 
-    if Canon.environment == 'test'
+    if Canon.test?
       mocha_command += ' > ' + Canon.build_path + '/unit.xml'
     end
 
@@ -116,7 +116,7 @@ namespace :spec do
 end
 
 task :release do
-  if Canon.environment != 'test'
+  if Canon.test?
     puts "\e[31mRelease should only happen in the test environment!\e[0m"
     exit
   end
