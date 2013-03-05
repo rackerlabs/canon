@@ -65,6 +65,10 @@ module Canon
       ENV['CANON_ENV'] || 'development'
     end
 
+    def test?
+      environment == 'test'
+    end
+
     def root_path
       File.expand_path('../..', __FILE__)
     end
