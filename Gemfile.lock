@@ -9,14 +9,6 @@ GIT
       rainbow
       thor (>= 0.14.6)
 
-GIT
-  remote: git://github.rackspace.com/michael-jackson/merlot.git
-  revision: cb08bda07efec85d661b2173245d29d6a0d5aea0
-  specs:
-    merlot (3.0.0)
-      require_relative
-      selenium-webdriver (>= 2.24.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,7 +71,6 @@ GEM
       rack (>= 1.0)
     rainbow (1.1.4)
     rake (10.0.3)
-    require_relative (1.0.3)
     rmagick (2.13.2)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
@@ -124,11 +115,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
   ci_reporter
   compass
   fog
   green_onion!
-  merlot!
   rack
   rack-contrib
   rake

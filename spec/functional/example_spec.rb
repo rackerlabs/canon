@@ -1,11 +1,7 @@
-describe 'Example Functional Test' do
+feature 'Example Functional Test' do
   it 'displays a welcome message' do
-    driver = create_driver
-    driver.navigate.to(base_url)
+    visit('/')
 
-    title = driver.find_element(:tag_name, 'h1')
-    title.text.should == 'Typography'
-
-    driver.quit
+    find('h1').text.should == 'Typography'
   end
 end
