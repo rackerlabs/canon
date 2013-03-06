@@ -4,10 +4,6 @@ require 'green_onion'
 require 'selenium-webdriver'
 require File.expand_path('../../lib/canon', __FILE__)
 
-def base_url
-  Canon.test? ? 'http://ci.canon.rackspace.com:3000' : 'http://0.0.0.0:3000'
-end
-
 def capabilities
   Selenium::WebDriver::Remote::Capabilities.new({
     :platform => ENV['CANON_SELENIUM_PLATFORM'],
@@ -18,9 +14,24 @@ def capabilities
   })
 end
 
-Capybara.app_host = base_url
-Capybara.default_driver = :selenium
+def driver
+  Canon.test? ? :grid : :selenium
+end
+
+def url
+  Canon.test? ? 'http://ci.canon.rackspace.com:3000' : 'http://0.0.0.0:3000'
+end
+
+Capybara.app_host = url
+Capybara.default_driver = driver
 Capybara.run_server = false
+
+Capybara.register_driver :grid do |app|
+  Capybara::Selenium::Driver.new(app,
+    :browser => :remote,
+    :url => 'http://10.14.209.83:4444/wd/hub',
+    :desired_capabilities => capabilities)
+end
 
 GreenOnion.configure do |config|
   config.driver = :selenium
