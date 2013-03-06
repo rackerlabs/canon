@@ -115,6 +115,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
   ci_reporter
   compass
   fog

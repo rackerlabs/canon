@@ -8,6 +8,7 @@ gem 'uglifier'
 gem 'yui-compressor'
 
 group :development, :test do
+  gem 'capybara'
   gem 'ci_reporter'
   gem 'fog'
   gem 'green_onion', :git => 'git://github.com/tomeara/green_onion.git'
