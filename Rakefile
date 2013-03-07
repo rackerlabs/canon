@@ -103,8 +103,9 @@ namespace :spec do
 
   desc 'Run unit tests'
   task :unit do
-    url = 'http://0.0.0.0:3000/test'
+    url = Canon.test? ? 'http://test.canon.rackspace.com/test' : 'http://0.0.0.0:3000/test'
     reporter = Canon.test? ? 'xunit' : 'dot'
+
     mocha_command = "node_modules/.bin/mocha-phantomjs --reporter #{reporter} #{url}"
 
     if Canon.test?
