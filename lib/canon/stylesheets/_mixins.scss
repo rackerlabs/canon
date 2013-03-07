@@ -21,3 +21,19 @@
   width: 100%;
   z-index: 10;
 }
+
+@mixin bleed($padding: $grid-padding, $sides: left right) {
+  @if $sides == 'all' {
+    margin: - $padding;
+    padding: $padding;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $padding;
+      padding-#{$side}: $padding;
+    }
+  }
+  // example usage
+  // .class { @include bleed; }
+  // .class { @include bleed($sides: left); }
+  // .class { @include bleed($sides: right); }
+}

@@ -17,6 +17,38 @@ $base-font-family: 'Arial', sans-serif;
 $base-font-size: 13px;
 $base-line-height: 20px;
 
+// The Grid
+
+// Defaults
+// default col total
+$total-columns: 12;
+// width of each column
+$column-width: 75px;
+// space between columns
+$gutter-width: 20px;
+// space on the right and left of the grid
+$grid-padding: 40px;
+// alternative layout breakpoints
+
+// not sure if needed but leaving it hear for now
+$legacy-support-for-ie  : true;
+$legacy-support-for-ie6 : $legacy-support-for-ie;
+$legacy-support-for-ie7 : $legacy-support-for-ie;
+
+// Container Type
+$container-style: fluid;
+
+// Breakpoints
+$small: 1px 6 640px;
+$small-padding: 10px;
+$medium: 641px 10 960px;
+$medium-padding: 20px;
+$large: 961px 12 1399px;
+$large-padding: 40px;
+$xlarge: 1400px 18;
+$xlarge-padding: 60px;
+
+
 // Layout
 
 $app-nav-primary-height: 58px;
