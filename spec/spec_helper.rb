@@ -19,7 +19,7 @@ def driver
 end
 
 def url
-  Canon.test? ? 'http://ci.canon.rackspace.com:3000' : 'http://0.0.0.0:3000'
+  Canon.test? ? 'http://test.canon.rackspace.com' : 'http://0.0.0.0:3000'
 end
 
 Capybara.app_host = url
