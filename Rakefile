@@ -1,5 +1,6 @@
 require 'ci/reporter/rake/rspec'
 require 'compass'
+require 'susy'
 require 'fog'
 require 'rspec/core/rake_task'
 require 'sprockets'
