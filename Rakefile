@@ -118,7 +118,7 @@ namespace :spec do
 end
 
 task :release do
-  if Canon.test?
+  if !Canon.test?
     puts "\e[31mRelease should only happen in the test environment!\e[0m"
     exit
   end
@@ -135,7 +135,7 @@ task :release do
   connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['CANON_USERNAME'], :rackspace_api_key => ENV['CANON_API_KEY'])
   directory = connection.directories.get('cdn.canon.rackspace.com')
 
-  files_to_upload = Dir.glob('build/*.css') + Dir.glob('build/*.js') + Dir.glob('package/*.tar.gz') + Dir.glob('package/*.zip')
+  files_to_upload = Dir.glob('{build,package}/*.{js,css,png,gif,tar.gz,zip}')
   files_to_upload.each do |file|
     base_name = File.basename(file)
     versioned_name = "v#{Canon::VERSION}/#{base_name}"
