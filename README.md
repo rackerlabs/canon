@@ -34,4 +34,3 @@ process for contributing. In short:
 5. `git push origin FEATURE_NAME` - Push changes to GitHub.
 6. Open a pull request and wait for your changes to be reviewed.
 7. After addressing pull request feedback, merge your changes.
-
