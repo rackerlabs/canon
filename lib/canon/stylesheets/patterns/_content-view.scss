@@ -1,14 +1,18 @@
 // View Section
-.content-view-section {
-  padding: 0 30px 30px;
-}
-
 .content-view-section + .content-view-section {
   border-top: 1px solid #eee;
 }
 
+.content-view-section-header,
+.content-view-section-content {
+  padding: 0 30px;
+}
+
 .content-view-section-header {
+  position: relative;
   padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #fff;
 }
 
 .content-view-section-title {
@@ -17,12 +21,12 @@
 }
 
 .content-view-section-content {
-  margin-top: 15px;
+  padding-bottom: 30px;
 }
 
 // Header Section
 .content-view-header {
-  padding-top: 30px;
+  padding: 30px;
 
   @extend .content-view-section;
 }
@@ -45,4 +49,64 @@
   color: $grey;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+// Collapsible Section
+.content-view-section-toggle {
+  width: 13px;
+  height: 13px;
+  margin: 3px 0 3px 10px;
+  float: right;
+}
+
+.collapsible-view-section {
+  @extend .content-view-section;
+
+  > .content-view-section-header {
+    cursor: pointer;
+  }
+
+  > .content-view-section-header.hover,
+  > .content-view-section-header:hover {
+    @include background(linear-gradient(#f7f7f7, #fff));
+  }
+}
+
+.collapsible-view-section.expanded {
+  .content-view-section-toggle {
+    @include icon-sprite(section-toggle-expanded);
+  }
+
+  > .content-view-section-header.hover,
+  > .content-view-section-header:hover {
+    .content-view-section-toggle {
+      @include icon-sprite(section-toggle-expanded-hover);
+    }
+  }
+}
+
+.collapsible-view-section.collapsed {
+  .content-view-section-toggle {
+    @include icon-sprite(section-toggle-collapsed);
+  }
+
+  > .content-view-section-header.hover,
+  > .content-view-section-header:hover {
+    .content-view-section-toggle {
+      @include icon-sprite(section-toggle-collapsed-hover);
+    }
+  }
+}
+
+.collapsible-view-section.loading {
+  .content-view-section-toggle {
+    width: 16px;
+    height: 16px;
+    background-image: url('loading-indicator.gif');
+  }
+}
+
+.collapsible-view-section.loading .content-view-section-content,
+.collapsible-view-section.collapsed .content-view-section-content {
+  display: none;
 }
