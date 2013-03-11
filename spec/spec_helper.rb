@@ -4,10 +4,18 @@ require 'green_onion'
 require 'selenium-webdriver'
 require File.expand_path('../../lib/canon', __FILE__)
 
+def platform
+  ENV['CANON_SELENIUM_PLATFORM'] || 'mac'
+end
+
+def browser
+  ENV['CANON_SELENIUM_BROWSER'] || 'firefox'
+end
+
 def capabilities
   Selenium::WebDriver::Remote::Capabilities.new({
-    :platform => ENV['CANON_SELENIUM_PLATFORM'],
-    :browser_name => ENV['CANON_SELENIUM_BROWSER'],
+    :platform => platform,
+    :browser_name => browser,
     :javascript_enabled => true,
     :takes_screenshots => true,
     :css_selectors_enabled => true
