@@ -110,3 +110,29 @@
 .collapsible-view-section.collapsed .content-view-section-content {
   display: none;
 }
+
+// Orderable Section
+.content-view-section-handle {
+  width: 10px;
+  height: 10px;
+  margin: 4px 10px 4px -20px;
+  float: left;
+
+  @include icon-sprite(section-handle);
+}
+
+.content-view-section-handle.hover,
+.content-view-section-handle:hover {
+  @include icon-sprite(section-handle-hover);
+}
+
+.content-view-section-header .content-view-section-handle {
+  display: none;
+}
+
+.content-view-section-header.hover,
+.content-view-section-header:hover {
+ .content-view-section-handle {
+    display: block;
+  }
+}
