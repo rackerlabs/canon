@@ -44,6 +44,7 @@ end
 GreenOnion.configure do |config|
   config.driver = Canon.test? ? :canon : :selenium
   config.fail_on_different_dimensions = true
+  config.skins_dir = "spec/skins/#{platform}/#{browser}"
   config.threshold = 0.5
 end
 
