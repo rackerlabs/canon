@@ -1,10 +1,14 @@
 // View Section
 .content-view-section {
-  padding: 30px;
+  padding: 0 30px 30px;
 }
 
 .content-view-section + .content-view-section {
   border-top: 1px solid #eee;
+}
+
+.content-view-section-header {
+  padding-top: 30px;
 }
 
 .content-view-section-title {
@@ -18,6 +22,8 @@
 
 // Header Section
 .content-view-header {
+  padding-top: 30px;
+
   @extend .content-view-section;
 }
 
