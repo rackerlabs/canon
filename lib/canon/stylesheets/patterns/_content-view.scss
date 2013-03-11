@@ -9,15 +9,24 @@
 }
 
 .content-view-section-header {
-  position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 1px solid #fff;
 }
 
+.content-view-section-title,
+.content-view-section-subtitle {
+  display: inline-block;
+}
+
 .content-view-section-title {
+  margin: 0 10px 0 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+.content-view-section-subtitle {
+  color: #999;
 }
 
 .content-view-section-content {
@@ -104,6 +113,11 @@
     height: 16px;
     background-image: url('loading-indicator.gif');
   }
+}
+
+.collapsible-view-section.loading .content-view-section-subtitle,
+.collapsible-view-section.expanded .content-view-section-subtitle {
+  display: none;
 }
 
 .collapsible-view-section.loading .content-view-section-content,
