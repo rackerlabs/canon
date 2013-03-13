@@ -5,6 +5,8 @@ screenshots:
     url: screenshots/nav-secondary.html
   - name: Footer
     url: screenshots/footer.html
+  - name: Grid
+    url: screenshots/grid.html
   - name: Content Full
     url: screenshots/content-full.html
   - name: Content List
