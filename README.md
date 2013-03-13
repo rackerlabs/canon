@@ -35,3 +35,13 @@ process for contributing. In short:
 6. Open a pull request and wait for your changes to be reviewed.
 7. After addressing pull request feedback, merge your changes.
 
+Commit messages should use the following format for easier changelog generation:
+
+```
+[TYPE][ID] Description
+
+Body
+```
+
+Type can be: Feature, Bug, Style, Test, Maintenance
+ID is the Trello card number being implemented.
