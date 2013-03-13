@@ -22,18 +22,80 @@
   z-index: 10;
 }
 
-@mixin bleed($padding: $grid-padding, $sides: left right) {
-  @if $sides == 'all' {
-    margin: - $padding;
-    padding: $padding;
-  } @else {
-    @each $side in $sides {
-      margin-#{$side}: - $padding;
-      padding-#{$side}: $padding;
+@mixin respond-to($media) {
+  @if $media == small {
+    @media only screen and (max-width: 640px) {
+      @content;
     }
   }
+  @else if $media == medium {
+    @media only screen and (min-width: 641px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @else if $media == xlarge {
+    @media only screen and (min-width: 1400px){
+      @content;
+    }
+  }
+}
+
+// Susy Grid - Bleed Mixin https://gist.github.com/ericam/4973348
+@mixin bleed(
+  $width: $grid-padding,
+  $sides: left right,
+  $style: $container-style
+) {
+  @if $border-box-sizing { @include box-sizing(content-box) }
+
+  @if type-of($width) == 'list' {
+    $width: filter($width, of);
+    $width: space(nth($width,1), nth($width,2), $style);
+  } @else if unitless($width) {
+    $width: space($width, $style: $style);
+  }
+
+  @if $sides == 'all' {
+    margin: - $width;
+    padding: $width;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $width;
+      padding-#{$side}: $width;
+    }
+  }
+
   // example usage
   // .class { @include bleed; }
   // .class { @include bleed($sides: left); }
   // .class { @include bleed($sides: right); }
 }
+
+@mixin susy-classes($silent: false) {
+  $base: if($silent, '%', '.');
+  $selector: '#{$base}span';
+
+  @if $silent { #{$selector} { @include span-columns(1); } }
+  @else { [class^="span-"] { @include span-columns(1); } }
+
+  #{$base}full { clear: both; }
+  #{$base}omega { @include omega; }
+
+  @for $span from 1 through $total-columns {
+    $span-selector: '#{$selector}-#{$span}';
+    @for $context from 1 through $total-columns {
+      $total-selector: '#{$span-selector}-#{$context}';
+      $total-selector: if($context == $total-columns, '#{$span-selector}, #{$total-selector}', $total-selector);
+      @if $context != $span {
+        #{$total-selector} {
+          @if $silent { @extend #{$selector}; }
+          width: columns($span, $context);
+        }
+      } @else {
+        #{$total-selector} { clear: both; }
+      }
+    }
+  }
+}
+
+// @include susy-classes;
