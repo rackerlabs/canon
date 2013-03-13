@@ -86,7 +86,7 @@
     @for $context from 1 through $total-columns {
       $total-selector: '#{$span-selector}-#{$context}';
       $total-selector: if($context == $total-columns, '#{$span-selector}, #{$total-selector}', $total-selector);
-      @if $context != $span {
+      @if $context > $span {
         #{$total-selector} {
           @if $silent { @extend #{$selector}; }
           width: columns($span, $context);
