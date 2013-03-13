@@ -1,59 +1,59 @@
-// View Section
-.content-view-section + .content-view-section {
+// Content Section
+.content-section + .content-section {
   border-top: 1px solid #eee;
 }
 
-.content-view-section-header,
-.content-view-section-content {
+.content-section-header,
+.content-section-body {
   padding: 0 30px;
 }
 
-.content-view-section-header {
+.content-section-header {
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 1px solid #fff;
 }
 
-.content-view-section-title,
-.content-view-section-subtitle {
+.content-section-title,
+.content-section-subtitle {
   display: inline-block;
 }
 
-.content-view-section-title {
+.content-section-title {
   margin: 0 10px 0 0;
   font-size: 18px;
   font-weight: bold;
 }
 
-.content-view-section-subtitle {
+.content-section-subtitle {
   color: #999;
 }
 
-.content-view-section-content {
+.content-section-body {
   padding-bottom: 30px;
 }
 
 // Header Section
-.content-view-header {
+.header-section {
   padding: 30px;
 
-  @extend .content-view-section;
+  @extend .content-section;
 }
 
-.content-view-header-actions {
+.header-section-actions {
   @extend .pull-right;
 }
 
-.content-view-header-title,
-.content-view-header-subtitle {
+.header-section-title,
+.header-section-subtitle {
   font-weight: bold;
 }
 
-.content-view-header-title {
+.header-section-title {
   font-size: 24px;
 }
 
-.content-view-header-subtitle {
+.header-section-subtitle {
   margin: 0 0 5px;
   color: $grey;
   font-size: 12px;
@@ -61,72 +61,72 @@
 }
 
 // Collapsible Section
-.content-view-section-toggle {
+.content-section-toggle {
   width: 13px;
   height: 13px;
   margin: 3px 0 3px 10px;
   float: right;
 }
 
-.collapsible-view-section {
-  @extend .content-view-section;
+.collapsible-section {
+  @extend .content-section;
 
-  > .content-view-section-header {
+  > .content-section-header {
     cursor: pointer;
   }
 
-  > .content-view-section-header.hover,
-  > .content-view-section-header:hover {
+  > .content-section-header.hover,
+  > .content-section-header:hover {
     @include background(linear-gradient(#f7f7f7, #fff));
   }
 }
 
-.collapsible-view-section.expanded {
-  .content-view-section-toggle {
+.collapsible-section.expanded {
+  .content-section-toggle {
     @include icon-sprite(section-toggle-expanded);
   }
 
-  > .content-view-section-header.hover,
-  > .content-view-section-header:hover {
-    .content-view-section-toggle {
+  > .content-section-header.hover,
+  > .content-section-header:hover {
+    .content-section-toggle {
       @include icon-sprite(section-toggle-expanded-hover);
     }
   }
 }
 
-.collapsible-view-section.collapsed {
-  .content-view-section-toggle {
+.collapsible-section.collapsed {
+  .content-section-toggle {
     @include icon-sprite(section-toggle-collapsed);
   }
 
-  > .content-view-section-header.hover,
-  > .content-view-section-header:hover {
-    .content-view-section-toggle {
+  > .content-section-header.hover,
+  > .content-section-header:hover {
+    .content-section-toggle {
       @include icon-sprite(section-toggle-collapsed-hover);
     }
   }
 }
 
-.collapsible-view-section.loading {
-  .content-view-section-toggle {
+.collapsible-section.loading {
+  .content-section-toggle {
     width: 16px;
     height: 16px;
     background-image: url('loading-indicator.gif');
   }
 }
 
-.collapsible-view-section.loading .content-view-section-subtitle,
-.collapsible-view-section.expanded .content-view-section-subtitle {
+.collapsible-section.loading .content-section-subtitle,
+.collapsible-section.expanded .content-section-subtitle {
   display: none;
 }
 
-.collapsible-view-section.loading .content-view-section-content,
-.collapsible-view-section.collapsed .content-view-section-content {
+.collapsible-section.loading .content-section-body,
+.collapsible-section.collapsed .content-section-body {
   display: none;
 }
 
 // Orderable Section
-.content-view-section-handle {
+.content-section-handle {
   width: 10px;
   height: 10px;
   margin: 4px 10px 4px -20px;
@@ -135,18 +135,18 @@
   @include icon-sprite(section-handle);
 }
 
-.content-view-section-handle.hover,
-.content-view-section-handle:hover {
+.content-section-handle.hover,
+.content-section-handle:hover {
   @include icon-sprite(section-handle-hover);
 }
 
-.content-view-section-header .content-view-section-handle {
+.content-section-header .content-section-handle {
   display: none;
 }
 
-.content-view-section-header.hover,
-.content-view-section-header:hover {
- .content-view-section-handle {
+.content-section-header.hover,
+.content-section-header:hover {
+ .content-section-handle {
     display: block;
   }
 }
