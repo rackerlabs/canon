@@ -78,7 +78,7 @@
   @if $silent { #{$selector} { @include span-columns(1); } }
   @else { [class^="span-"] { @include span-columns(1); } }
 
-  #{$base}full { clear: both; }
+  #{$base}full { clear: both; @include reset-columns;}
   #{$base}omega { @include omega; }
 
   @for $span from 1 through $total-columns {
@@ -92,7 +92,9 @@
           width: columns($span, $context);
         }
       } @else {
-        #{$total-selector} { clear: both; }
+        @if $context == $span {
+          #{$total-selector} { clear: both; @include reset-columns;}
+        }
       }
     }
   }
