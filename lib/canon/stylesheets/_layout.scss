@@ -1,7 +1,3 @@
-body {
-  min-width: 1050px; // fixes layout issues when users have to horizontally scroll
-}
-
 html, body {
   height: 100%;
 }
@@ -30,10 +26,6 @@ html, body {
       padding-top: 15px;
     }
   }
-
-  .l-inner {
-    padding-bottom: 30px;
-  }
 }
 
 .l-footer {
@@ -41,48 +33,45 @@ html, body {
   height: $app-footer-height;
 }
 
-.l-inner {
-  padding: 0 10px;
-}
-
 .l-content {
-  width: 1030px;
-  margin: 0 auto;
-  @include micro-clearfix();
+  @include micro-clearfix;
+  @include container;
 }
 
 // Main Content & Sidebar
 .main {
   margin: 30px 0;
+  @include micro-clearfix;
 }
 
 .sidebar {
-  width: 170px;
-  float: left;
-  padding-right: 40px;
-  min-height: 100px;
+  @include span-columns(3,12);
+  & > div {
+    min-height: 100px;
+  }
 
   &.pull-right {
-    float: right;
-    width: 240px;
-    padding: 0 0 0 20px;
+    @include span-columns(3 omega,12);
   }
 }
 
 .content {
-  background: $white;
-  border: 1px solid #CCC;
-  padding: 30px;
+  @include reset-columns;
+
+  & > div {
+    background: $white;
+    border: 1px solid #CCC;
+    padding: 30px;
+    min-height: 100px;
+    padding: 30px;
+  }
 
   .sidebar + & {
-    padding: 25px;
-    float: left;
-    width: 768px;
+    @include span-columns(9 omega,12);
   }
 
   .sidebar.pull-right + & {
-    padding: 30px;
-    width: 708px;
+    @include remove-omega;
   }
 }
 
@@ -102,5 +91,87 @@ html, body {
   }
   .l-body {
     padding-top: 0 !important;
+  }
+}
+
+@include at-breakpoint($xlarge){
+  // reset padding
+  $grid-padding: $xlarge-padding;
+  .l-content {
+    @include container;
+  }
+
+  .sidebar {
+    @include span-columns(4,18);
+
+    &.pull-right {
+      @include span-columns(4 omega,18);
+    }
+  }
+
+  .content {
+    @include reset-columns;
+
+    .sidebar + & {
+      @include span-columns(14 omega,18);
+    }
+
+    .sidebar.pull-right + & {
+      @include remove-omega;
+    }
+  }
+}
+
+@include at-breakpoint($medium){
+  $grid-padding: $medium-padding;
+  .l-content {
+    @include container;
+  }
+
+  .sidebar {
+    @include span-columns(3,10);
+
+    &.pull-right {
+      @include span-columns(3 omega,10);
+    }
+  }
+
+  .content {
+
+    .sidebar + & {
+      @include span-columns(7 omega,10);
+    }
+
+    .sidebar.pull-right + & {
+      @include remove-omega;
+    }
+  }
+}
+
+
+
+@include at-breakpoint($small){
+  $grid-padding: $small-padding;
+  .l-content {
+    @include container;
+  }
+
+  .content, .sidebar + .content, .sidebar.pull-right + .content {
+    @include reset-columns;
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+}
+
+// Add support for basic 12 column grid
+@include grid-classes;
+
+// Reset those columns at the smallest breakpoint.
+@include at-breakpoint($small) {
+  [class^="span-"] {
+    @include reset-columns;
+    display: block;
   }
 }
