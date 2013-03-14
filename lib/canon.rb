@@ -13,9 +13,9 @@ module Canon
     def configure!
       Compass.configuration do |c|
         c.project_path = library_path
-        c.images_dir = 'images'
-        c.javascripts_dir = 'javascripts'
-        c.sass_dir = 'stylesheets'
+        c.images_path = images_path
+        c.javascripts_path = javascripts_path
+        c.sass_path = stylesheets_path
         c.relative_assets = true
       end
 
