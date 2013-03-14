@@ -78,7 +78,7 @@
   @if $silent { #{$selector} { @include span-columns(1); } }
   @else { [class^="span-"] { @include span-columns(1); } }
 
-  #{$base}full { clear: both; @include reset-columns;}
+  #{$base}row, #{$base}full { @include micro-clearfix; @include reset-columns;}
   #{$base}omega { @include omega; }
 
   @for $span from 1 through $total-columns {
@@ -93,7 +93,7 @@
         }
       } @else {
         @if $context == $span {
-          #{$total-selector} { clear: both; @include reset-columns;}
+          #{$total-selector} { @include micro-clearfix; @include reset-columns;}
         }
       }
     }
