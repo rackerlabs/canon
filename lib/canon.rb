@@ -13,9 +13,9 @@ module Canon
     def configure!
       Compass.configuration do |c|
         c.project_path = library_path
-        c.images_dir = 'images'
-        c.javascripts_dir = 'javascripts'
-        c.sass_dir = 'stylesheets'
+        c.images_path = images_path
+        c.javascripts_path = javascripts_path
+        c.sass_path = stylesheets_path
         c.relative_assets = true
       end
 
@@ -53,9 +53,9 @@ module Canon
 
     def sprockets
       @environment ||= Sprockets::Environment.new.tap do |e|
-        e.append_path(File.expand_path('images', library_path))
-        e.append_path(File.expand_path('javascripts', library_path))
-        e.append_path(File.expand_path('stylesheets', library_path))
+        e.append_path(images_path)
+        e.append_path(javascripts_path)
+        e.append_path(stylesheets_path)
 
         e.append_path(File.expand_path('node_modules', root_path))
         e.append_path(File.expand_path('spec/unit', root_path))
@@ -83,7 +83,7 @@ module Canon
     end
 
     def library_path
-      File.join(root_path, 'lib', 'canon')
+      File.join(root_path, 'lib')
     end
 
     def images_path
