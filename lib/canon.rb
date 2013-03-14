@@ -83,7 +83,7 @@ module Canon
     end
 
     def library_path
-      File.join(root_path, 'lib', 'canon')
+      File.join(root_path, 'lib')
     end
 
     def images_path
