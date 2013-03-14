@@ -53,9 +53,9 @@ module Canon
 
     def sprockets
       @environment ||= Sprockets::Environment.new.tap do |e|
-        e.append_path(File.expand_path('images', library_path))
-        e.append_path(File.expand_path('javascripts', library_path))
-        e.append_path(File.expand_path('stylesheets', library_path))
+        e.append_path(images_path)
+        e.append_path(javascripts_path)
+        e.append_path(stylesheets_path)
 
         e.append_path(File.expand_path('node_modules', root_path))
         e.append_path(File.expand_path('spec/unit', root_path))
