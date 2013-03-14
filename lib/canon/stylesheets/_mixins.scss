@@ -64,11 +64,6 @@
       padding-#{$side}: $width;
     }
   }
-
-  // example usage
-  // .class { @include bleed; }
-  // .class { @include bleed($sides: left); }
-  // .class { @include bleed($sides: right); }
 }
 
 @mixin susy-classes($silent: false) {
@@ -98,6 +93,3 @@
       }
     }
   }
-}
-
-// @include susy-classes;
