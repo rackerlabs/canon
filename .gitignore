@@ -1,6 +1,6 @@
 .sass-cache/
 build/
-lib/canon/images/icon-*.png
+lib/images/icon-*.png
 log/
 node_modules/
 package/
