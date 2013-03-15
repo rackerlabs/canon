@@ -11,31 +11,33 @@
   <script type="text/javascript" src="/vendor/mocha/mocha.js"></script>
   <script type="text/javascript" src="/vendor/sinon/lib/sinon.js"></script>
   <script type="text/javascript" src="/vendor/sinon-chai/lib/sinon-chai.js"></script>
-
-  <script type="text/javascript">
-
-    var should;
-
-    mocha.reporter('html');
-    mocha.setup('bdd');
-
-    chai.Assertion.includeStack = true;
-
-    should = chai.should();
-  </script>
-
-  <script type="text/javascript" src="/spec/example_spec.js"></script>
+  <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
 </head>
 <body>
   <div id="mocha"></div>
 
   <script type="text/javascript">
-    if (window.mochaPhantomJS) {
-      mochaPhantomJS.run();
-    }
-    else {
-      mocha.run();
-    }
+
+    var should, specs;
+
+    mocha.reporter('html');
+    mocha.setup('bdd');
+    chai.Assertion.includeStack = true;
+    should = chai.should();
+
+    specs = [];
+    specs.push('canon_spec');
+
+    requirejs.config({ paths: { 'canon': '../assets/canon' } });
+    require(specs, function () {
+      if (window.mochaPhantomJS) {
+        mochaPhantomJS.run();
+      }
+      else {
+        mocha.run();
+      }
+    });
+
   </script>
 </body>
 </html>
