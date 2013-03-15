@@ -2,6 +2,7 @@
   // Options
   "camelcase": true,
   "eqeqeq": true,
+  "expr": true,
   "forin": true,
   "indent": 2,
   "latedef": true,
@@ -19,9 +20,8 @@
 
   // Predefined Variables
   "predef": [
-    "exports",
-    "module",
     "require",
+    "define",
     "describe",
     "it"
   ]
