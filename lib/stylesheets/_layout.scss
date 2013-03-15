@@ -33,7 +33,7 @@ html, body {
   height: $app-footer-height;
 }
 
-.l-content {
+.l-container {
   @include micro-clearfix;
   @include container;
 }
@@ -97,7 +97,7 @@ html, body {
 @include at-breakpoint($xlarge){
   // reset padding
   $grid-padding: $xlarge-padding;
-  .l-content {
+  .l-container {
     @include container;
   }
 
@@ -124,7 +124,7 @@ html, body {
 
 @include at-breakpoint($medium){
   $grid-padding: $medium-padding;
-  .l-content {
+  .l-container {
     @include container;
   }
 
@@ -152,7 +152,7 @@ html, body {
 
 @include at-breakpoint($small){
   $grid-padding: $small-padding;
-  .l-content {
+  .l-container {
     @include container;
   }
 
