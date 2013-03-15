@@ -13,17 +13,17 @@ require File.expand_path('../lib/tasks/log', __FILE__)
 
 desc 'Compile all assets'
 task :compile => 'clean' do
-  log('Compiling assets') do
+  log('Compiling stylesheets') do
     FileUtils.mkdir(Canon.build_path)
-    File.write(File.join(Canon.build_path, 'canon.js'), Canon.assets['canon.js'])
     File.write(File.join(Canon.build_path, 'canon.css'), Canon.assets['canon.css'])
+
+    Canon.assets.css_compressor = :yui
+    File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.assets['canon.css'])
   end
 
-  log('Minifying assets') do
-    Canon.assets.css_compressor = :yui
-    Canon.assets.js_compressor = :uglifier
-    File.write(File.join(Canon.build_path, 'canon.min.js'), Canon.assets['canon.js'])
-    File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.assets['canon.css'])
+  log('Compiling javascripts') do
+    system('node_modules/.bin/r.js -o config/build.js')
+    system('node_modules/.bin/r.js -o config/build.min.js')
   end
 
   log('Copying images') do
