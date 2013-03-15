@@ -15,15 +15,15 @@ desc 'Compile all assets'
 task :compile => 'clean' do
   log('Compiling assets') do
     FileUtils.mkdir(Canon.build_path)
-    File.write(File.join(Canon.build_path, 'canon.js'), Canon.sprockets['canon.js'])
-    File.write(File.join(Canon.build_path, 'canon.css'), Canon.sprockets['canon.css'])
+    File.write(File.join(Canon.build_path, 'canon.js'), Canon.assets['canon.js'])
+    File.write(File.join(Canon.build_path, 'canon.css'), Canon.assets['canon.css'])
   end
 
   log('Minifying assets') do
-    Canon.sprockets.css_compressor = :yui
-    Canon.sprockets.js_compressor = :uglifier
-    File.write(File.join(Canon.build_path, 'canon.min.js'), Canon.sprockets['canon.js'])
-    File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.sprockets['canon.css'])
+    Canon.assets.css_compressor = :yui
+    Canon.assets.js_compressor = :uglifier
+    File.write(File.join(Canon.build_path, 'canon.min.js'), Canon.assets['canon.js'])
+    File.write(File.join(Canon.build_path, 'canon.min.css'), Canon.assets['canon.css'])
   end
 
   log('Copying images') do
@@ -105,7 +105,7 @@ namespace :spec do
   desc 'Run unit tests'
   task :unit do
     base = ENV['CANON_URL'] || 'http://0.0.0.0:3000'
-    url = "#{base}/test"
+    url = "#{base}/spec/runner.html"
     reporter = Canon.test? ? 'xunit' : 'dot'
 
     mocha_command = "node_modules/.bin/mocha-phantomjs --reporter #{reporter} #{url}"
