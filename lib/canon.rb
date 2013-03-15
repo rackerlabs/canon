@@ -24,6 +24,8 @@ module Canon
 
     def app
       @app ||= Rack::Builder.new do
+        not_found = lambda { |env| [404, { 'Content-Type' => 'text/plain' }, ['Not Found']] }
+
         use Rack::Lint
         use Rack::CommonLogger
         use Rack::TryStatic, {
@@ -33,32 +35,38 @@ module Canon
         }
 
         map '/assets' do
-          run Canon.sprockets
+          run Canon.assets
+        end
+
+        map '/spec' do
+          run Rack::TryStatic.new(not_found, {
+            urls: [''],
+            root: File.join(Canon.root_path, 'spec', 'unit'),
+            index: 'runner.html'
+          })
+        end
+
+        map '/vendor' do
+          run Rack::TryStatic.new(not_found, {
+            urls: [''],
+            root: File.join(Canon.root_path, 'node_modules')
+          })
         end
 
         map '/screenshots' do
-          use Rack::TryStatic, {
+          run Rack::TryStatic.new(not_found, {
             urls: [''],
             root: Canon.screenshot_path
-          }
-
-          run lambda { |env| [404, { 'Content-Type' => 'text/plain' }, ['Not Found']] }
-        end
-
-        map '/test' do
-          run Rack::File.new(File.join(Canon.root_path, 'spec/unit/runner.html'))
+          })
         end
       end
     end
 
-    def sprockets
+    def assets
       @environment ||= Sprockets::Environment.new.tap do |e|
         e.append_path(images_path)
         e.append_path(javascripts_path)
         e.append_path(stylesheets_path)
-
-        e.append_path(File.expand_path('node_modules', root_path))
-        e.append_path(File.expand_path('spec/unit', root_path))
       end
     end
 
