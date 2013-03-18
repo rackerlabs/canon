@@ -52,13 +52,6 @@ module Canon
             root: File.join(Canon.root_path, 'node_modules')
           })
         end
-
-        map '/screenshots' do
-          run Rack::TryStatic.new(not_found, {
-            urls: [''],
-            root: Canon.screenshot_path
-          })
-        end
       end
     end
 
