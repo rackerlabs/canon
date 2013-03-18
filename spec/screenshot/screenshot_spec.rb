@@ -6,7 +6,7 @@ describe 'Screenshots' do
 
   config['screenshots'].each do |screenshot|
     it screenshot['name'] do
-      GreenOnion.skin_visual_and_percentage("#{url}/#{screenshot['url']}")
+      GreenOnion.skin_visual_and_percentage("#{url}/screenshots/#{screenshot['url']}")
     end
   end
 end
