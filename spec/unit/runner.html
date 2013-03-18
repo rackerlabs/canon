@@ -36,7 +36,15 @@
 
     specs.push('canon_spec');
 
-    requirejs.config({ paths: { 'canon': '../assets/canon' } });
+    requirejs.config({
+      paths: {
+        'canon': '../assets/canon',
+        'bean': '../vendor/bean/bean',
+        'bonzo': '../vendor/bonzo/bonzo',
+        'qwery': '../vendor/qwery/qwery'
+      }
+    });
+
     require(specs, function () {
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
