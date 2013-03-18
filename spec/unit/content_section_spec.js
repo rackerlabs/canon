@@ -1,4 +1,4 @@
-define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (dom, events, ContentSection) {
+define(['ender', 'canon/content_section'], function ($, ContentSection) {
   describe('ContentSection', function () {
 
     var element, section;
@@ -8,7 +8,7 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
         '<div class="content-section-header"></div>' +
         '</div>';
 
-      element = dom.query('.collapsible-section');
+      element = $('.collapsible-section');
       section = new ContentSection();
     });
 
@@ -74,13 +74,9 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
       });
 
       it('is called when header is clicked', function () {
-
-        var header;
-
         section.toggle = sinon.spy();
 
-        header = dom.query('.content-section-header', element)[0];
-        events.fire(header, 'click');
+        $('.content-section-header', element).click();
 
         section.toggle.should.have.been.called;
       });
@@ -98,11 +94,15 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
       });
 
       it('removes event listeners', function () {
-        events.off = sinon.spy();
+
+        var element;
+
+        element = section.getElement();
+        element.off = sinon.spy();
 
         section.dispose();
 
-        events.off.should.have.been.calledWith(element[0], 'click.content-section');
+        element.off.should.have.been.calledWith('click.content-section');
       });
     });
   });

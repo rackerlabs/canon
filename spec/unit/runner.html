@@ -39,16 +39,17 @@
     fixture = document.getElementById('fixture');
 
     specs.push('canon_spec');
-    specs.push('dom_spec');
-    specs.push('events_spec');
     specs.push('content_section_spec');
 
     requirejs.config({
       paths: {
         'canon': '../assets/canon',
-        'bean': '../vendor/bean/bean',
-        'bonzo': '../vendor/bonzo/bonzo',
-        'qwery': '../vendor/qwery/qwery'
+        'ender': '../vendor/ender-library/ender'
+      },
+      shim: {
+        'ender': {
+          exports: 'ender'
+        }
       }
     });
 
