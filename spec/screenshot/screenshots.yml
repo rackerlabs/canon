@@ -1,31 +1,31 @@
 screenshots:
   - name: Layout
-    url: screenshots/layout.html
+    url: layout.html
   - name: Nav-Secondary
-    url: screenshots/nav-secondary.html
+    url: nav-secondary.html
   - name: Footer
-    url: screenshots/footer.html
+    url: footer.html
   - name: Grid
-    url: screenshots/grid.html
+    url: grid.html
   - name: Content Full
-    url: screenshots/content-full.html
+    url: content-full.html
   - name: Content List
-    url: screenshots/content-list.html
+    url: content-list.html
   - name: Content Detail
-    url: screenshots/content-detail.html
+    url: content-detail.html
   - name: Buttons
-    url: screenshots/buttons.html
+    url: buttons.html
   - name: Forms
-    url: screenshots/forms.html
+    url: forms.html
   - name: List Table
-    url: screenshots/list-table.html
+    url: list-table.html
   - name: List Table (Stretchy)
-    url: screenshots/list-table-stretched.html
+    url: list-table-stretched.html
   - name: List Table (Loading)
-    url: screenshots/list-table-loading.html
+    url: list-table-loading.html
   - name: List Table (Error)
-    url: screenshots/list-table-error.html
+    url: list-table-error.html
   - name: List Table (Empty)
-    url: screenshots/list-table-empty.html
+    url: list-table-empty.html
   - name: Content View
-    url: screenshots/content-view.html
+    url: content-view.html
