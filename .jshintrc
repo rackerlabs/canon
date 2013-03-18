@@ -23,6 +23,13 @@
     "require",
     "define",
     "describe",
-    "it"
+    "it",
+    "before",
+    "beforeEach",
+    "after",
+    "afterEach",
+    "sinon",
+    "expect",
+    "fixture"
   ]
 }

@@ -13,7 +13,7 @@ define(['qwery', 'canon/dom'], function (qwery, dom) {
       });
 
       it('adds DOM helper methods to prototype', function () {
-        elements.get.should.be.a.function;
+        elements.get.should.be.a('function');
       });
     });
   });

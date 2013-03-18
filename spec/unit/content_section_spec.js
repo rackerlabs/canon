@@ -18,20 +18,20 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
 
     describe('#attach', function () {
       it('succeeds when element has content-section', function () {
-        (function () { section.attach(element); }).should.not.throw();
+        (function () { section.attach(element); }).should.not.throws();
       });
 
       it('fails when element has other class', function () {
         element.removeClass('collapsible-section');
         element.addClass('invalid');
 
-        (function () { section.attach(element); }).should.throw('Component must be attached to element with "collapsible-section".');
+        (function () { section.attach(element); }).should.throws('Component must be attached to element with "collapsible-section".');
       });
 
       it('fails when already attached', function () {
         section.attach(element);
 
-        (function () { section.attach(element); }).should.throw('Component is already attached.');
+        (function () { section.attach(element); }).should.throws('Component is already attached.');
       });
     });
 
@@ -40,7 +40,7 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
         section.attach(element);
         section.collapse();
 
-        element.hasClass('collapsed').should.be.true;
+        element.hasClass('collapsed').should.equal(true);
       });
     });
 
@@ -50,7 +50,7 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
         section.collapse();
         section.expand();
 
-        element.hasClass('collapsed').should.be.false;
+        element.hasClass('collapsed').should.equal(false);
       });
     });
 
@@ -63,14 +63,14 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
         section.expand();
         section.toggle();
 
-        element.hasClass('collapsed').should.be.true;
+        element.hasClass('collapsed').should.equal(true);
       });
 
       it('removes collapsed when it is collapsed', function () {
         section.collapse();
         section.toggle();
 
-        element.hasClass('collapsed').should.be.false;
+        element.hasClass('collapsed').should.equal(false);
       });
 
       it('is called when header is clicked', function () {
@@ -94,7 +94,7 @@ define(['canon/dom', 'canon/events', 'canon/views/content_section'], function (d
       it('discards DOM reference', function () {
         section.dispose();
 
-        expect(section.getElement()).to.be.null;
+        expect(section.getElement()).to.equal(null);
       });
 
       it('removes event listeners', function () {
