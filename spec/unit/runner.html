@@ -9,32 +9,62 @@
 
   <script type="text/javascript" src="/vendor/chai/chai.js"></script>
   <script type="text/javascript" src="/vendor/mocha/mocha.js"></script>
-  <script type="text/javascript" src="/vendor/sinon/lib/sinon.js"></script>
+  <script type="text/javascript" src="/vendor/mocha-sinon/sinon-1.6.0.js"></script>
+
+  <script type="text/javascript">
+
+    var expect, should;
+
+    mocha.reporter('html');
+    mocha.setup('bdd');
+    chai.Assertion.includeStack = true;
+
+    expect = chai.expect;
+    should = chai.should();
+
+  </script>
+
+  <script type="text/javascript" src="/vendor/mocha-sinon/mocha-sinon.js"></script>
   <script type="text/javascript" src="/vendor/sinon-chai/lib/sinon-chai.js"></script>
   <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
 </head>
 <body>
   <div id="mocha"></div>
+  <div id="fixture"></div>
 
   <script type="text/javascript">
 
-    var should, specs;
+    var fixture, specs = [];
 
-    mocha.reporter('html');
-    mocha.setup('bdd');
-    chai.Assertion.includeStack = true;
-    should = chai.should();
+    fixture = document.getElementById('fixture');
 
-    specs = [];
     specs.push('canon_spec');
+    specs.push('content_section_spec');
 
-    requirejs.config({ paths: { 'canon': '../assets/canon' } });
+    requirejs.config({
+      paths: {
+        'canon': '../assets/canon',
+        'ender': '../vendor/ender-library/ender'
+      },
+      shim: {
+        'ender': {
+          exports: 'ender'
+        }
+      }
+    });
+
     require(specs, function () {
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
       }
       else {
         mocha.run();
+      }
+    });
+
+    afterEach(function () {
+      while (fixture.hasChildNodes()) {
+        fixture.removeChild(fixture.lastChild);
       }
     });
 
