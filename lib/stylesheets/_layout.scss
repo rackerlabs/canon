@@ -174,13 +174,4 @@ body {
   }
 }
 
-// Add support for basic 12 column grid
 @include grid-classes;
-
-// Reset those columns at the smallest breakpoint.
-@include at-breakpoint($small) {
-  [class^="span-"] {
-    @include reset-columns;
-    display: block;
-  }
-}
