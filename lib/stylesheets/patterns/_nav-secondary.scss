@@ -1,50 +1,32 @@
 // Seconday Nav
 .nav-secondary {
-	background: #ececec;
-	height: $app-nav-secondary-height;
+	min-height: $app-nav-secondary-height;
 	@include fixed-top($app-nav-utility-height + $app-nav-primary-height);
-	@include box-shadow(rgba(0, 0, 0, .15) 0 2px 3px 0);
-
-	&:before {
-		content: '';
-		display: block;
-		border-bottom: 1px solid white;
-		border-top: 1px solid #DDD;
-	}
+	@include noise;
 
 	.nav {
+		@include seam;
+
 	  & > li {
 	  	float: left;
-	  	margin: 5px 7px 0 7px;
-			font-size: 13px;
-			font-weight: bold;
+	  	margin: 4px 40px 6px 0;
+			font-size: 14px;
+			font-weight: 600;
+			font-family: $alt-font-family;
 			line-height: 20px;
 			position: relative;
 
 			&:first-child {
-				margin-left: -10px;
+				margin-left: 0px;
 			}
 
 			&.active > a, &.active > a:hover {
-				color: $nav-primary-link-active;
-			}
-
-			&.active > a:after {
-				position: absolute;
-				content: "";
-				width: 0;
-				height: 0;
-				left: 50%;
-				bottom: -5px;
-				margin-left: -3px;
-				border-left: 5px solid transparent;
-				border-right: 5px solid transparent;
-				border-bottom: 5px solid #bfbfbf;
+				color: $red;
 			}
 
 	  	& > a {
+	  		padding: 2px 0;
 				color: $nav-primary-link;
-				padding: 0 10px 0 10px;
 				text-decoration: none;
 				text-shadow: 0 1px $white;
 				&:hover {

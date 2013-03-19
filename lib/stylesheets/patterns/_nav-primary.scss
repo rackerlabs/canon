@@ -16,42 +16,36 @@
 
 // main nav
 .nav-primary {
-	height: $app-nav-primary-height;
+	min-height: $app-nav-primary-height;
 	@include fixed-top($app-nav-utility-height);
-	@include background-image(linear-gradient($white, #ececec));
-	@include filter-gradient($white, #ececec);
-	@include box-shadow(rgba(0, 0, 0, .15) 0 2px 3px 0);
+	@include noise;
 
 	.nav {
+		@include seam;
+		padding: 30px 0 9px 0;
 
 	  & > li {
-	  	margin: 14px 10px;
-			font-size: 14px;
-			font-weight: bold;
+	  	margin: 0 20px;
 			border: 1px solid transparent;
-			@include border-radius(5px);
 
 			&.active {
-				background-color: $white;
-				border-color: #CCC;
-				font-weight: bold;
 				& > a, & > a:hover {
 					color: $nav-primary-link-active;
+					border-bottom: 2px solid $red;
 				}
 
 			}
 
-			&:first-child {
-				margin-left: 210px;
-			}
-
 	  	& > a {
 	  		line-height: 1em;
+	  		padding: 8px 0;
 				color: $nav-primary-link;
-				font-size: 14px;
-				padding: 7px 9px;
+				font-size: 18px;
+				font-weight: 300;
+				font-family: $alt-font-family;
 				text-decoration: none;
 				text-shadow: 0 1px $white;
+				border-bottom: 2px solid transparent;
 				&:hover {
 					color: $nav-primary-link-hover;
 				}
@@ -62,27 +56,17 @@
 
 // rackspace logo
 .nav-brand {
-	position: relative;
+	float: left;
+	margin-top: 10px;
 
 	a {
-		display: block;
-		position: absolute;
-		left: 0;
-		top: -19px;
-		&:before {
-			content: '';
-			display: block;
-			height: 20px;
-			margin-bottom: -20px;
-			background-color: white;
-			@include border-radius(2px 2px 0 0);
-		}
-	}
-
-	span {
 		background: transparent url(./logo-rackspace.png) no-repeat center center;
-		width: 190px;
+		width: 164px;
 		height: 70px;
 		display: block;
+	}
+
+	& + .nav {
+		padding-left: 210px;
 	}
 }
