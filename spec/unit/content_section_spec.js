@@ -33,24 +33,55 @@ define(['ender', 'canon/content_section'], function ($, ContentSection) {
 
         (function () { section.attach(element); }).should.throws('Component is already attached.');
       });
+
+      it('sets section to loading state', function () {
+        section.attach(element);
+
+        element.hasClass('loading').should.equal(true);
+      });
     });
 
     describe('#collapse', function () {
-      it('adds collapsed', function () {
+      beforeEach(function () {
+        element.addClass('loading');
+        element.addClass('expanded');
+
         section.attach(element);
         section.collapse();
+      });
 
+      it('adds collapsed', function () {
         element.hasClass('collapsed').should.equal(true);
+      });
+
+      it('removes expanded', function () {
+        element.hasClass('expanded').should.equal(false);
+      });
+
+      it('removes loading', function () {
+        element.hasClass('loading').should.equal(false);
       });
     });
 
     describe('#expand', function () {
-      it('removes collapsed', function () {
-        section.attach(element);
-        section.collapse();
-        section.expand();
+      beforeEach(function () {
+        element.addClass('loading');
+        element.addClass('collapsed');
 
+        section.attach(element);
+        section.expand();
+      });
+
+      it('adds expanded', function () {
+        element.hasClass('expanded').should.equal(true);
+      });
+
+      it('removes collapsed', function () {
         element.hasClass('collapsed').should.equal(false);
+      });
+
+      it('removes loading', function () {
+        element.hasClass('loading').should.equal(false);
       });
     });
 
@@ -59,26 +90,40 @@ define(['ender', 'canon/content_section'], function ($, ContentSection) {
         section.attach(element);
       });
 
-      it('adds collapsed when it is expanded', function () {
+      it('calls collapse when it is expanded', function () {
+        section.collapse = sinon.spy();
+
         section.expand();
         section.toggle();
 
-        element.hasClass('collapsed').should.equal(true);
+        section.collapse.should.have.been.called;
       });
 
-      it('removes collapsed when it is collapsed', function () {
+      it('calls expand when it is collapsed', function () {
+        section.expand = sinon.spy();
+
         section.collapse();
         section.toggle();
 
-        element.hasClass('collapsed').should.equal(false);
+        section.expand.should.have.been.called;
       });
 
       it('is called when header is clicked', function () {
+        element.removeClass('loading');
         section.toggle = sinon.spy();
 
         $('.content-section-header', element).click();
 
         section.toggle.should.have.been.called;
+      });
+
+      it('does not call toggle if loading', function () {
+        element.addClass('loading');
+        section.toggle = sinon.spy();
+
+        $('.content-section-header', element).click();
+
+        section.toggle.should.not.have.been.called;
       });
     });
 
