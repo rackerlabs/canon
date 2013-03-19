@@ -48,7 +48,7 @@ define(['ender', 'canon/content_section'], function ($, ContentSection) {
 
         section.attach(element);
         section.collapse();
-      })
+      });
 
       it('adds collapsed', function () {
         element.hasClass('collapsed').should.equal(true);
