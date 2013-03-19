@@ -26,9 +26,9 @@ $total-columns: 12;
 // width of each column
 $column-width: 75px;
 // space between columns
-$gutter-width: 20px;
+$gutter-width: 0px;
 // space on the right and left of the grid
-$grid-padding: 40px;
+$grid-padding: 20px;
 // alternative layout breakpoints
 
 // not sure if needed but leaving it hear for now
@@ -45,9 +45,9 @@ $small-padding: 10px;
 $medium: 641px 10 960px;
 $medium-padding: 20px;
 $large: 961px 12 1399px;
-$large-padding: 40px;
+$large-padding: 20px;
 $xlarge: 1400px 18;
-$xlarge-padding: 60px;
+$xlarge-padding: 30px;
 
 
 // Layout
