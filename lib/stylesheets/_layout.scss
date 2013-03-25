@@ -60,8 +60,8 @@ body {
       min-height: 40px;
       margin-top: 20px;
       background: #F5F5F5;
-      box-shadow: 0px 6px 8px 1px #c2c2c2;
       padding: 30px;
+      @include box-shadow(#c2c2c2 0px 6px 8px 1px);
     }
   }
 }
@@ -71,8 +71,8 @@ body {
 
   & > div {
     background: $white;
-    box-shadow: 0px 6px 8px 1px #c2c2c2;
     min-height: 120px;
+    @include box-shadow(#c2c2c2 0px 6px 8px 1px);
   }
 
   .sidebar + & {
