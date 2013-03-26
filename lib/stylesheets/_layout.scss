@@ -55,6 +55,14 @@ body {
 
   &.pull-right {
     @include span-columns(3 omega,12);
+
+    & > div {
+      min-height: 40px;
+      margin-top: 20px;
+      background: #F5F5F5;
+      padding: 30px;
+      @include box-shadow(#c2c2c2 0px 6px 8px 1px);
+    }
   }
 }
 
@@ -63,10 +71,8 @@ body {
 
   & > div {
     background: $white;
-    border: 1px solid #CCC;
-    padding: 30px;
-    min-height: 100px;
-    padding: 30px;
+    min-height: 120px;
+    @include box-shadow(#c2c2c2 0px 6px 8px 1px);
   }
 
   .sidebar + & {
@@ -168,13 +174,4 @@ body {
   }
 }
 
-// Add support for basic 12 column grid
 @include grid-classes;
-
-// Reset those columns at the smallest breakpoint.
-@include at-breakpoint($small) {
-  [class^="span-"] {
-    @include reset-columns;
-    display: block;
-  }
-}

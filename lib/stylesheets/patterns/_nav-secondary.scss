@@ -9,7 +9,7 @@
 
 	  & > li {
 	  	float: left;
-	  	margin: 4px 40px 6px 0;
+	  	margin: 4px 30px 6px 0;
 			font-size: 14px;
 			font-weight: 600;
 			font-family: $alt-font-family;
@@ -25,7 +25,7 @@
 			}
 
 	  	& > a {
-	  		padding: 2px 0;
+	  		padding: 2px 6px;
 				color: $nav-primary-link;
 				text-decoration: none;
 				text-shadow: 0 1px $white;
