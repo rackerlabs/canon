@@ -60,6 +60,7 @@ module Canon
         e.append_path(images_path)
         e.append_path(javascripts_path)
         e.append_path(stylesheets_path)
+        e.append_path(fonts_path)
       end
     end
 
@@ -85,6 +86,10 @@ module Canon
 
     def library_path
       File.join(root_path, 'lib')
+    end
+
+    def fonts_path
+      File.join(library_path, 'fonts')
     end
 
     def images_path

@@ -35,6 +35,25 @@ task :compile => 'clean' do
       FileUtils.copy(image, Canon.build_path)
     end
   end
+
+  log('Copying fonts') do
+
+    FileList[Canon.fonts_path + '/*.svg'].each do |font|
+      FileUtils.copy(font, Canon.build_path)
+    end
+
+    FileList[Canon.fonts_path + '/*.ttf'].each do |font|
+      FileUtils.copy(font, Canon.build_path)
+    end
+
+    FileList[Canon.fonts_path + '/*.eot'].each do |font|
+      FileUtils.copy(font, Canon.build_path)
+    end
+
+    FileList[Canon.fonts_path + '/*.woff'].each do |font|
+      FileUtils.copy(font, Canon.build_path)
+    end
+  end
 end
 
 desc 'Clean build output'
@@ -136,7 +155,7 @@ task :release do
   connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['CANON_USERNAME'], :rackspace_api_key => ENV['CANON_API_KEY'])
   directory = connection.directories.get('cdn.canon.rackspace.com')
 
-  files_to_upload = Dir.glob('{build,package}/*.{js,css,png,gif,tar.gz,zip}')
+  files_to_upload = Dir.glob('{build,package}/*.{eot,svg,ttf,woff,js,css,png,gif,tar.gz,zip}')
   files_to_upload.each do |file|
     base_name = File.basename(file)
     versioned_name = "v#{Canon::VERSION}/#{base_name}"
