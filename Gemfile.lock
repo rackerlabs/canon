@@ -130,7 +130,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets (~> 2.8.2)
   sprockets-sass
-  susy
+  susy (~> 1.0.8)
   thin
   uglifier
   yui-compressor

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'compass'
-gem 'susy'
+gem 'susy', '~> 1.0.8'
 gem 'rake'
 gem 'sprockets', '~> 2.8.2'
 gem 'sprockets-sass'
