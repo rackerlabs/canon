@@ -96,7 +96,7 @@ GEM
     sprockets-sass (0.9.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
-    susy (1.0.5)
+    susy (1.0.8)
       compass (>= 0.12.2)
       sass (>= 3.2.0)
     thin (1.5.0)
@@ -130,7 +130,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets (~> 2.8.2)
   sprockets-sass
-  susy
+  susy (~> 1.0.8)
   thin
   uglifier
   yui-compressor
