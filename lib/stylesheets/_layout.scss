@@ -45,6 +45,12 @@ body {
 .main {
   margin: 30px 0;
   @include micro-clearfix;
+
+  &.panel {
+    background-color: #f5f5f5;
+    @include box-shadow(#c2c2c2 0px 6px 8px 1px);
+    margin-top: 50px;
+  }
 }
 
 .sidebar {
@@ -58,10 +64,7 @@ body {
 
     & > div {
       min-height: 40px;
-      margin-top: 20px;
-      background: #F5F5F5;
-      padding: 30px;
-      @include box-shadow(#c2c2c2 0px 6px 8px 1px);
+      padding: 0 30px;
     }
   }
 }
@@ -69,10 +72,14 @@ body {
 .content {
   @include reset-columns;
 
+  .panel & {
+    margin-top: -20px;
+  }
+
   & > div {
     background: $white;
     min-height: 120px;
-    @include box-shadow(#c2c2c2 0px 6px 8px 1px);
+    @include box-shadow(#c2c2c2 0px 3px 8px 1px);
   }
 
   .sidebar + & {
