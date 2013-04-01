@@ -29,3 +29,5 @@ screenshots:
     url: list-table-empty.html
   - name: Content View
     url: content-view.html
+  - name: Tooltip
+    url: tooltip.html
