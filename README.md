@@ -1,5 +1,4 @@
-canon
-=====
+![http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png](http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png)
 
 ## SYSTEM REQUIREMENTS
 
