@@ -22,8 +22,8 @@ task :compile => 'clean' do
   end
 
   log('Compiling javascripts') do
-    system('node_modules/.bin/r.js -o config/build.js')
-    system('node_modules/.bin/r.js -o config/build.min.js')
+    system('node_modules/.bin/r.js -o config/build.js out=build/canon.js optimize=none')
+    system('node_modules/.bin/r.js -o config/build.js out=build/canon.min.js optimize=uglify2')
   end
 
   log('Copying images') do
