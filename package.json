@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "almond": "~0.2.5",
-    "ender-library": "git+https://github.rackspace.com/canon/ender-library",
+    "ender-amd": "git+https://github.com/bradgignac/ender-amd",
     "requirejs": "~2.1.5"
   },
   "devDependencies": {
