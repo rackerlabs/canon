@@ -59,6 +59,14 @@ body {
   &.pull-right {
     @include span-columns(3 omega,12);
   }
+
+  .sidebar-inner {
+    padding-left: 30px;
+
+    .panel & {
+      padding: 0 30px;
+    }
+  }
 }
 
 .content {
@@ -78,10 +86,6 @@ body {
   .sidebar.pull-right + & {
     @include remove-omega;
   }
-}
-
-.content-inner, .sidebar-inner {
-  padding: 0 30px;
 }
 
 // height based media query to remove app-frame for shorter view ports
