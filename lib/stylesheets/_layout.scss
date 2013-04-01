@@ -71,6 +71,14 @@ body {
       padding: 0 30px;
     }
   }
+
+  .sidebar-inner {
+    padding-left: 30px;
+
+    .panel & {
+      padding: 0 30px;
+    }
+  }
 }
 
 .content {
