@@ -40,32 +40,6 @@
   }
 }
 
-// Susy Grid - Bleed Mixin https://gist.github.com/ericam/4973348
-@mixin bleed(
-  $width: $grid-padding,
-  $sides: left right,
-  $style: $container-style
-) {
-  @if $border-box-sizing { @include box-sizing(content-box) }
-
-  @if type-of($width) == 'list' {
-    $width: filter($width, of);
-    $width: space(nth($width,1), nth($width,2), $style);
-  } @else if unitless($width) {
-    $width: space($width, $style: $style);
-  }
-
-  @if $sides == 'all' {
-    margin: - $width;
-    padding: $width;
-  } @else {
-    @each $side in $sides {
-      margin-#{$side}: - $width;
-      padding-#{$side}: $width;
-    }
-  }
-}
-
 @mixin grid-classes($silent: false) {
   @include with-grid-settings(12, 75px, 20px, 40px) {
     $base: if($silent, '%', '.');
