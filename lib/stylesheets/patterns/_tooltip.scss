@@ -1,0 +1,14 @@
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 1030;
+}
+
+.tooltip-inner {
+  max-width: 440px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #999;
+
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 9px 2px);
+}
