@@ -55,31 +55,21 @@ body {
 
 .sidebar {
   @include span-columns(3,12);
-  & > div {
-    min-height: 100px;
-  }
 
   &.pull-right {
     @include span-columns(3 omega,12);
-
-    & > div {
-      min-height: 40px;
-      padding: 0 30px;
-    }
+    padding: 0 30px;
   }
 }
 
 .content {
   @include reset-columns;
+  background: $white;
+  min-height: 120px;
+  @include box-shadow(#c2c2c2 0px 3px 8px 1px);
 
   .panel & {
     margin-top: -20px;
-  }
-
-  & > div {
-    background: $white;
-    min-height: 120px;
-    @include box-shadow(#c2c2c2 0px 3px 8px 1px);
   }
 
   .sidebar + & {
