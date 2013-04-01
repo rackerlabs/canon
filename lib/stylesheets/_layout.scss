@@ -163,6 +163,7 @@ body {
   }
 
   .content, .sidebar + .content, .sidebar.pull-right + .content {
+    display: block;
     @include reset-columns;
   }
 
