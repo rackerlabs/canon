@@ -58,10 +58,14 @@ body {
 
   &.pull-right {
     @include span-columns(3 omega,12);
+
+    .sidebar-inner {
+      padding-left: 30px;
+    }
   }
 
   .sidebar-inner {
-    padding-left: 30px;
+    padding-right: 30px;
 
     .panel & {
       padding: 0 30px;
