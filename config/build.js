@@ -2,7 +2,6 @@
   baseUrl: '../lib/javascripts',
   name: '../../node_modules/almond/almond',
   include: ['canon'],
-  optimize: 'none',
   paths: {
     'ender-amd': '../../node_modules/ender-amd/lib/ender-amd',
     'ender': '../../node_modules/ender-amd/lib/ender',
@@ -16,6 +15,5 @@
   wrap: {
     startFile: 'start.js',
     endFile: 'end.js'
-  },
-  out: "../build/canon.js"
+  }
 })
