@@ -58,12 +58,14 @@
     requirejs.config({
       paths: {
         'canon': '../assets/canon',
-        'ender': '../vendor/ender-library/ender'
-      },
-      shim: {
-        'ender': {
-          exports: 'ender'
-        }
+        'ender-amd': '../vendor/ender-amd/lib/ender-amd',
+        'ender': '../vendor/ender-amd/lib/ender',
+        'bean': '../vendor/ender-amd/node_modules/bean/bean',
+        'bonzo': '../vendor/ender-amd/node_modules/bonzo/bonzo',
+        'qwery': '../vendor/ender-amd/node_modules/qwery/qwery',
+        'bean-ender': '../vendor/ender-amd/lib/bean-ender',
+        'bonzo-ender': '../vendor/ender-amd/lib/bonzo-ender',
+        'qwery-ender': '../vendor/ender-amd/lib/qwery-ender'
       }
     });
 
