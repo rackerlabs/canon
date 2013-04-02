@@ -1,4 +1,4 @@
-## v0.1.2
+## v0.2.0 (April 2, 2013)
 - Add styles for tooltips.
 - Fix footer wrapping issue in Chrome 26.
 
