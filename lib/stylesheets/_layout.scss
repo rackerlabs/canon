@@ -35,36 +35,16 @@ body {
 .l-container {
   @include micro-clearfix;
   @include container;
-}
 
-// Main Content & Sidebar
-.main {
-  margin: 30px 0;
-  @include micro-clearfix;
-
-  &.panel {
-    background-color: #f5f5f5;
-    @include box-shadow(#c2c2c2 0px 6px 8px 1px);
-    margin-top: 50px;
-  }
-}
-
-.sidebar {
-  @include span-columns(3,12);
-
-  &.pull-right {
-    @include span-columns(3 omega,12);
-
-    .sidebar-inner {
-      padding-left: 30px;
+  @include at-breakpoint($xlarge){
+    & {
+      padding: 0 $xlarge-padding;
     }
   }
 
-  .sidebar-inner {
-    padding-right: 30px;
-
-    .panel & {
-      padding: 0 30px;
+  @include at-breakpoint($small){
+    & {
+      padding: 0 $small-padding;
     }
   }
 
@@ -74,25 +54,6 @@ body {
     .panel & {
       padding: 0 30px;
     }
-  }
-}
-
-.content {
-  @include reset-columns;
-  background: $white;
-  min-height: 120px;
-  @include box-shadow(#c2c2c2 0px 3px 8px 1px);
-
-  .panel & {
-    margin-top: -20px;
-  }
-
-  .sidebar + & {
-    @include span-columns(9 omega,12);
-  }
-
-  .sidebar.pull-right + & {
-    @include remove-omega;
   }
 }
 
@@ -114,77 +75,3 @@ body {
     padding-top: 0 !important;
   }
 }
-
-@include at-breakpoint($xlarge){
-  // reset padding
-  $grid-padding: $xlarge-padding;
-  .l-container {
-    @include container;
-  }
-
-  .sidebar {
-    @include span-columns(4,18);
-
-    &.pull-right {
-      @include span-columns(4 omega,18);
-    }
-  }
-
-  .content {
-    @include reset-columns;
-
-    .sidebar + & {
-      @include span-columns(14 omega,18);
-    }
-
-    .sidebar.pull-right + & {
-      @include remove-omega;
-    }
-  }
-}
-
-@include at-breakpoint($medium){
-  $grid-padding: $medium-padding;
-  .l-container {
-    @include container;
-  }
-
-  .sidebar {
-    @include span-columns(3,10);
-
-    &.pull-right {
-      @include span-columns(3 omega,10);
-    }
-  }
-
-  .content {
-
-    .sidebar + & {
-      @include span-columns(7 omega,10);
-    }
-
-    .sidebar.pull-right + & {
-      @include remove-omega;
-    }
-  }
-}
-
-
-
-@include at-breakpoint($small){
-  $grid-padding: $small-padding;
-  .l-container {
-    @include container;
-  }
-
-  .content, .sidebar + .content, .sidebar.pull-right + .content {
-    display: block;
-    @include reset-columns;
-  }
-
-  .sidebar {
-    display: none !important;
-  }
-}
-
-@include grid-classes;
