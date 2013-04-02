@@ -24,10 +24,6 @@ body {
 
   .nav-secondary + & {
     padding-top: $app-header-height + $app-nav-secondary-height;
-
-    .main {
-      padding-top: 15px;
-    }
   }
 }
 
