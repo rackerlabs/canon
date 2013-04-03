@@ -9,6 +9,14 @@ screenshots:
     url: grid.html
   - name: Content Full
     url: content-full.html
+  - name: Sidebar Left
+    url: sidebar-left.html
+  - name: Sidebar Left With Panel
+    url: sidebar-left-panel.html
+  - name: Sidebar Right
+    url: sidebar-right.html
+  - name: Sidebar Right With Panel
+    url: sidebar-right-panel.html
   - name: Buttons
     url: buttons.html
   - name: Forms
