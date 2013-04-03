@@ -40,7 +40,7 @@
 .content {
   @include reset-columns;
   background: $white;
-  min-height: 120px;
+  min-height: 300px;
   @include box-shadow(#c2c2c2 0px 3px 8px 1px);
 
   .panel & {
