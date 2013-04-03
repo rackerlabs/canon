@@ -7,5 +7,9 @@ define(['canon'], function (canon) {
     it('defines ContentSection', function () {
       canon.ContentSection.should.exist;
     });
+
+    it('defines Tooltip', function () {
+      canon.Tooltip.should.exist;
+    });
   });
 });

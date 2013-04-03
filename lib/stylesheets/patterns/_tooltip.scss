@@ -1,7 +1,10 @@
 .tooltip {
-  display: none;
   position: absolute;
   z-index: 1030;
+
+  &.hidden {
+    display: none;
+  }
 }
 
 .tooltip-inner {
