@@ -8,24 +8,31 @@
     @include box-shadow(#c2c2c2 0px 6px 8px 1px);
     margin-top: 50px;
   }
+
+  .inner {
+    padding: 30px;
+  }
 }
 
 .sidebar {
   @include span-columns(3,12);
 
-  &.pull-right {
-    @include span-columns(3 omega,12);
+  .inner {
+    padding: 30px 30px 30px 0;
 
-    .sidebar-inner {
-      padding: 30px 0 30px 30px;
+    .panel & {
+      padding-left: 30px;
     }
   }
 
-  .sidebar-inner {
-    padding-right: 30px;
+  &.pull-right {
+    @include span-columns(3 omega,12);
 
-    .panel & {
-      padding: 30px;
+    .inner {
+      padding: 30px 0 30px 30px;
+      .panel & {
+        padding-right: 30px;
+      }
     }
   }
 }
@@ -46,17 +53,5 @@
 
   .sidebar.pull-right + & {
     @include remove-omega;
-  }
-
-  .content-inner {
-    padding: 30px;
-  }
-
-  .faceted-list {
-    padding: 25px;
-  }
-
-  .detail {
-    padding: 0;
   }
 }
