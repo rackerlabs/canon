@@ -41,7 +41,7 @@
 }
 
 .header-section-actions {
-  @extend .pull-right;
+  @extend %pull-right;
 }
 
 .header-section-title,
