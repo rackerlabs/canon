@@ -41,7 +41,7 @@ module Canon
         map '/spec' do
           run Rack::TryStatic.new(not_found, {
             urls: [''],
-            root: File.join(Canon.root_path, 'spec', 'unit'),
+            root: File.join(Canon.root_path, 'spec'),
             index: 'runner.html'
           })
         end

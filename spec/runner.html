@@ -38,8 +38,8 @@
 
     fixture = document.getElementById('fixture');
 
-    specs.push('canon_spec');
-    specs.push('content_section_spec');
+    specs.push('unit/canon_spec');
+    specs.push('unit/canon/content_section_spec');
 
     requirejs.config({
       paths: {
@@ -58,8 +58,7 @@
     require(specs, function () {
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
-      }
-      else {
+      } else {
         mocha.run();
       }
     });
