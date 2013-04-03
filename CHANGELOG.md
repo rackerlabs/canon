@@ -1,3 +1,6 @@
+## v0.3.0 (April 3, 2013)
+- Added styles for sidebar panels
+
 ## v0.2.0 (April 2, 2013)
 - Add styles for tooltips.
 - Fix footer wrapping issue in Chrome 26.
