@@ -3,7 +3,7 @@
 require 'open3'
 
 REQUIRED_RUBY_VERSION = /1.9.*/
-REQUIRED_NODE_VERSION = /0.[678].*/
+REQUIRED_NODE_VERSION = /0.[678(10)].*/
 REQUIRED_PHANTOM_JS_VERSION = /1.[78].*/
 
 def execute_command(command)
