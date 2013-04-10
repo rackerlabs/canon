@@ -8,7 +8,7 @@ require(['ender-amd', 'canon/tooltip'], function ($, Tooltip) {
 
       element = $('.tooltip-toggle');
       element.attr('title', 'foo');
-      element.css({ position: 'absolute', top: 0, left: 0 });
+      element.css({ position: 'absolute', top: 0, left: 0, width: 10, height: 10 });
 
       clock = sinon.useFakeTimers();
 
@@ -58,8 +58,8 @@ require(['ender-amd', 'canon/tooltip'], function ($, Tooltip) {
         toggleOffset = element.offset();
         contentOffset = content.offset();
 
-        contentOffset.top.should.equal(toggleOffset.top + 10);
-        contentOffset.left.should.equal(toggleOffset.left + 10);
+        contentOffset.top.should.equal(toggleOffset.top + toggleOffset.height);
+        contentOffset.left.should.equal(toggleOffset.left + toggleOffset.width);
       });
 
       it('is called when mouse hovers over toggle for threshold', function () {
