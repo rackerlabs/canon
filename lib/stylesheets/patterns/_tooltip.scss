@@ -1,17 +1,21 @@
 .tooltip {
   position: absolute;
-  visibility: hidden;
   z-index: 1030;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 
   @include transition-property(visibility, opacity);
   @include transition-duration(0.2s, 0.2s);
 
   &.hidden {
+    display: block;
     visibility: hidden;
     opacity: 0;
   }
 
   &.visible {
+    display: block;
     visibility: visible;
     opacity: 1;
   }
