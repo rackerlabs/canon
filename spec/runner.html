@@ -38,8 +38,10 @@
 
     fixture = document.getElementById('fixture');
 
-    specs.push('canon_spec');
-    specs.push('content_section_spec');
+    specs.push('unit/canon_spec');
+    specs.push('unit/canon/core/component_spec');
+    specs.push('unit/canon/content_section_spec');
+    specs.push('unit/canon/tooltip_spec');
 
     requirejs.config({
       paths: {
@@ -51,15 +53,15 @@
         'qwery': '../vendor/ender-amd/node_modules/qwery/qwery',
         'bean-ender': '../vendor/ender-amd/lib/bean-ender',
         'bonzo-ender': '../vendor/ender-amd/lib/bonzo-ender',
-        'qwery-ender': '../vendor/ender-amd/lib/qwery-ender'
+        'qwery-ender': '../vendor/ender-amd/lib/qwery-ender',
+        'klass': '../vendor/klass/klass'
       }
     });
 
     require(specs, function () {
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
-      }
-      else {
+      } else {
         mocha.run();
       }
     });

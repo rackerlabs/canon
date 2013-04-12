@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Functional | Content Section</title>
+  <title>Functional | Tooltip</title>
 
   <link rel="stylesheet" type="text/css" href="/assets/canon.css">
 
@@ -25,35 +25,20 @@
 
   </style>
 </head>
-<body>
+<body >
   <div class="container">
     <div class="controls">
       <button class="btn" onclick="javascript: attach();">Attach</button>
-      <button class="btn" onclick="javascript: collapse();">Collapse</button>
-      <button class="btn" onclick="javascript: expand();">Expand</button>
-      <button class="btn" onclick="javascript: toggle();">Toggle</button>
+      <button class="btn" onclick="javascript: show();">Show</button>
+      <button class="btn" onclick="javascript: hide();">Hide</button>
     </div>
-    <div class="collapsible-section">
-      <div class="content-section-header">
-        <div class="content-section-toggle"></div>
-        <div class="content-section-title">Expanded</div>
-        <div class="content-section-subtitle">This is a description.</div>
-      </div>
-      <div class="content-section-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-    </div>
+    <i class="icon-help" title="I'm a tooltip."></i>
   </div>
 
   <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
   <script type="text/javascript">
 
-    var element, section;
+    var element, tooltip;
 
     requirejs.config({
       paths: {
@@ -71,24 +56,20 @@
     });
 
     require(['canon', 'ender'], function (canon, $) {
-      element = $('.collapsible-section');
-      section = new canon.ContentSection();
+      element = $('.icon-help');
+      tooltip = new canon.Tooltip();
     });
 
     function attach() {
-      section.attach(element);
+      tooltip.attach(element);
     }
 
-    function collapse() {
-      section.collapse();
+    function show() {
+      tooltip.show();
     }
 
-    function expand() {
-      section.expand();
-    }
-
-    function toggle() {
-      section.toggle();
+    function hide() {
+      tooltip.hide();
     }
 
   </script>

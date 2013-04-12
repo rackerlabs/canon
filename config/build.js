@@ -10,7 +10,8 @@
     'qwery': '../../node_modules/ender-amd/node_modules/qwery/qwery',
     'bean-ender': '../../node_modules/ender-amd/lib/bean-ender',
     'bonzo-ender': '../../node_modules/ender-amd/lib/bonzo-ender',
-    'qwery-ender': '../../node_modules/ender-amd/lib/qwery-ender'
+    'qwery-ender': '../../node_modules/ender-amd/lib/qwery-ender',
+    'klass': '../../node_modules/klass/klass'
   },
   wrap: {
     startFile: 'start.js',

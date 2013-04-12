@@ -1,4 +1,4 @@
-define(['ender', 'canon/content_section'], function ($, ContentSection) {
+define(['ender-amd', 'canon/content_section'], function ($, ContentSection) {
   describe('ContentSection', function () {
 
     var element, section;
@@ -26,12 +26,6 @@ define(['ender', 'canon/content_section'], function ($, ContentSection) {
         element.addClass('invalid');
 
         (function () { section.attach(element); }).should.throws('Component must be attached to element with "collapsible-section".');
-      });
-
-      it('fails when already attached', function () {
-        section.attach(element);
-
-        (function () { section.attach(element); }).should.throws('Component is already attached.');
       });
 
       it('sets section to loading state', function () {
@@ -130,12 +124,6 @@ define(['ender', 'canon/content_section'], function ($, ContentSection) {
     describe('#dispose', function () {
       beforeEach(function () {
         section.attach(element);
-      });
-
-      it('discards DOM reference', function () {
-        section.dispose();
-
-        expect(section.getElement()).to.equal(null);
       });
 
       it('removes event listeners', function () {
