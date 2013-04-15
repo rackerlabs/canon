@@ -5,7 +5,7 @@
     url('SourceSansPro-Light-webfont.woff') format('woff'),
     url('SourceSansPro-Light-webfont.ttf') format('truetype'),
     url('SourceSansPro-Light-webfont.svg#SourceSansProLight') format('svg');
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -17,5 +17,16 @@
     url('SourceSansPro-Semibold-webfont.ttf') format('truetype'),
     url('SourceSansPro-Semibold-webfont.svg#SourceSansProSemibold') format('svg');
   font-weight: 600;
-  font-style: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Bold-webfont.eot');
+  src: url('SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('SourceSansPro-Bold-webfont.woff') format('woff'),
+    url('SourceSansPro-Bold-webfont.ttf') format('truetype'),
+    url('SourceSansPro-Bold-webfont.svg#SourceSansProBold') format('svg');
+  font-weight: 700;
+  font-style: normal;
 }
