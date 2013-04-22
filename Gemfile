@@ -19,3 +19,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'thin'
 end
+
+group :development do
+  gem 'guard-livereload'
+end
