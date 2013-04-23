@@ -50,6 +50,30 @@
 					color: $nav-primary-link-hover;
 				}
 	  	}
+
+	  	.dropdown-toggle {
+	  		display: inline-block;
+	  		width: 13px;
+			  height: 13px;
+			  margin: 0 0 0 10px;
+			  vertical-align: text-bottom;
+	  	}
+
+	  	&.dropdown {
+	  		.dropdown-toggle {
+	  			@include icon-sprite(caret-primary);
+	  		}
+
+	  		.dropdown-menu {
+	  			margin-top: -2px;
+	  		}
+	  	}
+
+	  	&.dropdown.active {
+	  		.dropdown-toggle {
+	  			@include icon-sprite(caret-primary-active);
+	  		}
+	  	}
 	  }
 	}
 }
