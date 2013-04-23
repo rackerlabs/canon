@@ -35,3 +35,5 @@ screenshots:
     url: content-view.html
   - name: Tooltip
     url: tooltip.html
+  - name: Menu
+    url: menu.html
