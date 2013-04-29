@@ -71,12 +71,22 @@ require(['ender-amd', 'canon/menu'], function ($, Menu) {
         $('.dropdown-menu').hasClass('visible').should.equal(false);
       });
 
-      it('is called when click occurs outside of dropdown', function () {
+      it('is called when click occurs outside of dropdown and menu is visible', function () {
+        menu.show();
         menu.hide = sinon.spy();
 
         $(document).click();
 
         menu.hide.should.have.been.called;
+      });
+
+      it('is not called when click occurs outside of dropdown and menu is hidden', function () {
+        menu.hide();
+        menu.hide = sinon.spy();
+
+        $(document).click();
+
+        menu.hide.should.not.have.been.called;
       });
 
       it('is called when menu item is clicked', function () {
