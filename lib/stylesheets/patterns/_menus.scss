@@ -1,3 +1,4 @@
+/** Action Menu **/
 .dropdown {
   display: inline-block;
 }
@@ -5,54 +6,76 @@
 .dropdown-menu {
   position: absolute;
   margin: 0;
-  padding: 0 0 15px;
+  padding: 3px 0;
   min-width: 120px;
   background-color: #fff;
-  border-top: 2px solid $red;
+  border: 1px solid $grey;
   list-style: none;
   z-index: 1020;
 
   @include animate-visibility;
-  @include border-corner-radius(bottom, left, 3px);
-  @include border-corner-radius(bottom, right, 3px);
+  @include border-radius(3px);
   @include box-shadow(0 0 9px 2px rgba(0, 0, 0, 0.2));
 
   a {
     display: block;
-    padding: 2px 15px;
-    color: #333;
-    font-family: $alt-font-family;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-
-    &:hover,
-    &.hover {
-      color: $red;
-      background-color: #f5f5f5;
-    }
-  }
-
-  .icon-external {
-    margin-left: 5px;
+    padding: 0 7px;
   }
 }
 
 .dropdown-category {
   display: block;
-  margin: 15px 0 0;
-  padding: 0 15px;
+  padding: 0 7px;
   color: #999;
-  font-family: $alt-font-family;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
-.dropdown-caption {
-  display: block;
-  color: $grey;
-  font-family: $alt-font-family;
-  font-size: 12px;
-  font-weight: 400;
+/** Primary Menu **/
+.primary-dropdown {
+  .dropdown-menu {
+    padding: 0 0 15px;
+    border: 0;
+    border-top: 2px solid $red;
+
+    @include border-radius(0);
+    @include border-corner-radius(bottom, left, 3px);
+    @include border-corner-radius(bottom, right, 3px);
+
+    a {
+      padding: 2px 15px;
+      color: #333;
+      font-family: $alt-font-family;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover,
+      &.hover {
+        color: $red;
+        background-color: #f5f5f5;
+      }
+    }
+
+    .icon-external {
+      margin-left: 5px;
+    }
+  }
+
+  .dropdown-category {
+    margin: 15px 0 0;
+    padding: 0 15px;
+    font-family: $alt-font-family;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .dropdown-caption {
+    display: block;
+    color: $grey;
+    font-family: $alt-font-family;
+    font-size: 12px;
+    font-weight: 400;
+  }
 }
