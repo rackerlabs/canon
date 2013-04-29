@@ -1,8 +1,9 @@
-.dropdown {
+/** Primary Menu */
+.primary-dropdown {
   display: inline-block;
 }
 
-.dropdown-menu {
+.primary-dropdown .dropdown-menu {
   position: absolute;
   margin: 0;
   padding: 0 0 15px;
@@ -38,7 +39,7 @@
   }
 }
 
-.dropdown-category {
+.primary-dropdown .dropdown-category {
   display: block;
   margin: 15px 0 0;
   padding: 0 15px;
@@ -49,7 +50,7 @@
   text-transform: uppercase;
 }
 
-.dropdown-caption {
+.primary-dropdown .dropdown-caption {
   display: block;
   color: $grey;
   font-family: $alt-font-family;
