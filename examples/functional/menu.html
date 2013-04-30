@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Functional | Menu</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/canon.css">
+
+  <style type="text/css">
+
+    .container {
+      margin: 100px auto;
+      width: 500px;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .collapsible-section {
+      border: 1px solid #eee;
+    }
+
+  </style>
+</head>
+<body >
+  <div class="container">
+    <div class="controls">
+      <button class="btn" onclick="javascript: attach();">Attach</button>
+    </div>
+    <hr>
+    <div class="dropdown">
+      <a class="btn dropdown-toggle">I'm the toggle.</a>
+      <ul class="dropdown-menu">
+        <li><span class="dropdown-category">Category</span></li>
+        <li><a href="#">Menu Item</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
+  <script type="text/javascript">
+
+    var element, menu;
+
+    requirejs.config({
+      paths: {
+        'canon': '../assets/canon',
+        'ender-amd': '../vendor/ender-amd/lib/ender-amd',
+        'ender': '../vendor/ender-amd/lib/ender',
+        'bean': '../vendor/ender-amd/node_modules/bean/bean',
+        'bonzo': '../vendor/ender-amd/node_modules/bonzo/bonzo',
+        'qwery': '../vendor/ender-amd/node_modules/qwery/qwery',
+        'bean-ender': '../vendor/ender-amd/lib/bean-ender',
+        'bonzo-ender': '../vendor/ender-amd/lib/bonzo-ender',
+        'qwery-ender': '../vendor/ender-amd/lib/qwery-ender',
+        'klass': '../vendor/klass/klass'
+      }
+    });
+
+    require(['canon', 'ender'], function (canon, $) {
+      element = $('.dropdown');
+      menu = new canon.Menu();
+    });
+
+    function attach() {
+      menu.attach(element);
+    }
+
+  </script>
+</body>
+</html>
