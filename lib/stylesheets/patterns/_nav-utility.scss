@@ -4,6 +4,9 @@
 	font-size: 12px;
 	background: #333;
 	@include fixed-top();
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 
 	.l-container > .nav {
 		float: left;
