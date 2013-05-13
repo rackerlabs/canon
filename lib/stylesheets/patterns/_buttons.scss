@@ -74,6 +74,7 @@ input::-moz-focus-inner {
     color: #ccc;
     background: #999;
     border-color: #666;
+    @include box-shadow(none);
   }
 }
 
@@ -102,6 +103,7 @@ input::-moz-focus-inner {
     color: #df9faa;
     background: #d81436;
     border-color: #a60004;
+    @include box-shadow(none);
   }
 }
 
