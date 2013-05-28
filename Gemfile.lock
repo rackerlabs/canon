@@ -29,6 +29,7 @@ GEM
     chunky_png (1.2.8)
     ci_reporter (1.8.4)
       builder (>= 2.1.2)
+    cmdparse (2.0.5)
     coderay (1.0.9)
     compass (0.12.2)
       chunky_png (~> 1.2)
@@ -68,16 +69,21 @@ GEM
       em-websocket (>= 0.2.0)
       guard (>= 1.5.0)
       multi_json (~> 1.0)
+    highline (1.6.17)
     hike (1.2.1)
     http_parser.rb (0.5.3)
+    json (1.7.7)
     listen (0.7.3)
     lumberjack (1.0.3)
     method_source (0.8.1)
     mime-types (1.22)
     multi_json (1.7.2)
+    net-http-persistent (2.8)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.6)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     nokogiri (1.5.9)
     oily_png (1.0.3)
       chunky_png (~> 1.2.1)
@@ -93,6 +99,8 @@ GEM
       rack (>= 1.0)
     rainbow (1.1.4)
     rake (10.0.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rmagick (2.13.2)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
@@ -105,6 +113,18 @@ GEM
     ruby-hmac (0.4.0)
     rubyzip (0.9.9)
     sass (3.2.7)
+    sauce (2.4.1)
+      childprocess (>= 0.1.6)
+      cmdparse (>= 2.0.2)
+      highline (>= 1.5.0)
+      json (>= 1.2.0)
+      net-http-persistent
+      net-ssh
+      net-ssh-gateway
+      rest-client
+      selenium-webdriver (>= 0.1.2)
+    sauce-connect (2.4.0)
+      sauce (~> 2.4.0)
     selenium-webdriver (2.31.0)
       childprocess (>= 0.2.5)
       multi_json (~> 1.0)
@@ -151,7 +171,8 @@ DEPENDENCIES
   rack-contrib
   rake
   rspec
-  selenium-webdriver
+  sauce
+  sauce-connect
   sprockets (~> 2.8.2)
   sprockets-sass
   susy

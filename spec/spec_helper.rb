@@ -1,29 +1,30 @@
 require 'capybara'
 require 'capybara/rspec'
 require 'green_onion'
-require 'selenium-webdriver'
+require 'sauce/capybara'
 require File.expand_path('../../lib/canon', __FILE__)
 
+CONFIGURATIONS = [
+  ['OS X 10.8', 'Chrome', nil]
+]
+
+def configuration
+  thread = ENV['TEST_ENV_NUMBER'] || 0
+  thread = thread.to_i
+
+  CONFIGURATIONS[thread]
+end
+
 def platform
-  ENV['CANON_SELENIUM_PLATFORM'] || 'mac'
+  configuration[0]
 end
 
 def browser
-  ENV['CANON_SELENIUM_BROWSER'] || 'firefox'
+  configuration[1]
 end
 
-def capabilities
-  Selenium::WebDriver::Remote::Capabilities.new({
-    :platform => platform,
-    :browser_name => browser,
-    :javascript_enabled => true,
-    :takes_screenshots => true,
-    :css_selectors_enabled => true
-  })
-end
-
-def driver
-  Canon.test? ? :grid : :selenium
+def version
+  configuration[2]
 end
 
 def url
@@ -31,20 +32,21 @@ def url
 end
 
 Capybara.app_host = url
-Capybara.default_driver = driver
+Capybara.default_driver = :sauce
 Capybara.run_server = false
+Capybara.server_port = 9000
 
-Capybara.register_driver :grid do |app|
-  Capybara::Selenium::Driver.new(app,
-    :browser => :remote,
-    :url => 'http://10.14.209.83:4444/wd/hub',
-    :desired_capabilities => capabilities)
+Sauce.config do |config|
+  config[:start_tunnel] = true
+  config[:os] = platform
+  config[:browser] = browser
+  config[:version] = version
 end
 
 GreenOnion.configure do |config|
-  config.driver = Canon.test? ? :canon : :selenium
+  config.driver = :sauce
   config.fail_on_different_dimensions = true
-  config.skins_dir = "spec/skins/#{platform}/#{browser}"
+  config.skins_dir = ['spec/skins', platform, browser, version].join('/')
   config.threshold = 0.5
 end
 
@@ -52,3 +54,4 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end
+

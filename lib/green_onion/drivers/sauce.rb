@@ -3,11 +3,11 @@ require 'selenium-webdriver'
 require File.expand_path('../../../canon', __FILE__)
 
 module GreenOnion
-  class Canon
+  class Sauce
     include Capybara::DSL
 
     def initialize
-      Capybara.default_driver = :grid
+      Capybara.default_driver = :sauce
     end
 
     def record(url, path, dimensions = nil)
