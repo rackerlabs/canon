@@ -37,3 +37,5 @@ screenshots:
     url: tooltip.html
   - name: Menu
     url: menu.html
+  - name: Status
+    url: status.html
