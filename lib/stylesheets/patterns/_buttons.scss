@@ -59,6 +59,8 @@ input::-moz-focus-inner {
 
   &:hover,
   &.hover {
+    background-color: #555;
+
     @include background-image(linear-gradient(#777, #555));
   }
 
@@ -88,6 +90,7 @@ input::-moz-focus-inner {
 
   &:hover,
   &.hover {
+    background-color: #c40022;
     @include background-image(linear-gradient(#d81436, #c40022));
   }
 
