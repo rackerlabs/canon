@@ -6,7 +6,7 @@ require 'socket'
 require File.expand_path('../../lib/canon', __FILE__)
 
 CONFIGURATIONS = [
-  ['OS X 10.8', 'Chrome', nil]
+  ['Windows 7', 'Chrome', nil]
 ]
 
 def configuration
