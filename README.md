@@ -1,5 +1,8 @@
 ![http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png](http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png)
 
+**This README contains information on setting up your local machine for Canon 
+development. For information on using Canon, please see http://canon.rackspace.com.**
+
 ## SYSTEM REQUIREMENTS
 
 - Ruby 1.9.x
