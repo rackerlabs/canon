@@ -2,6 +2,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'green_onion'
 require 'sauce/capybara'
+require 'socket'
 require File.expand_path('../../lib/canon', __FILE__)
 
 CONFIGURATIONS = [
@@ -36,16 +37,8 @@ Capybara.default_driver = :sauce
 Capybara.run_server = false
 Capybara.server_port = 9000
 
-Sauce.config do |config|
-  config[:start_tunnel] = true
-  config[:os] = platform
-  config[:browser] = browser
-  config[:version] = version
-end
-
 GreenOnion.configure do |config|
   config.driver = :sauce
-  config.fail_on_different_dimensions = true
   config.skins_dir = ['spec/skins', platform, browser, version].join('/')
   config.threshold = 0.5
 end
@@ -55,3 +48,19 @@ RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
+Sauce.config do |config|
+  config[:os] = platform
+  config[:browser] = browser
+  config[:version] = version
+  config[:start_tunnel] = true
+  config[:job_name] = ENV['JOB_NAME'] || 'Development'
+  config[:build] = ENV['BUILD_NUMBER']
+  config[:branch] = ENV['GIT_BRANCH']
+  config[:commit] = ENV['GIT_COMMIT']
+  config['custom-data'] = {
+    url: url,
+    executor: Socket.gethostname,
+    version: Canon::VERSION,
+    environment: Canon.environment
+  }
+end
