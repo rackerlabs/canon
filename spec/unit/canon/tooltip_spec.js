@@ -1,4 +1,4 @@
-require(['ender-amd', 'canon/tooltip'], function ($, Tooltip) {
+require(['canon/tooltip'], function (Tooltip) {
   describe('Tooltip', function () {
 
     var element, clock, tooltip, content;
@@ -33,7 +33,7 @@ require(['ender-amd', 'canon/tooltip'], function ($, Tooltip) {
       });
 
       it('removes title attribute from element', function () {
-        expect(element.attr('title')).to.equal(null);
+        expect(element.attr('title')).to.equal(undefined);
       });
     });
 
@@ -58,8 +58,8 @@ require(['ender-amd', 'canon/tooltip'], function ($, Tooltip) {
         toggleOffset = element.offset();
         contentOffset = content.offset();
 
-        contentOffset.top.should.equal(toggleOffset.top + toggleOffset.height);
-        contentOffset.left.should.equal(toggleOffset.left + toggleOffset.width);
+        contentOffset.top.should.equal(toggleOffset.top + element.height());
+        contentOffset.left.should.equal(toggleOffset.left + element.width());
       });
 
       it('is called when mouse hovers over toggle for threshold', function () {

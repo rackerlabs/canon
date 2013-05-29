@@ -1,4 +1,4 @@
-define(['ender-amd', 'canon/content_section'], function ($, ContentSection) {
+define(['canon/content_section'], function (ContentSection) {
   describe('ContentSection', function () {
 
     var element, section;

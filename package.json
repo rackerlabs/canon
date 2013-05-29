@@ -3,7 +3,6 @@
   "version": "0.3.0",
   "dependencies": {
     "almond": "~0.2.5",
-    "ender-amd": "git+https://github.com/bradgignac/ender-amd",
     "klass": "~1.2.3",
     "requirejs": "~2.1.5"
   },
