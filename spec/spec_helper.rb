@@ -40,7 +40,7 @@ Capybara.server_port = 9000
 GreenOnion.configure do |config|
   config.driver = :sauce
   config.skins_dir = ['spec/skins', platform, browser, version].join('/')
-  config.threshold = 0.5
+  config.threshold = 2.5
 end
 
 RSpec.configure do |config|
