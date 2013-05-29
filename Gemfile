@@ -16,7 +16,8 @@ group :development, :test do
   gem 'rack'
   gem 'rack-contrib'
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'sauce'
+  gem 'sauce-connect'
   gem 'thin'
 end
 
