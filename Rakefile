@@ -152,7 +152,7 @@ task :release do
     system("cd #{Canon.package_path} && zip -q canon.zip canon/*")
   end
 
-  connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['CANON_USERNAME'], :rackspace_api_key => ENV['CANON_API_KEY'])
+  connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['RACKSPACE_USERNAME'], :rackspace_api_key => ENV['RACKSPACE_API_KEY'])
   directory = connection.directories.get('cdn.canon.rackspace.com')
 
   files_to_upload = Dir.glob('{build,package}/*.{eot,svg,ttf,woff,js,css,png,gif,tar.gz,zip}')
