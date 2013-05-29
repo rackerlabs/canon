@@ -55,12 +55,12 @@ Sauce.config do |config|
   config[:start_tunnel] = true
   config[:job_name] = ENV['JOB_NAME'] || 'Development'
   config[:build] = ENV['BUILD_NUMBER']
-  config[:branch] = ENV['GIT_BRANCH']
-  config[:commit] = ENV['GIT_COMMIT']
   config['custom-data'] = {
     url: url,
     executor: Socket.gethostname,
     version: Canon::VERSION,
-    environment: Canon.environment
+    environment: Canon.environment,
+    branch: ENV['GIT_BRANCH'],
+    commit: ENV['GIT_COMMIT']
   }
 end
