@@ -40,6 +40,7 @@
     </div>
   </div>
 
+  <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
   <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
   <script type="text/javascript">
 
@@ -48,19 +49,11 @@
     requirejs.config({
       paths: {
         'canon': '../assets/canon',
-        'ender-amd': '../vendor/ender-amd/lib/ender-amd',
-        'ender': '../vendor/ender-amd/lib/ender',
-        'bean': '../vendor/ender-amd/node_modules/bean/bean',
-        'bonzo': '../vendor/ender-amd/node_modules/bonzo/bonzo',
-        'qwery': '../vendor/ender-amd/node_modules/qwery/qwery',
-        'bean-ender': '../vendor/ender-amd/lib/bean-ender',
-        'bonzo-ender': '../vendor/ender-amd/lib/bonzo-ender',
-        'qwery-ender': '../vendor/ender-amd/lib/qwery-ender',
         'klass': '../vendor/klass/klass'
       }
     });
 
-    require(['canon', 'ender'], function (canon, $) {
+    require(['canon'], function (canon) {
       element = $('.dropdown');
       menu = new canon.Menu();
     });

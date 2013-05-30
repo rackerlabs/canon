@@ -1,4 +1,4 @@
-require(['ender-amd', 'canon/menu'], function ($, Menu) {
+require(['canon/menu'], function (Menu) {
   describe('Menu', function () {
 
     var element, menu;

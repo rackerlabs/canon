@@ -16,6 +16,7 @@
 
   // Environments
   "browser": true,
+  "jquery": true,
   "node": false,
 
   // Predefined Variables

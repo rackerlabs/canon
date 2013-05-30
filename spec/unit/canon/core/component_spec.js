@@ -1,4 +1,4 @@
-define(['ender-amd', 'canon/core/component'], function ($, Component) {
+define(['canon/core/component'], function (Component) {
   describe('Component', function () {
 
     var element, component;
