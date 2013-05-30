@@ -17,7 +17,6 @@
 // main nav
 .nav-primary {
 	min-height: $app-nav-primary-height;
-	@include fixed-top($app-nav-utility-height);
 	@include noise;
 
 	.nav {

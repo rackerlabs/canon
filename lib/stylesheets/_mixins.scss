@@ -13,15 +13,6 @@
   }
 }
 
-@mixin fixed-top($top: 0) {
-  position: fixed;
-  top: $top;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 10;
-}
-
 @mixin respond-to($media) {
   @if $media == small {
     @media only screen and (max-width: 640px) {

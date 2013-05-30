@@ -1,7 +1,6 @@
 // Seconday Nav
 .nav-secondary {
 	min-height: $app-nav-secondary-height;
-	@include fixed-top($app-nav-utility-height + $app-nav-primary-height);
 	@include noise;
 
 	.nav {
