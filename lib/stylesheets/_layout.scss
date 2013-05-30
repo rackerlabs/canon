@@ -37,7 +37,7 @@ body {
   }
 
   @include responsive(){
-    width: inherit;
+    width: auto;
     @include at-breakpoint($xlarge){
       & {
         padding: 0 $xlarge-padding;
