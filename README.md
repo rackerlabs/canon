@@ -1,7 +1,10 @@
 ![http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png](http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png)
 
-**This README contains information on setting up your local machine for Canon 
-development. For information on using Canon, please see http://canon.rackspace.com.**
+**This README contains information on setting up the Canon development environment 
+on your local machine.  Use these instructions if you intend to develop Canon 
+elements and contribute code back to the project.**
+
+**For information on including Canon CSS and javascript in your application, see http://canon.rackspace.com.**
 
 ## SYSTEM REQUIREMENTS
 
