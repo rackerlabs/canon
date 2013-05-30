@@ -24,20 +24,9 @@ body {
 }
 
 .l-container {
+  width: 1030px;
   @include micro-clearfix;
   @include container;
-
-  @include at-breakpoint($xlarge){
-    & {
-      padding: 0 $xlarge-padding;
-    }
-  }
-
-  @include at-breakpoint($small){
-    & {
-      padding: 0 $small-padding;
-    }
-  }
 
   .sidebar-inner {
     padding-left: 30px;
@@ -46,7 +35,19 @@ body {
       padding: 0 30px;
     }
   }
-}
 
+  @include responsive(){
+    width: inherit;
+    @include at-breakpoint($xlarge){
+      & {
+        padding: 0 $xlarge-padding;
+      }
+    }
+
+    @include at-breakpoint($small){
+      & {
+        padding: 0 $small-padding;
+      }
+    }
   }
 }

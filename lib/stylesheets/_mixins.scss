@@ -13,21 +13,9 @@
   }
 }
 
-@mixin respond-to($media) {
-  @if $media == small {
-    @media only screen and (max-width: 640px) {
-      @content;
-    }
-  }
-  @else if $media == medium {
-    @media only screen and (min-width: 641px) and (max-width: 1024px) {
-      @content;
-    }
-  }
-  @else if $media == xlarge {
-    @media only screen and (min-width: 1400px){
-      @content;
-    }
+@mixin responsive() {
+  body.responsive & {
+    @content;
   }
 }
 
