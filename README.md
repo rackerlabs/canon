@@ -1,7 +1,10 @@
 ![http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png](http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png)
 
-**This README contains information on setting up your local machine for Canon 
-development. For information on using Canon, please see http://canon.rackspace.com.**
+**This README contains information on setting up the Canon development environment 
+on your local machine.  Use these instructions if you intend to develop Canon 
+elements and contribute code back to the project.**
+
+**For information on including Canon CSS and javascript in your application, see http://canon.rackspace.com.**
 
 ## SYSTEM REQUIREMENTS
 
@@ -19,27 +22,12 @@ Setting up your Canon development environment is easy:
     $ script/bootstrap
     $ script/server
 
-The Canon server is now running at http://0.0.0.0:3000. If you run into any issues, 
-check the [wiki](https://github.rackspace.com/canon/canon/wiki) or send an email to 
-canon@lists.rackspace.com.
-
-Canon relies on the following environment variables for documentation:
-
-| Variable           | Description                                                | Default             |
-| ------------------ | ---------------------------------------------------------- | ------------------- |
-| CANON_ENV          | Determines which reporters are used while running tests.   | development         |
-| CANON_URL          | The URL tests are run against.                             | http://0.0.0.0:3000 |
-| RACKSPACE_USERNAME | The username for the container where artifacts are stored. |                     |
-| RACKSPACE_API_KEY  | The API key for the container where artifacts are stored.  |                     |
-| SAUCE_USERNAME     | The username for running tests against Sauce Labs.         |                     |
-| SAUCE_ACCESS_KEY   | The access key for running tests against Sauce Labs.       | Development         |
-| JOB_NAME           | The job name used by Sauce Labs.                           |                     |
-| BUILD_NUMBER       | The build number used by Sauce Labs.                       |                     |
-| GIT_BRANCH         | The Git branch used by Sauce Labs.                         |                     |
-| GIT_COMMIT         | The Git commit used by Sauce Labs.                         |                     |
-| TEST_ENV_NUMBER    | The number of tests to run in parallel.                    | 1                   |
-
-Only `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` are required.
+The Canon server is now running at http://0.0.0.0:3000. Before running automated
+tests, you'll need to set the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment
+variables. See [Environment Configuration](https://github.rackspace.com/canon/canon/wiki/Environment-Configuration)
+for more information on environment variables used by Canon. If you run into any 
+issues, check the [wiki](https://github.rackspace.com/canon/canon/wiki) or send 
+an email to canon@lists.rackspace.com.
  
 ## CONTRIBUTING
 
