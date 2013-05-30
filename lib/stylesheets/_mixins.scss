@@ -37,7 +37,7 @@
     $selector: '#{$base}span';
 
     @if $silent { #{$selector} { @include span-columns(1); } }
-    @else { [class^="span-"] { @include span-columns(1); } }
+    @else { [class*="span-"] { @include span-columns(1); } }
 
     #{$base}row, #{$base}full { @include micro-clearfix; @include reset-columns;}
     #{$base}omega { @include omega; }
@@ -61,10 +61,11 @@
     }
     // Reset columns at the smallest breakpoint.
     @include at-breakpoint($small) {
-      [class^="span-"] {
+      [class*="span-"] {
         @include reset-columns;
         display: block;
       }
+
     }
 
     .bleed-left {
