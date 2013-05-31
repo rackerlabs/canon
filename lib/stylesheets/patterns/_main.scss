@@ -38,20 +38,27 @@
 }
 
 .content {
-  @include reset-columns;
   background: $white;
-  min-height: 300px;
   @include box-shadow(#c2c2c2 0px 3px 8px 1px);
+
+  .main & {
+    min-height: 300px;
+    @include reset-columns;
+  }
 
   .panel & {
     margin-top: -20px;
   }
 
-  .sidebar + & {
+  .main .sidebar + & {
     @include span-columns(9 omega,12);
   }
 
-  .sidebar.pull-right + & {
+  .main .sidebar + & {
+    @include span-columns(9 omega,12);
+  }
+
+  .main .sidebar.pull-right + & {
     @include remove-omega;
   }
 }
