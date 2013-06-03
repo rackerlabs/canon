@@ -38,8 +38,6 @@
 }
 
 .content {
-  background: $white;
-  @include box-shadow(#c2c2c2 0px 3px 8px 1px);
 
   .main & {
     min-height: 300px;
