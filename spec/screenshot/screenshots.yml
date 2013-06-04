@@ -39,3 +39,5 @@ screenshots:
     url: menu.html
   - name: Status
     url: status.html
+  - name: Progress Bar
+    url: progress-bar.html
