@@ -58,7 +58,7 @@ Sauce.config do |config|
   config['custom-data'] = {
     url: url,
     executor: Socket.gethostname,
-    version: Canon::VERSION,
+    version: Canon.version,
     environment: Canon.environment,
     branch: ENV['GIT_BRANCH'],
     commit: ENV['GIT_COMMIT']

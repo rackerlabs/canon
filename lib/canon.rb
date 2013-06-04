@@ -7,9 +7,21 @@ require 'sprockets'
 require 'sprockets/sass'
 
 module Canon
-  VERSION = '0.3.0'
+  MAJOR = 0
+  MINOR = 3
+  PATCH = 0
+  PRE = nil
 
   class << self
+    def version
+      version = [MAJOR, MINOR, PATCH].join('.')
+      if PRE
+        version += "-#{PRE}"
+      end
+
+      version
+    end
+
     def configure!
       Compass.configuration do |c|
         c.project_path = library_path
