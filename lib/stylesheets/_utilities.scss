@@ -1,3 +1,17 @@
+.panel {
+  background: $white;
+  @include box-shadow(#c2c2c2 0px 3px 8px 1px);
+}
+
+.fixed-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 .pull-left, %pull-left {
   float: left;
 }

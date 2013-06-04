@@ -1,58 +1,54 @@
-@include at-breakpoint($xlarge){
+body.responsive {
+  @include at-breakpoint($xlarge){
 
-  .sidebar {
-    @include span-columns(4,18);
+    .sidebar {
+      @include span-columns(4,18);
 
-    &.pull-right {
-      @include span-columns(4 omega,18);
+      & + .content {
+        @include span-columns(14 omega,18);
+      }
+
+      &.pull-right {
+        @include span-columns(4 omega,18);
+
+        & + .content {
+          @include remove-omega;
+        }
+      }
+    }
+
+    .content {
+      @include reset-columns;
     }
   }
 
-  .content {
-    @include reset-columns;
+  @include at-breakpoint($medium){
 
-    .sidebar + & {
-      @include span-columns(14 omega,18);
-    }
+    .sidebar {
+      @include span-columns(3,10);
 
-    .sidebar.pull-right + & {
-      @include remove-omega;
-    }
-  }
-}
+      &.pull-right {
+        @include span-columns(3 omega,10);
 
-@include at-breakpoint($medium){
+        & + .content {
+          @include remove-omega;
+        }
+      }
 
-  .sidebar {
-    @include span-columns(3,10);
-
-    &.pull-right {
-      @include span-columns(3 omega,10);
+      & + .content {
+        @include span-columns(7 omega,10);
+      }
     }
   }
 
-  .content {
 
-    .sidebar + & {
-      @include span-columns(7 omega,10);
+
+  @include at-breakpoint($small){
+
+    .content, .sidebar + .content, .sidebar.pull-right + .content, .sidebar, .sidebar.pull-right {
+      display: block;
+      @include reset-columns;
     }
-
-    .sidebar.pull-right + & {
-      @include remove-omega;
-    }
-  }
-}
-
-
-
-@include at-breakpoint($small){
-
-  .content, .sidebar + .content, .sidebar.pull-right + .content {
-    display: block;
-    @include reset-columns;
   }
 
-  .sidebar {
-    display: none !important;
-  }
 }

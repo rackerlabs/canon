@@ -18,35 +18,15 @@ body {
   height: $app-footer-height;
 }
 
-
-.l-body {
-  padding-top: $app-header-height;
-
-  .nav-secondary + & {
-    padding-top: $app-header-height + $app-nav-secondary-height;
-  }
-}
-
 .l-footer {
   background: $grey-darker;
   height: $app-footer-height;
 }
 
 .l-container {
+  width: 1030px;
   @include micro-clearfix;
   @include container;
-
-  @include at-breakpoint($xlarge){
-    & {
-      padding: 0 $xlarge-padding;
-    }
-  }
-
-  @include at-breakpoint($small){
-    & {
-      padding: 0 $small-padding;
-    }
-  }
 
   .sidebar-inner {
     padding-left: 30px;
@@ -55,23 +35,19 @@ body {
       padding: 0 30px;
     }
   }
-}
 
-// height based media query to remove app-frame for shorter view ports
-@media only screen and (max-height: 600px){
-  .nav-primary, .nav-secondary, .nav-utility, .l-footer {
-    position: static !important;
-  }
-  .l-body {
-    padding-top: 0 !important;
-  }
-}
-// width based media query to remove app-frame
-@media only screen and (max-width: 1060px) {
-  .nav-primary, .nav-secondary, .nav-utility, .l-footer {
-    position: static !important;
-  }
-  .l-body {
-    padding-top: 0 !important;
+  @include responsive(){
+    width: auto;
+    @include at-breakpoint($xlarge){
+      & {
+        padding: 0 $xlarge-padding;
+      }
+    }
+
+    @include at-breakpoint($small){
+      & {
+        padding: 0 $small-padding;
+      }
+    }
   }
 }
