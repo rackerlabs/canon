@@ -1,0 +1,61 @@
+// Animation
+
+.progress,
+.progress-description {
+  @include micro-clearfix;
+}
+
+.progress {
+  position: relative;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.progress:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  border: 1px solid #fff;
+  content: '';
+}
+
+.bar {
+  float: left;
+  height: 13px;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.progress > .bar:first-child {
+  border-left: 1px solid #fff;
+}
+
+.bar-success,
+.progress-success > .bar {
+  background: $green
+}
+
+.bar-warning,
+.progress-warning > .bar {
+  background: $yellow;
+}
+
+.bar-success.bar-striped,
+.progress-success.progress-striped > .bar {
+  background: url('progress-background-success.gif');
+}
+
+.bar-warning.bar-striped,
+.progress-warning.progress-striped > .bar {
+  background: url('progress-background-warning.gif');
+}
+
+.caption {
+  float: left;
+  color: #999;
+  font-size: 11px;
+  text-align: center;
+}
