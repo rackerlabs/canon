@@ -157,12 +157,24 @@ task :release do
 
   files_to_upload = Dir.glob('{build,package}/*.{eot,svg,ttf,woff,js,css,png,gif,tar.gz,zip}')
   files_to_upload.each do |file|
+    contents = File.open(file)
     base_name = File.basename(file)
-    versioned_name = "v#{Canon::VERSION}/#{base_name}"
+    latest_name = "v#{Canon::MAJOR}-latest/#{base_name}"
+    versioned_name = "v#{Canon.version}/#{base_name}"
 
-    log("Uploading #{base_name} to CDN") do
-      raise "#{base_name} already exists!" if directory.files.head(versioned_name)
-      directory.files.create(:key => versioned_name, :body => File.open(file), :public => true)
+    log("Uploading #{versioned_name} to CDN") do
+      raise "#{versioned_name} already exists!" if directory.files.head(versioned_name)
+      directory.files.create(:key => versioned_name, :body => contents, :public => true)
+    end
+
+    log("Uploading #{latest_name} to CDN") do
+      if directory.files.head(latest_name)
+        file = directory.files.get(latest_name)
+        file.body = contents
+        file.save
+      else
+        directory.files.create(:key => latest_name, :body => contents, :public => true)
+      end
     end
   end
 end
