@@ -1,3 +1,7 @@
+## v0.4.1 (June 5, 2013)
+- Fix bug where buttons inside list tables were stretched to fill the cell.
+- Correctly set a minimum height on TEXTAREAs.
+
 ## v0.4.0 (June 4, 2013)
 - Fix bug with button background colors in IE9.
 - Update base styles to include bold and italic text.
