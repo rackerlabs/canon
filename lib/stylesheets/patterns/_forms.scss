@@ -63,6 +63,10 @@ select[multiple] {
   height: auto;
 }
 
+textarea {
+  min-height: 100px;
+}
+
 /* Input Sizes */
 .input-mini {
   width: 60px;
