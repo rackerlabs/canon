@@ -1,6 +1,7 @@
 // Seconday Nav
 .nav-secondary {
 	min-height: $app-nav-secondary-height;
+	z-index: 1100;
 	@include noise;
 
 	.nav {
