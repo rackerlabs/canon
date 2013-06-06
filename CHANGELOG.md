@@ -1,3 +1,6 @@
+## v0.4.2 (June 6, 2013)
+- Reorder z-index planes for absolutely-positioned components.
+
 ## v0.4.1 (June 5, 2013)
 - Fix bug where buttons inside list tables were stretched to fill the cell.
 - Correctly set a minimum height on TEXTAREAs.
