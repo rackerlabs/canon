@@ -11,7 +11,7 @@
   background-color: #fff;
   border: 1px solid $grey;
   list-style: none;
-  z-index: 1020;
+  z-index: $zindexMenu;
 
   @include animate-visibility(0.1);
   @include border-radius(3px);

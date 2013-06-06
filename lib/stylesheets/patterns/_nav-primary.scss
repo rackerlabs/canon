@@ -17,6 +17,7 @@
 // main nav
 .nav-primary {
 	min-height: $app-nav-primary-height;
+	z-index: $zindexNavPrimary;
 	@include noise;
 
 	.nav {
