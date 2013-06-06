@@ -9,7 +9,7 @@ require 'sprockets/sass'
 module Canon
   MAJOR = 0
   MINOR = 4
-  PATCH = 1
+  PATCH = 2
   PRE = nil
 
   class << self
