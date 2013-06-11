@@ -10,7 +10,7 @@
 
 .content-section-header {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-top: 1px solid #fff;
 }
 
@@ -123,10 +123,16 @@
   display: none;
 }
 
-.collapsible-section.loading .content-section-body,
-.collapsible-section.collapsed .content-section-body {
-  display: none;
+.collapsible-section.loading,
+.collapsible-section.collapsed {
+  margin-bottom: 10px;
+
+  .content-section-body {
+    display: none;
+  }
 }
+
+
 
 // Orderable Section
 .content-section-handle {
