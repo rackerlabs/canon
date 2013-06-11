@@ -20,7 +20,7 @@
 }
 
 .content-section-title {
-  margin: 0;
+  margin: 0 10px 0 0;
   font-family: $alt-font-family;
   font-size: 22px;
   font-weight: 600;
@@ -56,7 +56,7 @@
 }
 
 .header-section-subtitle {
-  margin: 0 0 10px;
+  margin: 0 0 5px;
   color: $grey;
   font-size: 14px;
   font-weight: 700;
@@ -98,7 +98,6 @@
 }
 
 .collapsible-section.collapsed {
-    margin-bottom: 10px;
   .content-section-toggle {
     @include icon-sprite(section-toggle-collapsed);
   }
@@ -112,7 +111,6 @@
 }
 
 .collapsible-section.loading {
-    margin-bottom: 10px;
   .content-section-toggle {
     width: 16px;
     height: 16px;
@@ -125,10 +123,16 @@
   display: none;
 }
 
-.collapsible-section.loading .content-section-body,
-.collapsible-section.collapsed .content-section-body {
-  display: none;
+.collapsible-section.loading,
+.collapsible-section.collapsed {
+  margin-bottom: 10px;
+
+  .content-section-body {
+    display: none;
+  }
 }
+
+
 
 // Orderable Section
 .content-section-handle {
