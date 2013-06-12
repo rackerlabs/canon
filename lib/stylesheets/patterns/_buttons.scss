@@ -133,3 +133,29 @@ input::-moz-focus-inner {
     background: transparent;
   }
 }
+
+.cog {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+
+  @include inline-block;
+  @include icon-sprite(cog);
+
+  &:active,
+  &.active,
+  &:hover,
+  &.hover {
+    @include icon-sprite(cog-hover);
+  }
+
+  &[disabled],
+  &.disabled {
+    cursor: default;
+    @include icon-sprite(cog-disabled);
+  }
+}
