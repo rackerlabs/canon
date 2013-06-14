@@ -159,3 +159,45 @@ input::-moz-focus-inner {
     @include icon-sprite(cog-disabled);
   }
 }
+
+.caret {
+  width: 10px;
+  height: 10px;
+
+  @include inline-block;
+  @include icon-sprite(caret);
+
+  &[disabled],
+  &.disabled {
+    cursor: default;
+    @include icon-sprite(caret-disabled);
+  }
+}
+
+.btn-action {
+  > .cog {
+    width: 13px;
+    height: 13px;
+    margin-top: -2px;
+    margin-right: 1px;
+    @include icon-sprite(cog-small);
+  }
+
+  > .caret {
+    margin-top: 2px;
+    margin-left: 1px;
+  }
+
+  &[disabled],
+  &.disabled {
+    > .cog {
+      cursor: default;
+      @include icon-sprite(cog-small-disabled);
+    }
+
+    > .caret {
+      cursor: default;
+      @include icon-sprite(caret-disabled);
+    }
+  }
+}
