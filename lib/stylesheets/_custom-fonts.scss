@@ -5,6 +5,17 @@
     url('SourceSansPro-Light-webfont.woff') format('woff'),
     url('SourceSansPro-Light-webfont.ttf') format('truetype'),
     url('SourceSansPro-Light-webfont.svg#SourceSansProLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Regular-webfont.eot');
+  src: url('SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('SourceSansPro-Regular-webfont.woff') format('woff'),
+    url('SourceSansPro-Regular-webfont.ttf') format('truetype'),
+    url('SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');
   font-weight: 400;
   font-style: normal;
 }
