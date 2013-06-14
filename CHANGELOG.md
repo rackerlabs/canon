@@ -1,3 +1,10 @@
+## v0.5.0 (June 14, 2013)
+- Add cog button.
+- Add action button.
+- Update inline help text color for better readability.
+- Update primary navigation text for better readability.
+- Decrease margin between content section header and body.
+
 ## v0.4.2 (June 6, 2013)
 - Reorder z-index planes for absolutely-positioned components.
 
