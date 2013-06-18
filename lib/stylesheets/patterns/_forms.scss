@@ -1,6 +1,8 @@
 /* Base Form Styles */
 fieldset {
   margin: 0 0 $base-line-height;
+  padding: 0;
+  border: 0;
 }
 
 legend {
@@ -27,6 +29,12 @@ input[type="checkbox"],
 input[type="radio"],
 select {
   cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  top: 3px;
 }
 
 label {
