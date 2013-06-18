@@ -29,6 +29,8 @@ module Canon
         c.javascripts_path = javascripts_path
         c.sass_path = stylesheets_path
         c.relative_assets = true
+
+        c.add_import_path(bower_path)
       end
 
       nil
@@ -73,6 +75,7 @@ module Canon
         e.append_path(javascripts_path)
         e.append_path(stylesheets_path)
         e.append_path(fonts_path)
+        e.append_path(bower_path)
       end
     end
 
@@ -90,6 +93,10 @@ module Canon
 
     def build_path
       File.join(root_path, 'build')
+    end
+
+    def bower_path
+      File.join(root_path, 'components')
     end
 
     def examples_path
