@@ -5,12 +5,16 @@
   table {
     width: 100%;
     border-collapse: collapse;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    text-align: left;
   }
 
   th {
     padding: 0 10px;
     border-bottom: 1px solid #eee;
     color: #999;
+    font-weight: normal;
   }
 
   td {
