@@ -45,6 +45,7 @@ development environment has all the necessary dependencies. This script will:
   - Install Bundler
   - Install Ruby dependencies
   - Install Node dependencies
+  - Install Bower dependencies
 
 Press ENTER to continue.
 eos
@@ -105,6 +106,12 @@ def install_packages
   execute_command('npm install')
 end
 
+def install_components
+  puts grey('>> Installing Node dependencies...')
+
+  execute_command('node_modules/.bin/bower install')
+end
+
 def show_completed_message
   puts green("\nCanon setup completed successfully!\n")
 end
@@ -119,5 +126,6 @@ check_phantom_js_version
 install_bundler
 install_gems
 install_packages
+install_components
 
 show_completed_message
