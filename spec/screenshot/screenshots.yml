@@ -5,8 +5,6 @@ screenshots:
     url: content-view.html
   - name: Forms
     url: forms.html
-  - name: Grid
-    url: grid.html
   - name: Layout (Fixed)
     url: layout-fixed.html
   - name: Layout (Responsive)
