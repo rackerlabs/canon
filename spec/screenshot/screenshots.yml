@@ -1,26 +1,16 @@
 screenshots:
-  - name: Layout
-    url: layout.html
-  - name: Nav-Secondary
-    url: nav-secondary.html
-  - name: Footer
-    url: footer.html
-  - name: Grid
-    url: grid.html
-  - name: Content Full
-    url: content-full.html
-  - name: Sidebar Left
-    url: sidebar-left.html
-  - name: Sidebar Left With Panel
-    url: sidebar-left-panel.html
-  - name: Sidebar Right
-    url: sidebar-right.html
-  - name: Sidebar Right With Panel
-    url: sidebar-right-panel.html
   - name: Buttons
     url: buttons.html
+  - name: Content View
+    url: content-view.html
   - name: Forms
     url: forms.html
+  - name: Grid
+    url: grid.html
+  - name: Layout (Fixed)
+    url: layout-fixed.html
+  - name: Layout (Responsive)
+    url: layout-responsive.html
   - name: List Table
     url: list-table.html
   - name: List Table (Stretchy)
@@ -31,15 +21,13 @@ screenshots:
     url: list-table-error.html
   - name: List Table (Empty)
     url: list-table-empty.html
-  - name: Content View
-    url: content-view.html
-  - name: Tooltip
-    url: tooltip.html
   - name: Menu
     url: menu.html
-  - name: Status
-    url: status.html
   - name: Progress Bar
     url: progress-bar.html
+  - name: Status
+    url: status.html
   - name: Tags
     url: tags.html
+  - name: Tooltip
+    url: tooltip.html
