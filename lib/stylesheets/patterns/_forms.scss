@@ -60,7 +60,7 @@ input[type="password"],
 textarea {
   padding: 2px 4px;
   height: 25px;
-  border: 1px solid $grey;
+  border: 1px solid $grey300;
 
   @include inline-block;
   @include border-radius(3px);
