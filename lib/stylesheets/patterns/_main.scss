@@ -43,10 +43,18 @@
 
   .main & {
     min-height: 300px;
-    margin-right: 280px;
   }
 
   .panel & {
     margin-top: -20px;
+  }
+
+  .main .sidebar + & {
+    margin-left: 280px;
+  }
+
+  .main .sidebar.pull-right + & {
+    margin-right: 280px;
+    margin-left: 0;
   }
 }
