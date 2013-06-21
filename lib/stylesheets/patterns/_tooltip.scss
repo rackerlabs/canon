@@ -9,7 +9,7 @@
   max-width: 440px;
   padding: 10px;
   background-color: #f5f5f5;
-  border: 1px solid #999;
+  border: 1px solid #bbb;
 
-  @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 9px 2px);
+  @include box-shadow(rgba(0, 0, 0, 0.15) 0 0 9px 1px);
 }
