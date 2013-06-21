@@ -30,7 +30,11 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 $base-line-height;
-  font-weight: bold;
+  font-family: 'Source Sans Pro';
+
+  &.rs-page-title {
+    color: $red;
+  }
 }
 
 h1, h2, h3 {
