@@ -1,1 +1,69 @@
-@include grid-classes;
+//
+// Grid system
+// --------------------------------------------------
+
+// fluid grid
+
+// Default settings
+// -------------------------
+$gridColumns:             12;
+$gridColumnWidth:         75px;
+
+$gridGutterWidth: 20px;
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+$fluidGridColumnWidth: percentage($gridColumnWidth/$gridRowWidth);
+$fluidGridGutterWidth: percentage($gridGutterWidth/$gridRowWidth);
+
+@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth);
+
+// fluid grid with collapsed gutters
+
+$gridGutterWidth: 0px;
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+$fluidGridColumnWidth: percentage($gridColumnWidth/$gridRowWidth);
+$fluidGridGutterWidth: percentage($gridGutterWidth/$gridRowWidth);
+
+@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth, ".collapse");
+
+
+// Reset utility classes due to specificity
+[class*="span-"].hide,
+.row [class*="span-"].hide {
+  display: none;
+}
+
+[class*="span-"].pull-right,
+.row [class*="span-"].pull-right {
+  float: right;
+}
+
+body.responsive {
+  @media (max-width: 767px) {
+
+    // Fluid rows
+    .row, .row.collapse {
+      width: 100%;
+    }
+    // Undo negative margin on rows and thumbnails
+    .row, .row.collapse {
+      margin-left: 0;
+    }
+    // Make all grid-sized elements block level again
+    [class*="span-"]:not([class*="small-span-"]),
+    .row [class*="span-"]:not([class*="small-span-"]), .row.collapse [class*="span-"]:not([class*="small-span-"]){
+      float: none;
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      @include box-sizing(border-box);
+    }
+    .span-12,
+    .row .span-12, .row.collapse .span-12 {
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+    .row [class*="offset"]:not([class*="small-span-"]):first-child, .row.collapse [class*="offset"]:not([class*="small-span-"]):first-child {
+      margin-left: 0;
+    }
+  }
+}
