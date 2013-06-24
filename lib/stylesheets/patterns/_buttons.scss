@@ -5,7 +5,7 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-.btn {
+.rs-btn {
   padding: 2px 10px 1px;
   margin: 0;
   color: $grey-darker;
@@ -49,7 +49,7 @@ input::-moz-focus-inner {
   }
 }
 
-.btn-primary {
+.rs-btn-primary {
   color: $white;
   background-color: #333;
   border: 1px solid #333;
@@ -80,7 +80,7 @@ input::-moz-focus-inner {
   }
 }
 
-.btn-login {
+.rs-btn-login {
   color: $white;
   background-color: #a60004;
   border: 1px solid #a60004;
@@ -110,7 +110,7 @@ input::-moz-focus-inner {
   }
 }
 
-.btn-link {
+.rs-btn-link {
   color: $blue;
   background: transparent;
   border: 0;
@@ -134,7 +134,7 @@ input::-moz-focus-inner {
   }
 }
 
-.cog {
+.rs-cog {
   width: 16px;
   height: 16px;
   margin: 0;
@@ -160,7 +160,7 @@ input::-moz-focus-inner {
   }
 }
 
-.caret {
+.rs-caret {
   width: 10px;
   height: 10px;
 
@@ -174,8 +174,8 @@ input::-moz-focus-inner {
   }
 }
 
-.btn-action {
-  > .cog {
+.rs-btn-action {
+  > .rs-cog {
     width: 13px;
     height: 13px;
     margin-top: -2px;
@@ -183,19 +183,19 @@ input::-moz-focus-inner {
     @include icon-sprite(cog-small);
   }
 
-  > .caret {
+  > .rs-caret {
     margin-top: 2px;
     margin-left: 1px;
   }
 
   &[disabled],
   &.disabled {
-    > .cog {
+    > .rs-cog {
       cursor: default;
       @include icon-sprite(cog-small-disabled);
     }
 
-    > .caret {
+    > .rs-caret {
       cursor: default;
       @include icon-sprite(caret-disabled);
     }
