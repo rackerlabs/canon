@@ -1,7 +1,7 @@
 feature 'Menu' do
-  let(:dropdown) { find('.dropdown') }
-  let(:toggle) { find('.dropdown-toggle') }
-  let(:menu) { find('.dropdown-menu') }
+  let(:dropdown) { find('.rs-dropdown') }
+  let(:toggle) { find('.rs-dropdown-toggle') }
+  let(:menu) { find('.rs-dropdown-menu') }
 
   background do
     visit('/functional/menu.html')
@@ -52,7 +52,7 @@ feature 'Menu' do
     end
 
     it 'remains open after clicking category' do
-      menu.find('.dropdown-category').click
+      menu.find('.rs-dropdown-category').click
 
       menu.should be_visible
     end
