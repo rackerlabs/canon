@@ -1,31 +1,25 @@
 @import "compass";
 @import "compass/support";
-@import "custom-fonts";
 @import "susy";
 @import "normalize-css/normalize";
 
-@import "settings";
+@import "custom-fonts";
 @import "mixins";
-@import "sprites";
-@import "base";
-@import "layout";
-@import "utilities";
-@import "grid";
+@import "settings";
 
-@import "patterns/main";
+@import "base";
+@import "grid";
+@import "layout";
+@import "sprites";
+@import "utilities";
+
 @import "patterns/buttons";
-@import "patterns/content-view";
+@import "patterns/footer";
 @import "patterns/forms";
-@import "patterns/list-tables";
+@import "patterns/main";
+@import "patterns/menus";
 @import "patterns/nav-primary";
 @import "patterns/nav-secondary";
 @import "patterns/nav-utility";
 @import "patterns/nav-fixed";
-@import "patterns/nav-tabs";
-@import "patterns/footer";
 @import "patterns/tooltip";
-@import "patterns/menus";
-@import "patterns/popover";
-@import "patterns/progress-bar";
-@import "patterns/status";
-@import "patterns/tags";
