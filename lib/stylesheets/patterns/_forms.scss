@@ -76,33 +76,33 @@ textarea {
 }
 
 /* Input Sizes */
-.input-mini {
+.rs-input-mini {
   width: 60px;
 }
 
-.input-small {
+.rs-input-small {
   width: 90px;
 }
 
-.input-medium {
+.rs-input-medium {
   width: 150px;
 }
 
-.input-large {
+.rs-input-large {
   width: 210px;
 }
 
-.input-xlarge {
+.rs-input-xlarge {
   width: 270px;
 }
 
-.input-xxlarge {
+.rs-input-xxlarge {
   width: 530px;
 }
 
 /* Checkbox and Radio Groups */
-.checkbox,
-.radio {
+.rs-checkbox,
+.rs-radio {
   padding-left: 20px;
 
   &:after {
@@ -116,24 +116,24 @@ textarea {
   }
 }
 
-.checkbox.inline,
-.radio.inline {
+.rs-checkbox.inline,
+.rs-radio.inline {
   display: inline-block;
   margin-right: 10px;
 }
 
 /* Horizontal Forms */
-.form-horizontal {
-  .control-group {
+.rs-form-horizontal {
+  .rs-control-group {
     margin-bottom: 10px;
   }
 
-  .control-label {
+  .rs-control-label {
     float: left;
     width: 160px;
   }
 
-  .controls {
+  .rs-controls {
     margin-left: 180px;
   }
 
@@ -147,24 +147,24 @@ textarea {
 }
 
 /* Messaging */
-.help-inline,
-.help-block {
+.rs-help-inline,
+.rs-help-block {
   color: $grey600;
 }
 
-.help-inline,
-.validation-inline {
+.rs-help-inline,
+.rs-validation-inline {
   display: inline-block;
   margin-left: 5px;
 }
 
-.help-block,
-.validation-block {
+.rs-help-block,
+.rs-validation-block {
   display: block;
 }
 
-.validation-inline,
-.validation-block {
+.rs-validation-inline,
+.rs-validation-block {
   position: relative;
   padding-left: 20px;
 
@@ -176,14 +176,14 @@ textarea {
   }
 }
 
-.control-group.success {
-  .validation-inline,
-  .validation-block {
+.rs-control-group.success {
+  .rs-validation-inline,
+  .rs-validation-block {
     color: $green;
   }
 }
 
-.control-group.error {
+.rs-control-group.error {
   input[type="text"],
   input[type="password"],
   select,
@@ -192,10 +192,10 @@ textarea {
   }
 
   label,
-  .help-inline,
-  .help-block,
-  .validation-inline,
-  .validation-block {
+  .rs-help-inline,
+  .rs-help-block,
+  .rs-validation-inline,
+  .rs-validation-block {
     color: $red;
   }
 }
