@@ -85,10 +85,9 @@ $gutter-width: 0px;
 $grid-padding: 20px;
 // alternative layout breakpoints
 
-// not sure if needed but leaving it hear for now
-$legacy-support-for-ie  : true;
-$legacy-support-for-ie6 : $legacy-support-for-ie;
-$legacy-support-for-ie7 : $legacy-support-for-ie;
+// Adds mixin support for IE8
+$legacy-support-for-ie  : false;
+$legacy-support-for-ie8 : true;
 
 // Container Type
 $container-style: fluid;
