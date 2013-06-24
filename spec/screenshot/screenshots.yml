@@ -1,13 +1,31 @@
 screenshots:
   - name: Buttons
     url: buttons.html
+  - name: Content View
+    url: content-view.html
   - name: Forms
     url: forms.html
   - name: Layout (Fixed)
     url: layout-fixed.html
   - name: Layout (Responsive)
     url: layout-responsive.html
+  - name: List Table
+    url: list-table.html
+  - name: List Table (Stretchy)
+    url: list-table-stretched.html
+  - name: List Table (Loading)
+    url: list-table-loading.html
+  - name: List Table (Error)
+    url: list-table-error.html
+  - name: List Table (Empty)
+    url: list-table-empty.html
   - name: Menu
     url: menu.html
+  - name: Progress Bar
+    url: progress-bar.html
+  - name: Status
+    url: status.html
+  - name: Tags
+    url: tags.html
   - name: Tooltip
     url: tooltip.html
