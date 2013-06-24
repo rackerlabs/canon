@@ -31,10 +31,10 @@
       <button class="rs-btn" onclick="javascript: attach();">Attach</button>
     </div>
     <hr>
-    <div class="dropdown">
-      <a class="rs-btn dropdown-toggle">I'm the toggle.</a>
-      <ul class="dropdown-menu">
-        <li><span class="dropdown-category">Category</span></li>
+    <div class="rs-dropdown">
+      <a class="rs-btn rs-dropdown-toggle">I'm the toggle.</a>
+      <ul class="rs-dropdown-menu">
+        <li><span class="rs-dropdown-category">Category</span></li>
         <li><a href="#">Menu Item</a></li>
       </ul>
     </div>
@@ -54,7 +54,7 @@
     });
 
     require(['canon'], function (canon) {
-      element = $('.dropdown');
+      element = $('.rs-dropdown');
       menu = new canon.Menu();
     });
 
