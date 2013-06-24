@@ -4,15 +4,15 @@ require(['canon/menu'], function (Menu) {
     var element, menu;
 
     beforeEach(function () {
-      fixture.innerHTML = '<div class="dropdown">' +
-        '<div class="dropdown-toggle">Toggle</div>' +
-        '<div class="dropdown-menu">' +
-        '<span class="dropdown-category">Category</span>' +
+      fixture.innerHTML = '<div class="rs-dropdown">' +
+        '<div class="rs-dropdown-toggle">Toggle</div>' +
+        '<div class="rs-dropdown-menu">' +
+        '<span class="rs-dropdown-category">Category</span>' +
         '<a href="#">Link</a>' +
         '</div>' +
         '</div>';
 
-      element = $('.dropdown');
+      element = $('.rs-dropdown');
 
       menu = new Menu();
     });
@@ -22,21 +22,21 @@ require(['canon/menu'], function (Menu) {
     });
 
     describe('#attach', function () {
-      it('succeeds when element has dropdown', function () {
+      it('succeeds when element has rs-dropdown', function () {
         (function () { menu.attach(element); }).should.not.throws();
       });
 
       it('fails when element has other class', function () {
-        element.removeClass('dropdown');
+        element.removeClass('rs-dropdown');
         element.addClass('other-element');
 
-        (function () { menu.attach(element); }).should.throws('Component must be attached to element with "dropdown".');
+        (function () { menu.attach(element); }).should.throws('Component must be attached to element with "rs-dropdown".');
       });
 
       it('adds hidden class to dropdown menu', function () {
         menu.attach(element);
 
-        $('.dropdown-menu').hasClass('hidden').should.equal(true);
+        $('.rs-dropdown-menu').hasClass('hidden').should.equal(true);
       });
     });
 
@@ -48,11 +48,11 @@ require(['canon/menu'], function (Menu) {
       });
 
       it('removes hidden class from dropdown menu', function () {
-        $('.dropdown-menu').hasClass('hidden').should.equal(false);
+        $('.rs-dropdown-menu').hasClass('hidden').should.equal(false);
       });
 
       it('adds visible class to dropdown menu', function () {
-        $('.dropdown-menu').hasClass('visible').should.equal(true);
+        $('.rs-dropdown-menu').hasClass('visible').should.equal(true);
       });
     });
 
@@ -64,11 +64,11 @@ require(['canon/menu'], function (Menu) {
       });
 
       it('adds hidden class to dropdown menu', function () {
-        $('.dropdown-menu').hasClass('hidden').should.equal(true);
+        $('.rs-dropdown-menu').hasClass('hidden').should.equal(true);
       });
 
       it('removes visible class from dropdown menu', function () {
-        $('.dropdown-menu').hasClass('visible').should.equal(false);
+        $('.rs-dropdown-menu').hasClass('visible').should.equal(false);
       });
 
       it('is called when click occurs outside of dropdown and menu is visible', function () {
@@ -100,7 +100,7 @@ require(['canon/menu'], function (Menu) {
       it('is not called when category is clicked', function () {
         menu.hide = sinon.spy();
 
-        $('.dropdown-category', element).click();
+        $('.rs-dropdown-category', element).click();
 
         menu.hide.should.not.have.been.called;
       });
@@ -132,7 +132,7 @@ require(['canon/menu'], function (Menu) {
       it('is called when dropdown toggle is clicked', function () {
         menu.toggle = sinon.spy();
 
-        $('.dropdown-toggle').click();
+        $('.rs-dropdown-toggle').click();
 
         menu.toggle.should.have.been.called;
       });

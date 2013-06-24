@@ -52,7 +52,7 @@
 				}
 	  	}
 
-	  	.dropdown-toggle {
+	  	.rs-dropdown-toggle {
 	  		display: inline-block;
 	  		width: 13px;
 			  height: 13px;
@@ -60,18 +60,18 @@
 			  vertical-align: text-bottom;
 	  	}
 
-	  	&.dropdown {
-	  		.dropdown-toggle {
+	  	&.rs-dropdown {
+	  		.rs-dropdown-toggle {
 	  			@include icon-sprite(caret-primary);
 	  		}
 
-	  		.dropdown-menu {
+	  		.rs-dropdown-menu {
 	  			margin-top: -2px;
 	  		}
 	  	}
 
-	  	&.dropdown.active {
-	  		.dropdown-toggle {
+	  	&.rs-dropdown.active {
+	  		.rs-dropdown-toggle {
 	  			@include icon-sprite(caret-primary-active);
 	  		}
 	  	}
