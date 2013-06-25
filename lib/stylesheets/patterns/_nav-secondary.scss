@@ -1,10 +1,10 @@
 // Seconday Nav
-.nav-secondary {
+.rs-nav-secondary {
 	min-height: $app-nav-secondary-height;
 	z-index: $zindexNavSecondary;
 	@include noise;
 
-	.nav {
+	.rs-nav {
 		@include seam;
 
 	  & > li {

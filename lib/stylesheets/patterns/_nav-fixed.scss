@@ -5,49 +5,49 @@
 	right: 0;
 	width: 100%;
 
-	&.nav-utility + .l-body {
+	&.rs-nav-utility + .l-body {
 		padding-top: $app-nav-utility-height;
 	}
 
-	&.nav-utility + &.nav-primary {
+	&.rs-nav-utility + &.rs-nav-primary {
 		top: $app-nav-utility-height;
 		& + .l-body {
 			padding-top: $app-header-height;
 		}
 	}
 
-	&.nav-utility + &.nav-secondary {
+	&.rs-nav-utility + &.rs-nav-secondary {
 		top: $app-nav-utility-height;
 		& + .l-body {
 			padding-top: $app-nav-utility-height + $app-nav-secondary-height;
 		}
 	}
 
-	&.nav-utility + &.nav-primary + &.nav-secondary {
+	&.rs-nav-utility + &.rs-nav-primary + &.rs-nav-secondary {
 		top: $app-header-height;
 		& + .l-body {
 			padding-top: $app-header-height + $app-nav-secondary-height;
 		}
 	}
 
-	&.nav-primary + .l-body {
+	&.rs-nav-primary + .l-body {
 		padding-top: $app-nav-primary-height;
 	}
 
-	&.nav-primary + &.nav-secondary {
+	&.rs-nav-primary + &.rs-nav-secondary {
 		top: $app-nav-primary-height;
 		& + .l-body {
 			padding-top: $app-nav-primary-height + $app-nav-secondary-height;
 		}
 	}
 
-	&.nav-secondary + .l-body {
+	&.rs-nav-secondary + .l-body {
 		padding-top: $app-nav-secondary-height;
 	}
 
 	// height based media query to remove app-frame for shorter view ports
 	@media only screen and (max-height: 600px){
-	  &.nav-primary, &.nav-secondary, &.nav-utility {
+	  &.rs-nav-primary, &.rs-nav-secondary, &.rs-nav-utility {
 	    position: static !important;
 	  }
 	  & ~ .l-body {
@@ -56,7 +56,7 @@
 	}
 	// width based media query to remove app-frame
 	@media only screen and (max-width: 1060px) {
-	  &.nav-primary, &.nav-secondary, &.nav-utility {
+	  &.rs-nav-primary, &.rs-nav-secondary, &.rs-nav-utility {
 	    position: static !important;
 	  }
 	  & ~ .l-body {
