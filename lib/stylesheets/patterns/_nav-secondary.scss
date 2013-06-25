@@ -4,7 +4,7 @@
 	z-index: $zindexNavSecondary;
 	@include noise;
 
-	.nav {
+	.rs-nav {
 		@include seam;
 
 	  & > li {
