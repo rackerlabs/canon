@@ -15,7 +15,7 @@
 }
 
 // main nav
-.nav-primary {
+.rs-nav-primary {
 	min-height: $app-nav-primary-height;
 	z-index: $zindexNavPrimary;
 	@include noise;
@@ -80,7 +80,7 @@
 }
 
 // rackspace logo
-.nav-brand {
+.rs-nav-brand {
 	float: left;
 	margin-top: 10px;
 
