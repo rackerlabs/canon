@@ -30,30 +30,30 @@ body {
 .l-container {
   width: 1030px;
   margin: 0 auto;
-  padding: 0 $small-padding;
+  padding: 0 $medium-padding;
   @include micro-clearfix;
 
   @include responsive(){
     width: auto;
-    @include at-breakpoint($xlarge){
+    @include max-screen($xlarge){
       & {
         padding: 0 $xlarge-padding;
       }
     }
 
-    @include at-breakpoint($large){
+    @include max-screen($large){
       & {
         padding: 0 $large-padding;
       }
     }
 
-    @include at-breakpoint($medium){
+    @include max-screen($medium){
       & {
         padding: 0 $medium-padding;
       }
     }
 
-    @include at-breakpoint($small){
+    @include max-screen($small){
       & {
         padding: 0 $small-padding;
       }
