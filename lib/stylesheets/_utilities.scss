@@ -1,23 +1,23 @@
-.panel {
+.rs-panel {
   background: $white;
   @include box-shadow(#c2c2c2 0px 3px 8px 1px);
 }
 
-.pull-left {
+.rs-pull-left {
   float: left;
 }
 
-.pull-right {
+.rs-pull-right {
   float: right;
 }
 
-.truncate {
+.rs-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.quiet {
+.rs-quiet {
   color: #999;
   font-weight: normal;
 }
