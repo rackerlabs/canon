@@ -93,14 +93,14 @@ $legacy-support-for-ie8 : true;
 $container-style: fluid;
 
 // Breakpoints
-$small: 1px 6 767px;
+$small: 767px;
 $small-padding: 15px;
-$medium: 641px 10 960px;
-$medium-padding: 30px;
-$large: 961px 12 1599px;
-$large-padding: 40px;
-$xlarge: 1600px 18;
-$xlarge-padding: 60px;
+$medium: 1030px;
+$medium-padding: 20px;
+$large: 1600px;
+$large-padding: 30px;
+$xlarge: 1920px;
+$xlarge-padding: 50px;
 
 
 // Layout

@@ -139,9 +139,6 @@ GEM
     sprockets-sass (0.9.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
-    susy (1.0.8)
-      compass (>= 0.12.2)
-      sass (>= 3.2.0)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -175,7 +172,6 @@ DEPENDENCIES
   sauce-connect
   sprockets (~> 2.8.2)
   sprockets-sass
-  susy
   thin
   uglifier
   yui-compressor

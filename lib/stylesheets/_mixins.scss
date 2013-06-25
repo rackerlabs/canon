@@ -19,50 +19,22 @@
   }
 }
 
-@mixin grid-classes($silent: false) {
-  @include with-grid-settings(12, 75px, 20px, 40px) {
-    $base: if($silent, '%', '.');
-    $selector: '#{$base}span';
+@mixin screen($min, $max) {
+  @media screen and ( min-width: $min ) and ( max-width: $max ) {
+    @content;
+  }
+}
 
-    @if $silent { #{$selector} { @include span-columns(1); } }
-    @else { [class*="span-"] { @include span-columns(1); } }
+@mixin max-screen($size) {
+  @media screen and ( max-width: $size ) {
+    @content;
+  }
+}
 
-    #{$base}row, #{$base}full { @include micro-clearfix; @include reset-columns;}
-    #{$base}omega { @include omega; }
-
-    @for $span from 1 through $total-columns {
-      $span-selector: '#{$selector}-#{$span}';
-      @for $context from 1 through $total-columns {
-        $total-selector: '#{$span-selector}-#{$context}';
-        $total-selector: if($context == $total-columns, '#{$span-selector}, #{$total-selector}', $total-selector);
-        @if $context > $span {
-          #{$total-selector} {
-            @if $silent { @extend #{$selector}; }
-            width: columns($span, $context);
-          }
-        } @else {
-          @if $context == $span {
-            #{$total-selector} { @include micro-clearfix; @include reset-columns;}
-          }
-        }
-      }
-    }
-    // Reset columns at the smallest breakpoint.
-    @include at-breakpoint($small) {
-      [class*="span-"] {
-        @include reset-columns;
-        display: block;
-      }
-
-    }
-
-    .bleed-left {
-      @include bleed($sides: left);
-    }
-    .bleed-right {
-      @include bleed($sides: right);
-    }
-  };
+@mixin min-screen($size) {
+  @media screen and ( min-width: $size ) {
+    @content;
+  }
 }
 
 @mixin seam($top: #DDD, $bottom: #F5F5F5) {
