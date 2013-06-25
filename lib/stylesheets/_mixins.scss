@@ -78,7 +78,7 @@
 }
 
 @mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth, $collapseGridGutter:"") {
-  .row#{$collapseGridGutter} {
+  .rs-row#{$collapseGridGutter} {
     width: 100%;
     @include clearfix();
     [class*="span-"] {
@@ -89,11 +89,6 @@
     }
     [class*="span-"]:first-child {
       margin-left: 0;
-    }
-
-    // Space grid-sized controls properly if multiple per line
-    .controls-row [class*="span-"] + [class*="span-"] {
-      margin-left: $fluidGridGutterWidth;
     }
 
     // generate .span-X and .offset-X

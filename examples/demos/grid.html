@@ -7,9 +7,13 @@
   <title>Canon Layout</title>
 
   <link rel="stylesheet" type="text/css" href="/assets/canon.css">
-  <style>
-    .show-grid {
-      text-align: center;
+  <style type="text/css">
+    .show-grid [class*="span-"] {
+      background: #b8b8b8; margin-bottom: 10px; border: 1px solid #777;
+    }
+
+    .show-grid [class*="span-"] [class*="span-"] {
+      background: #999; margin-bottom: 10px; border: 1px solid #ccc;
     }
   </style>
 </head>
@@ -44,161 +48,546 @@
         <div class="main panel">
           <div class="sidebar pull-right">
             <div class="inner">
-              <p>3 column grid via nested classes</p>
-              <div class="row">
-                <div class="span-3-3" style="background: #b8b8b8; margin-bottom: 10px;">.full or .span-3-3</div>
+              <div class="rs-row">
+                <div class="span-12">.span-12</div>
               </div>
-              <div class="row">
-                <div class="span-1-3" style="background: #b8b8b8; margin-bottom: 10px;">.span-1-3</div>
-                <div class="span-2-3 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-2-3</div>
+              <div class="rs-row">
+                <div class="span-4">.span-1-3</div>
+                <div class="span-8">.span-2-3</div>
               </div>
             </div>
           </div>
           <div class="content panel">
             <div class="inner">
               <p>12 column grid</p>
-              <div class="row">
-                <div class="span-12" style="background: #b8b8b8; margin-bottom: 10px;">.full or .span-12</div>
+              <div class="rs-row">
+                <div class="span-12">.span-12</div>
               </div>
-              <div class="row">
-                <div class="span-1" style="background: #b8b8b8; margin-bottom: 10px;">.span-1</div>
-                <div class="span-11 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-11</div>
+              <div class="rs-row">
+                <div class="span-1">.span-1</div>
+                <div class="span-11">.span-11</div>
               </div>
-              <div class="row">
-                <div class="span-2" style="background: #b8b8b8; margin-bottom: 10px;">.span-2</div>
-                <div class="span-10 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-10</div>
+              <div class="rs-row">
+                <div class="span-2">.span-2</div>
+                <div class="span-10">.span-10</div>
               </div>
-              <div class="row">
-                <div class="span-3" style="background: #b8b8b8; margin-bottom: 10px;">.span-3</div>
-                <div class="span-9 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-9</div>
+              <div class="rs-row">
+                <div class="span-3">.span-3</div>
+                <div class="span-9">.span-9</div>
               </div>
-              <div class="row">
-                <div class="span-4" style="background: #b8b8b8; margin-bottom: 10px;">.span-4</div>
-                <div class="span-8 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-8</div>
+              <div class="rs-row">
+                <div class="span-4">.span-4</div>
+                <div class="span-8">.span-8</div>
               </div>
-              <div class="row">
-                <div class="span-5" style="background: #b8b8b8; margin-bottom: 10px;">.span-5</div>
-                <div class="span-7 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-7</div>
+              <div class="rs-row">
+                <div class="span-5">.span-5</div>
+                <div class="span-7">.span-7</div>
               </div>
-              <div class="row">
-                <div class="span-6" style="background: #b8b8b8; margin-bottom: 10px;">.span-6</div>
-                <div class="span-6 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-6</div>
+              <div class="rs-row">
+                <div class="span-6">.span-6</div>
+                <div class="span-6">.span-6</div>
               </div>
-              <div class="row">
-                <div class="span-7" style="background: #b8b8b8; margin-bottom: 10px;">.span-7</div>
-                <div class="span-5 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-5</div>
+              <div class="rs-row">
+                <div class="span-7">.span-7</div>
+                <div class="span-5">.span-5</div>
               </div>
-              <div class="row">
-                <div class="span-8" style="background: #b8b8b8; margin-bottom: 10px;">.span-8</div>
-                <div class="span-4 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-4</div>
+              <div class="rs-row">
+                <div class="span-8">.span-8</div>
+                <div class="span-4">.span-4</div>
               </div>
-              <div class="row">
-                <div class="span-9" style="background: #b8b8b8; margin-bottom: 10px;">.span-9</div>
-                <div class="span-3 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-3</div>
+              <div class="rs-row">
+                <div class="span-9">.span-9</div>
+                <div class="span-3">.span-3</div>
               </div>
-              <div class="row">
-                <div class="span-10" style="background: #b8b8b8; margin-bottom: 10px;">.span-10</div>
-                <div class="span-2 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-2</div>
+              <div class="rs-row">
+                <div class="span-10">.span-10</div>
+                <div class="span-2">.span-2</div>
               </div>
-              <div class="row">
-                <div class="span-11" style="background: #b8b8b8; margin-bottom: 10px;">.span-11</div>
-                <div class="span-1 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-1</div>
+              <div class="rs-row">
+                <div class="span-11">.span-11</div>
+                <div class="span-1">.span-1</div>
+              </div>
+              <p>12 column collapsed grid</p>
+              <div class="rs-row-collapse">
+                <div class="span-12">.span-12</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-1">.span-1</div>
+                <div class="span-11">.span-11</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-2">.span-2</div>
+                <div class="span-10">.span-10</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-3">.span-3</div>
+                <div class="span-9">.span-9</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-4">.span-4</div>
+                <div class="span-8">.span-8</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-5">.span-5</div>
+                <div class="span-7">.span-7</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-6">.span-6</div>
+                <div class="span-6">.span-6</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-7">.span-7</div>
+                <div class="span-5">.span-5</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-8">.span-8</div>
+                <div class="span-4">.span-4</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-9">.span-9</div>
+                <div class="span-3">.span-3</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-10">.span-10</div>
+                <div class="span-2">.span-2</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-11">.span-11</div>
+                <div class="span-1">.span-1</div>
+              </div>
+              <!-- small-column -->
+              <p>12 column small grid</p>
+              <div class="rs-row">
+                <div class="small-span-12">.small-span-12</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-1">.small-span-1</div>
+                <div class="small-span-11">.small-span-11</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-2">.small-span-2</div>
+                <div class="small-span-10">.small-span-10</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-3">.small-span-3</div>
+                <div class="small-span-9">.small-span-9</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-4">.small-span-4</div>
+                <div class="small-span-8">.small-span-8</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-5">.small-span-5</div>
+                <div class="small-span-7">.small-span-7</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-6">.small-span-6</div>
+                <div class="small-span-6">.small-span-6</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-7">.small-span-7</div>
+                <div class="small-span-5">.small-span-5</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-8">.small-span-8</div>
+                <div class="small-span-4">.small-span-4</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-9">.small-span-9</div>
+                <div class="small-span-3">.small-span-3</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-10">.small-span-10</div>
+                <div class="small-span-2">.small-span-2</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-11">.small-span-11</div>
+                <div class="small-span-1">.small-span-1</div>
+              </div>
+              <div class="rs-row">
+                <div class="small-span-5">
+                  <p>.small-span-5</p>
+                  <div class="rs-row">
+                    <div class="small-span-3">.small-span-3</div>
+                    <div class="small-span-9">.small-span-9</div>
+                  </div>
+                </div>
+                <div class="small-span-7">
+                  <p>.small-span-7</p>
+                  <div class="rs-row">
+                    <div class="small-span-7">.small-span-7</div>
+                    <div class="small-span-5">.small-span-5</div>
+                  </div>
+                </div>
+              </div>
+              <p>12 column small collapsed grid</p>
+              <div class="rs-row-collapse">
+                <div class="small-span-12">.small-span-12</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-1">.small-span-1</div>
+                <div class="small-span-11">.small-span-11</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-2">.small-span-2</div>
+                <div class="small-span-10">.small-span-10</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-3">.small-span-3</div>
+                <div class="small-span-9">.small-span-9</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-4">.small-span-4</div>
+                <div class="small-span-8">.small-span-8</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-5">.small-span-5</div>
+                <div class="small-span-7">.small-span-7</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-6">.small-span-6</div>
+                <div class="small-span-6">.small-span-6</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-7">.small-span-7</div>
+                <div class="small-span-5">.small-span-5</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-8">.small-span-8</div>
+                <div class="small-span-4">.small-span-4</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-9">.small-span-9</div>
+                <div class="small-span-3">.small-span-3</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-10">.small-span-10</div>
+                <div class="small-span-2">.small-span-2</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="small-span-11">.small-span-11</div>
+                <div class="small-span-1">.small-span-1</div>
               </div>
               <p>Nested Grid</p>
-              <div class="row">
-                <div class="span-5" style="background: #b8b8b8; margin-bottom: 10px;">
+              <div class="rs-row">
+                <div class="span-5">
                   <p>.span-5</p>
-                  <div class="span-3-5" style="background: #999; margin-bottom: 10px;">.span-3-5</div>
-                  <div class="span-2-5 omega" style="background: #999; margin-bottom: 10px;">.span-2-5</div>
+                  <div class="rs-row">
+                    <div class="span-5">.span-5</div>
+                    <div class="span-7">.span-7</div>
+                  </div>
                 </div>
-                <div class="span-7 omega" style="background: #b8b8b8; margin-bottom: 10px;">
+                <div class="span-7">
                   <p>.span-7</p>
-                  <div class="span-2-7" style="background: #999; margin-bottom: 10px;">.span-2-7</div>
-                  <div class="span-5-7 omega" style="background: #999; margin-bottom: 10px;">.span-5-7</div>
+                  <div class="rs-row">
+                    <div class="span-8">.span-8</div>
+                    <div class="span-4">.span-4</div>
+                  </div>
                 </div>
               </div>
-              <p>9 column grid via nested classes</p>
-              <div class="row">
-                <div class="span-9-9" style="background: #b8b8b8; margin-bottom: 10px;">.full or .span-9-9</div>
+              <p>Nested Collapsed Grid</p>
+              <div class="rs-row-collapse">
+                <div class="span-5">
+                  <p>.span-5</p>
+                  <div class="rs-row-collapse">
+                    <div class="span-5">.span-5</div>
+                    <div class="span-7">.span-7</div>
+                  </div>
+                </div>
+                <div class="span-7">
+                  <p>.span-7</p>
+                  <div class="rs-row-collapse">
+                    <div class="span-8">.span-8</div>
+                    <div class="span-4">.span-4</div>
+                  </div>
+                </div>
               </div>
-              <div class="row">
-                <div class="span-1-9" style="background: #b8b8b8; margin-bottom: 10px;">.span-1-9</div>
-                <div class="span-8-9 omega" style="background: #b8b8b8; margin-bottom: 10px;">span-8-9</div>
+              <p>Offset Grid</p>
+              <div class="rs-row">
+                <div class="span-8 offset-4">.span-8 .offset-4</div>
               </div>
-              <div class="row">
-                <div class="span-4-9" style="background: #b8b8b8; margin-bottom: 10px;">.span-4-9</div>
-                <div class="span-5-9 omega" style="background: #b8b8b8; margin-bottom: 10px;">span-5-9</div>
+              <div class="rs-row">
+                <div class="span-2 offset-1">.span-2 .offset-1</div>
+                <div class="span-3 offset-6">.span-3 .offset-6</div>
               </div>
-              <div class="row">
-                <div class="span-6-9" style="background: #b8b8b8; margin-bottom: 10px;">.span-6-9</div>
-                <div class="span-3-9 omega" style="background: #b8b8b8; margin-bottom: 10px;">span-3-9</div>
+              <p>Offset Collapsed Grid</p>
+              <div class="rs-row-collapse">
+                <div class="span-8 offset-4">.span-8 .offset-4</div>
+              </div>
+              <div class="rs-row-collapse">
+                <div class="span-2 offset-1">.span-2 .offset-1</div>
+                <div class="span-3 offset-6">.span-3 .offset-6</div>
+              </div>
+            </div>
+            <!-- inner -->
+          </div>
+          <!-- content -->
+        </div>
+        <!-- main -->
+          <p>12 column grid</p>
+          <div class="rs-row">
+            <div class="span-12">.span-12</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-1">.span-1</div>
+            <div class="span-11">.span-11</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-2">.span-2</div>
+            <div class="span-10">.span-10</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-3">.span-3</div>
+            <div class="span-9">.span-9</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-4">.span-4</div>
+            <div class="span-8">.span-8</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-5">.span-5</div>
+            <div class="span-7">.span-7</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-6">.span-6</div>
+            <div class="span-6">.span-6</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-7">.span-7</div>
+            <div class="span-5">.span-5</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-8">.span-8</div>
+            <div class="span-4">.span-4</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-9">.span-9</div>
+            <div class="span-3">.span-3</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-10">.span-10</div>
+            <div class="span-2">.span-2</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-11">.span-11</div>
+            <div class="span-1">.span-1</div>
+          </div>
+          <p>12 column collapsed grid</p>
+          <div class="rs-row-collapse">
+            <div class="span-12">.span-12</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-1">.span-1</div>
+            <div class="span-11">.span-11</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-2">.span-2</div>
+            <div class="span-10">.span-10</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-3">.span-3</div>
+            <div class="span-9">.span-9</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-4">.span-4</div>
+            <div class="span-8">.span-8</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-5">.span-5</div>
+            <div class="span-7">.span-7</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-6">.span-6</div>
+            <div class="span-6">.span-6</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-7">.span-7</div>
+            <div class="span-5">.span-5</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-8">.span-8</div>
+            <div class="span-4">.span-4</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-9">.span-9</div>
+            <div class="span-3">.span-3</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-10">.span-10</div>
+            <div class="span-2">.span-2</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-11">.span-11</div>
+            <div class="span-1">.span-1</div>
+          </div>
+          <!-- small-column -->
+          <p>12 column small grid</p>
+          <div class="rs-row">
+            <div class="small-span-12">.small-span-12</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-1">.small-span-1</div>
+            <div class="small-span-11">.small-span-11</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-2">.small-span-2</div>
+            <div class="small-span-10">.small-span-10</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-3">.small-span-3</div>
+            <div class="small-span-9">.small-span-9</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-4">.small-span-4</div>
+            <div class="small-span-8">.small-span-8</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-5">.small-span-5</div>
+            <div class="small-span-7">.small-span-7</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-6">.small-span-6</div>
+            <div class="small-span-6">.small-span-6</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-7">.small-span-7</div>
+            <div class="small-span-5">.small-span-5</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-8">.small-span-8</div>
+            <div class="small-span-4">.small-span-4</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-9">.small-span-9</div>
+            <div class="small-span-3">.small-span-3</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-10">.small-span-10</div>
+            <div class="small-span-2">.small-span-2</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-11">.small-span-11</div>
+            <div class="small-span-1">.small-span-1</div>
+          </div>
+          <div class="rs-row">
+            <div class="small-span-5">
+              <p>.small-span-5</p>
+              <div class="rs-row">
+                <div class="small-span-3">.small-span-3</div>
+                <div class="small-span-9">.small-span-9</div>
+              </div>
+            </div>
+            <div class="small-span-7">
+              <p>.small-span-7</p>
+              <div class="rs-row">
+                <div class="small-span-7">.small-span-7</div>
+                <div class="small-span-5">.small-span-5</div>
               </div>
             </div>
           </div>
-        </div>
-        <p>12 column grid</p>
-        <div class="row">
-          <div class="span-12" style="background: #b8b8b8; margin-bottom: 10px;">.full or .span-12</div>
-        </div>
-        <div class="row">
-          <div class="span-1" style="background: #b8b8b8; margin-bottom: 10px;">.span-1</div>
-          <div class="span-11 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-11</div>
-        </div>
-        <div class="row">
-          <div class="span-2" style="background: #b8b8b8; margin-bottom: 10px;">.span-2</div>
-          <div class="span-10 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-10</div>
-        </div>
-        <div class="row">
-          <div class="span-3" style="background: #b8b8b8; margin-bottom: 10px;">.span-3</div>
-          <div class="span-9 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-9</div>
-        </div>
-        <div class="row">
-          <div class="span-4" style="background: #b8b8b8; margin-bottom: 10px;">.span-4</div>
-          <div class="span-8 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-8</div>
-        </div>
-        <div class="row">
-          <div class="span-5" style="background: #b8b8b8; margin-bottom: 10px;">.span-5</div>
-          <div class="span-7 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-7</div>
-        </div>
-        <div class="row">
-          <div class="span-6" style="background: #b8b8b8; margin-bottom: 10px;">.span-6</div>
-          <div class="span-6 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-6</div>
-        </div>
-        <div class="row">
-          <div class="span-7" style="background: #b8b8b8; margin-bottom: 10px;">.span-7</div>
-          <div class="span-5 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-5</div>
-        </div>
-        <div class="row">
-          <div class="span-8" style="background: #b8b8b8; margin-bottom: 10px;">.span-8</div>
-          <div class="span-4 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-4</div>
-        </div>
-        <div class="row">
-          <div class="span-9" style="background: #b8b8b8; margin-bottom: 10px;">.span-9</div>
-          <div class="span-3 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-3</div>
-        </div>
-        <div class="row">
-          <div class="span-10" style="background: #b8b8b8; margin-bottom: 10px;">.span-10</div>
-          <div class="span-2 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-2</div>
-        </div>
-        <div class="row">
-          <div class="span-11" style="background: #b8b8b8; margin-bottom: 10px;">.span-11</div>
-          <div class="span-1 omega" style="background: #b8b8b8; margin-bottom: 10px;">.span-1</div>
-        </div>
-        <p>Nested Grid</p>
-        <div class="row">
-          <div class="span-5" style="background: #b8b8b8; margin-bottom: 10px;">
-            <p>.span-5</p>
-            <div class="span-3-5" style="background: #999; margin-bottom: 10px;">.span-3-5</div>
-            <div class="span-2-5 omega" style="background: #999; margin-bottom: 10px;">.span-2-5</div>
+          <p>12 column small collapsed grid</p>
+          <div class="rs-row-collapse">
+            <div class="small-span-12">.small-span-12</div>
           </div>
-          <div class="span-7 omega" style="background: #b8b8b8; margin-bottom: 10px;">
-            <p>.span-7</p>
-            <div class="span-2-7" style="background: #999; margin-bottom: 10px;">.span-2-7</div>
-            <div class="span-5-7 omega" style="background: #999; margin-bottom: 10px;">.span-5-7</div>
+          <div class="rs-row-collapse">
+            <div class="small-span-1">.small-span-1</div>
+            <div class="small-span-11">.small-span-11</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-2">.small-span-2</div>
+            <div class="small-span-10">.small-span-10</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-3">.small-span-3</div>
+            <div class="small-span-9">.small-span-9</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-4">.small-span-4</div>
+            <div class="small-span-8">.small-span-8</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-5">.small-span-5</div>
+            <div class="small-span-7">.small-span-7</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-6">.small-span-6</div>
+            <div class="small-span-6">.small-span-6</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-7">.small-span-7</div>
+            <div class="small-span-5">.small-span-5</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-8">.small-span-8</div>
+            <div class="small-span-4">.small-span-4</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-9">.small-span-9</div>
+            <div class="small-span-3">.small-span-3</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-10">.small-span-10</div>
+            <div class="small-span-2">.small-span-2</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="small-span-11">.small-span-11</div>
+            <div class="small-span-1">.small-span-1</div>
+          </div>
+          <p>Nested Grid</p>
+          <div class="rs-row">
+            <div class="span-5">
+              <p>.span-5</p>
+              <div class="rs-row">
+                <div class="span-5">.span-5</div>
+                <div class="span-7">.span-7</div>
+              </div>
+            </div>
+            <div class="span-7">
+              <p>.span-7</p>
+              <div class="rs-row">
+                <div class="span-8">.span-8</div>
+                <div class="span-4">.span-4</div>
+              </div>
+            </div>
+          </div>
+          <p>Nested Collapsed Grid</p>
+          <div class="rs-row-collapse">
+            <div class="span-5">
+              <p>.span-5</p>
+              <div class="rs-row-collapse">
+                <div class="span-5">.span-5</div>
+                <div class="span-7">.span-7</div>
+              </div>
+            </div>
+            <div class="span-7">
+              <p>.span-7</p>
+              <div class="rs-row-collapse">
+                <div class="span-8">.span-8</div>
+                <div class="span-4">.span-4</div>
+              </div>
+            </div>
+          </div>
+          <p>Offset Grid</p>
+          <div class="rs-row">
+            <div class="span-8 offset-4">.span-8 .offset-4</div>
+          </div>
+          <div class="rs-row">
+            <div class="span-2 offset-1">.span-2 .offset-1</div>
+            <div class="span-3 offset-6">.span-3 .offset-6</div>
+          </div>
+          <p>Offset Collapsed Grid</p>
+          <div class="rs-row-collapse">
+            <div class="span-8 offset-4">.span-8 .offset-4</div>
+          </div>
+          <div class="rs-row-collapse">
+            <div class="span-2 offset-1">.span-2 .offset-1</div>
+            <div class="span-3 offset-6">.span-3 .offset-6</div>
           </div>
         </div>
       </div>
+      <!-- l-container -->
     </div>
+    <!-- l-body -->
     <div class="l-push"></div>
   </div>
   <div class="l-footer">

@@ -23,17 +23,17 @@ $gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridCol
 $fluidGridColumnWidth: percentage($gridColumnWidth/$gridRowWidth);
 $fluidGridGutterWidth: percentage($gridGutterWidth/$gridRowWidth);
 
-@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth, ".collapse");
+@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth, "-collapse");
 
 
 // Reset utility classes due to specificity
 [class*="span-"].hide,
-.row [class*="span-"].hide {
+.rs-row [class*="span-"].hide {
   display: none;
 }
 
 [class*="span-"].pull-right,
-.row [class*="span-"].pull-right {
+.rs-row [class*="span-"].pull-right {
   float: right;
 }
 
@@ -41,16 +41,16 @@ body.responsive {
   @media (max-width: 767px) {
 
     // Fluid rows
-    .row, .row.collapse {
+    .rs-row, .rs-row.collapse {
       width: 100%;
     }
     // Undo negative margin on rows and thumbnails
-    .row, .row.collapse {
+    .rs-row, .rs-row.collapse {
       margin-left: 0;
     }
     // Make all grid-sized elements block level again
     [class*="span-"]:not([class*="small-span-"]),
-    .row [class*="span-"]:not([class*="small-span-"]), .row.collapse [class*="span-"]:not([class*="small-span-"]){
+    .rs-row [class*="span-"]:not([class*="small-span-"]), .rs-row.collapse [class*="span-"]:not([class*="small-span-"]){
       float: none;
       display: block;
       width: 100%;
@@ -58,11 +58,11 @@ body.responsive {
       @include box-sizing(border-box);
     }
     .span-12,
-    .row .span-12, .row.collapse .span-12 {
+    .rs-row .span-12, .rs-row.collapse .span-12 {
       width: 100%;
       @include box-sizing(border-box);
     }
-    .row [class*="offset"]:not([class*="small-span-"]):first-child, .row.collapse [class*="offset"]:not([class*="small-span-"]):first-child {
+    .rs-row [class*="offset"]:not([class*="small-span-"]):first-child, .rs-row.collapse [class*="offset"]:not([class*="small-span-"]):first-child {
       margin-left: 0;
     }
   }
