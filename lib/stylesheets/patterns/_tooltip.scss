@@ -1,11 +1,11 @@
-.tooltip {
+.rs-tooltip {
   position: absolute;
   z-index: $zindexTooltip;
 
   @include animate-visibility;
 }
 
-.tooltip-inner {
+.rs-tooltip-inner {
   max-width: 440px;
   padding: 10px;
   background-color: #f5f5f5;

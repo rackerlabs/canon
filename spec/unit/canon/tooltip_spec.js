@@ -15,7 +15,7 @@ require(['canon/tooltip'], function (Tooltip) {
       tooltip = new Tooltip();
       tooltip.attach(element);
 
-      content = $('.tooltip').css({ position: 'absolute' });
+      content = $('.rs-tooltip').css({ position: 'absolute' });
     });
 
     afterEach(function () {
@@ -193,7 +193,7 @@ require(['canon/tooltip'], function (Tooltip) {
     describe('#dispose', function () {
       it('removes tooltip content from the body', function () {
         tooltip.dispose();
-        $('.tooltip').length.should.equal(0);
+        $('.rs-tooltip').length.should.equal(0);
       });
 
       it('discards tooltip content DOM reference', function () {

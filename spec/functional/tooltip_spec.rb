@@ -1,6 +1,6 @@
 feature 'Tooltip' do
   let(:browser) { page.driver.browser }
-  let(:tooltip) { find('.tooltip') }
+  let(:tooltip) { find('.rs-tooltip') }
 
   background do
     visit('/functional/tooltip.html')
@@ -41,7 +41,7 @@ feature 'Tooltip' do
   end
 
   def hover_over_tooltip
-    tooltip = browser.find_element(:css, '.tooltip')
+    tooltip = browser.find_element(:css, '.rs-tooltip')
     browser.action.move_to(tooltip).perform
 
     sleep 0.5
