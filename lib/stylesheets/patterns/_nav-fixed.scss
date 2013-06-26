@@ -1,47 +1,47 @@
-.fixed-top {
+.rs-fixed-top {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
 
-	&.rs-nav-utility + .l-body {
+	&.rs-nav-utility + .rs-body {
 		padding-top: $app-nav-utility-height;
 	}
 
 	&.rs-nav-utility + &.rs-nav-primary {
 		top: $app-nav-utility-height;
-		& + .l-body {
+		& + .rs-body {
 			padding-top: $app-header-height;
 		}
 	}
 
 	&.rs-nav-utility + &.rs-nav-secondary {
 		top: $app-nav-utility-height;
-		& + .l-body {
+		& + .rs-body {
 			padding-top: $app-nav-utility-height + $app-nav-secondary-height;
 		}
 	}
 
 	&.rs-nav-utility + &.rs-nav-primary + &.rs-nav-secondary {
 		top: $app-header-height;
-		& + .l-body {
+		& + .rs-body {
 			padding-top: $app-header-height + $app-nav-secondary-height;
 		}
 	}
 
-	&.rs-nav-primary + .l-body {
+	&.rs-nav-primary + .rs-body {
 		padding-top: $app-nav-primary-height;
 	}
 
 	&.rs-nav-primary + &.rs-nav-secondary {
 		top: $app-nav-primary-height;
-		& + .l-body {
+		& + .rs-body {
 			padding-top: $app-nav-primary-height + $app-nav-secondary-height;
 		}
 	}
 
-	&.rs-nav-secondary + .l-body {
+	&.rs-nav-secondary + .rs-body {
 		padding-top: $app-nav-secondary-height;
 	}
 
@@ -50,7 +50,7 @@
 	  &.rs-nav-primary, &.rs-nav-secondary, &.rs-nav-utility {
 	    position: static !important;
 	  }
-	  & ~ .l-body {
+	  & ~ .rs-body {
 	    padding-top: 0 !important;
 	  }
 	}
@@ -59,7 +59,7 @@
 	  &.rs-nav-primary, &.rs-nav-secondary, &.rs-nav-utility {
 	    position: static !important;
 	  }
-	  & ~ .l-body {
+	  & ~ .rs-body {
 	    padding-top: 0 !important;
 	  }
 	}

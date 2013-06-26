@@ -5,29 +5,30 @@ html, body {
 body {
   min-width: 1070px;
   @include noise;
-  &.responsive {
+
+  &.rs-responsive {
     min-width: auto;
   }
 }
 
-.l-wrapper {
+.rs-wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto (-$app-footer-height);
 }
 
-// .l-push must be the same height as .l-footer
-.l-push {
+// .rs-push must be the same height as .rs-footer
+.rs-push,
+.rs-footer {
   height: $app-footer-height;
 }
 
-.l-footer {
+.rs-footer {
   background: $grey-darker;
-  height: $app-footer-height;
 }
 
-.l-container {
+.rs-container {
   width: 1030px;
   margin: 0 auto;
   padding: 0 $medium-padding;

@@ -1,5 +1,5 @@
 // Main Content & Sidebar
-.main {
+.rs-main {
   margin: 30px 0;
   @include micro-clearfix;
 
@@ -9,16 +9,16 @@
     margin-top: 50px;
   }
 
-  .inner {
+  .rs-inner {
     padding: 30px;
   }
 }
 
-.sidebar {
+.rs-sidebar {
   width: 280px;
   float: left;
 
-  .inner {
+  .rs-inner {
     padding: 0 30px 0 0;
 
     .rs-panel & {
@@ -29,7 +29,7 @@
   &.rs-pull-right {
     float: right;
 
-    .inner {
+    .rs-inner {
       padding: 0 0 0 30px;
       .rs-panel & {
         padding: 30px 30px 0 30px;
@@ -38,10 +38,10 @@
   }
 }
 
-.content {
+.rs-content {
   overflow: auto;
 
-  .main & {
+  .rs-main & {
     min-height: 300px;
   }
 
@@ -49,11 +49,11 @@
     margin-top: -20px;
   }
 
-  .main .sidebar + & {
+  .rs-main .rs-sidebar + & {
     margin-left: 280px;
   }
 
-  .main .sidebar.rs-pull-right + & {
+  .rs-main .rs-sidebar.rs-pull-right + & {
     margin-right: 280px;
     margin-left: 0;
   }
