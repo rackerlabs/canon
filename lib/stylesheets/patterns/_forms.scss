@@ -122,8 +122,9 @@ textarea {
   margin-right: 10px;
 }
 
-/* Horizontal Forms */
-.rs-form-horizontal {
+/* Create/Horizontal Forms */
+.rs-form-horizontal,
+.rs-form-create {
   .rs-control-group {
     margin-bottom: 10px;
   }
@@ -143,6 +144,17 @@ textarea {
   select,
   textarea {
     margin-bottom: 0;
+  }
+}
+
+/* Create Forms */
+.rs-form-create {
+  .rs-control-group {
+    margin-bottom: 20px;
+  }
+
+  .rs-control-label {
+    text-align: right;
   }
 }
 
