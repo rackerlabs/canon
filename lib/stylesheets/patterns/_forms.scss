@@ -125,8 +125,13 @@ textarea {
 /* Create/Horizontal Forms */
 .rs-form-horizontal,
 .rs-form-create {
-  .rs-control-group {
+  .rs-control-group,
+  .rs-control-label {
     margin-bottom: 10px;
+  }
+
+  .rs-control-group {
+    clear: left;
   }
 
   .rs-control-label {
@@ -150,7 +155,8 @@ textarea {
 
 /* Create Forms */
 .rs-form-create {
-  .rs-control-group {
+  .rs-control-group,
+  .rs-control-label {
     margin-bottom: 20px;
   }
 
