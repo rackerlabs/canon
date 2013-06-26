@@ -1,3 +1,29 @@
+## v1.0.0-rc.1 (June 26, 2013)
+- Use normalize.css v2.1.2 instead of a reset stylesheet.
+- Prefix all class names for compatibility with other CSS frameworks.
+- Remove pre-release features including:
+  - Content Section
+  - List Table
+  - Popover
+  - Progress Bar
+  - Status Labels
+  - Tabs
+- Layout
+  - Replace Susy with custom grid.
+  - Tightened up navigation padding.
+  - Fixed the width of the sidebar in responsive layouts.
+- Forms
+  - Add styles for create page forms.
+  - Fix bug in form label alignment.
+  - Fix bug where long labels would wrap incorrectly.
+- Miscellaneous
+  - Add rs-page-title for red page headers.
+  - Update header styles to use correct font face and sizes.
+  - Removed bold weight from DT tag.
+  - Updated color of inline help text.
+  - Updated color of tooltip shadow and border.
+  - Updated color of text inputs.
+
 ## v0.5.0 (June 14, 2013)
 - Add cog button.
 - Add action button.
