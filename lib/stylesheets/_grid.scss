@@ -37,7 +37,7 @@ $fluidGridGutterWidth: percentage($gridGutterWidth/$gridRowWidth);
   float: right;
 }
 
-body.responsive {
+body.rs-responsive {
   @media (max-width: 767px) {
 
     // Fluid rows

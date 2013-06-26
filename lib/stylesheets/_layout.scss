@@ -5,7 +5,8 @@ html, body {
 body {
   min-width: 1070px;
   @include noise;
-  &.responsive {
+
+  &.rs-responsive {
     min-width: auto;
   }
 }
