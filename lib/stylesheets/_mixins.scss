@@ -14,7 +14,7 @@
 }
 
 @mixin responsive() {
-  body.responsive & {
+  body.rs-responsive & {
     @content;
   }
 }
