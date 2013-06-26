@@ -122,15 +122,22 @@ textarea {
   margin-right: 10px;
 }
 
-/* Horizontal Forms */
-.rs-form-horizontal {
-  .rs-control-group {
+/* Create/Horizontal Forms */
+.rs-form-horizontal,
+.rs-form-create {
+  .rs-control-group,
+  .rs-control-label {
     margin-bottom: 10px;
+  }
+
+  .rs-control-group {
+    clear: left;
   }
 
   .rs-control-label {
     float: left;
     width: 160px;
+    margin-top: 2px;
   }
 
   .rs-controls {
@@ -143,6 +150,18 @@ textarea {
   select,
   textarea {
     margin-bottom: 0;
+  }
+}
+
+/* Create Forms */
+.rs-form-create {
+  .rs-control-group,
+  .rs-control-label {
+    margin-bottom: 20px;
+  }
+
+  .rs-control-label {
+    text-align: right;
   }
 }
 
