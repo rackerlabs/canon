@@ -1,5 +1,4 @@
 require 'compass'
-require 'susy'
 require 'rack'
 require 'rack/contrib/not_found'
 require 'rack/contrib/try_static'

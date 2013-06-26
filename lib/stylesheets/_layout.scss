@@ -3,7 +3,11 @@ html, body {
 }
 
 body {
+  min-width: 1070px;
   @include noise;
+  &.responsive {
+    min-width: auto;
+  }
 }
 
 .l-wrapper {
@@ -25,26 +29,31 @@ body {
 
 .l-container {
   width: 1030px;
+  margin: 0 auto;
+  padding: 0 $medium-padding;
   @include micro-clearfix;
-  @include container;
-
-  .sidebar-inner {
-    padding-left: 30px;
-
-    .rs-panel & {
-      padding: 0 30px;
-    }
-  }
 
   @include responsive(){
     width: auto;
-    @include at-breakpoint($xlarge){
+    @include max-screen($xlarge){
       & {
         padding: 0 $xlarge-padding;
       }
     }
 
-    @include at-breakpoint($small){
+    @include max-screen($large){
+      & {
+        padding: 0 $large-padding;
+      }
+    }
+
+    @include max-screen($medium){
+      & {
+        padding: 0 $medium-padding;
+      }
+    }
+
+    @include max-screen($small){
       & {
         padding: 0 $small-padding;
       }
