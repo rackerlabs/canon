@@ -7,7 +7,7 @@ require(['canon/tooltip'], function (Tooltip) {
       fixture.innerHTML = '<div class="tooltip-toggle"></div>';
 
       element = $('.tooltip-toggle');
-      element.attr('title', 'foo');
+      element.attr('title', '<h3>foo</h3>');
       element.css({ position: 'absolute', top: 0, left: 0, width: 10, height: 10 });
 
       clock = sinon.useFakeTimers();
@@ -25,7 +25,7 @@ require(['canon/tooltip'], function (Tooltip) {
 
     describe('#attach', function () {
       it('adds tooltip content with element title', function () {
-        content.text().should.equal('foo');
+        content.html().should.equal('<div class="rs-tooltip-inner"><h3>foo</h3></div>');
       });
 
       it('adds hidden class to tooltip content', function () {
@@ -203,7 +203,7 @@ require(['canon/tooltip'], function (Tooltip) {
 
       it('restores title attribute', function () {
         tooltip.dispose();
-        element.attr('title').should.equal('foo');
+        element.attr('title').should.equal('<h3>foo</h3>');
       });
 
       it('removes event listeners from toggle', function () {
