@@ -19,8 +19,11 @@
     list-style: none;
 
     & > li {
-      padding: 0 0 0 10px;
       float: left;
+    }
+
+    & > li + li {
+      padding: 0 0 0 10px;
     }
 
     & > li + li:before {
