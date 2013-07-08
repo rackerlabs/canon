@@ -33,8 +33,7 @@ select {
 
 input[type="checkbox"],
 input[type="radio"] {
-  position: relative;
-  top: 3px;
+  margin: 0;
 }
 
 label {
@@ -113,6 +112,8 @@ textarea {
   & > input[type="radio"] {
     float: left;
     margin-left: -20px;
+    position: relative;
+    top: 3px;
   }
 }
 
