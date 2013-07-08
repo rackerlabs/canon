@@ -1,4 +1,4 @@
-require(['canon/tooltip'], function (Tooltip) {
+require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tooltip) {
   describe('Tooltip', function () {
 
     var element, clock, tooltip, content;
@@ -39,6 +39,8 @@ require(['canon/tooltip'], function (Tooltip) {
 
     describe('#show', function () {
       beforeEach(function () {
+        positioning.offset = sinon.spy();
+
         tooltip.hide();
         tooltip.show();
       });
@@ -58,8 +60,10 @@ require(['canon/tooltip'], function (Tooltip) {
         toggleOffset = element.offset();
         contentOffset = content.offset();
 
-        contentOffset.top.should.equal(toggleOffset.top + element.height());
-        contentOffset.left.should.equal(toggleOffset.left + element.width());
+        positioning.offset.should.have.been.calledWith(tooltip.getContent(), tooltip.getElement(), {
+          top: 0,
+          left: 0
+        });
       });
 
       it('is called when mouse hovers over toggle for threshold', function () {
