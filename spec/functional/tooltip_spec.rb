@@ -34,7 +34,7 @@ feature 'Tooltip' do
   private
 
   def hover_over_toggle
-    toggle = browser.find_element(:css, '.icon-help')
+    toggle = browser.find_element(:css, '.rs-icon-help')
     browser.action.move_to(toggle).perform
 
     sleep 0.5
