@@ -191,11 +191,21 @@ textarea {
   position: relative;
   padding-left: 20px;
 
-  & > .icon-ok-circle,
-  & > .icon-exclamation-sign {
+  & > .rs-icon-validation-success,
+  & > .rs-icon-validation-error {
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 0;
+  }
+
+  & > .rs-icon-validation-success {
+    @include icon;
+    @include icon-sprite(ok-circle);
+  }
+
+  & > .rs-icon-validation-error {
+    @include icon(13px, 12px);
+    @include icon-sprite(exclamation-sign);
   }
 }
 
