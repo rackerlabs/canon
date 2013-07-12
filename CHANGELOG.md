@@ -1,3 +1,14 @@
+## v1.0.0-rc.2 (July 12, 2013)
+- Miscellaneous
+  - Replace normalize-css with normalize-scss
+  - Add support for HTML in tooltips
+  - Fix left-alignment on first footer link
+  - Fix issue with tooltips drawn outside of the screen
+  - Fix media query issue for rs-container and update padding
+- Avoid Bootstrap Collisions
+  - Fix hover styles on links and buttons
+  - Fix label, radio and checkbox positioning
+
 ## v1.0.0-rc.1 (June 26, 2013)
 - Use normalize.css v2.1.2 instead of a reset stylesheet.
 - Prefix all class names for compatibility with other CSS frameworks.
