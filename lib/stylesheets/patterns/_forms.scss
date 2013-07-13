@@ -191,21 +191,10 @@ textarea {
   position: relative;
   padding-left: 20px;
 
-  & > .rs-icon-validation-success,
-  & > .rs-icon-validation-error {
+  & > .rs-validation-indicator {
     position: absolute;
     top: 3px;
     left: 0;
-  }
-
-  & > .rs-icon-validation-success {
-    @include icon;
-    @include icon-sprite(ok-circle);
-  }
-
-  & > .rs-icon-validation-error {
-    @include icon(13px, 12px);
-    @include icon-sprite(exclamation-sign);
   }
 }
 
@@ -213,6 +202,11 @@ textarea {
   .rs-validation-inline,
   .rs-validation-block {
     color: $green;
+  }
+
+  .rs-validation-indicator {
+    @include icon;
+    @include icon-sprite(ok-circle);
   }
 }
 
@@ -230,5 +224,10 @@ textarea {
   .rs-validation-inline,
   .rs-validation-block {
     color: $red;
+  }
+
+  .rs-validation-indicator {
+    @include icon(13px, 12px);
+    @include icon-sprite(exclamation-sign);
   }
 }
