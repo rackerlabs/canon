@@ -1,3 +1,11 @@
+## v1.0.0-rc.3 (July 15, 2013)
+- Updated default external link icon.
+- Add .btn-group for horizontal groups of buttons.
+- Remove extra padding from link buttons.
+- Remove globally available icon classes.
+- Remove colons from labels on create forms.
+- Fall back to Helvetica when web fonts are not supported.
+
 ## v1.0.0-rc.2 (July 12, 2013)
 - Miscellaneous
   - Replace normalize-css with normalize-scss
