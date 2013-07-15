@@ -191,10 +191,9 @@ textarea {
   position: relative;
   padding-left: 20px;
 
-  & > .icon-ok-circle,
-  & > .icon-exclamation-sign {
+  & > .rs-validation-indicator {
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 0;
   }
 }
@@ -203,6 +202,11 @@ textarea {
   .rs-validation-inline,
   .rs-validation-block {
     color: $green;
+  }
+
+  .rs-validation-indicator {
+    @include icon;
+    @include icon-sprite(ok-circle);
   }
 }
 
@@ -220,5 +224,10 @@ textarea {
   .rs-validation-inline,
   .rs-validation-block {
     color: $red;
+  }
+
+  .rs-validation-indicator {
+    @include icon(13px, 12px);
+    @include icon-sprite(exclamation-sign);
   }
 }

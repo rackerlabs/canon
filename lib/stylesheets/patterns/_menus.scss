@@ -32,6 +32,11 @@
   text-transform: uppercase;
 }
 
+.rs-primary-dropdown .rs-icon-external,
+.rs-utility-dropdown .rs-icon-external-dark {
+  margin-top: 1px;
+}
+
 /** Primary Menu **/
 .rs-primary-dropdown {
   .rs-dropdown-menu {
@@ -57,10 +62,6 @@
         background-color: #f5f5f5;
       }
     }
-
-    .icon-external {
-      margin-left: 5px;
-    }
   }
 
   .rs-dropdown-category {
@@ -77,6 +78,10 @@
     font-family: $alt-font-family;
     font-size: 12px;
     font-weight: 200;
+  }
+
+  .rs-icon-external {
+    @include icon-sprite(external);
   }
 }
 
@@ -107,7 +112,8 @@
       &.hover {
         color: #fff;
         background-color: #444;
-        .icon-external {
+
+        .rs-icon-external-dark {
           @include icon-sprite(external-dark-hover);
         }
       }
@@ -120,11 +126,6 @@
       font-size: 12px;
       padding: 0;
     }
-  }
-
-  .icon-external {
-    @include icon-sprite(external-dark);
-    margin-left: 5px;
   }
 
   .rs-divider {

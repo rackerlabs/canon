@@ -32,7 +32,7 @@
       <button class="rs-btn" onclick="javascript: show();">Show</button>
       <button class="rs-btn" onclick="javascript: hide();">Hide</button>
     </div>
-    <i class="icon-help" title="<i>I'm a tooltip.</i>"></i>
+    I'm something complicated. <i class="rs-icon-help" title="<i>I'm a tooltip.</i>"></i>
   </div>
 
   <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -49,7 +49,7 @@
     });
 
     require(['canon'], function (canon) {
-      element = $('.icon-help');
+      element = $('.rs-icon-help');
       tooltip = new canon.Tooltip();
     });
 

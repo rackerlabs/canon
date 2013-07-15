@@ -1,13 +1,30 @@
 $icon-spacing: 10px;
 
 @import "icon/*.png";
-@include all-icon-sprites;
 
-[class^="icon-"],
-[class*=" icon-"] {
+@mixin icon($width: 13px, $height: 13px) {
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin: 1px 5px 0 0;
+  width: $width;
+  height: $height;
   vertical-align: text-top;
+}
+
+.rs-icon-external,
+.rs-icon-external-dark {
+  @include icon;
+  margin-left: 5px;
+}
+
+.rs-icon-external {
+  @include icon-sprite(external-blue);
+}
+
+.rs-icon-external-dark {
+  @include icon-sprite(external-dark);
+}
+
+.rs-icon-help {
+  @include icon;
+  @include icon-sprite(help);
+  margin-left: 5px;
 }
