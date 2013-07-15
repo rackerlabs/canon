@@ -156,6 +156,10 @@ textarea {
 
 /* Create Forms */
 .rs-form-create {
+  label:after {
+    content: none;
+  }
+
   .rs-control-group,
   .rs-control-label {
     margin-bottom: 20px;
