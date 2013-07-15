@@ -115,9 +115,11 @@ input::-moz-focus-inner {
 }
 
 .rs-btn-link {
+  padding-left: 0;
+  padding-right: 0;
   color: $blue;
   background: transparent;
-  border: 0;
+  border-color: transparent;
 
   &:hover,
   &.hover {
@@ -205,5 +207,16 @@ input::-moz-focus-inner {
       cursor: default;
       @include icon-sprite(caret-disabled);
     }
+  }
+}
+
+.rs-btn-group {
+  margin: 0 0 10px;
+  @include micro-clearfix;
+
+  > .rs-btn {
+    display: block;
+    float: left;
+    margin-right: 10px;
   }
 }
