@@ -209,3 +209,14 @@ input::-moz-focus-inner {
     }
   }
 }
+
+.rs-btn-group {
+  margin: 0 0 10px;
+  @include micro-clearfix;
+
+  > .rs-btn {
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+}
