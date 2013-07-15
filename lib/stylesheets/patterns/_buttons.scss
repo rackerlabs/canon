@@ -115,6 +115,8 @@ input::-moz-focus-inner {
 }
 
 .rs-btn-link {
+  padding-left: 0;
+  padding-right: 0;
   color: $blue;
   background: transparent;
   border-color: transparent;
