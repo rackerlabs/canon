@@ -117,7 +117,7 @@ input::-moz-focus-inner {
 .rs-btn-link {
   color: $blue;
   background: transparent;
-  border: 0;
+  border-color: transparent;
 
   &:hover,
   &.hover {
