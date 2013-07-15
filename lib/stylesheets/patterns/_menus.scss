@@ -79,6 +79,10 @@
     font-size: 12px;
     font-weight: 200;
   }
+
+  .rs-icon-external {
+    @include icon-sprite(external);
+  }
 }
 
 
