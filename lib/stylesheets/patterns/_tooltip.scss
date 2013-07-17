@@ -1,5 +1,7 @@
 .rs-tooltip {
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: $zindexTooltip;
 
   @include animate-visibility;
