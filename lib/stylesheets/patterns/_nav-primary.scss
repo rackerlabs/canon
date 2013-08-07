@@ -52,7 +52,7 @@
 				}
 	  	}
 
-	  	.rs-dropdown-toggle {
+	  	.rs-caret {
 	  		display: inline-block;
 	  		width: 13px;
 			  height: 13px;
@@ -61,7 +61,7 @@
 	  	}
 
 	  	&.rs-dropdown {
-	  		.rs-dropdown-toggle {
+	  		.rs-caret {
 	  			@include icon-sprite(caret-primary);
 	  		}
 
@@ -71,7 +71,7 @@
 	  	}
 
 	  	&.rs-dropdown.active {
-	  		.rs-dropdown-toggle {
+	  		.rs-caret {
 	  			@include icon-sprite(caret-primary-active);
 	  		}
 	  	}
