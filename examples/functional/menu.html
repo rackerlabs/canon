@@ -32,7 +32,14 @@
     </div>
     <hr>
     <div class="rs-dropdown">
-      <a class="rs-btn rs-dropdown-toggle">I'm the toggle.</a>
+      <a class="rs-btn rs-dropdown-toggle" href="#">I'm the toggle.</a>
+      <ul class="rs-dropdown-menu">
+        <li><span class="rs-dropdown-category">Category</span></li>
+        <li><a href="#">Menu Item</a></li>
+      </ul>
+    </div>
+    <div class="rs-dropdown">
+      <a class="rs-btn rs-dropdown-toggle" href="#">I'm another toggle.</a>
       <ul class="rs-dropdown-menu">
         <li><span class="rs-dropdown-category">Category</span></li>
         <li><a href="#">Menu Item</a></li>
@@ -44,8 +51,6 @@
   <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
   <script type="text/javascript">
 
-    var element, menu;
-
     requirejs.config({
       paths: {
         'canon': '../assets/canon',
@@ -53,13 +58,13 @@
       }
     });
 
-    require(['canon'], function (canon) {
-      element = $('.rs-dropdown');
-      menu = new canon.Menu();
-    });
-
     function attach() {
-      menu.attach(element);
+      require(['canon'], function (canon) {
+        $('.rs-dropdown').each(function (i, element) {
+          var menu = new canon.Menu();
+          menu.attach(element);
+        });
+      });
     }
 
   </script>
