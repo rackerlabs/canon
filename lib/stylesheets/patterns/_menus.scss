@@ -45,7 +45,7 @@
 /** Primary Menu **/
 .rs-primary-dropdown {
   .rs-dropdown-menu {
-    padding: 0 0 15px;
+    padding: 0 0 10px;
     border: 0;
     border-top: 2px solid $red;
 
@@ -69,7 +69,7 @@
     }
 
     > li:first-child {
-      margin-top: 15px;
+      margin-top: 12px;
     }
   }
 
@@ -82,7 +82,7 @@
 
   .rs-dropdown-category,
   .rs-dropdown-menu > li:first-child > .rs-dropdown-category {
-    margin: 15px 0 0;
+    margin: 12px 0 0;
   }
 
   .rs-dropdown-caption {
