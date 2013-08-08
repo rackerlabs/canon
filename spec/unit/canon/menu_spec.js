@@ -80,15 +80,6 @@ require(['canon/menu'], function (Menu) {
         menu.hide.should.have.been.called;
       });
 
-      it('is not called when click occurs outside of dropdown and menu is hidden', function () {
-        menu.hide();
-        menu.hide = sinon.spy();
-
-        $(document).click();
-
-        menu.hide.should.not.have.been.called;
-      });
-
       it('is called when menu item is clicked', function () {
         menu.hide = sinon.spy();
 
