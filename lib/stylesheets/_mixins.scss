@@ -53,8 +53,8 @@
   visibility: hidden;
   opacity: 0;
 
-  @include transition-property(visibility, opacity);
-  @include transition-duration($duration, $duration);
+  // @include transition-property(visibility, opacity);
+  // @include transition-duration($duration, $duration);
 
   &.hidden {
     display: block;
