@@ -1,13 +1,18 @@
 /** Action Menu **/
 .rs-dropdown {
+  position: relative;
   display: inline-block;
+
+  a {
+    white-space: nowrap;
+  }
 }
 
 .rs-dropdown-menu {
   position: absolute;
   margin: 0;
   padding: 3px 0;
-  min-width: 120px;
+  min-width: 100%;
   background-color: #fff;
   border: 1px solid $grey;
   list-style: none;
@@ -20,6 +25,10 @@
   a {
     display: block;
     padding: 0 7px;
+  }
+
+  &.rs-pull-right {
+    right: 0;
   }
 }
 
@@ -35,6 +44,10 @@
 
 .rs-dropdown-menu > li:first-child > .rs-dropdown-category {
   margin-top: 0;
+}
+
+.rs-dropdown-caption {
+  white-space: normal;
 }
 
 .rs-primary-dropdown .rs-icon-external,
