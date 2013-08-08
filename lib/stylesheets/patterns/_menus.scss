@@ -67,6 +67,10 @@
         background-color: #f5f5f5;
       }
     }
+
+    > li:first-child {
+      margin-top: 15px;
+    }
   }
 
   .rs-dropdown-category {
