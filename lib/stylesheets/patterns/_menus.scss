@@ -26,6 +26,10 @@
     display: block;
     padding: 0 7px;
   }
+
+  &.pull-right {
+    right: 0;
+  }
 }
 
 .rs-dropdown-category {
