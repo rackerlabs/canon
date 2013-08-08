@@ -32,8 +32,8 @@ $fluidGridGutterWidth: percentage($gridGutterWidth/$gridRowWidth);
   display: none;
 }
 
-[class*="span-"].pull-right,
-.rs-row [class*="span-"].pull-right {
+[class*="span-"].rs-pull-right,
+.rs-row [class*="span-"].rs-pull-right {
   float: right;
 }
 
