@@ -1,6 +1,10 @@
 /** Action Menu **/
 .rs-dropdown {
   display: inline-block;
+
+  a {
+    white-space: nowrap;
+  }
 }
 
 .rs-dropdown-menu {
@@ -35,6 +39,10 @@
 
 .rs-dropdown-menu > li:first-child > .rs-dropdown-category {
   margin-top: 0;
+}
+
+.rs-dropdown-caption {
+  white-space: normal;
 }
 
 .rs-primary-dropdown .rs-icon-external,
