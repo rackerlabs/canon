@@ -1,3 +1,11 @@
+## v1.0.0 (August 13, 2013)
+- Minor build system updates.
+- Minor spacing adjustments for menus.
+- Remove tooltip and menu animations.
+- Rename rs-dropdown-toggle to rs-caret.
+- Added active state to the utility navigation.
+- Take advantage of margin collapsing in some layout classes.
+
 ## v1.0.0-rc.3 (July 17, 2013)
 - Updated default external link icon.
 - Add .btn-group for horizontal groups of buttons.
