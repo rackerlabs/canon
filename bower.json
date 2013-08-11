@@ -3,10 +3,11 @@
   "version": "0.5.0",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "components"
+    "components",
+    "node_modules"
   ],
   "dependencies": {
-    "normalize-scss": "~2.1.2"
+    "jquery": "~1.10.2",
+    "normalize-scss": "~2.1.2",
   }
 }
