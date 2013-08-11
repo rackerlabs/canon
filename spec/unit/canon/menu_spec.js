@@ -4,13 +4,13 @@ require(['canon/menu'], function (Menu) {
     var element, menu;
 
     beforeEach(function () {
-      fixture.innerHTML = '<div class="rs-dropdown">' +
+      jasmine.getFixtures().set('<div class="rs-dropdown">' +
         '<div class="rs-dropdown-toggle">Toggle</div>' +
         '<div class="rs-dropdown-menu">' +
         '<span class="rs-dropdown-category">Category</span>' +
         '<a href="#">Link</a>' +
         '</div>' +
-        '</div>';
+        '</div>');
 
       element = $('.rs-dropdown');
 
@@ -23,20 +23,20 @@ require(['canon/menu'], function (Menu) {
 
     describe('#attach', function () {
       it('succeeds when element has rs-dropdown', function () {
-        (function () { menu.attach(element); }).should.not.throws();
+        expect(function () { menu.attach(element); }).not.toThrow();
       });
 
       it('fails when element has other class', function () {
         element.removeClass('rs-dropdown');
         element.addClass('other-element');
 
-        (function () { menu.attach(element); }).should.throws('Component must be attached to element with "rs-dropdown".');
+        expect(function () { menu.attach(element); }).toThrow('Component must be attached to element with "rs-dropdown".');
       });
 
       it('adds hidden class to dropdown menu', function () {
         menu.attach(element);
 
-        $('.rs-dropdown-menu').hasClass('hidden').should.equal(true);
+        expect($('.rs-dropdown-menu')).toHaveClass('hidden');
       });
     });
 
@@ -48,11 +48,11 @@ require(['canon/menu'], function (Menu) {
       });
 
       it('removes hidden class from dropdown menu', function () {
-        $('.rs-dropdown-menu').hasClass('hidden').should.equal(false);
+        expect($('.rs-dropdown-menu')).not.toHaveClass('hidden');
       });
 
       it('adds visible class to dropdown menu', function () {
-        $('.rs-dropdown-menu').hasClass('visible').should.equal(true);
+        expect($('.rs-dropdown-menu')).toHaveClass('visible');
       });
     });
 
@@ -64,36 +64,36 @@ require(['canon/menu'], function (Menu) {
       });
 
       it('adds hidden class to dropdown menu', function () {
-        $('.rs-dropdown-menu').hasClass('hidden').should.equal(true);
+        expect($('.rs-dropdown-menu')).toHaveClass('hidden');
       });
 
       it('removes visible class from dropdown menu', function () {
-        $('.rs-dropdown-menu').hasClass('visible').should.equal(false);
+        expect($('.rs-dropdown-menu')).not.toHaveClass('visible');
       });
 
       it('is called when click occurs outside of dropdown and menu is visible', function () {
         menu.show();
-        menu.hide = sinon.spy();
+        menu.hide = jasmine.createSpy('hide');
 
         $(document).click();
 
-        menu.hide.should.have.been.called;
+        expect(menu.hide).toHaveBeenCalled();
       });
 
       it('is called when menu item is clicked', function () {
-        menu.hide = sinon.spy();
+        menu.hide = jasmine.createSpy('hide');
 
         $('a', element).click();
 
-        menu.hide.should.have.been.called;
+        expect(menu.hide).toHaveBeenCalled();
       });
 
       it('is not called when category is clicked', function () {
-        menu.hide = sinon.spy();
+        menu.hide = jasmine.createSpy('hide');
 
         $('.rs-dropdown-category', element).click();
 
-        menu.hide.should.not.have.been.called;
+        expect(menu.hide).not.toHaveBeenCalled();
       });
     });
 
@@ -103,29 +103,29 @@ require(['canon/menu'], function (Menu) {
       });
 
       it('calls show when menu is hidden', function () {
-        menu.show = sinon.spy();
+        menu.show = jasmine.createSpy('show');
 
         menu.hide();
         menu.toggle();
 
-        menu.show.should.have.been.called;
+        expect(menu.show).toHaveBeenCalled();
       });
 
       it('calls hide when menu is visible', function () {
-        menu.hide = sinon.spy();
+        menu.hide = jasmine.createSpy('hide');
 
         menu.show();
         menu.toggle();
 
-        menu.hide.should.have.been.called;
+        expect(menu.hide).toHaveBeenCalled();
       });
 
       it('is called when dropdown toggle is clicked', function () {
-        menu.toggle = sinon.spy();
+        menu.toggle = jasmine.createSpy('toggle');
 
         $('.rs-dropdown-toggle').click();
 
-        menu.toggle.should.have.been.called;
+        expect(menu.toggle).toHaveBeenCalled();
       });
     });
 
@@ -139,20 +139,19 @@ require(['canon/menu'], function (Menu) {
         var element;
 
         element = menu.getElement();
-        element.off = sinon.spy();
 
         menu.dispose();
 
-        element.off.should.have.been.calledWith('click.menu');
+        expect(element).not.toHandle('click.menu');
       });
 
       it('removes event listeners from document', function () {
-        menu.hide = sinon.spy();
+        menu.hide = jasmine.createSpy('hide');
 
         menu.dispose();
         $(document).click();
 
-        menu.hide.should.not.have.been.called;
+        expect(menu.hide).not.toHaveBeenCalled();
       });
     });
   });

@@ -5,28 +5,12 @@
 
   <title>Canon | Unit Tests</title>
 
-  <link rel="stylesheet" type="text/css" href="/vendor/mocha/mocha.css">
+  <link rel="stylesheet" type="text/css" href="/components/jasmine/lib/jasmine-core/jasmine.css">
 
   <script type="text/javascript" src="/components/jquery/jquery.js"></script>
-  <script type="text/javascript" src="/vendor/chai/chai.js"></script>
-  <script type="text/javascript" src="/vendor/mocha/mocha.js"></script>
-  <script type="text/javascript" src="/vendor/mocha-sinon/sinon-1.6.0.js"></script>
-
-  <script type="text/javascript">
-
-    var expect, should;
-
-    mocha.reporter('html');
-    mocha.setup('bdd');
-    chai.Assertion.includeStack = true;
-
-    expect = chai.expect;
-    should = chai.should();
-
-  </script>
-
-  <script type="text/javascript" src="/vendor/mocha-sinon/mocha-sinon.js"></script>
-  <script type="text/javascript" src="/vendor/sinon-chai/lib/sinon-chai.js"></script>
+  <script type="text/javascript" src="/components/jasmine/lib/jasmine-core/jasmine.js"></script>
+  <script type="text/javascript" src="/components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+  <script type="text/javascript" src="/components/jasmine-jquery/lib/jasmine-jquery.js"></script>
   <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
 </head>
 <body>
@@ -35,10 +19,9 @@
 
   <script type="text/javascript">
 
-    var fixture, specs = [];
+    var specs;
 
-    fixture = document.getElementById('fixture');
-
+    specs = [];
     specs.push('unit/canon_spec');
     specs.push('unit/canon/core/component_spec');
     specs.push('unit/canon/core/positioning_spec');
@@ -53,17 +36,17 @@
     });
 
     require(specs, function () {
-      if (window.mochaPhantomJS) {
-        mochaPhantomJS.run();
-      } else {
-        mocha.run();
-      }
-    });
 
-    afterEach(function () {
-      while (fixture.hasChildNodes()) {
-        fixture.removeChild(fixture.lastChild);
-      }
+      var htmlReporter, jasmineEnvironment;
+
+      htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnvironment = jasmine.getEnv();
+      jasmineEnvironment.addReporter(htmlReporter);
+      jasmineEnvironment.specFilter = function (spec) {
+        return htmlReporter.specFilter(spec);
+      };
+      jasmineEnvironment.execute();
     });
 
   </script>
