@@ -51,11 +51,10 @@ module Canon
           run Canon.assets
         end
 
-        map '/spec' do
+        map '/components' do
           run Rack::TryStatic.new(not_found, {
             urls: [''],
-            root: File.join(Canon.root_path, 'spec'),
-            index: 'runner.html'
+            root: File.join(Canon.root_path, 'components')
           })
         end
 

@@ -4,13 +4,13 @@ require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tool
     var element, clock, tooltip, content;
 
     beforeEach(function () {
-      fixture.innerHTML = '<div class="tooltip-toggle"></div>';
+      jasmine.getFixtures().set('<div class="tooltip-toggle"></div>');
 
       element = $('.tooltip-toggle');
       element.attr('title', '<h3>foo</h3>');
       element.css({ position: 'absolute', top: 0, left: 0, width: 10, height: 10 });
 
-      clock = sinon.useFakeTimers();
+      jasmine.Clock.useMock();
 
       tooltip = new Tooltip();
       tooltip.attach(element);
@@ -19,38 +19,37 @@ require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tool
     });
 
     afterEach(function () {
-      clock.restore();
       tooltip.dispose();
     });
 
     describe('#attach', function () {
       it('adds tooltip content with element title', function () {
-        content.html().should.equal('<div class="rs-tooltip-inner"><h3>foo</h3></div>');
+        expect(content.html()).toEqual('<div class="rs-tooltip-inner"><h3>foo</h3></div>');
       });
 
       it('adds hidden class to tooltip content', function () {
-        content.hasClass('hidden').should.equal(true);
+        expect(content).toHaveClass('hidden');
       });
 
       it('removes title attribute from element', function () {
-        expect(element.attr('title')).to.equal(undefined);
+        expect(element.attr('title')).toBeUndefined();
       });
     });
 
     describe('#show', function () {
       beforeEach(function () {
-        positioning.offset = sinon.spy();
+        positioning.offset = jasmine.createSpy('offset');
 
         tooltip.hide();
         tooltip.show();
       });
 
       it('removes hidden class from tooltip content', function () {
-        content.hasClass('hidden').should.equal(false);
+        expect(content).not.toHaveClass('hidden');
       });
 
       it('adds visible class to tooltip content', function () {
-        content.hasClass('visible').should.equal(true);
+        expect(content).toHaveClass('visible');
       });
 
       it('sets position of tooltip content', function () {
@@ -60,38 +59,39 @@ require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tool
         toggleOffset = element.offset();
         contentOffset = content.offset();
 
-        positioning.offset.should.have.been.calledWith(tooltip.getContent(), tooltip.getElement(), {
-          top: 0,
-          left: 0
-        });
+        expect(positioning.offset).toHaveBeenCalledWith(
+          tooltip.getContent(),
+          tooltip.getElement(),
+          { top: 0, left: 0 }
+        );
       });
 
       it('is called when mouse hovers over toggle for threshold', function () {
-        tooltip.show = sinon.spy();
+        tooltip.show = jasmine.createSpy('show');
 
         element.mouseover();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.show.should.have.been.called;
+        expect(tooltip.show).toHaveBeenCalled();
       });
 
       it('is not called when mouse hover over toggle for less than threshold', function () {
-        tooltip.show = sinon.spy();
+        tooltip.show = jasmine.createSpy('show');
 
         element.mouseover();
-        clock.tick(400);
+        jasmine.Clock.tick(400);
 
-        tooltip.show.should.not.have.been.called;
+        expect(tooltip.show).not.toHaveBeenCalled();
       });
 
       it('is not called when mouse is no longer over toggle after threshold', function () {
-        tooltip.show = sinon.spy();
+        tooltip.show = jasmine.createSpy('show');
 
         element.mouseover();
         element.mouseout();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.show.should.not.have.been.called;
+        expect(tooltip.show).not.toHaveBeenCalled();
       });
     });
 
@@ -102,112 +102,115 @@ require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tool
       });
 
       it('adds hidden class to tooltip content', function () {
-        content.hasClass('hidden').should.equal(true);
+        expect(content).toHaveClass('hidden');
       });
 
       it('removes visible class from tooltip content', function () {
-        content.hasClass('visible').should.equal(false);
+        expect(content).not.toHaveClass('visible');
       });
 
       it('is called when mouse leaves toggle after threshold', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         element.mouseover();
         element.mouseout();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.hide.should.have.been.called;
+        expect(tooltip.hide).toHaveBeenCalled();
       });
 
       it('is not called when mouse leaves toggle for less than threshold', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         element.mouseover();
         element.mouseout();
-        clock.tick(400);
+        jasmine.Clock.tick(400);
 
-        tooltip.hide.should.not.have.been.called;
+        expect(tooltip.hide).not.toHaveBeenCalled();
       });
 
       it('is not called when mouse returns to toggle within threshold', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         element.mouseover();
         element.mouseout();
         element.mouseover();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.hide.should.not.have.been.called;
+        expect(tooltip.hide).not.toHaveBeenCalled();
       });
 
       it('is not called when mouse moves to tooltip', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         element.mouseover();
         element.mouseout();
         content.mouseover();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.hide.should.not.have.been.called;
+        expect(tooltip.hide).not.toHaveBeenCalled();
       });
 
       it('is called when mouse leaves tooltip', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         content.mouseover();
         content.mouseout();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.hide.should.have.been.called;
+        expect(tooltip.hide).toHaveBeenCalled();
       });
 
       it('is not called when mouse leaves for less than threshold', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         content.mouseover();
         content.mouseout();
-        clock.tick(400);
+        jasmine.Clock.tick(400);
 
-        tooltip.hide.should.not.have.been.called;
+        expect(tooltip.hide).not.toHaveBeenCalled();
       });
 
       it('is not called when mouse returns to toggle within threshold', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         content.mouseover();
         content.mouseout();
         content.mouseover();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.hide.should.not.have.been.called;
+        expect(tooltip.hide).not.toHaveBeenCalled();
       });
 
       it('is not called when mouse moves to tooltip', function () {
-        tooltip.hide = sinon.spy();
+        tooltip.hide = jasmine.createSpy('hide');
 
         content.mouseover();
         content.mouseout();
         element.mouseover();
-        clock.tick(600);
+        jasmine.Clock.tick(600);
 
-        tooltip.hide.should.not.have.been.called;
+        expect(tooltip.hide).not.toHaveBeenCalled();
       });
     });
 
     describe('#dispose', function () {
       it('removes tooltip content from the body', function () {
         tooltip.dispose();
-        $('.rs-tooltip').length.should.equal(0);
+
+        expect($('.rs-tooltip').length).toBe(0);
       });
 
       it('discards tooltip content DOM reference', function () {
         tooltip.dispose();
-        expect(tooltip.getContent()).to.equal(null);
+
+        expect(tooltip.getContent()).toBeNull(null);
       });
 
       it('restores title attribute', function () {
         tooltip.dispose();
-        element.attr('title').should.equal('<h3>foo</h3>');
+
+        expect(element.attr('title')).toEqual('<h3>foo</h3>');
       });
 
       it('removes event listeners from toggle', function () {
@@ -215,12 +218,11 @@ require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tool
         var element;
 
         element = tooltip.getElement();
-        element.off = sinon.spy();
 
         tooltip.dispose();
 
-        element.off.should.have.been.calledWith('mouseover.tooltip');
-        element.off.should.have.been.calledWith('mouseout.tooltip');
+        expect(element).not.toHandle('mouseover.tooltip');
+        expect(element).not.toHandle('mouseout.tooltip');
       });
 
       it('removes event listeners from content', function () {
@@ -228,12 +230,11 @@ require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tool
         var content;
 
         content = tooltip.getContent();
-        content.off = sinon.spy();
 
         tooltip.dispose();
 
-        content.off.should.have.been.calledWith('mouseover.tooltip');
-        content.off.should.have.been.calledWith('mouseout.tooltip');
+        expect(content).not.toHandle('mouseover.tooltip');
+        expect(content).not.toHandle('mouseout.tooltip');
       });
     });
   });

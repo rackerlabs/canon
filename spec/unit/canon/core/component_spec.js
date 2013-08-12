@@ -4,7 +4,7 @@ define(['canon/core/component'], function (Component) {
     var element, component;
 
     beforeEach(function () {
-      fixture.innerHTML = '<div class="component"></div>';
+      jasmine.getFixtures().set('<div class="component"></div>');
 
       element = $('.component');
       component = new Component();
@@ -17,7 +17,7 @@ define(['canon/core/component'], function (Component) {
 
     describe('#attach', function () {
       it('fails when already attached', function () {
-        (function () { component.attach(element); }).should.throws('Component is already attached.');
+        expect(function () { component.attach(element); }).toThrow('Component is already attached.');
       });
     });
 
@@ -25,7 +25,7 @@ define(['canon/core/component'], function (Component) {
       it('discards DOM reference', function () {
         component.dispose();
 
-        expect(component.getElement()).to.equal(null);
+        expect(component.getElement()).toEqual(null);
       });
     });
   });
