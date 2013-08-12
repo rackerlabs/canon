@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/bradgignac/green_onion-sauce.git
+  revision: 68abc13e05ed1933a83484cd1bab790e83d73403
+  specs:
+    green_onion-sauce (0.0.1)
+
+GIT
   remote: git://github.com/tomeara/green_onion.git
   revision: 73483b10a699ceb6c98cfa7b3189ea4e986192a5
   specs:
@@ -163,6 +169,7 @@ DEPENDENCIES
   compass
   fog
   green_onion!
+  green_onion-sauce!
   guard-livereload
   rack
   rack-contrib
