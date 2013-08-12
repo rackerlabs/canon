@@ -94,6 +94,27 @@ module.exports = function (grunt) {
             sandbox: true
           }
         }
+      },
+    },
+    karma: {
+      dev: {
+        configFile: 'config/karma.dev.js'
+      },
+      ci: {
+        configFile: 'config/karma.ci.js'
+      }
+    },
+    exec: {
+      rspec: {
+        cmd: function (pattern) {
+          var command = 'bundle exec rspec ' + pattern;
+
+          if (process.env.CANON_ENV === 'test') {
+            command += ' --format CI::Reporter::RSpec'
+          }
+
+          return command;
+        }
       }
     }
   });
@@ -105,12 +126,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', ['clean', 'jshint']);
-
-  grunt.registerTask('default', ['jshint', 'test', 'build']);
+  grunt.registerTask('default', ['jshint', 'build', 'test']);
 
   grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy']);
 
-  grunt.registerTask('test', ['exec:rspec:spec/screenshot', 'exec:rspec:spec/functional']);
+  grunt.registerTask('test', ['karma:ci', 'exec:rspec:spec/screenshot', 'exec:rspec:spec/functional']);
 };
