@@ -122,17 +122,10 @@ namespace :spec do
 
   desc 'Run unit tests'
   task :unit do
-    base = ENV['CANON_URL'] || 'http://0.0.0.0:3000'
-    url = "#{base}/spec/runner.html"
-    reporter = Canon.test? ? 'xunit' : 'dot'
+    karma_config = Canon.test? ? 'config/karma.ci.js' : 'config/karma.dev.js'
+    karma_command = "node_modules/.bin/karma start #{karma_config}"
 
-    mocha_command = "node_modules/.bin/mocha-phantomjs --reporter #{reporter} #{url}"
-
-    if Canon.test?
-      mocha_command += ' > ' + Canon.build_path + '/unit.xml'
-    end
-
-    system(mocha_command)
+    system(karma_command)
   end
 end
 
