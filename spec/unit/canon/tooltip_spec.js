@@ -1,7 +1,7 @@
 require(['canon/core/positioning', 'canon/tooltip'], function (positioning, Tooltip) {
   describe('Tooltip', function () {
 
-    var element, clock, tooltip, content;
+    var element, tooltip, content;
 
     beforeEach(function () {
       jasmine.getFixtures().set('<div class="tooltip-toggle"></div>');

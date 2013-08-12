@@ -1,3 +1,5 @@
+/*jshint camelcase:false */
+
 var file, specs = [];
 
 for (file in window.__karma__.files) {
