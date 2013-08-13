@@ -1,6 +1,6 @@
 {
   "name": "canon",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0",
   "dependencies": {
     "almond": "~0.2.5",
     "klass": "~1.2.3",
