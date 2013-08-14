@@ -4,8 +4,8 @@
 }
 
 .rs-detail-section-header {
-  padding: 30px 30px 0;
-  margin-bottom: 20px;
+  padding: 30px 30px 20px;
+  border-top: 1px solid #fff;
 }
 
 .rs-detail-section-title,
@@ -27,4 +27,78 @@
 .rs-detail-section-body {
   padding: 0 30px;
   margin: 0 0 30px;
+}
+
+// Collapsible Detail Section
+.rs-collapsible-section {
+  .rs-caret {
+    width: 13px;
+    height: 13px;
+    margin: 3px 0 3px 10px;
+    float: right;
+  }
+}
+
+.rs-collapsible-section.expanded,
+.rs-collapsible-section.collapsed, {
+  > .rs-detail-section-header {
+    cursor: pointer;
+  }
+
+  > .rs-detail-section-header.hover,
+  > .rs-detail-section-header:hover {
+    @include background(linear-gradient(#f7f7f7, #fff));
+  }
+}
+
+.rs-collapsible-section.loading,
+.rs-collapsible-section.collapsed {
+  .rs-detail-section-header {
+    padding-bottom: 30px;
+  }
+
+  .rs-detail-section-body {
+    display: none;
+  }
+}
+
+.rs-collapsible-section.loading,
+.rs-collapsible-section.expanded {
+  .rs-detail-section-subtitle {
+    display: none;
+  }
+}
+
+.rs-collapsible-section.expanded {
+  .rs-caret {
+    @include icon-sprite(section-toggle-expanded);
+  }
+
+  > .rs-detail-section-header.hover,
+  > .rs-detail-section-header:hover {
+    .rs-caret {
+      @include icon-sprite(section-toggle-expanded-hover);
+    }
+  }
+}
+
+.rs-collapsible-section.collapsed {
+  .rs-caret {
+    @include icon-sprite(section-toggle-collapsed);
+  }
+
+  > .rs-detail-section-header.hover,
+  > .rs-detail-section-header:hover {
+    .rs-caret {
+      @include icon-sprite(section-toggle-collapsed-hover);
+    }
+  }
+}
+
+.rs-collapsible-section.loading {
+  .rs-caret {
+    width: 16px;
+    height: 16px;
+    background: url('loading-indicator.gif');
+  }
 }
