@@ -1,6 +1,8 @@
 screenshots:
   - name: Buttons
     url: buttons.html
+  - name: Detail View
+    url: detail-view.html
   - name: Forms
     url: forms.html
   - name: Layout (Fixed)
