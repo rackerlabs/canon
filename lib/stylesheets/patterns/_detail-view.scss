@@ -102,3 +102,31 @@
     background: url('loading-indicator.gif');
   }
 }
+
+// Header Section
+.rs-header-section {
+  padding: 30px;
+  @extend .rs-detail-section;
+}
+
+.rs-header-section-title,
+.rs-header-section-subtitle {
+  font-family: $alt-font-family;
+}
+
+.rs-header-section-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.rs-header-section-subtitle {
+  margin: 0 0 5px;
+  color: $grey;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rs-header-section-actions {
+  @extend .rs-pull-right;
+}
