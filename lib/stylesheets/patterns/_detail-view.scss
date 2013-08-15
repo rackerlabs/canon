@@ -31,11 +31,13 @@
 
 // Collapsible Detail Section
 .rs-collapsible-section {
-  .rs-caret {
-    width: 13px;
-    height: 13px;
-    margin: 3px 0 3px 10px;
-    float: right;
+  > .rs-detail-section-header {
+    > .rs-caret {
+      width: 13px;
+      height: 13px;
+      margin: 3px 0 3px 10px;
+      float: right;
+    }
   }
 }
 
@@ -70,36 +72,42 @@
 }
 
 .rs-collapsible-section.expanded {
-  .rs-caret {
-    @include icon-sprite(section-toggle-expanded);
+  > .rs-detail-section-header {
+    > .rs-caret {
+      @include icon-sprite(section-toggle-expanded);
+    }
   }
 
   > .rs-detail-section-header.hover,
   > .rs-detail-section-header:hover {
-    .rs-caret {
+    > .rs-caret {
       @include icon-sprite(section-toggle-expanded-hover);
     }
   }
 }
 
 .rs-collapsible-section.collapsed {
-  .rs-caret {
-    @include icon-sprite(section-toggle-collapsed);
+  > .rs-detail-section-header {
+    > .rs-caret {
+      @include icon-sprite(section-toggle-collapsed);
+    }
   }
 
   > .rs-detail-section-header.hover,
   > .rs-detail-section-header:hover {
-    .rs-caret {
+    > .rs-caret {
       @include icon-sprite(section-toggle-collapsed-hover);
     }
   }
 }
 
 .rs-collapsible-section.loading {
-  .rs-caret {
-    width: 16px;
-    height: 16px;
-    background: url('loading-indicator.gif');
+  > .rs-detail-section-header {
+    > .rs-caret {
+      width: 16px;
+      height: 16px;
+      background: url('loading-indicator.gif');
+    }
   }
 }
 
