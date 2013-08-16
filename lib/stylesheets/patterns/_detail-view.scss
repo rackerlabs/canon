@@ -112,22 +112,22 @@
 }
 
 // Header Section
-.rs-header-section {
+.rs-detail-header {
   padding: 30px;
   @extend .rs-detail-section;
 }
 
-.rs-header-section-title,
-.rs-header-section-subtitle {
+.rs-detail-header-title,
+.rs-detail-header-subtitle {
   font-family: $alt-font-family;
 }
 
-.rs-header-section-title {
+.rs-detail-header-title {
   font-size: 32px;
   font-weight: 600;
 }
 
-.rs-header-section-subtitle {
+.rs-detail-header-subtitle {
   margin: 0 0 5px;
   color: $grey;
   font-size: 14px;
@@ -135,7 +135,7 @@
   text-transform: uppercase;
 }
 
-.rs-header-section-actions {
+.rs-detail-header-actions {
   @extend .rs-pull-right;
 }
 
