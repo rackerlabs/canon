@@ -1,0 +1,140 @@
+// Detail Section
+.rs-detail-section + .rs-detail-section {
+  border-top: 1px solid #eee;
+}
+
+.rs-detail-section-header {
+  padding: 30px 30px 20px;
+  border-top: 1px solid #fff;
+}
+
+.rs-detail-section-title,
+.rs-detail-section-subtitle {
+  display: inline-block;
+}
+
+.rs-detail-section-title {
+  margin-right: 10px;
+  font-family: $alt-font-family;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.rs-detail-section-subtitle {
+  color: #999;
+}
+
+.rs-detail-section-body {
+  padding: 0 30px;
+  margin: 0 0 30px;
+}
+
+// Collapsible Detail Section
+.rs-collapsible-section {
+  > .rs-detail-section-header {
+    > .rs-caret {
+      width: 13px;
+      height: 13px;
+      margin: 3px 0 3px 10px;
+      float: right;
+    }
+  }
+}
+
+.rs-collapsible-section.expanded,
+.rs-collapsible-section.collapsed, {
+  > .rs-detail-section-header {
+    cursor: pointer;
+  }
+
+  > .rs-detail-section-header.hover,
+  > .rs-detail-section-header:hover {
+    @include background(linear-gradient(#f7f7f7, #fff));
+  }
+}
+
+.rs-collapsible-section.loading,
+.rs-collapsible-section.collapsed {
+  .rs-detail-section-header {
+    padding-bottom: 30px;
+  }
+
+  .rs-detail-section-body {
+    display: none;
+  }
+}
+
+.rs-collapsible-section.loading,
+.rs-collapsible-section.expanded {
+  .rs-detail-section-subtitle {
+    display: none;
+  }
+}
+
+.rs-collapsible-section.expanded {
+  > .rs-detail-section-header {
+    > .rs-caret {
+      @include icon-sprite(section-toggle-expanded);
+    }
+  }
+
+  > .rs-detail-section-header.hover,
+  > .rs-detail-section-header:hover {
+    > .rs-caret {
+      @include icon-sprite(section-toggle-expanded-hover);
+    }
+  }
+}
+
+.rs-collapsible-section.collapsed {
+  > .rs-detail-section-header {
+    > .rs-caret {
+      @include icon-sprite(section-toggle-collapsed);
+    }
+  }
+
+  > .rs-detail-section-header.hover,
+  > .rs-detail-section-header:hover {
+    > .rs-caret {
+      @include icon-sprite(section-toggle-collapsed-hover);
+    }
+  }
+}
+
+.rs-collapsible-section.loading {
+  > .rs-detail-section-header {
+    > .rs-caret {
+      width: 16px;
+      height: 16px;
+      background: url('loading-indicator.gif');
+    }
+  }
+}
+
+// Header Section
+.rs-header-section {
+  padding: 30px;
+  @extend .rs-detail-section;
+}
+
+.rs-header-section-title,
+.rs-header-section-subtitle {
+  font-family: $alt-font-family;
+}
+
+.rs-header-section-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.rs-header-section-subtitle {
+  margin: 0 0 5px;
+  color: $grey;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rs-header-section-actions {
+  @extend .rs-pull-right;
+}
