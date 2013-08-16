@@ -131,10 +131,35 @@
   margin: 0 0 5px;
   color: $grey;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 .rs-header-section-actions {
   @extend .rs-pull-right;
+}
+
+// Detail List
+.rs-detail-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rs-detail-item {
+  margin: 0 0 10px;
+
+  @include micro-clearfix;
+}
+
+.rs-detail-key {
+  width: 120px;
+  clear: left;
+  float: left;
+  color: $grey;
+  text-align: right;
+}
+
+.rs-detail-value {
+  margin-left: 140px;
 }
