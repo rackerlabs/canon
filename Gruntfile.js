@@ -1,7 +1,52 @@
 module.exports = function (grunt) {
   grunt.initConfig({
     clean: {
-      build: ['.sass-cache', 'build', 'package']
+      all: ['.sass-cache', 'build', 'dist', 'package']
+    },
+    compass: {
+      all: {
+        config: 'config/compass.rb'
+      }
+    },
+    cssmin: {
+      all: {
+        files: {
+          'dist/canon.min.css': ['dist/canon.css']
+        }
+      }
+    },
+    requirejs: {
+      all: {
+        options: {
+          baseUrl: 'lib/javascripts',
+          name: '../../node_modules/almond/almond',
+          include: ['canon'],
+          paths: {
+            'klass': '../../node_modules/klass/klass'
+          },
+          wrap: {
+            startFile: 'config/start.js',
+            endFile: 'config/end.js'
+          },
+          optimize: 'none',
+          out: 'dist/canon.js'
+        }
+      }
+    },
+    uglify: {
+      all: {
+        files: {
+          'dist/canon.min.js': ['dist/canon.js']
+        }
+      }
+    },
+    copy: {
+      all: {
+        files: [
+          { expand: true, cwd: 'lib/fonts/', src: '*', dest: 'dist/', filter: 'isFile' },
+          { expand: true, cwd: 'lib/images/', src: '*', dest: 'dist/', filter: 'isFile' }
+        ]
+      }
     },
     jshint: {
       options: {
@@ -54,7 +99,18 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', ['clean', 'jshint']);
+
+  grunt.registerTask('default', ['jshint', 'test', 'build']);
+
+  grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy']);
+
+  grunt.registerTask('test', ['exec:rspec:spec/screenshot', 'exec:rspec:spec/functional']);
 };
