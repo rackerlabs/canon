@@ -20,9 +20,9 @@ Setting up your Canon development environment is easy:
 
     $ git clone https://github.rackspace.com/canon/canon.git
     $ script/bootstrap
-    $ script/server
+    $ grunt server
 
-The Canon server is now running at http://0.0.0.0:3000. Before running automated
+The Canon server is now running at http://0.0.0.0:8000. Before running automated
 tests, you'll need to set the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment
 variables. See [Environment Configuration](https://github.rackspace.com/canon/canon/wiki/Environment-Configuration)
 for more information on environment variables used by Canon. If you run into any 

@@ -42,6 +42,7 @@ development environment has all the necessary dependencies. This script will:
   - Check for Ruby 1.9.x
   - Check for Node 0.6.0 or higher
   - Check for PhantomJS 1.7.0 or higher
+  - Install Grunt
   - Install Bundler
   - Install Ruby dependencies
   - Install Node dependencies
@@ -88,6 +89,12 @@ def check_phantom_js_version
   end
 end
 
+def install_grunt
+  puts grey('>> Installing Grunt...')
+
+  execute_command('npm install -g grunt-cli')
+end
+
 def install_bundler
   puts grey('>> Installing Bundler...')
 
@@ -123,6 +130,7 @@ check_ruby_version
 check_node_version
 check_phantom_js_version
 
+install_grunt
 install_bundler
 install_gems
 install_packages
