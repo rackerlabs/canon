@@ -115,7 +115,7 @@ module.exports = function (grunt) {
               connect.static('dist'),
               connect.static('examples'),
               connect.directory('examples')
-            ]
+            ];
           }
         }
       }
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
           var command = 'bundle exec rspec ' + pattern;
 
           if (process.env.CANON_ENV === 'test') {
-            command += ' --format CI::Reporter::RSpec'
+            command += ' --format CI::Reporter::RSpec';
           }
 
           return command;
