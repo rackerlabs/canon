@@ -104,6 +104,22 @@ module.exports = function (grunt) {
         configFile: 'config/karma.ci.js'
       }
     },
+    connect: {
+      server: {
+        options: {
+          middleware: function (connect) {
+            var livereload = require('connect-livereload');
+
+            return [
+              livereload(),
+              connect.static('dist'),
+              connect.static('examples'),
+              connect.directory('examples')
+            ]
+          }
+        }
+      }
+    },
     exec: {
       rspec: {
         cmd: function (pattern) {
@@ -116,16 +132,27 @@ module.exports = function (grunt) {
           return command;
         }
       }
+    },
+    watch: {
+      all: {
+        files: ['lib/javascripts/**/*.js', 'lib/stylesheets/**/*.scss'],
+        tasks: ['build'],
+        options: {
+          livereload: true
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-karma');
 
@@ -134,4 +161,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy']);
 
   grunt.registerTask('test', ['karma:ci', 'exec:rspec:spec/screenshot', 'exec:rspec:spec/functional']);
+
+  grunt.registerTask('server', ['build', 'connect:server', 'watch']);
 };
