@@ -1,3 +1,6 @@
+/* global module */
+/* global process */
+
 module.exports = function (grunt) {
   grunt.initConfig({
     clean: {
@@ -50,6 +53,7 @@ module.exports = function (grunt) {
     },
     jshint: {
       options: {
+        // Options
         camelcase: true,
         eqeqeq: true,
         expr: true,
@@ -63,38 +67,39 @@ module.exports = function (grunt) {
         nonew: true,
         trailing: true,
         undef: true,
-        unused: true
-      },
-      grunt: {
-        src: ['Gruntfile.js'],
-        options: {
-          node: true
+        unused: true,
+
+        // Environments
+        browser: true,
+        jquery: true,
+        globals: {
+          // RequireJS
+          define: true,
+          require: true,
+          requirejs: true,
+
+          // Jasmine
+          afterEach: true,
+          beforeEach: true,
+          describe: true,
+          expect: true,
+          it: true,
+          jasmine: true,
+
+          // jasmine-jquery
+          sandbox: true
         }
       },
-      source: {
-        src: ['lib/javascripts/**/*.js', 'spec/unit/**/*.js'],
-        options: {
-          browser: true,
-          jquery: true,
-          globals: {
-            // RequireJS
-            define: true,
-            require: true,
-            requirejs: true,
-
-            // Jasmine
-            afterEach: true,
-            beforeEach: true,
-            describe: true,
-            expect: true,
-            it: true,
-            jasmine: true,
-
-            // jasmine-jquery
-            sandbox: true
-          }
-        }
+      dev: {
+        src: ['Gruntfile.js', 'lib/javascripts/**/*.js', 'spec/unit/**/*.js']
       },
+      ci: {
+        src: ['Gruntfile.js', 'lib/javascripts/**/*.js', 'spec/unit/**/*.js'],
+        options: {
+          reporter: 'checkstyle',
+          reporterOutput: 'dist/jshint.xml'
+        }
+      }
     },
     karma: {
       dev: {
@@ -156,7 +161,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', ['jshint', 'build', 'test']);
+  grunt.registerTask('default', ['jshint:dev', 'build', 'test']);
 
   grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy']);
 

@@ -1,4 +1,4 @@
-/*jshint camelcase:false */
+/* jshint camelcase:false */
 
 var file, specs = [];
 
