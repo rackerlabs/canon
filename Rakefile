@@ -6,7 +6,6 @@ require 'sprockets'
 require 'sprockets/sass'
 
 require File.expand_path('../lib/canon', __FILE__)
-require File.expand_path('../lib/tasks/csslint_task', __FILE__)
 require File.expand_path('../lib/tasks/jshint_task', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)
 
@@ -63,8 +62,8 @@ task :clean do
   end
 end
 
-desc 'Lint javascripts and stylesheets'
-task :lint => ['lint:stylesheets', 'lint:javascripts']
+desc 'Lint javascripts'
+task :lint => ['lint:javascripts']
 
 namespace :lint do
   JSHintTask.new(:javascripts) do |t|
@@ -74,35 +73,6 @@ namespace :lint do
     if Canon.test?
       t.reporter = 'checkstyle-reporter'
       t.output = File.join(Canon.build_path, 'jshint.xml')
-    end
-  end
-
-  CSSLintTask.new(:stylesheets => :compile) do |t|
-    t.binary = 'node_modules/.bin/csslint'
-    t.pattern = 'build/canon.css'
-    t.quiet = true
-
-    t.errors = [
-      'box-sizing',
-      'compatible-vendor-prefixes',
-      'empty-rules',
-      'fallback-colors',
-      'ids',
-      'known-properties',
-      'vendor-prefix'
-    ]
-    t.ignore = [
-      'adjoining-classes',
-      'important',
-      'star-property-hack',
-      'underscore-property-hack',
-      'unique-headings',
-      'unqualified-attributes'
-    ]
-
-    if Canon.test?
-      t.format = 'checkstyle-xml'
-      t.output = File.join(Canon.build_path, 'csslint.xml')
     end
   end
 end
