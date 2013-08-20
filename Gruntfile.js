@@ -167,5 +167,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', ['karma:ci', 'exec:rspec:spec/screenshot', 'exec:rspec:spec/functional']);
 
+  grunt.registerTask('test:screenshot', ['connect:server', 'exec:rspec:spec/screenshot']);
+
+  grunt.registerTask('test:functional', ['connect:server', 'exec:rspec:spec/functional']);
+
   grunt.registerTask('server', ['build', 'connect:server', 'watch']);
 };
