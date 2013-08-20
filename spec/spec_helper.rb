@@ -29,7 +29,7 @@ def version
 end
 
 def url
-  ENV['CANON_URL'] || 'http://0.0.0.0:8000'
+  'http://localhost:8000'
 end
 
 Capybara.app_host = url
