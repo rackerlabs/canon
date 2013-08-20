@@ -4,7 +4,7 @@ options.autoWatch = false;
 options.singleRun = true;
 options.reporters = ['junit'];
 options.junitReporter = {
-  outputFile: 'build/unit.xml'
+  outputFile: 'dist/unit.xml'
 };
 
 module.exports = function (config) {
