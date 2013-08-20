@@ -2,7 +2,6 @@
 build/
 components/
 dist/
-lib/images/icon-*.png
 log/
 node_modules/
 package/
