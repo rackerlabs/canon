@@ -139,12 +139,30 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      all: {
-        files: ['lib/javascripts/**/*.js', 'lib/stylesheets/**/*.scss'],
+      css: {
+        files: ['lib/stylesheets/**/*.scss'],
+        tasks: ['compass', 'cssmin'],
+        options: {
+          livereload: true
+        }
+      },
+      js: {
+        files: ['lib/javascripts/**/*.js'],
+        tasks: ['requirejs', 'uglify'],
+        options: {
+          livereload: true
+        }
+      },
+      copy: {
+        files: ['lib/fonts/**/*', 'lib/images/**/*'],
         tasks: ['build'],
         options: {
           livereload: true
         }
+      },
+      jshint: {
+        files: ['Gruntfile.js', 'lib/javascripts/**/*.js', 'spec/unit/**/*.js'],
+        tasks: ['jshint:dev']
       }
     }
   });
