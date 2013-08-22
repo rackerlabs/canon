@@ -28,14 +28,6 @@
 	  	margin: 0 20px;
 			border: 1px solid transparent;
 
-			&.active {
-				& > a, & > a:hover {
-					color: $nav-primary-link-active;
-					border-bottom: 2px solid $red;
-				}
-
-			}
-
 	  	& > a {
 	  		line-height: 1em;
 	  		padding: 8px 0 2px 0;
@@ -46,11 +38,15 @@
 				text-decoration: none;
 				text-shadow: 0 1px $white;
 				border-bottom: 2px solid transparent;
-				&:hover {
-					color: $nav-primary-link-hover;
-					border-bottom: 2px solid $red;
-				}
 	  	}
+
+
+      &:hover > a,
+      &.hover > a,
+      &.active > a {
+        color: $nav-primary-link-active;
+        border-bottom: 2px solid $red;
+      }
 
 	  	.rs-caret {
 	  		display: inline-block;
@@ -70,6 +66,8 @@
 	  		}
 	  	}
 
+      &.rs-dropdown:hover,
+      &.rs-dropdown.hover,
 	  	&.rs-dropdown.active {
 	  		.rs-caret {
 	  			@include icon-sprite(caret-primary-active);
