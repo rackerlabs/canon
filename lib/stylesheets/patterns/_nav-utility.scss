@@ -20,14 +20,35 @@
 				color: $grey;
 				position: relative;
 				border: 1px solid transparent;
-				&:hover {
-					color: $grey300;
-				}
 			}
 
+      &:hover > a,
+			&.hover > a,
 			&.active > a {
 				color: $grey300;
 			}
+
+			.rs-caret {
+				display: inline-block;
+	  		width: 9px;
+			  height: 10px;
+			  margin: 0 0 0 5px;
+			  vertical-align: text-bottom;
+			}
+
+			&.rs-dropdown {
+	  		.rs-caret {
+	  			@include icon-sprite(caret-nav-down-999);
+	  		}
+	  	}
+
+      &.rs-dropdown:hover,
+			&.rs-dropdown.hover,
+	  	&.rs-dropdown.active {
+	  		.rs-caret {
+	  			@include icon-sprite(caret-nav-down-fff);
+	  		}
+	  	}
 		}
 
 		&.rs-pull-right {
