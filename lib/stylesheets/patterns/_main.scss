@@ -40,7 +40,7 @@
 }
 
 .rs-content {
-  overflow: auto;
+  @include micro-clearfix;
 
   .rs-main & {
     min-height: 300px;
