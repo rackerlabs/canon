@@ -80,7 +80,7 @@
 @mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth, $collapseGridGutter:"") {
   .rs-row#{$collapseGridGutter} {
     width: 100%;
-    @include clearfix();
+    @include micro-clearfix();
     [class*="span-"] {
       @include input-block-level();
       float: left;
