@@ -146,6 +146,12 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
+      html: {
+        files: ['examples/**/*.html'],
+        options: {
+          livereload: true
+        }
+      },
       js: {
         files: ['lib/javascripts/**/*.js'],
         tasks: ['requirejs', 'uglify'],
