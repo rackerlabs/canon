@@ -15,3 +15,5 @@ screenshots:
     url: popover.html
   - name: Tooltip
     url: tooltip.html
+  - name: Status
+    url: status.html
