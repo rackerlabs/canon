@@ -21,3 +21,10 @@
   color: #999;
   font-weight: normal;
 }
+
+%last-child {
+  & > *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
