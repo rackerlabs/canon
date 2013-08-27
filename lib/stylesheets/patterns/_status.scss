@@ -1,0 +1,43 @@
+.rs-status {
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 13px;
+  line-height: 20px;
+  color: $white;
+  vertical-align: baseline;
+  white-space: nowrap;
+  background-color: #ccc;
+  @include border-radius(3px);
+
+  &:empty {
+    display: none;
+  }
+}
+
+.rs-status {
+  &.rs-status-ok {
+    background-color: $green !important;
+  }
+
+  &.rs-status-warning {
+    background-color: $yellow !important;
+  }
+
+  &.rs-status-error {
+    background-color: $red !important;
+  }
+
+  &.rs-status-disabled {
+    background: #ccc !important;
+  }
+
+  &.rs-status-pending {
+    background-color: $yellow !important;
+    background-image: url('progress-background.gif');
+  }
+
+  &.rs-status-processing {
+    background: $yellow url('loading-white-yellow.gif') 4px center no-repeat;
+    padding-left: 20px;
+  }
+}
