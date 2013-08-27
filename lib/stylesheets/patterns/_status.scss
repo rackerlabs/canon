@@ -18,27 +18,27 @@
 .rs-status {
   &.rs-status-ok {
     color: $white;
-    background-color: $green !important;
+    background-color: $green;
   }
 
   &.rs-status-warning {
     color: $white;
-    background-color: $yellow !important;
+    background-color: $yellow;
   }
 
   &.rs-status-error {
     color: $white;
-    background-color: $red !important;
+    background-color: $red;
   }
 
   &.rs-status-disabled {
     color: $white;
-    background: $grey300 !important;
+    background: $grey300;
   }
 
   &.rs-status-pending {
     color: $white;
-    background-color: $yellow !important;
+    background-color: $yellow;
     background-image: url('progress-background.gif');
   }
 
