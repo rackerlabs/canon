@@ -1,3 +1,4 @@
+// Status Label
 .rs-status {
   display: inline;
   padding: 3px 5px 4px;
@@ -6,7 +7,7 @@
   color: $white;
   vertical-align: baseline;
   white-space: nowrap;
-  background-color: #ccc;
+  background-color: $grey300;
   @include border-radius(3px);
 
   &:empty {
@@ -16,28 +17,59 @@
 
 .rs-status {
   &.rs-status-ok {
+    color: $white;
     background-color: $green !important;
   }
 
   &.rs-status-warning {
+    color: $white;
     background-color: $yellow !important;
   }
 
   &.rs-status-error {
+    color: $white;
     background-color: $red !important;
   }
 
   &.rs-status-disabled {
-    background: #ccc !important;
+    color: $white;
+    background: $grey300 !important;
   }
 
   &.rs-status-pending {
+    color: $white;
     background-color: $yellow !important;
     background-image: url('progress-background.gif');
   }
 
   &.rs-status-processing {
+    color: $white;
     background: $yellow url('loading-white-yellow.gif') 4px center no-repeat;
     padding-left: 20px;
   }
+}
+
+// Colored Status Typography
+.rs-status-ok {
+  color: $green;
+}
+
+.rs-status-warning {
+  color: $yellow;
+}
+
+.rs-status-error {
+  color: $red;
+}
+
+.rs-status-disabled {
+  color: $grey300;
+}
+
+.rs-status-pending {
+  color: $yellow;
+}
+
+.rs-status-processing {
+  color: $yellow;
 }
