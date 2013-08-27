@@ -141,8 +141,13 @@ textarea {
     margin-top: 2px;
   }
 
-  .rs-controls {
+  .rs-controls,
+  .rs-controls-static {
     margin-left: 180px;
+  }
+
+  .rs-controls-static {
+    padding-top: 2px;
   }
 
   input[type="text"],

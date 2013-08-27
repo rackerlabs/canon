@@ -221,3 +221,40 @@ input::-moz-focus-inner {
     margin-right: 10px;
   }
 }
+
+.rs-edit {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @include icon-sprite(pencil-666);
+
+  &:hover,
+  &.hover {
+    border-color: #d8d8d8;
+  }
+
+  &:active,
+  &.active {
+    border-color: transparent;
+  }
+
+  &[disabled],
+  &.disabled {
+    border-color: transparent;
+    cursor: default;
+
+    @include icon-sprite(pencil-999);
+  }
+}
+
+.rs-controls .rs-edit,
+.rs-controls-static .rs-edit,
+.rs-detail-value .rs-edit {
+  margin-top: -1px;
+  margin-left: 20px;
+}
