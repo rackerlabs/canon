@@ -11,5 +11,7 @@ screenshots:
     url: layout-responsive.html
   - name: Menu
     url: menu.html
+  - name: Popover
+    url: popover.html
   - name: Tooltip
     url: tooltip.html
