@@ -24,11 +24,14 @@
       }
     }
 
+    &:hover > a, &.hover > a {
+      background-color: #F7F7F7;
+    }
+
     &.active > a {
       background-color: $white;
       border-bottom: 1px solid $white;
     }
-
   }
 }
 
