@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'thin'
-require File.expand_path('../../lib/canon', __FILE__)
-
-server = Thin::Server.new('0.0.0.0', 3000, Canon.app)
-server.start
