@@ -17,3 +17,5 @@ screenshots:
     url: tooltip.html
   - name: Status
     url: status.html
+  - name: Tabs
+    url: tabs.html

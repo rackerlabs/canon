@@ -18,6 +18,13 @@
 }
 
 .rs-quiet {
-  color: #999;
+  color: $grey400;
   font-weight: normal;
+}
+
+%last-child {
+  & > *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
