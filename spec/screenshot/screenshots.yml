@@ -13,6 +13,8 @@ screenshots:
     url: menu.html
   - name: Popover
     url: popover.html
+  - name: Progress Bar
+    url: progress-bar.html
   - name: Tooltip
     url: tooltip.html
   - name: Status
