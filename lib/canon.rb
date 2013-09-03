@@ -93,6 +93,10 @@ module Canon
       File.join(root_path, 'build')
     end
 
+    def dist_path
+      File.join(root_path, 'dist')
+    end
+
     def bower_path
       File.join(root_path, 'components')
     end

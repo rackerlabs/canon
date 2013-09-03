@@ -108,7 +108,7 @@ task :release do
   log('Creating Canon packages') do
     FileUtils.remove_dir(Canon.package_path, true)
     FileUtils.mkdir(Canon.package_path)
-    FileUtils.copy_entry(Canon.build_path, File.join(Canon.package_path, 'canon'))
+    FileUtils.copy_entry(Canon.dist_path, File.join(Canon.package_path, 'canon'))
 
     system("cd #{Canon.package_path} && tar -czf canon.tar.gz canon")
     system("cd #{Canon.package_path} && zip -q canon.zip canon/*")
@@ -117,7 +117,7 @@ task :release do
   connection = Fog::Storage.new(:provider => 'Rackspace', :rackspace_username => ENV['RACKSPACE_USERNAME'], :rackspace_api_key => ENV['RACKSPACE_API_KEY'])
   directory = connection.directories.get('cdn.canon.rackspace.com')
 
-  files_to_upload = Dir.glob('{build,package}/*.{eot,svg,ttf,woff,js,css,png,gif,tar.gz,zip}')
+  files_to_upload = Dir.glob('{dist,package}/*.{eot,svg,ttf,woff,js,css,png,gif,tar.gz,zip}')
   files_to_upload.each do |file|
     contents = File.open(file)
     base_name = File.basename(file)
