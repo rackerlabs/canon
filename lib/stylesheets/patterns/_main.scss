@@ -1,6 +1,7 @@
 // Main Content & Sidebar
 .rs-main {
   margin: 30px 0;
+  position: relative;
   @include micro-clearfix;
 
   &.rs-panel {
@@ -16,7 +17,7 @@
 
 .rs-sidebar {
   width: 280px;
-  float: left;
+  position: absolute;
 
   .rs-inner {
     margin: 0 30px 0 0;
@@ -27,7 +28,7 @@
   }
 
   &.rs-pull-right {
-    float: right;
+    right: 0;
 
     .rs-inner {
       margin: 0 0 0 30px;
