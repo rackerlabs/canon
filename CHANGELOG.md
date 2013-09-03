@@ -1,3 +1,17 @@
+## v1.1.0 (September 3, 2013)
+- Add tabs
+- Add popover.
+- Add edit button.
+- Add progress bars.
+- Add detail section.
+- Add status indicators.
+- Properly align static text in a form through .rs-controls-static.
+- Add caret to utility nav dropdowns.
+- Add hover state for primary nav dropdowns.
+- Fix bug where overflowing content (popovers, menu) was not visible. 
+- Replace build system with Grunt.
+- Replace test runner with Karma.
+
 ## v1.0.0 (August 13, 2013)
 - Minor build system updates.
 - Minor spacing adjustments for menus.
