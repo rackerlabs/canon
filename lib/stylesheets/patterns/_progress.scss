@@ -1,6 +1,6 @@
 .rs-progress {
   position: relative;
-  padding: 2px;
+  padding: 2px 1px 2px 2px;
   max-width: 600px;
   @include clearfix;
 }
@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   height: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid $grey300;
 }
 
 .rs-progress::after {
@@ -25,7 +25,7 @@
   left: 1px;
   right: 1px;
   height: 13px;
-  border: 1px solid #fff;
+  border: 1px solid $white;
 }
 
 .rs-progress-inner {
@@ -42,11 +42,7 @@
 
 .rs-bar {
   height: 13px;
-  border-left: 1px solid $white;
-}
-
-.rs-segment:first-child > .rs-bar {
-  border-left: 0;
+  border-right: 1px solid $white;
 }
 
 .rs-bar-ok {
