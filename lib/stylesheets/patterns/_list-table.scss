@@ -1,0 +1,22 @@
+/*
+
+List Table Technical Requirements:
+
+1) Supports fluid-width layouts.
+2) Supports fixed and fluid-width cells.
+3) Does not require explicit cell widths to be set for every column.
+
+Table Notes:
+
+* Does not support scrolling within a table.
+* Auto lays out cells.
+* Can it support overlays?
+
+Div Notes:
+
+* No auto layout without using display: table.
+* Does not support fixed and fluid-width cells.
+* Using display: table most likely defeats other benefits of DIVs.
+* Easily support overlays.
+
+*/
