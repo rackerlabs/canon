@@ -1,3 +1,15 @@
+// Hiding/wrapping columns on resize.
+// Colspan/rowspan
+// Header cells in body row
+// Input/menu alignment
+// Min-height for overlays
+// Double border issue
+// Truncation
+// Pixel Perfection
+// Sticky Table Header
+// Inline Editing
+// Scrolling
+
 /*
 
 List Table Technical Requirements:
@@ -20,3 +32,26 @@ Div Notes:
 * Easily support overlays.
 
 */
+
+.list-table {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+
+.list-table-header,
+.list-table-cell {
+  border-bottom: 1px solid #eee;
+}
+
+.list-table-header {
+  padding: 0 10px;
+}
+
+.list-table-cell {
+  padding: 10px
+}
