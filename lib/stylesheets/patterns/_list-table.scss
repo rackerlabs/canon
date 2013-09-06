@@ -1,14 +1,18 @@
-// Hiding/wrapping columns on resize.
-// Colspan/rowspan
-// Header cells in body row
-// Input/menu alignment
-// Min-height for overlays
-// Double border issue
-// Truncation
-// Pixel Perfection
-// Sticky Table Header
-// Inline Editing
-// Scrolling
+/*
+  List Table Notes:
+
+  Hiding/wrapping columns on resize.
+  Colspan/rowspan
+  Header cells in body row
+  Input/menu alignment
+  Min-height for overlays
+  Double border issue
+  Truncation
+  Pixel Perfection
+  Sticky Table Header
+  Inline Editing
+  Scrolling
+*/
 
 /*
 
@@ -18,13 +22,13 @@ List Table Technical Requirements:
 2) Supports fixed and fluid-width cells.
 3) Does not require explicit cell widths to be set for every column.
 
-Table Notes:
+Table Element Notes:
 
 * Does not support scrolling within a table. (Flexible)
 * Auto lays out cells.
 * Can it support overlays?
 
-Div Notes:
+Div Element Notes:
 
 * No auto layout without using display: table.
 * Does not support fixed and fluid-width cells.
@@ -33,25 +37,56 @@ Div Notes:
 
 */
 
-.list-table {
+.rs-list-table .rs-table,
+.rs-list-table table {
   width: 100%;
   margin-bottom: 20px;
   font-size: $base-font-size;
   line-height: $base-line-height;
   text-align: left;
   border-collapse: collapse;
+
+  th,
+  td,
+  .rs-table-header,
+  .rs-table-cell {
+    border-bottom: 1px solid #eee;
+  }
+
+  th, .rs-table-header {
+    padding: 0 10px;
+    color: #999;
+    font-weight: normal;
+  }
+
+  td, .rs-table-cell {
+    padding: 10px;
+  }
+
+  .rs-table-status {
+    padding: 0;
+    width: 10px;
+    border-right: 1px solid #eee;
+  }
+
+  .rs-table-status-ok {
+    background-color: $green;
+  }
+
+  .rs-table-status-warning {
+    background-color: $yellow;
+    background-image: url('progress-background.gif');
+  }
+
+  .rs-table-status-error {
+    background-color: $red;
+  }
 }
 
+.rs-list-table {
 
-.list-table-header,
-.list-table-cell {
-  border-bottom: 1px solid #eee;
 }
 
-.list-table-header {
-  padding: 0 10px;
-}
+.rs-embedded-table {
 
-.list-table-cell {
-  padding: 10px
 }
