@@ -37,8 +37,7 @@ Div Element Notes:
 
 */
 
-.rs-list-table .rs-table,
-.rs-list-table table {
+.rs-list-table {
   width: 100%;
   margin-bottom: 20px;
   font-size: $base-font-size;
@@ -83,8 +82,8 @@ Div Element Notes:
   }
 }
 
-.rs-list-table {
-
+.rs-list-table-wrapper{
+  position: relative;
 }
 
 .rs-embedded-table {
