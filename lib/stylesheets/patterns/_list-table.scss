@@ -68,6 +68,11 @@ Div Element Notes:
     border-right: 1px solid #eee;
   }
 
+  th.rs-table-status,
+  .rs-table-header.rs-table-status {
+    border-right: 1px solid transparent;
+  }
+
   .rs-table-status-ok {
     background-color: $green;
   }
