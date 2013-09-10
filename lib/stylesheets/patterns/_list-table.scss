@@ -93,7 +93,14 @@ Div Element Notes:
 
   .rs-table-input {
     padding: 0 10px;
-    & input, & select {
+    & input {
+      margin: 0;
+    }
+  }
+
+  .rs-table-select {
+    padding: 0 10px;
+    & select {
       margin: 0;
     }
   }
