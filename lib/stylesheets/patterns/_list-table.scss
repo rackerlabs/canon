@@ -1,0 +1,156 @@
+/*
+  List Table Notes:
+
+  Hiding/wrapping columns on resize.
+  Colspan/rowspan
+  Header cells in body row
+  Input/menu alignment
+  Min-height for overlays
+  Double border issue
+  Truncation
+  Pixel Perfection
+  Sticky Table Header
+  Inline Editing
+  Scrolling
+*/
+
+/*
+
+List Table Technical Requirements:
+
+1) Supports fluid-width layouts.
+2) Supports fixed and fluid-width cells.
+3) Does not require explicit cell widths to be set for every column.
+
+Table Element Notes:
+
+* Does not support scrolling within a table. (Flexible)
+* Auto lays out cells.
+* Can it support overlays?
+
+Div Element Notes:
+
+* No auto layout without using display: table.
+* Does not support fixed and fluid-width cells.
+* Using display: table most likely defeats other benefits of DIVs.
+* Easily support overlays.
+
+*/
+
+.rs-list-table {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  text-align: left;
+  border-collapse: collapse;
+
+  th,
+  td,
+  .rs-table-header,
+  .rs-table-cell {
+    border-bottom: 1px solid #eee;
+  }
+
+  th, .rs-table-header {
+    padding: 0 10px;
+    color: #999;
+    font-weight: normal;
+  }
+
+  td, .rs-table-cell {
+    padding: 10px;
+  }
+
+  .rs-table-status {
+    padding: 0;
+    width: 10px;
+    border-right: 1px solid #eee;
+  }
+
+  th.rs-table-status,
+  .rs-table-header.rs-table-status {
+    border-right: 1px solid transparent;
+    &:before {
+      content: '\00A0 ';
+      width: 10px;
+      display: block;
+    }
+  }
+
+  .rs-table-checkbox {
+    width: 10px;
+  }
+
+  .rs-table-radio {
+    width: 10px;
+    padding-right: 0;
+  }
+
+  .rs-table-cog {
+    width: 16px;
+  }
+
+  .rs-table-input {
+    padding: 0 10px;
+    & input {
+      margin: 0;
+    }
+  }
+
+  .rs-table-select {
+    padding: 0 10px;
+    & select {
+      margin: 0;
+    }
+  }
+
+  .rs-table-status-ok {
+    background-color: $green;
+  }
+
+  .rs-table-status-warning {
+    background-color: $yellow;
+    background-image: url('progress-background.gif');
+  }
+
+  .rs-table-status-error {
+    background-color: $red;
+  }
+}
+
+// Sort Links
+
+
+// List Table Wrapper
+
+.rs-list-table-wrapper{
+  position: relative;
+}
+
+// List Table Scrolling
+
+// embedded List Table
+
+.rs-embedded-table {
+
+}
+
+// Stretched List Table
+
+
+// Sort Links
+
+
+// Base Table Overlay
+
+
+// Loading Overlay
+
+
+// Error Overlay
+
+
+// Empty Overlay
+
+//
