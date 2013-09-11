@@ -37,6 +37,8 @@ Div Element Notes:
 
 */
 
+// Class-Based Styles
+
 .rs-list-table {
   width: 100%;
   margin-bottom: 20px;
@@ -44,99 +46,106 @@ Div Element Notes:
   line-height: $base-line-height;
   text-align: left;
   border-collapse: collapse;
+}
 
-  th,
-  td,
-  .rs-table-header,
-  .rs-table-cell {
-    border-bottom: 1px solid #eee;
-  }
+.rs-table-header,
+.rs-table-cell {
+  border-bottom: 1px solid #eee;
+}
 
-  th, .rs-table-header {
-    padding: 0 10px;
-    color: #999;
-    font-weight: normal;
-  }
+.rs-table-header {
+  padding: 0 10px;
+  color: #999;
+  font-weight: normal;
+}
 
-  td, .rs-table-cell {
-    padding: 10px;
-  }
+.rs-table-cell {
+  padding: 10px;
+}
 
-  th > a,
-  td > a,
-  .rs-table-header > a,
-  .rs-table-cell > a {
+.rs-table-header > a,
+.rs-table-cell > a {
+  display: block;
+}
+
+.rs-table-header > a, {
+  margin: 0 -10px;
+  padding: 0 10px;
+}
+
+.rs-table-cell > a.rs-btn {
+  display: inline-block;
+  margin: 0;
+  padding: 2px 10px 1px;
+}
+
+.rs-table-status {
+  padding: 0;
+  width: 10px;
+  border-right: 1px solid #eee;
+}
+
+.rs-table-header.rs-table-status {
+  border-right: 1px solid transparent;
+  &:before {
+    content: '\00A0 ';
+    width: 10px;
     display: block;
   }
+}
 
-  th > a,
-  .rs-table-header > a, {
-    margin: 0 -10px;
-    padding: 0 10px;
-  }
+.rs-table-checkbox {
+  width: 10px;
+}
 
-  td > a.rs-btn,
-  .rs-table-cell > a.rs-btn {
-    display: inline-block;
+.rs-table-radio {
+  width: 10px;
+  padding-right: 0;
+}
+
+.rs-table-cog {
+  width: 16px;
+}
+
+.rs-table-input {
+  padding: 0 10px;
+  & input {
     margin: 0;
-    padding: 2px 10px 1px;
   }
+}
 
-  .rs-table-status {
-    padding: 0;
-    width: 10px;
-    border-right: 1px solid #eee;
+.rs-table-select {
+  padding: 0 10px;
+  & select {
+    margin: 0;
   }
+}
 
-  th.rs-table-status,
-  .rs-table-header.rs-table-status {
-    border-right: 1px solid transparent;
-    &:before {
-      content: '\00A0 ';
-      width: 10px;
-      display: block;
-    }
-  }
+.rs-table-status-ok {
+  background-color: $green;
+}
 
-  .rs-table-checkbox {
-    width: 10px;
-  }
+.rs-table-status-warning {
+  background-color: $yellow;
+  background-image: url('progress-background.gif');
+}
 
-  .rs-table-radio {
-    width: 10px;
-    padding-right: 0;
-  }
+.rs-table-status-error {
+  background-color: $red;
+}
 
-  .rs-table-cog {
-    width: 16px;
-  }
+// Table-Based Styles
 
-  .rs-table-input {
-    padding: 0 10px;
-    & input {
-      margin: 0;
-    }
-  }
+table {
+  @extend .rs-list-table;
+}
 
-  .rs-table-select {
-    padding: 0 10px;
-    & select {
-      margin: 0;
-    }
-  }
+th {
+  @extend .rs-table-header;
+}
 
-  .rs-table-status-ok {
-    background-color: $green;
-  }
-
-  .rs-table-status-warning {
-    background-color: $yellow;
-    background-image: url('progress-background.gif');
-  }
-
-  .rs-table-status-error {
-    background-color: $red;
-  }
+td {
+  @extend .rs-table-cell;
 }
 
 // Sort Links
