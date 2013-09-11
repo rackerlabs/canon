@@ -107,18 +107,12 @@ Div Element Notes:
   width: 16px;
 }
 
-.rs-table-input {
-  padding: 0 10px;
-  & input {
-    margin: 0;
-  }
+.rs-table-input input {
+  margin: 0;
 }
 
-.rs-table-select {
-  padding: 0 10px;
-  & select {
-    margin: 0;
-  }
+.rs-table-select select {
+  margin: 0;
 }
 
 .rs-table-status-ok {
