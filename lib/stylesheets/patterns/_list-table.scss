@@ -62,6 +62,26 @@ Div Element Notes:
     padding: 10px;
   }
 
+  th > a,
+  td > a,
+  .rs-table-header > a,
+  .rs-table-cell > a {
+    display: block;
+  }
+
+  th > a,
+  .rs-table-header > a, {
+    margin: 0 -10px;
+    padding: 0 10px;
+  }
+
+  td > a.rs-btn,
+  .rs-table-cell > a.rs-btn {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 10px 1px;
+  }
+
   .rs-table-status {
     padding: 0;
     width: 10px;
@@ -120,6 +140,51 @@ Div Element Notes:
 }
 
 // Sort Links
+.rs-table-sort {
+  color: #999;
+
+  &.hover,
+  &:hover {
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+.rs-table-sort-text,
+.rs-table-sort-indicator {
+  display: inline-block;
+}
+
+.rs-table-sort-indicator {
+  width: 9px;
+  height: 5px;
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+
+.rs-table-sort-asc,
+.rs-table-sort-desc {
+  color: #333;
+  font-weight: bold;
+}
+
+.rs-table-sort-asc > .rs-table-sort-indicator {
+  @include icon-sprite(sort-ascending);
+}
+
+.rs-table-sort-asc.hover > .rs-table-sort-indicator,
+.rs-table-sort-asc:hover > .rs-table-sort-indicator {
+  @include icon-sprite(sort-ascending-hover);
+}
+
+.rs-table-sort-desc > .rs-table-sort-indicator {
+  @include icon-sprite(sort-descending);
+}
+
+.rs-table-sort-desc.hover > .rs-table-sort-indicator,
+.rs-table-sort-desc:hover > .rs-table-sort-indicator {
+  @include icon-sprite(sort-descending-hover);
+}
 
 
 // List Table Wrapper
