@@ -60,7 +60,7 @@ Div Element Notes:
 }
 
 .rs-table-cell {
-  padding: 10px;
+  padding: 6px 10px;
 }
 
 .rs-table-header > a,
@@ -96,26 +96,41 @@ Div Element Notes:
 
 .rs-table-checkbox {
   width: 10px;
+  &.rs-table-cell {
+    padding: 10px;
+  }
 }
 
 .rs-table-radio {
   width: 10px;
   padding-right: 0;
+  &.rs-table-cell {
+    padding: 10px 0 10px 10px;
+  }
 }
 
 .rs-table-cog {
   width: 16px;
+  &.rs-table-cell {
+    padding: 10px;
+  }
 }
 
 .rs-table-input {
-  padding: 0 10px;
+  &.rs-table-cell {
+    padding: 10px;
+  }
+
   & input {
     margin: 0;
   }
 }
 
 .rs-table-select {
-  padding: 0 10px;
+  &.rs-table-cell {
+    padding: 10px;
+  }
+
   & select {
     margin: 0;
   }
