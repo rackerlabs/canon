@@ -82,11 +82,19 @@
 
 .rs-table-status-ok {
   background-color: $green;
+
+  &.rs-table-status-striped {
+    background-image: url('table-status-success.gif');
+  }
 }
 
-.rs-table-status-warning {
+.rs-table-status-warning,
+.rs-table-status-processing {
   background-color: $yellow;
-  background-image: url('progress-background.gif');
+
+  &.rs-table-status-striped {
+    background-image: url('table-status-warning.gif');
+  }
 }
 
 .rs-table-status-error {

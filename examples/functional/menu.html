@@ -48,22 +48,13 @@
   </div>
 
   <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-  <script type="text/javascript" src="/vendor/requirejs/require.js"></script>
+  <script type="text/javascript" src="/canon.js"></script>
   <script type="text/javascript">
 
-    requirejs.config({
-      paths: {
-        'canon': '../assets/canon',
-        'klass': '../vendor/klass/klass'
-      }
-    });
-
     function attach() {
-      require(['canon'], function (canon) {
-        $('.rs-dropdown').each(function (i, element) {
-          var menu = new canon.Menu();
-          menu.attach(element);
-        });
+      $('.rs-dropdown').each(function (i, element) {
+        var menu = new canon.Menu();
+        menu.attach(element);
       });
     }
 
