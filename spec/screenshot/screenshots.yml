@@ -9,15 +9,17 @@ screenshots:
     url: layout-fixed.html
   - name: Layout (Responsive)
     url: layout-responsive.html
+  - name: List Table
+    url: list-table.html
   - name: Menu
     url: menu.html
   - name: Popover
     url: popover.html
   - name: Progress Bar
     url: progress-bar.html
-  - name: Tooltip
-    url: tooltip.html
   - name: Status
     url: status.html
+  - name: Tooltip
+    url: tooltip.html
   - name: Tabs
     url: tabs.html
