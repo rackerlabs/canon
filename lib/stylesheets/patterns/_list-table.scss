@@ -46,42 +46,35 @@
   }
 }
 
-.rs-table-checkbox {
-  width: 10px;
+.rs-table-checkbox,
+.rs-table-radio,
+.rs-table-cog,
+.rs-table-input,
+.rs-table-select {
   &.rs-table-cell {
     padding: 10px;
   }
+}
+
+.rs-table-checkbox {
+  width: 10px;
 }
 
 .rs-table-radio {
   width: 10px;
-  &.rs-table-cell {
-    padding: 10px;
-  }
 }
 
 .rs-table-cog {
   width: 16px;
-  &.rs-table-cell {
-    padding: 10px;
-  }
 }
 
 .rs-table-input {
-  &.rs-table-cell {
-    padding: 10px;
-  }
-
   & input {
     margin: 0;
   }
 }
 
 .rs-table-select {
-  &.rs-table-cell {
-    padding: 10px;
-  }
-
   & select {
     margin: 0;
   }
