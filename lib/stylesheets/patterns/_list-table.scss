@@ -20,14 +20,18 @@
 }
 
 .rs-table-cell {
+  padding: 10px;
+}
+
+.rs-table-text {
   padding: 6px 10px;
 }
 
 .rs-table-link {
   > a {
     display: block;
-    margin: -6px -10px;
-    padding: 6px 10px;
+    margin: -10px;
+    padding: 10px;
   }
 }
 
@@ -43,16 +47,6 @@
     content: '\00A0 ';
     width: 10px;
     display: block;
-  }
-}
-
-.rs-table-checkbox,
-.rs-table-radio,
-.rs-table-cog,
-.rs-table-input,
-.rs-table-select {
-  &.rs-table-cell {
-    padding: 10px;
   }
 }
 
