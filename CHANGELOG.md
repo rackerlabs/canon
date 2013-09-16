@@ -1,3 +1,9 @@
+## v1.2.0 (September 18, 2013)
+- Remove bottom margin from H4-H6 headers.
+- Fix bug where sidebar caused float issues.
+- Fix bug where menu caused footer issues.
+- Add list table.
+
 ## v1.1.0 (September 3, 2013)
 - Add tabs
 - Add popover.
