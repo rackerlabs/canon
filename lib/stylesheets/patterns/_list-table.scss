@@ -23,20 +23,12 @@
   padding: 6px 10px;
 }
 
-.rs-table-header > a,
-.rs-table-cell > a {
-  display: block;
-}
-
-.rs-table-header > a, {
-  margin: 0 -10px;
-  padding: 0 10px;
-}
-
-.rs-table-cell > a.rs-btn {
-  display: inline-block;
-  margin: 0;
-  padding: 2px 10px 1px;
+.rs-table-link {
+  > a {
+    display: block;
+    margin: -6px -10px;
+    padding: 6px 10px;
+  }
 }
 
 .rs-table-status {
