@@ -1,44 +1,4 @@
-/*
-  List Table Notes:
-
-  Hiding/wrapping columns on resize.
-  Colspan/rowspan
-  Header cells in body row
-  Input/menu alignment
-  Min-height for overlays
-  Double border issue
-  Truncation
-  Pixel Perfection
-  Sticky Table Header
-  Inline Editing
-  Scrolling
-*/
-
-/*
-
-List Table Technical Requirements:
-
-1) Supports fluid-width layouts.
-2) Supports fixed and fluid-width cells.
-3) Does not require explicit cell widths to be set for every column.
-
-Table Element Notes:
-
-* Does not support scrolling within a table. (Flexible)
-* Auto lays out cells.
-* Can it support overlays?
-
-Div Element Notes:
-
-* No auto layout without using display: table.
-* Does not support fixed and fluid-width cells.
-* Using display: table most likely defeats other benefits of DIVs.
-* Easily support overlays.
-
-*/
-
-// Class-Based Styles
-
+/* Class-Based Styles */
 .rs-list-table {
   width: 100%;
   margin-bottom: 20px;
@@ -149,8 +109,7 @@ Div Element Notes:
   background-color: $red;
 }
 
-// Table-Based Styles
-
+/* Table-Based Styles */
 table {
   @extend .rs-list-table;
 }
@@ -163,7 +122,7 @@ td {
   @extend .rs-table-cell;
 }
 
-// Sort Links
+/* Sort Links */
 .rs-table-sort {
   color: #999;
 
@@ -209,37 +168,3 @@ td {
 .rs-table-sort-desc:hover > .rs-table-sort-indicator {
   @include icon-sprite(sort-descending-hover);
 }
-
-
-// List Table Wrapper
-
-.rs-list-table-wrapper{
-  position: relative;
-}
-
-// List Table Scrolling
-
-// embedded List Table
-
-.rs-embedded-table {
-
-}
-
-// Stretched List Table
-
-
-// Sort Links
-
-
-// Base Table Overlay
-
-
-// Loading Overlay
-
-
-// Error Overlay
-
-
-// Empty Overlay
-
-//
