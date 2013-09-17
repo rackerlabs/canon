@@ -13,6 +13,14 @@
   border-bottom: 1px solid #eee;
 }
 
+.rs-table-row {
+  &.hover, &.selected {
+    .rs-table-cell {
+      background-color: #f1f6ff;
+    }
+  }
+}
+
 .rs-table-header {
   padding: 0 10px;
   color: #999;
@@ -75,7 +83,7 @@
 }
 
 .rs-table-status-ok {
-  background-color: $green;
+  background-color: $green !important;
 
   &.rs-table-status-striped {
     background-image: url('table-status-success.gif');
@@ -84,7 +92,7 @@
 
 .rs-table-status-warning,
 .rs-table-status-processing {
-  background-color: $yellow;
+  background-color: $yellow !important;
 
   &.rs-table-status-striped {
     background-image: url('table-status-warning.gif');
@@ -92,12 +100,16 @@
 }
 
 .rs-table-status-error {
-  background-color: $red;
+  background-color: $red !important;
 }
 
 /* Table-Based Styles */
 table {
   @extend .rs-list-table;
+}
+
+tr {
+  @extend .rs-table-row;
 }
 
 th {
