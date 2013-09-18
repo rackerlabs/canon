@@ -14,7 +14,9 @@
 }
 
 .rs-table-row {
-  &.hover, &.selected {
+  .rs-select-table &:hover,
+  &.hover,
+  &.selected {
     .rs-table-cell {
       background-color: #f1f6ff;
     }
