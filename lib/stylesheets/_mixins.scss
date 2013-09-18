@@ -50,22 +50,13 @@
 
 @mixin animate-visibility($duration: 0.2s) {
   display: none;
-  visibility: hidden;
-  opacity: 0;
-
-  // @include transition-property(visibility, opacity);
-  // @include transition-duration($duration, $duration);
 
   &.hidden {
-    display: block;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
   }
 
   &.visible {
     display: block;
-    visibility: visible;
-    opacity: 1;
   }
 }
 
