@@ -168,3 +168,22 @@ td {
 .rs-table-sort-desc:hover > .rs-table-sort-indicator {
   @include icon-sprite(sort-descending-hover);
 }
+
+/* Table Wrapper */
+.rs-list-table-wrapper {
+  position: relative;
+}
+
+/* Base Table Overlay */
+.rs-table-overlay {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Loading Overlay */
+.rs-table-overlay-loading {
+  background: url('clouding.gif') center center no-repeat;
+}
