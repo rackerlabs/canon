@@ -6,6 +6,7 @@
   line-height: $base-line-height;
   text-align: left;
   border-collapse: collapse;
+  position: relative;
 }
 
 .rs-table-header,
@@ -169,21 +170,57 @@ td {
   @include icon-sprite(sort-descending-hover);
 }
 
-/* Table Wrapper */
-.rs-list-table-wrapper {
-  position: relative;
-}
-
 /* Base Table Overlay */
 .rs-table-overlay {
   position: absolute;
   top: 20px;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  display: table;
+  margin: auto;
+  height: auto;
+  width: 100%;
 }
 
 /* Loading Overlay */
 .rs-table-overlay-loading {
   background: url('clouding.gif') center center no-repeat;
+  &:before {
+    content: "Loading\2026";
+    position: relative;
+    top: 22px;
+    left: 5px;
+    color: $grey300;
+    font-size: 13px;
+  }
+}
+
+.rs-table-overlay-content {
+  text-align: center;
+}
+
+.rs-table-overlay-title, .rs-table-overlay-subtitle {
+  font-family: $alt-font-family;
+}
+
+.rs-table-overlay-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  color: $grey500;
+}
+
+.rs-table-overlay-subtitle {
+  font-size: 18px;
+  color: $grey400;
+}
+
+.rs-table-overlay-subtitle + .rs-table-overlay-message {
+  margin-top: 50px;
+}
+
+.rs-table-overlay-message {
+  font-size: 13px;
+  color: $grey400;
 }
