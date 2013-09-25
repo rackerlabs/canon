@@ -125,11 +125,11 @@ td {
 
 /* Sort Links */
 .rs-table-sort {
-  color: #999;
+  color: $grey400;
 
   &.hover,
   &:hover {
-    color: #666;
+    color: $grey500;
     text-decoration: none;
   }
 }
@@ -148,7 +148,7 @@ td {
 
 .rs-table-sort-asc,
 .rs-table-sort-desc {
-  color: #333;
+  color: $grey600;
   font-weight: bold;
 }
 
