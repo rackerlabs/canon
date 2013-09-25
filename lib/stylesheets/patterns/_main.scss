@@ -16,7 +16,7 @@
 }
 
 .rs-sidebar {
-  width: 280px;
+  width: 230px;
   position: absolute;
 
   .rs-inner {
@@ -28,6 +28,7 @@
   }
 
   &.rs-pull-right {
+    width: 280px;
     right: 0;
 
     .rs-inner {
@@ -52,7 +53,7 @@
   }
 
   .rs-main .rs-sidebar + & {
-    margin-left: 280px;
+    margin-left: 230px;
   }
 
   .rs-main .rs-sidebar.rs-pull-right + & {
