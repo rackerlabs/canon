@@ -169,6 +169,19 @@ input::-moz-focus-inner {
   }
 }
 
+.rs-delete {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+
+  @include inline-block;
+  @include icon-sprite(minus-circle-808080);
+}
+
 .rs-caret {
   width: 10px;
   height: 10px;
