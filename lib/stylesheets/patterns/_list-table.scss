@@ -226,3 +226,8 @@ td {
     left: -5px;
   }
 }
+
+/* Loading Error */
+.rs-table-overlay-error .rs-table-overlay-message {
+  color: $red400;
+}
