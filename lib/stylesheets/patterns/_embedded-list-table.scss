@@ -1,0 +1,39 @@
+.rs-embedded-list-table {
+  border: 1px solid #eee;
+  & tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.rs-embedded-list-table-wrapper {
+  border: 1px solid #eee;
+  overflow: auto;
+  .rs-embedded-list-table {
+    margin-bottom: 0;
+    border: none;
+  }
+}
+
+.rs-embedded-mini {
+  max-height: 115px;
+}
+
+.rs-embedded-small {
+  max-height: 230px;
+}
+
+.rs-embedded-medium {
+  max-height: 345px;
+}
+
+.rs-embedded-large {
+  max-height: 460px;
+}
+
+.rs-embedded-xlarge {
+  max-height: 575px;
+}
+
+.rs-embedded-xxlarge {
+  max-height: 700px;
+}
