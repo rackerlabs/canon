@@ -56,6 +56,7 @@ textarea {
 
 input[type="text"],
 input[type="password"],
+select,
 textarea {
   padding: 2px 4px;
   height: 25px;
@@ -63,7 +64,6 @@ textarea {
 
   @include inline-block;
   @include border-radius(3px);
-  @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.15) inset);
 
   &:focus,
   &.focus {
@@ -84,6 +84,12 @@ textarea {
     background-color: $white;
     border: 1px solid $grey300;
   }
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.15) inset);
 }
 
 select[multiple] {
