@@ -59,11 +59,31 @@ input[type="password"],
 textarea {
   padding: 2px 4px;
   height: 25px;
-  border: 1px solid $grey300;
+  border: 1px solid $grey400;
 
   @include inline-block;
   @include border-radius(3px);
   @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.15) inset);
+
+  &:focus,
+  &.focus {
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
+    background-color: #f1f6ff;
+    border: 2px solid $blue400;
+    outline: none;
+  }
+
+  &[readonly],
+  &[disabled] {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    color: #999;
+    background-color: $white;
+    border: 1px solid $grey300;
+  }
 }
 
 select[multiple] {
