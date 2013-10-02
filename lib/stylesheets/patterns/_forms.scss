@@ -67,12 +67,10 @@ textarea {
 
   &:focus,
   &.focus {
-    margin-top: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
     background-color: #f1f6ff;
-    border: 2px solid $blue400;
     outline: none;
+
+    @include box-shadow(0 0 0 2px $blue400);
   }
 
   &[readonly],
@@ -90,6 +88,16 @@ input[type="text"],
 input[type="password"],
 textarea {
   @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.15) inset);
+
+  &:focus,
+  &.focus {
+    border-color: rgba(0, 0, 0, 0.15);
+
+    @include box-shadow(
+      0 0 0 2px $blue400,
+      0 1px 3px 0 rgba(0, 0, 0, 0.15) inset
+    );
+  }
 }
 
 select[multiple] {
