@@ -28,3 +28,9 @@ $icon-spacing: 10px;
   @include icon-sprite(help);
   margin-left: 5px;
 }
+
+.rs-icon-error-indicator {
+  @include icon;
+  @include icon-sprite(exclamation-sign);
+  margin-left: 5px;
+}

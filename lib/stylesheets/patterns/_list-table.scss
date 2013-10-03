@@ -230,4 +230,8 @@ td {
 /* Loading Error */
 .rs-table-overlay-error .rs-table-overlay-message {
   color: $red400;
+
+  .rs-icon-error-indicator {
+    margin: 1px 5px 0 0;
+  }
 }
