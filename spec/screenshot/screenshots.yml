@@ -17,6 +17,8 @@ screenshots:
     url: list-table-empty.html
   - name: Embedded List Table
     url: embedded-list-table.html
+  - name: Embedded List Table Empty
+    url: embedded-list-table-empty.html
   - name: Menu
     url: menu.html
   - name: Popover
