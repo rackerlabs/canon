@@ -15,6 +15,8 @@ screenshots:
     url: list-table-loading.html
   - name: List Table Empty
     url: list-table-empty.html
+  - name: List Table Error
+    url: list-table-error.html
   - name: Menu
     url: menu.html
   - name: Popover
