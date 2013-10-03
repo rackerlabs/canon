@@ -1,13 +1,21 @@
 .rs-embedded-list-table-wrapper {
   border: 1px solid #eee;
   overflow: auto;
+}
 
-  .rs-embedded-list-table {
-    margin-bottom: 0;
+.rs-embedded-list-table {
+  margin-bottom: 0;
+  height: 115px;
 
-    & tr:last-child td {
-      border-bottom: none;
-    }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .rs-table-overlay-subtitle {
+    color: #666;
+    font-weight: 600;}
+  .rs-table-overlay-message {
+    margin-top: 0;
   }
 }
 
