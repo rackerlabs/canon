@@ -1,16 +1,13 @@
-.rs-embedded-list-table {
-  border: 1px solid #eee;
-  & tr:last-child td {
-    border-bottom: none;
-  }
-}
-
 .rs-embedded-list-table-wrapper {
   border: 1px solid #eee;
   overflow: auto;
+
   .rs-embedded-list-table {
     margin-bottom: 0;
-    border: none;
+
+    & tr:last-child td {
+      border-bottom: none;
+    }
   }
 }
 
