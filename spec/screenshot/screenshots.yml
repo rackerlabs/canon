@@ -3,8 +3,12 @@ screenshots:
     url: buttons.html
   - name: Detail View
     url: detail-view.html
-  - name: Forms
-    url: forms.html
+  - name: Form
+    url: form.html
+  - name: Form (Horizontal)
+    url: form-horizontal.html
+  - name: Form (Create)
+    url: form-create.html
   - name: Layout (Fixed)
     url: layout-fixed.html
   - name: Layout (Responsive)
