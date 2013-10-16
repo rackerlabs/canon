@@ -1,0 +1,41 @@
+.rs-embedded-list-table-wrapper {
+  border: 1px solid #eee;
+  overflow: auto;
+}
+
+.rs-embedded-list-table {
+  margin-bottom: 0;
+  height: 115px;
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .rs-table-overlay-subtitle {
+    color: #666;
+    font-weight: 600;
+  }
+  .rs-table-overlay-message {
+    margin-top: 0;
+  }
+}
+
+.rs-embedded-small {
+  max-height: 185px;
+}
+
+.rs-embedded-medium {
+  max-height: 365px;
+}
+
+.rs-embedded-large {
+  max-height: 460px;
+}
+
+.rs-embedded-xlarge {
+  max-height: 555px;
+}
+
+.rs-embedded-xxlarge {
+  max-height: 720px;
+}
