@@ -49,11 +49,9 @@
 .rs-table-status {
   padding: 0;
   width: 10px;
-  border-right: 1px solid #eee;
 }
 
 .rs-table-header.rs-table-status {
-  border-right: 1px solid transparent;
   &:before {
     content: '\00A0 ';
     width: 10px;
@@ -224,5 +222,14 @@ td {
     width: 100%;
     position: relative;
     left: -5px;
+  }
+}
+
+/* Loading Error */
+.rs-table-overlay-error .rs-table-overlay-message {
+  color: $red400;
+
+  .rs-icon-error-indicator {
+    margin: 1px 5px 0 0;
   }
 }
