@@ -132,7 +132,10 @@
       color: #ccc;
       padding: 2px 15px;
       text-decoration: none;
-      font-weight: bold;
+
+      .rs-icon-external-dark {
+        visibility: hidden;
+      }
 
       &:hover,
       &.hover {
@@ -140,6 +143,8 @@
         background-color: #444;
 
         .rs-icon-external-dark {
+          visibility: visible;
+
           @include icon-sprite(external-dark-hover);
         }
       }
