@@ -102,11 +102,13 @@ textarea {
   }
 }
 
-select {
+select:not([multiple]) {
   background-color: $white;
+  @include background-image(linear-gradient($white, #dedede));
 }
 
 select[multiple] {
+  background-color: $white;
   height: auto;
 }
 
