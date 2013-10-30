@@ -1,3 +1,15 @@
+## v1.3.0 (October 30, 2013)
+- Add delete button.
+- Add delete cell to list table.
+- Add embedded list pattern.
+- Add back link for use in layouts.
+- Reduce width of left sidebar.
+- Minor margin tweaks to buttons and tables.
+- Minor style tweaks to the utility dropdown menu.
+- Improve focus and disabled states for inputs.
+- Update select to match other input styles.
+- Remove Ruby remnants of old build system.
+
 ## v1.2.0 (September 18, 2013)
 - Remove bottom margin from H4-H6 headers.
 - Fix bug where sidebar caused float issues.
@@ -14,7 +26,7 @@
 - Properly align static text in a form through .rs-controls-static.
 - Add caret to utility nav dropdowns.
 - Add hover state for primary nav dropdowns.
-- Fix bug where overflowing content (popovers, menu) was not visible. 
+- Fix bug where overflowing content (popovers, menu) was not visible.
 - Replace build system with Grunt.
 - Replace test runner with Karma.
 
