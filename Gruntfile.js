@@ -121,7 +121,8 @@ module.exports = function (grunt) {
               connect.static('examples'),
               connect.directory('examples')
             ];
-          }
+          },
+          port: process.env.CANON_PORT || 8000,
         }
       }
     },
