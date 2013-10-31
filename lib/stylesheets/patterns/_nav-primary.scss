@@ -38,6 +38,7 @@
 				text-decoration: none;
 				text-shadow: 0 1px $white;
 				border-bottom: 2px solid transparent;
+				position: relative;
 	  	}
 
 
@@ -52,11 +53,14 @@
 	  		display: inline-block;
 	  		width: 13px;
 			  height: 13px;
-			  margin: 0 0 0 10px;
 			  vertical-align: text-bottom;
+			  position: absolute;
+			  top: 50%;
+			  right: -24px;
 	  	}
 
 	  	&.rs-dropdown {
+	  		margin-right: 40px;
 	  		.rs-caret {
 	  			@include icon-sprite(caret-primary);
 	  		}
