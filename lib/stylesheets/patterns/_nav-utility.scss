@@ -1,4 +1,8 @@
-// Utility Nav
+// TODO:
+// - Is .rs-container > .rs-nav necessary?
+// - Handle pull right.
+// - Test without classes.
+
 .rs-nav-utility {
 	min-height: $app-nav-utility-height;
 	font-size: 12px;
@@ -11,46 +15,6 @@
 	.rs-container > .rs-nav {
 		float: left;
 
-		& > li {
-			position: relative;
-			margin: 0 30px 0 0;
-
-			& > a {
-				padding: 2px 0 1px;
-				color: $grey;
-				position: relative;
-				border: 1px solid transparent;
-			}
-
-      &:hover > a,
-			&.hover > a,
-			&.active > a {
-				color: $grey300;
-			}
-
-			.rs-caret {
-				display: inline-block;
-	  		width: 9px;
-			  height: 10px;
-			  margin: 0 0 0 5px;
-			  vertical-align: text-bottom;
-			}
-
-			&.rs-dropdown {
-	  		.rs-caret {
-	  			@include icon-sprite(caret-nav-down-999);
-	  		}
-	  	}
-
-      &.rs-dropdown:hover,
-			&.rs-dropdown.hover,
-	  	&.rs-dropdown.active {
-	  		.rs-caret {
-	  			@include icon-sprite(caret-nav-down-fff);
-	  		}
-	  	}
-		}
-
 		&.rs-pull-right {
 			float: right;
 
@@ -58,5 +22,47 @@
 				margin: 0 0 0 30px;
 			}
 		}
+	}
+
+	.rs-nav-link {
+		padding: 2px 0 1px;
+		color: $grey;
+		position: relative;
+		border: 1px solid transparent;
+	}
+
+	.rs-caret {
+		display: inline-block;
+		width: 9px;
+	  height: 10px;
+	  margin: 0 0 0 5px;
+	  vertical-align: text-bottom;
+	}
+
+	.rs-nav-item {
+		position: relative;
+		margin: 0 30px 0 0;
+
+    &:hover,
+		&.hover,
+		&.active {
+			.rs-nav-link {
+				color: $grey300;
+			}
+		}
+
+		&.rs-dropdown {
+  		.rs-caret {
+  			@include icon-sprite(caret-nav-down-999);
+  		}
+  	}
+
+    &.rs-dropdown:hover,
+		&.rs-dropdown.hover,
+  	&.rs-dropdown.active {
+  		.rs-caret {
+  			@include icon-sprite(caret-nav-down-fff);
+  		}
+  	}
 	}
 }
