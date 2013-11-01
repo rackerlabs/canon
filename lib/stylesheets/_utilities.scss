@@ -22,6 +22,11 @@
   font-weight: normal;
 }
 
+.rs-key-divider {
+  content: '\B7';
+  margin: 0 10px;
+}
+
 %last-child {
   & > *:last-child {
     padding-bottom: 0;

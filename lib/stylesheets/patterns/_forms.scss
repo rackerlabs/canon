@@ -298,3 +298,29 @@ textarea {
     @include icon-sprite(exclamation-sign);
   }
 }
+
+.rs-create-item {
+  margin: 0 0 10px;
+
+  @include micro-clearfix;
+
+  &.success {
+    @extend .rs-control-group.success;
+  }
+
+  &.error {
+    @extend .rs-control-group.error;
+  }
+}
+
+.rs-create-key {
+  width: 160px;
+  clear: left;
+  float: left;
+  color: $grey600;
+  text-align: right;
+}
+
+.rs-create-value {
+  margin-left: 180px;
+}
