@@ -51,7 +51,7 @@
 
 	  	.rs-caret {
 	  		display: inline-block;
-	  		width: 13px;
+	  		width: 24px;
 			  height: 13px;
 			  vertical-align: text-bottom;
 			  position: absolute;
@@ -62,11 +62,23 @@
 	  	&.rs-dropdown {
 	  		margin-right: 40px;
 	  		.rs-caret {
-	  			@include icon-sprite(caret-primary);
+	  			@include icon-sprite-position(caret-primary, 9px)
 	  		}
 
 	  		.rs-dropdown-menu {
 	  			margin-top: -2px;
+	  		}
+
+	  		&.active {
+	  			margin-right: 20px;
+	  		}
+
+	  		&.active .rs-caret {
+	  			right: -4px;
+	  		}
+
+	  		&.active > a {
+	  			padding-right: 20px;
 	  		}
 	  	}
 
@@ -74,7 +86,7 @@
       &.rs-dropdown.hover,
 	  	&.rs-dropdown.active {
 	  		.rs-caret {
-	  			@include icon-sprite(caret-primary-active);
+	  			@include icon-sprite-position(caret-primary-active, 9px);
 	  		}
 	  	}
 	  }
