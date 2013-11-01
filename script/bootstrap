@@ -2,7 +2,7 @@
 
 require 'open3'
 
-REQUIRED_RUBY_VERSION = /1.9.*/
+REQUIRED_RUBY_VERSION = /2.0.*/
 REQUIRED_NODE_VERSION = /0.[678(10)].*/
 REQUIRED_PHANTOM_JS_VERSION = /1.[789].*/
 
@@ -39,7 +39,7 @@ Before you get started contributing to Canon, let's make sure that your
 development environment has all the necessary dependencies. This script will:
 
   - Check for RVM or rbenv
-  - Check for Ruby 1.9.x
+  - Check for Ruby 2.0.x
   - Check for Node 0.6.0 or higher
   - Check for PhantomJS 1.7.0 or higher
   - Install Grunt
@@ -69,7 +69,7 @@ def check_ruby_version
   puts grey('>> Checking Ruby version...')
 
   unless REQUIRED_RUBY_VERSION.match(RUBY_VERSION)
-    abort red("\n   Canon requires Ruby 1.9.x. Please update Ruby and try again.\n")
+    abort red("\n   Canon requires Ruby 2.0.x. Please update Ruby and try again.\n")
   end
 end
 

@@ -8,7 +8,7 @@ elements and contribute code back to the project.**
 
 ## SYSTEM REQUIREMENTS
 
-- Ruby 1.9.x
+- Ruby 2.0.x
 - Node 0.6 or higher
 - PhantomJS 1.7 or higher
 - ImageMagick 6.5.x or 6.6.x
