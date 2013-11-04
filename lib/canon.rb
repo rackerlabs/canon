@@ -22,6 +22,10 @@ module Canon
       environment == 'test'
     end
 
+    def root_path
+      File.expand_path('../..', __FILE__)
+    end
+
     def dist_path
       File.join(root_path, 'dist')
     end

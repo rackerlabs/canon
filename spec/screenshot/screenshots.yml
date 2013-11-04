@@ -23,8 +23,12 @@ screenshots:
     url: list-table-error.html
   - name: Embedded List Table
     url: embedded-list-table.html
+  - name: Embedded List Table Loading
+    url: embedded-list-table-loading.html
   - name: Embedded List Table Empty
     url: embedded-list-table-empty.html
+  - name: Embedded List Table Error
+    url: embedded-list-table-error.html
   - name: Menu
     url: menu.html
   - name: Popover
