@@ -35,6 +35,7 @@
 		&:hover,
     &.hover,
     &.active {
+      & > a,
     	.rs-nav-link {
 				color: $nav-primary-link-active;
 	      border-bottom: 2px solid $red;
@@ -60,6 +61,7 @@
   	}
   }
 }
+
 
 .rs-nav-brand {
 	float: left;

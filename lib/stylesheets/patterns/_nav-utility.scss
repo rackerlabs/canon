@@ -46,6 +46,7 @@
     &:hover,
 		&.hover,
 		&.active {
+      & > a,
 			.rs-nav-link {
 				color: $grey300;
 			}
