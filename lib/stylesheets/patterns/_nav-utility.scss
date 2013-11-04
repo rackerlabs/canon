@@ -1,8 +1,3 @@
-// TODO:
-// - Is .rs-container > .rs-nav necessary?
-// - Handle pull right.
-// - Test without classes.
-
 .rs-nav-utility {
 	min-height: $app-nav-utility-height;
 	font-size: 12px;
@@ -12,7 +7,7 @@
 	font-smoothing: antialiased;
 	z-index: $zindexNavUtility;
 
-	.rs-container > .rs-nav {
+	.rs-nav {
 		float: left;
 
 		&.rs-pull-right {
