@@ -21,13 +21,26 @@
 		position: relative;
 	}
 
-	.rs-caret {
-		display: inline-block;
-		width: 13px;
-	  height: 13px;
-	  margin: 0 0 0 10px;
-	  vertical-align: text-bottom;
-	}
+  .rs-caret {
+    display: inline-block;
+    width: 27px;
+    height: 13px;
+    vertical-align: text-bottom;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    margin-top: -1px;
+    @include icon-sprite-position(caret-primary, 16px);
+
+    &:before {
+      content: "";
+      display: block;
+      width: 27px;
+      height: 14px;
+      position: relative;
+      top: -14px;
+    }
+  }
 
 	.rs-nav-item {
   	margin: 0 20px;
@@ -45,17 +58,6 @@
 
   	&.rs-dropdown {
   		margin-right: 46px;
-
-  		.rs-caret {
-				display: inline-block;
-				width: 27px;
-				height: 13px;
-				vertical-align: text-bottom;
-				position: absolute;
-				top: 50%;
-				right: -25px;
-				@include icon-sprite-position(caret-primary, 16px)
-  		}
 
   		.rs-dropdown-menu {
   			margin-top: -2px;
