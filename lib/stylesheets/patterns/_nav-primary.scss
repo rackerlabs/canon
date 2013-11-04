@@ -29,7 +29,6 @@
     position: absolute;
     top: 50%;
     right: -25px;
-    margin-top: -1px;
     @include icon-sprite-position(caret-primary, 16px);
 
     &:before {
