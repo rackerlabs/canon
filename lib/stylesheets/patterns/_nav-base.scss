@@ -1,0 +1,25 @@
+.rs-nav {
+  list-style: none;
+  margin: 0;
+  @include micro-clearfix();
+}
+
+.rs-nav-item {
+  float: left
+}
+
+.rs-nav-link {
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.rs-nav > li {
+  @extend .rs-nav-item;
+}
+
+.rs-nav > li > a {
+  @extend .rs-nav-link;
+}
