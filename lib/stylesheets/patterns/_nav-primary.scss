@@ -55,6 +55,15 @@
     	}
     }
 
+    &.disabled {
+      & > a,
+      .rs-nav-link {
+        color: #bbb;
+        cursor: default;
+        border-bottom: none;
+      }
+    }
+
   	&.rs-dropdown {
   		margin-right: 46px;
 

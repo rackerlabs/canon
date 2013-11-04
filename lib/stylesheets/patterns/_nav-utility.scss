@@ -43,9 +43,17 @@
 		&.active {
       & > a,
 			.rs-nav-link {
-				color: $grey300;
+				color: $white;
 			}
 		}
+
+    &.disabled {
+      & > a,
+      .rs-nav-link {
+        color: $grey500;
+        cursor: default;
+      }
+    }
 
 		&.rs-dropdown {
   		.rs-caret {
