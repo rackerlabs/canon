@@ -59,6 +59,10 @@
   		.rs-caret {
   			@include icon-sprite(caret-nav-down-999);
   		}
+
+      .rs-dropdown-menu {
+        margin-top: 1px;
+      }
   	}
 
     &.rs-dropdown:hover,
