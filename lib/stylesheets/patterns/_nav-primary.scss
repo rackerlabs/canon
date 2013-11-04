@@ -70,7 +70,7 @@
   			right: 1px;
   		}
 
-  		&.active > a, .rs-nav-link {
+  		&.active > a, &.active .rs-nav-link {
   			padding-right: 26px;
   		}
   	}
