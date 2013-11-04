@@ -68,5 +68,11 @@
   			@include icon-sprite(caret-nav-down-fff);
   		}
   	}
+
+    &.rs-dropdown.disabled {
+      .rs-caret {
+        display: none;
+      }
+    }
 	}
 }

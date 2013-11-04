@@ -91,6 +91,12 @@
   			@include icon-sprite-position(caret-primary-active, 16px);
   		}
   	}
+
+    &.rs-dropdown.disabled {
+      .rs-caret {
+        display: none;
+      }
+    }
   }
 }
 
