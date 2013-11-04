@@ -1,28 +1,3 @@
-.rs-footer-link {
-  float: left;
-}
-
-.rs-footer-link + .rs-footer-link {
-  padding: 0 0 0 10px;
-}
-
-.rs-footer-link + .rs-footer-link:before {
-  padding-right: 10;
-  content: "\2022";
-}
-
-.rs-footer-links {
-  float: left;
-  margin: 0;
-  padding: 7px 0;
-  color: #999;
-  list-style: none;
-}
-
-.rs-footer-links.rs-pull-right {
-  float: right;
-}
-
 .rs-footer,
 .rs-nav-footer {
   color: #999;
@@ -33,12 +8,42 @@
     color: #999;
   }
 
+  .rs-nav {
+    float: left;
+    padding: 7px 0;
+  }
+
+  .rs-nav.rs-pull-right {
+    float: right;
+  }
+
+  .rs-nav-item {
+    float: left;
+  }
+
+  .rs-nav-item + .rs-nav-item {
+    padding: 0 0 0 10px;
+  }
+
+  .rs-nav-item + .rs-nav-item:before {
+    padding-right: 10px;
+    content: "\2022";
+  }
+
+  .rs-nav-item a {
+    display: inline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .rs-link {
     display: inline-block;
     margin: 0;
     padding: 7px 0;
 
-    @extend .rs-footer-link;
+    @extend .rs-nav-item;
   }
 
   .rs-link.rs-pull-right {
@@ -46,10 +51,14 @@
   }
 
   .rs-links {
-    @extend .rs-footer-links;
+    @extend .rs-nav;
   }
 
   .rs-links > li {
-    @extend .rs-footer-link;
+    @extend .rs-nav-item;
+  }
+
+  .rs-container .rs-links > li > a {
+    display: inline;
   }
 }
