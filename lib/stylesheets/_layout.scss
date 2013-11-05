@@ -20,12 +20,9 @@ body {
 
 // .rs-push must be the same height as .rs-footer
 .rs-push,
-.rs-footer {
+.rs-footer,
+.rs-nav-footer {
   height: $app-footer-height;
-}
-
-.rs-footer {
-  background: $grey-darker;
 }
 
 .rs-container {

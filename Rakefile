@@ -1,9 +1,4 @@
-require 'ci/reporter/rake/rspec'
-require 'compass'
 require 'fog'
-require 'rspec/core/rake_task'
-require 'sprockets'
-require 'sprockets/sass'
 
 require File.expand_path('../lib/canon', __FILE__)
 require File.expand_path('../lib/tasks/log', __FILE__)

@@ -1,34 +1,64 @@
-.rs-footer {
+.rs-footer,
+.rs-nav-footer {
   color: #999;
   font-size: 12px;
+  background: $grey-darker;
 
   a {
     color: #999;
   }
 
+  .rs-nav {
+    float: left;
+    padding: 7px 0;
+  }
+
+  .rs-nav.rs-pull-right {
+    float: right;
+  }
+
+  .rs-nav-item {
+    float: left;
+  }
+
+  .rs-nav-item + .rs-nav-item {
+    padding: 0 0 0 10px;
+  }
+
+  .rs-nav-item + .rs-nav-item:before {
+    padding-right: 10px;
+    content: "\2022";
+  }
+
+  .rs-nav-item a {
+    display: inline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .rs-link {
+    display: inline-block;
     margin: 0;
     padding: 7px 0;
-    display: inline-block;
+
+    @extend .rs-nav-item;
+  }
+
+  .rs-link.rs-pull-right {
+    float: right;
   }
 
   .rs-links {
-    margin: 0;
-    padding: 7px 0;
-    float: left;
-    list-style: none;
+    @extend .rs-nav;
+  }
 
-    & > li {
-      float: left;
-    }
+  .rs-links > li {
+    @extend .rs-nav-item;
+  }
 
-    & > li + li {
-      padding: 0 0 0 10px;
-    }
-
-    & > li + li:before {
-      padding-right: 10px;
-      content: "\2022";
-    }
+  .rs-container .rs-links > li > a {
+    display: inline;
   }
 }

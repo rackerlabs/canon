@@ -1,6 +1,6 @@
 module Canon
   MAJOR = 1
-  MINOR = 2
+  MINOR = 3
   PATCH = 0
   PRE = nil
 
@@ -20,6 +20,10 @@ module Canon
 
     def test?
       environment == 'test'
+    end
+
+    def root_path
+      File.expand_path('../..', __FILE__)
     end
 
     def dist_path

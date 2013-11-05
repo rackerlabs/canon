@@ -1,20 +1,3 @@
-// base class
-.rs-nav {
-	list-style: none;
-	margin: 0;
-	@include micro-clearfix();
-	& > li {
-		float: left;
-		& > a {
-	  	display: block;
-	  	&:hover {
-	  		text-decoration: none;
-	  	}
-		}
-	}
-}
-
-// main nav
 .rs-nav-primary {
 	min-height: $app-nav-primary-height;
 	z-index: $zindexNavPrimary;
@@ -23,61 +6,101 @@
 	.rs-nav {
 		@include seam;
 		padding: 30px 0 10px 0;
-
-	  & > li {
-	  	margin: 0 20px;
-			border: 1px solid transparent;
-
-	  	& > a {
-	  		line-height: 1em;
-	  		padding: 8px 0 2px 0;
-				color: $nav-primary-link;
-				font-size: 18px;
-				font-weight: 400;
-				font-family: $alt-font-family;
-				text-decoration: none;
-				text-shadow: 0 1px $white;
-				border-bottom: 2px solid transparent;
-	  	}
-
-
-      &:hover > a,
-      &.hover > a,
-      &.active > a {
-        color: $nav-primary-link-active;
-        border-bottom: 2px solid $red;
-      }
-
-	  	.rs-caret {
-	  		display: inline-block;
-	  		width: 13px;
-			  height: 13px;
-			  margin: 0 0 0 10px;
-			  vertical-align: text-bottom;
-	  	}
-
-	  	&.rs-dropdown {
-	  		.rs-caret {
-	  			@include icon-sprite(caret-primary);
-	  		}
-
-	  		.rs-dropdown-menu {
-	  			margin-top: -2px;
-	  		}
-	  	}
-
-      &.rs-dropdown:hover,
-      &.rs-dropdown.hover,
-	  	&.rs-dropdown.active {
-	  		.rs-caret {
-	  			@include icon-sprite(caret-primary-active);
-	  		}
-	  	}
-	  }
 	}
+
+	.rs-nav-link {
+		line-height: 1em;
+		padding: 8px 0 2px 0;
+		color: $nav-primary-link;
+		font-size: 18px;
+		font-weight: 400;
+		font-family: $alt-font-family;
+		text-decoration: none;
+		text-shadow: 0 1px $white;
+		border-bottom: 2px solid transparent;
+		position: relative;
+	}
+
+  .rs-caret {
+    display: inline-block;
+    width: 27px;
+    height: 13px;
+    vertical-align: text-bottom;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    @include icon-sprite-position(caret-primary, 16px);
+
+    &:before {
+      content: "";
+      display: block;
+      width: 27px;
+      height: 14px;
+      position: relative;
+      top: -14px;
+    }
+  }
+
+	.rs-nav-item {
+  	margin: 0 20px;
+		border: 1px solid transparent;
+
+		&:hover,
+    &.hover,
+    &.active {
+      & > a,
+    	.rs-nav-link {
+				color: $nav-primary-link-active;
+	      border-bottom: 2px solid $red;
+    	}
+    }
+
+    &.disabled {
+      & > a,
+      .rs-nav-link {
+        color: #bbb;
+        cursor: default;
+        border-bottom: none;
+        text-shadow: 0 1px #f5f5f5;
+      }
+    }
+
+  	&.rs-dropdown {
+  		margin-right: 46px;
+
+  		.rs-dropdown-menu {
+  			margin-top: -2px;
+  		}
+
+  		&.active {
+  			margin-right: 20px;
+  		}
+
+  		&.active .rs-caret {
+  			right: 1px;
+  		}
+
+  		&.active > a, &.active .rs-nav-link {
+  			padding-right: 26px;
+  		}
+  	}
+
+    &.rs-dropdown:hover,
+    &.rs-dropdown.hover,
+  	&.rs-dropdown.active {
+  		.rs-caret {
+  			@include icon-sprite-position(caret-primary-active, 16px);
+  		}
+  	}
+
+    &.rs-dropdown.disabled {
+      .rs-caret {
+        display: none;
+      }
+    }
+  }
 }
 
-// rackspace logo
 .rs-nav-brand {
 	float: left;
 	margin-top: 10px;
