@@ -1,3 +1,14 @@
+## v1.3.1 (November 5, 2013)
+- Support disabled states in navigation.
+- Adjust hover and active state for primary navigation items.
+- Fix bug where dropdown menu categories wrapped incorrectly.
+- Fix bug where table overlays caused incorrect height for embedded tables.
+- Break dependence of the navigation and footer on specific markup. Use of the
+  navigation and footer styles without the appropriate class names is DEPRECATED
+  and will be removed in a future version.
+- Update footer markup to be consistent with navigation. Use of the old footer
+  styles is DEPRECATED and will be removed in a future version.
+
 ## v1.3.0 (October 30, 2013)
 - Add delete button.
 - Add delete cell to list table.
