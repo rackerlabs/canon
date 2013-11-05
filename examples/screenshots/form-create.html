@@ -11,7 +11,7 @@
 <body class="rs-responsive" style="background: #fff;">
   <form class="rs-form-create">
     <fieldset>
-      <legend>Create Form</legend>
+      <legend>Create Form - Control Group</legend>
       <div class="rs-control-group">
         <label class="rs-control-label">One is a really long label that wraps, but Canon still works</label>
         <div class="rs-controls">
@@ -82,13 +82,21 @@
       </div>
     </fieldset>
     <fieldset>
-      <legend>Create Form Key Value</legend>
+      <legend>Create Form - Key Value</legend>
       <div class="rs-create-item">
         <label class="rs-create-key">Configuration One</label>
         <div class="rs-create-value">
           <span class="rs-quiet">Not Configured</span>
           <span class="rs-key-divider"></span>
-          <a href="#">Select Item...</a>
+          <a href="#">Select Item&hellip;</a>
+        </div>
+      </div>
+      <div class="rs-create-item">
+        <label class="rs-create-key">Configuration Two</label>
+        <div class="rs-create-value">
+          Configured Item
+          <span class="rs-key-divider"></span>
+          <a href="#">Select Item&hellip;</a>
         </div>
       </div>
       <div class="rs-create-item success">
@@ -96,71 +104,18 @@
         <div class="rs-create-value">
           Configured Item
           <span class="rs-key-divider"></span>
-          <a href="#">Select Item...</a>
-          <span class="rs-validation-inline"><i class="rs-validation-indicator"></i>Everything works!</span>
-        </div>
-      </div>
-
-      <div class="rs-create-item success">
-        <label class="rs-create-key">Two</label>
-        <div class="rs-create-value">
-          <select>
-            <option>One</option>
-            <option>Two</option>
-          </select>
+          <a href="#">Select Item&hellip;</a>
           <span class="rs-validation-inline"><i class="rs-validation-indicator"></i>Everything works!</span>
         </div>
       </div>
       <div class="rs-create-item error">
-        <label class="rs-create-key">Three</label>
+        <label class="rs-create-key">Configuration Two</label>
         <div class="rs-create-value">
-          <label class="rs-radio">
-            <input type="radio" name="three">
-            <strong>A</strong><br>
-            <span class="rs-help-block">A Sub</span>
-          </label>
-          <label class="rs-radio">
-            <input type="radio" name="three">
-            <strong>B</strong>
-            <span class="rs-help-block">B-Sub</span>
-          </label>
-          <span class="rs-validation-block"><i class="rs-validation-indicator"></i>You should at least select one item.</span>
+          <span class="rs-quiet">Not Configured</span>
+          <span class="rs-key-divider"></span>
+          <a href="#">Select Item&hellip;</a>
+          <span class="rs-validation-inline"><i class="rs-validation-indicator"></i>Nothing works!</span>
         </div>
-      </div>
-      <div class="rs-create-item">
-        <label class="rs-create-key">Four</label>
-        <div class="rs-create-value">
-          <input type="text"> GB
-          <span class="rs-help-block">This is some subtext.</span>
-        </div>
-      </div>
-      <div class="rs-create-item">
-        <label class="rs-create-key">Five</label>
-        <div class="rs-create-value">
-          <input type="text">
-          <select>
-            <option>One</option>
-            <option>One</option>
-          </select>
-        </div>
-      </div>
-      <div class="rs-create-item">
-        <label class="rs-create-key">Six</label>
-        <div class="rs-create-value">
-          <textarea></textarea>
-        </div>
-      </div>
-      <div class="rs-create-item">
-        <label class="rs-create-key">Seven</label>
-        <div class="rs-create-value">Text Content <button class="rs-edit"></button></div>
-      </div>
-      <div class="rs-create-item error">
-        <span class="rs-validation-block"><i class="rs-validation-indicator"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
       </div>
     </fieldset>
   </form>
