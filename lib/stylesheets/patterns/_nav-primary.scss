@@ -55,6 +55,16 @@
     	}
     }
 
+    &.disabled {
+      & > a,
+      .rs-nav-link {
+        color: #bbb;
+        cursor: default;
+        border-bottom: none;
+        text-shadow: 0 1px #f5f5f5;
+      }
+    }
+
   	&.rs-dropdown {
   		margin-right: 46px;
 
@@ -82,6 +92,12 @@
   			@include icon-sprite-position(caret-primary-active, 16px);
   		}
   	}
+
+    &.rs-dropdown.disabled {
+      .rs-caret {
+        display: none;
+      }
+    }
   }
 }
 

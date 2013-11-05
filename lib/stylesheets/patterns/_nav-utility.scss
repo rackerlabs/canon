@@ -1,64 +1,83 @@
 .rs-nav-utility {
-	min-height: $app-nav-utility-height;
-	font-size: 12px;
-	background: #333;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	z-index: $zindexNavUtility;
+  min-height: $app-nav-utility-height;
+  font-size: 12px;
+  background: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  z-index: $zindexNavUtility;
 
-	.rs-nav {
-		float: left;
+  .rs-nav {
+    float: left;
 
-		&.rs-pull-right {
-			float: right;
+    &.rs-pull-right {
+      float: right;
 
-			& > li {
-				margin: 0 0 0 30px;
-			}
-		}
-	}
+      & > li,
+      .rs-list-item {
+        margin: 0 0 0 30px;
+      }
+    }
+  }
 
-	.rs-nav-link {
-		padding: 2px 0 1px;
-		color: $grey;
-		position: relative;
-		border: 1px solid transparent;
-	}
+  .rs-nav-link {
+    padding: 2px 0 1px;
+    color: $grey;
+    position: relative;
+    border: 1px solid transparent;
+  }
 
-	.rs-caret {
-		display: inline-block;
-		width: 9px;
-	  height: 10px;
-	  margin: 0 0 0 5px;
-	  vertical-align: text-bottom;
-	}
+  .rs-caret {
+    display: inline-block;
+    width: 9px;
+    height: 10px;
+    margin: 0 0 0 5px;
+    vertical-align: text-bottom;
+  }
 
-	.rs-nav-item {
-		position: relative;
-		margin: 0 30px 0 0;
+  .rs-nav-item {
+    position: relative;
+    margin: 0 30px 0 0;
 
     &:hover,
-		&.hover,
-		&.active {
+    &.hover,
+    &.active {
       & > a,
-			.rs-nav-link {
-				color: $grey300;
-			}
-		}
+      .rs-nav-link {
+        color: $white;
+      }
+    }
 
-		&.rs-dropdown {
-  		.rs-caret {
-  			@include icon-sprite(caret-nav-down-999);
-  		}
-  	}
+    &.disabled {
+      & > a,
+      .rs-nav-link {
+        color: $grey500;
+        cursor: default;
+      }
+    }
+
+    &.rs-dropdown {
+      .rs-caret {
+        @include icon-sprite(caret-nav-down-999);
+      }
+
+      .rs-dropdown-menu {
+        margin-top: 1px;
+      }
+    }
 
     &.rs-dropdown:hover,
-		&.rs-dropdown.hover,
-  	&.rs-dropdown.active {
-  		.rs-caret {
-  			@include icon-sprite(caret-nav-down-fff);
-  		}
-  	}
-	}
+    &.rs-dropdown.hover,
+    &.rs-dropdown.active {
+      .rs-caret {
+        @include icon-sprite(caret-nav-down-fff);
+      }
+    }
+
+    &.rs-dropdown.disabled {
+      .rs-caret {
+        display: none;
+      }
+    }
+  }
 }
