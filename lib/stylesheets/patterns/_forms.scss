@@ -309,6 +309,12 @@ textarea {
 
   &.error {
     @extend .rs-control-group.error;
+
+    .rs-create-value,
+    .rs-quiet {
+      color: $red;
+    }
+
   }
 }
 
