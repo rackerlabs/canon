@@ -11,7 +11,7 @@
 <body class="rs-responsive" style="background: #fff;">
   <form class="rs-form-create">
     <fieldset>
-      <legend>Create Form</legend>
+      <legend>Create Form - Control Group</legend>
       <div class="rs-control-group">
         <label class="rs-control-label">One is a really long label that wraps, but Canon still works</label>
         <div class="rs-controls">
@@ -26,11 +26,39 @@
             <option>One</option>
             <option>Two</option>
           </select>
+          <span class="rs-help-inline">This is inline help text.</span>
           <span class="rs-validation-inline"><i class="rs-validation-indicator"></i>Everything works!</span>
         </div>
       </div>
       <div class="rs-control-group error">
         <label class="rs-control-label">Three</label>
+        <div class="rs-controls">
+          <select>
+            <option>One</option>
+            <option>Two</option>
+          </select>
+          <span class="rs-help-inline">This is inline help text.</span>
+          <span class="rs-validation-inline"><i class="rs-validation-indicator"></i>Nothing works!</span>
+        </div>
+      </div>
+      <div class="rs-control-group success">
+        <label class="rs-control-label">Four</label>
+        <div class="rs-controls">
+          <label class="rs-radio">
+            <input type="radio" name="three">
+            <strong>A</strong><br>
+            <span class="rs-help-block">A Sub</span>
+          </label>
+          <label class="rs-radio">
+            <input type="radio" name="three">
+            <strong>B</strong>
+            <span class="rs-help-block">B-Sub</span>
+          </label>
+          <span class="rs-validation-block"><i class="rs-validation-indicator"></i>Everything works!</span>
+        </div>
+      </div>
+      <div class="rs-control-group error">
+        <label class="rs-control-label">Five</label>
         <div class="rs-controls">
           <label class="rs-radio">
             <input type="radio" name="three">
@@ -46,14 +74,14 @@
         </div>
       </div>
       <div class="rs-control-group">
-        <label class="rs-control-label">Four</label>
+        <label class="rs-control-label">Six</label>
         <div class="rs-controls">
           <input type="text"> GB
           <span class="rs-help-block">This is some subtext.</span>
         </div>
       </div>
       <div class="rs-control-group">
-        <label class="rs-control-label">Five</label>
+        <label class="rs-control-label">Seven</label>
         <div class="rs-controls">
           <input type="text">
           <select>
@@ -63,13 +91,13 @@
         </div>
       </div>
       <div class="rs-control-group">
-        <label class="rs-control-label">Six</label>
+        <label class="rs-control-label">Eight</label>
         <div class="rs-controls">
           <textarea></textarea>
         </div>
       </div>
       <div class="rs-control-group">
-        <label class="rs-control-label">Seven</label>
+        <label class="rs-control-label">Nine</label>
         <div class="rs-controls-static">Text Content <button class="rs-edit"></button></div>
       </div>
       <div class="rs-control-group error">
@@ -79,6 +107,43 @@
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Create Form - Key Value</legend>
+      <div class="rs-create-item">
+        <label class="rs-create-key">Configuration One</label>
+        <div class="rs-create-value">
+          <span class="rs-quiet">Not Configured</span>
+          <span class="rs-key-divider"></span>
+          <a href="#">Select Item&hellip;</a>
+        </div>
+      </div>
+      <div class="rs-create-item">
+        <label class="rs-create-key">Configuration Two</label>
+        <div class="rs-create-value">
+          Configured Item
+          <span class="rs-key-divider"></span>
+          <a href="#">Select Item&hellip;</a>
+        </div>
+      </div>
+      <div class="rs-create-item success">
+        <label class="rs-create-key">Configuration Three</label>
+        <div class="rs-create-value">
+          Configured Item
+          <span class="rs-key-divider"></span>
+          <a href="#">Select Item&hellip;</a>
+          <span class="rs-validation-inline"><i class="rs-validation-indicator"></i>Everything works!</span>
+        </div>
+      </div>
+      <div class="rs-create-item error">
+        <label class="rs-create-key">Configuration Four</label>
+        <div class="rs-create-value">
+          <span class="rs-quiet">Not Configured</span>
+          <span class="rs-key-divider"></span>
+          <a href="#">Select Item&hellip;</a>
+          <span class="rs-validation-inline"><i class="rs-validation-indicator"></i>Nothing works!</span>
+        </div>
       </div>
     </fieldset>
   </form>

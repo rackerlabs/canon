@@ -285,7 +285,7 @@ textarea {
     }
   }
 
-  label,
+  .rs-controls,
   .rs-help-inline,
   .rs-help-block,
   .rs-validation-inline,
@@ -296,5 +296,41 @@ textarea {
   .rs-validation-indicator {
     @include icon(13px, 12px);
     @include icon-sprite(exclamation-sign);
+  }
+}
+
+.rs-create-item {
+  margin: 0 0 10px;
+
+  @include micro-clearfix;
+
+  &.success {
+    @extend .rs-control-group.success;
+  }
+
+  &.error {
+    @extend .rs-control-group.error;
+
+    .rs-create-value,
+    .rs-quiet {
+      color: $red;
+    }
+
+  }
+}
+
+.rs-create-key {
+  width: 160px;
+  clear: left;
+  float: left;
+  color: $grey600;
+  text-align: right;
+}
+
+.rs-create-value {
+  margin-left: 180px;
+
+  .rs-key-divider {
+    color: $grey600;
   }
 }
