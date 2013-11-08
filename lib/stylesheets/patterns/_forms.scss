@@ -299,16 +299,13 @@ textarea {
   }
 }
 
-.rs-create-item {
-  margin: 0 0 10px;
+.rs-detail-item {
 
-  @include micro-clearfix;
-
-  &.success {
+  .rs-form-create &.success {
     @extend .rs-control-group.success;
   }
 
-  &.error {
+  .rs-form-create &.error {
     @extend .rs-control-group.error;
 
     .rs-create-value,
@@ -319,18 +316,17 @@ textarea {
   }
 }
 
-.rs-create-key {
-  width: 160px;
-  clear: left;
-  float: left;
-  color: $grey600;
-  text-align: right;
-}
-
-.rs-create-value {
-  margin-left: 180px;
-
-  .rs-key-divider {
+.rs-form-create {
+  .rs-detail-key {
+    width: 160px;
     color: $grey600;
+  }
+
+  .rs-detail-value {
+    margin-left: 180px;
+
+    .rs-key-divider {
+      color: $grey600;
+    }
   }
 }
