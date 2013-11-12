@@ -25,12 +25,8 @@
 }
 
 .rs-detail-section-body {
-  padding: 30px 30px 0;
+  padding: 0 30px;
   margin: 0 0 30px;
-}
-
-.rs-detail-section-header + .rs-detail-section-body {
-  padding-top: 0px;
 }
 
 // Collapsible Detail Section
@@ -153,8 +149,7 @@
   }
 }
 
-.rs-create-header + .rs-detail-section .rs-detail-section-header,
-.rs-create-header + .rs-detail-section .rs-detail-section-body {
+.rs-create-header + .rs-detail-section .rs-detail-section-header {
   padding-top: 0;
 }
 
