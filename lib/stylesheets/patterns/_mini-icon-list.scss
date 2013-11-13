@@ -1,0 +1,42 @@
+/** Table Mini **/
+.rs-table-icon-list {
+	padding: 7px 8px;
+}
+
+.rs-icon-list {
+	padding: 0;
+	margin: 0;
+	min-width: 60px;
+	max-height: 24px;
+	overflow: hidden;
+}
+
+.rs-icon-list-item {
+	list-style-type: none;
+	float: left;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+}
+
+.rs-icon-mini {
+	width: 6px;
+	height: 6px;
+	margin: 3px;
+}
+
+.rs-status-ok {
+  background-color: $green !important;
+}
+
+.rs-status-warning {
+  background-color: $yellow !important;
+}
+
+.rs-status-error {
+  background-color: $red !important;
+}
+
+.rs-status-disabled {
+  background-color: $grey300 !important;
+}
