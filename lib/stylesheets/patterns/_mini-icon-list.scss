@@ -25,18 +25,18 @@
 	margin: 3px;
 }
 
-.rs-status-ok {
+.rs-icon-mini.rs-status-ok {
   background-color: $green !important;
 }
 
-.rs-status-warning {
+.rs-icon-mini.rs-status-warning {
   background-color: $yellow !important;
 }
 
-.rs-status-error {
+.rs-icon-mini.rs-status-error {
   background-color: $red !important;
 }
 
-.rs-status-disabled {
+.rs-icon-mini.rs-status-disabled {
   background-color: $grey300 !important;
 }
