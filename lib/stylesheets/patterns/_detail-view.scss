@@ -139,6 +139,29 @@
   @extend .rs-pull-right;
 }
 
+// Create Sections
+
+.rs-create-header {
+  padding: 30px 30px 0 30px;
+
+  & + .rs-detail-section {
+    border-top: 1px solid #fff;
+  }
+}
+
+.rs-create-header + .rs-detail-section .rs-detail-section-header {
+  padding-top: 0;
+}
+
+.rs-create-footer {
+  border-top: 1px solid #eee;
+
+  .rs-detail-section-body {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 // Detail List
 .rs-detail-list {
   margin: 0;

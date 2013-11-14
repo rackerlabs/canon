@@ -59,10 +59,6 @@ h1 {
 
 h2 {
   font-size: 28px;
-
-  &.rs-page-title {
-    color: $red;
-  }
 }
 
 h3 {
@@ -115,4 +111,11 @@ hr {
   margin: 0 0 $base-line-height;
   border: 0;
   border-top: 1px solid $grey-light;
+}
+
+// Typography Classes
+
+.rs-page-title {
+  color: $red;
+  @extend h2;
 }
