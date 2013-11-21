@@ -3,11 +3,11 @@
   @include box-shadow(#c2c2c2 0px 3px 8px 1px);
 }
 
-.rs-pull-left {
+.rs-pull-left, %rs-pull-left {
   float: left;
 }
 
-.rs-pull-right {
+.rs-pull-right, %rs-pull-right {
   float: right;
 }
 
