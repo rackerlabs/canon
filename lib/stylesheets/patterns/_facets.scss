@@ -1,0 +1,115 @@
+/* facets */
+
+.rs-sidebar.rs-facets .rs-inner {
+  margin: 0 20px 0 0;
+}
+
+.rs-facets .rs-page-title {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.rs-facet-section-title,
+.rs-facet-single-option .rs-facet-label {
+  font-family: $alt-font-family;
+  line-height: 1em;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rs-facet-single-option .rs-facet-count {
+  line-height: 12px;
+}
+
+.rs-facets .rs-facet-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.rs-facet-section-body .rs-facet-item div,
+.rs-facet-section-body i {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.rs-facet-section-body i {
+  margin-right: 10px;
+}
+
+.rs-facet-section, .rs-facet-section.collapsed {
+  margin-bottom: 11px;
+}
+
+.rs-facet-section.collapsed > .rs-facet-section-body {
+  display: none;
+}
+
+.rs-facet-section-header {
+  padding: 6px 0px 3px 0px;
+}
+
+.rs-facet-label {
+  max-width: 150px;
+}
+
+.rs-facet-item {
+  display: block;
+  cursor: pointer;
+  line-height: 15px;
+  padding: 4px 0px 2px 0px;
+}
+
+.rs-facet-item [class*="icon-"] + .rs-facet-label {
+  max-width: 127px;
+}
+
+.rs-facet-section > .rs-facet-section-header:hover,
+.rs-facet-section.collapsed > .rs-facet-section-header:hover, {
+  cursor: pointer;
+}
+
+.rs-facet-section.expanded > .rs-facet-section-header > .rs-caret,
+.rs-facet-section > .rs-facet-section-header > .rs-caret {
+  @include icon-sprite(facet-toggle-expanded);
+}
+
+.rs-facet-section.expanded > .rs-facet-section-header.hover > .rs-caret,
+.rs-facet-section.expanded > .rs-facet-section-header:hover > .rs-caret,
+.rs-facet-section > .rs-facet-section-header.hover > .rs-caret,
+.rs-facet-section > .rs-facet-section-header:hover > .rs-caret {
+  @include icon-sprite(facet-toggle-expanded-hover);
+}
+
+.rs-facet-section.collapsed > .rs-facet-section-header > .rs-caret {
+  @include icon-sprite(facet-toggle-collapsed);
+}
+
+.rs-facet-section.collapsed > .rs-facet-section-header.hover > .rs-caret,
+.rs-facet-section.collapsed > .rs-facet-section-header:hover > .rs-caret {
+  @include icon-sprite(facet-toggle-collapsed-hover);
+}
+
+.rs-facet-list-small {
+  max-height: 63px;
+  overflow: hidden;
+}
+
+.rs-facet-list-medium {
+  max-height: 105px;
+  overflow: hidden;
+}
+
+.rs-facet-list-large {
+  max-height: 168px;
+  overflow: hidden;
+}
+
+.rs-facet-list-small.expanded,
+.rs-facet-list-medium.expanded,
+.rs-facet-list-large.expanded {
+  overflow: visible;
+  max-height: none;
+}
