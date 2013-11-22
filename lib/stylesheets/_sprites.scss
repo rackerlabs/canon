@@ -34,3 +34,28 @@ $icon-spacing: 10px;
   @include icon-sprite(exclamation-sign);
   margin-left: 5px;
 }
+
+.rs-icon-status-ok {
+  @include icon;
+  @include icon-sprite(status-green);
+}
+
+.rs-icon-status-warning {
+  @include icon;
+  @include icon-sprite(status-yellow);
+}
+
+.rs-icon-status-error {
+  @include icon;
+  @include icon-sprite(status-red);
+}
+
+.rs-facet-checkbox {
+  @include icon;
+  @include icon-sprite(checkbox-unchecked);
+}
+
+.rs-facet-checkbox.checked {
+  @include icon;
+  @include icon-sprite(checkbox-checked);
+}
