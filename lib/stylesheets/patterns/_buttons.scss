@@ -169,6 +169,26 @@ input::-moz-focus-inner {
   }
 }
 
+.rs-plus {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+
+  @include inline-block;
+  @include icon-sprite(plus-dotted-grey);
+
+  &:active,
+  &.active,
+  &:hover,
+  &.hover {
+    @include icon-sprite(plus-dotted-blue);
+  }
+}
+
 .rs-delete {
   width: 16px;
   height: 16px;
