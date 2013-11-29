@@ -53,14 +53,14 @@ Sauce.config do |config|
   config[:browser] = browser
   config[:version] = version
   config[:start_tunnel] = true
-  config[:job_name] = ENV['JOB_NAME'] || 'Development'
-  config[:build] = ENV['BUILD_NUMBER']
+  config[:job_name] = ENV['TRAVIS_PULL_REQUEST'] || 'Development'
+  config[:build] = ENV['TRAVIS_BUILD_NUMBER']
   config['custom-data'] = {
     url: url,
     executor: Socket.gethostname,
     version: Canon.version,
     environment: Canon.environment,
-    branch: ENV['GIT_BRANCH'],
-    commit: ENV['GIT_COMMIT']
+    branch: ENV['TRAVIS_BRANCH'],
+    commit: ENV['TRAVIS_COMMIT']
   }
 end
