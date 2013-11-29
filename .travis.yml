@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+- "0.10"
+before_script:
+- "gem install bundler"
+- "npm install -g bower grunt-cli"
+- "bower install"
+- "bundle install"
