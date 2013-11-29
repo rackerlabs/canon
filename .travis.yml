@@ -10,3 +10,6 @@ before_script:
 - npm install -g bower grunt-cli
 - bower install
 - bundle install
+notifications:
+  email: false
+  irc: "chat.freenode.net#canon-dev"
