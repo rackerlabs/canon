@@ -18,7 +18,7 @@ elements and contribute code back to the project.**
 
 Setting up your Canon development environment is easy:
 
-    $ git clone https://github.rackspace.com/canon/canon.git
+    $ git clone https://github.com/rackerlabs/canon.git
     $ script/bootstrap
     $ grunt server
 
