@@ -26,7 +26,7 @@
   padding: 0 10px;
   color: #999;
   font-weight: normal;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $grey50;
 
   &.rs-table-status:before {
     content: '\00A0 ';
@@ -38,7 +38,7 @@
 .rs-table-cell,
 %rs-table-cell {
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $grey50;
 }
 
 .rs-table-text {
