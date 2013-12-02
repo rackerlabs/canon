@@ -158,7 +158,7 @@ textarea {
 }
 
 /* Create/Horizontal Forms */
-@mixin set-form-control-labels($label-width: 160px, $value-margin-left: 20px){
+@mixin set-form-control-labels($label-width: 100px, $value-margin-left: 20px){
   .rs-control-label {
     width: $label-width;
   }
@@ -191,20 +191,28 @@ textarea {
   // Variable Width Form Labels/Controls
   @include set-form-control-labels();
 
-  .rs-control-group-small {
+  .rs-control-group-xsmall {
     @include set-form-control-labels(60px);
   }
 
-  .rs-control-group-medium {
+  .rs-control-group-small {
     @include set-form-control-labels(80px);
   }
 
-  .rs-control-group-large {
+  .rs-control-group-medium {
     @include set-form-control-labels(100px);
   }
 
-  .rs-control-group-xlarge {
+  .rs-control-group-large {
     @include set-form-control-labels(120px);
+  }
+
+  .rs-control-group-xlarge {
+    @include set-form-control-labels(150px);
+  }
+
+  .rs-control-group-xxlarge {
+    @include set-form-control-labels(180px);
   }
 
   input[type="text"],
@@ -218,7 +226,7 @@ textarea {
 }
 
 /* Create Forms */
-@mixin set-form-key-values($label-width: 160px, $value-margin-left: 20px){
+@mixin set-form-key-values($label-width: 100px, $value-margin-left: 20px){
   .rs-detail-key {
     width: $label-width;
   }
@@ -266,20 +274,28 @@ textarea {
 
   @include set-form-key-values();
 
+  .rs-detail-item-xsmall {
+    @include set-form-key-values(60px);
+  }
+
   .rs-detail-item-small {
-    @include  set-form-key-values(60px);
+    @include set-form-key-values(80px);
   }
 
   .rs-detail-item-medium {
-    @include  set-form-key-values(80px);
+    @include set-form-key-values(100px);
   }
 
   .rs-detail-item-large {
-    @include  set-form-key-values(100px);
+    @include set-form-key-values(120px);
   }
 
   .rs-detail-item-xlarge {
-    @include  set-form-key-values(120px);
+    @include set-form-key-values(150px);
+  }
+
+  .rs-detail-item-xxlarge {
+    @include set-form-key-values(180px);
   }
 }
 
