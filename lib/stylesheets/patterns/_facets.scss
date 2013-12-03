@@ -35,20 +35,16 @@
   vertical-align: text-top;
 }
 
-.rs-facet-section-body i {
+.rs-facet-list i {
   margin-right: 10px;
 }
 
-.rs-facet-section, .rs-facet-section.collapsed {
+.rs-facet-section {
   margin-bottom: 11px;
 }
 
-.rs-facet-section.collapsed > .rs-facet-section-body {
-  display: none;
-}
-
 .rs-facet-section-header {
-  padding: 6px 0px 3px 0px;
+  padding: 6px 0px;
 }
 
 .rs-facet-label {
@@ -66,50 +62,53 @@
   max-width: 127px;
 }
 
-.rs-facet-section > .rs-facet-section-header:hover,
-.rs-facet-section.collapsed > .rs-facet-section-header:hover, {
-  cursor: pointer;
-}
-
-.rs-facet-section.expanded > .rs-facet-section-header > .rs-caret,
-.rs-facet-section > .rs-facet-section-header > .rs-caret {
-  @include icon-sprite(facet-toggle-expanded);
-}
-
-.rs-facet-section.expanded > .rs-facet-section-header.hover > .rs-caret,
-.rs-facet-section.expanded > .rs-facet-section-header:hover > .rs-caret,
-.rs-facet-section > .rs-facet-section-header.hover > .rs-caret,
-.rs-facet-section > .rs-facet-section-header:hover > .rs-caret {
-  @include icon-sprite(facet-toggle-expanded-hover);
-}
-
-.rs-facet-section.collapsed > .rs-facet-section-header > .rs-caret {
-  @include icon-sprite(facet-toggle-collapsed);
-}
-
-.rs-facet-section.collapsed > .rs-facet-section-header.hover > .rs-caret,
-.rs-facet-section.collapsed > .rs-facet-section-header:hover > .rs-caret {
-  @include icon-sprite(facet-toggle-collapsed-hover);
-}
-
-.rs-facet-list-small {
-  max-height: 63px;
-  overflow: hidden;
-}
-
-.rs-facet-list-medium {
+.rs-facet-section-small .rs-facet-list {
   max-height: 105px;
   overflow: hidden;
 }
 
-.rs-facet-list-large {
+.rs-facet-section-medium .rs-facet-list {
   max-height: 168px;
   overflow: hidden;
 }
 
-.rs-facet-list-small.expanded,
-.rs-facet-list-medium.expanded,
-.rs-facet-list-large.expanded {
+.rs-facet-section-large .rs-facet-list {
+  max-height: 315px;
+  overflow: hidden;
+}
+
+.rs-facet-section-small.expanded .rs-facet-list,
+.rs-facet-section-medium.expanded .rs-facet-list,
+.rs-facet-section-large.expanded .rs-facet-list {
   overflow: visible;
   max-height: none;
+}
+
+.rs-facet-section-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  height: 18px
+}
+
+.rs-facet-section-toggle .rs-arrow-blue {
+  margin-left: 4px;
+  margin-right: 1px;
+}
+
+.rs-facet-section-toggle .rs-arrow-blue:after {
+  content: 'more';
+  font-style: normal;
+  margin-left: 18px;
+}
+
+.rs-facet-section.expanded .rs-facet-section-toggle .rs-arrow-blue:after {
+  content: 'less' !important;
+  font-style: normal;
+  margin-left: 18px;
+}
+
+.rs-facet-section.expanded .rs-facet-section-toggle .rs-arrow-blue {
+  @include icon;
+  @include icon-sprite(arrow-blue-up);
 }
