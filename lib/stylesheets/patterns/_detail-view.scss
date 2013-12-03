@@ -1,5 +1,6 @@
-// Detail Section
-.rs-detail-section + .rs-detail-section {
+// Section View
+.rs-detail-section + .rs-detail-section,
+.rs-detail-header + .rs-detail-section {
   border-top: 1px solid #eee;
 }
 
@@ -114,7 +115,6 @@
 // Header Section
 .rs-detail-header {
   padding: 30px;
-  @extend .rs-detail-section;
 }
 
 .rs-detail-header-title,
@@ -136,7 +136,7 @@
 }
 
 .rs-detail-header-actions {
-  @extend .rs-pull-right;
+  @extend %rs-pull-right;
 }
 
 // Create Sections
