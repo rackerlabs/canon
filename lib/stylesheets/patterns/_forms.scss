@@ -111,8 +111,12 @@ textarea {
 }
 
 /* Input Sizes */
-.rs-input-mini {
+.rs-input-xsmall {
   width: 60px;
+}
+
+.rs-input-mini {
+  @extend .rs-input-xsmall
 }
 
 .rs-input-small {
