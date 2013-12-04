@@ -111,8 +111,12 @@ textarea {
 }
 
 /* Input Sizes */
-.rs-input-mini {
+.rs-input-xsmall {
   width: 60px;
+}
+
+.rs-input-mini {
+  @extend .rs-input-xsmall
 }
 
 .rs-input-small {
@@ -160,6 +164,16 @@ textarea {
 }
 
 /* Create/Horizontal Forms */
+@mixin set-form-control-labels($label-width: 100px, $value-margin-left: 20px){
+  .rs-control-label {
+    width: $label-width;
+  }
+  .rs-controls,
+  .rs-controls-static {
+    margin-left: $label-width + $value-margin-left;
+  }
+}
+
 .rs-form-horizontal,
 .rs-form-create {
   .rs-control-group,
@@ -173,17 +187,38 @@ textarea {
 
   .rs-control-label {
     float: left;
-    width: 160px;
     margin-top: 2px;
-  }
-
-  .rs-controls,
-  .rs-controls-static {
-    margin-left: 180px;
   }
 
   .rs-controls-static {
     padding-top: 2px;
+  }
+
+  // Variable Width Form Labels/Controls
+  @include set-form-control-labels();
+
+  .rs-control-group-xsmall {
+    @include set-form-control-labels(60px);
+  }
+
+  .rs-control-group-small {
+    @include set-form-control-labels(80px);
+  }
+
+  .rs-control-group-medium {
+    @include set-form-control-labels(100px);
+  }
+
+  .rs-control-group-large {
+    @include set-form-control-labels(120px);
+  }
+
+  .rs-control-group-xlarge {
+    @include set-form-control-labels(150px);
+  }
+
+  .rs-control-group-xxlarge {
+    @include set-form-control-labels(180px);
   }
 
   input[type="text"],
@@ -193,9 +228,19 @@ textarea {
   textarea {
     margin-bottom: 0;
   }
+
 }
 
 /* Create Forms */
+@mixin set-form-key-values($label-width: 100px, $value-margin-left: 20px){
+  .rs-detail-key {
+    width: $label-width;
+  }
+  .rs-detail-value {
+    margin-left: $label-width + $value-margin-left;
+  }
+}
+
 .rs-form-create {
   label:after {
     content: none;
@@ -224,16 +269,39 @@ textarea {
   }
 
   .rs-detail-key {
-    width: 160px;
     color: $grey600;
   }
 
   .rs-detail-value {
-    margin-left: 180px;
-
     .rs-key-divider {
       color: $grey600;
     }
+  }
+
+  @include set-form-key-values();
+
+  .rs-detail-item-xsmall {
+    @include set-form-key-values(60px);
+  }
+
+  .rs-detail-item-small {
+    @include set-form-key-values(80px);
+  }
+
+  .rs-detail-item-medium {
+    @include set-form-key-values(100px);
+  }
+
+  .rs-detail-item-large {
+    @include set-form-key-values(120px);
+  }
+
+  .rs-detail-item-xlarge {
+    @include set-form-key-values(150px);
+  }
+
+  .rs-detail-item-xxlarge {
+    @include set-form-key-values(180px);
   }
 }
 
