@@ -41,9 +41,8 @@
   .rs-link {
     display: inline-block;
     margin: 0;
+    float: left;
     padding: 7px 0;
-
-    @extend .rs-nav-item;
   }
 
   .rs-link.rs-pull-right {
@@ -51,11 +50,21 @@
   }
 
   .rs-links {
-    @extend .rs-nav;
+    float: left;
+    padding: 7px 0;
+    margin: 0;
   }
 
   .rs-links > li {
-    @extend .rs-nav-item;
+    float: left;
+    & + li {
+      padding: 0 0 0 10px;
+
+      &:before {
+        padding-right: 10px;
+        content: "\2022";
+      }
+    }
   }
 
   .rs-container .rs-links > li > a {

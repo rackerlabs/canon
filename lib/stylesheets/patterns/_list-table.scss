@@ -1,5 +1,6 @@
 /* Class-Based Styles */
-.rs-list-table {
+.rs-list-table,
+%rs-list-table {
   width: 100%;
   margin-bottom: 20px;
   font-size: $base-font-size;
@@ -9,29 +10,35 @@
   position: relative;
 }
 
-.rs-table-header,
-.rs-table-cell {
-  border-bottom: 1px solid #eee;
-}
-
-.rs-table-row {
+.rs-table-row,
+%rs-table-row {
   .rs-select-table &:hover,
   &.hover,
   &.selected {
-    .rs-table-cell {
+    .rs-table-cell, td {
       background-color: #f1f6ff;
     }
   }
 }
 
-.rs-table-header {
+.rs-table-header,
+%rs-table-header {
   padding: 0 10px;
   color: #999;
   font-weight: normal;
+  border-bottom: 1px solid $grey50;
+
+  &.rs-table-status:before {
+    content: '\00A0 ';
+    width: 10px;
+    display: block;
+  }
 }
 
-.rs-table-cell {
+.rs-table-cell,
+%rs-table-cell {
   padding: 10px;
+  border-bottom: 1px solid $grey50;
 }
 
 .rs-table-text {
@@ -49,14 +56,6 @@
 .rs-table-status {
   padding: 0;
   width: 10px;
-}
-
-.rs-table-header.rs-table-status {
-  &:before {
-    content: '\00A0 ';
-    width: 10px;
-    display: block;
-  }
 }
 
 .rs-table-checkbox {
@@ -110,19 +109,19 @@
 
 /* Table-Based Styles */
 table {
-  @extend .rs-list-table;
+  @extend %rs-list-table;
 }
 
 tr {
-  @extend .rs-table-row;
+  @extend %rs-table-row;
 }
 
 th {
-  @extend .rs-table-header;
+  @extend %rs-table-header;
 }
 
 td {
-  @extend .rs-table-cell;
+  @extend %rs-table-cell;
 }
 
 /* Sort Links */
