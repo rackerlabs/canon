@@ -1,54 +1,47 @@
 /* facets */
 
-.rs-sidebar.rs-facets .rs-inner {
-  margin: 0 20px 0 0;
-}
-
 .rs-facets .rs-page-title {
   font-size: 30px;
   margin-bottom: 8px;
 }
 
-.rs-facet-section-title,
-.rs-facet-single-option .rs-facet-label {
+.rs-facet-section {
+  margin-bottom: 15px;
+}
+
+.rs-facet-section-title {
   font-family: $alt-font-family;
-  line-height: 1em;
+  line-height: 15px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 4px 0 5px 0;
+  margin-bottom: 12px;
 }
 
-.rs-facet-single-option .rs-facet-count {
-  line-height: 12px;
+.rs-facet-section .rs-facet-section-title {
+  margin-bottom: 0;
 }
 
-.rs-facets .rs-facet-list {
+.rs-facet-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: block;
 }
 
-.rs-facet-section-body .rs-facet-item div,
-.rs-facet-section-body i {
-  display: inline-block;
-  vertical-align: text-top;
-}
-
-.rs-facet-list i {
-  margin-right: 10px;
-}
-
-.rs-facet-section {
-  margin-bottom: 11px;
-}
-
-.rs-facet-section-header {
-  padding: 6px 0px;
+.rs-facet-count {
+  @extend .rs-quiet;
+  display: inline;
 }
 
 .rs-facet-label {
+  @extend .rs-pull-left;
+  @extend .rs-truncate;
+  display: inline-block;
+  vertical-align: text-top;
   max-width: 150px;
+  margin-right: 5px;
 }
 
 .rs-facet-item {
@@ -58,8 +51,8 @@
   padding: 4px 0px 2px 0px;
 }
 
-.rs-facet-item [class*="icon-"] + .rs-facet-label {
-  max-width: 127px;
+.rs-facet-item [class*="status-"] + .rs-facet-label {
+  max-width: 120px;
 }
 
 .rs-facet-section-small .rs-facet-list {
@@ -85,30 +78,60 @@
 }
 
 .rs-facet-section-toggle {
-  width: 100%;
-  text-align: left;
-  padding: 0;
-  height: 18px
+  color: $blue;
+  height: 18px;
 }
 
-.rs-facet-section-toggle .rs-arrow-blue {
+.rs-facet-section-toggle .rs-arrow {
   margin-left: 4px;
   margin-right: 1px;
 }
 
-.rs-facet-section-toggle .rs-arrow-blue:after {
-  content: 'more';
-  font-style: normal;
-  margin-left: 18px;
-}
-
-.rs-facet-section.expanded .rs-facet-section-toggle .rs-arrow-blue:after {
-  content: 'less' !important;
-  font-style: normal;
-  margin-left: 18px;
-}
-
-.rs-facet-section.expanded .rs-facet-section-toggle .rs-arrow-blue {
+.rs-facet-section.expanded .rs-facet-section-toggle .rs-arrow {
   @include icon;
+  @include icon-sprite(arrow-blue-up);
+}
+
+// Faceting Icons
+
+.rs-facet-item {
+  
+  [class*="status-"] {
+    @extend .rs-pull-left;
+    @include icon;
+    margin-right: 6px;
+  }
+
+  .rs-status-ok {
+    @include icon-sprite(status-green);
+  }
+
+  .rs-status-warning {
+    @include icon-sprite(status-yellow);
+  }
+
+  .rs-status-error {
+    @include icon-sprite(status-red);
+  }
+
+} 
+
+.rs-facet-checkbox {
+  @extend .rs-pull-left;
+  @include icon;
+  @include icon-sprite(checkbox-unchecked);
+  margin-right: 10px;
+}
+
+.rs-facet-checkbox.checked {
+  @include icon-sprite(checkbox-checked);
+}
+
+.rs-arrow, .rs-arrow.right {
+  @include icon;
+  @include icon-sprite(arrow-blue-right);
+}
+
+.rs-arrow.up {
   @include icon-sprite(arrow-blue-up);
 }
