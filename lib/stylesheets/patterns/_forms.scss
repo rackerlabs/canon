@@ -18,7 +18,8 @@ label,
 input[type="text"],
 input[type="password"],
 select,
-textarea {
+textarea,
+.rs-input {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -49,7 +50,8 @@ input[type="text"],
 input[type="password"],
 input[type="file"],
 select,
-textarea {
+textarea,
+.rs-input {
   margin: 0 0 10px;
   vertical-align: middle;
 }
@@ -57,7 +59,8 @@ textarea {
 input[type="text"],
 input[type="password"],
 select,
-textarea {
+textarea,
+.rs-input {
   padding: 2px 4px;
   height: 25px;
   border: 1px solid $grey400;
@@ -86,7 +89,8 @@ textarea {
 
 input[type="text"],
 input[type="password"],
-textarea {
+textarea,
+.rs-input {
   box-sizing: border-box;
 
   @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.15) inset);
@@ -225,7 +229,8 @@ textarea {
   input[type="password"],
   input[type="file"],
   select,
-  textarea {
+  textarea,
+  .rs-input {
     margin-bottom: 0;
   }
 
@@ -349,7 +354,8 @@ textarea {
   input[type="text"],
   input[type="password"],
   select,
-  textarea {
+  textarea,
+  .rs-input {
     border-color: $red;
 
     &:focus,
@@ -362,7 +368,8 @@ textarea {
 
   input[type="text"],
   input[type="password"],
-  textarea {
+  textarea,
+  .rs-input {
     &:focus,
     &.focus {
       border-color: rgba(0, 0, 0, 0.15);
