@@ -45,6 +45,15 @@
   white-space: nowrap;
 }
 
+.rs-dropdown-item.disabled {
+  a,
+  .rs-dropdown-link {
+    color: #999;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
 .rs-dropdown-menu > li:first-child > .rs-dropdown-category,
 .rs-dropdown-menu > .rs-dropdown-item:first-child > .rs-dropdown-category {
   margin-top: 0;
@@ -111,6 +120,14 @@
     font-family: $alt-font-family;
     font-size: 12px;
     font-weight: 200;
+  }
+
+  .rs-dropdown-item.disabled {
+    a,
+    .rs-dropdown-link {
+      color: #999;
+      background-color: transparent;
+    }
   }
 
   .rs-icon-external {
@@ -182,5 +199,13 @@
     font-family: $alt-font-family;
     font-size: 12px;
     font-weight: 200;
+  }
+
+  .rs-dropdown-item.disabled {
+    a,
+    .rs-dropdown-link {
+      color: #666;
+      background-color: transparent;
+    }
   }
 }
