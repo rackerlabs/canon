@@ -29,7 +29,7 @@ def version
 end
 
 def url
-  'http://localhost:8000'
+  'http://localhost:9000'
 end
 
 Capybara.app_host = url

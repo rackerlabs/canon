@@ -110,19 +110,26 @@ module.exports = function (grunt) {
       }
     },
     connect: {
+      options: {
+        middleware: function (connect) {
+          var livereload = require('connect-livereload');
+
+          return [
+            livereload(),
+            connect.static('dist'),
+            connect.static('examples'),
+            connect.directory('examples')
+          ];
+        }
+      },
       server: {
         options: {
-          middleware: function (connect) {
-            var livereload = require('connect-livereload');
-
-            return [
-              livereload(),
-              connect.static('dist'),
-              connect.static('examples'),
-              connect.directory('examples')
-            ];
-          },
-          port: process.env.CANON_PORT || 8000,
+          port: process.env.CANON_PORT || 8000
+        }
+      },
+      test: {
+        options: {
+          port: process.env.CANON_TEST_PORT || 9000
         }
       }
     },
@@ -192,7 +199,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', ['karma:ci', 'test:screenshot']);
 
-  grunt.registerTask('test:screenshot', ['connect:server', 'exec:rspec:spec/screenshot']);
+  grunt.registerTask('test:screenshot', ['connect:test', 'exec:rspec:spec/screenshot']);
 
   grunt.registerTask('server', ['build', 'connect:server', 'watch']);
 };
