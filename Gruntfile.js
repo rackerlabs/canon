@@ -190,7 +190,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy']);
 
-  grunt.registerTask('test', ['karma:ci', 'exec:rspec:spec/screenshot']);
+  grunt.registerTask('test', ['karma:ci', 'test:screenshot']);
 
   grunt.registerTask('test:screenshot', ['connect:server', 'exec:rspec:spec/screenshot']);
 
