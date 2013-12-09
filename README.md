@@ -1,5 +1,7 @@
 ![http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png](http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png)
 
+[![Build Status](https://travis-ci.org/rackerlabs/canon.png?branch=travis)](https://travis-ci.org/rackerlabs/canon)
+
 **This README contains information on setting up the Canon development environment
 on your local machine.  Use these instructions if you intend to develop Canon
 elements and contribute code back to the project.**
