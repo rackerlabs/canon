@@ -1,3 +1,23 @@
+## v1.4.0 (December 11, 2013)
+- Point repo and updated content to rackerlabs/canon.
+- Add create form.
+- Add create key value.
+- Add status list to table.
+- Reduce css output.
+- Add support for variable width horizontal forms.
+- Update divider pseudo content.
+- Integrate Travis CI.
+- Fix issue with .rs-nav-link cursor type on non link elements.
+- Add generic .rs-input class for default input styles.
+- Fix issue with input height.
+- Migrate custom fonts to use compass font-face mixin.
+- Fix bug where footer links inherited a square list style.
+- Add class names for menu items.
+- Add styles for disabled menu items.
+- Fix port issue with default grunt task.
+- Update paragraph text bottom margin.
+- Update list table border color.
+
 ## v1.3.1 (November 5, 2013)
 - Support disabled states in navigation.
 - Adjust hover and active state for primary navigation items.
