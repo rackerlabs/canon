@@ -1,8 +1,9 @@
-## v1.4.0 (December 11, 2013)
+## v1.4.0 (December 16, 2013)
 - Point repo and updated content to rackerlabs/canon.
 - Add create form.
 - Add create key value.
 - Add status list to table.
+- Add new status indicator.
 - Reduce css output.
 - Add support for variable width horizontal forms.
 - Update divider pseudo content.
