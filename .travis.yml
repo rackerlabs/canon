@@ -1,6 +1,10 @@
 language: node_js
 node_js:
 - '0.10'
+branches:
+  only:
+  - master
+  - /-job-\d+$/
 env:
   global:
   - secure: gqoFY8iy73+/y85Je8Q19Ijt7Mif7mj7wLvY2iaNEEFTVeHlUMNear5uqHo1kJr/xxDAtynZ+83OTpElNivD/AGdx+ZPpgXEEK0nNdCmOEkHrPGWfRylqxYGcKSYoDNpDWz4MnHq7+wQFVtj5jPgpVob2GhgVBZoNYm+zSfo+C4=
