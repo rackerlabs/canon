@@ -47,6 +47,12 @@
     background: $yellow url('loading-white-yellow.gif') 4px center no-repeat;
     padding-left: 20px;
   }
+
+  &.rs-status-processing-ok {
+    color: $white;
+    background: $green url('loading-white-green.gif') 4px center no-repeat;
+    padding-left: 20px;
+  }
 }
 
 // Colored Status Typography
@@ -72,4 +78,8 @@
 
 .rs-status-processing {
   color: $yellow;
+}
+
+.rs-status-processing-ok {
+  color: $green;
 }
