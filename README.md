@@ -56,3 +56,4 @@ Body
 
 Type can be: Feature, Bug, Style, Test, Maintenance
 ID is the Trello card number being implemented.
+
