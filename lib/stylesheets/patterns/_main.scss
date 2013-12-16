@@ -17,7 +17,7 @@
 
 .rs-sidebar {
   width: 230px;
-  position: absolute;
+  float: left;
 
   .rs-inner {
     margin: 0 30px 0 0;
@@ -29,7 +29,7 @@
 
   &.rs-pull-right {
     width: 280px;
-    right: 0;
+    float: right;
 
     .rs-inner {
       margin: 0 0 0 30px;
@@ -43,10 +43,6 @@
 
 .rs-content {
   @include micro-clearfix;
-
-  .rs-main & {
-    min-height: 300px;
-  }
 
   .rs-panel & {
     margin-top: -20px;
