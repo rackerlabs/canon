@@ -105,6 +105,10 @@
 
 .rs-table-status-error {
   background-color: $red !important;
+
+  &.rs-table-status-striped {
+    background-image: url('table-status-error.gif');
+  }
 }
 
 /* Table-Based Styles */

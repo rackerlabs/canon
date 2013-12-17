@@ -53,6 +53,12 @@
     background: $green url('loading-white-green.gif') 4px center no-repeat;
     padding-left: 20px;
   }
+
+  &.rs-status-processing-error {
+    color: $white;
+    background: $green url('loading-red.gif') 4px center no-repeat;
+    padding-left: 20px;
+  }
 }
 
 // Colored Status Typography
