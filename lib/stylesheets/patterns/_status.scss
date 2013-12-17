@@ -56,7 +56,7 @@
 
   &.rs-status-processing-error {
     color: $white;
-    background: $green url('loading-red.gif') 4px center no-repeat;
+    background: $red url('loading-red.gif') 4px center no-repeat;
     padding-left: 20px;
   }
 }
@@ -88,4 +88,8 @@
 
 .rs-status-processing-ok {
   color: $green;
+}
+
+.rs-status-processing-error {
+  color: $red;
 }
