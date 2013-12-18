@@ -43,3 +43,5 @@ screenshots:
     url: tooltip.html
   - name: Tabs
     url: tabs.html
+  - name: Typography
+    url: typography.html
