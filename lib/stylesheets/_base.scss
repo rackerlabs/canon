@@ -40,7 +40,7 @@ h1, h2, h3, h4 {
 }
 
 h1, h2, h3 {
-  margin: 0 0 $base-line-height;
+  margin: 0 0 20px;
   font-weight: 600;
   line-height: $base-line-height * 1.5;
 }
@@ -80,7 +80,7 @@ h6 {
 }
 
 ol, ul {
-  margin: 0 0 $base-line-height 25px;
+  margin: 0 0 20px 25px;
   padding: 0;
 }
 
@@ -100,7 +100,7 @@ ul {
 }
 
 dl {
-  margin: 0 0 $base-line-height;
+  margin: 0 0 20px;
 }
 
 dd {
