@@ -139,4 +139,10 @@ hr {
   li {
     margin-bottom: 5px;
   }
+
+  pre {
+    background: $white;
+    padding: 5px 0 5px 10px;
+    @include border-radius(3px);
+  }
 }
