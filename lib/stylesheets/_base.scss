@@ -119,3 +119,24 @@ hr {
   color: $red;
   @extend h2;
 }
+
+.rs-sidebar {
+  h3 {
+    margin: 0 0 15px;
+  }
+
+  hr {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+  }
+
+  ul {
+    margin: 0 0 10px 25px;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+}
