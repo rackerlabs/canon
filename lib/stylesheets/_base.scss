@@ -116,6 +116,36 @@ hr {
   border-bottom: 1px solid #fff;
 }
 
+code {
+    overflow: auto;
+    padding: 0 5px 1px;
+    background: #f1f1f1;
+    margin: 0 2px;
+    white-space: nowrap;
+    word-wrap: normal;
+    font-size: 12px;
+    @include border-radius(3px);
+  }
+
+  pre code {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    word-wrap: normal;
+    white-space: pre;
+  }
+
+  pre {
+    display:block;
+    overflow: auto;
+    background: #f1f1f1;
+    padding: 5px 10px;
+    white-space: pre;
+    word-wrap: normal;
+    @include border-radius(3px);
+  }
+
 // Typography Classes
 
 .rs-page-title {
@@ -125,6 +155,7 @@ hr {
 
 .rs-sidebar {
   h3 {
+    margin: 0 0 20px;
   }
 
   h4 {
@@ -148,13 +179,11 @@ hr {
     margin-bottom: 5px;
   }
 
-  pre {
-    display:block;
-    overflow: auto;
+  pre, code {
     background: $white;
-    padding: 5px 10px;
-    white-space: pre;
-    word-wrap: normal;
-    @include border-radius(3px);
+  }
+
+  pre code {
+    background-color: transparent;
   }
 }
