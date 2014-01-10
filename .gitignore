@@ -9,3 +9,5 @@ sauce_connect.*
 spec/reports/
 spec/skins/*/*/*_diff.png
 spec/skins/*/*/*_fresh.png
+
+*.log
