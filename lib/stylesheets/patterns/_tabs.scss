@@ -38,6 +38,10 @@
 .rs-tab-content {
   border: 1px solid $grey50;
   border-top: none;
+
+  .rs-embedded-list-table-wrapper  {
+    border: none;
+  }
 }
 
 .rs-tab-pane {
