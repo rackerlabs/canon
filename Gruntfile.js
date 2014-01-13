@@ -10,7 +10,8 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/canon.base.css': 'lib/base/stylesheets/main.scss'
+          'dist/canon.base.css': 'lib/base/stylesheets/main.scss',
+          'dist/canon.buttons.css': 'lib/buttons/stylesheets/main.scss'
         }
       }
     },
@@ -24,7 +25,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'dist/canon.min.css': 'dist/canon.css',
-          'dist/canon.base.min.css': 'dist/canon.base.css'
+          'dist/canon.base.min.css': 'dist/canon.base.css',
+          'dist/canon.buttons.min.css': 'dist/canon.buttons.css'
         }
       }
     }
