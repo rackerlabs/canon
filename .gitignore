@@ -1,1 +1,7 @@
+# Build Output
+.sass-cache/
+dist/
+
+# Third-Party Dependencies
+bower_components/
 node_modules/
