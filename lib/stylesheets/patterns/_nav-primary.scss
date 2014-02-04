@@ -71,18 +71,6 @@
   		.rs-dropdown-menu {
   			margin-top: -2px;
   		}
-
-  		&.active {
-  			margin-right: 20px;
-  		}
-
-  		&.active .rs-caret {
-  			right: 1px;
-  		}
-
-  		&.active > a, &.active .rs-nav-link {
-  			padding-right: 26px;
-  		}
   	}
 
     &.rs-dropdown:hover,
