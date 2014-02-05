@@ -41,21 +41,22 @@
     }
   }
 
-	.rs-nav-item {
-  	margin: 0 20px;
-		border: 1px solid transparent;
+.rs-nav-item {
+	margin: 0 20px;
+	padding-right: 25px;
+	border: 1px solid transparent;
 
-		&:hover,
-    &.hover,
-    &.active {
-      & > a,
-    	.rs-nav-link {
-				color: $nav-primary-link-active;
-	      border-bottom: 2px solid $red;
-    	}
-    }
+	&:hover,
+	&.hover,
+	&.active {
+		& > a,
+		.rs-nav-link {
+			color: $nav-primary-link-active;
+	      	border-bottom: 2px solid $red;
+		}
+  	}
 
-    &.disabled {
+	&.disabled {
       & > a,
       .rs-nav-link {
         color: #bbb;
@@ -71,6 +72,10 @@
   		.rs-dropdown-menu {
   			margin-top: -2px;
   		}
+
+          &.active .rs-caret {
+            right: -25px;
+          }
   	}
 
     &.rs-dropdown:hover,
