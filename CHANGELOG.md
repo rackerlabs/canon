@@ -1,3 +1,10 @@
+## v1.4.1 (February 5, 2014)
+- Fix underline in primary nav items
+- Update sidebar text styles
+- Update headings styles (h1-h6)
+- Update list margins (ol, ul, dl)
+- Replace green table status image
+
 ## v1.4.0 (December 16, 2013)
 - Point repo and updated content to rackerlabs/canon.
 - Add create form.
