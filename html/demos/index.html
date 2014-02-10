@@ -1,0 +1,124 @@
+---
+layout: default
+title: Cloud Servers
+servers:
+  1:
+    name: My Cloud Server 1
+    ip: 111.222.111
+    status: ok
+    checks: [ok,ok,ok,disabled,disabled,disabled,warning]
+  2:
+    name: My Cloud Server 2
+    ip: 222.111.222
+    status: warning
+    checks: [warning,ok,warning,error,ok,disabled,warning,disabled,disabled,disabled]
+  3:
+    name: My Cloud Server 3
+    ip: 222.111.222
+    status: error
+  4:
+    name: My Cloud Server 4
+    ip: 222.111.222
+    status: ok
+  5:
+    name: My Cloud Server 5
+    ip: 222.111.222
+    status: ok
+    checks: [ok,ok,ok,ok,ok,ok,ok,disabled,warning]
+  6:
+    name: My Cloud Server 6
+    ip: 222.111.222
+    status: warning rs-table-status-striped
+    checks: [ok,warning,warning,error,ok,disabled,warning]
+  7:
+    name: My Cloud Server 7
+    ip: 222.111.222
+    status: ok
+    checks: [error,error,ok,error,ok,disabled,warning]
+  8:
+    name: My Cloud Server 8
+    ip: 222.111.222
+    status: ok
+    checks: [ok,ok,ok,error,ok,disabled,warning,ok,warning]
+  9:
+    name: My Cloud Server 9
+    ip: 222.111.222
+    status: ok
+    checks: [ok,ok,ok,error,ok,disabled,warning,ok,error,error]
+  10:
+    name: My Cloud Server 10
+    ip: 222.111.222
+    status: error
+statuses:
+ ok: "<div class='rs-no-wrap rs-status-ok'>HTTP Check (Website) OK</div><p class='rs-no-wrap rs-quiet'>Since: Nov 2, 2013 10:52:55 PM UTC</p><span class='rs-quiet'>HTTP connection time is normal</span>"
+ warning: "<div class='title rs-no-wrap rs-status-warning'>HTTP Check (Website) Critical</div><p class='rs-no-wrap rs-quiet'>Since: Nov 12, 2013 8:45:46 PM UTC</p><span class='rs-quiet'>Could not resolve DNS</span>"
+ error: "<div class='rs-no-wrap rs-status-error'>HTTP Check (Website) Critical</div><p class='rs-no-wrap rs-quiet'>Since: Nov 12, 2013 8:45:46 PM UTC</p><span class='rs-quiet'>Could not resolve DNS</span>"
+ disabled: "<div class='rs-no-wrap'>HTTP Check (Website) Disabled</div><span class='rs-no-wrap rs-quiet'>Last state was OK on Jun 27, 2013 8:59:41 PM UTC</span>"
+---
+
+<div class="rs-main">
+  <div class="rs-content rs-panel">
+    <div class="rs-inner">
+      <h2 class="rs-page-title">Cloud Servers</h2>
+      <div class="rs-btn-group">
+        <a href="create.html" class="rs-btn rs-btn-primary">Create Server</a>
+        <button class="rs-btn" disabled>Delete</button>
+      </div>
+      <div class="rs-list-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="rs-table-status"></td>
+              <th class="rs-table-checkbox"><input type="checkbox" /></td>
+              <th class="rs-table-cog"></th>
+              <th>
+                <a href="#" class="rs-table-sort rs-table-sort-desc">
+                  <span class="rs-table-sort-text">Name</span>
+                  <span class="rs-table-sort-indicator"></span>
+                </a>
+              </th>
+              <th>IP Address</th>
+              <th>Monitoring</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for server in page.servers %}
+            <tr>
+              <td class="rs-table-status rs-table-status-{{ server[1].status }}"></td>
+              <td class="rs-table-checkbox"><input type="checkbox" /></td>
+              <td class="rs-table-cog">
+                <div class="rs-dropdown">
+                  <div class="rs-cog rs-dropdown-toggle"></div>
+                  <ul class="rs-dropdown-menu">
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category" id="first">Identify</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Rename Server&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Tag Server&hellip;</a></li>
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category">Image</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Create Image&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Schedule Daily Image&hellip;</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td class="rs-table-link"><a href="{{ site.baseurl }}/details.html">{{ server[1].name }}</a></td>
+              <td class="rs-table-text">{{ server[1].ip }}</td>
+              <td class="rs-table-status-list">
+              <ul class="rs-status-list">
+                {% if server[1].checks %}
+                {% for check in server[1].checks %}
+                <li class="rs-status-list-item tooltip-toggle" title="{{ page.statuses[check] }}">
+                  <div class="rs-icon-status rs-status-{{ check }}"></div>
+                </li>
+                {% endfor %}
+                {% else %}
+                  <button type="button" class="rs-plus"></button>
+                {% endif %}
+              </ul>
+            </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
