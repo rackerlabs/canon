@@ -144,6 +144,9 @@ module.exports = function (grunt) {
 
           return command;
         }
+      },
+      jekyll: {
+        cmd: 'jekyll build --config config/jekyll.dev.yml'
       }
     },
     watch: {
@@ -156,6 +159,13 @@ module.exports = function (grunt) {
       },
       html: {
         files: ['examples/**/*.html'],
+        options: {
+          livereload: true
+        }
+      },
+      jekyll: {
+        files: ['html/**/*'],
+        tasks: ['exec:jekyll'],
         options: {
           livereload: true
         }
@@ -195,7 +205,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['jshint:dev', 'build', 'test']);
 
-  grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy']);
+  grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy', "exec:jekyll"]);
 
   grunt.registerTask('test', ['karma:ci', 'test:screenshot']);
 
