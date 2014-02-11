@@ -43,7 +43,6 @@
 
 .rs-nav-item {
 	margin: 0 20px;
-	padding-right: 25px;
 	border: 1px solid transparent;
 
 	&:hover,
@@ -67,7 +66,8 @@
     }
 
   	&.rs-dropdown {
-  		margin-right: 46px;
+      margin-right: 25px;
+      padding-right: 25px;
 
   		.rs-dropdown-menu {
   			margin-top: -2px;
