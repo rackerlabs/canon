@@ -10,5 +10,6 @@ spec/reports/
 spec/skins/*/*/*_diff.png
 spec/skins/*/*/*_fresh.png
 examples/demos
+_site
 
 .bundle/install.log

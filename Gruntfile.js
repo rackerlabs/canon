@@ -146,7 +146,7 @@ module.exports = function (grunt) {
         }
       },
       jekyll: {
-        cmd: 'bundle exec jekyll build --config config/jekyll.dev.yml'
+        cmd: 'bundle exec jekyll build --config config/demo.dev.yml'
       }
     },
     watch: {
