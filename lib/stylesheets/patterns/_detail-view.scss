@@ -176,13 +176,43 @@
 }
 
 .rs-detail-key {
-  width: 120px;
   clear: left;
   float: left;
   color: $grey;
   text-align: right;
 }
 
-.rs-detail-value {
-  margin-left: 140px;
+@mixin set-detail-key-values($key-width: 120px, $value-margin-left: 20px){
+  .rs-detail-key {
+    width: $key-width;
+  }
+  .rs-detail-value {
+    margin-left: $key-width + $value-margin-left;
+  }
+}
+
+@include set-detail-key-values();
+
+.rs-detail-xsmall {
+  @include set-detail-key-values(60px);
+}
+
+.rs-detail-small {
+  @include set-detail-key-values(80px);
+}
+
+.rs-detail-medium {
+  @include set-detail-key-values(100px);
+}
+
+.rs-detail-large {
+  @include set-detail-key-values(120px);
+}
+
+.rs-detail-xlarge {
+  @include set-detail-key-values(150px);
+}
+
+.rs-detail-xxlarge {
+  @include set-detail-key-values(180px);
 }
