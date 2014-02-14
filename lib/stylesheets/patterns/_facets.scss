@@ -23,7 +23,7 @@
   margin-bottom: 0;
 }
 
-.rs-facet-list {
+.rs-facet-section .rs-facet-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -96,7 +96,7 @@
 // Faceting Icons
 
 .rs-facet-item {
-  
+
   [class*="status-"] {
     @extend .rs-pull-left;
     @include icon;
@@ -115,7 +115,7 @@
     @include icon-sprite(status-red);
   }
 
-} 
+}
 
 .rs-facet-checkbox {
   @extend .rs-pull-left;
