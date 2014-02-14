@@ -1,0 +1,4 @@
+source: "html/demos"
+destination: "examples/demos"
+baseurl: "http://demo.canon.rackspace.com"
+canonurl: "http://ci.canon.rackspace.com/view/Canon/job/canon-screenshot/lastSuccessfulBuild/artifact/dist/"
