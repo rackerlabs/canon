@@ -1,0 +1,138 @@
+/* facets */
+
+.rs-facets .rs-page-title {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.rs-facet-section {
+  margin-bottom: 15px;
+}
+
+.rs-facet-section-title {
+  font-family: $alt-font-family;
+  line-height: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 0 5px 0;
+  margin-bottom: 12px;
+}
+
+.rs-facet-section .rs-facet-section-title {
+  margin-bottom: 0;
+}
+
+.rs-facet-section .rs-facet-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.rs-facet-count {
+  @extend .rs-quiet;
+  display: inline;
+}
+
+.rs-facet-label {
+  @extend .rs-pull-left;
+  @extend .rs-truncate;
+  display: inline-block;
+  vertical-align: text-top;
+  max-width: 150px;
+  margin-right: 5px;
+}
+
+.rs-facet-item {
+  display: block;
+  cursor: pointer;
+  line-height: 15px;
+  padding: 4px 0px 2px 0px;
+}
+
+.rs-facet-item [class*="status-"] + .rs-facet-label {
+  max-width: 120px;
+}
+
+.rs-facet-section-small .rs-facet-list {
+  max-height: 105px;
+  overflow: hidden;
+}
+
+.rs-facet-section-medium .rs-facet-list {
+  max-height: 168px;
+  overflow: hidden;
+}
+
+.rs-facet-section-large .rs-facet-list {
+  max-height: 315px;
+  overflow: hidden;
+}
+
+.rs-facet-section-small.expanded .rs-facet-list,
+.rs-facet-section-medium.expanded .rs-facet-list,
+.rs-facet-section-large.expanded .rs-facet-list {
+  overflow: visible;
+  max-height: none;
+}
+
+.rs-facet-section-toggle {
+  color: $blue;
+  height: 18px;
+  cursor: pointer;
+}
+
+.rs-facet-section-toggle .rs-arrow {
+  margin-left: 4px;
+  margin-right: 1px;
+}
+
+.rs-facet-section.expanded .rs-facet-section-toggle .rs-arrow {
+  @include icon;
+  @include icon-sprite(arrow-blue-up);
+}
+
+// Faceting Icons
+
+.rs-facet-item {
+
+  [class*="status-"] {
+    @extend .rs-pull-left;
+    @include icon;
+    margin-right: 6px;
+  }
+
+  .rs-status-ok {
+    @include icon-sprite(status-green);
+  }
+
+  .rs-status-warning {
+    @include icon-sprite(status-yellow);
+  }
+
+  .rs-status-error {
+    @include icon-sprite(status-red);
+  }
+
+}
+
+.rs-facet-checkbox {
+  @extend .rs-pull-left;
+  @include icon;
+  @include icon-sprite(checkbox-unchecked);
+  margin-right: 10px;
+}
+
+.rs-facet-checkbox.checked {
+  @include icon-sprite(checkbox-checked);
+}
+
+.rs-arrow, .rs-arrow.right {
+  @include icon;
+  @include icon-sprite(arrow-blue-right);
+}
+
+.rs-arrow.up {
+  @include icon-sprite(arrow-blue-up);
+}
