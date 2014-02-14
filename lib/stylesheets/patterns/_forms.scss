@@ -168,16 +168,6 @@ textarea {
 }
 
 /* Create/Horizontal Forms */
-@mixin set-form-control-labels($label-width: 160px, $value-margin-left: 20px){
-  .rs-control-label {
-    width: $label-width;
-  }
-  .rs-controls,
-  .rs-controls-static {
-    margin-left: $label-width + $value-margin-left;
-  }
-}
-
 .rs-form-horizontal,
 .rs-form-create {
   .rs-control-group,
@@ -198,8 +188,6 @@ textarea {
     padding-top: 2px;
   }
 
-  @include set-form-control-labels();
-
   input[type="text"],
   input[type="password"],
   input[type="file"],
@@ -211,30 +199,47 @@ textarea {
 
 }
 
-.rs-form-horizontal {
-  &.rs-form-xsmall {
-    @include set-form-control-labels(60px);
+@mixin set-form-control-labels($label-width: 160px, $value-margin-left: 20px){
+  .rs-control-label {
+    width: $label-width;
+  }
+  .rs-controls,
+  .rs-controls-static {
+    margin-left: $label-width + $value-margin-left;
   }
 
-  &.rs-form-small {
-    @include set-form-control-labels(80px);
+  .rs-detail-key {
+    width: $label-width;
   }
+  .rs-detail-value {
+    margin-left: $label-width + $value-margin-left;
+  }
+}
 
-  &.rs-form-medium {
-    @include set-form-control-labels(100px);
-  }
+@include set-form-control-labels();
 
-  &.rs-form-large {
-    @include set-form-control-labels(120px);
-  }
+.rs-form-xsmall {
+  @include set-form-control-labels(60px);
+}
 
-  &.rs-form-xlarge {
-    @include set-form-control-labels(150px);
-  }
+.rs-form-small {
+  @include set-form-control-labels(80px);
+}
 
-  &.rs-form-xxlarge {
-    @include set-form-control-labels(180px);
-  }
+.rs-form-medium {
+  @include set-form-control-labels(100px);
+}
+
+.rs-form-large {
+  @include set-form-control-labels(120px);
+}
+
+.rs-form-xlarge {
+  @include set-form-control-labels(150px);
+}
+
+.rs-form-xxlarge {
+  @include set-form-control-labels(180px);
 }
 
 /* Create Forms */
@@ -273,13 +278,6 @@ textarea {
     .rs-key-divider {
       color: $grey600;
     }
-  }
-
-  .rs-detail-key {
-    width: 160px;
-  }
-  .rs-detail-value {
-    margin-left: 180px;
   }
 }
 
