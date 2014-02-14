@@ -1,3 +1,4 @@
 source: "html/demos"
 destination: "examples/demos"
 baseurl: "/demos"
+canonurl: "/"
