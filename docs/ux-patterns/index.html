@@ -1,0 +1,25 @@
+---
+layout: canon-content
+title: ux patterns
+utilitySection: UX Patterns
+popovers: ['popover-resize-server.html','popover-rename-server.html','popover-edit-item.html','popover-confirm-delete.html','popover-add-items.html']
+---
+<div class="site-header-secondary-page">
+  <div class="site-header-content">
+    <div class="rs-container">
+      <div class="site-header-title-secondary">UX Patterns</div>
+      <p class="site-header-title-sub">Combined UI components to solve common design problems.</p>
+    </div>
+  </div>
+</div>
+
+<script type="application/javascript">
+
+$(document).ready(function () {
+  $('.rs-dropdown').each(function (i, element) {
+    var menu = new canon.Menu();
+    menu.attach(element);
+  });
+});
+
+</script>

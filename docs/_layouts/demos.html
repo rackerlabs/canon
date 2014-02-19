@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{{ page.title }} | Canon Demo</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" type="text/css" href="http://ci.canon.rackspace.com/view/Canon/job/canon-screenshot/lastSuccessfulBuild/artifact/dist/canon.min.css">
+
+  <script type="application/javascript" src="//code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script type="application/javascript" src="//cd0561583af076c5d1bb-b0a668e5876bef6fe25684caf71db405.r89.cf1.rackcdn.com/v1-latest/canon.min.js"></script>
+
+  <script type="application/javascript">
+
+  $(document).ready(function () {
+    $('.tooltip-toggle').each(function (i, element) {
+      var tooltip;
+      tooltip = new canon.Tooltip();
+      tooltip.attach(element);
+    });
+
+    $('.rs-dropdown').each(function (i, element) {
+      var menu = new canon.Menu();
+      menu.attach(element);
+    });
+  });
+
+  </script>
+</head>
+<body class="rs-fixed">
+  <div class="rs-wrapper">
+    {% include demos/utility_nav.html %}
+    {% include demos/primary_nav.html %}
+    {% include demos/secondary_nav.html %}
+
+    <div class="rs-body">
+      <div class="rs-container">
+        {{ content }}
+      </div>
+    </div>
+    <div class="rs-push"></div>
+  </div>
+
+  {% include demos/footer.html %}
+</body>
+</html>
