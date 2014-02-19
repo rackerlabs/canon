@@ -50,7 +50,7 @@
   </script>
 {% if page.popovers %}
 {% for popover in page.popovers %}
-  {% include popover %}
+  {% include {{popover}} %}
 {% endfor %}
 <div class="rs-popover-screen hidden"></div>
 {% endif %}
