@@ -1,3 +1,0 @@
-source: "html/demos"
-destination: "_site/demos"
-baseurl: "http://demo.canon.rackspace.com"
