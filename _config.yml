@@ -1,4 +1,4 @@
-source: "html"
+source: "docs"
 baseurl: "http://canon.rackspace.com"
 pygments: true
 permalink: /.tmp/null.html

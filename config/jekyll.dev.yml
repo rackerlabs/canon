@@ -1,4 +1,4 @@
-source: "html"
+source: "docs"
 destination: "_site"
 baseurl: "/"
 pygments: true
