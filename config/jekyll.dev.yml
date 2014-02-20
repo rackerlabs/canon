@@ -1,6 +1,6 @@
 source: "docs"
 destination: "_site"
-baseurl: "/"
+baseurl: ""
 pygments: true
 permalink: /.tmp/null.html
 markdown: redcarpet
