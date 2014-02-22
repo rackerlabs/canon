@@ -30,6 +30,13 @@ tags : [intro, about, canon]
     <h4>Example</h4>
     <div class="rs-content rs-panel" style="margin-top: 0;">
       <div class="rs-detail-header">
+        <div class="rs-detail-header-actions">
+          <button class="rs-btn rs-btn-action">
+            <span class="rs-cog"></span>
+            Actions
+            <span class="rs-caret"></span>
+          </button>
+        </div>
         <div class="rs-detail-header-subtitle">Product Category</div>
         <div class="rs-detail-header-title">Item Name</div>
       </div>
@@ -158,7 +165,24 @@ tags : [intro, about, canon]
   <div class="rs-collapsible-section rs-detail-section collapsed">
     <div class="rs-detail-section-header">
       <div class="rs-caret"></div>
-      <div class="rs-detail-section-title">Another Sub-Section</div>
+      <div class="rs-detail-section-title">Collapsible Section</div>
+      <div class="rs-detail-section-subtitle">2 Options Configured</div>
+    </div>
+    <div class="rs-detail-section-body">
+      <ul class="rs-detail-list">
+        <li class="rs-detail-item">
+          <div class="rs-detail-key">Key</div>
+          <div class="rs-detail-value">Value</div>
+        </li>
+        <li class="rs-detail-item">
+          <div class="rs-detail-key">Key</div>
+          <div class="rs-detail-value">
+            Many<br>
+            Different<br>
+            Values
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>{% endhighlight %}
