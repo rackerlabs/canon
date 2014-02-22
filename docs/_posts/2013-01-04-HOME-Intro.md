@@ -13,5 +13,5 @@ Canon was built to make application development easier and faster.
 3. Canon [front-end experts](https://one.rackspace.com/display/RED/Canon) tackle browser testing, release planning and backwards compatibility.
 
 <div>
-  <a class="rs-btn rs-btn-login rs-btn-large" href="http://demo.canon.rackspace.com" target="blank">View Live Example</a>
+  <a class="rs-btn rs-btn-login rs-btn-large" href="http://demo.canon.rackspace.com" target="blank">View Demo</a>
 </div>

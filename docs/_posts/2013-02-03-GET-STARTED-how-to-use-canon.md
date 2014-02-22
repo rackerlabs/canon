@@ -23,7 +23,7 @@ To begin using Canon, start with this basic HTML template that includes everythi
     <div class="rs-nav-utility">
       <div class="rs-container">
         <ul class="rs-nav rs-pull-right">
-          <li><a href="#">Username123</a></li>
+          <li class="rs-nav-item"><a class="rs-nav-link" href="#">Account: Username123</a></li>
         </ul>
       </div>
     </div>
@@ -75,5 +75,5 @@ To begin using Canon, start with this basic HTML template that includes everythi
 </html>
 {% endhighlight %}
 
-<h3>Check out our live example for more detail.</h3>
-<a class="rs-btn rs-btn-login rs-btn-large" href="http://demo.canon.rackspace.com" target="blank">View Live Example</a>
+<p>Or, find more detail on our demo site.</p>
+<a class="rs-btn rs-btn-login rs-btn-large" href="http://demo.canon.rackspace.com" target="blank">View Demo</a>

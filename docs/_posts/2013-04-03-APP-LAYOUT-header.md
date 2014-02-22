@@ -80,6 +80,7 @@ tags : [intro, about, canon]
 			<h4>Markup</h4>
 			{% highlight html %}
 <div class="rs-wrapper">
+	<!-- Utility Nav -->
     <div class="rs-nav-utility">
       <div class="rs-container">
         <ul class="rs-nav">
@@ -94,6 +95,9 @@ tags : [intro, about, canon]
         </ul>
       </div>
     </div>
+    <!-- End Utility Nav -->
+
+    <!-- Primary Nav -->
     <div class="rs-nav-primary">
       <div class="rs-container">
         <div class="rs-nav-brand">
@@ -109,6 +113,9 @@ tags : [intro, about, canon]
         </ul>
       </div>
     </div>
+    <!-- End Primary Nav -->
+
+    <!-- Secondary Nav -->
     <div class="rs-nav-secondary">
       <div class="rs-container">
         <ul class="rs-nav">
@@ -118,6 +125,7 @@ tags : [intro, about, canon]
         </ul>
       </div>
     </div>
+    <!-- End Secondary Nav -->
 </div>{% endhighlight %}
 		</div>
 	</div>

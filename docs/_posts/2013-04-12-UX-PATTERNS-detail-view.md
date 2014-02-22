@@ -45,7 +45,7 @@ tags : [intro, about, canon]
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>
   <div class="span-9">
-    <div class="rs-back-link"><a href="#detail-view" id="detail-example-back-link">‹ Back to Items List</a></div>
+    <div class="rs-back-link"><a href="#detail-view" id="detail-example-back-link">&lsaquo; Back to Items List</a></div>
     <div class="rs-main rs-panel">
       <div class="rs-sidebar rs-pull-right" id="detail-example-help-sidebar">
         <div class="rs-inner">
@@ -216,17 +216,18 @@ tags : [intro, about, canon]
   <div class="span-12">
     <h4 class="markup-margin">Markup</h4>
 
-    {% highlight html %}/* Container */
+    {% highlight html %}<!-- Back Link -->
+    <div class="rs-back-link"><a href="#">&lsaquo; Back to Items List</a></div>
+    <!-- Container -->
     <div class="rs-main rs-panel">
-      <div class="rs-back-link"><a href="#">&lsaquo; Back to Items List</a></div>
-
-      /* Help Sidebar */
+      
+      <!-- Help Sidebar -->
       <div class="rs-sidebar rs-pull-right">
         <div class="rs-inner">
           <h3>Managing This Product</h3>
           <h4>Top action helpful text</h4>
           <p>Short blurb about best practices for a top action on this item. Try to keep this to 3 lines maximum.</p>
-          <p><a target="blank" href="#">More Details About Blurb »</a></p>
+          <p><a target="blank" href="#">More Details About Blurb &raquo;</a></p>
           <hr>
           <h4>Help Me With...</h4>
           <ul>
@@ -234,7 +235,7 @@ tags : [intro, about, canon]
             <li><a target="blank" href="#">Best Practice Number Two</a></li>
             <li><a target="blank" href="#">Best Practice Number Three</a></li>
           </ul>
-          <p><a target="blank" href="#">Learn More about This Product »</a></p>
+          <p><a target="blank" href="#">Learn More about This Product &raquo;</a></p>
           <hr>
           <h4>What's Next</h4>
           <ul>
@@ -245,9 +246,9 @@ tags : [intro, about, canon]
           <p><a target="blank" href="#">Visit Our Knowledge Center &raquo;</a></p>
         </div>
       </div>
-      /* End Help Sidebar */
+      <!-- End Help Sidebar -->
 
-      /* Main Content */
+      <!-- Main Content -->
       <div class="rs-content rs-panel">
         <div class="rs-detail-header">
           <div class="rs-detail-header-actions">
@@ -392,8 +393,8 @@ tags : [intro, about, canon]
           </div>
         </div>
       </div>
-      /* End Main Content */
+      <!-- End Main Content -->
     </div>
-    /* End Container */{% endhighlight %}
+    <!-- End Container -->{% endhighlight %}
 
   </div>
