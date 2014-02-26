@@ -8,7 +8,10 @@ module.exports = function (grunt) {
     },
     compass: {
       all: {
-        config: 'config/compass.rb'
+        config: 'config/compass.rb',
+        options: {
+          bundleExec: true
+        }
       }
     },
     cssmin: {
