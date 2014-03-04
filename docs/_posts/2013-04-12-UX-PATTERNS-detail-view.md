@@ -71,7 +71,7 @@ tags : [intro, about, canon]
           <p><a target="blank" href="#detail-view">Visit Our Knowledge Center &raquo;</a></p>
         </div>
       </div>
-      <div class="rs-content rs-panel" id="detail-example-details-component">
+      <div class="rs-content rs-panel rs-detail-xlarge" id="detail-example-details-component">
         <div class="rs-detail-header">
           <div class="rs-detail-header-actions">
             <div class="rs-dropdown">
