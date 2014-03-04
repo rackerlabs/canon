@@ -28,7 +28,7 @@ tags : [intro, about, canon]
   </div>
   <div class="span-8 offset-1">
     <h4>Example</h4>
-    <div class="rs-content rs-panel" style="margin-top: 0;">
+    <div class="rs-content rs-panel rs-detail-large" style="margin-top: 0;">
       <div class="rs-detail-header">
         <div class="rs-detail-header-actions">
           <button class="rs-btn rs-btn-action">
