@@ -17,6 +17,9 @@ legend {
 label,
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 select,
 textarea,
 .rs-input {
@@ -48,6 +51,9 @@ label:after {
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 input[type="file"],
 select,
 textarea,
@@ -58,6 +64,9 @@ textarea,
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 select,
 textarea,
 .rs-input {
@@ -89,6 +98,9 @@ textarea,
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 textarea,
 .rs-input {
   box-sizing: border-box;
@@ -190,6 +202,9 @@ textarea {
 
   input[type="text"],
   input[type="password"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
   input[type="file"],
   select,
   textarea,
@@ -324,6 +339,9 @@ textarea {
 .rs-control-group.error {
   input[type="text"],
   input[type="password"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
   select,
   textarea,
   .rs-input {
@@ -339,6 +357,9 @@ textarea {
 
   input[type="text"],
   input[type="password"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
   textarea,
   .rs-input {
     &:focus,
