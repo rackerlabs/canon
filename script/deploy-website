@@ -1,0 +1,14 @@
+#!/bin/sh
+
+COMMIT_HASH=$(git rev-parse HEAD)
+COMMIT_MESSAGE="Publish $COMMIT_HASH."
+
+cd _site
+git init
+git remote add website git@github.com:rackerlabs/canon-ui.com.git
+
+git add --all
+git commit --message "$COMMIT_MESSAGE"
+git push website master:gh-pages --force
+
+rm -rf .git
