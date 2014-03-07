@@ -253,6 +253,16 @@ input::-moz-focus-inner {
     float: left;
     margin-right: 10px;
   }
+
+  .rs-processing-indicator {
+    margin-top: 4px;
+    margin-left: -1px;
+  }
+}
+
+.rs-processing-indicator {
+  @include icon;
+  background-image: url('processing-indicator.gif');
 }
 
 .rs-edit {
