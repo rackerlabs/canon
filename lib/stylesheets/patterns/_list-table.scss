@@ -16,7 +16,42 @@
   &.hover,
   &.selected {
     .rs-table-cell, td {
-      background-color: #f1f6ff;
+      background-color: $blue5;
+    }
+  }
+  &.selected:hover, &.selected.hover {
+    .rs-table-cell, td {
+      background-color: $blue10;
+    }
+  }
+  &.rs-status-ok {
+    .rs-table-cell, td {
+      background-color: $green5;
+    }
+  }
+  &.rs-status-ok:hover, &.rs-status-ok.hover {
+    .rs-table-cell, td {
+      background-color: $green10;
+    }
+  }
+  &.rs-status-warning {
+    .rs-table-cell, td {
+      background-color: $yellow5;
+    }
+  }
+  &.rs-status-warning:hover, &.rs-status-warning.hover {
+    .rs-table-cell, td {
+      background-color: $yellow10;
+    }
+  }
+  &.rs-status-error {
+    .rs-table-cell, td {
+      background-color: $red5;
+    }
+  }
+  &.rs-status-error:hover, &.rs-status-error.hover {
+    .rs-table-cell, td {
+      background-color: $red10;
     }
   }
 }
