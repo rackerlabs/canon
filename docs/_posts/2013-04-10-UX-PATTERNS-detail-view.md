@@ -45,7 +45,7 @@ tags : [intro, about, canon]
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>
   <div class="span-9">
-    <div class="rs-back-link"><a href="#detail-view" id="detail-example-back-link">&lsaquo; Back to Items List</a></div>
+    <div class="rs-back-link"><a href="#list-view" id="detail-example-back-link">&lsaquo; Back to Items List</a></div>
     <div class="rs-main rs-panel">
       <div class="rs-sidebar rs-pull-right" id="detail-example-help-sidebar">
         <div class="rs-inner">
@@ -80,12 +80,14 @@ tags : [intro, about, canon]
                 Actions
                 <span class="rs-caret"></span>
               </button>
-              <ul class="rs-dropdown-menu" style="right:0;" id="detail-example-action-button-dropdown">
+              <ul class="rs-dropdown-menu hidden" style="right:0;" id="detail-example-action-button-dropdown">
                 <li><span class="rs-dropdown-category">Identify</span></li>
-                <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-button" data-popover="rename-server-popover" data-popover-position="bottom-left" id="rename-item-link">Rename Item&hellip;</a></li>
+                <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-button" data-popover="rename-server-popover" data-popover-position="bottom-left" id="rename-item-link">Rename Item&hellip;</a></li>
                 <li><span class="rs-dropdown-category">Manage</span></li>
-                <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="size-key" data-popover="resize-popover" data-popover-position="right" id="resize-item-link">Resize Item&hellip;</a></li>
-                <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-button" data-popover="confirm-delete-popover" data-popover-position="bottom-left" id="delete-item-link">Delete Item&hellip;</a></li>
+                <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="size-key" data-popover="resize-popover" data-popover-position="right" id="resize-item-link">Resize Item&hellip;</a></li>
+                <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-button" data-popover="create-check-popover" data-popover-position="bottom-left">Add Check&hellip;</a></li>
+                <li><span class="rs-dropdown-category"></span></li>
+                <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-button" data-popover="confirm-delete-popover" data-popover-position="bottom-left" id="delete-item-link">Delete Item&hellip;</a></li>
               </ul>
             </div>
           </div>
@@ -148,9 +150,9 @@ tags : [intro, about, canon]
                     <td class="rs-table-cog">
                       <div class="rs-dropdown">
                         <div class="rs-cog rs-dropdown-toggle" id="detail-example-action-cog"></div>
-                        <ul class="rs-dropdown-menu" id="detail-example-action-cog-dropdown">
-                          <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-cog" data-popover="edit-item-popover" data-popover-position="bottom-right" id="rename-item-link-1">Edit Item&hellip;</a></li>
-                          <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-cog" data-popover="confirm-delete-popover" data-popover-position="bottom-right">Delete Item&hellip;</a></li>
+                        <ul class="rs-dropdown-menu hidden" id="detail-example-action-cog-dropdown">
+                          <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-cog" data-popover="edit-item-popover" data-popover-position="bottom-right" id="rename-item-link-1">Edit Item&hellip;</a></li>
+                          <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-cog" data-popover="confirm-delete-popover" data-popover-position="bottom-right">Delete Item&hellip;</a></li>
                         </ul>
                       </div>
                     </td>
@@ -163,9 +165,9 @@ tags : [intro, about, canon]
                     <td class="rs-table-cog">
                       <div class="rs-dropdown">
                         <div class="rs-cog rs-dropdown-toggle" id="detail-example-action-cog-2"></div>
-                        <ul class="rs-dropdown-menu">
-                          <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-cog-2" data-popover="edit-item-popover" data-popover-position="bottom-right" id="rename-item-link-1">Edit Item&hellip;</a></li>
-                          <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-cog-2" data-popover="confirm-delete-popover" data-popover-position="bottom-right">Delete Item&hellip;</a></li>
+                        <ul class="rs-dropdown-menu hidden">
+                          <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-cog-2" data-popover="edit-item-popover" data-popover-position="bottom-right" id="rename-item-link-1">Edit Item&hellip;</a></li>
+                          <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-cog-2" data-popover="confirm-delete-popover" data-popover-position="bottom-right">Delete Item&hellip;</a></li>
                         </ul>
                       </div>
                     </td>
@@ -178,9 +180,9 @@ tags : [intro, about, canon]
                     <td class="rs-table-cog">
                       <div class="rs-dropdown">
                         <div class="rs-cog rs-dropdown-toggle" id="detail-example-action-cog-3"></div>
-                        <ul class="rs-dropdown-menu">
-                          <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-cog-3" data-popover="edit-item-popover" data-popover-position="bottom-right" id="rename-item-link-1">Edit Item&hellip;</a></li>
-                          <li><a href="javascript:void(0);" class="rs-popover-source" data-popover-target="detail-example-action-cog-3" data-popover="confirm-delete-popover" data-popover-position="bottom-right">Delete Item&hellip;</a></li>
+                        <ul class="rs-dropdown-menu hidden">
+                          <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-cog-3" data-popover="edit-item-popover" data-popover-position="bottom-right" id="rename-item-link-1">Edit Item&hellip;</a></li>
+                          <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="detail-example-action-cog-3" data-popover="confirm-delete-popover" data-popover-position="bottom-right">Delete Item&hellip;</a></li>
                         </ul>
                       </div>
                     </td>
@@ -398,3 +400,4 @@ tags : [intro, about, canon]
     <!-- End Container -->{% endhighlight %}
 
   </div>
+</div>
