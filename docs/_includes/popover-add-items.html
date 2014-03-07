@@ -1,7 +1,7 @@
 <div class="rs-popover invisible" id="add-items-popover">
   <div class="rs-popover-arrow"></div>
   <div class="rs-popover-content">
-    <form class="rs-form rs-form-horizontal">
+    <form class="rs-form rs-form-horizontal" action="javascript:exampleSubmit($(this));">
       <div class="rs-popover-body">
         <p>Add items to this product:</p>
         <div class="rs-embedded-list-table-wrapper rs-embedded-medium">
@@ -38,8 +38,8 @@
         </div>
       </div>
       <div class="rs-popover-footer rs-btn-group">
-        <div class="rs-btn rs-btn-primary" onclick="hidePopover();">Add Selected Items</div>
-        <div class="rs-btn rs-btn-link">Cancel</div>
+        <button type="submit" class="rs-btn rs-btn-primary" onclick="hidePopover();">Add Selected Items</button>
+        <span class="rs-btn rs-btn-link">Cancel</span>
       </div>
     </form>
   </div>
