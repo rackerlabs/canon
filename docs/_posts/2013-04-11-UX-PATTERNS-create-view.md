@@ -24,7 +24,7 @@ tags : [intro, about, canon]
     <h3>Complex Components:</h3>
     <ul>
       <li><a href="/ui-components/#details" class="highlight-source" data-highlight-target="create-example-horizontal-form">Details</a></li>
-      <li><a href="/ui-components/#forms" class="highlight-source" data-highlight-target="create-example-horizontal-form">Forms</a></li>
+      <li><a href="/ui-components/#forms" class="highlight-source" data-highlight-target="form-highlight-example">Forms</a></li>
       <li><a href="#create-view" class="highlight-source" data-highlight-target="create-example-help-sidebar">Help Sidebar</a></li>
       <li><a href="/ui-components/#tabs" class="highlight-source" data-highlight-target="create-example-tabbed-embedded-table">Tabbed Embedded Tables</a></li>
       <li><a href="/ui-components/#details" class="highlight-source" data-highlight-target="create-example-add-related">Collapsible Sections</a></li>
@@ -42,7 +42,7 @@ tags : [intro, about, canon]
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>
   <div class="span-9">
-    <div class="rs-back-link"><a href="#" id="create-example-back-link">&lsaquo; Back to Items List</a></div>
+    <div class="rs-back-link"><a href="#list-view" id="create-example-back-link">&lsaquo; Back to Items List</a></div>
     <div class="rs-main rs-panel">
       <div class="rs-sidebar rs-pull-right" id="create-example-help-sidebar">
         <div class="rs-inner">
@@ -76,6 +76,7 @@ tags : [intro, about, canon]
               <div class="rs-detail-section-title">{Product Name} Details</div>
             </div>
             <div class="rs-detail-section-body">
+              <div id="form-highlight-example">
               <div class="rs-control-group">
                 <label class="rs-control-label">Item Name</label>
                 <div class="rs-controls">
@@ -132,6 +133,7 @@ tags : [intro, about, canon]
                   <input type="text" value="80" class="rs-input-mini">
                 </div>
               </div>
+            </div>
             </div>
           </div>
           <div class="rs-detail-section" id="create-example-select">
@@ -263,6 +265,7 @@ tags : [intro, about, canon]
               <div class="rs-detail-section-title">{Product Name} Details</div>
             </div>
             <div class="rs-detail-section-body">
+              
               <div class="rs-control-group">
                 <label class="rs-control-label">Item Name</label>
                 <div class="rs-controls">
@@ -319,6 +322,7 @@ tags : [intro, about, canon]
                   <input type="text" value="80" class="rs-input-mini">
                 </div>
               </div>
+            
             </div>
           </div>
           <div class="rs-detail-section">
