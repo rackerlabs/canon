@@ -4,15 +4,22 @@
 
   <title>Rackspace&reg; Canon - The front-end application framework</title>
 
-  <link rel="stylesheet" href="http://ci.canon.rackspace.com/view/Canon/job/canon-screenshot/lastSuccessfulBuild/artifact/dist/canon.min.css">
+  <link rel="stylesheet" href="/canon.css">
   <link rel="stylesheet" type="text/css" href="/css/site.css">
   <link rel="stylesheet" type="text/css" href="/css/syntax.css">
 
-  <script type="application/javascript" src="http://ci.canon.rackspace.com/job/canon-screenshot/lastSuccessfulBuild/artifact/dist/canon.min.js"></script>
+  <!-- <script type="application/javascript" src="http://ci.canon.rackspace.com/job/canon-screenshot/lastSuccessfulBuild/artifact/dist/canon.min.js"></script> -->
   <script type="application/javascript" src="http://code.jquery.com/jquery-1.10.1.js"></script>
   <script type="application/javascript" src="/js/bootstrap.min.js"></script>
   <script type="application/javascript" src="/js/site.js"></script>
   <script type="application/javascript" src="/js/popover.js"></script>
+  <script type="application/javascript" src="/js/highlighter.js"></script>
+  <script type="application/javascript" src="/js/tooltip.js"></script>
+  <script type="application/javascript" src="/js/dropdown.js"></script>
+  <script type="application/javascript" src="/js/tabs.js"></script>
+  <script type="application/javascript" src="/js/select-table.js"></script>
+  <script type="application/javascript" src="/js/collapsible-section.js"></script>
+  <script type="application/javascript" src="/js/overlay.js"></script>
 </head>
 <body class="rs-responsive">
   <div class="rs-wrapper">
@@ -52,7 +59,6 @@
 {% for popover in page.popovers %}
   {% include popover %}
 {% endfor %}
-<div class="rs-popover-screen hidden"></div>
 {% endif %}
 </body>
 </html>
