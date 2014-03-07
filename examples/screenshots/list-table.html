@@ -11,7 +11,7 @@
 <body class="rs-responsive" style="background: #fff;">
   <div style="padding: 40px;">
     <div class="rs-list-table-wrapper">
-      <table class="rs-list-table">
+      <table class="rs-list-table rs-select-table">
         <thead>
           <tr>
             <th class="rs-table-status"></th>
@@ -598,78 +598,104 @@
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr class="rs-status-ok">
             <td class="rs-table-status rs-table-status-ok"></td>
             <td class="rs-table-checkbox"></td>
             <td class="rs-table-cog"></td>
             <td class="rs-table-radio"></td>
             <td class="rs-table-delete"></td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
-          </tr>
-          <tr>
-            <td class="rs-table-status rs-table-status-error"></td>
-            <td class="rs-table-checkbox"></td>
-            <td class="rs-table-cog"></td>
-            <td class="rs-table-radio"></td>
-            <td class="rs-table-delete"></td>
-            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Row Status Ok</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
           </tr>
-          <tr>
-            <td class="rs-table-status rs-table-status-warning"></td>
-            <td class="rs-table-checkbox"></td>
-            <td class="rs-table-cog"></td>
-            <td class="rs-table-radio"></td>
-            <td class="rs-table-delete"></td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
-          </tr>
-          <tr>
+          <tr class="rs-status-ok hover">
             <td class="rs-table-status rs-table-status-ok"></td>
             <td class="rs-table-checkbox"></td>
             <td class="rs-table-cog"></td>
             <td class="rs-table-radio"></td>
             <td class="rs-table-delete"></td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text">Body</td>
-            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
-          </tr>
-          <tr>
-            <td class="rs-table-status rs-table-status-error"></td>
-            <td class="rs-table-checkbox"></td>
-            <td class="rs-table-cog"></td>
-            <td class="rs-table-radio"></td>
-            <td class="rs-table-delete"></td>
-            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Row Status Ok Hover</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
           </tr>
-          <tr>
+          <tr class="rs-status-warning">
             <td class="rs-table-status rs-table-status-warning"></td>
             <td class="rs-table-checkbox"></td>
             <td class="rs-table-cog"></td>
             <td class="rs-table-radio"></td>
             <td class="rs-table-delete"></td>
+            <td class="rs-table-text">Row Status Warning</td>
             <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
+          </tr>
+          <tr class="rs-status-warning hover">
+            <td class="rs-table-status rs-table-status-warning"></td>
+            <td class="rs-table-checkbox"></td>
+            <td class="rs-table-cog"></td>
+            <td class="rs-table-radio"></td>
+            <td class="rs-table-delete"></td>
+            <td class="rs-table-text">Row Status Warning Hover</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
+          </tr>
+          <tr class="rs-status-error">
+            <td class="rs-table-status rs-table-status-error"></td>
+            <td class="rs-table-checkbox"></td>
+            <td class="rs-table-cog"></td>
+            <td class="rs-table-radio"></td>
+            <td class="rs-table-delete"></td>
+            <td class="rs-table-text">Row Status Error</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
+          </tr>
+          <tr class="rs-status-error hover">
+            <td class="rs-table-status rs-table-status-error"></td>
+            <td class="rs-table-checkbox"></td>
+            <td class="rs-table-cog"></td>
+            <td class="rs-table-radio"></td>
+            <td class="rs-table-delete"></td>
+            <td class="rs-table-text">Row Status Error Hover</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
+          </tr>
+          <tr class="selected">
+            <td class="rs-table-status rs-table-status-ok"></td>
+            <td class="rs-table-checkbox"></td>
+            <td class="rs-table-cog"></td>
+            <td class="rs-table-radio"></td>
+            <td class="rs-table-delete"></td>
+            <td class="rs-table-text">Row Selected</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text">Body</td>
+            <td class="rs-table-text"><button type="button" class="rs-plus"></button></td>
+          </tr>
+          <tr class="selected hover">
+            <td class="rs-table-status rs-table-status-error"></td>
+            <td class="rs-table-checkbox"></td>
+            <td class="rs-table-cog"></td>
+            <td class="rs-table-radio"></td>
+            <td class="rs-table-delete"></td>
+            <td class="rs-table-text">Row Selected Hover</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
             <td class="rs-table-text">Body</td>
