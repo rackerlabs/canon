@@ -13,6 +13,13 @@
   }
 }
 
+@mixin heartbeat($beginning: #ffffff, $middle: #ededed, $end: #ffffff) {
+  0%   {background: $beginning;}
+  15%  {background: $middle;}
+  75%  {background: $middle;}
+  100% {background: $end;}
+}
+
 @mixin responsive() {
   body.rs-responsive & {
     @content;
