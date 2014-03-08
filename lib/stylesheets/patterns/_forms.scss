@@ -242,6 +242,10 @@ textarea {
   @include set-form-control-labels(180px);
 }
 
+.form-vertical {
+  @include set-form-control-labels(160px, -160px);
+}
+
 /* Create Forms */
 .rs-form-create {
   label:after {
