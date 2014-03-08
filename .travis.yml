@@ -14,6 +14,8 @@ before_script:
 - npm install -g bower grunt-cli
 - bower install
 - bundle install
+after_success:
+- git describe --exact-match --abbrev=0 && script/deploy-website
 notifications:
   email: false
   irc: "chat.freenode.net#canon-dev"
