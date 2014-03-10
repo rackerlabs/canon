@@ -131,7 +131,7 @@ checkStatuses:
         <ul>
             <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="confirm-batch-delete-popover">Batch Action Popovers</a></li>
             <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="rename-server-popover-list-view">Action Cog Popovers</a></li>
-            <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="create-check-popover-list-view">Add Check Popovers</a></li>
+            <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="create-check-popover-list-view">Inline Popovers</a></li>
         </ul>
       </li>
     </ul>
