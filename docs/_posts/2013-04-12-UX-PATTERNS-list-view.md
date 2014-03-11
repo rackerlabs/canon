@@ -74,11 +74,11 @@ items:
   status: error
 
 itemStatuses:
- ok: "<div class='title rs-no-wrap rs-status-ok'><strong>Good</strong></div><div class='rs-quiet'>Indicates healthy item status.</div>"
- ok rs-table-status-striped: "<div class='title rs-no-wrap rs-status-ok'><strong>Active: Something in progress</strong></div><div class='rs-quiet'>Indicates a positive outcome process is underway.</div>"
- warning: "<div class='title rs-no-wrap rs-status-processing'><strong>Warning</strong> </div><div class='rs-quiet'>Indicates a negative or unavailable health status.</div></div>"
- warning rs-table-status-striped: "<div class='title rs-no-wrap rs-status-processing'><strong>Unavailable</strong> </div><div class='rs-quiet'>Indicates the item is undergoing a critical process and is temporarily unavailable.</div></div>"
- error: "<div class='title rs-no-wrap rs-status-error'><strong>Error</strong></div><div class='rs-quiet'>Indicates something is just plain broke and the user may want to get support.</div>"
+ ok: "<div class='title rs-no-wrap rs-status-ok'><strong>Active</strong></div><div class='rs-quiet'>Use When: Item is working correctly.</div>"
+ ok rs-table-status-striped: "<div class='title rs-no-wrap rs-status-ok'><strong>Action Pending</strong></div><div class='rs-quiet'>Use When: User-initiated action is pending and item is still active.</div>"
+ warning: "<div class='title rs-no-wrap rs-status-processing'><strong>Warning</strong> </div><div class='rs-quiet'>Use When: Item is intermittently working or is trending towards unhealthy.</div></div>"
+ warning rs-table-status-striped: "<div class='title rs-no-wrap rs-status-processing'><strong>Intermittently Available</strong> </div><div class='rs-quiet'>Use When: Item is running a user-initiated process that causes it to intermittently work. It is temporarily in this state and will return to normal afterwards.</div></div>"
+ error: "<div class='title rs-no-wrap rs-status-error'><strong>Error</strong></div><div class='rs-quiet'>Use When: Item is not working as intended.<br>Inform the user they should contact Support for troubleshooting.</div>"
 
 checkStatuses:
  ok: "<div class='rs-no-wrap rs-status-ok'>HTTP Check (Website) OK</div><p class='rs-no-wrap rs-quiet'>Since: Nov 2, 2013 10:52:55 PM UTC</p><span class='rs-quiet'>HTTP connection time is normal</span>"
@@ -209,7 +209,7 @@ checkStatuses:
                 {% endif %}
                 <ul class="rs-status-list">
                   {% for check in item[1].checks %}
-                  <li class="rs-status-list-item tip" title="{{ page.checkStatuses[check]}}" id="">
+                  <li class="rs-status-list-item tip" title="{{ page.checkStatuses[check]}}" data-delay="0">
                     <div class="rs-icon-status rs-status-{{ check }}"></div>
                   </li>
                   {% endfor %}
