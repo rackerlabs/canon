@@ -24,6 +24,7 @@ tags : [intro, about, canon]
     <ul>
       <li><a href="#table-row-actions">Row Actions</a></li>
       <li><a href="#table-row-selection">Row Selection</a></li>
+      <li><a href="#table-row-heartbeat">Row Heartbeat</a></li>
       <li><a href="#table-form-elements">Form Elements</a></li>
       <li><a href="#table-column-sorting">Column Sorting</a></li>
     </ul>
@@ -313,6 +314,32 @@ START ROW SELECTION
     <h4 class="markup-margin">Markup</h4>
 
     {% highlight html %}{% include table-row-selection.html %}{% endhighlight %}
+
+</div>
+</div>
+{% comment %}<!-- ----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+START ROW HEARTBEAT
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------- -->{% endcomment %}
+<hr class="subsection-divider" id="table-row-heartbeat">
+<h3>Table Row Heartbeat</h3>
+<div class="rs-row">
+  <div class="span-3">
+    <ul>
+      <li>Use the row heartbeat to provide feedback for user-initiated actions on a table row</li>
+      <li>Most often used in the <a href="/ux-patterns/#list-view">List View Pattern</a>, the heartbeat can also be used on embedded tables in a <a href="/ux-patterns/#detail-view">Detail View</a></li>
+      <li>The Heartbeat is an effective way to show the success, or lack thereof, for events that occur in a table</li>
+    </ul>
+  </div>
+  <div class="span-8 offset-1">
+    <h4>Example</h4>
+    <div id="heartbeat-example">
+    {% include table-row-heartbeat.html %}
+    </div>
+    <h4 class="markup-margin">Markup</h4>
+
+    {% highlight html %}{% include table-row-heartbeat.html %}{% endhighlight %}
 
 </div>
 </div>
