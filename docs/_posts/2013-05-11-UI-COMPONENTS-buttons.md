@@ -21,10 +21,10 @@ tags : [intro, about, canon]
 			<li><a href="#edit-button">Edit Buttons</a></li>
 			<li><a href="#plus-button">Plus Buttons</a></li>
 		</ul>
-		<h3>When to use</h3>
+		<h3>Guidelines for use</h3>
 		<ul>
-			<li>Buttons should never be shown/hidden dynamically. Use the "disabled" tag instead.</li>
-			<li>Form submission buttons should use <a href="#button-groups">button group styles</a> and always contain a cancel link.</li>
+			<li><a href="#button-groups">Button groups</a> should be used to submit forms and should contain a cancel link.</li>
+			<li>Never shown/hide buttons dynamically. Instead, disable/enable buttons using the "disabled" attribute on the button.</li>
 			<li>Learn more about button best practices from our <a href="#button-research">design research</a>.</li>
 		</ul>
 		<h4>Adherence Rating: {{ page.adherance }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherance] | escape }}"></span> </h4>
@@ -738,25 +738,51 @@ tags : [intro, about, canon]
 <div class="rs-row">
 	<div class="span-3">
 		<p>Use a button group to lay out a set of related actions.</p>
+		<h4>Guidelines for use</h4>
 		<ul>
-			<li>These are most often used in popovers or create forms to group the save button and the cancel	button.</li>
-			<li>A button group should never contain more than one primary button.</li>
+			<li>These are most often used in <a href="/ui-components/#popover">Popovers</a> or <a href="/ui-components/#create-form">Create Forms</a> to group the save button and the cancel	button</li>
+			<li>A button group should never contain more than one primary button</li>
+			<li>The cancel action must always be an <span class="rs-no-wrap">rs-btn-link</span> as shown in the example</li>
+		</ul>
+		<h4>When Submitting Forms</h4>
+		<ul>
+			<li>Disable primary and secondary buttons</li>
+			<li>Hide the "Cancel" link</li>
+			<li>Show the processing indicator</li>
 		</ul>
 	</div>
 	<div class="span-8 offset-1">
+		<h3>Default State</h3>
 		<h4>Example</h4>
 		<div class="rs-btn-group">
 			<a class="rs-btn rs-btn-primary">Primary Action</a>
 			<a class="rs-btn">Secondary Action</a>
-			<a class="rs-btn rs-btn-link">Cancel</a>
+			<i class="rs-processing-indicator rs-hidden"></i>
+			<a href="#" class="rs-btn rs-btn-link">Cancel</a>
 		</div>
 		<h4 class="markup-margin">Markup</h4>
 		{% highlight html %}<div class="rs-btn-group">
   <a class="rs-btn rs-btn-primary">Primary Action</a>
   <a class="rs-btn">Secondary Action</a>
-  <a class="rs-btn rs-btn-link">Cancel</a>
+  <a href="#" class="rs-btn rs-btn-link">Cancel</a>
+  <i class="rs-processing-indicator rs-hidden"></i>
 </div>{% endhighlight %}
+	<h3 class="markup-margin">Submitting State</h3>
+	<h4>Example</h4>
+	<div class="rs-btn-group">
+		<a class="rs-btn rs-btn-primary disabled" disabled="disabled">Primary Action</a>
+		<a class="rs-btn disabled" disabled="disabled">Secondary Action</a>
+		<a href="#" class="rs-btn rs-btn-link rs-hidden">Cancel</a>
+		<i class="rs-processing-indicator"></i>
 	</div>
+	<h4 class="markup-margin">Markup</h4>
+		{% highlight html %}<div class="rs-btn-group">
+	<a class="rs-btn rs-btn-primary disabled" disabled="disabled">Primary Action</a>
+	<a class="rs-btn disabled" disabled="disabled">Secondary Action</a>
+	<a href="#" class="rs-btn rs-btn-link rs-hidden">Cancel</a>
+	<i class="rs-processing-indicator"></i>
+</div>{% endhighlight %}
+</div>
 </div>
 <hr class="subsection-divider" id="button-research">
 <h3>Research</h3>
