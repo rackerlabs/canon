@@ -140,7 +140,7 @@ tags : [intro, about, canon]
   </div>
 </div>
 
-<hr class="subsection-divider">
+<hr class="subsection-divider" id="create-form">
 
 <div class="rs-row">
   <div class="span-3">
