@@ -1,4 +1,6 @@
-var tooltipTimer;
+var attachTipTimer;
+var removeTipTimer;
+var hideTipTimeout = 1000;
 
 var removeTooltips = function() {
 	$('.rs-tooltip').remove();
@@ -13,11 +15,20 @@ var attachTooltip = function(params) {
     											params.contents+
   											'</div>'+
 											'</div>');
-		var timeOut = 0;
+		var timeout = 0;
 		if(params.delay){
 			timeOut = eval(params.delay)*1000;
 		}
-		tooltipTimer = setTimeout(function(){$('body').append(tooltip)}, timeOut);
+		attachTipTimer = setTimeout(function(){$('body').append(tooltip);}, timeOut);
+
+		tooltip.hover(function() {
+			clearTimeout(removeTipTimer);
+			clearTimeout(attachTipTimer);
+		}, function() {
+			clearTimeout(attachTipTimer);
+			removeTipTimer = setTimeout(function(){removeTooltips();}, hideTipTimeout);
+		});
+
 		return tooltip;
 }
 
@@ -26,7 +37,9 @@ $(document).ready(function() {
 		$(this).attr('data-title',$(this).attr('title')).removeAttr('title');
 	});
 	$('.tip').hover(function(event) {
-		clearTimeout(tooltipTimer);
+		removeTooltips();
+		clearTimeout(removeTipTimer);
+		clearTimeout(attachTipTimer);
 		var tooltip = new Object();
 		tooltip.contents = $(this).attr('data-title');
 		tooltip.delay = $(this).attr('data-delay');
@@ -34,8 +47,7 @@ $(document).ready(function() {
 		tooltip.top = $(document).scrollTop()+event.clientY;
 		attachTooltip(tooltip);
 	}, function(e) {
-		removeTooltips();
-		clearTimeout(tooltipTimer);
+		clearTimeout(attachTipTimer);
+		removeTipTimer = setTimeout(function(){removeTooltips();}, hideTipTimeout);
 	});
-
 });
