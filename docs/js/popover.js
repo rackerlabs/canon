@@ -1,6 +1,5 @@
 var showPopover = function(source) {
-	clearTimeout(tooltipTimer);
-	removeTooltips();
+	$('.rs-tooltip').remove();
 	var popover = $("#"+source.attr("data-popover"));
 	popover.removeClass("invisible").addClass("visible");
 	showOverlay();
