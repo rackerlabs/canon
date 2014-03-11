@@ -5,7 +5,7 @@ var heartbeatOk = function() {
 
 var heartbeatWarning = function() {
 	$("#heartbeat-example tbody tr:nth-child(1)").removeClass('rs-heartbeat-ok');
-			$("#heartbeat-example tbody tr:nth-child(2)").addClass('rs-heartbeat-warning');
+	$("#heartbeat-example tbody tr:nth-child(2)").addClass('rs-heartbeat-warning');
 }
 
 var heartbeatError = function() {
@@ -14,28 +14,29 @@ var heartbeatError = function() {
 }
 
 $(document).ready(function() {
+	if($("#heartbeat-example").length) {
 
-	$("#heartbeat-example tbody tr").removeAttr('class');
-
-	setTimeout(function(){
-		heartbeatOk();
-		setInterval(function(){
+		$("#heartbeat-example tbody tr").removeAttr('class');
+	
+		setTimeout(function(){
 			heartbeatOk();
-		},10500);
-	},0);
+			setInterval(function(){
+				heartbeatOk();
+			},10500);
+		},0);
 
-	setTimeout(function(){
-		heartbeatWarning();
-		setInterval(function(){
+		setTimeout(function(){
 			heartbeatWarning();
-		},10500);
-	},3500);
+			setInterval(function(){
+				heartbeatWarning();
+			},10500);
+		},3500);
 
-	setTimeout(function(){
-		heartbeatError();
-		setInterval(function(){
+		setTimeout(function(){
 			heartbeatError();
-		},10500);
-	},7000);
-
+			setInterval(function(){
+				heartbeatError();
+			},10500);
+		},7000);
+	}
 });
