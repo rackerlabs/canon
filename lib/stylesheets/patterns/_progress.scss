@@ -5,26 +5,26 @@
   @include clearfix;
 }
 
-.rs-progress::before,
-.rs-progress::after {
+.rs-progress-inner::before,
+.rs-progress-inner::after {
   position: absolute;
   display: block;
   content: '';
 }
 
-.rs-progress::before {
+.rs-progress-inner::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 15px;
+  bottom: 0;
   border: 1px solid $grey300;
 }
 
-.rs-progress::after {
+.rs-progress-inner::after {
   top: 1px;
   left: 1px;
   right: 1px;
-  height: 13px;
+  bottom: 1px;
   border: 1px solid $white;
 }
 
@@ -67,3 +67,68 @@
   font-size: 11px;
   text-align: center;
 }
+
+.rs-bar-info {
+  background: $blue;
+}
+
+@mixin set-variable-width-progress($width) {
+  
+  $afterOffset: 2px;
+
+  .rs-progress-inner {
+    float: left; 
+    width: $width;
+    &::before {
+      width: $width;
+    }
+    &::after {
+      width: $width - $afterOffset;
+    }
+  }
+}
+
+.rs-progress-xsmall {
+  @include set-variable-width-progress(50px)
+}
+
+.rs-progress-small {
+  @include set-variable-width-progress(100px)
+}
+
+.rs-progress-medium {
+  @include set-variable-width-progress(200px)
+}
+
+.rs-progress-large {
+  @include set-variable-width-progress(300px)
+}
+
+.rs-progress-xlarge {
+  @include set-variable-width-progress(400px)
+}
+
+.rs-progress-label {
+  margin-left: 10px;
+  line-height: 1em;
+  float: left;
+}
+
+.rs-progress-inner:last-child {
+  margin-bottom: 0px !important;
+}
+
+.rs-progress-stack {
+  background-color: $red;
+  .rs-progress-inner {
+    clear: left;
+    margin-bottom: 1px;
+  }
+  
+  .rs-progress-label {
+    position: absolute;
+  }
+}
+
+
+
