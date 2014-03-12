@@ -118,16 +118,24 @@
   margin-bottom: 0px !important;
 }
 
-.rs-progress-stack {
-  background-color: $red;
+.rs-progress-stack { 
   .rs-progress-inner {
     clear: left;
+    height:4px;
     margin-bottom: 1px;
   }
   
+  .rs-bar {
+    height: 4px;
+  }
+
   .rs-progress-label {
     position: absolute;
   }
+}
+
+.rs-progress-inner:last-of-type {
+  margin-bottom:0px;
 }
 
 
