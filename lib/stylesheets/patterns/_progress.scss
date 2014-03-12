@@ -43,33 +43,47 @@
 .rs-bar {
   height: 13px;
   border-right: 1px solid $white;
-}
 
-.rs-bar-ok {
-  background: $green;
+  &.rs-bar-info, &.rs-status-neutral {
+    background: $blue;
 
-  &.rs-bar-striped {
-    background: url('progress-background-success.gif');
+    &.rs-bar-striped {
+      background: url('progress-background-info.gif');
+    }
   }
-}
 
-.rs-bar-processing {
-  background: $yellow;
+  &.rs-bar-ok, &.rs-status-ok {
+    background: $green;
 
-  &.rs-bar-striped {
-    background: url('progress-background-warning.gif');
+    &.rs-bar-striped {
+      background: url('progress-background-success.gif');
+    }
   }
+
+  &.rs-bar-processing, &.rs-status-warning {
+    background: $yellow;
+
+    &.rs-bar-striped {
+      background: url('progress-background-warning.gif');
+    }
+  }
+
+  &.rs-bar-error, &.rs-status-error {
+    background: $red;
+
+    &.rs-bar-striped {
+      background: url('progress-background-error.gif');
+    }
+  }
+
 }
+
 
 .rs-caption {
   margin-top: 2px;
   color: #999;
   font-size: 11px;
   text-align: center;
-}
-
-.rs-bar-info {
-  background: $blue;
 }
 
 @mixin set-variable-width-progress($width) {
