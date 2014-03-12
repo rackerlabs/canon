@@ -8,116 +8,194 @@ adherance: 1
 tags : [intro, about, canon]
 ---
 <div class="rs-row">
-	<div class="span-3">
-		<h3>When to use</h3>
-		<p>The progress bar is used when an action requires users to wait for more than a few seconds. This gives users a visual indicator of the proportinate amount of time the entire process will take.</p>
-    <p>The most common use is on the <a href="#details">Details</a> page, inline with the entity's status (see <a href="#multi-step-process">multi-step process</a> for an example).</p>
+  <div class="span-3">
+    <p>Progress bars give users good visual indicators for process position, proportion and status.</p>
+    <p>Most commonly used in a <a href="/ux-patterns/#detail-view">Detail View</a>, showing an entity's status (<a href="#multi-step-process">see multi-step process</a>).</p>
+    <h3>When to use</h3>
+    <ul>
+      <li>An action requires users to wait for more than a few seconds</li>
+      <li>Showing users their position in a multi-step process and the status of each step</li>
+      <li>A metric can be expressed in terms of amount consumed versus total amount</li>
+    </ul>
     <h3>How it works</h3>
     <ul>
       <li>Use <a href="#status-indicators">status colors</a> to reflect the parent entity's status. This can change throughout the process.</li>
       <ul>
         <li><span style="color:#00a96d; font-weight:bold">Green (OK)</span> state is for processes with no impact on the uptime of a product, like uploading a file.</li>
         <li><span style="color:#ff9d00; font-weight:bold">Yellow (Processing)</span> state shows a user initiated processes, like rebuilding or resizing, that may cause a product to intermittently work.</li>
+        <li><span style="color:#c40022; font-weight:bold">Red (Error)</span> state shows a process that has errored out and cannot continue.</li>
+        <li><span style="color:#1e6ec1; font-weight:bold">Blue (Neutral)</span> should be used to display metrics without positive or negative status, such as showing a fraction versus total.</li>
       </ul>
       <li>Use animating stripes when you need more indication that work is happening in the background.</li>
     </ul>
-		<h4>Adherence Rating: {{ page.adherance }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherance] | escape }}"></span> </h4>
-	</div>
-	<div class="list-table span-8 offset-1">
-		<h4>Examples</h4>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 200px">
-              <span class="table-sort-text">Progress Bar</span>
-              <span class="table-sort-indicator"></span>
-              </a>
-            </th>
-            <th>
-              <span class="table-sort-text">Markup</span>
-              <span class="table-sort-indicator"></span>
-              </a>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="rs-progress">
-                <div class="rs-progress-inner">
-                  <div class="rs-segment" style="width: 20%">
-                    <div class="rs-bar rs-bar-ok"></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-            {% highlight html %}<div class="rs-progress">
+    <h4>Adherence Rating: {{ page.adherance }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherance] | escape }}"></span> </h4>
+  </div>
+  <div class="list-table span-8 offset-1">
+    <h4>Examples</h4>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 200px">
+            <span class="table-sort-text">Progress Bar</span>
+            <span class="table-sort-indicator"></span>
+          </a>
+        </th>
+        <th>
+          <span class="table-sort-text">Markup</span>
+          <span class="table-sort-indicator"></span>
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="rs-progress">
+          <div class="rs-progress-inner">
+            <div class="rs-segment" style="width: 50%">
+              <div class="rs-bar rs-status-ok"></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="rs-progress">
+          <div class="rs-progress-inner">
+            <div class="rs-segment" style="width: 60%">
+              <div class="rs-bar rs-status-ok rs-bar-striped"></div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td><div class="collapsible-highlight">{% highlight html %}<!-- Default Ok Bar -->
+<div class="rs-progress">
   <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 20%">
-      <div class="rs-bar rs-bar-ok"></div>
+    <div class="rs-segment" style="width: 50%">
+      <div class="rs-bar rs-status-ok"></div>
     </div>
   </div>
-</div>{% endhighlight %}
-          </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="rs-progress">
-                <div class="rs-progress-inner">
-                  <div class="rs-segment" style="width: 40%">
-                    <div class="rs-bar rs-bar-processing"></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>{% highlight html %}<div class="rs-progress">
-  <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 40%">
-      <div class="rs-bar rs-bar-processing"></div>
-    </div>
-  </div>
-</div>{% endhighlight %}</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="rs-progress">
-                <div class="rs-progress-inner">
-                  <div class="rs-segment" style="width: 60%">
-                    <div class="rs-bar rs-bar-ok rs-bar-striped"></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>{% highlight html %}<div class="rs-progress">
+</div>
+
+<!-- Striped Ok Bar -->
+<div class="rs-progress">
   <div class="rs-progress-inner">
     <div class="rs-segment" style="width: 60%">
-      <div class="rs-bar rs-bar-ok rs-bar-striped"></div>
+      <div class="rs-bar rs-status-ok rs-bar-striped"></div>
     </div>
   </div>
-</div>{% endhighlight %}</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="rs-progress">
-                <div class="rs-progress-inner">
-                  <div class="rs-segment" style="width: 80%">
-                    <div class="rs-bar rs-bar-processing rs-bar-striped"></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>{% highlight html %}<div class="rs-progress">
+</div>{% endhighlight %}</div></td>
+  </tr>
+  <tr>
+    <td>
+      <div class="rs-progress">
+        <div class="rs-progress-inner">
+          <div class="rs-segment" style="width: 50%">
+            <div class="rs-bar rs-status-warning"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="rs-progress">
+        <div class="rs-progress-inner">
+          <div class="rs-segment" style="width: 60%">
+            <div class="rs-bar rs-status-warning rs-bar-striped"></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td><div class="collapsible-highlight">{% highlight html %}<!-- Default Warning Bar -->
+<div class="rs-progress">
   <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 80%">
-      <div class="rs-bar rs-bar-processing rs-bar-striped"></div>
+    <div class="rs-segment" style="width: 50%">
+      <div class="rs-bar rs-status-warning"></div>
     </div>
   </div>
-</div>{% endhighlight %}</td>
-          </tr>
-        </tbody>
-      </table>
-	</div>
+</div>
+
+<!-- Striped Warning Bar -->
+<div class="rs-progress">
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 60%">
+      <div class="rs-bar rs-status-warning rs-bar-striped"></div>
+    </div>
+  </div>
+</div>{% endhighlight %}</div></td>
+  </tr>
+  </tr>
+  <tr>
+    <td>
+      <div class="rs-progress">
+        <div class="rs-progress-inner">
+          <div class="rs-segment" style="width: 50%">
+            <div class="rs-bar rs-status-error"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="rs-progress">
+        <div class="rs-progress-inner">
+          <div class="rs-segment" style="width: 60%">
+            <div class="rs-bar rs-status-error rs-bar-striped"></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td><div class="collapsible-highlight">{% highlight html %}<!-- Default Error Style -->
+<div class="rs-progress">
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 50%">
+      <div class="rs-bar rs-status-error"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Striped Error Style -->
+<div class="rs-progress">
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 60%">
+      <div class="rs-bar rs-status-error rs-bar-striped"></div>
+    </div>
+  </div>
+</div>{% endhighlight %}</div></td>
+  </tr>
+  <tr>
+    <td>
+      <div class="rs-progress">
+        <div class="rs-progress-inner">
+          <div class="rs-segment" style="width: 50%">
+            <div class="rs-bar rs-status-neutral"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="rs-progress">
+        <div class="rs-progress-inner">
+          <div class="rs-segment" style="width: 60%">
+            <div class="rs-bar rs-status-neutral rs-bar-striped"></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td><div class="collapsible-highlight">{% highlight html %}<!-- Default Neutral Bar -->
+<div class="rs-progress">
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 60%">
+      <div class="rs-bar rs-status-neutral"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Striped Neutral Bar -->
+<div class="rs-progress">
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 60%">
+      <div class="rs-bar rs-status-neutral rs-bar-striped"></div>
+    </div>
+  </div>
+</div>{% endhighlight %}</div></td>
+  </tr>
+</tbody>
+</table>
+</div>
 </div>
 <hr class="subsection-divider" id="multi-step-process">
 <h3>Multi-Step Process</h3>
@@ -133,7 +211,7 @@ tags : [intro, about, canon]
   </div>
   <div class="list-table span-8 offset-1">
     <h4>Example</h4>
-        <div class="rs-panel rs-content" style="margin-top: 0px; min-height: 190px">
+    <div class="rs-panel rs-content" style="margin-top: 0px; min-height: 190px">
       <div class="rs-detail-section">
         <div class="rs-detail-section-header">
           <div class="rs-detail-section-title">Server Details</div>
@@ -148,11 +226,11 @@ tags : [intro, about, canon]
                   <div class="rs-progress">
                     <div class="rs-progress-inner">
                       <div class="rs-segment" style="width: 20%">
-                        <div class="rs-bar rs-bar-processing"></div>
+                        <div class="rs-bar rs-status-warning"></div>
                         <div class="rs-caption">1. Queue</div>
                       </div>
                       <div class="rs-segment" style="width: 40%">
-                        <div class="rs-bar rs-bar-processing rs-bar-striped"></div>
+                        <div class="rs-bar rs-status-warning rs-bar-striped"></div>
                         <div class="rs-caption">2. Prep</div>
                       </div>
                       <div class="rs-segment" style="width: 25%">
@@ -181,26 +259,24 @@ tags : [intro, about, canon]
     </div>
     <h4 class="markup-margin">Markup</h4>
     {% highlight html %}<div class="rs-progress">
-  <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 20%">
-      <div class="rs-bar rs-bar-processing"></div>
-      <div class="rs-caption">1. Step One</div>
+    <div class="rs-progress-inner">
+      <div class="rs-segment" style="width: 20%">
+        <div class="rs-bar rs-status-warning"></div>
+        <div class="rs-caption">1. Step One</div>
+      </div>
+      <div class="rs-segment" style="width: 40%">
+        <div class="rs-bar rs-status-warning rs-bar-striped"></div>
+        <div class="rs-caption">2. Step Two</div>
+      </div>
+      <div class="rs-segment" style="width: 25%">
+        <div class="rs-bar"></div>
+        <div class="rs-caption">3. Step Three</div>
+      </div>
+      <div class="rs-segment" style="width: 15%">
+        <div class="rs-bar"></div>
+        <div class="rs-caption">4. Step Four</div>
+      </div>
     </div>
-    <div class="rs-segment" style="width: 40%">
-      <div class="rs-bar rs-bar-processing rs-bar-striped"></div>
-      <div class="rs-caption">2. Step Two</div>
-    </div>
-    <div class="rs-segment" style="width: 25%">
-      <div class="rs-bar"></div>
-      <div class="rs-caption">3. Step Three</div>
-    </div>
-    <div class="rs-segment" style="width: 15%">
-      <div class="rs-bar"></div>
-      <div class="rs-caption">4. Step Four</div>
-    </div>
-  </div>
-</div>{% endhighlight %}
-  </div>
-
-
+  </div>{% endhighlight %}
+</div>
 </div>
