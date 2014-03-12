@@ -197,6 +197,87 @@ tags : [intro, about, canon]
 </table>
 </div>
 </div>
+<hr class="subsection-divider" id="stacked-progress-bars">
+<h3>Stacked Progress Bars</h3>
+<div class="rs-row">
+  <div class="span-3">
+    <p>Use when there are a few related metrics that do not each need their own label.</p>
+    <p>Widths are available in xsmall, small, medium, large and xlarge classes.</p>
+  </div>
+  <div class=" span-8 offset-1">
+    <h4>Example</h4>
+    <table class="rs-list-table">
+      <thead>
+        <tr>
+          <th>Progress Bar</th>
+          <th>Markup</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="rs-progress rs-progress-xsmall rs-progress-stack">
+              <div class="rs-progress-inner">
+                <div class="rs-segment" style="width: 20%">
+                  <div class="rs-bar rs-status-neutral"></div>
+                </div>
+              </div>
+              <div class="rs-progress-inner">
+                <div class="rs-segment" style="width: 40%">
+                  <div class="rs-bar rs-status-neutral"></div>
+                </div>
+              </div>
+              <div class="rs-progress-inner">
+                <div class="rs-segment" style="width: 60%">
+                  <div class="rs-bar rs-status-neutral"></div>
+                </div>
+              </div>
+              <div class="rs-progress-inner">
+                <div class="rs-segment" style="width: 80%">
+                  <div class="rs-bar rs-status-neutral"></div>
+                </div>
+              </div>
+              <div class="rs-progress-inner">
+                <div class="rs-segment" style="width: 100%">
+                  <div class="rs-bar rs-status-neutral"></div>
+                </div>
+              </div>
+              <span class="rs-progress-label">vCPUs</span>
+            </div>
+          </td>
+          <td><div class="collapsible-highlight">{% highlight html %}<div class="rs-progress rs-progress-small rs-progress-stack">
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 20%">
+      <div class="rs-bar rs-status-neutral"></div>
+    </div>
+  </div>
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 40%">
+      <div class="rs-bar rs-status-neutral"></div>
+    </div>
+  </div>
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 60%">
+      <div class="rs-bar rs-status-neutral"></div>
+    </div>
+  </div>
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 80%">
+      <div class="rs-bar rs-status-neutral"></div>
+    </div>
+  </div>
+  <div class="rs-progress-inner">
+    <div class="rs-segment" style="width: 100%">
+      <div class="rs-bar rs-status-neutral"></div>
+    </div>
+  </div>
+  <span class="rs-progress-label">vCPUs</span>
+</div>{% endhighlight %}</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 <hr class="subsection-divider" id="multi-step-process">
 <h3>Multi-Step Process</h3>
 <div class="rs-row">
