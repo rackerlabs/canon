@@ -851,6 +851,7 @@ h4.rs-quiet, h4 .rs-quiet  {
 .collapsible-highlight .rs-toggle {
   display:  none;
   position: absolute;
+  z-index: 100;
   left: 10px;
   top: 100%;
   padding: 3px 10px;
