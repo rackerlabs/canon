@@ -9,13 +9,12 @@ tags : [intro, about, canon]
 ---
 <div class="rs-row">
   <div class="span-3">
-    <p>Progress bars give users good visual indicators for process position, proportion and status.</p>
+    <p>Progress bars visually communicate activity, status and percentage.</p>
 
     <h3>When to use</h3>
     <ul>
       <li><a href="#progress-bars">Basic Progress Bars</a> can be used when a metric can be expressed in terms of amount consumed versus total amount</li>
       <li><a href="#multi-step-process">Multi-Step Progress Bars</a> are good for representing a user's position in a multi-step process as well as the activity and status of each step</li>
-      <li><a href="#stacked-progress-bars">Stacked Progress Bars</a> are useful for grouping similar metrics together</li>
     </ul>
     <h3>How it works</h3>
     <ul>
@@ -279,85 +278,4 @@ tags : [intro, about, canon]
     </div>
   </div>{% endhighlight %}
 </div>
-</div>
-<hr class="subsection-divider" id="stacked-progress-bars">
-<h3>Stacked Progress Bars</h3>
-<div class="rs-row">
-  <div class="span-3">
-    <p>Use when there are a few related metrics that do not each need their own label.</p>
-    <p>Widths are available in xsmall, small, medium, large and xlarge classes.</p>
-  </div>
-  <div class=" span-8 offset-1">
-    <h4>Example</h4>
-    <table class="rs-list-table">
-      <thead>
-        <tr>
-          <th>Progress Bar</th>
-          <th>Markup</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="rs-progress rs-progress-xsmall rs-progress-stack">
-              <div class="rs-progress-inner">
-                <div class="rs-segment" style="width: 20%">
-                  <div class="rs-bar rs-status-neutral"></div>
-                </div>
-              </div>
-              <div class="rs-progress-inner">
-                <div class="rs-segment" style="width: 40%">
-                  <div class="rs-bar rs-status-neutral"></div>
-                </div>
-              </div>
-              <div class="rs-progress-inner">
-                <div class="rs-segment" style="width: 60%">
-                  <div class="rs-bar rs-status-neutral"></div>
-                </div>
-              </div>
-              <div class="rs-progress-inner">
-                <div class="rs-segment" style="width: 80%">
-                  <div class="rs-bar rs-status-neutral"></div>
-                </div>
-              </div>
-              <div class="rs-progress-inner">
-                <div class="rs-segment" style="width: 100%">
-                  <div class="rs-bar rs-status-neutral"></div>
-                </div>
-              </div>
-              <span class="rs-progress-label">vCPUs</span>
-            </div>
-          </td>
-          <td><div class="collapsible-highlight">{% highlight html %}<div class="rs-progress rs-progress-small rs-progress-stack">
-  <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 20%">
-      <div class="rs-bar rs-status-neutral"></div>
-    </div>
-  </div>
-  <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 40%">
-      <div class="rs-bar rs-status-neutral"></div>
-    </div>
-  </div>
-  <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 60%">
-      <div class="rs-bar rs-status-neutral"></div>
-    </div>
-  </div>
-  <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 80%">
-      <div class="rs-bar rs-status-neutral"></div>
-    </div>
-  </div>
-  <div class="rs-progress-inner">
-    <div class="rs-segment" style="width: 100%">
-      <div class="rs-bar rs-status-neutral"></div>
-    </div>
-  </div>
-  <span class="rs-progress-label">vCPUs</span>
-</div>{% endhighlight %}</div></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </div>
