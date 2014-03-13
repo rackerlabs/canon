@@ -17,9 +17,9 @@ var attachTooltip = function(params) {
 											'</div>');
 		var timeout = 0;
 		if(params.delay){
-			timeOut = eval(params.delay)*1000;
+			timeout = eval(params.delay)*1000;
 		}
-		attachTipTimer = setTimeout(function(){$('body').append(tooltip);}, timeOut);
+		attachTipTimer = setTimeout(function(){$('body').append(tooltip);}, timeout);
 
 		tooltip.hover(function() {
 			clearTimeout(removeTipTimer);
