@@ -794,23 +794,17 @@ App Layout
 #highlighter
 {
 	position: absolute;
-	border: 3px #ff9d00 solid;
+	border: 3px #2878cb solid;
 	box-sizing: border-box;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .hidden
 {
-	display: none;
-}
-
-.rs-popover-screen
-{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
+  display: none;
 }
 
 .rs-detail-section-subtitle
@@ -833,6 +827,21 @@ App Layout
 
 h4.rs-quiet, h4 .rs-quiet  {
   font-weight: bold;
+}
+
+.rs-popover form {
+  margin:0;
+}
+
+.rs-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
 }
 
 .collapsible-highlight {
