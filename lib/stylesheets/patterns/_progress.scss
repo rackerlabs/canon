@@ -128,15 +128,11 @@
   float: left;
 }
 
-.rs-progress-inner:last-child {
-  margin-bottom: 0px !important;
-}
-
 .rs-progress-stack { 
   .rs-progress-inner {
     clear: left;
     height:4px;
-    margin-bottom: 1px;
+    border-bottom: 1px #fff solid
   }
   
   .rs-bar {
@@ -149,7 +145,7 @@
 }
 
 .rs-progress-inner:last-of-type {
-  margin-bottom:0px;
+  border-bottom: none;
 }
 
 
