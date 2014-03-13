@@ -1,0 +1,42 @@
+<div class="rs-popover invisible" id="confirm-batch-delete-popover">
+	<div class="rs-popover-arrow"></div>
+	<div class="rs-popover-content">
+		<form class="rs-form rs-form-horizontal rs-form-large" action="javascript:exampleSubmit($(this));">
+			<div class="rs-popover-body">
+				<p><strong>Permanently delete</strong> the following <span id="deletion-count">3</span> items?</p>
+				<div class="rs-embedded-list-table-wrapper rs-embedded-small" style="min-width: 350px;">
+					<table class="rs-list-table rs-embedded-list-table">
+						<thead>
+							<tr>
+								<th>Item Name</th>
+								<th>Status</th>
+								<th class="rs-table-delete"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="rs-table-text item-name rs-no-wrap">My Product Item 1</td>
+								<td class="rs-table-text item-status rs-no-wrap">Pending Deletion</td>
+								<td class="rs-table-delete"><button type="button" class="rs-delete remove-from-deletion"></button></td>
+							</tr>
+							<tr>
+								<td class="rs-table-text item-name rs-no-wrap">My Product Item 2</td>
+								<td class="rs-table-text item-status rs-no-wrap">Pending Deletion</td>
+								<td class="rs-table-delete"><button type="button" class="rs-delete remove-from-deletion"></button></td>
+							</tr>
+							<tr>
+								<td class="rs-table-text item-name rs-no-wrap">My Product Item 3</td>
+								<td class="rs-table-text item-status rs-no-wrap">Pending Deletion</td>
+								<td class="rs-table-delete"><button type="button" class="rs-delete remove-from-deletion"></button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="rs-popover-footer rs-btn-group">
+				<button type="submit" class="rs-btn rs-btn-primary">Delete {Item}s</button>
+				<span class="rs-btn rs-btn-link">Cancel</span>
+			</div>
+		</form>
+	</div>
+</div>
