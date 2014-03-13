@@ -135,34 +135,3 @@
   line-height: 1em;
   float: left;
 }
-
-.rs-progress-stack { 
-  .rs-progress-inner {
-    clear: left;
-    height:4px;
-    border-bottom: 1px #fff solid
-  }
-  
-  .rs-bar {
-    height: 4px;
-  }
-
-  .rs-progress-label {
-    position: absolute;
-  }
-}
-
-.rs-progress-stack::before {
-  bottom: 0px;
-  height: auto;
-}
-
-.rs-progress-stack::after {
-  bottom: 1px;
-  height: auto;
-}
-
-.rs-progress-inner:last-of-type {
-  border-bottom: none;
-}
-
