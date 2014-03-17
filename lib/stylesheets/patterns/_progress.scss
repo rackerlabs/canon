@@ -1,7 +1,10 @@
 .rs-progress {
+  display: inline-block;
   position: relative;
   padding: 2px 1px 2px 2px;
+  min-width: 100px;
   max-width: 600px;
+  vertical-align: middle;
   @include clearfix;
 }
 
@@ -87,7 +90,7 @@
 }
 
 @mixin set-variable-width-progress($width) {
-  
+
   $afterOffset: 2px;
 
   &.rs-progress::before {
@@ -99,7 +102,7 @@
   }
 
   .rs-progress-inner {
-    float: left; 
+    float: left;
     width: $width;
     &::before {
       width: $width;
