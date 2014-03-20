@@ -217,7 +217,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy', "exec:jekyll"]);
 
-  grunt.registerTask('test', ['karma:ci', 'test:screenshot']);
+  grunt.registerTask('test', ['karma:ci', 'test:screenshot:validate']);
   grunt.registerTask('test:screenshot:record', ['connect:test', 'exec:janus_record']);
   grunt.registerTask('test:screenshot:validate', ['connect:test', 'exec:janus_validate']);
 
