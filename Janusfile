@@ -1,0 +1,55 @@
+directory: spec/janus
+threshold: 0.15
+tunnel: true
+
+browsers:
+- platform: Windows 7
+  name: Chrome
+
+tests:
+- name: Buttons
+  url: http://localhost:9000/screenshots/buttons.html
+- name: Detail View
+  url: http://localhost:9000/screenshots/detail-view.html
+- name: Create View
+  url: http://localhost:9000/screenshots/create-view.html
+- name: Form
+  url: http://localhost:9000/screenshots/form.html
+- name: Form (Horizontal)
+  url: http://localhost:9000/screenshots/form-horizontal.html
+- name: Form (Create)
+  url: http://localhost:9000/screenshots/form-create.html
+- name: Layout (Fixed)
+  url: http://localhost:9000/screenshots/layout-fixed.html
+- name: Layout (Responsive)
+  url: http://localhost:9000/screenshots/layout-responsive.html
+- name: List Table
+  url: http://localhost:9000/screenshots/list-table.html
+- name: List Table Loading
+  url: http://localhost:9000/screenshots/list-table-loading.html
+- name: List Table Empty
+  url: http://localhost:9000/screenshots/list-table-empty.html
+- name: List Table Error
+  url: http://localhost:9000/screenshots/list-table-error.html
+- name: Embedded List Table
+  url: http://localhost:9000/screenshots/embedded-list-table.html
+- name: Embedded List Table Loading
+  url: http://localhost:9000/screenshots/embedded-list-table-loading.html
+- name: Embedded List Table Empty
+  url: http://localhost:9000/screenshots/embedded-list-table-empty.html
+- name: Embedded List Table Error
+  url: http://localhost:9000/screenshots/embedded-list-table-error.html
+- name: Menu
+  url: http://localhost:9000/screenshots/menu.html
+- name: Popover
+  url: http://localhost:9000/screenshots/popover.html
+- name: Progress Bar
+  url: http://localhost:9000/screenshots/progress-bar.html
+- name: Status
+  url: http://localhost:9000/screenshots/status.html
+- name: Tooltip
+  url: http://localhost:9000/screenshots/tooltip.html
+- name: Tabs
+  url: http://localhost:9000/screenshots/tabs.html
+- name: Typography
+  url: http://localhost:9000/screenshots/typography.html

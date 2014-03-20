@@ -6,9 +6,6 @@ log/
 node_modules/
 package/
 sauce_connect.*
-spec/reports/
-spec/skins/*/*/*_diff.png
-spec/skins/*/*/*_fresh.png
 examples/demos
 _site
 
