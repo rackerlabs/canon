@@ -16,7 +16,30 @@
   &.hover,
   &.selected {
     .rs-table-cell, td {
-      background-color: #f1f6ff;
+      background-color: $blue5;
+    }
+  }
+  &.selected:hover, &.selected.hover {
+    .rs-table-cell, td:not(.rs-table-status) {
+      background-color: $blue10;
+    }
+  }
+  &.rs-heartbeat-ok {
+    .rs-table-cell, td:not(.rs-table-status) {
+      animation:heartbeat_success 3s;
+      -webkit-animation:heartbeat_success 3s;
+    }
+  }
+  &.rs-heartbeat-warning {
+    .rs-table-cell, td:not(.rs-table-status) {
+      animation:heartbeat_warning 3s;
+      -webkit-animation:heartbeat_warning 3s;
+    }
+  }
+  &.rs-heartbeat-error {
+    .rs-table-cell, td:not(.rs-table-status) {
+      animation:heartbeat_error 3s;
+      -webkit-animation:heartbeat_error 3s;
     }
   }
 }
