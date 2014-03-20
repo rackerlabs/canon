@@ -134,7 +134,7 @@ module.exports = function (grunt) {
       test: {
         options: {
           port: process.env.CANON_TEST_PORT || 9000
-        }
+        },
       }
     },
     exec: {
@@ -151,6 +151,9 @@ module.exports = function (grunt) {
       },
       jekyll: {
         cmd: 'bundle exec jekyll build --config config/jekyll.dev.yml'
+      },
+      janus: {
+        cmd: 'bundle exec janus --username=$SAUCE_USERNAME --access_key=$SAUCE_ACCESS_KEY validate'
       }
     },
     watch: {
@@ -213,7 +216,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', ['karma:ci', 'test:screenshot']);
 
-  grunt.registerTask('test:screenshot', ['connect:test', 'exec:rspec:spec/screenshot']);
+  grunt.registerTask('test:screenshot', ['connect:test', 'exec:janus']);
 
   grunt.registerTask('server', ['build', 'connect:server', 'watch']);
 };
