@@ -152,7 +152,10 @@ module.exports = function (grunt) {
       jekyll: {
         cmd: 'bundle exec jekyll build --config config/jekyll.dev.yml'
       },
-      janus: {
+      janus_record: {
+        cmd: 'bundle exec janus --username=$SAUCE_USERNAME --access_key=$SAUCE_ACCESS_KEY record'
+      },
+      janus_validate: {
         cmd: 'bundle exec janus --username=$SAUCE_USERNAME --access_key=$SAUCE_ACCESS_KEY validate'
       }
     },
@@ -215,8 +218,8 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy', "exec:jekyll"]);
 
   grunt.registerTask('test', ['karma:ci', 'test:screenshot']);
-
-  grunt.registerTask('test:screenshot', ['connect:test', 'exec:janus']);
+  grunt.registerTask('test:screenshot:record', ['connect:test', 'exec:janus_record']);
+  grunt.registerTask('test:screenshot:validate', ['connect:test', 'exec:janus_validate']);
 
   grunt.registerTask('server', ['build', 'connect:server', 'watch']);
 };
