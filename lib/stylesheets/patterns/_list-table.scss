@@ -26,20 +26,20 @@
   }
   &.rs-heartbeat-ok {
     .rs-table-cell, td:not(.rs-table-status) {
-      animation:heartbeat_success 4s;
-      -webkit-animation:heartbeat_success 4s;
+      animation:heartbeat_success 3s;
+      -webkit-animation:heartbeat_success 3s;
     }
   }
   &.rs-heartbeat-warning {
     .rs-table-cell, td:not(.rs-table-status) {
-      animation:heartbeat_warning 4s;
-      -webkit-animation:heartbeat_warning 4s;
+      animation:heartbeat_warning 3s;
+      -webkit-animation:heartbeat_warning 3s;
     }
   }
   &.rs-heartbeat-error {
     .rs-table-cell, td:not(.rs-table-status) {
-      animation:heartbeat_error 4s;
-      -webkit-animation:heartbeat_error 4s;
+      animation:heartbeat_error 3s;
+      -webkit-animation:heartbeat_error 3s;
     }
   }
 }
