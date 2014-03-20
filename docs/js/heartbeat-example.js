@@ -22,21 +22,21 @@ $(document).ready(function() {
 			heartbeatOk();
 			setInterval(function(){
 				heartbeatOk();
-			},10500);
+			},9000);
 		},0);
 
 		setTimeout(function(){
 			heartbeatWarning();
 			setInterval(function(){
 				heartbeatWarning();
-			},10500);
-		},3500);
+			},9000);
+		},3000);
 
 		setTimeout(function(){
 			heartbeatError();
 			setInterval(function(){
 				heartbeatError();
-			},10500);
-		},7000);
+			},9000);
+		},6000);
 	}
 });
