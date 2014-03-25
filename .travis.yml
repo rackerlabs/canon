@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+- '0.10'
+
+install:
+- script/bootstrap
+
+script:
+- grunt build
+- grunt test:validate
+
+notification:
+  email: false
+  irc: "chat.freenode.net#canon-dev"

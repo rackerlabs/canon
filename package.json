@@ -1,16 +1,16 @@
 {
   "name": "canon",
   "version": "2.0.0",
-  "keywords": ["rackspace"],
+  "keywords": [
+    "rackspace"
+  ],
   "license": "Apache License, Version 2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/rackerlabs/canon"
   },
-  "scripts": {
-  },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "grunt": "~0.4.4"
   }
 }
