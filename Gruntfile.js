@@ -1,7 +1,21 @@
 module.exports = function (grunt) {
   grunt.initConfig({
     clean: {
-      dist: ['.sass-cache', 'dist']
+      all: ['.sass-cache', '_site', 'dist']
+    },
+    jekyll: {
+      options: {
+        bundleExec: true,
+        src: 'doc'
+      },
+      doctor: {
+        options: {
+          doctor: true
+        }
+      },
+      build: {
+
+      }
     },
     sass: {
       options: {
@@ -29,11 +43,12 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-jekyll');
 
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('build', 'Build the CSS and documentation.', ['clean', 'build:css', 'build:docs']);
+  grunt.registerTask('build', 'Build the CSS and documentation.', ['clean:all', 'build:css', 'build:docs']);
   grunt.registerTask('build:css', 'Build the CSS.', ['sass:build', 'sass:dist']);
-  grunt.registerTask('build:docs', 'Build the documentation.', []);
+  grunt.registerTask('build:docs', 'Build the documentation.', ['jekyll:build']);
   grunt.registerTask('release', 'Deploy Canon CSS and documentation.', []);
   grunt.registerTask('server', 'Start the Canon development server.', ['build', 'connect:server', 'watch']);
   grunt.registerTask('test:record', 'Record Janus screenshots.', []);
