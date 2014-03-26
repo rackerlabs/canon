@@ -30,6 +30,7 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyzip (1.1.2)
+    sass (3.3.4)
     sauce (3.4.0)
       childprocess (>= 0.1.6)
       cmdparse (>= 2.0.2)
@@ -58,3 +59,4 @@ PLATFORMS
 
 DEPENDENCIES
   janus-cli
+  sass

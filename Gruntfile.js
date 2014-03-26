@@ -1,16 +1,41 @@
 module.exports = function (grunt) {
-  grunt.initConfig({});
+  grunt.initConfig({
+    clean: {
+      dist: ['.sass-cache', 'dist']
+    },
+    sass: {
+      options: {
+        bundleExec: true,
+        sourcemap: true
+      },
+      build: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          'dist/canon.css': 'lib/stylesheets/canon.scss'
+        }
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+          'dist/canon.min.css': 'lib/stylesheets/canon.scss'
+        }
+      }
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   grunt.registerTask('default', ['build']);
-
-  grunt.registerTask('build', 'Build the CSS and documentation', ['build:css', 'build:docs']);
-  grunt.registerTask('build:css', 'Build the CSS', []);
-  grunt.registerTask('build:docs', 'Build the documentation', []);
-
-  grunt.registerTask('release', 'Deploy Canon CSS and documentation', []);
-
-  grunt.registerTask('server', 'Start the Canon development server', ['build', 'connect:server', 'watch']);
-
-  grunt.registerTask('test:record', 'Record Janus screenshots', []);
-  grunt.registerTask('test:validate', 'Validate Janus screenshots', []);
+  grunt.registerTask('build', 'Build the CSS and documentation.', ['clean', 'build:css', 'build:docs']);
+  grunt.registerTask('build:css', 'Build the CSS.', ['sass:build', 'sass:dist']);
+  grunt.registerTask('build:docs', 'Build the documentation.', []);
+  grunt.registerTask('release', 'Deploy Canon CSS and documentation.', []);
+  grunt.registerTask('server', 'Start the Canon development server.', ['build', 'connect:server', 'watch']);
+  grunt.registerTask('test:record', 'Record Janus screenshots.', []);
+  grunt.registerTask('test:validate', 'Validate Janus screenshots.', []);
 };
