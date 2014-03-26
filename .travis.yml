@@ -8,7 +8,6 @@ install:
 
 script:
 - grunt build
-- grunt test:validate
 
 notification:
   email: false

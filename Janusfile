@@ -1,0 +1,50 @@
+directory: spec/screenshots
+threshold: 0.1
+tunnel: true
+
+browsers:
+- platform: Linux
+  name: Chrome
+- platform: Linux
+  name: Firefox
+  version: 27
+- platform: OS X 10.9
+  name: Chrome
+- platform: OS X 10.9
+  name: Firefox
+  version: 28
+- platform: OS X 10.9
+  name: Safari
+  version: 7
+- platform: Windows 8
+  name: Chrome
+- platform: Window 8
+  name: Firefox
+  version: 28
+- platform: Window 8
+  name: Internet Explorer
+  version: 10
+- platform: Window 8.1
+  name: Internet Explorer
+  version: 11
+- platform: Windows 7
+  name: Chrome
+- platform: Window 7
+  name: Firefox
+  version: 28
+- platform: Window 7
+  name: Internet Explorer
+  version: 11
+- platform: Window 7
+  name: Internet Explorer
+  version: 10
+- platform: Window 7
+  name: Internet Explorer
+  version: 9
+- platform: Window 7
+  name: Internet Explorer
+  version: 8
+
+tests:
+- name: sample
+  url: http://0.0.0.0:9000/sample.html

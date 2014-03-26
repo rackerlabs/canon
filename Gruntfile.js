@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
   grunt.initConfig({
     clean: {
-      all: ['.sass-cache', '_site', 'dist']
+      all: ['.sass-cache', '_site', 'dist', 'sauce_connect.*']
     },
     connect: {
       docs: {
@@ -10,7 +10,17 @@ module.exports = function (grunt) {
           port: 8000,
           livereload: true
         }
+      },
+      janus: {
+        options: {
+          base: 'spec/tests',
+          port: 9000
+        }
       }
+    },
+    exec: {
+      janusRecord: 'bundle exec janus --username=$SAUCE_USERNAME --access_key=$SAUCE_ACCESS_KEY record',
+      janusValidate: 'bundle exec janus --username=$SAUCE_USERNAME --access_key=$SAUCE_ACCESS_KEY validate'
     },
     jekyll: {
       options: {
@@ -67,6 +77,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-jekyll');
 
   grunt.registerTask('default', ['build']);
@@ -75,6 +86,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build:docs', 'Build the documentation.', ['jekyll:build']);
   grunt.registerTask('release', 'Deploy Canon CSS and documentation.', []);
   grunt.registerTask('server', 'Start the Canon development server.', ['build', 'connect:docs', 'watch']);
-  grunt.registerTask('test:record', 'Record Janus screenshots.', []);
-  grunt.registerTask('test:validate', 'Validate Janus screenshots.', []);
+  grunt.registerTask('test:record', 'Record Janus screenshots.', ['connect:janus', 'exec:janusRecord']);
+  grunt.registerTask('test:validate', 'Validate Janus screenshots.', ['connect:janus', 'exec:janusValidate']);
 };

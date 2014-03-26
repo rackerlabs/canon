@@ -2,3 +2,5 @@
 _site/
 dist/
 node_modules/
+sauce_connect.log
+sauce_connect.ready
