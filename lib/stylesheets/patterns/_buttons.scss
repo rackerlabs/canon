@@ -202,6 +202,24 @@ input::-moz-focus-inner {
   @include icon-sprite(minus-circle-808080);
 }
 
+.rs-close {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  opacity: .6;
+
+  @include inline-block;
+  @include icon-sprite(close-grey);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .rs-caret {
   width: 10px;
   height: 10px;
