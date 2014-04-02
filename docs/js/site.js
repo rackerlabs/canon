@@ -1,8 +1,19 @@
 $(document).ready(function () {
-	var navSecondary = $(".nav-secondary-affix");
 
-	if (navSecondary.length) {
-		navSecondary.attr("data-offset-top",navSecondary.offset().top - $(".nav-utility").height() - 3).wrap('<div class="nav-affix-wrapper"></div>');
-		$(".nav-affix-wrapper").css("height",navSecondary.height()+"px");
-	}
+  var verticalOffset = $(".rs-nav-utility").height();
+
+  $(".rs-nav-affix").each(function() {
+    var nav = $(this);  
+    nav.attr("data-affixed-top",verticalOffset);
+    nav.affix({
+        offset: nav.offset().top-verticalOffset
+    });
+    nav.on('affix.bs.affix', function () {
+        $(this).css("top",$(this).attr('data-affixed-top')+"px");
+    });
+    verticalOffset+=nav.height();
+  });
+
+  $('body').scrollspy({ target: '#sidebar-nav' });
+
 });
