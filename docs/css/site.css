@@ -144,17 +144,15 @@
 	margin: 1em;
 }
 
-.nav-secondary-affix.affix
+.rs-nav-affix.affix
 {
 	position: fixed;
-	top: 1.9em;
-	width: 100%;
 	z-index: 1250;
 }
 
 /* follows the canon fixed conventions */
 @media only screen and (max-height: 600px){
-	.nav-secondary-affix.affix {
+	.rs-nav-affix.affix {
 		position: static!important;
 	}
 	.site-header, .site-header-secondary-page {
