@@ -4,7 +4,11 @@
   -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.15);
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.15);
   -ms-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.15);
-  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.rs-message+.rs-main {
+  margin-top: 10px;
 }
 
 .rs-message-title {
@@ -14,6 +18,7 @@
 
 .rs-message-description {
   display: inline;
+  color: #666;
 }
 
 .rs-message-icon {
@@ -22,55 +27,80 @@
 }
 
 .rs-message {
-  padding: 7px 10px;
-  color: #666;
+  .rs-close {
+    float: right;
+    margin: 10px;
+  }
+}
 
-  .rs-status-ok {
+.rs-message-content {
+  margin: 7px 10px;
+}
+
+.rs-message-icon {
+  float: left;
+  margin: 10px;
+}
+
+.rs-message-icon ~ .rs-message-content {
+  margin-left: 33px;
+}
+
+.rs-close ~ .rs-message-content {
+  margin-right: 33px;
+}
+
+.rs-status-ok {
+  .rs-message-icon {
     @include icon-sprite(status-green);
   }
+}
 
-  .rs-status-warning {
+.rs-status-warning {
+  .rs-message-icon {
     @include icon-sprite(status-yellow);
   }
+}
 
-  .rs-status-error {
+.rs-status-error {
+  .rs-message-icon {
     @include icon-sprite(status-red);
   }
+}
 
-  .rs-status-info {
+.rs-status-info {
+  .rs-message-icon {
     @include icon-sprite(status-blue);
   }
 }
 
 .rs-message.rs-status-ok {
   background-color: $green50;
-
-  .rs-message-title {
-    color: $green600
-  }
+  color: $green600
 }
 
 .rs-message.rs-status-warning {
   background-color: $yellow50;
-
-  .rs-message-title {
-    color: $yellow600
-  }
+  color: $yellow600
 }
 
 .rs-message.rs-status-error {
   background-color: $red50;
-
-  .rs-message-title {
-    color: $red600
-  }
+  color: $red600
 }
 
 .rs-message.rs-status-info {
   background-color: $blue50;
-
-  .rs-message-title {
-    color: $blue600
-  }
+  color: $blue600
 }
 
+.rs-growl-messages {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  max-width: 300px;
+
+  .rs-message-title {
+    display: block;
+  }
+}
