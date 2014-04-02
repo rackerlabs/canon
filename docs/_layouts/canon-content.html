@@ -3,7 +3,8 @@ layout: default
 ---
 
 {{ content }}
-<div class="rs-nav-secondary nav-secondary-affix"  data-spy="affix">
+{% comment %}
+<div class="rs-nav-secondary rs-nav-affix">
   <div class="rs-container">
     <ul class="rs-nav">
       {% for post in site.categories.[page.title] %}
@@ -12,10 +13,23 @@ layout: default
     </ul>
   </div>
 </div>
+{% endcomment %}
 <div class="rs-body">
   <div class="rs-inner">
     <div class="rs-container">
-      <div class="rs-main">
+      <div class="rs-main rs-panel">
+        <div class="rs-sidebar rs-pull-left">
+          <div class="rs-inner rs-nav-affix">
+            <h4>{{page.title}}</h4>
+            <ul id="sidebar-nav">
+              {% for post in site.categories.[page.title] %}
+              <li>
+                <a class="rs-nav-link" href="#{{ post.title | replace: " ", "-" | downcase }}">{{ post.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
         <div class="rs-content rs-panel">
         {% for post in site.categories.[page.title] %}
           <!-- {{ post.title }} -->
