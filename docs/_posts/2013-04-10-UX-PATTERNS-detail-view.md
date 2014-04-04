@@ -126,8 +126,8 @@ tags : [intro, about, canon]
                         <div class="rs-bar rs-status-neutral"></div>
                       </div>
                     </div>
-                    <span class="rs-progress-label">912.23 MB of 2 GB</span>
                   </div>
+                  <span class="rs-progress-label">912.23 MB of 2 GB</span>
                 </div>
               </li>
               <li class="rs-detail-item">

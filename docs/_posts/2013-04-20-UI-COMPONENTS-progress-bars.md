@@ -219,8 +219,8 @@ tags : [intro, about, canon]
           <div class="rs-bar rs-status-neutral"></div>
         </div>
       </div>
-      <span class="rs-progress-label">407.2 MB of 2 GB</span>
     </div>
+    <span class="rs-progress-label">407.2 MB of 2 GB</span>
     <h4 class="markup-margin">Markup</h4>
 {% highlight html %}<div class="rs-progress rs-progress-medium">
   <div class="rs-progress-inner">
@@ -228,8 +228,8 @@ tags : [intro, about, canon]
       <div class="rs-bar rs-status-neutral"></div>
     </div>
   </div>
-  <span class="rs-progress-label">407.2 MB of 2 GB</span>
-</div>{% endhighlight %}
+</div>
+<span class="rs-progress-label">407.2 MB of 2 GB</span>{% endhighlight %}
   </div>
 </div>
 
@@ -258,7 +258,7 @@ tags : [intro, about, canon]
               <li class="rs-detail-item">
                 <div class="rs-detail-key">Status</div>
                 <div class="rs-detail-value">
-                  Prepping Resize
+                  <div class="rs-progress-label">Prepping Resize</div>
                   <div class="rs-progress">
                     <div class="rs-progress-inner">
                       <div class="rs-segment" style="width: 20%">
@@ -294,7 +294,8 @@ tags : [intro, about, canon]
       </div>
     </div>
     <h4 class="markup-margin">Markup</h4>
-    {% highlight html %}<div class="rs-progress">
+    {% highlight html %}<div class="rs-progress-label">Prepping Resize</div>
+<div class="rs-progress">
     <div class="rs-progress-inner">
       <div class="rs-segment" style="width: 20%">
         <div class="rs-bar rs-status-warning"></div>
