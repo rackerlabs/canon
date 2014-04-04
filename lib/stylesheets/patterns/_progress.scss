@@ -31,6 +31,8 @@
 .rs-progress-inner {
   height: 13px;
   background-color: #eee;
+  position: relative;
+  z-index: 1;
 }
 
 .rs-segment {
