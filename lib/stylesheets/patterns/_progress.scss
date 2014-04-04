@@ -43,39 +43,38 @@
 .rs-bar {
   height: 13px;
   border-right: 1px solid $white;
+}
 
-  &.rs-bar-info, &.rs-status-neutral {
-    background: $blue;
+.rs-bar-info, .rs-status-neutral, .rs-status-info  {
+  background: $blue;
 
-    &.rs-bar-striped {
-      background: url('progress-background-info.gif');
-    }
+  &.rs-bar-striped {
+    background: url('progress-background-info.gif');
   }
+}
 
-  &.rs-bar-ok, &.rs-status-ok {
-    background: $green;
+.rs-bar-ok, .rs-status-ok {
+  background: $green;
 
-    &.rs-bar-striped {
-      background: url('progress-background-success.gif');
-    }
+  &.rs-bar-striped {
+    background: url('progress-background-success.gif');
   }
+}
 
-  &.rs-bar-processing, &.rs-status-warning {
-    background: $yellow;
+.rs-bar-processing, .rs-status-warning {
+  background: $yellow;
 
-    &.rs-bar-striped {
-      background: url('progress-background-warning.gif');
-    }
+  &.rs-bar-striped {
+    background: url('progress-background-warning.gif');
   }
+}
 
-  &.rs-bar-error, &.rs-status-error {
-    background: $red;
+.rs-bar-error, .rs-status-error {
+  background: $red;
 
-    &.rs-bar-striped {
-      background: url('progress-background-error.gif');
-    }
+  &.rs-bar-striped {
+    background: url('progress-background-error.gif');
   }
-
 }
 
 
@@ -86,27 +85,19 @@
   text-align: center;
 }
 
+.rs-progress-label {
+  margin-right: 6px;
+  display: inline;
+}
+
 @mixin set-variable-width-progress($width) {
-  
-  $afterOffset: 2px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: $width;
 
-  &.rs-progress::before {
-    width: $width + $afterOffset;
-  }
-
-  &.rs-progress::after {
-    width: $width;
-  }
-
-  .rs-progress-inner {
-    float: left; 
-    width: $width;
-    &::before {
-      width: $width;
-    }
-    &::after {
-      width: $width - $afterOffset;
-    }
+  + .rs-progress-label {
+    margin-right: 0;
+    margin-left: 6px;
   }
 }
 
@@ -128,10 +119,4 @@
 
 .rs-progress-xlarge {
   @include set-variable-width-progress(400px)
-}
-
-.rs-progress-label {
-  margin-left: 10px;
-  line-height: 1em;
-  float: left;
 }
