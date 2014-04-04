@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: $zindexPopovers + 2;
+  z-index: $zindexModal + 1;
 }
 
 .rs-focus-panel .rs-inner {
@@ -38,13 +38,13 @@
   height: 717px;
 }
 
-.rs-modal-blocker {
+.rs-overlay {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;
-  opacity: .2;
-  z-index: $zindexPopovers + 1;
+  background-color: #fff;
+  opacity: .5;
+  z-index: $zindexModal;
 }
