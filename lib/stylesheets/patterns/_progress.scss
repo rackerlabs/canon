@@ -55,7 +55,7 @@
   }
 }
 
-.rs-bar-ok, .rs-status-ok {
+.rs-bar-ok, .rs-bar.rs-status-ok {
   background: $green;
 
   &.rs-bar-striped {
@@ -63,7 +63,7 @@
   }
 }
 
-.rs-bar-processing, .rs-status-warning {
+.rs-bar-processing, .rs-bar.rs-status-warning {
   background: $yellow;
 
   &.rs-bar-striped {
@@ -71,7 +71,7 @@
   }
 }
 
-.rs-bar-error, .rs-status-error {
+.rs-bar-error, .rs-bar.rs-status-error {
   background: $red;
 
   &.rs-bar-striped {
