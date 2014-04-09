@@ -50,7 +50,7 @@ items:
   name: My Product Item 8
   id: 8d1f2566-8174-4113-9623-2f3bdee3b92d
   ip: 222.111.222
-  status: ok
+  status: error
   checks: [ok,ok,ok,error,ok,disabled,warning,ok,warning]
  9:
   name: My Product Item 9
@@ -62,16 +62,6 @@ items:
   id: 10d1f2566-8174-4113-9623-2f3bdee3b92d
   ip: 222.111.222
   status: ok
- 11:
-  name: My Product Item 11
-  id: 11dd184a5-553b-47a6-9bc6-7097341648e6
-  ip: 222.111.222
-  status: ok rs-table-status-striped
- 12:
-  name: My Product Item 12
-  id: 12d1f2566-8174-4113-9623-2f3bdee3b92d
-  ip: 111.222.111
-  status: error
 
 itemStatuses:
  ok: "<div class='title rs-no-wrap rs-status-ok'><strong>Active</strong></div><div class='rs-quiet'>Use When: Item is working correctly.</div>"
@@ -92,8 +82,9 @@ checkStatuses:
     <ol>
       <li><strong>Quickly find items</strong>
         <ul>
-          <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="list-view-sort-example">Sorting</a></li>
+          <li><a href="/ui-components/#facets" class="highlight-source" data-highlight-target="facets-example">Facet</a></li>
           <li><a href="/ui-components/#forms" class="highlight-source" data-highlight-target="list-table-filter">Search</a></li>
+          <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="list-view-sort-example">Sort</a></li>
         </ul>
       </li>
       <li><strong>Easily assess item health</strong>
@@ -137,10 +128,10 @@ checkStatuses:
     </ul>
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>
-  <div class="span-9">
-    <div class="rs-content rs-panel">
+  <div class="span-9 rs-main">
+    <div class="rs-sidebar rs-facets">{% include facets.html%}</div>
+    <div class="rs-content rs-panel" id="list-view-example">
       <div class="rs-inner">
-        <h2 class="rs-page-title" id="list-view-page-title">{Product Name}</h2>
          <div class="rs-btn-group" id="list-view-button-group">
            <a href="#create-view" class="rs-btn rs-btn-primary">Create {Product}</a>
            <button class="rs-btn modify-selected rs-popover-source" data-popover-target="delete-items-button" data-popover="confirm-batch-delete-popover" data-popover-position="bottom-right" disabled="disabled" id="delete-items-button">Delete</button>
