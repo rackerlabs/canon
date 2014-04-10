@@ -298,6 +298,98 @@ checkStatuses:
   </div>
 </div>
 
+<hr class="subsection-divider" id="list-view-update-row-pattern">
+<h3>List View Interaction: <span class="rs-quiet">Update Row</span></h3>
+<p>This is a step-by-step, detailed description of how to update row items in the <a href="#list-view">List View</a>.  The general principles here are that feedback loops must be complete for any action, and affected items must be clearly indicated.</p>
+<div class="rs-row markup-margin">
+  <div class="span-3">
+    <h4 id="select-action">Step 1: Select Action</h4>
+    <ol class="alpha-list">
+      <li>User clicks a row action cog</li>
+      <li>Actions dropdown appears</li>
+      <li>User selects action</li>
+    </ol>
+  </div>
+  <div class="span-9">
+    <img src="/img/list-view-select-action.png">
+  </div>
+</div>
+<hr class="markup-margin">
+<div class="rs-row">
+  <div class="span-3">
+    <h4 id="show-popover">Step 2: Show Popover</h4>
+    <ol class="alpha-list">
+      <li>Popover points at cog for item</li>
+      <li>First field receives focus</li>
+    </ol>
+  </div>
+  <div class="span-9">
+    <img src="/img/list-view-show-popover.png">
+  </div>
+</div>
+<hr class="markup-margin">
+<div class="rs-row">
+  <div class="span-3">
+    <h4 id="submit-form">Step 3: Submit Form</h4>
+    <ol class="alpha-list">
+      <li>Submit button is disabled</li>
+      <li>Cancel link is hidden</li>
+      <li>Processing throbber appears</li>
+    </ol>
+  </div>
+  <div class="span-9">
+    <img src="/img/list-view-submit-form.png">
+  </div>
+</div>
+<hr class="markup-margin">
+<div class="rs-row">
+  <div class="span-3">
+    <h4 id="heartbeat-and-message">Step 4: Heartbeat &#38; Message</h4>
+  </div>
+  <div class="span-9"></div>
+</div>
+
+<hr class="subsection-divider" id="list-view-delete-row-pattern">
+<h3>List View Interaction: <span class="rs-quiet">Delete Row</span></h3>
+<div class="rs-row">
+  <div class="span-3">
+    <p>Description goes here</p>
+    <ol>
+      <li><a href="#select-delete-action">Select Delete Action</a></li>
+      <li><a href="#require-confirmation">Require Confirmation</a></li>
+      <li><a href="#submit-deletion-form">Submit Form</a></li>
+      <li><a href="#heartbeat-delete">Heartbeat &#38; Message</a></li>
+    </ol>
+  </div>
+  <div class="span-8 offset-1">
+    <h4 id="select-delete-action">1. Select Delete Action</h4>
+    <h4 id="require-confirmation">2. Require Confirmation</h4>
+    <h4 id="submit-deletion-form">3. Submit Form</h4>
+    <h4 id="heartbeat-delete">4. Heartbeat &#38; Message</h4>
+  </div>
+</div>
+
+<hr class="subsection-divider" id="list-view-delete-row-pattern">
+<h3>List View Interaction: <span class="rs-quiet">Batch Action</span></h3>
+<div class="rs-row">
+  <div class="span-3">
+    <p>Description goes here</p>
+    <ol>
+      <li><a href="#select-rows">Select Rows</a></li>
+      <li><a href="#choose-batch-action">Choose Batch Action</a></li>
+      <li><a href="#show-batch-popover">Show Popover</a></li>
+      <li><a href="#submit-batch-action">Submit Form</a></li>
+      <li><a href="#heartbeat-batch">Heartbeat &#38; Message</a></li>
+    </ol>
+  </div>
+  <div class="span-8 offset-1">
+    <h4 id="select-rows">1. Select Rows</h4>
+    <h4 id="choose-batch-action">2. Choose Batch Action</h4>
+    <h4 id="show-batch-popover">3. Show Popover</h4>
+    <h4 id="submit-batch-action">4. Submit Form</h4>
+    <h4 id="heartbeat-batch">5. Heartbeat &#38; Message</h4>
+  </div>
+</div>
 
 <script type="text/javascript">
   
