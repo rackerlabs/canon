@@ -262,6 +262,10 @@ ol:last-child
   margin-bottom: 0px;
 }
 
+ol.alpha-list {
+  list-style-type: upper-alpha;
+}
+
 .site-header-download-canon
 {
 	text-align: center;
