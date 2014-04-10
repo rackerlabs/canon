@@ -37,7 +37,6 @@
 
 .rs-segment {
   float: left;
-
   @include transition-property(width);
   @include transition-duration(1s);
 }
