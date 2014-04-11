@@ -467,18 +467,49 @@ checkStatuses:
     <p>Description goes here</p>
     <ol>
       <li><a href="#select-rows">Select Rows</a></li>
-      <li><a href="#choose-batch-action">Choose Batch Action</a></li>
       <li><a href="#show-batch-popover">Show Popover</a></li>
       <li><a href="#submit-batch-action">Submit Form</a></li>
-      <li><a href="#heartbeat-batch">Heartbeat &#38; Message</a></li>
+      <li><a href="#batch-action-activity">Show Activity</a></li>
+      <li><a href="#batch-action-feedback">Provide Feedback</a></li>
     </ol>
   </div>
   <div class="span-8 offset-1">
-    <h4 id="select-rows">1. Select Rows</h4>
-    <h4 id="choose-batch-action">2. Choose Batch Action</h4>
-    <h4 id="show-batch-popover">3. Show Popover</h4>
-    <h4 id="submit-batch-action">4. Submit Form</h4>
-    <h4 id="heartbeat-batch">5. Heartbeat &#38; Message</h4>
+    <ol>
+      <li id="select-rows">
+        <h4>Select Rows</h4>
+        <ol class="alpha-list">
+          <li>User selects rows using <a href="/ui-components/#table-row-selection">row checkboxes</a> or select-all box</li>
+          <li><a href="/ui-components/#secondary-buttons">Secondary Button</a> for batch actions becomes enabled</li>
+          <li>User clicks batch action button</li>
+        </ol>
+        <img src="/img/list-view-enable-batch-action.png">
+      </li>
+      <li id="show-batch-popover" class="markup-margin">
+        <h4>Show Popover</h4>
+        <ol class="alpha-list">
+          <li><a href="/ui-components/#popover">Popover</a> points at <a href="/ui-components/#secondary-buttons">Batch Action Button</a></li>
+          <li>Popover lists items being affected by batch action</li>
+          <li>User can click the <a href="/ui-components/#delete-buttons">Minus Button</a> to remove items from the action<br><i>( popover closes automatically if user removes all rows )</i></li>
+        </ol>
+        <img src="/img/list-view-batch-action-popover.png">
+      </li>
+      <li id="submit-batch-action" class="markup-margin">
+        <h4>Submit Form</h4>
+        <ol class="alpha-list">
+          <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
+          <li>Cancel link is hidden</li>
+          <li>Processing throbber appears</li>
+          <li>Popover hides on completion</li>
+        </ol>
+        <img src="/img/list-view-execute-batch-action.png">
+      </li>
+      <li id="batch-action-activity" class="markup-margin">
+        <h4>Show Activity</h4>
+      </li>
+      <li id="batch-action-feedback" class="markup-margin">
+        <h4>Provide Feedback</h4>
+      </li>
+    </ol>
   </div>
 </div>
 
