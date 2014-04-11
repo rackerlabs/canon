@@ -109,6 +109,25 @@
   }
 }
 
+.rs-table-icon {
+  @extend .rs-table-delete;
+
+  .rs-status-ok {
+    @include icon;
+    @include icon-sprite(ok-circle);
+  }
+
+  .rs-status-warning {
+    @include icon;
+    @include icon-sprite(status-yellow);
+  }
+
+  .rs-status-error {
+    @include icon;
+    @include icon-sprite(status-red);
+  }
+}
+
 .rs-table-status-ok {
   background-color: $green !important;
 
@@ -133,6 +152,26 @@
     background-image: url('table-status-error.gif');
   }
 }
+
+.rs-table-progress-ok {
+  td {
+    background-image: url('progress-background-success-lightest.gif');
+  }
+}
+
+.rs-table-progress-warning {
+  td {
+    background-image: url('progress-background-success-lightest.gif');
+  }
+}
+
+.rs-table-progress-error {
+  td {
+    background-image: url('progress-background-success-lightest.gif');
+  }
+}
+
+
 
 /* Table-Based Styles */
 table {
