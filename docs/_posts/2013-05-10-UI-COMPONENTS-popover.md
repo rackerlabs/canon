@@ -327,7 +327,7 @@ tags : [intro, about, canon]
 </div>
 </div>
 <hr class="subsection-divider">
-<h3>Confirmations</h3>
+<h3 id="confirmation-popover">Confirmations</h3>
 <div class="rs-row">
   <div class="span-3 section-description">
 		<ul>
