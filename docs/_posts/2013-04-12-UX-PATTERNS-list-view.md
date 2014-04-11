@@ -135,6 +135,13 @@ checkStatuses:
         </ul>
       </li>
     </ul>
+    <h3>Interactions:</h3>
+    <p>For detailed instructions on user interactions with the list view, see these sections:</p>
+    <ul>
+      <li><a href="#update-row-interaction">Updating Table Rows</a></li>
+      <li><a href="#delete-row-interaction">Deleting Table Rows</a></li>
+      <li><a href="#batch-action-interaction">Performing Batch Actions</a></li>
+    </ul>
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>
   <div class="span-9">
@@ -224,8 +231,6 @@ checkStatuses:
         </table>
       </div> 
     </div>
-  </div>
-  <div class="span-12">
     <h4 class="markup-margin">Markup</h4>
     {% highlight html %}<div class="rs-content rs-panel">
   <div class="rs-inner">
@@ -298,59 +303,92 @@ checkStatuses:
   </div>
 </div>
 
-<hr class="subsection-divider" id="list-view-update-row-pattern">
-<h3>List View Interaction: <span class="rs-quiet">Update Row</span></h3>
-<p>This is a step-by-step, detailed description of how to update row items in the <a href="#list-view">List View</a>.  The general principles here are that feedback loops must be complete for any action, and affected items must be clearly indicated.</p>
-<div class="rs-row markup-margin">
-  <div class="span-3">
-    <h4 id="select-action">Step 1: Select Action</h4>
-    <ol class="alpha-list">
-      <li>User clicks a row action cog</li>
-      <li>Actions dropdown appears</li>
-      <li>User selects action</li>
-    </ol>
-  </div>
-  <div class="span-9">
-    <img src="/img/list-view-select-action.png">
-  </div>
-</div>
-<hr class="markup-margin">
+<hr class="subsection-divider" id="update-row-interaction">
+<h3>Updating Table Rows</h3>
 <div class="rs-row">
   <div class="span-3">
-    <h4 id="show-popover">Step 2: Show Popover</h4>
-    <ol class="alpha-list">
-      <li>Popover points at cog for item</li>
-      <li>First field receives focus</li>
+    <p>This is a step-by-step, detailed description of how to update row items in the <a href="#list-view">List View</a>.</p>
+    <h5>Design Principles:</h5>
+    <ul>
+      <li>Provide actions without drill-down</li>
+      <li>Inform users of processing status</li>
+      <li>Always complete feedback loops</li>
+      <li>Clearly indicate affected items</li>
+    </ul>
+    <h5>Interaction Steps:</h5>
+    <ol>
+      <li><a href="#select-action">Select Action</a></li>
+      <li><a href="#show-popover">Show Popover</a></li>
+      <li><a href="#validate-fields">Validate Fields</a></li>
+      <li><a href="#markup-margin">Submit Form</a></li>
+      <li><a href="#provide-feedback">Provide Feedback</a></li>
+    </ol>
+    <h5>Required Components:</h5>
+    <ul>
+      <li><a href="/ui-components/#list-view-table">List View Table</a></li>
+      <li><a href="/ui-components/#table-heartbeat">Heartbeat</a></li>
+      <li><a href="/ui-components/#action-cogs">Action Cog</a></li>
+      <li><a href="/ui-components/#action-dropdown">Actions Dropdown</a></li>
+      <li><a href="/ui-components/#popover">Popover</a></li>
+      <li><a href="/ui-components/#forms">Forms</a></li>
+      <li><a href="/ui-components/#button-groups">Button Group</a></li>
+      <li><a href="/ui-components/#messages">Messages</a></li>
+    </ul>
+  </div>
+  <div class="span-8 offset-1">
+    <ol>
+      <li id="select-action">
+        <h4>Select Action</h4>
+        <ol class="alpha-list">
+          <li>User clicks a row <a href="/ui-components/#action-cogs">Action Cog</a></li>
+          <li><a href="/ui-components/#action-dropdown">Actions Dropdown</a> appears</li>
+          <li>User selects action</li>
+        </ol>
+        <img src="/img/list-view-select-action.png">
+      </li>
+      <li id="show-popover" class="markup-margin">
+        <h4>Show Popover</h4>
+        <ol class="alpha-list">
+          <li><a href="/ui-components/#popover">Popover</a> points at <a href="/ui-components/#action-cogs">Action Cog</a> for item</li>
+          <li>First field receives focus</li>
+        </ol>
+        <img src="/img/list-view-show-popover.png">
+      </li>
+      <li id="validate-fields" class="markup-margin">
+        <h4>Validate Fields</h4>
+        <ol class="alpha-list">
+          <li>If user entered value, validate field on blur</li>
+          <li>Validate entire form on submit</li>
+          <li>Trigger <a href="/ui-components/#form-validation">validation errors</a> for invalid fields</li>
+          <li>Show <a href="/ui-components/#validation-fixed">validation fixed</a> when user fixes issue</li>
+        </ol>
+        <img src="/img/list-view-validate-popover.png">
+        <p><strong>Note:</strong> Do not disable submit buttons when form is invalid.  Leave button enabled and simply re-validate.  Dynamic button disabling based on field validation gets real tricky, real fast and can confuse the user.</p>
+      </li>
+      <li id="submit-form" class="markup-margin">
+        <h4>Submit Form</h4>
+        <ol class="alpha-list">
+          <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
+          <li>Cancel link is hidden</li>
+          <li>Processing throbber appears</li>
+          <li>Popover hides on completion</li>
+        </ol>
+        <img src="/img/list-view-submit-form.png">
+        <p><strong>Note:</strong> See the <a href="/ui-components/#form-validation">Form Validation</a> docs for instructions on presenting validation error messaging.</p>
+      </li>
+      <li id="provide-feedback" class="markup-margin">
+        <h4>Provide Feedback</h4>
+        <ol class="alpha-list">
+          <li><p><a href="/ui-components/#table-heartbeat">Heartbeat</a> the affected row when applying basic changes like renaming a server</p><p><img src="/img/list-view-heartbeat.png"></p></li>
+          <li><p><a href="/ui-components/#table-heartbeat">Heartbeat</a> the affected row and show a growl style <a href="/ui-components/#messages">Message</a> for major changes like resetting a password</p><p><img src="/img/list-view-heartbeat-plus-message.png"></p><p style="max-width: 668px;"><strong>Note:</strong> When a service does not provide immediate feedback on the success or failure of a requested action, simply informing the user that the request was accepted is sufficient.</p></li>
+        </ol>
+      </li>
     </ol>
   </div>
-  <div class="span-9">
-    <img src="/img/list-view-show-popover.png">
-  </div>
-</div>
-<hr class="markup-margin">
-<div class="rs-row">
-  <div class="span-3">
-    <h4 id="submit-form">Step 3: Submit Form</h4>
-    <ol class="alpha-list">
-      <li>Submit button is disabled</li>
-      <li>Cancel link is hidden</li>
-      <li>Processing throbber appears</li>
-    </ol>
-  </div>
-  <div class="span-9">
-    <img src="/img/list-view-submit-form.png">
-  </div>
-</div>
-<hr class="markup-margin">
-<div class="rs-row">
-  <div class="span-3">
-    <h4 id="heartbeat-and-message">Step 4: Heartbeat &#38; Message</h4>
-  </div>
-  <div class="span-9"></div>
 </div>
 
-<hr class="subsection-divider" id="list-view-delete-row-pattern">
-<h3>List View Interaction: <span class="rs-quiet">Delete Row</span></h3>
+<hr class="subsection-divider" id="delete-row-interaction">
+<h3>Deleting Table Rows</h3>
 <div class="rs-row">
   <div class="span-3">
     <p>Description goes here</p>
@@ -362,15 +400,43 @@ checkStatuses:
     </ol>
   </div>
   <div class="span-8 offset-1">
-    <h4 id="select-delete-action">1. Select Delete Action</h4>
-    <h4 id="require-confirmation">2. Require Confirmation</h4>
-    <h4 id="submit-deletion-form">3. Submit Form</h4>
-    <h4 id="heartbeat-delete">4. Heartbeat &#38; Message</h4>
+    <ol>
+      <li id="select-delete-action">
+        <h4>Select Delete Action</h4>
+        <ol class="alpha-list">
+          <li>User clicks a row <a href="/ui-components/#action-cogs">Action Cog</a></li>
+          <li><a href="/ui-components/#action-dropdown">Actions Dropdown</a> appears</li>
+          <li>User selects delete action (always bottom-most action)</li>
+        </ol>
+        <img src="/img/list-view-select-delete.png">
+      </li>
+      <li id="require-confirmation" class="markup-margin">
+        <h4>Require Confirmation</h4>
+        <ol class="alpha-list">
+          <li><a href="/ui-components/#confirmation-popover">Confirmation Popover</a> points at <a href="/ui-components/#action-cogs">Action Cog</a> for item</li>
+          <li>Verbiage always reads: "Permanently delete this {item}?"</li>
+        </ol>
+        <img src="/img/list-view-require-confirmation.png">
+      </li>
+      <li id="submit-deletion-form" class="markup-margin">
+        <h4>Submit Form</h4>
+        <ol class="alpha-list">
+          <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
+          <li>Cancel link is hidden</li>
+          <li>Processing throbber appears</li>
+          <li>Popover hides on completion</li>
+        </ol>
+        <img src="/img/list-view-processing-deletion.png">
+      </li>
+      <li id="heartbeat-delete" class="markup-margin">
+        <h4>Heartbeat &#38; Message</h4>
+      </li>
+    </ol>
   </div>
 </div>
 
-<hr class="subsection-divider" id="list-view-delete-row-pattern">
-<h3>List View Interaction: <span class="rs-quiet">Batch Action</span></h3>
+<hr class="subsection-divider" id="batch-action-interaction">
+<h3>Performing Batch Actions</h3>
 <div class="rs-row">
   <div class="span-3">
     <p>Description goes here</p>
