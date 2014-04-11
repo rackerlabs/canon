@@ -587,7 +587,7 @@ tags : [intro, about, canon]
 
 <hr class="subsection-divider">
 
-<div class="rs-row">
+<div class="rs-row" id="form-validation">
 	<div class="span-3">
 		<h3>Inline Validation Triggered</h3>
 		<p>Inline validation triggers when a user enters invalid data in a required fields. When the user enters valid information, the error is replaced with a check mark and a success message (see next example).</p>
@@ -696,7 +696,7 @@ tags : [intro, about, canon]
 
 <hr class="subsection-divider">
 
-<div class="rs-row">
+<div class="rs-row" id="validation-fixed">
 	<div class="span-3">
 		<h3>Inline Validation Fixed</h3>
 		<p>After users fix their data, the error is replaced with a check mark and a success message that appears for a few seconds and then disappears.</p>
