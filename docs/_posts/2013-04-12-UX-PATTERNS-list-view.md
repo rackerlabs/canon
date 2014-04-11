@@ -558,9 +558,10 @@ checkStatuses:
       var popoverTbody = $('#confirm-batch-delete-popover tbody');
 
       popoverTbody.empty();
-      console.log($('#list-view-table tbody tr.selected').length);
+
       $('#list-view-table tbody tr.selected').each(function() {
         var deletionRow = '<tr>'+
+                            '<td class="rs-table-icon"></td>'+
                             '<td class="rs-table-text item-name rs-no-wrap">'+$(this).find('.item-name').text()+'</td>'+
                             '<td class="rs-table-text item-status rs-no-wrap">Pending Deletion</td>'+
                             '<td class="rs-table-delete">'+
