@@ -264,6 +264,7 @@ ol:last-child
 
 ol.alpha-list {
   list-style-type: upper-alpha;
+  margin-bottom: 1em;
 }
 
 .site-header-download-canon
