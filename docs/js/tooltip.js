@@ -15,7 +15,7 @@ var attachTooltip = function(params) {
     											params.contents+
   											'</div>'+
 											'</div>');
-		var timeout = 0;
+		var timeOut = 0;
 		if(params.delay){
 			timeOut = eval(params.delay)*1000;
 		}
