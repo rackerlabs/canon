@@ -2,7 +2,7 @@
 layout: post
 category : ux patterns
 title: List View
-updated: March 4, 2013
+updated: April 11, 2014
 author: Andrew Raiford
 adherence: 3
 tags : [intro, about, canon]
@@ -138,9 +138,9 @@ checkStatuses:
     <h3>Interactions:</h3>
     <p>For detailed instructions on user interactions with the list view, see these sections:</p>
     <ul>
-      <li><a href="#update-row-interaction">Updating Table Rows</a></li>
-      <li><a href="#delete-row-interaction">Deleting Table Rows</a></li>
-      <li><a href="#batch-action-interaction">Performing Batch Actions</a></li>
+      <li><a href="#update-row-interaction">Updating items in a table</a></li>
+      <li><a href="#delete-row-interaction">Deleting items from a table</a></li>
+      <li><a href="#batch-action-interaction">Performing batch actions</a></li>
     </ul>
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>
@@ -304,7 +304,7 @@ checkStatuses:
 </div>
 
 <hr class="subsection-divider" id="update-row-interaction">
-<h3>Updating Table Rows</h3>
+<h3>Updating items in a table</h3>
 <div class="rs-row">
   <div class="span-3">
     <p>This is a step-by-step, detailed description of how to update row items in the <a href="#list-view">List View</a>.</p>
@@ -388,16 +388,34 @@ checkStatuses:
 </div>
 
 <hr class="subsection-divider" id="delete-row-interaction">
-<h3>Deleting Table Rows</h3>
+<h3>Deleting items from a table</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Description goes here</p>
+    <p>This is a step-by-step, detailed description of how to delete items in the <a href="#list-view">List View</a>.</p>
+    <h5>Design Principles:</h5>
+    <ul>
+      <li>Provide actions without drill-down</li>
+      <li>Inform users of processing status</li>
+      <li>Always complete feedback loops</li>
+      <li>Clearly indicate affected items</li>
+    </ul>
+    <h5>Interaction Steps:</h5>
     <ol>
       <li><a href="#select-delete-action">Select Delete Action</a></li>
       <li><a href="#require-confirmation">Require Confirmation</a></li>
       <li><a href="#submit-deletion-form">Submit Form</a></li>
-      <li><a href="#heartbeat-delete">Heartbeat &#38; Message</a></li>
+      <li><a href="#heartbeat-delete">Provide Feedback</a></li>
     </ol>
+    <h5>Required Components:</h5>
+    <ul>
+      <li><a href="/ui-components/#list-view-table">List View Table</a></li>
+      <li><a href="/ui-components/#table-heartbeat">Heartbeat</a></li>
+      <li><a href="/ui-components/#action-cogs">Action Cog</a></li>
+      <li><a href="/ui-components/#action-dropdown">Actions Dropdown</a></li>
+      <li><a href="/ui-components/#popover">Popover</a></li>
+      <li><a href="/ui-components/#button-groups">Button Group</a></li>
+      <li><a href="/ui-components/#messages">Messages</a></li>
+    </ul>
   </div>
   <div class="span-8 offset-1">
     <ol>
@@ -429,14 +447,21 @@ checkStatuses:
         <img src="/img/list-view-processing-deletion.png">
       </li>
       <li id="heartbeat-delete" class="markup-margin">
-        <h4>Heartbeat &#38; Message</h4>
+        <h4>Provide Feedback</h4>
+        <ol class="alpha-list">
+          <li><a href="/ui-components/#list-view-table">Table Status Cell</a> shows activity (rs-table-status-striped)</li>
+          <li><a href="/ui-components/#table-heartbeat">Heartbeat</a> the affected row</li>
+          <li>Show growl style <a href="/ui-components/#messages">Message</a> in lower right corner of app</li>
+        </ol>
+        <img src="/img/list-view-deletion-feedback.png">
+        <p><strong>Note:</strong> Deleted items may remain in a list until the item no longer comes back in the API list call.</p>
       </li>
     </ol>
   </div>
 </div>
 
 <hr class="subsection-divider" id="batch-action-interaction">
-<h3>Performing Batch Actions</h3>
+<h3>Performing batch actions</h3>
 <div class="rs-row">
   <div class="span-3">
     <p>Description goes here</p>
