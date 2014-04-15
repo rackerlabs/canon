@@ -263,8 +263,11 @@ ol:last-child
 }
 
 ol.alpha-list {
-  list-style-type: upper-alpha;
-  margin-bottom: 1em;
+  margin-bottom: 1em
+}
+
+ol.alpha-list > li {
+  list-style-type: upper-alpha;;
 }
 
 .site-header-download-canon

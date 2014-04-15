@@ -1,9 +1,9 @@
-<div class="rs-popover invisible" id="confirm-batch-delete-popover">
+<div class="rs-popover invisible" id="confirm-batch-delete-popover" style="width:450px;">
 	<div class="rs-popover-arrow"></div>
 	<div class="rs-popover-content">
 		<form class="rs-form-horizontal rs-form-large" action="javascript:batchDeleteExample();">
 			<div class="rs-popover-body">
-				<p><strong>Permanently delete</strong> the following <span id="deletion-count">3</span> items?</p>
+				<p class="example-instructions"><strong>Permanently delete</strong> the following <span id="deletion-count">3</span> items?</p>
 				<div class="rs-embedded-list-table-wrapper rs-embedded-small" style="min-width: 350px;">
 					<table class="rs-list-table rs-embedded-list-table">
 						<thead>
@@ -38,7 +38,8 @@
 				</div>
 			</div>
 			<div class="rs-popover-footer rs-btn-group">
-				<button type="button" class="rs-btn rs-btn-primary close rs-hidden" onclick="hidePopover();">Close</button>
+				<button type="button" class="rs-btn rs-btn-primary hide-on-reset close-popover rs-hidden">Close Popover</button>
+				<button type="button" class="rs-btn rs-btn-primary hide-on-reset retry-failed rs-hidden" onclick="retryFailedActions();">Retry Failed Actions</button>
 				<button type="submit" class="rs-btn rs-btn-primary">Delete {Item}s</button>
 				<span class="rs-btn rs-btn-link">Cancel</span>
 			</div>

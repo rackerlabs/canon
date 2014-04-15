@@ -6,6 +6,7 @@ var showPopover = function(source) {
 };
 
 var hidePopover = function() {
+	resetButtonGroup($(".rs-popover.visible .rs-btn-group"));
 	$(".rs-popover.visible").removeClass("visible").addClass("invisible");
 	hideOverlay();
 };
@@ -49,7 +50,7 @@ var positionPopover = function(source) {
 };
 
 $(document).ready(function () {
-	$('.rs-popover .rs-btn-group .rs-btn-link').click(function() {
+	$('.rs-popover .rs-btn-group .rs-btn-link, .close-popover').click(function() {
 		hidePopover();
 	});
 

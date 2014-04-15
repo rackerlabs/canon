@@ -28,7 +28,7 @@ items:
   name: My Product Item 4
   id: 4dd184a5-553b-47a6-9bc6-7097341648e6
   ip: 222.111.222
-  status: ok rs-table-status-striped
+  status: ok
  5:
   name: My Product Item 5
   id: 51434258
@@ -39,7 +39,7 @@ items:
   name: My Product Item 6
   id: 6162868d-b74b-4cc9-9ca9-b7e5e2e12f99
   ip: 222.111.222
-  status: warning rs-table-status-striped
+  status: warning
   checks: [ok,warning,warning,error,ok,disabled,warning]
  7:
   name: My Product Item 7
@@ -66,7 +66,7 @@ items:
   name: My Product Item 11
   id: 11dd184a5-553b-47a6-9bc6-7097341648e6
   ip: 222.111.222
-  status: ok rs-table-status-striped
+  status: ok
  12:
   name: My Product Item 12
   id: 12d1f2566-8174-4113-9623-2f3bdee3b92d
@@ -138,8 +138,8 @@ checkStatuses:
     <h3>Interactions:</h3>
     <p>For detailed instructions on user interactions with the list view, see these sections:</p>
     <ul>
-      <li><a href="#update-row-interaction">Updating items in a table</a></li>
-      <li><a href="#delete-row-interaction">Deleting items from a table</a></li>
+      <li><a href="#update-row-interaction">Updating an item in a table</a></li>
+      <li><a href="#delete-row-interaction">Deleting an item from a table</a></li>
       <li><a href="#batch-action-interaction">Performing batch actions</a></li>
     </ul>
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
@@ -304,10 +304,10 @@ checkStatuses:
 </div>
 
 <hr class="subsection-divider" id="update-row-interaction">
-<h3>Updating items in a table</h3>
+<h3>Updating an item in a table</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>This is a step-by-step, detailed description of how to update row items in the <a href="#list-view">List View</a>.</p>
+    <p>This is a step-by-step, detailed description of how to update a row item in the <a href="#list-view">List View</a>.</p>
     <h5>Design Principles:</h5>
     <ul>
       <li>Provide actions without drill-down</li>
@@ -388,10 +388,10 @@ checkStatuses:
 </div>
 
 <hr class="subsection-divider" id="delete-row-interaction">
-<h3>Deleting items from a table</h3>
+<h3>Deleting an item from a table</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>This is a step-by-step, detailed description of how to delete items in the <a href="#list-view">List View</a>.</p>
+    <p>This is a step-by-step, detailed description of how to delete an item in the <a href="#list-view">List View</a>.</p>
     <h5>Design Principles:</h5>
     <ul>
       <li>Provide actions without drill-down</li>
@@ -470,7 +470,8 @@ checkStatuses:
       <li><a href="#show-batch-popover">Show Popover</a></li>
       <li><a href="#submit-batch-action">Submit Form</a></li>
       <li><a href="#batch-action-activity">Show Activity</a></li>
-      <li><a href="#batch-action-feedback">Provide Feedback</a></li>
+      <li><a href="#batch-action-failure">Handle Failures</a></li>
+      <li><a href="#batch-action-closure">Provide Closure</a></li>
     </ol>
   </div>
   <div class="span-8 offset-1">
@@ -488,7 +489,7 @@ checkStatuses:
         <h4>Show Popover</h4>
         <ol class="alpha-list">
           <li><a href="/ui-components/#popover">Popover</a> points at <a href="/ui-components/#secondary-buttons">Batch Action Button</a></li>
-          <li>Popover lists items being affected by batch action</li>
+          <li>Popover shows list of items being affected by batch action</li>
           <li>User can click the <a href="/ui-components/#delete-buttons">Minus Button</a> to remove items from the action<br><i>( popover closes automatically if user removes all rows )</i></li>
         </ol>
         <img src="/img/list-view-batch-action-popover.png">
@@ -505,9 +506,65 @@ checkStatuses:
       </li>
       <li id="batch-action-activity" class="markup-margin">
         <h4>Show Activity</h4>
+        <ol class="alpha-list">
+          <li>Change popover instructions to show <strong>X of X</strong> completed</li>
+          <li><h5>Style Active Rows:</h5>
+            <ol>
+              <li>Set <code>rs-table-progress-ok</code> background animation on rows to show activity</li>
+              <li>Hide the delete buttons in the last column for each row</li>
+              <li>Update the status column to reflect action being taken</li>
+            </ol>
+            <img src="/img/list-view-batch-action-activity-start.png">
+          </li>
+          <li class="markup-margin"><h5>Style Completed Rows:</h5>
+            <ol>
+              <li>Remove <code>rs-table-progress-ok</code> background animation on rows when they complete</li>
+              <li>Add rs-status-ok <div style="display: inline-block;" class="rs-table-icon"><i class="rs-status-ok"></i></div> icon to  first column of popover table row</li>
+              <li>Set <code>rs-table-status-striped</code> class on status cell of affected row in parent table</li>
+            </ol>
+            <img src="/img/list-view-batch-action-activity-complete-row.png">
+          </li>
+        </ol>
       </li>
-      <li id="batch-action-feedback" class="markup-margin">
-        <h4>Provide Feedback</h4>
+      <li id="batch-action-failure" class="markup-margin">
+        <h4>Handle Failures</h4>
+        <ol class="alpha-list">
+          <li><h5>Continue Processing:</h5>
+            <ol>
+              <li>Do not include failed rows in summary text</li>
+              <li>Remove <code>rs-table-progress-ok</code> background animation on failed rows</li>
+              <li>Add rs-status-error <div style="display: inline-block;" class="rs-table-icon"><i class="rs-status-error"></i></div> icon to first column of popover table row</li></li>
+              <li><span class="rs-status-error">Change status text to red</span> and describe failure</li>
+            </ol>
+            <img src="/img/list-view-batch-action-failures.png">
+          </li>
+          <li class="markup-margin">
+            <h5>Offer Chance to Retry:</h5>
+            <ol>
+              <li>Hide Processing throbber</li>
+              <li>Re-enable submit button offering retry of {X} Failed Actions</li>
+              <li>Show Cancel Link</li>
+            </ol>
+            <img src="/img/list-view-batch-action-offer-retry.png">
+          </li>
+          <li class="markup-margin">
+            <h5>Only Show Retrying Rows:</h5>
+            <ol>
+              <li>Button bar is in Submitting state again</li>
+              <li>Previously successful rows are hidden</li>
+              <li>Retrying rows go through the whole process again</li>
+            </ol>
+            <img src="/img/list-view-batch-action-retrying.png">
+          </li>
+        </ol>
+      </li>
+      <li id="batch-action-closure" class="markup-margin">
+        <h4>Provide Closure</h4>
+        <ol>
+          <li>Show Close Popover button</li>
+          <li>Aaaaaaand done&hellip; yowza&hellip;</li>
+        </ol>
+        <img src="/img/list-view-batch-action-closure.png">
       </li>
     </ol>
   </div>
@@ -515,7 +572,7 @@ checkStatuses:
 
 <script type="text/javascript">
   
-  //This Script is purely to handle the oddities of showing a tooltip and highlighting it
+  //Variable to store the jQuery reference to the example tooltip in the List View Example
   var exampleTooltip;
 
   $(document).ready(function() {
@@ -527,17 +584,25 @@ checkStatuses:
     })(jQuery);
   });
 
+  //This Script handles the oddities of showing a tooltip and highlighting it in the List View Example
   $(function() {
     $('#list-view-tooltip-link').hover(function(e) {
+
+      //uber hacky way of getting the row that contains the target tooltip - jam it in there with liquid script...
       var example = $('#row-status-{{ page.items[6].id }}');
+
+      //build a tooltip object to pass to the attachment function
       var tooltip = new Object();
       tooltip.contents = example.attr('data-title');
       tooltip.delay = 0;
       tooltip.left = example.offset().left;
       tooltip.top = example.offset().top;
 
+      //attach the tooltip and save it in the exampleTooltip variable
       exampleTooltip = attachTooltip(tooltip);
 
+      //nasty - bind an append listener to the body so that when the tooltip is appended,
+      //it gets shown without having to hover over the source element
       $("body").bind("append", function() {
         highlight(exampleTooltip);
         $("body").unbind("append");
@@ -550,37 +615,5 @@ checkStatuses:
     });
   });
   // End Tooltip Highlighting
-
-  //This script is for showing batch delete popover functionality
-  $(function() {
-    $('#delete-items-button').click(function() {
-      var deleteCount = $('#deletion-count');
-      var popoverTbody = $('#confirm-batch-delete-popover tbody');
-
-      popoverTbody.empty();
-
-      $('#list-view-table tbody tr.selected').each(function() {
-        var deletionRow = '<tr>'+
-                            '<td class="rs-table-icon"></td>'+
-                            '<td class="rs-table-text item-name rs-no-wrap">'+$(this).find('.item-name').text()+'</td>'+
-                            '<td class="rs-table-text item-status rs-no-wrap">Pending Deletion</td>'+
-                            '<td class="rs-table-delete">'+
-                              '<button type="button" class="rs-delete remove-from-deletion"></button>'+
-                            '</td>'+
-                          '</tr>';
-        popoverTbody.append(deletionRow);
-      });
-      deleteCount.text(popoverTbody.find('tr').length);
-      $('.remove-from-deletion').click(function() {
-        var tbody = $(this).closest('tbody');
-        $(this).closest('tr').remove();
-        deleteCount.text(popoverTbody.find('tr').length);
-        if(!tbody.find('tr').length) {
-          hidePopover();
-        }
-      });
-    });
-  });
-  // End Batch deletion
 
 </script>
