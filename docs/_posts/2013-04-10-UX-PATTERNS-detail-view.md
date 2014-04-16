@@ -123,7 +123,7 @@ tags : [intro, about, canon]
                   <div class="rs-progress rs-progress-small">
                     <div class="rs-progress-inner">
                       <div class="rs-segment" style="width: 49%">
-                        <div class="rs-bar rs-status-neutral"></div>
+                        <div class="rs-bar rs-status-info"></div>
                       </div>
                     </div>
                   </div>
