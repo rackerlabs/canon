@@ -46,7 +46,7 @@
   border-right: 1px solid $white;
 }
 
-.rs-bar-info, .rs-status-neutral, .rs-status-info  {
+.rs-bar-info, .rs-bar.rs-status-info  {
   background: $blue;
 
   &.rs-bar-striped {
