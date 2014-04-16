@@ -363,7 +363,7 @@ checkStatuses:
           <li>Show <a href="/ui-components/#validation-fixed">validation fixed</a> when user fixes issue</li>
         </ol>
         <img src="/img/list-view-validate-popover.png">
-        <p><strong>Pro-Tip:</strong> Do not disable submit buttons when form is invalid.  Leave button enabled and simply re-validate.  Dynamic button disabling based on field validation gets real tricky, real fast and can confuse the user.</p>
+        <p style="max-width: 668px;"><strong>Pro-Tip:</strong> Do not disable submit buttons when form is invalid.  Rather, leave the button enabled and re-validate.  Dynamic button disabling based on field validation gets real tricky, real fast and can confuse the user.</p>
       </li>
       <li id="submit-form" class="markup-margin">
         <h4>Submit Form</h4>
