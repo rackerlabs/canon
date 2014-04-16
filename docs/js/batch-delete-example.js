@@ -62,7 +62,7 @@ var retryFailedActions = function() {
 //dumb function for setting text on the popover instructions
 var updateBatchInstructionText = function() {
   //Get the numbers of processing items for displaying in the popover
-  requestsBeingProcessed = confirmBatchDeletePopover.find('.rs-table-progress-ok').length;
+  requestsBeingProcessed = confirmBatchDeletePopover.find('.rs-activity-ok').length;
   totalRequestsInCue = confirmBatchDeletePopover.find('tbody tr').length;
 
   //set the info text at the top of the popover to reflect completed deletion requests
@@ -87,7 +87,7 @@ var batchDeleteExample = function() {
   processButtonGroup(formButtons);
 
   //add the progress background animation to each row being processed
-  rows.addClass('rs-table-progress-ok').find('.item-status').text('Deleting {Item}');
+  rows.addClass('rs-activity-ok').find('.item-status').text('Deleting {Item}');
 
   updateBatchInstructionText();
 
@@ -112,7 +112,7 @@ var batchDeleteExample = function() {
         row.find('.rs-table-icon').html('<i class="rs-status-ok"></i>');
         
         //Change the status verbiage for each row in the popover
-        row.removeClass('rs-table-progress-ok').find('.item-status').text('Deletion Requested');
+        row.removeClass('rs-activity-ok').find('.item-status').text('Deletion Requested');
         
         if(!retrying) {
           //Toggle success for next row
@@ -124,7 +124,7 @@ var batchDeleteExample = function() {
         failedRequests++;
 
         //Change the status verbiage for each row in the popover
-        row.removeClass('rs-table-progress-ok').find('.item-status').text('Failed Deletion Request');
+        row.removeClass('rs-activity-ok').find('.item-status').text('Failed Deletion Request');
 
         //Set the status error icon in the first column of the popover table
         row.find('.rs-table-icon').html('<i class="rs-status-error"></i>');
