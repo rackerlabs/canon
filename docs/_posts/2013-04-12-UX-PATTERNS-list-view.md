@@ -529,17 +529,17 @@ checkStatuses:
           <li>Change popover instructions to show <strong>X of X</strong> completed</li>
           <li><h5>Style Active Rows:</h5>
             <ol>
-              <li>Set <code>rs-activity-ok</code> background animation on rows to show activity</li>
-              <li>Hide the delete buttons in the last column for each row</li>
-              <li>Update the status column to reflect action being taken</li>
+              <li><a href="/ui-components/#table-row-activity">Row Activity</a> shows on rows in the popover</li>
+              <li><a href="/ui-components/#delete-buttons">Delete Buttons</a> disappear in each row</li>
+              <li>Status text reflects action being taken</li>
             </ol>
             <img src="/img/list-view-batch-action-activity-start.png">
           </li>
           <li class="markup-margin"><h5>Style Completed Rows:</h5>
             <ol>
-              <li>Remove <code>rs-activity-ok</code> background animation on rows when they complete</li>
-              <li>Add rs-status-ok <div style="display: inline-block;" class="rs-table-icon"><i class="rs-status-ok"></i></div> icon to  first column of popover table row</li>
-              <li>Set <code>rs-table-status-striped</code> class on status cell of affected row in parent table</li>
+              <li><a href="/ui-components/#table-row-activity">Row Activity</a> disappears when rows complete successfully or fail</li>
+              <li><a href="/ui-components/#table-row-status-icons">Table Ok Icon</a> appears in first column of popover table row for successful rows</li>
+              <li><a href="/ui-components/#table-status-column">Status Cell</a> in affected row of parent table shows activity</li>
             </ol>
             <img src="/img/list-view-batch-action-activity-complete-row.png">
           </li>
@@ -550,10 +550,10 @@ checkStatuses:
         <ol class="alpha-list">
           <li><h5>Continue Processing:</h5>
             <ol>
-              <li>Do not include failed rows in summary text</li>
-              <li>Remove <code>rs-activity-ok</code> background animation on failed rows</li>
-              <li>Add <a href="">row error icon</a> <div style="display: inline-block;" class="rs-table-icon"><i class="rs-status-error"></i></div> icon to first column of popover table row</li></li>
-              <li><span class="rs-status-error">Change status text to red</span> and describe failure</li>
+              <li>Summary text does not include failed rows</li>
+              <li><a href="/ui-components/#table-row-activity">Row Activity</a> disappears on failed and completed rows</li>
+              <li><a href="/ui-components/#table-row-status-icons">Table Error Icon</a> appears in first column of failed rows</li></li>
+              <li><a href="/ui-components/#colored-text">Colored Text</a> calls out problem and status text describes failure</li>
             </ol>
             <img src="/img/list-view-batch-action-failures.png">
           </li>
@@ -561,8 +561,8 @@ checkStatuses:
             <h5>Offer Chance to Retry:</h5>
             <ol>
               <li>Hide Processing indicator</li>
-              <li>Re-enable submit <a href="/ui-components/#primary-buttons">button</a> offering retry of {X} Failed Actions</li>
-              <li>Show <a href="/ui-components/#cancel-links">Cancel Link</a></li>
+              <li><a href="/ui-components/#primary-buttons">Submit Button</a> is re-enabled offering retry of {X} Failed Actions</li>
+              <li><a href="/ui-components/#cancel-links">Cancel Link</a> reappears</li>
             </ol>
             <img src="/img/list-view-batch-action-offer-retry.png">
           </li>
@@ -571,7 +571,7 @@ checkStatuses:
             <ol>
               <li><a href="/ui-components/#button-groups">Button Group</a> is in Submitting state</li>
               <li>Previously successful rows are hidden</li>
-              <li>Retrying rows go through the whole process again</li>
+              <li>Retrying rows go through the process again</li>
             </ol>
             <img src="/img/list-view-batch-action-retrying.png">
           </li>
@@ -580,7 +580,7 @@ checkStatuses:
       <li id="batch-action-closure" class="markup-margin">
         <h4>Provide Closure</h4>
         <ol>
-          <li>Show close popover <a href="/ui-components/#primary-buttons">button</a> when finished</li>
+          <li><a href="/ui-components/#primary-buttons">Close popover button</a> appears when finished</li>
           <li>Aaaaaaand done&hellip; yowza&hellip;</li>
         </ol>
         <img src="/img/list-view-batch-action-closure.png">
