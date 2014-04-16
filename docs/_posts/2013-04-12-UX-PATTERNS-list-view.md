@@ -363,14 +363,14 @@ checkStatuses:
           <li>Show <a href="/ui-components/#validation-fixed">validation fixed</a> when user fixes issue</li>
         </ol>
         <img src="/img/list-view-validate-popover.png">
-        <p><strong>Note:</strong> Do not disable submit buttons when form is invalid.  Leave button enabled and simply re-validate.  Dynamic button disabling based on field validation gets real tricky, real fast and can confuse the user.</p>
+        <p><strong>Pro-Tip:</strong> Do not disable submit buttons when form is invalid.  Leave button enabled and simply re-validate.  Dynamic button disabling based on field validation gets real tricky, real fast and can confuse the user.</p>
       </li>
       <li id="submit-form" class="markup-margin">
         <h4>Submit Form</h4>
         <ol class="alpha-list">
           <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
           <li>Cancel link is hidden</li>
-          <li>Processing throbber appears</li>
+          <li>Processing indicator appears</li>
           <li>Popover hides on completion</li>
         </ol>
         <img src="/img/list-view-submit-form.png">
@@ -441,7 +441,7 @@ checkStatuses:
         <ol class="alpha-list">
           <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
           <li>Cancel link is hidden</li>
-          <li>Processing throbber appears</li>
+          <li>Processing indicator appears</li>
           <li>Popover hides on completion</li>
         </ol>
         <img src="/img/list-view-processing-deletion.png">
@@ -464,7 +464,16 @@ checkStatuses:
 <h3>Performing batch actions</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Description goes here</p>
+    <p>This is a step-by-step, detailed description of how to perform batch actions in the <a href="#list-view">List View</a>.</p>
+    <p>Batch action patterns are complex, with lots of edge cases.  If you need help working through a batch action design, please <a href="mailto:canon@lists.rackspace.com">contact us</a>.</p>
+    <h5>Design Principles:</h5>
+    <ul>
+      <li>Provide actions without drill-down</li>
+      <li>Inform users of processing status</li>
+      <li>Always complete feedback loops</li>
+      <li>Clearly indicate affected items</li>
+    </ul>
+    <h5>Interaction Steps:</h5>
     <ol>
       <li><a href="#select-rows">Select Rows</a></li>
       <li><a href="#show-batch-popover">Show Popover</a></li>
@@ -473,6 +482,17 @@ checkStatuses:
       <li><a href="#batch-action-failure">Handle Failures</a></li>
       <li><a href="#batch-action-closure">Provide Closure</a></li>
     </ol>
+    <h5>Required Components:</h5>
+    <ul>
+      <li><a href="/ui-components/#list-view-table">List View Table</a></li>
+      <li><a href="/ui-components/#table-row-activity">Table Row Activity</a></li>
+      <li><a href="/ui-components/#table-row-status-icons">Table Row Status Icon</a></li>
+      <li><a href="/ui-components/#colored-text">Colored Status Text</a></li>
+      <li><a href="/ui-components/#table-form-elements">Table Row Delete Button</a></li>
+      <li><a href="/ui-components/#secondary-buttons">Secondary Button</a></li>
+      <li><a href="/ui-components/#popover">Popover</a></li>
+      <li><a href="/ui-components/#button-groups">Button Group</a></li>
+    </ul>
   </div>
   <div class="span-8 offset-1">
     <ol>
@@ -498,9 +518,8 @@ checkStatuses:
         <h4>Submit Form</h4>
         <ol class="alpha-list">
           <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
-          <li>Cancel link is hidden</li>
-          <li>Processing throbber appears</li>
-          <li>Popover hides on completion</li>
+          <li><a href="/ui-components/#cancel-links">Cancel Link</a> is hidden</li>
+          <li>Processing indicator appears</li>
         </ol>
         <img src="/img/list-view-execute-batch-action.png">
       </li>
@@ -510,7 +529,7 @@ checkStatuses:
           <li>Change popover instructions to show <strong>X of X</strong> completed</li>
           <li><h5>Style Active Rows:</h5>
             <ol>
-              <li>Set <code>rs-table-progress-ok</code> background animation on rows to show activity</li>
+              <li>Set <code>rs-activity-ok</code> background animation on rows to show activity</li>
               <li>Hide the delete buttons in the last column for each row</li>
               <li>Update the status column to reflect action being taken</li>
             </ol>
@@ -518,7 +537,7 @@ checkStatuses:
           </li>
           <li class="markup-margin"><h5>Style Completed Rows:</h5>
             <ol>
-              <li>Remove <code>rs-table-progress-ok</code> background animation on rows when they complete</li>
+              <li>Remove <code>rs-activity-ok</code> background animation on rows when they complete</li>
               <li>Add rs-status-ok <div style="display: inline-block;" class="rs-table-icon"><i class="rs-status-ok"></i></div> icon to  first column of popover table row</li>
               <li>Set <code>rs-table-status-striped</code> class on status cell of affected row in parent table</li>
             </ol>
@@ -532,8 +551,8 @@ checkStatuses:
           <li><h5>Continue Processing:</h5>
             <ol>
               <li>Do not include failed rows in summary text</li>
-              <li>Remove <code>rs-table-progress-ok</code> background animation on failed rows</li>
-              <li>Add rs-status-error <div style="display: inline-block;" class="rs-table-icon"><i class="rs-status-error"></i></div> icon to first column of popover table row</li></li>
+              <li>Remove <code>rs-activity-ok</code> background animation on failed rows</li>
+              <li>Add <a href="">row error icon</a> <div style="display: inline-block;" class="rs-table-icon"><i class="rs-status-error"></i></div> icon to first column of popover table row</li></li>
               <li><span class="rs-status-error">Change status text to red</span> and describe failure</li>
             </ol>
             <img src="/img/list-view-batch-action-failures.png">
@@ -541,16 +560,16 @@ checkStatuses:
           <li class="markup-margin">
             <h5>Offer Chance to Retry:</h5>
             <ol>
-              <li>Hide Processing throbber</li>
-              <li>Re-enable submit button offering retry of {X} Failed Actions</li>
-              <li>Show Cancel Link</li>
+              <li>Hide Processing indicator</li>
+              <li>Re-enable submit <a href="/ui-components/#primary-buttons">button</a> offering retry of {X} Failed Actions</li>
+              <li>Show <a href="/ui-components/#cancel-links">Cancel Link</a></li>
             </ol>
             <img src="/img/list-view-batch-action-offer-retry.png">
           </li>
           <li class="markup-margin">
             <h5>Only Show Retrying Rows:</h5>
             <ol>
-              <li>Button bar is in Submitting state again</li>
+              <li><a href="/ui-components/#button-groups">Button Group</a> is in Submitting state</li>
               <li>Previously successful rows are hidden</li>
               <li>Retrying rows go through the whole process again</li>
             </ol>
@@ -561,7 +580,7 @@ checkStatuses:
       <li id="batch-action-closure" class="markup-margin">
         <h4>Provide Closure</h4>
         <ol>
-          <li>Show Close Popover button</li>
+          <li>Show close popover <a href="/ui-components/#primary-buttons">button</a> when finished</li>
           <li>Aaaaaaand done&hellip; yowza&hellip;</li>
         </ol>
         <img src="/img/list-view-batch-action-closure.png">
