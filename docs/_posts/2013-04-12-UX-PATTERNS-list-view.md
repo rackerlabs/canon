@@ -132,6 +132,7 @@ checkStatuses:
     <div class="rs-sidebar rs-facets">{% include facets.html%}</div>
     <div class="rs-content rs-panel" id="list-view-example">
       <div class="rs-inner">
+          <h2 class="rs-page-title">{Product}s</h2>
          <div class="rs-btn-group" id="list-view-button-group">
            <a href="#create-view" class="rs-btn rs-btn-primary">Create {Product}</a>
            <button class="rs-btn modify-selected rs-popover-source" data-popover-target="delete-items-button" data-popover="confirm-batch-delete-popover" data-popover-position="bottom-right" disabled="disabled" id="delete-items-button">Delete</button>
