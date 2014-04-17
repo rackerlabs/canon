@@ -14,7 +14,7 @@ tags : [intro, about, canon]
     <p>Facets can be used to apply filters to a <a href="#list-view-table">Table</a>. This is not a standalone component - it should be used as part of the <a href="/ux-patterns/#list-view">List View Pattern</a>.</p>
     <h4>Rules for Use</h4>
     <ul>
-      <li>Always set an "All {Product}s" facet at the top as a means of clearing all filters</li>
+      <li>The top header should reflect the name of the product - EX: "Filter Servers"<div>If the product name is long and gets truncated, use "Filter List" instead.</div></li>
       <li>Organize sections based on usefulness - For example: we place priority on tags</li>
       <li>Sections must contain at least two items to appear in the facet sidebar</li>
       <li>Facets can contain icons related to items in the table - see the Status example</li>
