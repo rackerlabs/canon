@@ -1,27 +1,35 @@
+var setClearAllState = function() {
+  var isListFaceted = $('.rs-facet-section .selected').length;
+
+  if(isListFaceted) {
+    $('.rs-facets-header .rs-clear-facets-link').removeClass('rs-hidden');
+  } else {
+    $('.rs-facets-header .rs-clear-facets-link').addClass('rs-hidden');
+  }
+}
+
+var setClearSectionState = function(section) {
+  var isSectionFaceted = section.find('.selected').length;
+
+  if(isSectionFaceted) {
+    section.find('.rs-facets-section-header .rs-clear-facets-link').removeClass('rs-hidden');
+  } else {
+    section.find('.rs-facets-section-header .rs-clear-facets-link').addClass('rs-hidden');
+  }
+}
+
 $(document).ready(function() {
 
   $('.rs-facet-section .rs-facet-item').click(function() {
     $(this).toggleClass('selected');
-
-    var isFaceted = false;
-
-    $('.rs-facet-section .rs-facet-item').each(function() {
-      if($(this).hasClass('selected')) {
-        isFaceted = true;
-      }
-    });
-console.log('isFaceted = '+isFaceted);
-    if(isFaceted) {
-      $('.rs-clear-facets').removeClass('selected');
-    } else {
-      $('.rs-clear-facets').addClass('selected');
-    }
-
+    setClearAllState();
+    setClearSectionState($(this).closest('.rs-facet-section'));
   });
 
-  $('.rs-clear-facets').click(function() {
-    $(this).addClass('selected');
+  $('.rs-facets-header .rs-clear-facets-link').click(function() {
+    $(this).addClass('rs-hidden');
     $('.rs-facet-section .rs-facet-item.selected').removeClass('selected');
+    $('.rs-facet-section .rs-clear-facets-link').addClass('rs-hidden');
   });
 
   $('.rs-facet-section-toggle').click(function() {
@@ -42,8 +50,9 @@ console.log('isFaceted = '+isFaceted);
 
   });
 
-  $('.rs-clear-facets').click(function() {
-
+  $('.rs-facets-section-header .rs-clear-facets-link').click(function() {
+    $(this).addClass('rs-hidden').closest('.rs-facet-section').find('.selected').removeClass('selected');
+    setClearAllState();
   });
 
 });
