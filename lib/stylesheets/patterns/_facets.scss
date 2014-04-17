@@ -1,6 +1,12 @@
 /* facets */
 
-.rs-facets .rs-page-title {
+
+.rs-facets .rs-facets-header .rs-facets-title {
+  @extend .rs-truncate;
+  font-family: $alt-font-family;
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
   margin-bottom: 8px;
 }
 
@@ -14,17 +20,22 @@
 }
 
 .rs-facet-section-title {
+  @extend .rs-truncate;
+  margin-top: 12px;
   font-family: $alt-font-family;
-  line-height: 15px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 4px 0 5px 0;
-  margin-top: 12px;
+  padding: 1px 0 3px 0;
 }
 
-.rs-facet-section-title {
-  margin-bottom: 0;
+.rs-clear-facets-link {
+  @extend .rs-pull-right;
+  @extend a;
+  font-size: $base-font-size;
+  text-transform: lowercase;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .rs-facet-section .rs-facet-list {
