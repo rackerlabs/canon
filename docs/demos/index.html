@@ -59,13 +59,9 @@ statuses:
 <div class="rs-main">
   <div class="rs-sidebar rs-facets">
     <div class="rs-inner" id="facets-example">
-      <h2 class="rs-page-title">Cloud Servers</h2>
-      <div class="rs-facet-item rs-clear-facets selected">
-        <div class="rs-facet-label">All Servers</div>
-        <div class="rs-facet-count">(10)</div>
-      </div>
+      <div class="rs-facets-title">Filter Servers<div class="rs-clear-facets-link rs-hidden">clear all</div></div>
       <div class="rs-facet-section rs-facet-section-small collapsed">
-        <div class="rs-facet-section-title">Tags</div>
+        <div class="rs-facet-section-title">Tags<div class="rs-clear-facets-link rs-hidden">clear</div></div>
         <div class="rs-facet-section-body">
           <ul class="rs-facet-list">
             <li class="rs-facet-item">
@@ -111,7 +107,7 @@ statuses:
         </div>
       </div>
       <div class="rs-facet-section">
-        <div class="rs-facet-section-title">Status</div>
+        <div class="rs-facet-section-title">Status<div class="rs-clear-facets-link rs-hidden">clear</div></div>
         <div class="rs-facet-section-body">
           <ul class="rs-facet-list">
             <li class="rs-facet-item">
@@ -136,7 +132,7 @@ statuses:
         </div>
       </div>
       <div class="rs-facet-section">
-        <div class="rs-facet-section-title">Image</div>
+        <div class="rs-facet-section-title">Image<div class="rs-clear-facets-link rs-hidden">clear</div></div>
         <div class="rs-facet-section-body">
           <ul class="rs-facet-list">
             <li class="rs-facet-item">
@@ -162,11 +158,15 @@ statuses:
         </div>
       </div>
       <div class="rs-facet-section">
-        <div class="rs-facet-section-title">Flavor</div>
+        <div class="rs-facet-section-title">Flavor<div class="rs-clear-facets-link rs-hidden">clear</div></div>
         <div class="rs-facet-section-body">
           <ul class="rs-facet-list">
             <li class="rs-facet-item">
               <div class="rs-facet-label">2 GB Standard Instance</div>
+              <div class="rs-facet-count">(10)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">512 MB Standard Instance</div>
               <div class="rs-facet-count">(10)</div>
             </li>
             <li class="rs-facet-section-toggle">
@@ -179,6 +179,7 @@ statuses:
   </div>
   <div class="rs-content rs-panel">
     <div class="rs-inner">
+      <h2 class="rs-page-title">Cloud Servers</h2>
       <div class="rs-btn-group">
         <a href="create.html" class="rs-btn rs-btn-primary">Create Server</a>
         <button class="rs-btn" disabled>Delete</button>
