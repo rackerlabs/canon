@@ -26,10 +26,7 @@ Setting up your Canon development environment is easy:
 
 The Canon server is now running at http://0.0.0.0:8000. Before running automated
 tests, you'll need to set the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment
-variables. See [Environment Configuration](https://github.rackspace.com/canon/canon/wiki/Environment-Configuration)
-for more information on environment variables used by Canon. If you run into any
-issues, check the [wiki](https://github.rackspace.com/canon/canon/wiki) or send
-an email to canon@lists.rackspace.com.
+variables. If you run into any issues, submit an issue.
 
 ## CONTRIBUTING
 

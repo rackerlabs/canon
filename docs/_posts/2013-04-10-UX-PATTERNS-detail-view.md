@@ -118,7 +118,20 @@ tags : [intro, about, canon]
                 </div>
               </li>
               <li class="rs-detail-item">
-                <div class="rs-detail-key" id="size-key">Size</div>
+                <div class="rs-detail-key" id="size-key">RAM</div>
+                <div class="rs-detail-value">
+                  <div class="rs-progress rs-progress-small">
+                    <div class="rs-progress-inner">
+                      <div class="rs-segment" style="width: 49%">
+                        <div class="rs-bar rs-status-info"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="rs-progress-label">912.23 MB of 2 GB</span>
+                </div>
+              </li>
+              <li class="rs-detail-item">
+                <div class="rs-detail-key" id="size-key">Disk</div>
                 <div class="rs-detail-value">100 GB <button class="rs-edit rs-popover-source" data-popover-target="size-key" data-popover="resize-popover" data-popover-position="right" id="detail-example-edit-button"></button></div>
               </li>
               <li class="rs-detail-item">
