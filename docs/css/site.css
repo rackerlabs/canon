@@ -1,31 +1,31 @@
 @font-face {
 	font-family: source-sans-pro-extra-light;
-	src: url(/fonts/SourceSansPro-ExtraLight.ttf);
+	src: url(../fonts/SourceSansPro-ExtraLight.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-light;
-	src: url(/fonts/SourceSansPro-Light.ttf);
+	src: url(../fonts/SourceSansPro-Light.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-regular;
-	src: url(/fonts/SourceSansPro-Regular.ttf);
+	src: url(../fonts/SourceSansPro-Regular.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-semibold;
-	src: url(/fonts/SourceSansPro-Semibold.ttf);
+	src: url(../fonts/SourceSansPro-Semibold.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-bold;
-	src: url(/fonts/SourceSansPro-Bold.ttf);
+	src: url(../fonts/SourceSansPro-Bold.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-black;
-	src: url(/fonts/SourceSansPro-Black.ttf);
+	src: url(../fonts/SourceSansPro-Black.ttf);
 }
 
 .rs-nav-utility {

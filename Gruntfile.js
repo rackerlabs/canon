@@ -153,6 +153,9 @@ module.exports = function (grunt) {
       },
       jekyll: {
         cmd: 'bundle exec jekyll build --config config/jekyll.dev.yml'
+      },
+      jekyllProd: {
+        cmd: 'bundle exec jekyll build'
       }
     },
     watch: {
@@ -215,6 +218,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build:css', ['compass', 'cssmin']);
   grunt.registerTask('build:js', ['requirejs', 'uglify']);
   grunt.registerTask('build:website', ['exec:jekyll', 'copy:website']);
+  grunt.registerTask('build:websiteProd', ['exec:jekyllProd', 'copy:website']);
 
   grunt.registerTask('server', ['build', 'connect:server', 'watch']);
 

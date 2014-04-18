@@ -3,6 +3,8 @@
 COMMIT_HASH=$(git rev-parse HEAD)
 COMMIT_MESSAGE="Publish $COMMIT_HASH."
 
+grunt build:websiteProd
+
 cd _site
 git init
 git remote add website https://canon-ci:$GITHUB_TOKEN@github.com/rackerlabs/canon.git
