@@ -153,12 +153,15 @@
   }
 }
 
+.rs-table-status-disabled {
+  background-color: $grey300;
+}
+
 .rs-activity-ok {
   td {
     background-image: url('progress-background-success-lightest.gif');
   }
 }
-
 
 
 /* Table-Based Styles */
