@@ -5,7 +5,7 @@ COMMIT_MESSAGE="Publish $COMMIT_HASH."
 
 cd _site
 git init
-git remote add website git@github.com:rackerlabs/canon-ui.com.git
+git remote add website https://canon-ci:$GITHUB_TOKEN@github.com/rackerlabs/canon.git
 
 git add --all
 git commit --message "$COMMIT_MESSAGE"
