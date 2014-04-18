@@ -12,9 +12,9 @@
 
 .rs-table-row,
 %rs-table-row {
-  .rs-select-table &:hover,
-  &.hover,
-  &.selected {
+  .rs-select-table &:hover:not(.disabled),
+  &.hover:not(.disabled),
+  &.selected:not(.disabled) {
     .rs-table-cell, td {
       background-color: $blue5;
     }
@@ -154,7 +154,7 @@
 }
 
 .rs-table-status-disabled {
-  background-color: $grey300;
+  background-color: $grey300 !important;
 }
 
 .rs-activity-ok {
