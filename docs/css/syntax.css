@@ -1,5 +1,3 @@
-/* @override http://localhost:4000/css/syntax.css */
-
 /*
 
 Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
@@ -8,6 +6,12 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
 
 pre code {
   display: block;
+  margin: 0;
+}
+
+pre {
+	margin: 0;
+	padding: 0;
 }
 
 code {
