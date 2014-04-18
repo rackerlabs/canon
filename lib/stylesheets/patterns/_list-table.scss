@@ -130,6 +130,10 @@
   background-color: $red !important;
 }
 
+.rs-table-status-disabled {
+  background-color: $grey300;
+}
+
 /* Table-Based Styles */
 table {
   @extend %rs-list-table;
