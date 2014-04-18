@@ -28,7 +28,7 @@ items:
   name: My Product Item 4
   id: 4dd184a5-553b-47a6-9bc6-7097341648e6
   ip: 222.111.222
-  status: ok
+  status: disabled
  5:
   name: My Product Item 5
   id: 51434258
@@ -45,7 +45,7 @@ items:
   name: My Product Item 7
   id: 7162868d-b74b-4cc9-9ca9-b7e5e2e12f99
   ip: 222.111.222
-  status: ok
+  status: disabled
  8:
   name: My Product Item 8
   id: 8d1f2566-8174-4113-9623-2f3bdee3b92d
@@ -79,6 +79,7 @@ itemStatuses:
  warning: "<div class='title rs-no-wrap rs-status-processing'><strong>Warning</strong> </div><div class='rs-quiet'>Use When: Item is intermittently working or is trending towards unhealthy.</div></div>"
  warning rs-table-status-striped: "<div class='title rs-no-wrap rs-status-processing'><strong>Intermittently Available</strong> </div><div class='rs-quiet'>Use When: Item is running a user-initiated process that causes it to intermittently work. It is temporarily in this state and will return to normal afterwards.</div></div>"
  error: "<div class='title rs-no-wrap rs-status-error'><strong>Error</strong></div><div class='rs-quiet'>Use When: Item is not working as intended.<br>Inform the user they should contact Support for troubleshooting.</div>"
+ disabled: "<div class='title rs-no-wrap rs-status-disabled'><strong>Disabled</strong> </div><div class='rs-quiet'>Use When: Item has been disabled or removed from activity by a user initiated action.</div></div>"
 
 checkStatuses:
  ok: "<div class='rs-no-wrap rs-status-ok'>HTTP Check (Website) OK</div><p class='rs-no-wrap rs-quiet'>Since: Nov 2, 2013 10:52:55 PM UTC</p><span class='rs-quiet'>HTTP connection time is normal</span>"
@@ -184,12 +185,12 @@ checkStatuses:
           <tbody>
             {% for item in page.items %}
             {% capture itemStatus %}{{item[1].status}}{% endcapture %}
-            <tr id="row-{{item[1].id}}">
+            <tr id="row-{{item[1].id}}" {% if item[1].status == 'disabled' %}class="disabled"{% endif %}>
               <td class="rs-table-status rs-table-status-{{ item[1].status }} tip" title="{{ page.itemStatuses[itemStatus] }}" data-delay="1" id="row-status-{{item[1].id}}"></td>
-              <td class="rs-table-checkbox" id="row-check-{{item[1].id}}"><input type="checkbox" /></td>
+              <td class="rs-table-checkbox" id="row-check-{{item[1].id}}"><input type="checkbox" {% if item[1].status == 'disabled' %}disabled="disabled"{% endif %}></td>
               <td class="rs-table-cog" id="row-cog-{{item[1].id}}">
                 <div class="rs-dropdown">
-                  <div class="rs-cog rs-dropdown-toggle" id="cog-{{item[1].id}}"></div>
+                  <div class="rs-cog rs-dropdown-toggle {% if item[1].status == 'disabled' %}disabled{% endif %}" id="cog-{{item[1].id}}" {% if item[1].status == 'disabled' %}disabled="disabled"{% endif %}></div>
                   <ul class="rs-dropdown-menu hidden" id="dropdown-{{item[1].id}}">
                     <li><span class="rs-dropdown-category">Identify</span></li>
                     <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="cog-{{item[1].id}}" data-popover="rename-server-popover-list-view" data-popover-position="bottom-right" id="rename-item-link">Rename Item&hellip;</a></li>
@@ -222,7 +223,7 @@ checkStatuses:
                   {% endfor %}
                 </ul>
                 {% else if %}
-                <button type="button" class="rs-popover-source rs-plus tip" title="Add monitoring check" data-delay=".8" id="plus-{{item[1].id}}" data-popover-target="plus-{{item[1].id}}" data-popover="create-check-popover-list-view" data-popover-position="bottom-left"></button>
+                <button type="button" class="rs-popover-source rs-plus tip{% if item[1].status == 'disabled' %} disabled{% endif %}" title="Add monitoring check" data-delay=".8" id="plus-{{item[1].id}}" data-popover-target="plus-{{item[1].id}}" data-popover="create-check-popover-list-view" data-popover-position="bottom-left" {% if item[1].status == 'disabled' %}disabled="disabled"{% endif %}></button>
                 {% endif %}
               </td>
             </tr>
