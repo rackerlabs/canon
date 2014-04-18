@@ -22,28 +22,32 @@ var toggleBatchAction = function(sourceElement){
 $(document).ready(function() {
 	
 	$(".rs-select-table tbody tr").click(function() {
-		var row = $(this);
+		if(!$(this).hasClass('disabled')){
+			var row = $(this);
 
-		if(row.find(".rs-table-radio").length > 0) {
-			row.siblings(".selected").removeClass("selected");
-			row.find("input").prop("checked",true);
-			row.addClass("selected");
-		} else {
-			if(row.find("input").prop("checked")) {
-				row.removeClass("selected");
-				row.find("input").prop("checked",false);
-			} else {
-				row.addClass("selected");
+			if(row.find(".rs-table-radio").length > 0) {
+				row.siblings(".selected").removeClass("selected");
 				row.find("input").prop("checked",true);
+				row.addClass("selected");
+			} else {
+				if(row.find("input").prop("checked")) {
+					row.removeClass("selected");
+					row.find("input").prop("checked",false);
+				} else {
+					row.addClass("selected");
+					row.find("input").prop("checked",true);
+				}
 			}
+			toggleBatchAction(row);
 		}
-		toggleBatchAction(row);
 	});
 
 	$(".rs-select-table input:checkbox").click(function(e) {
-		var checkbox = $(this);
-		checkbox.closest("tr").toggleClass("selected");
-		toggleBatchAction(checkbox);
+		if(!$(this).hasClass('disabled')){
+			var checkbox = $(this);
+			checkbox.closest("tr").toggleClass("selected");
+			toggleBatchAction(checkbox);
+		}
 	});
 
 	$(".rs-select-table .rs-table-link, .rs-select-table input, .rs-select-table .rs-plus, .rs-select-table select, .rs-status-list-item").click(function(e) {
@@ -64,10 +68,19 @@ $(document).ready(function() {
 
 		if(selectAll.prop('checked')) {
 			deleteRowButton.prop('disabled',false);
-			table.find('tbody tr').addClass('selected').find('.rs-table-checkbox input[type=checkbox]').prop('checked',true);
+
+			table.find('tbody tr').each(function() {
+				if(!$(this).hasClass('disabled')) {
+					$(this).addClass('selected').find('.rs-table-checkbox input[type=checkbox]').prop('checked',true);
+				}
+			});
 		} else {
 			deleteRowButton.prop('disabled',true);
-			table.find('tbody tr').removeClass('selected').find('.rs-table-checkbox input[type=checkbox]').prop('checked',false);
+			table.find('tbody tr').each(function() {
+				if($(this).hasClass('disabled')) {
+					$(this).removeClass('selected').find('.rs-table-checkbox input[type=checkbox]').prop('checked',false);
+				}
+			});
 		}
 	});
 
