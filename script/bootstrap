@@ -1,4 +1,10 @@
 #!/bin/sh
 
-gem install bundler && bundle install
-npm install -g bower grunt-cli && npm install && bower install
+set -e
+
+gem install bundler
+bundle install
+
+npm install -g bower grunt-cli
+npm install
+bower install

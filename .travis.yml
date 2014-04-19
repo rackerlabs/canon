@@ -4,7 +4,7 @@ node_js:
 - '0.10'
 
 install:
-- script/bootstrap
+- travis_retry script/bootstrap
 
 script:
 - grunt build
