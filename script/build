@@ -1,0 +1,13 @@
+#!/bin/sh
+
+grunt build
+
+if [ -z "$SAUCE_USERNAME" ]; then
+  echo "Environment variable SAUCE_USERNAME is not set. Skipping Janus validation."
+  exit 0
+elif [ -z "$SAUCE_ACCESS_KEY" ]; then
+  echo "Environment variable SAUCE_ACCESS_KEY is not set. Skipping Janus validation."
+  exit 0
+else
+  grunt "test:validate"
+fi

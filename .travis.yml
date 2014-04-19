@@ -7,7 +7,7 @@ install:
 - travis_retry script/bootstrap
 
 script:
-- grunt build
+- script/build
 
 notification:
   email: false
