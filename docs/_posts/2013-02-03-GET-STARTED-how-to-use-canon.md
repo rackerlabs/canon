@@ -76,4 +76,4 @@ To begin using Canon, start with this basic HTML template that includes everythi
 {% endhighlight %}
 
 <p>Or, find more detail on our demo site.</p>
-<a class="rs-btn rs-btn-login rs-btn-large" href="http://demo.canon.rackspace.com" target="blank">View Demo</a>
+<a class="rs-btn rs-btn-login rs-btn-large" href="{{ site.baseurl }}/demos" target="blank">View Demo</a>

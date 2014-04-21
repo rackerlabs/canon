@@ -10,12 +10,12 @@ tags : [intro, about, canon]
 
 <div class="rs-row">
   <div class="span-3">
-    <p>The hub and spoke navigation model produces a flat, simple application architecture. The model uses three main page types: the <a target="blank" href="http://demo.canon.rackspace.com/">List View</a>, <a href="#detail-view">Detail View</a> and <a href="#create-view">Create View</a>.</p><p>Actions are kept in context on these pages by way of the <a href="/ui-components/#popover">popover component</a>. Building your application to follow this model will help users keep a consistent mental picture of the application structure and ensure they accomplish their goals quickly and intuitively. </p>
+    <p>The hub and spoke navigation model produces a flat, simple application architecture. The model uses three main page types: the <a target="blank" href="{{ site.baseurl }}/demos">List View</a>, <a href="#detail-view">Detail View</a> and <a href="#create-view">Create View</a>.</p><p>Actions are kept in context on these pages by way of the <a href="/ui-components/#popover">popover component</a>. Building your application to follow this model will help users keep a consistent mental picture of the application structure and ensure they accomplish their goals quickly and intuitively. </p>
     <h3>When to use</h3>
     <ul>
       <li>Each large "hub" is related to a UX Pattern, with implementation details below on this page.</li>
-      <li>Each "spoke" coming off a hub represents a <a href="/ui-components">UI Component</a> within the pattern.</li>
-      <li>Use <a target="blank" href="http://demo.canon.rackspace.com/">List Views</a> for managing and assessing many items of one type.</li>
+      <li>Each "spoke" coming off a hub represents a <a href="{{ site.baseurl }}/ui-components">UI Component</a> within the pattern.</li>
+      <li>Use <a target="blank" href="{{ site.baseurl }}/demos">List Views</a> for managing and assessing many items of one type.</li>
       <li>Use the <a href="#detail-view">Detail View</a> when items have child items with their own set of actions and details.</li>
       <li>Use the <a href="#create-view">Create View</a> when items have complex configuration settings or need a help section to guide users through the creation process.</li>
     </ul>
