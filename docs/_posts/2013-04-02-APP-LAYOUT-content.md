@@ -33,7 +33,7 @@ tags : [intro, about, canon]
 	          <tbody>
 	          	<tr>
 	              <td>Full-Width</td>
-	              <td><img src="/img/content-full-width.png" width="275" height="172" /></td>
+	              <td><img src="{{ site.baseurl }}/img/content-full-width.png" width="275" height="172" /></td>
 	              <td>{% highlight html %}
 <div class="rs-main">
   <div class="rs-content rs-panel"></div>
@@ -41,7 +41,7 @@ tags : [intro, about, canon]
 	            </tr>
 	            <tr>
 	              <td>Left Sidebar</td>
-	              <td><img src="/img/content-left.png" width="275" height="172" /></td>
+	              <td><img src="{{ site.baseurl }}/img/content-left.png" width="275" height="172" /></td>
 	              <td>{% highlight html %}
 <div class="rs-main">
   <div class="rs-sidebar">
@@ -54,7 +54,7 @@ tags : [intro, about, canon]
 	            </tr>
 	            <tr>
 	              <td>Right Help Panel</td>
-	              <td><img src="/img/content-sidebar-right.png" width="275" height="172" /></td>
+	              <td><img src="{{ site.baseurl }}/img/content-sidebar-right.png" width="275" height="172" /></td>
 	              <td>{% highlight html %}
 <div class="rs-main rs-panel">
   <div class="rs-sidebar rs-pull-right">

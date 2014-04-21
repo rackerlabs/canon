@@ -185,7 +185,7 @@ tags : [intro, about, canon]
       <li>Use <a href="#tooltips">Tooltips</a> to display check details.</li>
       <li>Use the <a href="#plus-button">Plus Button</a> to let users add checks if none exist on a monitoring-enabled device.</li>
       <li>The Plus Button should spawn a <a href="#popover">Popover</a> for creating a check on the device.</li>
-      <li>See the <a href="http://demo.canon.rackspace.com/" target="_blank">Cloud Servers list</a> for an example.</li>
+      <li>See the <a href="{{ site.baseurl }}/demos" target="_blank">Cloud Servers list</a> for an example.</li>
     </ul>
   </div>
   <div class="span-8 offset-1">

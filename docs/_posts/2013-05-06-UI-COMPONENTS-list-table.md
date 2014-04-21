@@ -51,7 +51,7 @@ START LIST VIEW TABLES - SUMMARY
     <ul>
       <li>Use when the table is the primary UI Component on the page.</li>
       <li>As a navigational hub it should let users assess status, perform actions and drilldown for detail.</li>
-      <li>See the Cloud Servers list on the <a href="http://demo.canon.rackspace.com/" target="_blank">Live Demo</a>.</li>
+      <li>See the Cloud Servers list on the <a href="{{ site.baseurl }}/demos" target="_blank">Live Demo</a>.</li>
     </ul>
     <h5>Table States</h5>
     <ul>
@@ -145,7 +145,7 @@ START EMBEDDED TABLES - SUMMARY
       <li>Use when the table is not the primary UI Component on the page.</li>
       <li>Use in a section of the <a href="#details">Details</a> component, or as content of a <a href="#popover">Popover</a>.</li>
       <li>Use when you need to limit the height of a table, by allowing the rows to scroll.</li>
-      <li>See the Networks and Monitoring checks tables on the <a href="http://demo.canon.rackspace.com/details.html" target="_blank">Live Demo</a>.</li>
+      <li>See the Networks and Monitoring checks tables on the <a href="{{ site.baseurl }}/demos/details.html" target="_blank">Live Demo</a>.</li>
     </ul>
     <h5>Three Sizes</h5>
     <p>This table has vertical scrolling provided by three max-height classes:</p>
