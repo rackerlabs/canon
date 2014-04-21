@@ -19,13 +19,13 @@ tags : [intro, about, canon]
       <li>Sections must contain at least two items to appear in the facet sidebar</li>
       <li>Facets can contain icons related to items in the table - see the Status example</li>
       <li>Only one facet section should have icons per page to reduce cognitive load</li>
-      <li>Facet counts reflect the number of matching items in the total, not the number of items in the filtered result set</li>
-    </ul>
-    <h4>Functional Notes</h4>
-    <ul>
       <li>Facet counts are optional and although useful, they can result in extra processing to calculate - <i>beware of performance issues</i></li>
-      <li>Sections are inherently limited to 5 facets - anymore after that get hidden by default and the "more" / "less" link appears as a means of toggling hidden facets</li>
-      <li>Set the "expanded" class on the rs-facet-section element to show hidden facets</li>
+    </ul>
+    <h4>Toggling Facet Sections</h4>
+    <ul>
+      <li>Limit facet sections to 5 visible facet items</li>
+      <li>Add the "more" / "less" link when a section has 6 or more facet items</li>
+      <li>Use "expanded" and "collapsed" classes on the rs-facet-section element to easily track toggled states</li>
     </ul>
     <h4>About Filtering</h4>
     <p>Table filtering should usually reduce result sets rather than increase them. A good analogy is that of choosing to query a system using "OR" versus "AND" operators.</p>
