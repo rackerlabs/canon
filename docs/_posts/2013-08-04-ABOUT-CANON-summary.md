@@ -11,7 +11,7 @@ Inspired by Twitter Bootstrap, Canon is created by *and* for designers and devel
 Canon is a front-end framework of HTML and CSS.  The UI Components and Layouts in Canon have been designed and tested by Rackspace Product Design and are combined to form a UX Pattern Library. 
 
 
-##### As Canon evolves, we will need contributors like you!
+##### Want to participate in the evolution of Rackspace<span class="super-script">&reg;</span> Canon?
 
 Check out our GitHub repositories to see where you want to get involved:
 
