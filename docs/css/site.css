@@ -886,3 +886,8 @@ h4.rs-quiet, h4 .rs-quiet  {
 .collapsible-highlight.hover .rs-toggle {
 	display: block;
 }
+
+.super-script {
+  font-size: .5em;
+  vertical-align: super;
+}
