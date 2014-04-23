@@ -889,5 +889,6 @@ h4.rs-quiet, h4 .rs-quiet  {
 
 .super-script {
   font-size: .5em;
+  line-height: .5em;
   vertical-align: super;
 }
