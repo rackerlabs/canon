@@ -1,10 +1,10 @@
 ---
 category : about canon
-title: Who We Are
+title: Rackers working on Canon
 tags : [intro, about, canon]
 ---
 
-* **Project Lead**: Andrew Raiford
-* **Engineering**: Brad Gignac
-* **Front-End Design**: Eddy Hernandez
-* **Interactive & Visual Design**: Lauren Dowdy
+* **Andrew Raiford**: User Experience Designer
+* **Lauren Dowdy**: User Experience Designer
+* **Brad Gignac**: Software Developer
+* **Eddy Hernandez**: Software Developer
