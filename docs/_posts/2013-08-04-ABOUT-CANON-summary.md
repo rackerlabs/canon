@@ -4,11 +4,11 @@ title: Summary
 tags : [intro, about, canon]
 ---
 
-The goal of Canon is to lower the barrier of entry for new UIs at Rackspace. 
+##### The goal of Canon is to lower the barrier of entry for new UIs at Rackspace<span class="super-script">&reg;</span>. 
 
 Inspired by Twitter Bootstrap, Canon is created by *and* for designers and developers at Rackspace. It already serves as the unified library for control panels like <a href="">MyCloud</a>, <a href="">MyRackspace</a>, <a href="">Cloud Backup</a>, <a href="">MailGun</a> and others. 
 
-Canon is a front-end framework of HTML and CSS.  The UI Components and Layouts in Canon have been designed and tested by Rackspace Product Design and are combined to form a UX Pattern Library. 
+Canon is a front-end framework of HTML and CSS.  The UI Components and Layouts in Canon have been designed and tested by Rackspace<span class="super-script">&reg;</span> Product Design and are combined to form a UX Pattern Library. 
 
 
 ##### Want to participate in the evolution of Rackspace<span class="super-script">&reg;</span> Canon?
