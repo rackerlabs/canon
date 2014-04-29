@@ -329,6 +329,14 @@ ol:last-child
 	margin-right: 20px;
 }
 
+.rs-detail-list.reverse .rs-detail-key {
+  color: #333;
+}
+
+.rs-detail-list.reverse .rs-detail-value {
+  color: #888;
+}
+
 
 dt{
 
@@ -891,4 +899,16 @@ h4.rs-quiet, h4 .rs-quiet  {
   font-size: .5em;
   line-height: .5em;
   vertical-align: super;
+}
+
+.max-width-small {
+  max-width: 400px;
+}
+
+.max-width-medium {
+  max-width: 600px;
+}
+
+.max-width-large {
+  max-width: 800px;
 }
