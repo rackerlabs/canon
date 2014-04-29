@@ -5,7 +5,6 @@ author: Andrew Raiford
 updated: April 23, 2014
 tags : [intro, about, canon]
 ---
-In this minor release we've updated our heading styles, list margins and our green table status image. In addition, we added a <strong><a href="/ui-components/#typography">Typography</a></strong> section in UI components to define how to visually distinguishes sections of content and their headings.
 
 ##### New Features in Version {{site.CANON.versions[0]}}:
 <ul class="rs-detail-list">
@@ -32,6 +31,6 @@ In this minor release we've updated our heading styles, list margins and our gre
 <ul class="rs-detail-list">
     <li class="rs-detail-item">
       <div class="rs-detail-key"> <a href="{{site.baseurl}}/ux-patterns/#list-view">List View Pattern</a></strong> </div>
-      <div class="rs-detail-value">A powerful pattern of UI Components that lets users quickly find items, easily assess item health, and perform actions without drilldown.</div>
+      <div class="rs-detail-value">A powerful combination of UI Components that lets users quickly find items, easily assess item health, and perform actions without drilling down.</div>
     </li>
 </ul>
