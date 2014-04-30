@@ -222,6 +222,15 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', ['build', 'connect:server', 'watch']);
 
-  grunt.registerTask('test', ['jshint:all', 'karma:ci', 'test:screenshot']);
+  grunt.registerTask('test', function () {
+    grunt.task.run([
+      'jshint:all',
+      'karma:ci'
+    ]);
+
+    if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
+      grunt.task.run(['test:screenshot']);
+    }
+  });
   grunt.registerTask('test:screenshot', ['connect:test', 'exec:rspec:spec/screenshot']);
 };
