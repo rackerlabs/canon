@@ -7,6 +7,8 @@ screenshots:
     url: create-view.html
   - name: Form
     url: form.html
+  - name: Form (Vertical)
+    url: form-vertical.html
   - name: Form (Horizontal)
     url: form-horizontal.html
   - name: Form (Create)
