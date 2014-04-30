@@ -10,7 +10,7 @@ tags : [intro, about, canon]
 <ul class="rs-detail-list">
     <li class="rs-detail-item">
       <div class="rs-detail-key"> <a href="{{site.baseurl}}/ui-components/#progress-bars">Blue Progress Bars</a></strong> </div>
-      <div class="rs-detail-value">Display metrics without positive or negative status</div>
+      <div class="rs-detail-value">Display metrics with a neutral status</div>
     </li>
     <li class="rs-detail-item">
       <div class="rs-detail-key"> <a href="{{site.baseurl}}/ui-components/#progress-bar-sizes">Progress Bar + Label</a></strong> </div>

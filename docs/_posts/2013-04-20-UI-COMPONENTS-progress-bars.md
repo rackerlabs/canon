@@ -23,7 +23,7 @@ tags : [intro, about, canon]
         <li><span style="color:#00a96d; font-weight:bold">Green (OK)</span> state is for processes with no impact on the uptime of a product, like uploading a file.</li>
         <li><span style="color:#ff9d00; font-weight:bold">Yellow (Processing)</span> state shows a user initiated processes, like rebuilding or resizing, that may cause a product to intermittently work.</li>
         <li><span style="color:#c40022; font-weight:bold">Red (Error)</span> state is used to represent a failed process, or to indicate that a device is currently offline.</li>
-        <li><span style="color:#1e6ec1; font-weight:bold">Blue (Neutral Info)</span> is for displaying metrics without positive or negative status, like showing percent of total.</li>
+        <li><span style="color:#1e6ec1; font-weight:bold">Blue (Neutral Info)</span> is for displaying metrics with a neutral status, like showing percent of total.</li>
       </ul>
       <li>Use animating stripes when you need more indication that work is happening in the background.</li>
     </ul>
