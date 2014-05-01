@@ -1,3 +1,18 @@
+## v1.5.0 (May 1, 2014)
+
+- Add disabled state for tables.
+- Add heartbeat styles for tables.
+- Add info state for progress bars.
+- Add ability to provide a progress bar label.
+- Add processing error state for badges and tables.
+- Add variable width keys for detail views.
+- Add variable width labels for forms.
+- Use Canon input styles for url, email, and search inputs.
+- Fix layout bug for vertical forms.
+- Fix bug where primay nav items had too much padding.
+- Fix bug where dropdown did expand with width of nav item.
+- Fix bug where progress bar did not fire correct DOM events.
+
 ## v1.4.1 (February 5, 2014)
 - Fix underline in primary nav items
 - Update sidebar text styles
