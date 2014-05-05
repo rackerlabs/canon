@@ -3,6 +3,15 @@
 .rs-cascade {
   border: 1px solid $grey300;
   overflow: hidden;
+
+  .rs-overlay {
+    margin: 0;
+    height: 100%;
+  }
+
+  .rs-overlay-content {
+    padding: 0 30px;
+  }
 }
 
 .rs-cascade-column {
