@@ -214,14 +214,16 @@ td {
 }
 
 /* Base Table Overlay */
-.rs-table-overlay {
+.rs-table-overlay,
+.rs-overlay {
   display: table;
   width: 100%;
   height: 300px;
   margin-top: -20px;
 }
 
-.rs-table-overlay-content {
+.rs-table-overlay-content,
+.rs-overlay-content {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
@@ -229,33 +231,41 @@ td {
   text-align: center;
 }
 
-.rs-table-overlay-title, .rs-table-overlay-subtitle {
+.rs-table-overlay-title,
+.rs-table-overlay-subtitle,
+.rs-overlay-title,
+.rs-overlay-subtitle {
   font-family: $alt-font-family;
 }
 
-.rs-table-overlay-title {
+.rs-table-overlay-title,
+.rs-overlay-title {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 24px;
   color: $grey500;
 }
 
-.rs-table-overlay-subtitle {
+.rs-table-overlay-subtitle,
+.rs-overlay-subtitle {
   font-size: 18px;
   color: $grey400;
 }
 
-.rs-table-overlay-subtitle + .rs-table-overlay-message {
+.rs-table-overlay-subtitle + .rs-table-overlay-message,
+.rs-overlay-subtitle + .rs-overlay-message {
   margin-top: 50px;
 }
 
-.rs-table-overlay-message {
+.rs-table-overlay-message,
+.rs-overlay-message {
   font-size: 13px;
   color: $grey400;
 }
 
 /* Loading Overlay */
-.rs-table-overlay-loading .rs-table-overlay-message {
+.rs-table-overlay-loading .rs-table-overlay-message,
+.rs-overlay-loading .rs-overlay-message {
   color: $grey300;
   &:before {
     background: url('clouding.gif') center center no-repeat;
@@ -269,7 +279,8 @@ td {
 }
 
 /* Loading Error */
-.rs-table-overlay-error .rs-table-overlay-message {
+.rs-table-overlay-error .rs-table-overlay-message,
+.rs-overlay-error .rs-overlay-message {
   color: $red400;
 
   .rs-icon-error-indicator {
