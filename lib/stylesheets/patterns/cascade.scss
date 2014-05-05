@@ -2,33 +2,41 @@
 
 .rs-cascade {
   border: 1px solid $grey300;
+  overflow: hidden;
 }
 
 .rs-cascade-column {
-  padding: 0;
-  border-right: 1px solid $grey300;
+  float: left;
 
-  &:last-child {
-    border-right: none;
+  &:first-child {
+    .rs-cascade-column-header,
+    .rs-cascade-column-content
+    {
+      border-left: none;
+    }
   }
 }
 
 .rs-cascade-column-header {
+  width: 100%;
   border-bottom: 1px solid $grey300;
+  border-left: 1px solid $grey300;
   height: 20px;
   overflow: hidden;
-  padding-left: 10px;
+  padding: 0 10px;
 }
 
 .rs-cascade-column-content {
+  border-left: 1px solid $grey300;
   height: 400px;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 
   .rs-inner {
     padding: 20px;
+    margin: 0px;
   }
-
 }
 
 .rs-cascade-list {
@@ -93,4 +101,18 @@
   @extend .rs-pull-right;
   @include icon;
   @include icon-sprite(arrow-right-ccc);
+}
+
+/* Cascade Heights */
+
+.rs-cascade-short {
+  .rs-cascade-column-content {
+    height: 200px;
+  }
+}
+
+.rs-cascade-tall {
+  .rs-cascade-column-content {
+    height: 500px;
+  }
 }
