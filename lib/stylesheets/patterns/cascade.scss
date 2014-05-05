@@ -1,0 +1,96 @@
+/* cascade */
+
+.rs-cascade {
+  border: 1px solid $grey300;
+}
+
+.rs-cascade-column {
+  padding: 0;
+  border-right: 1px solid $grey300;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.rs-cascade-column-header {
+  border-bottom: 1px solid $grey300;
+  height: 20px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.rs-cascade-column-content {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .rs-inner {
+    padding: 20px;
+  }
+
+}
+
+.rs-cascade-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rs-cascade-list-item {
+  padding: 0;
+  &:hover,
+  &.hover {
+    .rs-cascade-list-item-content {
+      background-color: $blue5;
+      text-decoration: none;
+    }
+  }
+  &.disabled,
+  &.disabled:hover,
+  &.disabled.hover {
+    .rs-cascade-list-item-content {
+      background-color: $white;
+      cursor: default;
+    }
+
+    .rs-cascade-list-item-label {
+      color: $grey300;
+    }
+
+    .rs-cascade-arrow {
+      display: none;
+    }
+  }
+  &.selected {
+    .rs-cascade-list-item-content {
+      background-color: $blue;
+    }
+    
+    .rs-cascade-list-item-label {
+      color: #fff;
+    }
+
+    .rs-cascade-arrow {
+      @include icon-sprite(arrow-right-fff);
+    }
+  }
+}
+
+.rs-cascade-list-item-content {
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.rs-cascade-list-item-label {
+  @extend .rs-truncate;
+  color: $grey-dark;
+}
+
+.rs-cascade-arrow {
+  margin-top: 3px;
+  @extend .rs-pull-right;
+  @include icon;
+  @include icon-sprite(arrow-right-ccc);
+}
