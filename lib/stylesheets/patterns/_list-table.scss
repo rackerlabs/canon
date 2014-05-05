@@ -156,7 +156,7 @@ td {
 }
 
 /* Sort Links */
-.rs-table-sort {
+.rs-table-sort, .rs-sort {
   color: $grey400;
 
   &.hover,
@@ -167,11 +167,14 @@ td {
 }
 
 .rs-table-sort-text,
-.rs-table-sort-indicator {
+.rs-table-sort-indicator,
+.rs-sort-text,
+.rs-sort-indicator {
   display: inline-block;
 }
 
-.rs-table-sort-indicator {
+.rs-table-sort-indicator,
+.rs-sort-indicator {
   width: 9px;
   height: 5px;
   margin-bottom: 1px;
@@ -179,26 +182,34 @@ td {
 }
 
 .rs-table-sort-asc,
-.rs-table-sort-desc {
+.rs-table-sort-desc,
+.rs-sort-asc,
+.rs-sort-desc {
   color: $grey600;
   font-weight: bold;
 }
 
-.rs-table-sort-asc > .rs-table-sort-indicator {
+.rs-table-sort-asc > .rs-table-sort-indicator,
+.rs-sort-asc > .rs-sort-indicator {
   @include icon-sprite(sort-ascending);
 }
 
 .rs-table-sort-asc.hover > .rs-table-sort-indicator,
-.rs-table-sort-asc:hover > .rs-table-sort-indicator {
+.rs-table-sort-asc:hover > .rs-table-sort-indicator,
+.rs-sort-asc.hover > .rs-sort-indicator,
+.rs-sort-asc:hover > .rs-sort-indicator {
   @include icon-sprite(sort-ascending-hover);
 }
 
-.rs-table-sort-desc > .rs-table-sort-indicator {
+.rs-table-sort-desc > .rs-table-sort-indicator,
+.rs-sort-desc > .rs-sort-indicator {
   @include icon-sprite(sort-descending);
 }
 
 .rs-table-sort-desc.hover > .rs-table-sort-indicator,
-.rs-table-sort-desc:hover > .rs-table-sort-indicator {
+.rs-table-sort-desc:hover > .rs-table-sort-indicator,
+.rs-sort-desc.hover > .rs-sort-indicator,
+.rs-sort-desc:hover > .rs-sort-indicator {
   @include icon-sprite(sort-descending-hover);
 }
 
