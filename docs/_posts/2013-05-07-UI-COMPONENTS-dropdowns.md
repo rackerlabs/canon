@@ -26,12 +26,15 @@ tags : [intro, about, canon]
           <li class="rs-dropdown-item"><span class="rs-dropdown-category">Links</span></li>
           <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link</a></li>
           <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover)</a></li>
+          <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus)</a></li>
           <li class="rs-dropdown-item"><span class="rs-dropdown-category">External</span></li>
           <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link External <i class="rs-icon-external"></i></a></li>
           <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link External (Hover) <i class="rs-icon-external"></i></a></li>
+          <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link External (Focus) <i class="rs-icon-external"></i></a></li>
           <li class="rs-dropdown-item"><span class="rs-dropdown-category">Captions</span></li>
           <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link <span class="rs-dropdown-caption">With Caption</span></a></li>
           <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover) <span class="rs-dropdown-caption">With Caption</span></a></li>
+          <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus) <span class="rs-dropdown-caption">With Caption</span></a></li>
         </ul>
       </div>
       <div class="rs-dropdown rs-utility-dropdown rs-nav-item" id="utility-dropdown-spacing">
@@ -41,12 +44,15 @@ tags : [intro, about, canon]
           <li class="rs-divider"></li>
           <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link</a></li>
           <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover)</a></li>
+          <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus)</a></li>
           <li class="rs-divider"></li>
           <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link External <i class="rs-icon-external-dark"></i></a></li>
           <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link External (Hover) <i class="rs-icon-external-dark"></i></a></li>
+          <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link External (Focus) <i class="rs-icon-external-dark"></i></a></li>
           <li class="rs-divider"></li>
           <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link <span class="rs-dropdown-caption">With Caption</span></a></li>
           <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover) <span class="rs-dropdown-caption">With Caption</span></a></li>
+          <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus) <span class="rs-dropdown-caption">With Caption</span></a></li>
         </ul>
       </div>
       <div class="rs-dropdown">
@@ -69,12 +75,15 @@ tags : [intro, about, canon]
     <li class="rs-dropdown-item"><span class="rs-dropdown-category">Links</span></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link</a></li>
     <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover)</a></li>
+    <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus)</a></li>
     <li class="rs-dropdown-item"><span class="rs-dropdown-category">External</span></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link External <i class="rs-icon-external"></i></a></li>
     <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link External (Hover) <i class="rs-icon-external"></i></a></li>
+    <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link External (Focus) <i class="rs-icon-external"></i></a></li>
     <li class="rs-dropdown-item"><span class="rs-dropdown-category">Captions</span></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link <span class="rs-dropdown-caption">With Caption</span></a></li>
     <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover) <span class="rs-dropdown-caption">With Caption</span></a></li>
+    <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus) <span class="rs-dropdown-caption">With Caption</span></a></li>
   </ul>
 </div>
 
@@ -85,12 +94,15 @@ tags : [intro, about, canon]
     <li class="rs-divider"></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link</a></li>
     <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover)</a></li>
+    <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus)</a></li>
     <li class="rs-divider"></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link External <i class="rs-icon-external-dark"></i></a></li>
     <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link External (Hover) <i class="rs-icon-external-dark"></i></a></li>
+    <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link External (Focus) <i class="rs-icon-external-dark"></i></a></li>
     <li class="rs-divider"></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link <span class="rs-dropdown-caption">With Caption</span></a></li>
     <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover) <span class="rs-dropdown-caption">With Caption</span></a></li>
+    <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus) <span class="rs-dropdown-caption">With Caption</span></a></li>
   </ul>
 </div>
 
