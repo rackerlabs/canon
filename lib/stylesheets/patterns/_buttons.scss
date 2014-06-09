@@ -262,7 +262,7 @@ input::-moz-focus-inner {
 
 .rs-processing-indicator {
   @include icon(13px,12px);
-  background-image: url('processing-indicator.gif');
+  background-image: image-image-url('processing-indicator.gif');
 }
 
 .rs-edit {
