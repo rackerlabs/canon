@@ -152,6 +152,10 @@ input::-moz-focus-inner {
   border: none;
   cursor: pointer;
 
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
   @include inline-block;
   @include icon-sprite(cog);
 
@@ -178,6 +182,10 @@ input::-moz-focus-inner {
   border: none;
   cursor: pointer;
 
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
   @include inline-block;
   @include icon-sprite(plus-dotted-grey);
 
@@ -197,6 +205,10 @@ input::-moz-focus-inner {
   background-color: none;
   border: none;
   cursor: pointer;
+
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 
   @include inline-block;
   @include icon-sprite(minus-circle-808080);
@@ -269,10 +281,16 @@ input::-moz-focus-inner {
   display: inline-block;
   width: 19px;
   height: 19px;
+  margin: 0;
+  padding: 0;
   background-color: #fff;
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
+  
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 
   @include icon-sprite(pencil-666);
 
