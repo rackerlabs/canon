@@ -152,12 +152,9 @@ input::-moz-focus-inner {
   border: none;
   cursor: pointer;
 
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-
   @include inline-block;
   @include icon-sprite(cog);
+  @include hide-text-content();
 
   &:active,
   &.active,
@@ -182,12 +179,9 @@ input::-moz-focus-inner {
   border: none;
   cursor: pointer;
 
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-
   @include inline-block;
   @include icon-sprite(plus-dotted-grey);
+  @include hide-text-content();
 
   &:active,
   &.active,
@@ -206,12 +200,9 @@ input::-moz-focus-inner {
   border: none;
   cursor: pointer;
 
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-
   @include inline-block;
   @include icon-sprite(minus-circle-808080);
+  @include hide-text-content();
 }
 
 .rs-caret {
@@ -287,12 +278,9 @@ input::-moz-focus-inner {
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
-  
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
 
   @include icon-sprite(pencil-666);
+  @include hide-text-content();
 
   &:hover,
   &.hover {
