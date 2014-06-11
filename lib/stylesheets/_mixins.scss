@@ -122,9 +122,3 @@
   margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) + ($fluidGridGutterWidth);
   *margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%) + $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
 }
-
-@mixin hide-text-content() {
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
