@@ -1,3 +1,7 @@
+## v1.5.1 (June 12, 2014)
+
+- Fix padding and alignment of edit buttons.
+
 ## v1.5.0 (May 1, 2014)
 
 - Add disabled state for tables.
