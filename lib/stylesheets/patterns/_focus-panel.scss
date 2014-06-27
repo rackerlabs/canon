@@ -1,0 +1,50 @@
+.rs-focus-panel {
+  @extend .rs-panel;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: $zindexModal + 1;
+}
+
+.rs-focus-panel .rs-inner {
+  margin: 30px;
+}
+
+.rs-focus-panel-mini {
+  width: 633px;
+  height: 391px;
+}
+
+.rs-focus-panel-small {
+  width: 767px;
+  height: 472px;
+}
+
+.rs-focus-panel-medium {
+  width: 894px;
+  height: 553px;
+}
+
+.rs-focus-panel-large {
+  width: 1024px;
+  height: 633px;
+}
+
+.rs-focus-panel-xlarge {
+  width: 1152px;
+  height: 717px;
+}
+
+.rs-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: .5;
+  z-index: $zindexModal;
+}

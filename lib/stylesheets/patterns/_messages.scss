@@ -1,0 +1,76 @@
+.rs-message {
+	border: 1px #fff solid;
+	box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.15);
+	-ms-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.15);
+	margin-bottom: 10px;
+}
+
+.rs-message-title {
+	display: inline;
+	font-weight: bold;
+}
+
+.rs-message-description {
+	display: inline;
+}
+
+.rs-message-icon {
+	@include icon;
+	margin-right: 5px;
+}
+
+.rs-message {
+	padding: 7px 10px;
+	color: #666;
+
+	.rs-status-ok {
+		@include icon-sprite(status-green);
+	}
+
+	.rs-status-warning {
+		@include icon-sprite(status-yellow);
+	}
+
+	.rs-status-error {
+		@include icon-sprite(status-red);
+	}
+
+	.rs-status-info {
+		@include icon-sprite(status-blue);
+	}
+}
+
+.rs-message.rs-status-ok {
+	background-color: $green50;
+
+	.rs-message-title {
+		color: $green600
+	}
+}
+
+.rs-message.rs-status-warning {
+	background-color: $yellow50;
+
+	.rs-message-title {
+		color: $yellow600
+	}
+}
+
+.rs-message.rs-status-error {
+	background-color: $red50;
+
+	.rs-message-title {
+		color: $red600
+	}
+}
+
+.rs-message.rs-status-info {
+	background-color: $blue50;
+
+	.rs-message-title {
+		color: $blue600
+	}
+}
+

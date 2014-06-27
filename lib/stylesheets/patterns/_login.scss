@@ -1,0 +1,47 @@
+.rs-login {
+	width:100%;
+	height: 100%;
+	position: relative;
+}
+
+.rs-login-header {
+	width: 100%;
+	position: absolute;
+	bottom: 100%;
+}
+
+.rs-login-body {
+	clear: both;
+	padding: 30px;
+}
+
+.rs-login-footer {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	margin-top: 15px;
+	color: #666;
+}
+
+.rs-login-brand {
+	width: 45%;
+	height: 331px;
+	float: left;
+	background: url(./logo-rackspace-large.png) no-repeat 18px 45%;
+	border-right: 1px #ddd solid;
+}
+
+.rs-login-form {
+	float: left;
+	margin: 30px 0px;
+	padding-left: 49px;
+
+	.rs-btn-group {
+		margin: 20px 0;
+	}
+}
+
+.rs-login-welcome {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
