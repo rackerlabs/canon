@@ -7,7 +7,7 @@ $(document).ready(function() {
       console.log("Blarf!");
     });
 
-    selector.find('.rs-dropdown-link').each(function() {
+    selector.find('.rs-selector-link').each(function() {
       var link = $(this);
 
       link.hover(function() {
@@ -27,7 +27,7 @@ $(document).ready(function() {
           selector.find('.selected').removeClass('selected')
           selector.find('.active').removeClass('active');
           link.addClass('selected active');
-          selector.find('.rs-selector-label').text(link.find('.rs-dropdown-link-label').text());
+          selector.find('.rs-selector-label').text(link.find('.rs-selector-link-label').text());
         }
       });
 
