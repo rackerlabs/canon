@@ -620,7 +620,11 @@ dd
 }
 
 #utility-dropdown-spacing {
-  margin-right: 60px;
+  margin-right: 65px;
+}
+
+#action-dropdown-spacing {
+  margin-right: 15px;
 }
 
 .rs-dropdown-menu {
