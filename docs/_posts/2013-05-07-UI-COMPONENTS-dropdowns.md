@@ -14,6 +14,7 @@ tags : [intro, about, canon]
       <li><a href="#primary-dropdown">Primary Dropdown</a></li>
       <li><a href="#utility-dropdown">Utility Dropdown</a></li>
       <li><a href="#action-dropdown">Action Dropdown</a></li>
+      <li><a href="#selector-dropdown">Selector Dropdown</a></li>
     </ul>
     <h4>Adherence Rating: {{ page.adherance }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherance] | escape }}"></span> </h4>
   </div>
@@ -55,7 +56,7 @@ tags : [intro, about, canon]
           <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus) <span class="rs-dropdown-caption">With Caption</span></a></li>
         </ul>
       </div>
-      <div class="rs-dropdown">
+      <div class="rs-dropdown" id="action-dropdown-spacing">
         <h4 style="padding-bottom: 5px;">Action Dropdown</h4>
         <ul class="rs-dropdown-menu visible">
           <li class="rs-dropdown-item"><span class="rs-dropdown-category">Links</span></li>
@@ -66,8 +67,90 @@ tags : [intro, about, canon]
           <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Four</a></li>
         </ul>
       </div>
+      <div class="rs-dropdown rs-selector">
+        <h4 style="padding-bottom: 5px;">Selector Dropdown</h4>
+        <ul class="rs-dropdown-menu rs-selector-group visible">
+          <li class="rs-dropdown-item">
+            <a class="rs-dropdown-link rs-selector-group-header" href="#">
+              <i class="rs-checkmark"></i>
+              <span class="rs-dropdown-link-label">First-Level Header</span>
+            </a>
+            <ul class="rs-selector-group">
+              <li class="rs-dropdown-item">
+                <a class="rs-dropdown-link rs-selector-group-header" href="#">
+                  <i class="rs-checkmark"></i>
+                  <span class="rs-dropdown-link-label">Second-Level Header</span>
+                </a>
+                <ul class="rs-selector-group">
+                  <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Third-Level Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link rs-selector-group-header hover" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Hovered Header</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item hover">
+                  <a class="rs-dropdown-link hover" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Hovered Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link rs-selector-group-header selected" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Header</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item">
+                  <a class="rs-dropdown-link selected" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Selected Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link rs-selector-group-header selected active" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item">
+                  <a class="rs-dropdown-link selected active" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-selector-group-header disabled" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Disabled Header</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item disabled">
+                  <a class="rs-dropdown-link disabled" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Disabled Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <h4 style="margin-top:330px;">Markup</h4>
+    </div>
+    <h4 style="margin-top:400px;">Markup</h4>
 
     {% highlight html %}/* Primary Dropdown */
 <div class="rs-nav-item rs-dropdown rs-primary-dropdown">
@@ -115,6 +198,90 @@ tags : [intro, about, canon]
     <li class="rs-dropdown-item"><span class="rs-dropdown-category">More Links</span></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Three</a></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Four</a></li>
+  </ul>
+</div>
+
+/* Selector Dropdown */
+<div class="rs-dropdown rs-selector">
+  <ul class="rs-dropdown-menu rs-selector-group visible">
+    <li class="rs-dropdown-item">
+      <a class="rs-dropdown-link rs-selector-group-header" href="#">
+        <i class="rs-checkmark"></i>
+        <span class="rs-dropdown-link-label">First-Level Header</span>
+      </a>
+      <ul class="rs-selector-group">
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Second-Level Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Third-Level Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header hover" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Hovered Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item hover">
+              <a class="rs-dropdown-link hover" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Hovered Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header selected" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Selected Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link selected" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header selected active" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link selected active" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-selector-group-header disabled" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Disabled Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item disabled">
+              <a class="rs-dropdown-link disabled" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Disabled Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </div>{% endhighlight %}
 
@@ -256,6 +423,200 @@ tags : [intro, about, canon]
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Resize Server...</a></li>
     <li class="rs-dropdown-item disabled"><a class="rs-dropdown-link" href="#">Change Password...</a></li>
     <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Delete Server...</a></li>
+  </ul>
+</div>{% endhighlight %}
+
+  </div>
+</div>
+
+<hr class="subsection-divider" id="selector-dropdown">
+<h3>Selector Dropdown</h3>
+<div class="rs-row">
+  <div class="span-3">
+    <p>Use with the <a href="#selector-buttons">Selector Buttons</a> to switch between regions in the <a href="{{site.baseurl}}/ux-patterns/#list-view">List View</a>.</p>
+    <ul>
+      <li>Selector Dropdowns can accept a max of three nested lists</li>
+      <li>When the user opens the dropdown, the selected item must be indicated with a white checkmark and blue background</li>
+      <li>When the user hovers over any of the items, the currently selected item loses its blue background, but keeps a grey checkmark</li>
+      <li>When a selection is made, the text for the selected option becomes the button label</li>
+      <li>See the <a href="http://rackerlabs.github.io/canon/demos/">List View Demo</a> for an example of the selection and highlighting behavior</li>
+    </ul>
+  </div>
+  <div class="span-8 offset-1">
+    <h4>Example</h4>
+    <div class="rs-dropdown rs-selector">
+      <button class="rs-btn rs-btn-selector hover">
+        <span class="rs-location"></span>
+        <span class="rs-selector-label">Region Selector</span>
+        <span class="rs-caret"></span>
+      </button>
+      <ul class="rs-dropdown-menu rs-selector-group visible">
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">First-Level Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link rs-selector-group-header" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Second-Level Header</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item">
+                  <a class="rs-dropdown-link" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Third-Level Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link rs-selector-group-header hover" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Hovered Header</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item hover">
+                  <a class="rs-dropdown-link hover" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Hovered Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link rs-selector-group-header selected" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Header</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item">
+                  <a class="rs-dropdown-link selected" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Selected Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link rs-selector-group-header selected active" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item">
+                  <a class="rs-dropdown-link selected active" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="rs-dropdown-item">
+              <a class="rs-selector-group-header disabled" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Disabled Header</span>
+              </a>
+              <ul class="rs-selector-group">
+                <li class="rs-dropdown-item disabled">
+                  <a class="rs-dropdown-link disabled" href="#">
+                    <i class="rs-checkmark"></i>
+                    <span class="rs-dropdown-link-label">Disabled Item</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <h4 id="components-action-dropdown">Markup</h4>
+{% highlight html %}<div class="rs-dropdown rs-selector">
+  <button class="rs-btn rs-btn-selector hover">
+    <span class="rs-location"></span>
+    <span class="rs-selector-label">Region Selector</span>
+    <span class="rs-caret"></span>
+  </button>
+  <ul class="rs-dropdown-menu rs-selector-group visible">
+    <li class="rs-dropdown-item">
+      <a class="rs-dropdown-link rs-selector-group-header" href="#">
+        <i class="rs-checkmark"></i>
+        <span class="rs-dropdown-link-label">First-Level Header</span>
+      </a>
+      <ul class="rs-selector-group">
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Second-Level Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Third-Level Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header hover" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Hovered Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item hover">
+              <a class="rs-dropdown-link hover" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Hovered Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header selected" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Selected Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link selected" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-dropdown-link rs-selector-group-header selected active" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item">
+              <a class="rs-dropdown-link selected active" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Selected Active/Hover</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="rs-dropdown-item">
+          <a class="rs-selector-group-header disabled" href="#">
+            <i class="rs-checkmark"></i>
+            <span class="rs-dropdown-link-label">Disabled Header</span>
+          </a>
+          <ul class="rs-selector-group">
+            <li class="rs-dropdown-item disabled">
+              <a class="rs-dropdown-link disabled" href="#">
+                <i class="rs-checkmark"></i>
+                <span class="rs-dropdown-link-label">Disabled Item</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </div>{% endhighlight %}
 
