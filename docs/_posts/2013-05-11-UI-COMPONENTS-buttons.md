@@ -14,6 +14,7 @@ tags : [intro, about, canon]
 			<li><a href="#primary-buttons">Primary Buttons</a></li>
 			<li><a href="#secondary-buttons">Secondary Buttons</a></li>
 			<li><a href="#action-buttons">Action Buttons</a></li>
+			<li><a href="#selector-buttons">Selector Buttons</a></li>
 			<li><a href="#login-buttons">Login Buttons</a></li>
 			<li><a href="#cancel-links">Cancel Links</a></li>
 			<li><a href="#action-cogs">Action Cogs</a></li>
@@ -65,7 +66,25 @@ tags : [intro, about, canon]
 					</td>
 					<td>rs-btn rs-btn-action</td>
 					<td>{% highlight html %}<button class="rs-btn rs-btn-action">
-	<span class="rs-cog"></span> Actions <span class="rs-caret"></span>
+	<span class="rs-cog"></span>
+	Actions
+	<span class="rs-caret"></span>
+</button>{% endhighlight %}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="rs-btn rs-btn-selector">
+							<span class="rs-location"></span>
+							<span class="rs-selector-label">Selector</span>
+							<span class="rs-caret"></span>
+						</button>
+					</td>
+					<td>rs-btn</td>
+					<td>{% highlight html %}<button class="rs-btn rs-btn-selector">
+	<span class="rs-location"></span>
+	<span class="rs-selector-label">Selector</span>
+	<span class="rs-caret"></span>
 </button>{% endhighlight %}
 					</td>
 				</tr>
@@ -327,6 +346,99 @@ tags : [intro, about, canon]
 		          <td>
 		          	{% highlight html %}<button class="rs-btn rs-btn-action hover">
 	<span class="rs-cog"></span> Hover <span class="rs-caret"></span>
+</button>{% endhighlight %}
+		          </td>
+		        </tr>
+		      </tbody>
+		    </table>
+		</div>
+	</div>
+</div>
+<hr class="subsection-divider" id="selector-buttons">
+<h3>Selector Buttons</h3>
+<div class="rs-row">
+	<div class="span-3">
+		<p>Use when providing region selection in a <a href="{{site.baseurl}}/ux-patterns/#list-view">List View</a> in combination with the <a href="#selector-dropdown">Selector Dropdown</a>.</p>
+		<p>A unique attribute of the selector button is the existence of the <strong>rs-selector-label</strong> element.  This element is used for easily displaying the chosen option in the button.</p>
+		<p>See the <a href="http://rackerlabs.github.io/canon/demos/">List View Demo</a> for an example of the selection and highlighting behavior</p>
+	</div>
+	<div class="span-8 offset-1">
+		<h4>Examples</h4>
+		<div class="list-table">
+		    <table>
+		      <thead>
+		        <tr>
+		          <th style="width:110px">Example</th>
+		          <th>Class</th>
+		          <th>Markup</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <td>
+		          	<button class="rs-btn rs-btn-selector">
+									<span class="rs-location"></span>
+									<span class="rs-selector-label">Default</span>
+									<span class="rs-caret"></span>
+								</button>
+		          </td>
+		          <td>rs-btn rs-btn-selector</td>
+		          <td>
+		          	{% highlight html %}<button class="rs-btn rs-btn-selector">
+	<span class="rs-location"></span>
+	<span class="rs-selector-label">Default</span>
+	<span class="rs-caret"></span>
+</button>{% endhighlight %}
+		          </td>
+		        </tr>
+		        <tr>
+		          <td>
+		          	<button class="rs-btn rs-btn-selector active">
+									<span class="rs-location"></span>
+									<span class="rs-selector-label">Active</span>
+									<span class="rs-caret"></span>
+								</button>
+		          </td>
+		          <td>rs-btn rs-btn-selector active</td>
+		          <td>
+		          	{% highlight html %}<button class="rs-btn rs-btn-selector active">
+	<span class="rs-location"></span>
+	<span class="rs-selector-label">Active</span>
+	<span class="rs-caret"></span>
+</button>{% endhighlight %}
+		          </td>
+		        </tr>
+		        <tr>
+		          <td>
+		          	<button class="rs-btn rs-btn-selector disabled">
+									<span class="rs-location"></span>
+									<span class="rs-selector-label">Disabled</span>
+									<span class="rs-caret"></span>
+								</button>
+		          </td>
+		          <td>rs-btn rs-btn-selector disabled</td>
+		          <td>
+		          	{% highlight html %}<button class="rs-btn rs-btn-selector disabled">
+	<span class="rs-location"></span>
+	<span class="rs-selector-label">Disabled</span>
+	<span class="rs-caret"></span>
+</button>{% endhighlight %}
+		          </td>
+		        </tr>
+		        <tr>
+		          <td>
+		          	<button class="rs-btn rs-btn-selector hover">
+									<span class="rs-location"></span>
+									<span class="rs-selector-label">Hover</span>
+									<span class="rs-caret"></span>
+								</button>
+		          </td>
+		          <td>rs-btn rs-btn-selector hover</td>
+		          <td>
+		          	{% highlight html %}<button class="rs-btn rs-btn-selector hover">
+	<span class="rs-location"></span>
+	<span class="rs-selector-label">Hover</span>
+	<span class="rs-caret"></span>
 </button>{% endhighlight %}
 		          </td>
 		        </tr>
