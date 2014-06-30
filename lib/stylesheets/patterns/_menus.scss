@@ -239,72 +239,78 @@
   & > .rs-selector-group {
     padding: 10px 0 9px 0;
   }
+}
+
+.rs-selector-link,
+.rs-selector-group-header {
+  display: block;
+  padding: 2px 10px 3px 25px;
+  color: #333;
+
+  .rs-checkmark {
+    display: none;
+  }
+
+  &.active {
+    .rs-checkmark {
+      display: block;
+    }
+  }
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &.active {
+    background-color: $blue300;
+    color: #fff;
+    text-decoration: none;
+    .rs-checkmark {
+      @include icon-sprite(checkmark_white);
+    }
+  }
+
+  &.selected {
+    .rs-checkmark {
+      display: block;
+    }
+  }
+
+  &[disabled],
+  &.disabled,
+  &[disabled]:hover,
+  &.disabled:hover {
+    color: $grey400;
+    background-color: #fff;
+    .rs-checkmark {
+      display: none;
+    }
+  }
+
+  .rs-checkmark {
+    position: absolute;
+    left: 10px;
+    margin-top: 5px;
+  }
+}
+
+.rs-selector-group {
+  a {
+    @extend .rs-selector-link
+  }
 
   .rs-selector-group {
     a,
-    .rs-dropdown-link,
+    .rs-selector-link,
     .rs-selector-group-header {
-      padding: 2px 10px 3px 25px;
-      color: #333;
-
-      .rs-checkmark {
-        display: none;
-      }
-
-      &.active {
-        .rs-checkmark {
-          display: block;
-        }
-      }
-
-      &:hover,
-      &.hover,
-      &:focus,
-      &.focus,
-      &.active {
-        background-color: $blue300;
-        color: #fff;
-        text-decoration: none;
-        .rs-checkmark {
-          @include icon-sprite(checkmark_white);
-        }
-      }
-
-      &.selected {
-        .rs-checkmark {
-          display: block;
-        }
-      }
-
-      &[disabled],
-      &.disabled,
-      &[disabled]:hover,
-      &.disabled:hover {
-        color: $grey400;
-        background-color: #fff;
-        .rs-checkmark {
-          display: none;
-        }
-      }
-
-      .rs-checkmark {
-        position: absolute;
-        left: 10px;
-        margin-top: 5px;
-      }
+      padding-left: 35px;
     }
-
+    
     .rs-selector-group {
-      .rs-dropdown-link,
+      a,
+      .rs-selector-link,
       .rs-selector-group-header {
-        padding-left: 35px;
-      }
-      
-      .rs-selector-group {
-        .rs-dropdown-link,
-        .rs-selector-group-header {
-          padding-left: 45px;
-        }
+        padding-left: 45px;
       }
     }
   }
