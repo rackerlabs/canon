@@ -203,6 +203,15 @@ input::-moz-focus-inner {
   @include inline-block;
   @include icon-sprite(minus-circle-808080);
   @include hide-text-content();
+
+  &:active,
+  &.active,
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    @include icon-sprite(minus-circle-red);
+  }
 }
 
 .rs-caret {
