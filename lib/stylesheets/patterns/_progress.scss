@@ -50,7 +50,7 @@
   background: $blue;
 
   &.rs-bar-striped {
-    background: url('progress-background-info.gif');
+    background: image-url('progress-background-info.gif');
   }
 }
 
@@ -58,7 +58,7 @@
   background: $green;
 
   &.rs-bar-striped {
-    background: url('progress-background-success.gif');
+    background: image-url('progress-background-success.gif');
   }
 }
 
@@ -66,7 +66,7 @@
   background: $yellow;
 
   &.rs-bar-striped {
-    background: url('progress-background-warning.gif');
+    background: image-url('progress-background-warning.gif');
   }
 }
 
@@ -74,7 +74,7 @@
   background: $red;
 
   &.rs-bar-striped {
-    background: url('progress-background-error.gif');
+    background: image-url('progress-background-error.gif');
   }
 }
 

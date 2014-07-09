@@ -66,53 +66,7 @@ tags : [intro, about, canon]
 				        <div class="rs-main">
 				          <div class="rs-content rs-panel">
 					        <div class="rs-inner">
-					        	<div class="rs-row">
-					        	  <div class="span-12">.span-12</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-1">.span-1</div>
-					        	  <div class="span-11">.span-11</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-2">.span-2</div>
-					        	  <div class="span-10">.span-10</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-3">.span-3</div>
-					        	  <div class="span-9">.span-9</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-4">.span-4</div>
-					        	  <div class="span-8">.span-8</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-5">.span-5</div>
-					        	  <div class="span-7">.span-7</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-6">.span-6</div>
-					        	  <div class="span-6">.span-6</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-7">.span-7</div>
-					        	  <div class="span-5">.span-5</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-8">.span-8</div>
-					        	  <div class="span-4">.span-4</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-9">.span-9</div>
-					        	  <div class="span-3">.span-3</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-10">.span-10</div>
-					        	  <div class="span-2">.span-2</div>
-					        	</div>
-					        	<div class="rs-row">
-					        	  <div class="span-11">.span-11</div>
-					        	  <div class="span-1">.span-1</div>
-					        	</div>
+					        	
 					        </div>
 					      </div>
 				        </div>

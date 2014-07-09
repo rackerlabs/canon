@@ -2,7 +2,7 @@
 layout: post
 category : ux patterns
 title: List View
-updated: March 4, 2013
+updated: April 23, 2014
 author: Andrew Raiford
 adherence: 3
 tags : [intro, about, canon]
