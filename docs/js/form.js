@@ -1,6 +1,5 @@
 var processButtonGroup = function(formButtons) {
-	formButtons.find('.rs-btn-primary').prop('disabled',true);
-	formButtons.find('rs-btn-secondary').prop('disabled',true);
+	formButtons.find('.rs-btn').prop('disabled',true);
 	formButtons.find('.rs-btn-link').addClass('rs-hidden');
 	if(formButtons.find('.rs-processing-indicator').length > 0){
 		formButtons.find('.rs-processing-indicator').removeClass('rs-hidden');
@@ -11,8 +10,7 @@ var processButtonGroup = function(formButtons) {
 }
 
 var resetButtonGroup = function(formButtons) {
-	formButtons.find('.rs-btn-primary').prop('disabled',false).removeClass('rs-hidden');
-	formButtons.find('rs-btn-secondary').prop('disabled',false).removeClass('rs-hidden');
+	formButtons.find('.rs-btn').prop('disabled',false).removeClass('rs-hidden');
 	formButtons.find('.rs-btn-link').removeClass('rs-hidden').removeClass('rs-hidden');
 	formButtons.find('.hide-on-reset').addClass('rs-hidden');
 	if(formButtons.find('.rs-processing-indicator').length > 0){
@@ -29,15 +27,15 @@ $(document).ready(function() {
 		var formButtons = form.find('.rs-btn-group');
 		form.submit(function(e) {
 			e.preventDefault();
-			var submittingForm = $(this);
+			var submittingForm = $(this).find('.rs-btn-group');
 			processButtonGroup(formButtons);
 			setTimeout(function(){
 				hidePopover();
-				submittingForm.find('.rs-btn-primary').prop('disabled',false);
-				submittingForm.find('rs-btn-secondary').prop('disabled',false);
-				submittingForm.find('.rs-btn-link').removeClass('rs-hidden');
-				submittingForm.find('.rs-processing-indicator').addClass('rs-hidden');
-			}, 3000);
+				resetButtonGroup(submittingForm);
+				if(form.attr('action')) {
+					window.location = form.attr('action');
+				}
+			}, 1000);
 
 		});
 	});
