@@ -194,7 +194,7 @@ checkStatuses:
               <td class="rs-table-cog" id="row-cog-{{item[1].id}}">
                 <div class="rs-dropdown">
                   <div class="rs-cog rs-dropdown-toggle {% if item[1].status == 'disabled' %}disabled{% endif %}" id="cog-{{item[1].id}}" {% if item[1].status == 'disabled' %}disabled="disabled"{% endif %}></div>
-                  <ul class="rs-dropdown-menu hidden" id="dropdown-{{item[1].id}}">
+                  <ul class="rs-dropdown-menu rs-hidden" id="dropdown-{{item[1].id}}">
                     <li><span class="rs-dropdown-category">Identify</span></li>
                     <li><a href="javascript:void(0);" class="rs-popover-source rs-dropdown-link" data-popover-target="cog-{{item[1].id}}" data-popover="rename-server-popover-list-view" data-popover-position="bottom-right" id="rename-item-link">Rename Item&hellip;</a></li>
                     <li><span class="rs-dropdown-category">Manage</span></li>
@@ -210,7 +210,7 @@ checkStatuses:
               <td class="rs-table-status-list" id="status-list-{{item[1].id}}">
                 {% if item[1].checks %}
                 {% if item[1].id == '1d1f2566-8174-4113-9623-2f3bdee3b92d' %}
-                  <div class="rs-tooltip hidden" style="top:55px; left:70%; width: 300px;" id="example-tooltip-list-view">
+                  <div class="rs-tooltip rs-hidden" style="top:55px; left:70%; width: 300px;" id="example-tooltip-list-view">
                     <div class="rs-tooltip-inner">
                       <div class='rs-no-wrap rs-status-ok'>HTTP Check (Website) OK</div>
                       <p class='rs-no-wrap rs-quiet'>Since: Nov 2, 2013 10:52:55 PM UTC</p>
@@ -279,7 +279,7 @@ checkStatuses:
           <td class="rs-table-cog">
             <div class="rs-dropdown">
               <div class="rs-cog rs-dropdown-toggle"></div>
-              <ul class="rs-dropdown-menu hidden">
+              <ul class="rs-dropdown-menu rs-hidden">
                 <li><span class="rs-dropdown-category">Identify</span></li>
                 <li><a href="#" class="rs-dropdown-link">Rename Item&hellip;</a></li>
                 <li><span class="rs-dropdown-category">Manage</span></li>
@@ -373,7 +373,7 @@ checkStatuses:
         <h4>Submit Form</h4>
         <ol class="alpha-list">
           <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
-          <li>Cancel link is hidden</li>
+          <li>Cancel link is rs-hidden</li>
           <li>Processing indicator appears</li>
           <li>Popover hides on completion</li>
         </ol>
@@ -444,7 +444,7 @@ checkStatuses:
         <h4>Submit Form</h4>
         <ol class="alpha-list">
           <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
-          <li>Cancel link is hidden</li>
+          <li>Cancel link is rs-hidden</li>
           <li>Processing indicator appears</li>
           <li>Popover hides on completion</li>
         </ol>
@@ -522,7 +522,7 @@ checkStatuses:
         <h4>Submit Form</h4>
         <ol class="alpha-list">
           <li><a href="/ui-components/#button-groups">Button Group</a> is in submitting state</li>
-          <li><a href="/ui-components/#cancel-links">Cancel Link</a> is hidden</li>
+          <li><a href="/ui-components/#cancel-links">Cancel Link</a> is rs-hidden</li>
           <li>Processing indicator appears</li>
         </ol>
         <img src="/img/list-view-execute-batch-action.png">
@@ -574,7 +574,7 @@ checkStatuses:
             <h5>Only Show Retrying Rows:</h5>
             <ol>
               <li><a href="/ui-components/#button-groups">Button Group</a> is in Submitting state</li>
-              <li>Previously successful rows are hidden</li>
+              <li>Previously successful rows are rs-hidden</li>
               <li>Retrying rows go through the process again</li>
             </ol>
             <img src="/img/list-view-batch-action-retrying.png">
@@ -634,7 +634,7 @@ checkStatuses:
     },function(e) {
       unHighlight(exampleTooltip);
       removeTooltips();
-      clearTimeout(tooltipTimer);
+      clearTimeout(removeTipTimer);
     });
   });
   // End Tooltip Highlighting
