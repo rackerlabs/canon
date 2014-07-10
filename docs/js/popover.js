@@ -1,23 +1,36 @@
-var showPopover = function(source) {
+var showPopover = function(popover) {
+	hidePopover();
 	$('.rs-tooltip').remove();
-	var popover = $("#"+source.attr("data-popover"));
-	popover.removeClass("invisible").addClass("visible");
+	var popover = $("#"+popover);
+	popover.removeClass("rs-invisible").addClass("visible");
 	showOverlay();
+  popover.find('input[type=text],textarea,select').filter(':visible:first').focus();
 };
 
 var hidePopover = function() {
-	resetButtonGroup($(".rs-popover.visible .rs-btn-group"));
-	$(".rs-popover.visible").removeClass("visible").addClass("invisible");
-	hideOverlay();
+	var popover = $(".rs-popover.visible");
+	if(popover.length) {
+		resetButtonGroup(popover.find(".rs-btn-group"));
+		$(".rs-popover.visible").removeClass("visible").addClass("rs-invisible");
+		hideOverlay();
+	}
 };
 
-var positionPopover = function(source) {
-	var target = $("#"+source.attr("data-popover-target"));
-	var popover = $("#"+source.attr("data-popover"));
+var loadPopover = function(target, popover, position) {
+	positionPopover(target, popover, position);
+	showPopover(popover);
+};
+
+var positionPopover = function(target, popover, position) {
+
+	var popover = $("#"+popover);
+	popover.attr('data-current-target',target);
+	popover.attr('data-current-position',position);
+
+	var target = $("#"+target);
 	var arrow = popover.find(".rs-popover-arrow");
 	var targetWidth = target.width();
 	var targetHeight = target.height();
-	var position = source.attr("data-popover-position");
 	var top = target.offset().top;
 	var left = target.offset().left;
 	var arrowMargin = 24;
@@ -50,18 +63,25 @@ var positionPopover = function(source) {
 };
 
 $(document).ready(function () {
+	
+	$('body').append($('.rs-popover'));
+
 	$('.rs-popover .rs-btn-group .rs-btn-link, .close-popover').click(function() {
 		hidePopover();
 	});
 
 	$('.rs-popover-source').each(function() {
 		var popoverSource = $(this);
-		positionPopover(popoverSource);
 
-		popoverSource.click(function() {
+		popoverSource.click(function(e) {
+			e.preventDefault();
 			if(!popoverSource.prop('disabled')) {
-				positionPopover(popoverSource);
-				showPopover(popoverSource);
+
+				var target = popoverSource.attr("data-popover-target")
+				var popover = popoverSource.attr("data-popover")
+				var position = popoverSource.attr("data-popover-position");
+
+				loadPopover(target, popover, position);
 			}
 		});
 	});
