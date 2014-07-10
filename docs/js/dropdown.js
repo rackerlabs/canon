@@ -1,5 +1,5 @@
 var hideDropdown = function() {
-	$('.rs-dropdown-menu.visible').removeClass("visible").addClass('hidden');
+	$('.rs-dropdown-menu.visible').removeClass("visible").addClass('rs-hidden');
 }
 
 $(document).ready(function() {
@@ -15,7 +15,7 @@ $(document).ready(function() {
 			hidePopover();
 			hideDropdown();
 			showOverlay();
-			$(this).siblings('.rs-dropdown-menu').addClass("visible").removeClass('hidden');
+			$(this).siblings('.rs-dropdown-menu').addClass("visible").removeClass('rs-hidden');
 		}
 	});
 
