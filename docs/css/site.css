@@ -814,15 +814,6 @@ App Layout
 	box-sizing: border-box;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
-.hidden
-{
-  display: none;
-}
-
 .rs-detail-section-subtitle
 {
 	visibility: hidden;
