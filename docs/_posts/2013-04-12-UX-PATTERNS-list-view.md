@@ -235,8 +235,6 @@ checkStatuses:
         </table>
       </div> 
     </div>
-  </div>
-  <div class="span-12">
     <h4 class="markup-margin">Markup</h4>
     {% highlight html %}<div class="rs-content rs-panel">
   <div class="rs-inner">
