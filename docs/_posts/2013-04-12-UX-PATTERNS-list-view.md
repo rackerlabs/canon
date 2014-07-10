@@ -2,7 +2,7 @@
 layout: post
 category : ux patterns
 title: List View
-updated: April 11, 2014
+updated: April 23, 2014
 author: Andrew Raiford
 adherence: 3
 tags : [intro, about, canon]
@@ -28,7 +28,7 @@ items:
   name: My Product Item 4
   id: 4dd184a5-553b-47a6-9bc6-7097341648e6
   ip: 222.111.222
-  status: disabled
+  status: ok rs-table-status-striped
  5:
   name: My Product Item 5
   id: 51434258
@@ -39,18 +39,18 @@ items:
   name: My Product Item 6
   id: 6162868d-b74b-4cc9-9ca9-b7e5e2e12f99
   ip: 222.111.222
-  status: warning
+  status: warning rs-table-status-striped
   checks: [ok,warning,warning,error,ok,disabled,warning]
  7:
   name: My Product Item 7
   id: 7162868d-b74b-4cc9-9ca9-b7e5e2e12f99
   ip: 222.111.222
-  status: disabled
+  status: ok
  8:
   name: My Product Item 8
   id: 8d1f2566-8174-4113-9623-2f3bdee3b92d
   ip: 222.111.222
-  status: ok
+  status: error
   checks: [ok,ok,ok,error,ok,disabled,warning,ok,warning]
  9:
   name: My Product Item 9
@@ -93,8 +93,9 @@ checkStatuses:
     <ol>
       <li><strong>Quickly find items</strong>
         <ul>
-          <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="list-view-sort-example">Sorting</a></li>
+          <li><a href="/ui-components/#facets" class="highlight-source" data-highlight-target="facets-example">Facet</a></li>
           <li><a href="/ui-components/#forms" class="highlight-source" data-highlight-target="list-table-filter">Search</a></li>
+          <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="list-view-sort-example">Sort</a></li>
         </ul>
       </li>
       <li><strong>Easily assess item health</strong>
@@ -113,6 +114,7 @@ checkStatuses:
     <h3>Complex Components:</h3>
     <ul>
       <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="list-view-table">Table Component</a></li>
+      <li><a href="/ui-components/#facets" class="highlight-source" data-highlight-target="facets-example">Facets Component</a></li>
       <li><a href="/ui-components/#monitoring-status-list" class="highlight-source" data-highlight-target="status-list-{{page.items[1].id}}">Monitoring Status List</a></li>
     </ul>
     <h3>Simple Components:</h3>
@@ -145,10 +147,11 @@ checkStatuses:
     </ul>
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>
-  <div class="span-9">
-    <div class="rs-content rs-panel">
+  <div class="span-9 rs-main">
+    <div class="rs-sidebar rs-facets">{% include facets.html%}</div>
+    <div class="rs-content rs-panel" id="list-view-example">
       <div class="rs-inner">
-        <h2 class="rs-page-title" id="list-view-page-title">{Product Name}</h2>
+          <h2 class="rs-page-title" id="list-view-page-title">{Product}s</h2>
          <div class="rs-btn-group" id="list-view-button-group">
            <a href="#create-view" class="rs-btn rs-btn-primary">Create {Product}</a>
            <button class="rs-btn modify-selected rs-popover-source" data-popover-target="delete-items-button" data-popover="confirm-batch-delete-popover" data-popover-position="bottom-right" disabled="disabled" id="delete-items-button">Delete</button>
@@ -232,6 +235,8 @@ checkStatuses:
         </table>
       </div> 
     </div>
+  </div>
+  <div class="span-12">
     <h4 class="markup-margin">Markup</h4>
     {% highlight html %}<div class="rs-content rs-panel">
   <div class="rs-inner">

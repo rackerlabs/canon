@@ -37,7 +37,6 @@
 
 .rs-segment {
   float: left;
-
   @include transition-property(width);
   @include transition-duration(1s);
 }
@@ -47,25 +46,78 @@
   border-right: 1px solid $white;
 }
 
-.rs-bar-ok {
+.rs-bar-info, .rs-bar.rs-status-info  {
+  background: $blue;
+
+  &.rs-bar-striped {
+    background: image-url('progress-background-info.gif');
+  }
+}
+
+.rs-bar-ok, .rs-bar.rs-status-ok {
   background: $green;
 
   &.rs-bar-striped {
-    background: url('progress-background-success.gif');
+    background: image-url('progress-background-success.gif');
   }
 }
 
-.rs-bar-processing {
+.rs-bar-processing, .rs-bar.rs-status-warning {
   background: $yellow;
 
   &.rs-bar-striped {
-    background: url('progress-background-warning.gif');
+    background: image-url('progress-background-warning.gif');
   }
 }
+
+.rs-bar-error, .rs-bar.rs-status-error {
+  background: $red;
+
+  &.rs-bar-striped {
+    background: image-url('progress-background-error.gif');
+  }
+}
+
 
 .rs-caption {
   margin-top: 2px;
   color: #999;
   font-size: 11px;
   text-align: center;
+}
+
+.rs-progress-label {
+  margin-right: 6px;
+  display: inline;
+}
+
+@mixin set-variable-width-progress($width) {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: $width;
+
+  + .rs-progress-label {
+    margin-right: 0;
+    margin-left: 6px;
+  }
+}
+
+.rs-progress-xsmall {
+  @include set-variable-width-progress(50px)
+}
+
+.rs-progress-small {
+  @include set-variable-width-progress(100px)
+}
+
+.rs-progress-medium {
+  @include set-variable-width-progress(200px)
+}
+
+.rs-progress-large {
+  @include set-variable-width-progress(300px)
+}
+
+.rs-progress-xlarge {
+  @include set-variable-width-progress(400px)
 }

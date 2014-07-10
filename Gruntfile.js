@@ -4,7 +4,7 @@
 module.exports = function (grunt) {
   grunt.initConfig({
     clean: {
-      all: ['.sass-cache', 'build', 'dist', 'package']
+      all: ['.sass-cache', '_site', 'build', 'dist', 'package']
     },
     compass: {
       all: {
@@ -47,10 +47,19 @@ module.exports = function (grunt) {
       }
     },
     copy: {
-      all: {
+      fonts: {
         files: [
-          { expand: true, cwd: 'lib/fonts/', src: '*', dest: 'dist/', filter: 'isFile' },
+          { expand: true, cwd: 'lib/fonts/', src: '*', dest: 'dist/', filter: 'isFile' }
+        ]
+      },
+      images: {
+        files: [
           { expand: true, cwd: 'lib/images/', src: '*', dest: 'dist/', filter: 'isFile' }
+        ]
+      },
+      website: {
+        files: [
+          { expand: true, cwd: 'dist/', src: '*', dest: '_site/assets', filter: 'isFile' }
         ]
       }
     },
@@ -93,15 +102,8 @@ module.exports = function (grunt) {
           sandbox: true
         }
       },
-      dev: {
+      all: {
         src: ['Gruntfile.js', 'lib/javascripts/**/*.js', 'spec/unit/**/*.js']
-      },
-      ci: {
-        src: ['Gruntfile.js', 'lib/javascripts/**/*.js', 'spec/unit/**/*.js'],
-        options: {
-          reporter: 'checkstyle',
-          reporterOutput: 'dist/jshint.xml'
-        }
       }
     },
     karma: {
@@ -151,32 +153,35 @@ module.exports = function (grunt) {
       },
       jekyll: {
         cmd: 'bundle exec jekyll build --config config/jekyll.dev.yml'
+      },
+      jekyllProd: {
+        cmd: 'bundle exec jekyll build'
       }
     },
     watch: {
       css: {
         files: ['lib/stylesheets/**/*.scss'],
-        tasks: ['compass', 'cssmin'],
-        options: {
-          livereload: true
-        }
-      },
-      html: {
-        files: ['examples/**/*.html'],
-        options: {
-          livereload: true
-        }
-      },
-      jekyll: {
-        files: ['html/**/*'],
-        tasks: ['exec:jekyll'],
+        tasks: ['build:css'],
         options: {
           livereload: true
         }
       },
       js: {
         files: ['lib/javascripts/**/*.js'],
-        tasks: ['requirejs', 'uglify'],
+        tasks: ['build:js'],
+        options: {
+          livereload: true
+        }
+      },
+      website: {
+        files: ['docs/**/*'],
+        tasks: ['build:website'],
+        options: {
+          livereload: true
+        }
+      },
+      html: {
+        files: ['examples/**/*.html'],
         options: {
           livereload: true
         }
@@ -190,7 +195,7 @@ module.exports = function (grunt) {
       },
       jshint: {
         files: ['Gruntfile.js', 'lib/javascripts/**/*.js', 'spec/unit/**/*.js'],
-        tasks: ['jshint:dev']
+        tasks: ['jshint:all']
       }
     }
   });
@@ -207,13 +212,25 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', ['jshint:dev', 'build', 'test']);
+  grunt.registerTask('default', ['build', 'test']);
 
-  grunt.registerTask('build', ['clean', 'compass', 'requirejs', 'cssmin', 'uglify', 'copy', "exec:jekyll"]);
-
-  grunt.registerTask('test', ['karma:ci', 'test:screenshot']);
-
-  grunt.registerTask('test:screenshot', ['connect:test', 'exec:rspec:spec/screenshot']);
+  grunt.registerTask('build', ['clean', 'copy:fonts', 'copy:images', 'build:css', 'build:js', 'build:website']);
+  grunt.registerTask('build:css', ['compass', 'cssmin']);
+  grunt.registerTask('build:js', ['requirejs', 'uglify']);
+  grunt.registerTask('build:website', ['exec:jekyll', 'copy:website']);
+  grunt.registerTask('build:websiteProd', ['exec:jekyllProd', 'copy:website']);
 
   grunt.registerTask('server', ['build', 'connect:server', 'watch']);
+
+  grunt.registerTask('test', function () {
+    grunt.task.run([
+      'jshint:all',
+      'karma:ci'
+    ]);
+
+    if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
+      grunt.task.run(['test:screenshot']);
+    }
+  });
+  grunt.registerTask('test:screenshot', ['connect:test', 'exec:rspec:spec/screenshot']);
 };

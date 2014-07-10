@@ -1,6 +1,6 @@
 module Canon
   MAJOR = 1
-  MINOR = 4
+  MINOR = 5
   PATCH = 1
   PRE = nil
 

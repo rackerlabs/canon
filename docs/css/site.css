@@ -1,38 +1,31 @@
-/* @override http://localhost:4000/css/site.css */
-
-/* @override http://localhost:4000/css/site.css */
-
-/* @override http://canon:8888/site.css */
-
-
 @font-face {
 	font-family: source-sans-pro-extra-light;
-	src: url(/fonts/SourceSansPro-ExtraLight.ttf);
+	src: url(../fonts/SourceSansPro-ExtraLight.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-light;
-	src: url(/fonts/SourceSansPro-Light.ttf);
+	src: url(../fonts/SourceSansPro-Light.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-regular;
-	src: url(/fonts/SourceSansPro-Regular.ttf);
+	src: url(../fonts/SourceSansPro-Regular.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-semibold;
-	src: url(/fonts/SourceSansPro-Semibold.ttf);
+	src: url(../fonts/SourceSansPro-Semibold.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-bold;
-	src: url(/fonts/SourceSansPro-Bold.ttf);
+	src: url(../fonts/SourceSansPro-Bold.ttf);
 }
 
 @font-face {
 	font-family: source-sans-pro-black;
-	src: url(/fonts/SourceSansPro-Black.ttf);
+	src: url(../fonts/SourceSansPro-Black.ttf);
 }
 
 .rs-nav-utility {
@@ -344,6 +337,14 @@ ol.alpha-list > li {
 	margin-right: 20px;
 }
 
+.rs-detail-list.reverse .rs-detail-key {
+  color: #333;
+}
+
+.rs-detail-list.reverse .rs-detail-value {
+  color: #888;
+}
+
 
 dt{
 
@@ -354,10 +355,9 @@ dd
 	margin-bottom: 1em;
 }
 
-code
+.highlight pre code
 {
 	border: 1px solid #e1e1e8;
-	background-color: #f7f7f9;
 	padding: 0 8px;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
@@ -368,8 +368,8 @@ code
 	overflow: auto;
 }
 
-pre code {
-  padding: 3px 8px 2px;
+.highlight pre {
+	padding: 0;
 }
 
 .header-section
@@ -815,12 +815,12 @@ App Layout
 }
 
 .invisible {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .hidden
 {
-	display: none;
+  display: none;
 }
 
 .rs-detail-section-subtitle
@@ -846,16 +846,81 @@ h4.rs-quiet, h4 .rs-quiet  {
 }
 
 .rs-popover form {
-	margin:0;
+  margin:0;
 }
 
 .rs-overlay {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.collapsible-highlight {
+	position: relative;
+}
+
+.collapsible-highlight code {
+  height: 100px;
+}
+
+.collapsible-highlight.expanded code {
+  height: auto;
+  max-height: none;
+}
+
+.collapsible-highlight .rs-toggle {
+  display:  none;
+  position: absolute;
+  z-index: 100;
+  left: 10px;
+  top: 100%;
+  padding: 3px 10px;
+  background-color: #1e6ec1;
+  color:  #fff;
+  cursor: pointer;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.collapsible-highlight .rs-toggle:hover {
+	text-decoration: underline;
+}
+
+.collapsible-highlight.hover code {
+	border-bottom:  1px #1e6ec1 solid;
+}
+
+.collapsible-highlight.hover .rs-toggle {
+	display: block;
+}
+
+.super-script {
+  font-size: .5em;
+  line-height: .5em;
+  vertical-align: super;
+}
+
+.max-width-small {
+  max-width: 400px;
+}
+
+.max-width-medium {
+  max-width: 600px;
+}
+
+.max-width-large {
+  max-width: 800px;
+}
+
+#facets-example {
+  margin: 0 30px 0 0;
 }
