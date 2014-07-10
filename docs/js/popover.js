@@ -72,6 +72,11 @@ $(document).ready(function () {
 
 	$('.rs-popover-source').each(function() {
 		var popoverSource = $(this);
+		var target = popoverSource.attr("data-popover-target")
+		var popover = popoverSource.attr("data-popover")
+		var position = popoverSource.attr("data-popover-position");
+
+		positionPopover(target, popover, position);
 
 		popoverSource.click(function(e) {
 			e.preventDefault();
