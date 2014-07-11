@@ -49,7 +49,9 @@
   }
 
   > .rs-detail-section-header.hover,
-  > .rs-detail-section-header:hover {
+  > .rs-detail-section-header:hover,
+  > .rs-detail-section-header:focus {
+    outline: none;
     @include background(linear-gradient(#f7f7f7, #fff));
   }
 }
@@ -80,7 +82,8 @@
   }
 
   > .rs-detail-section-header.hover,
-  > .rs-detail-section-header:hover {
+  > .rs-detail-section-header:hover,
+  > .rs-detail-section-header:focus {
     > .rs-caret {
       @include icon-sprite(section-toggle-expanded-hover);
     }
@@ -95,7 +98,8 @@
   }
 
   > .rs-detail-section-header.hover,
-  > .rs-detail-section-header:hover {
+  > .rs-detail-section-header:hover,
+  > .rs-detail-section-header:focus {
     > .rs-caret {
       @include icon-sprite(section-toggle-collapsed-hover);
     }
