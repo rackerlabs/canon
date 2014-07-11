@@ -1,3 +1,8 @@
+## v1.6.0 (July 11, 2014)
+
+- Add facet pattern.
+- Add focus support for collapsible sections.
+
 ## v1.5.1 (June 12, 2014)
 
 - Fix padding and alignment of edit buttons.
