@@ -1,3 +1,7 @@
+## v1.6.1 (July 15, 2014)
+
+- Update Rackspace logo.
+
 ## v1.6.0 (July 11, 2014)
 
 - Add facet pattern.
