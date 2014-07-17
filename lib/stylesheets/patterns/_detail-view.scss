@@ -180,10 +180,10 @@
 }
 
 .rs-detail-key {
-  clear: left;
-  float: left;
   color: $grey;
   text-align: right;
+  display: inline-block;
+  vertical-align: top;
 }
 
 @mixin set-detail-key-values($key-width: 120px, $value-margin-left: 20px){
@@ -191,7 +191,8 @@
     width: $key-width;
   }
   .rs-detail-value {
-    margin-left: $key-width + $value-margin-left;
+    margin-left: $value-margin-left;
+    display: inline-block;
   }
 }
 
