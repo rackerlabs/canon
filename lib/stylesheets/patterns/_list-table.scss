@@ -50,6 +50,7 @@
   color: #999;
   font-weight: normal;
   border-bottom: 1px solid $grey50;
+  text-align: inherit; // fix for IE (http://haslayout.net/css/Non-Inherited-TH-Text-Align-Bug)
 
   &.rs-table-status:before {
     content: '\00A0 ';
