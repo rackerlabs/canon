@@ -10,10 +10,6 @@ tags : [intro, about, canon]
     <div class="rs-detail-value">User Experience Designer</div>
   </li>
   <li class="rs-detail-item">
-    <div class="rs-detail-key">Lauren Dowdy</div>
-    <div class="rs-detail-value">User Experience Designer</div>
-  </li>
-  <li class="rs-detail-item">
     <div class="rs-detail-key">Brad Gignac</div>
     <div class="rs-detail-value">Software Developer</div>
   </li>
