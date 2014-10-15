@@ -17,6 +17,7 @@ input::-moz-focus-inner {
   background-color: #c5c5c5;
   border: 1px solid $grey;
   cursor: pointer;
+  white-space: nowrap;
 
   @include inline-block;
   @include background-image(linear-gradient($white, #c5c5c5));
