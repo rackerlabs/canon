@@ -47,7 +47,7 @@
 .rs-table-header,
 %rs-table-header {
   padding: 0 10px;
-  color: #999;
+  color: $grey500;
   font-weight: normal;
   border-bottom: 1px solid $grey50;
   text-align: inherit; // fix for IE (http://haslayout.net/css/Non-Inherited-TH-Text-Align-Bug)
@@ -140,7 +140,7 @@
 }
 
 .rs-table-status-disabled {
-  background-color: $grey300;
+  background-color: $grey300; // TODO This needs to change but want to wait and fix disabled everywhere
 }
 
 /* Table-Based Styles */
@@ -162,11 +162,11 @@ td {
 
 /* Sort Links */
 .rs-table-sort {
-  color: $grey400;
+  color: $grey500;
 
   &.hover,
   &:hover {
-    color: $grey500;
+    color: $grey600;
     text-decoration: none;
   }
 }
@@ -231,12 +231,12 @@ td {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 24px;
-  color: $grey500;
+  color: $grey600;
 }
 
 .rs-table-overlay-subtitle {
   font-size: 18px;
-  color: $grey400;
+  color: $grey500;
 }
 
 .rs-table-overlay-subtitle + .rs-table-overlay-message {
@@ -245,14 +245,14 @@ td {
 
 .rs-table-overlay-message {
   font-size: 13px;
-  color: $grey400;
+  color: $grey500;
 }
 
 /* Loading Overlay */
 .rs-table-overlay-loading .rs-table-overlay-message {
-  color: $grey300;
+  color: $grey500;
   &:before {
-    background: image-url('clouding.gif') center center no-repeat;
+    background: image-url('clouding.gif') center center no-repeat; //TODO - Change image to grey500
     content: "";
     display: block;
     height: 20px;
