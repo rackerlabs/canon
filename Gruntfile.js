@@ -227,10 +227,6 @@ module.exports = function (grunt) {
       'jshint:all',
       'karma:ci'
     ]);
-
-    if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
-      grunt.task.run(['test:screenshot']);
-    }
   });
   grunt.registerTask('test:screenshot', ['connect:test', 'exec:rspec:spec/screenshot']);
 };
