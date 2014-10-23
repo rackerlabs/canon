@@ -16,7 +16,7 @@
   padding: 3px 0;
   min-width: 100%;
   background-color: #fff;
-  border: 1px solid $grey;
+  border: 1px solid $grey400;
   list-style: none;
   z-index: $zindexMenu;
 
@@ -119,7 +119,7 @@
 
   .rs-dropdown-caption {
     display: block;
-    color: $grey;
+    color: $grey400;
     font-family: $alt-font-family;
     font-size: 12px;
     font-weight: 200;
@@ -187,7 +187,7 @@
 
     .rs-dropdown-caption {
       display: block;
-      color: $grey;
+      color: $grey400;
       font-family: $alt-font-family;
       font-size: 12px;
       padding: 0;

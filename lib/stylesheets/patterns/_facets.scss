@@ -54,7 +54,7 @@
   @extend .rs-truncate;
   max-width: 150px;
   margin-right: 5px;
-  color: $grey-dark;
+  color: $grey500;
 }
 
 .rs-facet-section-toggle {
@@ -98,7 +98,7 @@
     &.hover,
     &:hover {
       .rs-facet-label {
-        color: $grey-dark;
+        color: $grey500;
       }
 
       .rs-facet-count {
@@ -132,7 +132,7 @@
     padding: 2px 0px 0px 10px;
 
     .rs-facet-label {
-      color: $grey-darker;
+      color: $grey600;
     }
 
     .rs-facet-count {
