@@ -5,7 +5,8 @@
 
 	.rs-nav {
 		@include seam;
-		padding: 20px 0 21px 0;
+    padding: 0;
+    padding-top: 20px;
 	}
 
 	.rs-nav-link {
@@ -101,16 +102,15 @@
 
 .rs-nav-brand {
 	float: left;
-	margin-top: 15px;
 
 	a {
 		background: transparent image-url('logo-rackspace.png') no-repeat center center;
-		width: 132px;
-		height: 30px;
+		width: 164px;
+		height: 70px;
 		display: block;
 	}
 
 	& + .rs-nav {
-		padding-left: 190px;
+		padding-left: 164px + 20px;
 	}
 }
