@@ -46,14 +46,20 @@
 	border: 1px solid transparent;
 
 	&:hover,
-	&.hover,
+	&.hover {
+    & > a,
+    .rs-nav-link {
+      color: $nav-primary-link-hover;
+    }
+  }
+
+  &:active,
 	&.active {
 		& > a,
 		.rs-nav-link {
 			color: $nav-primary-link-active;
-	      	border-bottom: 2px solid $red;
 		}
-  	}
+  }
 
 	&.disabled {
       & > a,
