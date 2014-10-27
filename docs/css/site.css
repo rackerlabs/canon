@@ -140,7 +140,7 @@
 .nav-secondary-affix.affix
 {
 	position: fixed;
-	top: 1.9em;
+	top: 40px;
 	width: 100%;
 	z-index: 1250;
 }

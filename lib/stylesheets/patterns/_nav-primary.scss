@@ -1,25 +1,26 @@
 .rs-nav-primary {
-	min-height: $app-nav-primary-height;
-	z-index: $zindexNavPrimary;
-	@include noise;
+  min-height: $app-nav-primary-height;
+  z-index: $zindexNavPrimary;
+  @include noise;
 
-	.rs-nav {
-		@include seam;
-		padding: 30px 0 10px 0;
-	}
+  .rs-nav {
+    @include seam;
+    padding: 0;
+    padding-top: 20px;
+  }
 
-	.rs-nav-link {
-		line-height: 1em;
-		padding: 8px 0 2px 0;
-		color: $nav-primary-link;
-		font-size: 18px;
-		font-weight: 400;
-		font-family: $alt-font-family;
-		text-decoration: none;
-		text-shadow: 0 1px $white;
-		border-bottom: 2px solid transparent;
-		position: relative;
-	}
+  .rs-nav-link {
+    line-height: 1em;
+    padding: 8px 0 2px 0;
+    color: $nav-primary-link;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $alt-font-family;
+    text-decoration: none;
+    text-shadow: 0 1px $white;
+    border-bottom: 2px solid transparent;
+    position: relative;
+  }
 
   .rs-caret {
     display: inline-block;
@@ -41,21 +42,27 @@
     }
   }
 
-.rs-nav-item {
-	margin: 0 20px;
-	border: 1px solid transparent;
+  .rs-nav-item {
+    margin: 0 20px;
+    border: 1px solid transparent;
 
-	&:hover,
-	&.hover,
-	&.active {
-		& > a,
-		.rs-nav-link {
-			color: $nav-primary-link-active;
-	      	border-bottom: 2px solid $red;
-		}
-  	}
+    &:hover,
+    &.hover {
+      & > a,
+      .rs-nav-link {
+        color: $nav-primary-link-hover;
+      }
+    }
 
-	&.disabled {
+    &:active,
+    &.active {
+      & > a,
+      .rs-nav-link {
+        color: $nav-primary-link-active;
+      }
+    }
+
+    &.disabled {
       & > a,
       .rs-nav-link {
         color: #bbb;
@@ -65,25 +72,25 @@
       }
     }
 
-  	&.rs-dropdown {
+    &.rs-dropdown {
       padding-right: 25px;
 
-  		.rs-dropdown-menu {
-  			margin-top: -2px;
-  		}
+      .rs-dropdown-menu {
+        margin-top: -2px;
+      }
 
-          &.active .rs-caret {
-            right: -25px;
-          }
-  	}
+      &.active .rs-caret {
+        right: -25px;
+      }
+    }
 
     &.rs-dropdown:hover,
     &.rs-dropdown.hover,
-  	&.rs-dropdown.active {
-  		.rs-caret {
-  			@include icon-sprite-position(caret-primary-active, 16px);
-  		}
-  	}
+    &.rs-dropdown.active {
+      .rs-caret {
+        @include icon-sprite-position(caret-primary-active, 16px);
+      }
+    }
 
     &.rs-dropdown.disabled {
       .rs-caret {
@@ -94,17 +101,16 @@
 }
 
 .rs-nav-brand {
-	float: left;
-	margin-top: 10px;
+  float: left;
 
-	a {
-		background: transparent image-url('logo-rackspace.png') no-repeat center center;
-		width: 164px;
-		height: 70px;
-		display: block;
-	}
+  a {
+    background: transparent image-url('logo-rackspace.png') no-repeat center center;
+    width: $nav-branding-width;
+    height: 70px;
+    display: block;
+  }
 
-	& + .rs-nav {
-		padding-left: 190px;
-	}
+  & + .rs-nav {
+    padding-left: $nav-branding-width + 20px;
+  }
 }

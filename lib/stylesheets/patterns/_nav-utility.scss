@@ -1,6 +1,5 @@
 .rs-nav-utility {
   min-height: $app-nav-utility-height;
-  font-size: 12px;
   background: #333;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -21,10 +20,10 @@
   }
 
   .rs-nav-link {
-    padding: 2px 0 1px;
+    padding: 10px 0;
     color: $grey300;
+    font-weight: bold;
     position: relative;
-    border: 1px solid transparent;
   }
 
   .rs-caret {
