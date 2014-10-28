@@ -1,3 +1,10 @@
+## v1.7.0 (October 28, 2014)
+
+- Fix button wrapping on smaller screens.
+- Fix table header alignment in Internet Explorer.
+- Modify utility nav link color for better contrast.
+- Update utility navigation to new design.
+
 ## v1.6.1 (July 15, 2014)
 
 - Update Rackspace logo.
