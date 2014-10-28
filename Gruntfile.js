@@ -228,5 +228,5 @@ module.exports = function (grunt) {
       'karma:ci'
     ]);
   });
-  grunt.registerTask('test:screenshot', ['connect:test', 'exec:rspec:spec/screenshot']);
+  grunt.registerTask('test:screenshot', ['connect:test']);
 };
