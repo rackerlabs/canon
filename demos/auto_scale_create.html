@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Create Auto Scale Group | Canon Demo</title>
+  <meta name="viewport" content="width=device-width">
+  
+  <link rel="stylesheet" href="http://rackerlabs.github.io/canon/assets/canon.min.css">
+
+  <script type="application/javascript" src="//code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/assets/canon.min.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/facets.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/tooltip.js"></script>
+
+  <script type="application/javascript">
+
+  $(document).ready(function () {
+    $('.tooltip-toggle').each(function (i, element) {
+      var tooltip;
+      tooltip = new canon.Tooltip();
+      tooltip.attach(element);
+    });
+
+    $('.rs-dropdown').each(function (i, element) {
+      var menu = new canon.Menu();
+      menu.attach(element);
+    });
+  });
+
+  </script>
+</head>
+<body class="rs-fixed">
+  <div class="rs-wrapper">
+    <div class="rs-nav-utility">
+  <div class="rs-container">
+    <ul class="rs-nav">
+      <li><a href="http://rackerlabs.github.io/canon/demos/index.html">MyRackspace</a></li>
+      <li class="active"><a href="http://rackerlabs.github.io/canon/demos/index.html">MyCloud</a></li>
+      <li><a href="http://rackerlabs.github.io/canon/demos/index.html">Private Cloud</a></li>
+      <li><a href="http://rackerlabs.github.io/canon/demos/index.html">Cloud Sites</a></li>
+    </ul>
+    <ul class="rs-nav rs-pull-right">
+      <li class="rs-dropdown rs-utility-dropdown">
+        <a class="rs-dropdown-toggle" href="javascript:void(0);">1-877-934-0407 (US) <i class="rs-caret"></i></a>
+        <ul class="rs-dropdown-menu">
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">1-877-934-0407 (US)</a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">0800-083-3012 (UK)</a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">1800-727-145 (AU)</a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">0800-445-997 (NZ)</a></li>
+        </ul>
+      </li>
+      <li><a href="">Live Chat</a></li>
+      <li class="rs-dropdown rs-utility-dropdown">
+        <a class="rs-dropdown-toggle" href="javascript:void(0);">Support <i class="rs-caret"></i></a>
+        <ul class="rs-dropdown-menu">
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Support Tickets</a></li>
+          <li class="rs-divider"></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Knowledge Center <i class="rs-icon-external-dark"></i></a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Cloud Community <i class="rs-icon-external-dark"></i></a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">API Documentation <i class="rs-icon-external-dark"></i></a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">System Status <i class="rs-icon-external-dark"></i></a></li>
+          <li class="rs-divider"></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Upgrade Support Level</a></li>
+        </ul>
+      </li>
+      <li class="rs-dropdown rs-utility-dropdown">
+        <a class="rs-dropdown-toggle" href="javascript:void(0);">Rusty Shackleford (#862323) <i class="rs-caret"></i></a>
+        <ul class="rs-dropdown-menu">
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Billing &#38; Payments</a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Usage Overview</a></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Account Settings</a></li>
+          <li class="rs-divider"></li>
+          <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div class="rs-nav-primary">
+	<div class="rs-container">
+		<div class="rs-nav-brand">
+			<a href="index.html"></a>
+		</div>
+		<ul class="rs-nav">
+			<li class="rs-dropdown rs-primary-dropdown active">
+				<a class="rs-dropdown-toggle" href="javascript:void(0);">Infrastructure <i class="rs-caret"></i></a>
+				<ul class="rs-dropdown-menu">
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Infrastructure</span></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="http://rackerlabs.github.io/canon/demos/index.html">Servers</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Load Balancers</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">DNS</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Networks</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Monitoring</a></li>
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Automation</span></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Deployments</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Autoscaling</a></li>
+				</ul>
+			</li>
+			<li class="rs-dropdown rs-primary-dropdown">
+				<a class="rs-dropdown-toggle" href="javascript:void(0);">Data Storage <i class="rs-caret"></i></a>
+				<ul class="rs-dropdown-menu">
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Databases</span></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">MySQL</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">MongoDB</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Hadoop</a></li>
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Content Delivery</span></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Files</a></li>
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Data Retention</span></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Block Storage</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Backup</a></li>
+				</ul>
+			</li>
+			<li class="rs-dropdown rs-primary-dropdown">
+				<a class="rs-dropdown-toggle" href="javascript:void(0);">Developer Tools <i class="rs-caret"></i></a>
+				<ul class="rs-dropdown-menu">
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Developer Tools</span></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Queueing</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Error Tracking</a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Email Automation</a></li>
+				</ul>
+			</li>
+			<li class="rs-dropdown rs-primary-dropdown">
+				<a class="rs-dropdown-toggle" href="javascript:void(0);">Other Products <i class="rs-caret"></i></a>
+				<ul class="rs-dropdown-menu">
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Services</span></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Cloud Drive <i class="rs-icon-external"></i></a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Email &#38; Apps <i class="rs-icon-external"></i></a></li>
+					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Cloud Sites <i class="rs-icon-external"></i></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+    <div class="rs-nav-secondary">
+  <div class="rs-container">
+    <ul class="rs-nav">
+      <li class="active"><a href="http://rackerlabs.github.io/canon/demos/index.html">Servers</a></li>
+      <li><a href="">Load Balancers</a></li>
+      <li><a href="">DNS</a></li>
+      <li><a href="">Networks</a></li>
+      <li><a href="">Monitoring</a></li>
+      <li><a href="">Deployments</a></li>
+      <li><a href="http://rackerlabs.github.io/canon/demos/auto_scale_list.html">Auto Scale</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="rs-body">
+      <div class="rs-container">
+        <div class="rs-main rs-panel">
+    <div style="margin: -45px 0 10px 0; padding-bottom: 15px;"><a href="http://rackerlabs.github.io/canon/demos/auto_scale_list.html">‹ Back to Scaling Group List</a></div>
+    <div class="rs-sidebar rs-pull-right">
+      <div class="rs-inner">
+        <h3>Prepare Your Image</h3>
+        <h4>Using Stateless Servers</h4>
+        <p style="color:#666;">Servers will be created and deleted based on your policies. Use custom saved images that configure your applications on boot.</p>
+        <p><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-concepts#Serverimage">More about Auto Scale Images &raquo;</a></p>
+        <hr>
+        <h4>Help Me With...</h4>
+        <ul>
+          <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-concepts#cooldowns">Choosing a Cooldown Period</a></li>
+          <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-create-a-scaling-group">Creating a Scaling Group</a></li>
+          <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-creating-scaling-policies">Creating a Scaling Policy</a></li>
+        </ul>
+        <p><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-introduction">More about Auto Scale Setup &raquo;</a></p>
+        <hr>
+        <h4>What's Next?</h4>
+        <ul>
+          <li><a href="http://docs.rackspace.com/cas/api/v1.0/autoscale-gettingstarted/content/Overview.html" target="_blank">Getting Started with the API</a></li>
+          <li><a href="http://docs.rackspace.com/cas/api/v1.0/autoscale-devguide/content/POST_createPolicies_v1.0__tenantId__groups__groupId__policies_Policies.html" target="_blank">Creating Webhook Policies</a></li>
+          <li><a href="http://www.rackspace.com/knowledge_center/article/permissions-matrix-for-auto-scale" target="_blank">Grant User Permissions</a></li>
+        </ul>
+        <p><a href="http://www.rackspace.com/knowledge_center/article/rackspace-auto-scale-faq" target="_blank">View Our FAQs &raquo;</a></p>
+      </div>
+    </div>
+    <div class="rs-content rs-panel">
+          <form class="rs-form-create">
+            <div class="rs-create-header">
+              <div class="rs-page-title">Create Scaling Group</div>
+            </div>
+            <div class="rs-detail-section">
+                <div class="rs-detail-section-header">
+                  <div class="rs-detail-section-title">Group Details</div>
+                </div>
+                <div class="rs-detail-section-body">
+                  <div class="rs-control-group">
+                      <label class="rs-control-label">Group Name</label>
+                      <div class="rs-controls">
+                          <input type="text" class="rs-input-large" value="Group01">
+                          <span class="rs-help-block">Servers will be named Group01-f4h78s, Group01-4e6a3s, etc.</span>
+                      </div>
+                  </div>
+                  <div class="rs-control-group">
+                      <label class="rs-control-label">Region</label>
+                      <div class="rs-controls">
+                          <select class="rs-input-large">
+                              <option>Dallas (DFW)</option>
+                              <option>Chicago (ORD)</option>
+                              <option>Sydney (SYD)</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="rs-control-group">
+                    <label class="rs-control-label">Minimum Cooldown</label>
+                    <div class="rs-controls">
+                      <input type="text" class="rs-input-mini">
+                      <select class="rs-input-small">
+                        <option>Seconds</option>
+                        <option>Minutes</option>
+                        <option>Hours</option>
+                        <option>Days</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="rs-control-group">
+                    <label class="rs-control-label">Minimum</label>
+                    <div class="rs-controls">
+                      <input type="text" class="rs-input-mini">
+                      servers
+                    </div>
+                  </div>
+                  <div class="rs-control-group">
+                    <label class="rs-control-label">Maximum</label>
+                    <div class="rs-controls">
+                      <input type="text" class="rs-input-mini">
+                      servers
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="rs-detail-section">
+                <div class="rs-detail-section-header">
+                  <div class="rs-detail-section-title">Configuration</div>
+                </div>
+                <div class="rs-detail-section-body">
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Server Image</label>
+                    <div class="rs-detail-value">
+                      <span class="rs-quiet">Not Configured</span>
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Image…</a>
+                    </div>
+                  </div>
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Server Flavor</label>
+                    <div class="rs-detail-value">
+                      <span class="rs-quiet">Not Configured</span>
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Flavor…</a>
+                    </div>
+                  </div>
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Server Networks</label>
+                    <div class="rs-detail-value">
+                      PublicNet, ServiceNet
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Networks…</a>
+                    </div>
+                  </div>
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Load Balancer</label>
+                    <div class="rs-detail-value">
+                      <span class="rs-quiet">Not Configured</span>
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Load Balancer…</a>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="rs-detail-section">
+                <div class="rs-detail-section-header">
+                  <div class="rs-detail-section-title">Scaling Policies</div>
+                </div>
+                <div class="rs-detail-section-body">
+                  <div class="rs-btn-group">
+                    <button class="rs-btn" type="button">Create Policy</button>
+                  </div>
+                  <div class="rs-embedded-list-table-wrapper rs-embedded-medium">
+                    <table class="rs-list-table rs-embedded-list-table">
+                      <thead>
+                        <tr>
+                          <th class="rs-table-status"></th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Name</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Type</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Amount</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Policy Cooldown</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                    <div class="rs-table-overlay">
+                      <div class="rs-table-overlay-content">
+                        <div class="rs-table-overlay-subtitle">You don&#39;t have any policies yet.</div>
+                        <div class="rs-table-overlay-message">Policies control how your group adjusts capacity.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="rs-detail-section rs-create-footer">
+              <div class="rs-detail-section-body">
+                <div class="rs-btn-group">
+                    <a href="http://rackerlabs.github.io/canon/demos/auto_scale_list.html" class="rs-btn rs-btn-primary">Create Scaling Group</a>
+                    <a href="http://rackerlabs.github.io/canon/demos/index.html" class="rs-btn rs-btn-link">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
+</div>
+
+      </div>
+    </div>
+    <div class="rs-push"></div>
+  </div>
+
+  <div class="rs-footer">
+	<div class="rs-container">
+		<ul class="rs-links">
+			<li>&copy; Rackspace, US</li>
+			<li><a href="http://www.rackspace.com/information/legal/websiteterms" target="blank">Website Terms</a></li>
+			<li><a href="http://www.rackspace.com/information/legal/privacystatement" target="blank">Privacy Policy</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Rackspace&reg; Canon - The front-end application framework</title>
+
+  <link rel="stylesheet" href="http://rackerlabs.github.io/canon/assets/canon.min.css">
+  <link rel="stylesheet" type="text/css" href="http://rackerlabs.github.io/canon/css/site.css">
+  <link rel="stylesheet" type="text/css" href="http://rackerlabs.github.io/canon/css/syntax.css">
+
+  <script type="application/javascript" src="http://code.jquery.com/jquery-1.10.1.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/assets/canon.min.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/bootstrap.min.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/site.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/popover.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/highlighter.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/tooltip.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/dropdown.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/tabs.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/select-table.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/collapsible-section.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/overlay.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/form.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/collapsible-highlight.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/heartbeat-example.js"></script>
+  <script type="application/javascript" src="http://rackerlabs.github.io/canon/js/facets.js"></script>
+</head>
+<body class="rs-responsive">
+  <div class="rs-wrapper">
+    <div class="rs-nav-utility rs-fixed-top">
+      <div class="rs-container">
+        <ul class="rs-nav">
+          <li class="rs-nav-item "><a class="rs-nav-link" href="http://rackerlabs.github.io/canon/">Rackspace<span class="super-script">&reg;</span> Canon</a></li>
+          <li class="rs-nav-item "><a class="rs-nav-link" href="http://rackerlabs.github.io/canon/get-started">Get Started</a></li>
+          <li class="rs-nav-item active"><a class="rs-nav-link" href="http://rackerlabs.github.io/canon/app-layout">App Layout</a></li>
+          <li class="rs-nav-item "><a class="rs-nav-link" href="http://rackerlabs.github.io/canon/ux-patterns">UX Patterns</a></li>
+          <li class="rs-nav-item "><a class="rs-nav-link" href="http://rackerlabs.github.io/canon/ui-components">UI Components</a></li>
+          <li class="rs-nav-item "><a class="rs-nav-link" href="http://rackerlabs.github.io/canon/about-canon">About Canon</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-header-secondary-page">
+  <div class="site-header-content">
+    <div class="rs-container">
+      <div class="site-header-title-secondary">app layout</div>
+      <p class="site-header-title-sub">Fundamental markup for a Rackspace branded experience.</p>
+    </div>
+  </div>
+</div>
+
+<div class="rs-nav-secondary nav-secondary-affix"  data-spy="affix">
+  <div class="rs-container">
+    <ul class="rs-nav">
+      
+      <li class="rs-nav-item"><a class="rs-nav-link" href="#summary">Summary</a></li>
+      
+      <li class="rs-nav-item"><a class="rs-nav-link" href="#fluid-grid">Fluid Grid</a></li>
+      
+      <li class="rs-nav-item"><a class="rs-nav-link" href="#header-&-navigation">Header & Navigation</a></li>
+      
+      <li class="rs-nav-item"><a class="rs-nav-link" href="#content-area">Content Area</a></li>
+      
+      <li class="rs-nav-item"><a class="rs-nav-link" href="#footer">Footer</a></li>
+      
+    </ul>
+  </div>
+</div>
+<div class="rs-body">
+  <div class="rs-inner">
+    <div class="rs-container">
+      <div class="rs-main">
+        <div class="rs-content rs-panel">
+        
+          <!-- Summary -->
+          <div class="header-section" id="summary">
+            <div class="header-section-subtitle">app layout</div>
+            <div class="header-section-title">Summary</div>
+          </div>
+          <div class="website-content-section">
+            <div class="content-section-body">
+              <div class="rs-row">
+  <div class="span-3">
+    <h3>Layout Framework</h3>
+    <p>The basic layout of Canon consists of 5 parts: 3 layers of navigation within the <a href="#header-&-navigation">header</a>, the <a href="#content-area">content area</a>, and the <a href="#footer">footer</a>.</p>
+    <ol>
+      <li>The <a href="#header-&-navigation">utility navigation</a> consists of links and tools that help the user, such as account details, log out, or help information, but are not the core sections of the application.</li>
+      <li>The <a href="#header-&-navigation">primary navigation</a> is used for the main sections of the application or for <a href="/ui-components/#dropdowns">dropdown</a> categories that organize sections into higher level groups.</li>
+      <li>The <a href="#header-&-navigation">secondary navigation</a> is used for a 2nd or 3rd level of navigation, depending on the structure of the primary nav.</li>
+      <li>The <a href="#content-area">content area</a> is used for your application's main data and interactions.</li>
+      <li>The <a href="#footer">footer</a> is used for legal information, application news, and feedback links.</li>
+    </ol>
+  </div>
+    <div class="span-8 offset-1">
+      <div class="rs-row">
+            <div class="app-layout-aside">
+                <div class="row" id="app-layout-utilitynav">Utility Nav</div>
+                <div class="row" id="app-layout-primarynav">Primary Nav</div>
+                <div class="row" id="app-layout-secondarynav">Secondary Nav</div>
+                <div class="row" id="app-layout-content">Content Area</div>
+                <div class="row" id="app-layout-footer">Footer</div>
+            </div>
+            <div id="app-layout-summary" class="rs-responsive">
+                <div class="rs-wrapper">
+                    <div class="rs-nav-utility">
+                      <div class="rs-container">
+                        <ul class="rs-nav">
+                          <li class="rs-nav-item active"><a class="rs-nav-link" href="#">Link One</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="#">Link Two</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="#">Link Three</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="rs-nav-primary">
+                      <div class="rs-container">
+                        <div class="rs-nav-brand">
+                          <a href="#"></a>
+                        </div>
+                        <ul class="rs-nav">
+                          <li class="rs-nav-item active"><a class="rs-nav-link" href="#">Section1</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="#">Section2</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="#">Section3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="rs-nav-secondary">
+                      <div class="rs-container">
+                        <ul class="rs-nav">
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="#">SubSection1</a></li>
+                          <li class="rs-nav-item hover"><a class="rs-nav-link" href="#">SubSection2</a></li>
+                          <li class="rs-nav-item active"><a class="rs-nav-link" href="#">SubSection3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="rs-body">
+                      <div class="rs-container show-grid">
+                        <!-- Full-Width Content -->
+                        <div class="rs-main">
+                          <div class="rs-content rs-panel">
+                            <div class="rs-inner">
+                                
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-push"></div>
+                </div>
+                <div class="rs-nav-footer">
+                <div class="rs-container">
+                  <ul class="rs-nav">
+                    <li class="rs-nav-item">© 2013 Rackspace, US</li>
+                    <li class="rs-nav-item"><a class="rs-nav-link" href="">Link Text</a></li>
+                    <li class="rs-nav-item"><a class="rs-nav-link" href="">Link Text</a></li>
+                  </ul>
+                  <ul class="rs-nav rs-pull-right">
+                    <li class="rs-nav-item">Pull right for <a class="rs-nav-link" href="#">Feedback</a></li>
+                  </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+          </div>
+        
+          <!-- Fluid Grid -->
+          <div class="header-section" id="fluid-grid">
+            <div class="header-section-subtitle">app layout</div>
+            <div class="header-section-title">Fluid Grid</div>
+          </div>
+          <div class="website-content-section">
+            <div class="content-section-body">
+              <div class="rs-row">
+  <div class="span-3">
+    <h3>How it works</h3>
+    <p>Canon predefines options for page layout via the <a href="#content-area">content area</a> styles but sometimes a grid system is needed for content within those sections or for custom layouts. As such, Canon includes a responsive 12 column fluid grid.</p>
+    <ul>
+      <li>Create a grid row with the <code>rs-row</code> class</li>
+      <li>Add the appropriate number of <code>span-*</code> columns. As this is a 12-column grid, each <code>span-*</code> spans a number of those 12 columns, and should always add up to 12 for each row</li>
+      <li>The column gutters can be removed by using <code>rs-row-collapse</code> as the row class</li>
+      <li>Offsets can be applied with <code>offset-*</code></li>
+      <li>Nest grids by adding a new row and columns within a <code>span-*</code> column</li>
+    </ul>
+    <p><b>Responsive Options</b></p>
+    <ul>
+      <li>The default <code>span-*</code> columns stack vertically for viewports under 768px</li>
+      <li>To prevent vertical stacking use <code>small-span-*</code> column classes</li>
+    </ul>
+  </div>
+  <div class="span-8 offset-1">
+    <h4>Examples</h4>
+    <div id="app-layout-grid">
+      <div class="show-grid">
+        <p>Default grid created with a <code>rs-row</code> and <code>span-*</code> columns</p>
+        <div class="rs-row">
+          <div class="span-2">span-2</div>
+          <div class="span-10">span-10</div>
+        </div>
+        <div class="rs-row">
+          <div class="span-6">span-6</div>
+          <div class="span-6">span-6</div>
+        </div>
+        <div class="rs-row">
+          <div class="span-4">span-4</div>
+          <div class="span-8">span-8</div>
+        </div>
+        <br>
+        <p>Column offsets via <code>offset-*</code></p>
+        <div class="rs-row">
+          <div class="span-6">span-6</div>
+          <div class="span-4 offset-2">span-4 offset-2</div>
+        </div>
+        <div class="rs-row">
+          <div class="span-8 offset-1">span-8 offset-1</div>
+          <div class="span-3">span-3</div>
+        </div>
+        <br>
+        <p>Nested Grid</p>
+        <div class="rs-row">
+          <div class="span-4">span-4
+            <div class="rs-row">
+              <div class="span-6">span-6</div>
+              <div class="span-6">span-6</div>
+            </div>
+          </div>
+          <div class="span-8">span-8
+            <div class="rs-row">
+              <div class="span-4">span-4</div>
+              <div class="span-8">span-8</div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <p>Grid without column gutters via <code>rs-row-collapse</code></p>
+        <div class="rs-row-collapse">
+          <div class="span-2">span-2</div>
+          <div class="span-10">span-10</div>
+        </div>
+        <div class="rs-row-collapse">
+          <div class="span-6">span-6</div>
+          <div class="span-6">span-6</div>
+        </div>
+        <div class="rs-row-collapse">
+          <div class="span-4">span-4</div>
+          <div class="span-8">span-8</div>
+        </div>
+      </div>
+    </div>
+    <h4>Markup</h4>
+    
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Default Grid --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-2&quot;</span><span class="nt">&gt;</span>span-2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-10&quot;</span><span class="nt">&gt;</span>span-10<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-6&quot;</span><span class="nt">&gt;</span>span-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-6&quot;</span><span class="nt">&gt;</span>span-6<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-4&quot;</span><span class="nt">&gt;</span>span-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-8&quot;</span><span class="nt">&gt;</span>span-8<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- Grid Offset --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-6&quot;</span><span class="nt">&gt;</span>span-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-4 offset-2&quot;</span><span class="nt">&gt;</span>span-4 offset-2<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-8 offset-1&quot;</span><span class="nt">&gt;</span>span-8 offset-1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-3&quot;</span><span class="nt">&gt;</span>span-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- Nesting Grid --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-4&quot;</span><span class="nt">&gt;</span>span-4
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-6&quot;</span><span class="nt">&gt;</span>span-6<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-6&quot;</span><span class="nt">&gt;</span>span-6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-8&quot;</span><span class="nt">&gt;</span>span-8
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-4&quot;</span><span class="nt">&gt;</span>span-4<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-8&quot;</span><span class="nt">&gt;</span>span-8<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- Collapse Column Gutters --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row-collapse&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-2&quot;</span><span class="nt">&gt;</span>span-2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-10&quot;</span><span class="nt">&gt;</span>span-10<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row-collapse&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-6&quot;</span><span class="nt">&gt;</span>span-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-6&quot;</span><span class="nt">&gt;</span>span-6<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-row-collapse&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-4&quot;</span><span class="nt">&gt;</span>span-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span-8&quot;</span><span class="nt">&gt;</span>span-8<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+  </div>
+</div>
+
+            </div>
+          </div>
+        
+          <!-- Header & Navigation -->
+          <div class="header-section" id="header-&-navigation">
+            <div class="header-section-subtitle">app layout</div>
+            <div class="header-section-title">Header & Navigation</div>
+          </div>
+          <div class="website-content-section">
+            <div class="content-section-body">
+              <div class="rs-row">
+    <div class="span-3">
+        <h3>Types of Navigation</h3>
+        <b>Utility Navigation:</b>
+        <ul>
+      <li>Top-right: Used for utilities like Account information, Support links, Logout, etc</li>
+      <li>Top-left: Used to SSO between Rackspace properties.</li>
+      <li>Remains consistent across the UIs that it links together</li>
+            <li>Highlight the current application with an active state so users know where they are.</li>
+        </ul>
+        <b>Primary Navigation:</b>
+        <ul>
+            <li>Customize these sections for your application's categories or products.</li>
+            <li>Highlight the category with an active state so users know what section they are in.</li>
+      <li>Use <a href="/ui-components/#dropdowns">dropdowns</a> when you have 3 or more levels of information/navigation.</li>
+        </ul>
+        <b>Secondary Navigation:</b>
+        <ul>
+            <li>Highlight the section with an active state so users know what sub-section they are in.</li>
+        </ul>
+        <h4>Adherence Rating: 3 <span class="rs-icon-help tip" title="&lt;strong&gt;Sort of strict&lt;/strong&gt; - Significant design and research went into the production of this pattern. Implementation should follow guidelines pretty closely overall."></span> </h4>
+    </div>
+    <div class="span-8 offset-1">
+        <div class="rs-row">
+            <h4>Example</h4>
+            <div id="app-layout-header" class="rs-responsive">
+                <div class="rs-wrapper">
+                    <div class="rs-nav-utility">
+                      <div class="rs-container">
+                        <ul class="rs-nav">
+                          <li class="rs-nav-item active"><a class="rs-nav-link" href="javascript:void(0);">Public Cloud</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="javascript:void(0);">Private Cloud</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="javascript:void(0);">Dedicated</a></li>
+                        </ul>
+                <ul class="rs-nav rs-pull-right">
+                  <li class="rs-nav-item rs-dropdown rs-utility-dropdown">
+                    <a class="rs-nav-link rs-dropdown-toggle" href="javascript:void(0);">Username123 <i class="rs-caret"></i></a>
+                  </li>
+                </ul>
+                      </div>
+                    </div>
+                    <div class="rs-nav-primary">
+                      <div class="rs-container">
+                        <div class="rs-nav-brand">
+                          <a href="javascript:void(0);"></a>
+                        </div>
+                        <ul class="rs-nav">
+                          <li class="rs-nav-item active"><a class="rs-nav-link" href="javascript:void(0);">Section1</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="javascript:void(0);">Section2</a></li>
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="javascript:void(0);">Section3</a></li>
+                          <li class="rs-nav-item rs-dropdown rs-primary-dropdown">
+                    <a class="rs-nav-link rs-dropdown-toggle" href="javascript:void(0);">More <i class="rs-caret"></i></a>
+                  </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="rs-nav-secondary">
+                      <div class="rs-container">
+                        <ul class="rs-nav">
+                          <li class="rs-nav-item"><a class="rs-nav-link" href="javascript:void(0);">SubSection1</a></li>
+                          <li class="rs-nav-item hover"><a class="rs-nav-link" href="javascript:void(0);">SubSection2</a></li>
+                          <li class="rs-nav-item active"><a class="rs-nav-link" href="javascript:void(0);">SubSection3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+        <div class="rs-row">
+            <h4>Markup</h4>
+            
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-wrapper&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Utility Nav --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-nav-utility&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;rs-nav&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Public Cloud<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Private Cloud<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Dedicated<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;rs-nav rs-pull-right&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item rs-dropdown rs-utility-dropdown&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link rs-dropdown-toggle&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Username123 <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;rs-caret&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- End Utility Nav --&gt;</span>
+
+    <span class="c">&lt;!-- Primary Nav --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-nav-primary&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-nav-brand&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;rs-nav&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Section1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Section2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Section3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item rs-dropdown rs-primary-dropdown&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link rs-dropdown-toggle&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>More <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;rs-caret&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- End Primary Nav --&gt;</span>
+
+    <span class="c">&lt;!-- Secondary Nav --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-nav-secondary&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;rs-nav&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>SubSection1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item hover&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>SubSection2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>SubSection3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- End Secondary Nav --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+          </div>
+        
+          <!-- Content Area -->
+          <div class="header-section" id="content-area">
+            <div class="header-section-subtitle">app layout</div>
+            <div class="header-section-title">Content Area</div>
+          </div>
+          <div class="website-content-section">
+            <div class="content-section-body">
+              <div class="rs-row">
+    <div class="span-3">
+        <h3>Layout Options</h3>
+        <p>The content area contains the primary information and functionality views for your application. Consistent layout is imperative so users always have a feel for where they are. For example, a List Table should use a different layout than a Detail View.</p>
+        <h3>Sidebars</h3>
+    <p>The position of the sidebars significantly changes based on the content.</p>
+        <ul>
+      <li><strong>Left Sidebar (Filtering):</strong><br /> Use for functionality that correlates with the main content (filtering). Do not use for navigation or informational text.</li>
+      <li><b>Right Sidebar (Help Panel):</b><br /> Use for information that correlates with the main content (help information, support links, etc). Do not use for navigation or filtering.</li>
+        </ul>
+        <h4>Adherence Rating: 2 <span class="rs-icon-help tip" title="&lt;strong&gt;A really good idea&lt;/strong&gt; - Some really good thought was put into this. Try and follow the guidelines."></span> </h4>
+    </div>
+    <div class="span-8 offset-1">
+        <h4>Examples</h4>
+        <div class="list-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Layout</th>
+                  <th>Thumbnail</th>
+                  <th>Markup</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Full-Width</td>
+                  <td><img src="http://rackerlabs.github.io/canon/img/content-full-width.png" width="275" height="172" /></td>
+                  <td>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-main&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-content rs-panel&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+</td>
+                </tr>
+                <tr>
+                  <td>Left Sidebar</td>
+                  <td><img src="http://rackerlabs.github.io/canon/img/content-left.png" width="275" height="172" /></td>
+                  <td>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-main&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-sidebar&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-inner&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-content rs-panel&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-inner&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+</td>
+                </tr>
+                <tr>
+                  <td>Right Help Panel</td>
+                  <td><img src="http://rackerlabs.github.io/canon/img/content-sidebar-right.png" width="275" height="172" /></td>
+                  <td>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-main rs-panel&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-sidebar rs-pull-right&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-inner&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-content rs-panel&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-inner&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+            </div>
+          </div>
+        
+          <!-- Footer -->
+          <div class="header-section" id="footer">
+            <div class="header-section-subtitle">app layout</div>
+            <div class="header-section-title">Footer</div>
+          </div>
+          <div class="website-content-section">
+            <div class="content-section-body">
+              <div class="rs-row">
+    <div class="span-3">
+        <h3>How it works</h3>
+        <p>The footer looks and behaves similar to the top navigation bar. Just like the top nav, the footer should be consistent across Rackspace applications. If you support multiple geographies, these may change between countries. Below is a list of what it should contain in the order they appear:</p>
+        <ul>
+            <li><b>Copyright Date</b></li>
+            <li><b>Terms of Service</b> </li>
+            <li><b>Privacy Policy</b></li>
+            <li><b>Application News:</b><br /> For example: Release notes, new features, or other information that keeps users up to date with your app.</li>
+            <li><b>Feedback:</b><br /> Provide a way for users to submit feedback. This helps your team prioritize features and make users feel involved.</li>
+        </ul>
+        <h4>Adherence Rating: 3 <span class="rs-icon-help tip" title="&lt;strong&gt;Sort of strict&lt;/strong&gt; - Significant design and research went into the production of this pattern. Implementation should follow guidelines pretty closely overall."></span> </h4>
+    </div>
+    <div class="span-8 offset-1">
+        <h4>Example</h4>
+        <div id="app-layout-footer-example">
+            <div class="rs-nav-footer">
+            <div class="rs-container">
+              <ul class="rs-nav">
+                <li class="rs-nav-item">© 2013 Rackspace, US</li>
+                <li class="rs-nav-item"><a class="rs-nav-link" href="">Terms & Privacy</a></li>
+                <li class="rs-nav-item"><a class="rs-nav-link" href="">Application News</a></li>
+              </ul>
+          <ul class="rs-nav rs-pull-right">
+            <li class="rs-nav-item"><a class="rs-nav-link" href="#">Feedback</a></li>
+          </ul>
+            </div>
+            </div>
+        </div>
+        <br/><br/>
+        <h4>Markup</h4>
+        
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-nav-footer&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;rs-container&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;rs-nav&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;</span>© 2013 Rackspace, US<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Terms <span class="err">&amp;</span> Privacy<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Application News<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;rs-nav rs-pull-right&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;rs-nav-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;rs-nav-link&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Feedback<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+    </div>
+</div>
+
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="rs-push"></div>
+  </div>
+  <div class="rs-nav-footer">
+    <div class="rs-container">
+      <ul class="rs-nav rs-pull-right">
+        <li class="rs-nav-item"><a class="rs-nav-link canon-feedback-link" href="mailto:canon@lists.rackspace.com">Send Feedback <i class="rs-icon-external"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <script type="application/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogitgleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42051197-2');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>
