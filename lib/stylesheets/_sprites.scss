@@ -23,6 +23,10 @@ $icon-spacing: 10px;
   @include icon-sprite(external-dark);
 }
 
+.rs-icon-external-light {
+  @include icon-sprite(external);
+}
+
 .rs-icon-help {
   @include icon;
   @include icon-sprite(help);
