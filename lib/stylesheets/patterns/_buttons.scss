@@ -114,11 +114,39 @@ input::-moz-focus-inner {
   }
 }
 
+.rs-link {
+  height: 25px;
+  padding-left: 0;
+  padding-right: 0;
+  color: $blue;
+  background: transparent;
+  border: none;
+
+  &:hover,
+  &.hover {
+    text-decoration: underline;
+    background: transparent;
+    color: $blue;
+  }
+
+  &:active,
+  &.active {
+    background: transparent;
+    @include box-shadow(none);
+  }
+
+  &[disabled],
+  &.disabled {
+    text-decoration: none;
+    background: transparent;
+    color: $grey-light;
+  }
+}
+
 .rs-btn-link {
   height: 25px;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 0;
   color: $blue;
   background: transparent;
   border: none;
@@ -253,10 +281,6 @@ input::-moz-focus-inner {
     display: block;
     float: left;
     margin-right: 10px;
-  }
-
-  > .rs-btn-link {
-    padding-top: 3px;
   }
 }
 
