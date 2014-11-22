@@ -25,6 +25,7 @@ tags : [intro, about, canon]
       <li><a href="#table-row-actions">Row Actions</a></li>
       <li><a href="#table-row-selection">Row Selection</a></li>
       <li><a href="#table-row-heartbeat">Row Heartbeat</a></li>
+      <li><a href="#table-row-activity">Row Activity</a></li>
       <li><a href="#table-form-elements">Form Elements</a></li>
       <li><a href="#table-column-sorting">Column Sorting</a></li>
     </ul>
@@ -327,7 +328,7 @@ START ROW HEARTBEAT
 <div class="rs-row">
   <div class="span-3">
     <ul>
-      <li>Use the row heartbeat to provide feedback for user-initiated actions on a table row</li>
+      <li>Use the row heartbeat to provide feedback for the completion of user-initiated actions on table rows</li>
       <li>Most often used in the <a href="/ux-patterns/#list-view">List View Pattern</a>, the heartbeat can also be used on embedded tables in a <a href="/ux-patterns/#detail-view">Detail View</a></li>
       <li>The Heartbeat is an effective way to show the success, or lack thereof, for events that occur in a table</li>
     </ul>
@@ -340,6 +341,29 @@ START ROW HEARTBEAT
     <h4 class="markup-margin">Markup</h4>
 
     {% highlight html %}{% include table-row-heartbeat.html %}{% endhighlight %}
+
+</div>
+</div>
+{% comment %}<!-- ----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+START ROW ACTIVITY
+----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------- -->{% endcomment %}
+<hr class="subsection-divider" id="table-row-activity">
+<h3>Table Row Activity</h3>
+<div class="rs-row">
+  <div class="span-3">
+    <ul>
+      <li>Use to indicate that a process is running for an item in the list</li>
+      <li>Most often used in <a href="/ux-patterns/#popover">Popovers</a> when performing <a href="/ux-patterns/#batch-action-interaction">Batch Actions</a> on items in a <a href="/ux-patterns/#list-view">List View Pattern</a></li>
+    </ul>
+  </div>
+  <div class="span-8 offset-1">
+    <h4>Example</h4>
+    {% include table-row-activity.html %}
+    <h4 class="markup-margin">Markup</h4>
+
+    {% highlight html %}{% include table-row-activity.html %}{% endhighlight %}
 
 </div>
 </div>

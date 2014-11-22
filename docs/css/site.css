@@ -255,6 +255,14 @@ ol:last-child
   margin-bottom: 0px;
 }
 
+ol.alpha-list {
+  margin-bottom: 1em
+}
+
+ol.alpha-list > li {
+  list-style-type: upper-alpha;;
+}
+
 .site-header-download-canon
 {
 	text-align: center;
@@ -804,15 +812,6 @@ App Layout
 	position: absolute;
 	border: 3px #2878cb solid;
 	box-sizing: border-box;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.hidden
-{
-  display: none;
 }
 
 .rs-detail-section-subtitle

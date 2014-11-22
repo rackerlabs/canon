@@ -13,6 +13,12 @@ var heartbeatError = function() {
 	$("#heartbeat-example tbody tr:nth-child(3)").addClass('rs-heartbeat-error');
 }
 
+var heartbeatRow = function(row, heartbeatType) {
+	//heartbeatType must be 'ok', 'warning', or 'error'
+	row.removeClass('rs-heartbeat-ok').removeClass('rs-heartbeat-warning').removeClass('rs-heartbeat-error');
+	row.addClass('rs-heartbeat-'+heartbeatType);
+}
+
 $(document).ready(function() {
 	if($("#heartbeat-example").length) {
 

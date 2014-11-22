@@ -2,10 +2,10 @@ var highlighter;
 var highlightTarget;
 
 var highlight = function(target) {
-	if(target.hasClass("hidden")) {
-		target.addClass('visible').removeClass("hidden");
-	} else if (target.hasClass("invisible")) {
-		target.addClass('visible').removeClass("invisible");
+	if(target.hasClass("rs-hidden")) {
+		target.addClass('visible').removeClass("rs-hidden");
+	} else if (target.hasClass("rs-invisible")) {
+		target.addClass('visible').removeClass("rs-invisible");
 	}
 	var top = target.offset().top-6+"px";
 	var left = target.offset().left-6+"px";
@@ -17,9 +17,9 @@ var highlight = function(target) {
 var unHighlight = function(target) {
 	highlighter.hide();
 	if(target.hasClass("visible") && !target.hasClass("rs-popover")) {
-		target.addClass('hidden').removeClass("visible");
+		target.addClass('rs-hidden').removeClass("visible");
 	} else if(target.hasClass("rs-popover")) {
-		target.addClass('invisible').removeClass("visible");
+		target.addClass('rs-invisible').removeClass("visible");
 	}
 }
 

@@ -10,13 +10,22 @@ tags : [intro, about, canon]
 <div class="rs-row">
 	<div class="span-3">
 		<h3>How it works</h3>
-		<p>Use status indicators for any entity with states that may impact the customer's experience.</p>
+    <ul>
+		  <li>Use status indicators for any entity with states that may impact the experience</li>
+      <li>Indicators use color to represent status, such as "error, warning, active, or disabled"</li>
+    </ul>
+    <h4>Types of indicators</h4>
+    <ul>
+      <li><a href="/ui-components/#status-indicators">Text Badge</a></li>
+      <li><a href="/ui-components/#colored-text">Colored Text</a></li>
+      <li><a href="/ui-components/#monitoring-status-list">Monitoring Icons</a></li>
+      <li><a href="/ui-components/#table-status-column">Table Status Column</a></li>
+      <li><a href="/ui-components/#table-row-status-icons">Table Status Icons</a></li>
+    </ul>
+    <h4>Guidelines for mapping status</h4>
 		<ul>
-			<li>Indicators use a solid color to represent status, such as "error, warning, active, or disabled".</li>
-			<li>Use .rs-status for the pill-style component. It is most often the first item on an entity's <a href="#details">details</a> page.</li>
-      <li>The <a href="#colored-text">colored text</a> style (without .rs-status) is often used in a table to explain a process.</li>
 			<li>Improve the API status formatting as necessary (e.g., change API strings from ALL CAPS to Title Case).</li>
-			<li>Status specifications for Cloud Products can be found below. Use these as an example for mapping other Rackspace API statuses to the UI.</li>
+			<li>Status specifications for Cloud Products can be found below. Use these examples for mapping other statuses.</li>
 			<ul>
 				<li><a href="https://one.rackspace.com/display/reach/Cloud+Servers+Status+Specification">Servers</a></li>
 				<li><a href="https://one.rackspace.com/display/reach/Cloud+Database+Status+Specification">Databases</a></li>
@@ -25,10 +34,11 @@ tags : [intro, about, canon]
 				<li><a href="https://one.rackspace.com/display/reach/Images+Status+Specification">Images</a></li>
 			</ul>
 		</ul>
+
 		<h4>Adherence Rating: {{ page.adherance }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherance] | escape }}"></span> </h4>
 	</div>
 	<div class="list-table span-8 offset-1">
-		<h4>Examples</h4>
+		<h4>Examples: <span class="rs-quiet">Text Badge</span></h4>
       <table>
         <thead>
           <tr>
@@ -256,4 +266,43 @@ tags : [intro, about, canon]
   </tbody>
 </table>{% endhighlight %}
   </div>
+</div>
+<hr class="subsection-divider" id="table-status-column">
+<h3>Table Status Column</h3>
+<div class="rs-row">
+  <div class="span-3">
+    <ul>
+      <li>Use to indicate the status of the row item</li>
+      <li>Dop not use in tables that have a <a href="#table-row-status-icons">Status Icon</a></li>
+      <li>Most often used in <a href="/ux-patterns/#list-view">List View Patterns</a> or <a href="/ui-components/#embedded-table">Embedded Tables</a> that live in a <a href="/ux-patterns/#detail-view">Detail View</a></li>
+      <li>See the links under <a href="/ui-components/#status-indicators">Guidelines for mapping status</a> for instructions on aggregating various statuses into these 3 types</li>
+    </ul>
+  </div>
+  <div class="span-8 offset-1">
+    <h4>Example</h4>
+    {% include table-status-column.html %}
+    <h4 class="markup-margin">Markup</h4>
+
+    {% highlight html %}{% include table-status-column.html %}{% endhighlight %}
+
+</div>
+</div>
+<hr class="subsection-divider" id="table-row-status-icons">
+<h3>Table Status Icons</h3>
+<div class="rs-row">
+  <div class="span-3">
+    <ul>
+      <li>Use to indicate final status of a user-initiated process on an item in a table</li>
+      <li>Do not use in lists that have a <a href="#table-status-column">Status Column</a></li>
+      <li>Most often used when performing <a href="/ux-patterns/#batch-action-interaction">Batch Actions</a> on items in a <a href="/ux-patterns/#list-view">List View Pattern</a></li>
+    </ul>
+  </div>
+  <div class="span-8 offset-1">
+    <h4>Example</h4>
+    {% include table-row-status-icons.html %}
+    <h4 class="markup-margin">Markup</h4>
+
+    {% highlight html %}{% include table-row-status-icons.html %}{% endhighlight %}
+
+</div>
 </div>

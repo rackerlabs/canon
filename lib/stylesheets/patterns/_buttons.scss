@@ -186,9 +186,14 @@ input::-moz-focus-inner {
 
   &:active,
   &.active,
-  &:hover,
-  &.hover {
+  &:hover:not(.disabled),
+  &.hover:not(.disabled) {
     @include icon-sprite(plus-dotted-blue);
+  }
+
+  &.disabled,
+  &:disabled {
+    @include icon-sprite(plus-dotted-grey-faded);
   }
 }
 
