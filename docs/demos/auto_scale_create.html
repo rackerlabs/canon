@@ -1,0 +1,190 @@
+---
+layout: demos
+title: Create Auto Scale Group
+---
+<div class="rs-main rs-panel">
+    <div style="margin: -45px 0 10px 0; padding-bottom: 15px;"><a href="{{ site.baseurl }}/demos/auto_scale_list.html">‹ Back to Scaling Group List</a></div>
+    <div class="rs-sidebar rs-pull-right">
+      <div class="rs-inner">
+        <h3>Prepare Your Image</h3>
+        <h4>Using Stateless Servers</h4>
+        <p style="color:#666;">Servers will be created and deleted based on your policies. Use custom saved images that configure your applications on boot.</p>
+        <p><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-concepts#Serverimage">More about Auto Scale Images &raquo;</a></p>
+        <hr>
+        <h4>Help Me With...</h4>
+        <ul>
+          <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-concepts#cooldowns">Choosing a Cooldown Period</a></li>
+          <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-create-a-scaling-group">Creating a Scaling Group</a></li>
+          <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-creating-scaling-policies">Creating a Scaling Policy</a></li>
+        </ul>
+        <p><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-introduction">More about Auto Scale Setup &raquo;</a></p>
+        <hr>
+        <h4>What's Next?</h4>
+        <ul>
+          <li><a href="http://docs.rackspace.com/cas/api/v1.0/autoscale-gettingstarted/content/Overview.html" target="_blank">Getting Started with the API</a></li>
+          <li><a href="http://docs.rackspace.com/cas/api/v1.0/autoscale-devguide/content/POST_createPolicies_v1.0__tenantId__groups__groupId__policies_Policies.html" target="_blank">Creating Webhook Policies</a></li>
+          <li><a href="http://www.rackspace.com/knowledge_center/article/permissions-matrix-for-auto-scale" target="_blank">Grant User Permissions</a></li>
+        </ul>
+        <p><a href="http://www.rackspace.com/knowledge_center/article/rackspace-auto-scale-faq" target="_blank">View Our FAQs &raquo;</a></p>
+      </div>
+    </div>
+    <div class="rs-content rs-panel">
+          <form class="rs-form-create">
+            <div class="rs-create-header">
+              <div class="rs-page-title">Create Scaling Group</div>
+            </div>
+            <div class="rs-detail-section">
+                <div class="rs-detail-section-header">
+                  <div class="rs-detail-section-title">Group Details</div>
+                </div>
+                <div class="rs-detail-section-body">
+                  <div class="rs-control-group">
+                      <label class="rs-control-label">Group Name</label>
+                      <div class="rs-controls">
+                          <input type="text" class="rs-input-large" value="Group01">
+                          <span class="rs-help-block">Servers will be named Group01-f4h78s, Group01-4e6a3s, etc.</span>
+                      </div>
+                  </div>
+                  <div class="rs-control-group">
+                      <label class="rs-control-label">Region</label>
+                      <div class="rs-controls">
+                          <select class="rs-input-large">
+                              <option>Dallas (DFW)</option>
+                              <option>Chicago (ORD)</option>
+                              <option>Sydney (SYD)</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="rs-control-group">
+                    <label class="rs-control-label">Minimum Cooldown</label>
+                    <div class="rs-controls">
+                      <input type="text" class="rs-input-mini">
+                      <select class="rs-input-small">
+                        <option>Seconds</option>
+                        <option>Minutes</option>
+                        <option>Hours</option>
+                        <option>Days</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="rs-control-group">
+                    <label class="rs-control-label">Minimum</label>
+                    <div class="rs-controls">
+                      <input type="text" class="rs-input-mini">
+                      servers
+                    </div>
+                  </div>
+                  <div class="rs-control-group">
+                    <label class="rs-control-label">Maximum</label>
+                    <div class="rs-controls">
+                      <input type="text" class="rs-input-mini">
+                      servers
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="rs-detail-section">
+                <div class="rs-detail-section-header">
+                  <div class="rs-detail-section-title">Configuration</div>
+                </div>
+                <div class="rs-detail-section-body">
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Server Image</label>
+                    <div class="rs-detail-value">
+                      <span class="rs-quiet">Not Configured</span>
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Image…</a>
+                    </div>
+                  </div>
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Server Flavor</label>
+                    <div class="rs-detail-value">
+                      <span class="rs-quiet">Not Configured</span>
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Flavor…</a>
+                    </div>
+                  </div>
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Server Networks</label>
+                    <div class="rs-detail-value">
+                      PublicNet, ServiceNet
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Networks…</a>
+                    </div>
+                  </div>
+                  <div class="rs-detail-item">
+                    <label class="rs-detail-key">Load Balancer</label>
+                    <div class="rs-detail-value">
+                      <span class="rs-quiet">Not Configured</span>
+                      <span class="rs-key-divider"></span>
+                      <a href="#">Select Load Balancer…</a>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="rs-detail-section">
+                <div class="rs-detail-section-header">
+                  <div class="rs-detail-section-title">Scaling Policies</div>
+                </div>
+                <div class="rs-detail-section-body">
+                  <div class="rs-btn-group">
+                    <button class="rs-btn" type="button">Create Policy</button>
+                  </div>
+                  <div class="rs-embedded-list-table-wrapper rs-embedded-medium">
+                    <table class="rs-list-table rs-embedded-list-table">
+                      <thead>
+                        <tr>
+                          <th class="rs-table-status"></th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Name</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Type</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Amount</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                          <th>
+                            <a href="javascript:void(0);" class="rs-table-sort">
+                              <span class="rs-table-sort-text">Policy Cooldown</span>
+                              <span class="rs-table-sort-indicator"></span>
+                            </a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                    <div class="rs-table-overlay">
+                      <div class="rs-table-overlay-content">
+                        <div class="rs-table-overlay-subtitle">You don&#39;t have any policies yet.</div>
+                        <div class="rs-table-overlay-message">Policies control how your group adjusts capacity.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="rs-detail-section rs-create-footer">
+              <div class="rs-detail-section-body">
+                <div class="rs-btn-group">
+                    <a href="{{ site.baseurl }}/demos/auto_scale_list.html" class="rs-btn rs-btn-primary">Create Scaling Group</a>
+                    <a href="{{ site.baseurl }}/demos/index.html" class="rs-btn rs-btn-link">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
+</div>

@@ -13,6 +13,13 @@
   }
 }
 
+@mixin heartbeat($beginning: #ffffff, $middle: #ededed, $end: #ffffff) {
+  0%   {background: $beginning;}
+  15%  {background: $middle;}
+  75%  {background: $middle;}
+  100% {background: $end;}
+}
+
 @mixin responsive() {
   body.rs-responsive & {
     @content;
@@ -114,4 +121,10 @@
 @mixin grid-fluid-offset-first-child($columns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
   margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) + ($fluidGridGutterWidth);
   *margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%) + $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
+}
+
+@mixin hide-text-content() {
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }

@@ -1,0 +1,200 @@
+---
+layout: demos
+title: Details
+servers:
+  1:
+    status: ok
+    name: Website01-f4h78s
+    date: Oct 17, 2013 - 7:26 pm
+    image: website-stateless
+  2:
+    status: ok
+    name: Website02-4e6a3s
+    date: Oct 17, 2013 - 7:28 pm
+    image: website-stateless
+  3:
+    status: processing rs-table-status-striped
+    name: Website03-asfaa51805
+    date: Oct 17, 2013 - 7:32 pm
+    image: website-stateless
+---
+<div class="rs-back-link"><a href="{{ site.baseurl }}/demos/auto_scale_list.html">‹ Back to Scaling Group List</a></div>
+<div class="rs-main rs-panel">
+  <div class="rs-sidebar rs-pull-right">
+    <div class="rs-inner">
+      <h3>Managing Your Group</h3>
+      <h4>Testing Scaling Groups</h4>
+      <p style="color:#666;">You can test your configuration by changing the minimum number of servers in your group to trigger scaling.</p>
+      <p><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-introduction">More about Auto Scale &raquo;</a></p>
+      <hr>
+      <h4>Help Me With...</h4>
+      <ul>
+        <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-concepts#cooldowns">Choosing a Cooldown Period</a></li>
+        <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-creating-scaling-policies">Creating a Scaling Policy</a></li>
+        <li><a target="blank" href="http://www.rackspace.com/knowledge_center/article/rackspace-auto-scale-glossary">Understanding Terminology</a></li>
+      </ul>
+      <p><a target="blank" href="http://www.rackspace.com/knowledge_center/article/getting-started-with-auto-scale-introduction">More about Managing Auto Scale &raquo;</a></p>
+      <hr>
+        <h4>What's Next?</h4>
+        <ul>
+          <li><a href="http://docs.rackspace.com/cas/api/v1.0/autoscale-gettingstarted/content/Overview.html" target="_blank">Getting Started with the API</a></li>
+          <li><a href="http://docs.rackspace.com/cas/api/v1.0/autoscale-devguide/content/POST_createPolicies_v1.0__tenantId__groups__groupId__policies_Policies.html" target="_blank">Creating Webhook Policies</a></li>
+          <li><a href="http://www.rackspace.com/knowledge_center/article/permissions-matrix-for-auto-scale" target="_blank">Grant User Permissions</a></li>
+        </ul>
+        <p><a href="http://www.rackspace.com/knowledge_center/article/rackspace-auto-scale-faq" target="_blank">View Our FAQs &raquo;</a></p>
+    </div>
+  </div>
+  <div class="rs-content rs-panel">
+    <div class="rs-detail-header">
+      <div class="rs-detail-header-actions">
+        <div class="rs-dropdown">
+          <button class="rs-btn rs-btn-action rs-dropdown-toggle">
+            <span class="rs-cog"></span>
+            Actions
+            <span class="rs-caret"></span>
+          </button>
+          <ul class="rs-dropdown-menu rs-pull-right">
+            <li class="rs-dropdown-item"><span class="rs-dropdown-category" id="first">Organize</span></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Rename Group&hellip;</a></li>
+            <li class="rs-dropdown-item"><span class="rs-dropdown-category" id="first">Policies</span></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Create Policy&hellip;</a></li>
+            <li class="rs-dropdown-item"><span class="rs-dropdown-category">Manage Servers</span></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Server Image&hellip;</a></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Server Flavor&hellip;</a></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Min / Max Servers&hellip;</a></li>
+            <li class="rs-dropdown-item"><span class="rs-dropdown-category">Manage Group</span></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Load Balancers&hellip;</a></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Networks&hellip;</a></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Minimum Cooldown&hellip;</a></li>
+            <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Delete Group&hellip;</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rs-detail-header-subtitle">Scaling Group</div>
+      <div class="rs-detail-header-title">Website</div>
+    </div>
+    <div class="rs-detail-section">
+      <div class="rs-detail-section-header">
+        <div class="rs-detail-section-title">Scaling Group Details</div>
+      </div>
+      <div class="rs-detail-section-body">
+        <ul class="rs-detail-list">
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Status</div>
+            <div class="rs-detail-value"><span class="rs-status rs-status-ok">Scaling</span></div>
+          </li>
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Load Balancer(s)</div>
+            <div class="rs-detail-value"><a href="#">lb01.rackspace.com</a> (166.78.34.156)<button class="rs-edit"></button></div>
+          </li>
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Server Image</div>
+            <div class="rs-detail-value">website-stateless<button class="rs-edit"></button></div>
+          </li>
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Server Flavor</div>
+            <div class="rs-detail-value">512 MB Standard Instance<button class="rs-edit"></button></div>
+          </li>
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Minimum Cooldown</div>
+            <div class="rs-detail-value">10 minutes<button class="rs-edit"></button></div>
+          </li>
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Networks</div>
+            <div class="rs-detail-value">PublicNet, ServiceNet<button class="rs-edit"></button></div>
+          </li>
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Min / Max</div>
+            <div class="rs-detail-value">3 servers minumum; 7 servers maximum<button class="rs-edit"></button></div>
+          </li>
+          <li class="rs-detail-item">
+            <div class="rs-detail-key">Region</div>
+            <div class="rs-detail-value">Dallas (DFW)</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="rs-detail-section">
+        <div class="rs-detail-section-header">
+          <div class="rs-detail-section-title">Policies
+            <i class="rs-icon-help tooltip-toggle" title="A policy is a set of rules that adds or removes servers from an Auto Scale Group. For example, a policy may be configured to remove unnecessary servers during the weekends when there is less load."></i>
+          </div>
+        </div>
+        <div class="rs-detail-section-body">
+          <div class="rs-btn-group">
+            <button class="rs-btn" type="button">Create Policy</button>
+          </div>
+          <div class="rs-embedded-list-table-wrapper rs-embedded-medium">
+            <table class="rs-list-table rs-embedded-list-table">
+              <thead>
+                <tr>
+                  <th class="rs-table-status"></th>
+                  <th>
+                    <a href="javascript:void(0);" class="rs-table-sort">
+                      <span class="rs-table-sort-text">Name</span>
+                      <span class="rs-table-sort-indicator"></span>
+                    </a>
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);" class="rs-table-sort">
+                      <span class="rs-table-sort-text">Type</span>
+                      <span class="rs-table-sort-indicator"></span>
+                    </a>
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);" class="rs-table-sort">
+                      <span class="rs-table-sort-text">Amount</span>
+                      <span class="rs-table-sort-indicator"></span>
+                    </a>
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);" class="rs-table-sort">
+                      <span class="rs-table-sort-text">Policy Cooldown</span>
+                      <span class="rs-table-sort-indicator"></span>
+                    </a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <div class="rs-table-overlay">
+              <div class="rs-table-overlay-content">
+                <div class="rs-table-overlay-subtitle">You don&#39;t have any policies yet.</div>
+                <div class="rs-table-overlay-message">Policies control how your group adjusts capacity.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="rs-detail-section">
+      <div class="rs-detail-section-header">
+        <div class="rs-detail-section-title">Servers</div>
+      </div>
+      <div class="rs-detail-section-body">
+        <div class="rs-embedded-list-table-wrapper rs-embedded-small">
+          <table class="rs-list-table rs-embedded-list-table">
+            <thead>
+              <tr>
+                <th class="rs-table-status"></th>
+                <th>Name</th>
+                <th>Created Date</th>
+                <th>Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for server in page.servers %}
+              <tr>
+                <td class="rs-table-status rs-table-status-{{ server[1].status }}"></td>
+                <td class="rs-table-link"><a href="#">{{ server[1].name }}</a></td>
+                <td class="rs-table-text">{{ server[1].date }}</td>
+                <td class="rs-table-text">{{ server[1].image }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>

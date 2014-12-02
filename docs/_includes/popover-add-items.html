@@ -1,0 +1,46 @@
+<div class="rs-popover invisible" id="add-items-popover">
+  <div class="rs-popover-arrow"></div>
+  <div class="rs-popover-content">
+    <form class="rs-form rs-form-horizontal" action="javascript:exampleSubmit($(this));">
+      <div class="rs-popover-body">
+        <p>Add items to this product:</p>
+        <div class="rs-embedded-list-table-wrapper rs-embedded-medium">
+          <table class="rs-list-table rs-embedded-list-table rs-select-table">
+            <thead>
+              <tr>
+                <th class="rs-table-checkbox"></th>
+                <th>Name</th>
+                <th>IPv4</th>
+                <th>Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rs-table-checkbox"><input type="checkbox"></td>
+                <td class="rs-table-text">Item One</td>
+                <td class="rs-table-text">101.122.11.222</td>
+                <td>More Detail Here</td>
+              </tr>
+              <tr>
+                <td class="rs-table-checkbox"><input type="checkbox"></td>
+                <td class="rs-table-text">Item Two</td>
+                <td class="rs-table-text">10.111.22.112</td>
+                <td>More Detail Here</td>
+              </tr>
+              <tr>
+                <td class="rs-table-checkbox"><input type="checkbox"></td>
+                <td class="rs-table-text">Item Two</td>
+                <td class="rs-table-text">10.111.22.112</td>
+                <td>More Detail Here</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="rs-popover-footer rs-btn-group">
+        <button type="submit" class="rs-btn rs-btn-primary" onclick="hidePopover();">Add Selected Items</button>
+        <span class="rs-btn rs-btn-link">Cancel</span>
+      </div>
+    </form>
+  </div>
+</div>

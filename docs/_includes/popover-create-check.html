@@ -1,0 +1,91 @@
+<div class="rs-popover invisible" id="create-check-popover-list-view">
+	<div class="rs-popover-arrow"></div>
+	<div class="rs-popover-content">
+		<form class="rs-form rs-form-horizontal rs-form-large" action="javascript:exampleSubmit($(this));">
+			<div class="rs-popover-body">
+				<div class="rs-control-group">
+					<label class="rs-control-label">Check Type</label>
+					<div class="rs-controls">
+						<select class="rs-input-large">
+							<optgroup label="Remote Service Checks">
+								<option value="remote.http">HTTP Check (Website)</option>
+								<option value="remote.tcp">TCP Check (Port)</option>
+								<option value="remote.ping">Ping Check (Server)</option>
+							</optgroup>
+							<optgroup label="Agent Checks">
+								<option value="agent.memory">Memory</option>
+								<option value="agent.cpu">CPU</option>
+								<option value="agent.load_average">Load Average</option>
+								<option value="agent.filesystem">Filesystem</option>
+								<option value="agent.network">Network</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+				<div class="rs-control-group">
+					<label class="rs-control-label">Check Name</label>
+					<div class="rs-controls">
+						<input type="text" name="check-name" class="rs-input-large">
+					</div>
+				</div>
+				<div class="rs-control-group">
+					<label class="rs-control-label">URL</label>
+					<div class="rs-controls">
+						<input type="text" name="url" class="rs-input-large">
+						<span class="rs-help-block">Use the &#34;https:&#47;&#47;&#34; prefix to enable SSL.</span>
+					</div>
+				</div>
+			</div>
+			<div class="rs-popover-footer rs-btn-group">
+				<button type="submit" class="rs-btn rs-btn-primary">Create Check</button>
+				<span class="rs-btn rs-btn-link">Cancel</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="rs-popover invisible" id="create-check-popover">
+	<div class="rs-popover-arrow"></div>
+	<div class="rs-popover-content">
+		<form class="rs-form rs-form-horizontal rs-form-large" action="javascript:exampleSubmit($(this));">
+			<div class="rs-popover-body">
+				<div class="rs-control-group">
+					<label class="rs-control-label">Check Type</label>
+					<div class="rs-controls">
+						<select class="rs-input-large">
+							<optgroup label="Remote Service Checks">
+								<option value="remote.http">HTTP Check (Website)</option>
+								<option value="remote.tcp">TCP Check (Port)</option>
+								<option value="remote.ping">Ping Check (Server)</option>
+							</optgroup>
+							<optgroup label="Agent Checks">
+								<option value="agent.memory">Memory</option>
+								<option value="agent.cpu">CPU</option>
+								<option value="agent.load_average">Load Average</option>
+								<option value="agent.filesystem">Filesystem</option>
+								<option value="agent.network">Network</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+				<div class="rs-control-group">
+					<label class="rs-control-label">Check Name</label>
+					<div class="rs-controls">
+						<input type="text" name="check-name" class="rs-input-large">
+					</div>
+				</div>
+				<div class="rs-control-group">
+					<label class="rs-control-label">URL</label>
+					<div class="rs-controls">
+						<input type="text" name="url" class="rs-input-large">
+						<span class="rs-help-block">Use the &#34;https:&#47;&#47;&#34; prefix to enable SSL.</span>
+					</div>
+				</div>
+			</div>
+			<div class="rs-popover-footer rs-btn-group">
+				<button type="submit" class="rs-btn rs-btn-primary">Create Check</button>
+				<span class="rs-btn rs-btn-link">Cancel</span>
+			</div>
+		</form>
+	</div>
+</div>

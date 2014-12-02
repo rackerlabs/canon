@@ -1,0 +1,172 @@
+---
+layout: demos
+title: Create Server
+---
+<div class="rs-main rs-panel">
+  <div style="margin: -45px 0 10px 0; padding-bottom: 15px;"><a href="index.html">‹ Back to Servers List</a></div>
+  <div class="rs-sidebar rs-pull-right">
+    <div class="rs-inner">
+      <h3>Setting Up Your Server</h3>
+      <h4>Choosing A Region</h4>
+      <p>Choose the same region for your database as your other cloud resources to avoid bandwidth charges.</p>
+      <p><a target="blank" href="http://www.rackspace.com/knowledge_center/article/about-regions">More about Choosing Regions &raquo;</a></p>
+      <hr class="sidebar-hr">
+      <h4>Help Me With...</h4>
+      <ul>
+        <li><a target="blank" href="http://www.rackspace.com/knowledge_center/node/2222">Choosing the Right Image</a></li>
+        <li><a target="blank" href="http://www.rackspace.com/knowledge_center/node/2223">Managing My Server</a></li>
+      </ul>
+      <p><a target="blank" href="http://www.rackspace.com/knowledge_center/getting-started/cloud-servers">Learn More about Cloud Servers &raquo;</a></p>
+      <hr class="sidebar-hr">
+      <h4>What's Next</h4>
+      <ul>
+        <li><a target="blank" href="http://www.rackspace.com/knowledge_center/node/2225">Logging in to Your Server</a></li>
+        <li><a target="blank" href="http://www.rackspace.com/knowledge_center/node/2226">Configuring Basic Security</a></li>
+      </ul>
+      <p><a target="blank" href="http://www.rackspace.com/knowledge_center/">Visit Our Knowledge Center &raquo;</a></p>
+    </div>
+  </div>
+  <div class="rs-content rs-panel">
+    <form class="rs-form-create">
+      <div class="rs-create-header">
+        <div class="rs-page-title">Create Server</div>
+      </div>
+      <div class="rs-detail-section">
+        <div class="rs-detail-section-header">
+          <div class="rs-detail-section-title">Identity</div>
+        </div>
+        <div class="rs-detail-section-body">
+          <div class="rs-control-group">
+            <label class="rs-control-label">Server Name</label>
+            <div class="rs-controls">
+              <input type="text" class="rs-input-large">
+            </div>
+          </div>
+          <div class="rs-control-group">
+            <label class="rs-control-label">Region</label>
+            <div class="rs-controls">
+              <select class="rs-input-large">
+                <option>Chicago (ORD)</option>
+                <option>Dallas (DFW)</option>
+                <option>Sydney (SYD)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rs-detail-section">
+        <div class="rs-detail-section-header">
+          <div class="rs-detail-section-title">Image</div>
+        </div>
+        <div class="rs-detail-section-body">
+          <div class="rs-embedded-list-table-wrapper rs-embedded-medium">
+            <table class="rs-list-table rs-embedded-list-table rs-table-hover">
+              <thead>
+                <tr>
+                  <th style="width: 20px;"></th>
+                  <th>Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="image"></td>
+                  <td class="rs-table-text">Arch 2013.6</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="image"></td>
+                  <td class="rs-table-text">CentOS 5.6</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="image"></td>
+                  <td class="rs-table-text">Debian 6.06 (Squeeze)</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="image"></td>
+                  <td class="rs-table-text">Fedora 17</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="image"></td>
+                  <td class="rs-table-text">FreeBSD 9.1</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="image"></td>
+                  <td class="rs-table-text">Gentoo 13.2</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="image"></td>
+                  <td class="rs-table-text">OpenSUSE 12.3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="rs-detail-section">
+        <div class="rs-detail-section-header">
+          <div class="rs-detail-section-title">Size</div>
+        </div>
+        <div class="rs-detail-section-body">
+          <div class="rs-embedded-list-table-wrapper rs-embedded-meidum">
+            <table class="rs-list-table rs-embedded-list-table">
+              <thead>
+                <tr>
+                  <th class="rs-table-radio"></th>
+                  <th>RAM</th>
+                  <th>Disk</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="flavor"></td>
+                  <td class="rs-table-text">512 MB</td>
+                  <td class="rs-table-text">40 GB</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="flavor"></td>
+                  <td class="rs-table-text">1 GB</td>
+                  <td class="rs-table-text">40 GB</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="flavor"></td>
+                  <td class="rs-table-text">2 GB</td>
+                  <td class="rs-table-text">80 GB</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="flavor"></td>
+                  <td class="rs-table-text">4 GB</td>
+                  <td class="rs-table-text">160 GB</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="flavor"></td>
+                  <td class="rs-table-text">8 GB</td>
+                  <td class="rs-table-text">320 GB</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="flavor"></td>
+                  <td class="rs-table-text">15 MB</td>
+                  <td class="rs-table-text">620 GB</td>
+                </tr>
+                <tr>
+                  <td class="rs-table-radio"><input type="radio" name="flavor"></td>
+                  <td class="rs-table-text">30 MB</td>
+                  <td class="rs-table-text">1 TB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="rs-detail-section rs-create-footer">
+        <div class="rs-detail-section-body">
+          <div class="rs-btn-group">
+            <a href="{{ site.baseurl }}/demos/index.html" class="rs-btn rs-btn-primary">Create Server</a>
+            <a href="{{ site.baseurl }}/demos/index.html" class="rs-btn rs-btn-link">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</div>

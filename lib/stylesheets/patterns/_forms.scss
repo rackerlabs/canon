@@ -17,6 +17,9 @@ legend {
 label,
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 select,
 textarea,
 .rs-input {
@@ -48,6 +51,9 @@ label:after {
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 input[type="file"],
 select,
 textarea,
@@ -58,6 +64,9 @@ textarea,
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 select,
 textarea,
 .rs-input {
@@ -89,6 +98,9 @@ textarea,
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
 textarea,
 .rs-input {
   box-sizing: border-box;
@@ -168,16 +180,6 @@ textarea {
 }
 
 /* Create/Horizontal Forms */
-@mixin set-form-control-labels($label-width: 160px, $value-margin-left: 20px){
-  .rs-control-label {
-    width: $label-width;
-  }
-  .rs-controls,
-  .rs-controls-static {
-    margin-left: $label-width + $value-margin-left;
-  }
-}
-
 .rs-form-horizontal,
 .rs-form-create {
   .rs-control-group,
@@ -198,10 +200,11 @@ textarea {
     padding-top: 2px;
   }
 
-  @include set-form-control-labels();
-
   input[type="text"],
   input[type="password"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
   input[type="file"],
   select,
   textarea,
@@ -209,9 +212,25 @@ textarea {
     margin-bottom: 0;
   }
 
-}
+  @mixin set-form-control-labels($label-width: 160px, $value-margin-left: 20px){
+    .rs-control-label {
+      width: $label-width;
+    }
+    .rs-controls,
+    .rs-controls-static {
+      margin-left: $label-width + $value-margin-left;
+    }
 
-.rs-form-horizontal {
+    .rs-detail-key {
+      width: $label-width;
+    }
+    .rs-detail-value {
+      margin-left: $label-width + $value-margin-left;
+    }
+  }
+
+  @include set-form-control-labels();
+
   &.rs-form-xsmall {
     @include set-form-control-labels(60px);
   }
@@ -236,6 +255,7 @@ textarea {
     @include set-form-control-labels(180px);
   }
 }
+
 
 /* Create Forms */
 .rs-form-create {
@@ -273,13 +293,6 @@ textarea {
     .rs-key-divider {
       color: $grey600;
     }
-  }
-
-  .rs-detail-key {
-    width: 160px;
-  }
-  .rs-detail-value {
-    margin-left: 180px;
   }
 }
 
@@ -326,6 +339,9 @@ textarea {
 .rs-control-group.error {
   input[type="text"],
   input[type="password"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
   select,
   textarea,
   .rs-input {
@@ -341,6 +357,9 @@ textarea {
 
   input[type="text"],
   input[type="password"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
   textarea,
   .rs-input {
     &:focus,

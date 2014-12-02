@@ -1,0 +1,92 @@
+---
+layout: demos
+title: Auto Scale
+servers:
+  1:
+    name: Website
+    servers: 3
+    region: Dallas (DFW)
+    status: ok rs-table-status-striped
+  2:
+    name: Production
+    servers: 8
+    region: Chicago (ORD)
+    status: ok
+  3:
+    name: Production02
+    servers: 4
+    region: Dallas (DFW)
+    status: ok
+  4:
+    name: Dev Group
+    servers: 4
+    region: Chicago (ORD)
+    status: ok
+  5:
+    name: Test Environment
+    servers: 2
+    region: Dallas (DFW)
+    status: ok
+---
+
+<div class="rs-main">
+  <div class="rs-content rs-panel">
+    <div class="rs-inner">
+      <h2 class="rs-page-title">Auto Scale</h2>
+      <div class="rs-btn-group">
+        <a href="{{ site.baseurl }}/demos/auto_scale_create.html" class="rs-btn rs-btn-primary">Create Group</a>
+        <button class="rs-btn" disabled>Delete</button>
+      </div>
+      <div class="rs-list-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="rs-table-status"></td>
+              <th class="rs-table-checkbox"><input type="checkbox" /></td>
+              <th class="rs-table-cog"></th>
+              <th>
+                <a href="#" class="rs-table-sort rs-table-sort-desc">
+                  <span class="rs-table-sort-text">Group Name</span>
+                  <span class="rs-table-sort-indicator"></span>
+                </a>
+              </th>
+              <th>Servers</th>
+              <th>Region</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for server in page.servers %}
+            <tr>
+              <td class="rs-table-status rs-table-status-{{ server[1].status }}"></td>
+              <td class="rs-table-checkbox"><input type="checkbox" /></td>
+              <td class="rs-table-cog">
+                <div class="rs-dropdown">
+                  <div class="rs-cog rs-dropdown-toggle"></div>
+                  <ul class="rs-dropdown-menu">
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category" id="first">Organize</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Rename Group&hellip;</a></li>
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category" id="first">Policies</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Create Policy&hellip;</a></li>
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category">Manage Servers</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Server Image&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Server Flavor&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Min / Max Servers&hellip;</a></li>
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category">Manage Group</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Load Balancers&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Networks&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Edit Minimum Cooldown&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Delete Group&hellip;</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td class="rs-table-link"><a href="{{ site.baseurl }}/demos/auto_scale_details.html">{{ server[1].name }}</a></td>
+              <td class="rs-table-text">{{ server[1].servers }}</td>
+              <td class="rs-table-text">{{ server[1].region }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

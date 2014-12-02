@@ -1,3 +1,45 @@
+## v1.7.0 (October 28, 2014)
+
+- Fix button wrapping on smaller screens.
+- Fix table header alignment in Internet Explorer.
+- Modify utility nav link color for better contrast.
+- Update utility navigation to new design.
+
+## v1.6.1 (July 15, 2014)
+
+- Update Rackspace logo.
+
+## v1.6.0 (July 11, 2014)
+
+- Add facet pattern.
+- Add focus support for collapsible sections.
+
+## v1.5.1 (June 12, 2014)
+
+- Fix padding and alignment of edit buttons.
+
+## v1.5.0 (May 1, 2014)
+
+- Add disabled state for tables.
+- Add heartbeat styles for tables.
+- Add info state for progress bars.
+- Add ability to provide a progress bar label.
+- Add processing error state for badges and tables.
+- Add variable width keys for detail views.
+- Add variable width labels for forms.
+- Use Canon input styles for url, email, and search inputs.
+- Fix layout bug for vertical forms.
+- Fix bug where primay nav items had too much padding.
+- Fix bug where dropdown did expand with width of nav item.
+- Fix bug where progress bar did not fire correct DOM events.
+
+## v1.4.1 (February 5, 2014)
+- Fix underline in primary nav items
+- Update sidebar text styles
+- Update headings styles (h1-h6)
+- Update list margins (ol, ul, dl)
+- Replace green table status image
+
 ## v1.4.0 (December 16, 2013)
 - Point repo and updated content to rackerlabs/canon.
 - Add create form.

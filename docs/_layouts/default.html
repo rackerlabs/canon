@@ -1,0 +1,68 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Rackspace&reg; Canon - The front-end application framework</title>
+
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/canon.min.css">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/site.css">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/syntax.css">
+
+  <script type="application/javascript" src="http://code.jquery.com/jquery-1.10.1.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/assets/canon.min.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/bootstrap.min.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/site.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/popover.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/highlighter.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/tooltip.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/dropdown.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/tabs.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/select-table.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/collapsible-section.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/overlay.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/form.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/collapsible-highlight.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/heartbeat-example.js"></script>
+  <script type="application/javascript" src="{{site.baseurl}}/js/facets.js"></script>
+</head>
+<body class="rs-responsive">
+  <div class="rs-wrapper">
+    <div class="rs-nav-utility rs-fixed-top">
+      <div class="rs-container">
+        <ul class="rs-nav">
+          <li class="rs-nav-item {% if page.utilitySection == 'Home' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/">Rackspace<span class="super-script">&reg;</span> Canon</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'Get Started' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/get-started">Get Started</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'App Layout' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/app-layout">App Layout</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'UX Patterns' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/ux-patterns">UX Patterns</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'UI Components' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/ui-components">UI Components</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'About Canon' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/about-canon">About Canon</a></li>
+        </ul>
+      </div>
+    </div>
+    {{ content }}
+    <div class="rs-push"></div>
+  </div>
+  <div class="rs-nav-footer">
+    <div class="rs-container">
+      <ul class="rs-nav rs-pull-right">
+        <li class="rs-nav-item"><a class="rs-nav-link canon-feedback-link" href="mailto:canon@lists.rackspace.com">Send Feedback <i class="rs-icon-external"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <script type="application/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogitgleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42051197-2');
+    ga('send', 'pageview');
+  </script>
+{% if page.popovers %}
+{% for popover in page.popovers %}
+  {% include popover %}
+{% endfor %}
+{% endif %}
+</body>
+</html>

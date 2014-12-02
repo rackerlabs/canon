@@ -1,0 +1,13 @@
+source: "docs"
+destination: "_site"
+baseurl: ""
+pygments: true
+permalink: /.tmp/null.html
+markdown: redcarpet
+adherenceRatings: ['', '<strong>Just a suggestion</strong> - Use it if you like it!  Your implementation can vary. You may choose to use a similar pattern of your own.', '<strong>A really good idea</strong> - Some really good thought was put into this. Try and follow the guidelines.', '<strong>Sort of strict</strong> - Significant design and research went into the production of this pattern. Implementation should follow guidelines pretty closely overall.', '<strong>Basically the law</strong> - A lot of research and design went into this pattern.  It has been widely accepted as the standard at Rackspace. Implementation must be exactly as prescribed in this article.']
+excerpt_separator: Workaround for https://github.com/mojombo/jekyll/issues/1401
+
+CANON:
+  latest: '1-latest'
+  cdnUrl: 'https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com'
+  versions: ['1.7.0', '1.6.1', '1.5.1', '1.5.0', '1.4.1', '1.4.0','1.3.1','1.2.0','1.1.0','1.0.0','1.0.0-rc.3','1.0.0-rc.2','1.0.0-rc.1','0.5.0','0.4.2','0.4.1','0.4.0','0.3.2','0.3.0','0.2.0','0.1.1','0.1.0','0.0.0']

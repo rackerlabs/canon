@@ -5,8 +5,12 @@ screenshots:
     url: detail-view.html
   - name: Create View
     url: create-view.html
+  - name: Facets
+    url: facets.html
   - name: Form
     url: form.html
+  - name: Form (Vertical)
+    url: form-vertical.html
   - name: Form (Horizontal)
     url: form-horizontal.html
   - name: Form (Create)
@@ -43,3 +47,5 @@ screenshots:
     url: tooltip.html
   - name: Tabs
     url: tabs.html
+  - name: Typography
+    url: typography.html

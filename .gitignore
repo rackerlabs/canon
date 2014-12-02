@@ -9,3 +9,7 @@ sauce_connect.*
 spec/reports/
 spec/skins/*/*/*_diff.png
 spec/skins/*/*/*_fresh.png
+examples/demos
+_site
+.DS_Store
+.bundle/install.log

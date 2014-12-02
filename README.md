@@ -1,6 +1,6 @@
 ![http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png](http://92f886790563f0d2e9da-ca7505e8b565bfde1147b2852ab5bbdb.r79.cf1.rackcdn.com/canon-logo-black.png)
 
-[![Build Status](https://travis-ci.org/rackerlabs/canon.png)](https://travis-ci.org/rackerlabs/canon)
+[![Build Status](https://travis-ci.org/rackerlabs/canon.png?branch=master)](https://travis-ci.org/rackerlabs/canon)
 
 **This README contains information on setting up the Canon development environment
 on your local machine.  Use these instructions if you intend to develop Canon
@@ -10,7 +10,7 @@ elements and contribute code back to the project.**
 
 ## SYSTEM REQUIREMENTS
 
-- Ruby 2.0.x
+- Ruby 2.x.x
 - Node 0.6 or higher
 - PhantomJS 1.7 or higher
 - ImageMagick 6.5.x or 6.6.x
@@ -26,10 +26,7 @@ Setting up your Canon development environment is easy:
 
 The Canon server is now running at http://0.0.0.0:8000. Before running automated
 tests, you'll need to set the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment
-variables. See [Environment Configuration](https://github.rackspace.com/canon/canon/wiki/Environment-Configuration)
-for more information on environment variables used by Canon. If you run into any
-issues, check the [wiki](https://github.rackspace.com/canon/canon/wiki) or send
-an email to canon@lists.rackspace.com.
+variables. If you run into any issues, submit an issue.
 
 ## CONTRIBUTING
 

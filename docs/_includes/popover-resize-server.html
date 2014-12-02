@@ -1,0 +1,157 @@
+<div class="rs-popover invisible" id="resize-popover">
+  <div class="rs-popover-arrow"></div>
+  <div class="rs-popover-content">
+    <form class="rs-form">
+      <div class="rs-popover-body">
+        <p>Choose a new size for this server:</p>
+        <div class="rs-embedded-list-table-wrapper rs-embedded-small rs-select-table">
+          <table class="rs-list-table rs-embedded-list-table">
+            <thead>
+              <tr>
+                <th class="rs-table-radio"></th>
+                <th>
+                  <a href="javascript:void(0);" class="rs-table-sort rs-table-sort-desc">
+                    <span class="rs-table-sort-text">RAM</span>
+                    <span class="rs-table-sort-indicator"></span>
+                  </a>
+                </th>
+                <th>
+                  <a href="javascript:void(0);" class="rs-table-sort">
+                    <span class="rs-table-sort-text">Disk</span>
+                    <span class="rs-table-sort-indicator"></span>
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">256 MB</td>
+                <td class="rs-table-text">10 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">512 MB</td>
+                <td class="rs-table-text">20 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">1 GB</td>
+                <td class="rs-table-text">40 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">2 GB</td>
+                <td class="rs-table-text">80 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">4 GB</td>
+                <td class="rs-table-text">160 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">8 GB</td>
+                <td class="rs-table-text">320 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">15 GB</td>
+                <td class="rs-table-text">620 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">30 GB</td>
+                <td class="rs-table-text">1.2 TB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br><p style="max-width: 450px;"><strong>Warning:</strong> Resizing will take the server <strong>offline for minutes or hours</strong> depending on server size. Afterwards, you'll have 24 hours to revert the resize if there are problems.</p>
+      </div>
+      <div class="rs-popover-footer rs-btn-group">
+        <button type="submit" class="rs-btn rs-btn-primary">Resize Server</button>
+        <span class="rs-btn rs-btn-link">Cancel</span>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="rs-popover invisible" id="resize-popover-list-view">
+  <div class="rs-popover-arrow"></div>
+  <div class="rs-popover-content">
+    <form class="rs-form" action="javascript:exampleSubmit($(this));">
+      <div class="rs-popover-body">
+        <p>Choose a new size for this server:</p>
+        <div class="rs-embedded-list-table-wrapper rs-embedded-small rs-select-table">
+          <table class="rs-list-table rs-embedded-list-table">
+            <thead>
+              <tr>
+                <th class="rs-table-radio"></th>
+                <th>
+                  <a href="javascript:void(0);" class="rs-table-sort rs-table-sort-desc">
+                    <span class="rs-table-sort-text">RAM</span>
+                    <span class="rs-table-sort-indicator"></span>
+                  </a>
+                </th>
+                <th>
+                  <a href="javascript:void(0);" class="rs-table-sort">
+                    <span class="rs-table-sort-text">Disk</span>
+                    <span class="rs-table-sort-indicator"></span>
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">256 MB</td>
+                <td class="rs-table-text">10 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">512 MB</td>
+                <td class="rs-table-text">20 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">1 GB</td>
+                <td class="rs-table-text">40 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">2 GB</td>
+                <td class="rs-table-text">80 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">4 GB</td>
+                <td class="rs-table-text">160 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">8 GB</td>
+                <td class="rs-table-text">320 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">15 GB</td>
+                <td class="rs-table-text">620 GB</td>
+              </tr>
+              <tr>
+                <td class="rs-table-radio"><input type="radio" name="size" /></td>
+                <td class="rs-table-link">30 GB</td>
+                <td class="rs-table-text">1.2 TB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br><p style="max-width: 450px;"><strong>Warning:</strong> Resizing will take the server <strong>offline for minutes or hours</strong> depending on server size. Afterwards, you'll have 24 hours to revert the resize if there are problems.</p>
+      </div>
+      <div class="rs-popover-footer rs-btn-group">
+        <button type="submit" class="rs-btn rs-btn-primary">Resize Server</button>
+        <span class="rs-btn rs-btn-link">Cancel</span>
+      </div>
+    </form>
+  </div>
+</div>

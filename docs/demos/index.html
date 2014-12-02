@@ -1,0 +1,256 @@
+---
+layout: demos
+title: Cloud Servers
+servers:
+  1:
+    name: My Cloud Server 1
+    ip: 111.222.111
+    status: ok
+    checks: [ok,ok,ok,disabled,disabled,disabled,warning]
+  2:
+    name: My Cloud Server 2
+    ip: 222.111.222
+    status: warning
+    checks: [warning,ok,warning,error,ok,disabled,warning,disabled,disabled,disabled]
+  3:
+    name: My Cloud Server 3
+    ip: 222.111.222
+    status: error
+  4:
+    name: My Cloud Server 4
+    ip: 222.111.222
+    status: ok
+  5:
+    name: My Cloud Server 5
+    ip: 222.111.222
+    status: ok
+    checks: [ok,ok,ok,ok,ok,ok,ok,disabled,warning]
+  6:
+    name: My Cloud Server 6
+    ip: 222.111.222
+    status: warning rs-table-status-striped
+    checks: [ok,warning,warning,error,ok,disabled,warning]
+  7:
+    name: My Cloud Server 7
+    ip: 222.111.222
+    status: ok
+    checks: [error,error,ok,error,ok,disabled,warning]
+  8:
+    name: My Cloud Server 8
+    ip: 222.111.222
+    status: ok
+    checks: [ok,ok,ok,error,ok,disabled,warning,ok,warning]
+  9:
+    name: My Cloud Server 9
+    ip: 222.111.222
+    status: ok
+    checks: [ok,ok,ok,error,ok,disabled,warning,ok,error,error]
+  10:
+    name: My Cloud Server 10
+    ip: 222.111.222
+    status: error
+
+itemStatuses:
+ ok: "<div class='title rs-no-wrap rs-status-ok'><strong>Active</strong></div><div class='rs-quiet'>Use When: Item is working correctly.</div>"
+ ok rs-table-status-striped: "<div class='title rs-no-wrap rs-status-ok'><strong>Action Pending</strong></div><div class='rs-quiet'>Use When: User-initiated action is pending and item is still active.</div>"
+ warning: "<div class='title rs-no-wrap rs-status-processing'><strong>Warning</strong> </div><div class='rs-quiet'>Use When: Item is intermittently working or is trending towards unhealthy.</div></div>"
+ warning rs-table-status-striped: "<div class='title rs-no-wrap rs-status-processing'><strong>Intermittently Available</strong> </div><div class='rs-quiet'>Use When: Item is running a user-initiated process that causes it to intermittently work. It is temporarily in this state and will return to normal afterwards.</div></div>"
+ error: "<div class='title rs-no-wrap rs-status-error'><strong>Error</strong></div><div class='rs-quiet'>Use When: Item is not working as intended.<br>Inform the user they should contact Support for troubleshooting.</div>"
+
+checkStatuses:
+ ok: "<div class='rs-no-wrap rs-status-ok'>HTTP Check (Website) OK</div><p class='rs-no-wrap rs-quiet'>Since: Nov 2, 2013 10:52:55 PM UTC</p><span class='rs-quiet'>HTTP connection time is normal</span>"
+ warning: "<div class='title rs-no-wrap rs-status-warning'>HTTP Check (Website) Critical</div><p class='rs-no-wrap rs-quiet'>Since: Nov 12, 2013 8:45:46 PM UTC</p><span class='rs-quiet'>Could not resolve DNS</span>"
+ error: "<div class='rs-no-wrap rs-status-error'>HTTP Check (Website) Critical</div><p class='rs-no-wrap rs-quiet'>Since: Nov 12, 2013 8:45:46 PM UTC</p><span class='rs-quiet'>Could not resolve DNS</span>"
+ disabled: "<div class='rs-no-wrap'>HTTP Check (Website) Disabled</div><span class='rs-no-wrap rs-quiet'>Last state was OK on Jun 27, 2013 8:59:41 PM UTC</span>"
+---
+
+<div class="rs-main">
+  <div class="rs-sidebar rs-facet">
+    <div class="rs-inner">
+      <div class="rs-facet-header">
+        <div class="rs-facet-clear-link rs-hidden">clear all</div>
+        <div class="rs-facet-title">Filter Servers</div>
+      </div>
+      <div class="rs-facet-section">
+        <div class="rs-facet-section-header">
+          <div class="rs-facet-clear-link rs-hidden">clear</div>
+          <div class="rs-facet-section-title">Tags</div>
+        </div>
+        <div class="rs-facet-section-body">
+          <ul class="rs-facet-list">
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Development</div>
+              <div class="rs-facet-count">(3)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Staging</div>
+              <div class="rs-facet-count">(1)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Production</div>
+              <div class="rs-facet-count">(1)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Billing</div>
+              <div class="rs-facet-count">(3)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Marketing</div>
+              <div class="rs-facet-count">(2)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Product</div>
+              <div class="rs-facet-count">(5)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Engineering</div>
+              <div class="rs-facet-count">(8)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Sales</div>
+              <div class="rs-facet-count">(2)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Finance</div>
+              <div class="rs-facet-count">(1)</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rs-facet-section">
+        <div class="rs-facet-section-header">
+          <div class="rs-facet-clear-link rs-hidden">clear</div>
+          <div class="rs-facet-section-title">Status</div>
+        </div>
+        <div class="rs-facet-section-body">
+          <ul class="rs-facet-list">
+            <li class="rs-facet-item">
+              <i class="rs-status-error"></i>
+              <div class="rs-facet-label">Error</div>
+              <div class="rs-facet-count">(2)</div>
+            </li>
+            <li class="rs-facet-item">
+              <i class="rs-status-warning"></i>
+              <div class="rs-facet-label">Rebooting</div>
+              <div class="rs-facet-count">(3)</div>
+            </li>
+            <li class="rs-facet-item disabled">
+              <i class="rs-status-ok"></i>
+              <div class="rs-facet-label">Active</div>
+              <div class="rs-facet-count">(5)</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rs-facet-section">
+        <div class="rs-facet-section-header">
+          <div class="rs-facet-clear-link rs-hidden">clear</div>
+          <div class="rs-facet-section-title">Image</div>
+        </div>
+        <div class="rs-facet-section-body">
+          <ul class="rs-facet-list">
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Ubuntu 10.04 LTS</div>
+              <div class="rs-facet-count">(3)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">RHEL 6.5</div>
+              <div class="rs-facet-count">(1)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Debian 7 Wheezy</div>
+              <div class="rs-facet-count">(2)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">Vyatta Network OS 6.5R2</div>
+              <div class="rs-facet-count">(4)</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rs-facet-section">
+        <div class="rs-facet-section-header">
+          <div class="rs-facet-clear-link rs-hidden">clear</div>
+          <div class="rs-facet-section-title">Flavor</div>
+        </div>
+        <div class="rs-facet-section-body">
+          <ul class="rs-facet-list">
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">2 GB Standard Instance</div>
+              <div class="rs-facet-count">(10)</div>
+            </li>
+            <li class="rs-facet-item">
+              <div class="rs-facet-label">512 MB Standard Instance</div>
+              <div class="rs-facet-count">(10)</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rs-content rs-panel">
+    <div class="rs-inner">
+      <h2 class="rs-page-title">Cloud Servers</h2>
+      <div class="rs-btn-group">
+        <a href="create.html" class="rs-btn rs-btn-primary">Create Server</a>
+        <button class="rs-btn modify-selected" disabled>Delete</button>
+      </div>
+      <div class="rs-list-table rs-select-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="rs-table-status"></td>
+              <th class="rs-table-checkbox"><input type="checkbox" class="select-all" /></td>
+              <th class="rs-table-cog"></th>
+              <th>
+                <a href="#" class="rs-table-sort rs-table-sort-desc">
+                  <span class="rs-table-sort-text">Name</span>
+                  <span class="rs-table-sort-indicator"></span>
+                </a>
+              </th>
+              <th>IP Address</th>
+              <th>Monitoring</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for server in page.servers %}
+            {% assign serverStatus = server[1].status %}
+            <tr id="row-{{server[1].id}}">
+              <td class="rs-table-status rs-table-status-{{ server[1].status }} tip" title="{{ page.itemStatuses[serverStatus] }}" data-delay="1" id="row-status-{{server[1].id}}"></td>
+              <td class="rs-table-checkbox"><input type="checkbox" /></td>
+              <td class="rs-table-cog">
+                <div class="rs-dropdown">
+                  <div class="rs-cog rs-dropdown-toggle"></div>
+                  <ul class="rs-dropdown-menu">
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category" id="first">Identify</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Rename Server&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Tag Server&hellip;</a></li>
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category">Image</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Create Image&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Schedule Daily Image&hellip;</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td class="rs-table-text"><a href="{{ site.baseurl }}/demos/details.html">{{ server[1].name }}</a></td>
+              <td class="rs-table-text">{{ server[1].ip }}</td>
+              <td class="rs-table-status-list">
+              <ul class="rs-status-list">
+                {% if server[1].checks %}
+                {% for check in server[1].checks %}
+                <li class="rs-status-list-item tooltip-toggle tip" title="{{ page.checkStatuses[check]}}" data-delay="0">
+                  <div class="rs-icon-status rs-status-{{ check }}"></div>
+                </li>
+                {% endfor %}
+                {% else %}
+                  <button type="button" class="rs-plus tip" title="Create Monitoring Check" data-delay="1"></button>
+                {% endif %}
+              </ul>
+            </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
