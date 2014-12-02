@@ -116,9 +116,7 @@ input::-moz-focus-inner {
 
 .rs-link {
   display: inline;
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   color: $blue;
   background: transparent;
   border: none;
@@ -126,11 +124,6 @@ input::-moz-focus-inner {
   &:hover,
   &.hover {
     text-decoration: underline;
-    color: $blue;
-  }
-
-  &:focus {
-    outline: 0;
   }
 
   &[disabled],
