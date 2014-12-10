@@ -255,13 +255,13 @@
     display: table-cell;
     width: 230px;
     background-color: #f5f5f5;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid $grey200;
     padding-bottom: 15px;
   }
 
   a,
   .rs-dropdown-link {
-    color: #333;
+    color: $grey600;
     display: block;
     white-space: nowrap;
     text-overflow: ellipsis;
