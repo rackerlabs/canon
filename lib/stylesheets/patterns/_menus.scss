@@ -275,4 +275,12 @@
       text-decoration: underline;
     }
   }
+
+  .rs-dropdown-caption {
+    display: block;
+    color: $grey400;
+    padding: 2px 35px;
+    font-size: 0.8em;
+    line-height: 1em;
+  }
 }
