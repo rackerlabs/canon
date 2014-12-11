@@ -115,6 +115,25 @@ input::-moz-focus-inner {
   }
 }
 
+.rs-link {
+  display: inline;
+  padding: 0;
+  color: $blue;
+  background: transparent;
+  border: none;
+
+  &:hover,
+  &.hover {
+    text-decoration: underline;
+  }
+
+  &[disabled],
+  &.disabled {
+    text-decoration: none;
+    color: $grey-light;
+  }
+}
+
 .rs-btn-link {
   height: 25px;
   padding-left: 0;
