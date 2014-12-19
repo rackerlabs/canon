@@ -28,6 +28,21 @@ The Canon server is now running at http://0.0.0.0:8000. Before running automated
 tests, you'll need to set the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment
 variables. If you run into any issues, submit an issue.
 
+### VAGRANT SUPPORT
+
+If you are on Windows, or you don't already have a working Ruby and Node.js
+development environment, it may be easier to run the development environment
+inside of an automatically-configured Vagrant VM.
+
+First install [Vagrant](https://www.vagrantup.com/downloads.html) and
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads), then from the command
+line enter:
+
+    $ vagrant up
+    $ vagrant ssh -c 'cd /vagrant; grunt server'
+
+Read the comments in the [Vagrantfile](Vagrantfile) for more details.
+
 ## CONTRIBUTING
 
 We use [GitHub flow](http://scottchacon.com/2011/08/31/github-flow.html) as our
