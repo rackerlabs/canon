@@ -298,7 +298,7 @@ textarea {
 
 /* Messaging */
 .rs-help-block {
-  color: $grey500;
+  color: lighten($grey600, 20%);
 }
 
 .rs-help-inline,
