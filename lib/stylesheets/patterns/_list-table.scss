@@ -252,10 +252,11 @@ td {
 .rs-table-overlay-loading .rs-table-overlay-message {
   color: $grey500;
   &:before {
-    background: image-url('clouding.gif') center center no-repeat;
+    background: image-url('clouding@2x.gif') center center no-repeat;
+    background-size: auto 20px;
     content: "";
     display: block;
-    height: 30px;
+    height: 20px;
     width: 100%;
     position: relative;
     left: -5px;
