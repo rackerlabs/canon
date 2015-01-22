@@ -8,14 +8,14 @@ input::-moz-focus-inner {
 .rs-btn {
   padding: 2px 10px 1px;
   margin: 0;
-  color: $grey-darker;
+  color: $grey600;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
   text-align: center;
   vertical-align: middle;
   background-color: #c5c5c5;
-  border: 1px solid $grey;
+  border: 1px solid $grey400;
   cursor: pointer;
   white-space: nowrap;
 
@@ -27,7 +27,7 @@ input::-moz-focus-inner {
   &:hover,
   &.hover {
     text-decoration: none;
-    color: $grey-darker;
+    color: $grey600;
     background-color: #d7d7d7;
 
     @include background-image(linear-gradient($white, #d7d7d7));
@@ -42,9 +42,9 @@ input::-moz-focus-inner {
 
   &[disabled],
   &.disabled {
-    color: $grey-light;
+    color: $grey300;
     background: #f5f5f5;
-    border-color: $grey-light;
+    border-color: $grey300;
     cursor: default;
 
     @include box-shadow(none);
@@ -130,7 +130,7 @@ input::-moz-focus-inner {
   &[disabled],
   &.disabled {
     text-decoration: none;
-    color: $grey-light;
+    color: $grey300;
   }
 }
 
@@ -159,7 +159,7 @@ input::-moz-focus-inner {
   &.disabled {
     text-decoration: none;
     background: transparent;
-    color: $grey-light;
+    color: $grey300;
   }
 }
 

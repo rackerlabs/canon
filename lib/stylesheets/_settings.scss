@@ -5,8 +5,6 @@
 $black: #000;
 $white: #fff;
 
-$grey: #999;
-
 $grey50: #e7e7e7;
 $grey100: #d8d8d8;
 $grey150: #e1e1e1;
@@ -14,14 +12,10 @@ $grey200: #ddd;
 $grey250: #d3d3d3;
 $grey300: #ccc;
 $grey400: #999;
+
+// Grey that can be used on all white backgrounds
 $grey500: #666;
 $grey600: #333;
-
-$grey-darker: #333;
-$grey-dark: #666;
-$grey: #999;
-$grey-light: #ccc;
-$grey-lightest: #ddd;
 
 // Red
 $red: #c40022;
@@ -129,7 +123,7 @@ $nav-branding-width: 132px;
 // Patterns
 
 $nav-primary-link: #888;
-$nav-primary-link-hover: $grey-darker;
+$nav-primary-link-hover: $grey600;
 $nav-primary-link-active: $red;
 
 // Z-index
