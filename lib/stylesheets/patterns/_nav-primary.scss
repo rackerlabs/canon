@@ -29,7 +29,7 @@
     vertical-align: text-bottom;
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -19px;
     @include icon-sprite-position(caret-primary, 16px);
 
     &:before {
@@ -73,14 +73,10 @@
     }
 
     &.rs-dropdown {
-      padding-right: 25px;
+      padding-right: 0px;
 
       .rs-dropdown-menu {
         margin-top: -2px;
-      }
-
-      &.active .rs-caret {
-        right: -25px;
       }
     }
 
