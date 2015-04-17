@@ -11,7 +11,7 @@
 
   .rs-nav-link {
     line-height: 1em;
-    padding: 8px 32px 2px 33px;
+    padding: 8px 15px 2px 15px;
     color: $nav-primary-link;
     font-size: 18px;
     font-weight: 400;
@@ -44,6 +44,7 @@
 
   .rs-nav-item {
     border: 1px solid transparent;
+    margin: 0 5px;
 
     &:hover,
     &.hover {
@@ -72,9 +73,13 @@
     }
 
     &.rs-dropdown {
+      & > a,
+      .rs-nav-link {
+        padding-right: 35px;
+      }
       .rs-dropdown-menu {
         margin: -2px 0 0 0px;
-        left: 32px;
+        right: -15px;
       }
     }
 
@@ -105,6 +110,6 @@
   }
 
   & + .rs-nav {
-    padding-left: $nav-branding-width + 7px;
+    padding-left: $nav-branding-width + 20px;
   }
 }
