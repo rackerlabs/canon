@@ -327,7 +327,7 @@ textarea {
 
   .rs-validation-indicator {
     @include icon;
-    @include icon-sprite(ok-circle);
+    @include sprite($ok-circle);
   }
 }
 
@@ -380,6 +380,6 @@ textarea {
 
   .rs-validation-indicator {
     @include icon(13px, 12px);
-    @include icon-sprite(exclamation-sign);
+    @include sprite($exclamation-sign);
   }
 }

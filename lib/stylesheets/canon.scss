@@ -1,15 +1,14 @@
-@import "compass";
-@import "compass/support";
 @import "normalize-scss/normalize";
 
-@import "custom-fonts";
 @import "mixins";
 @import "settings";
+@import "custom-fonts";
 
+@import "spritesheet";
+@import "sprites";
 @import "base";
 @import "grid";
 @import "layout";
-@import "sprites";
 @import "utilities";
 @import "animations";
 
@@ -32,4 +31,4 @@
 @import "patterns/tabs";
 @import "patterns/tooltip";
 @import "patterns/status-list";
-@import "patterns/facets"
+@import "patterns/facets";

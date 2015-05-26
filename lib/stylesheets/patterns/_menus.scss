@@ -123,7 +123,7 @@
   }
 
   .rs-icon-external {
-    @include icon-sprite(external);
+    @include sprite($external);
   }
 
   .rs-dropdown-item.disabled {
@@ -177,7 +177,7 @@
         .rs-icon-external-dark {
           visibility: visible;
 
-          @include icon-sprite(external-dark-hover);
+          @include sprite($external-dark-hover);
         }
       }
     }
