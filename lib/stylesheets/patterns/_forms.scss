@@ -75,14 +75,14 @@ textarea,
   border: 1px solid $grey400;
 
   @include inline-block;
-  @include border-radius(3px);
+  border-radius: 3px;
 
   &:focus,
   &.focus {
     background-color: #f1f6ff;
     outline: none;
 
-    @include box-shadow(0 0 0 2px $blue400);
+    box-shadow: 0 0 0 2px $blue400;
   }
 
   &[readonly],
@@ -104,17 +104,12 @@ input[type="url"],
 textarea,
 .rs-input {
   box-sizing: border-box;
-
-  @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.15) inset);
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15);
 
   &:focus,
   &.focus {
     border-color: rgba(0, 0, 0, 0.15);
-
-    @include box-shadow(
-      0 0 0 2px $blue400,
-      0 1px 3px 0 rgba(0, 0, 0, 0.15) inset
-    );
+    box-shadow: 0 0 0 2px $blue400, inset 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -350,8 +345,7 @@ textarea {
     &:focus,
     &.focus {
       background-color: #fff6f6;
-
-      @include box-shadow(0 0 0 2px $red);
+      box-shadow: 0 0 0 2px $red;
     }
   }
 
@@ -365,11 +359,7 @@ textarea {
     &:focus,
     &.focus {
       border-color: rgba(0, 0, 0, 0.15);
-
-      @include box-shadow(
-        0 0 0 2px $red,
-        0 1px 3px 0 rgba(0, 0, 0, 0.15) inset
-      );
+      box-shadow: 0 0 0 2px $red, inset 0 1px 3px 0 rgba(0, 0, 0, 0.15);
     }
   }
 

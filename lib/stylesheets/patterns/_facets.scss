@@ -86,7 +86,7 @@
   padding: 2px 0px 0px 0px;
   display: block;
   cursor: pointer;
-  @include border-radius(3px);
+  border-radius: 3px;
 
   &.hover,
   &:hover {

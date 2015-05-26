@@ -37,8 +37,8 @@
 
 .rs-segment {
   float: left;
-  @include transition-property(width);
-  @include transition-duration(1s);
+  transition-property: width;
+  transition-duration: 1s;
 }
 
 .rs-bar {
