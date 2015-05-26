@@ -72,7 +72,7 @@
   display: block;
   width: 100%;
   min-height: 20px; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
+  box-sizing: border-box; // Makes inputs behave like true block-level elements
 }
 
 @mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth, $collapseGridGutter:"") {

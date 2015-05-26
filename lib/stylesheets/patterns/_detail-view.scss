@@ -52,7 +52,7 @@
   > .rs-detail-section-header:hover,
   > .rs-detail-section-header:focus {
     outline: none;
-    @include background(linear-gradient(#f7f7f7, #fff));
+    background-image: linear-gradient(#f7f7f7, #fff);
   }
 }
 

@@ -8,7 +8,7 @@
   vertical-align: baseline;
   white-space: nowrap;
   background-color: $grey300;
-  @include border-radius(3px);
+  border-radius: 3px;
 
   &:empty {
     display: none;
