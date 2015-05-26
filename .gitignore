@@ -1,6 +1,7 @@
 .sass-cache/
 build/
 components/
+lib/images/icons.png
 dist/
 log/
 node_modules/
