@@ -6,13 +6,36 @@ module.exports = function (grunt) {
     clean: {
       all: ['.sass-cache', '_site', 'build', 'dist', 'package']
     },
-    compass: {
+    sprite:{
       all: {
-        config: 'config/compass.rb',
-        options: {
-          bundleExec: true
+        src: 'lib/images/icon/*.png',
+        dest: 'lib/images/icons.png',
+        imgPath: 'icons.png',
+        destCss: 'lib/stylesheets/_spritesheet.scss',
+        padding: 10,
+        algorithm: 'top-down',
+        cssOpts: {functions: false}
+      }
+    },
+    sass: {
+      options: {
+        includePaths: ['./components'],
+        outputStyle: 'compact'
+      },
+      dist: {
+        files: {
+          'dist/canon.css': 'lib/stylesheets/canon.scss'
         }
       }
+    },
+    autoprefixer: {
+      dist: {
+        options: {
+          browsers: ['last 2 versions', 'ie 8', 'ie 9']
+        },
+        src: 'dist/canon.css',
+        dest: 'dist/canon.css'
+      },
     },
     cssmin: {
       all: {
@@ -201,7 +224,6 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -209,13 +231,16 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('default', ['build', 'test']);
 
-  grunt.registerTask('build', ['clean', 'copy:fonts', 'copy:images', 'build:css', 'build:js', 'build:website']);
-  grunt.registerTask('build:css', ['compass', 'cssmin']);
+  grunt.registerTask('build', ['clean', 'copy:fonts', 'sprite', 'copy:images', 'build:css', 'build:js', 'build:website']);
+  grunt.registerTask('build:css', ['sass', 'autoprefixer', 'cssmin']);
   grunt.registerTask('build:js', ['requirejs', 'uglify']);
   grunt.registerTask('build:website', ['exec:jekyll', 'copy:website']);
   grunt.registerTask('build:websiteProd', ['exec:jekyllProd', 'copy:website']);
