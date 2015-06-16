@@ -164,8 +164,6 @@ input::-moz-focus-inner {
 }
 
 .rs-cog {
-  width: 16px;
-  height: 16px;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -173,20 +171,20 @@ input::-moz-focus-inner {
   cursor: pointer;
 
   @include inline-block;
-  @include sprite($cog);
+  @include sprite($cog, 16px, 16px);
   @include hide-text-content();
 
   &:active,
   &.active,
   &:hover,
   &.hover {
-    @include sprite($cog-hover);
+    @include sprite-position($cog-hover);
   }
 
   &[disabled],
   &.disabled {
     cursor: default;
-    @include sprite($cog-disabled);
+    @include sprite-position($cog-disabled);
   }
 }
 
@@ -208,14 +206,11 @@ input::-moz-focus-inner {
   &.active,
   &:hover,
   &.hover {
-    @include sprite-image($plus-dotted-blue);
-    @include sprite-position($plus-dotted-blue)
+    @include sprite-position($plus-dotted-blue);
   }
 }
 
 .rs-delete {
-  width: 16px;
-  height: 16px;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -223,7 +218,7 @@ input::-moz-focus-inner {
   cursor: pointer;
 
   @include inline-block;
-  @include sprite($minus-circle-808080);
+  @include sprite($minus-circle-808080, 16px, 16px);
   @include hide-text-content();
 
   &:active,
@@ -232,31 +227,26 @@ input::-moz-focus-inner {
   &.hover,
   &:focus,
   &.focus {
-    @include sprite($minus-circle-red);
+    @include sprite-position($minus-circle-red);
   }
 }
 
 .rs-caret {
-  width: 10px;
-  height: 10px;
-
   @include inline-block;
-  @include sprite($caret);
+  @include sprite($caret, 10px, 10px);
 
   &[disabled],
   &.disabled {
     cursor: default;
-    @include sprite($caret-disabled);
+    @include sprite-position($caret-disabled);
   }
 }
 
 .rs-btn-action {
   > .rs-cog {
-    width: 13px;
-    height: 13px;
     margin-top: -2px;
     margin-right: 1px;
-    @include sprite($cog-small);
+    @include sprite($cog-small, 13px, 13px);
   }
 
   > .rs-caret {
@@ -268,12 +258,12 @@ input::-moz-focus-inner {
   &.disabled {
     > .rs-cog {
       cursor: default;
-      @include sprite($cog-small-disabled);
+      @include sprite-position($cog-small-disabled);
     }
 
     > .rs-caret {
       cursor: default;
-      @include sprite($caret-disabled);
+      @include sprite-position($caret-disabled);
     }
   }
 }
@@ -300,15 +290,13 @@ input::-moz-focus-inner {
 }
 
 .rs-edit {
-  width: 19px;
-  height: 19px;
   margin: 0;
   padding: 0;
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
 
-  @include sprite($pencil-666);
+  @include sprite($pencil-666, 19px, 19px);
   @include inline-block();
   @include hide-text-content();
 
@@ -327,7 +315,7 @@ input::-moz-focus-inner {
     border-color: transparent;
     cursor: default;
 
-    @include sprite($pencil-999);
+    @include sprite-position($pencil-999);
   }
 }
 
