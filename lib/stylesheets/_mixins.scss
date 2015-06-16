@@ -188,11 +188,21 @@
   background-image: url(#{$sprite-image});
 }
 
-@mixin sprite($sprite) {
+@mixin sprite($sprite, $width: 'auto', $height: 'auto') {
   @include sprite-image($sprite);
   @include sprite-position($sprite);
-  @include sprite-width($sprite);
-  @include sprite-height($sprite);
+  background-repeat: no-repeat;
+
+  @if $width == 'auto' {
+    @include sprite-width($sprite);
+  } @else {
+    width: $width;
+  }
+  @if $height == 'auto' {
+    @include sprite-height($sprite);
+  } @else {
+    height: $height;
+  }
 }
 
 @mixin sprite-position($sprite, $xOffset: null) {
@@ -214,5 +224,6 @@
   display: inline-block;
   width: $width;
   height: $height;
-  vertical-align: text-top;
+  vertical-align: baseline;
+  background-repeat: no-repeat;
 }
