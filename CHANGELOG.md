@@ -1,3 +1,13 @@
+## v1.8.0 (June 17, 2015)
+
+- Remove compass from canon
+- Create a wider clickable area for primary nav link
+- Added and switched to 2x clouding image
+- Fix grey color on white background
+- added Vagrantfile
+- Align branding (rackspace logo) to the left edge instead of centering
+- Add rs-link class for link buttons set to `margin-top: 0;`
+
 ## v1.7.0 (October 28, 2014)
 
 - Fix button wrapping on smaller screens.
