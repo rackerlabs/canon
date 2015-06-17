@@ -1,47 +1,7 @@
-@include font-face(
-  'Source Sans Pro',
-  font-files(
-    'SourceSansPro-Light-webfont.woff',
-    'SourceSansPro-Light-webfont.ttf',
-    'SourceSansPro-Light-webfont.svg#SourceSansProLight'
-  ),
-  'SourceSansPro-Light-webfont.eot',
-  200,
-  normal
-);
+@include font-face('Source Sans Pro', 'SourceSansPro-Light-webfont', 'SourceSansProLight', 200);
 
-@include font-face(
-  'Source Sans Pro',
-  font-files(
-    'SourceSansPro-Regular-webfont.woff',
-    'SourceSansPro-Regular-webfont.ttf',
-    'SourceSansPro-Regular-webfont.svg#SourceSansProRegular'
-  ),
-  'SourceSansPro-Regular-webfont.eot',
-  400,
-  normal
-);
+@include font-face('Source Sans Pro', 'SourceSansPro-Regular-webfont', 'SourceSansProRegular', 400);
 
-@include font-face(
-  'Source Sans Pro',
-  font-files(
-    'SourceSansPro-Semibold-webfont.woff',
-    'SourceSansPro-Semibold-webfont.ttf',
-    'SourceSansPro-Semibold-webfont.svg#SourceSansProSemibold'
-  ),
-  'SourceSansPro-Semibold-webfont.eot',
-  600,
-  normal
-);
+@include font-face('Source Sans Pro', 'SourceSansPro-Semibold-webfont', 'SourceSansProSemibold', 600);
 
-@include font-face(
-  'Source Sans Pro',
-  font-files(
-    'SourceSansPro-Bold-webfont.woff',
-    'SourceSansPro-Bold-webfont.ttf',
-    'SourceSansPro-Bold-webfont.svg#SourceSansProBold'
-  ),
-  'SourceSansPro-Bold-webfont.eot',
-  700,
-  normal
-);
+@include font-face('Source Sans Pro', 'SourceSansPro-Bold-webfont', 'SourceSansProBold', 700);
