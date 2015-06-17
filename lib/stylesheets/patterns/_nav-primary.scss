@@ -11,7 +11,7 @@
 
   .rs-nav-link {
     line-height: 1em;
-    padding: 8px 15px 2px 15px;
+    padding: 8px 15px 7px 15px;
     color: $nav-primary-link;
     font-size: 18px;
     font-weight: 400;
@@ -30,7 +30,8 @@
     position: absolute;
     top: 50%;
     right: 12px;
-    @include sprite-position($caret-primary, 10px);
+    margin-top: -2px;
+    @include sprite-position($caret-primary, 16px);
 
     &:before {
       content: "";
@@ -87,7 +88,7 @@
     &.rs-dropdown.hover,
     &.rs-dropdown.active {
       .rs-caret {
-        @include sprite-position($caret-primary-active, 10px);
+        @include sprite-position($caret-primary-active, 16px);
       }
     }
 
