@@ -129,27 +129,24 @@
   white-space: nowrap;
 }
 
+@function font-url($path) {
+  @return url(#{$canon-font-path}#{$path});
+}
+
 @mixin font-face(
   $name,
-  $font-files,
-  $eot: false,
-  $weight: false,
-  $style: false
+  $path,
+  $name-concat,
+  $weight: normal,
+  $style: normal
 ) {
-  $iefont: unquote("#{$eot}?#iefix");
+  $path: $canon-font-path + $path;
   @font-face {
-    font-family: quote($name);
-    @if $eot {
-      src: font-url($eot);
-      $font-files: font-url($iefont) unquote("format('eot')"), $font-files;
-    }
-    src: $font-files;
-    @if $weight {
-      font-weight: $weight;
-    }
-    @if $style {
-      font-style: $style;
-    }
+    font-family: #{$name};
+    src: url('#{$path}.eot');
+    src: url('#{$path}.eot?#iefix') format('eot'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$name-concat}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
   }
 }
 
@@ -185,7 +182,7 @@
 @mixin sprite-image($sprite) {
   $sprite-image: nth($sprite, 9);
   background-color: transparent;
-  background-image: url(#{$sprite-image});
+  background-image: url(#{$canon-image-path}#{$sprite-image});
 }
 
 @mixin sprite($sprite, $width: 'auto', $height: 'auto') {
@@ -226,4 +223,8 @@
   height: $height;
   vertical-align: baseline;
   background-repeat: no-repeat;
+}
+
+@function image-url($path) {
+  @return url(#{$canon-image-path}#{$path});
 }
