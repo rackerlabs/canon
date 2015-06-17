@@ -28,9 +28,8 @@
     height: 13px;
     vertical-align: text-bottom;
     position: absolute;
-    top: 50%;
+    top: 13px;
     right: 12px;
-    margin-top: -2px;
     @include sprite-position($caret-primary, 16px);
 
     &:before {
