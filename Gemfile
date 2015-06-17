@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'capybara'
 gem 'ci_reporter'
-gem 'compass'
 gem 'fog'
 gem 'green_onion', :git => 'git://github.com/tomeara/green_onion.git'
 gem 'green_onion-sauce', :git => 'git://github.com/bradgignac/green_onion-sauce.git'

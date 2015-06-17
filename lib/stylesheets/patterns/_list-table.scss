@@ -190,21 +190,21 @@ td {
 }
 
 .rs-table-sort-asc > .rs-table-sort-indicator {
-  @include icon-sprite(sort-ascending);
+  @include sprite($sort-ascending);
 }
 
 .rs-table-sort-asc.hover > .rs-table-sort-indicator,
 .rs-table-sort-asc:hover > .rs-table-sort-indicator {
-  @include icon-sprite(sort-ascending-hover);
+  @include sprite($sort-ascending-hover);
 }
 
 .rs-table-sort-desc > .rs-table-sort-indicator {
-  @include icon-sprite(sort-descending);
+  @include sprite($sort-descending);
 }
 
 .rs-table-sort-desc.hover > .rs-table-sort-indicator,
 .rs-table-sort-desc:hover > .rs-table-sort-indicator {
-  @include icon-sprite(sort-descending-hover);
+  @include sprite($sort-descending-hover);
 }
 
 /* Base Table Overlay */

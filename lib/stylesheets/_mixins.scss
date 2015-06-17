@@ -72,7 +72,7 @@
   display: block;
   width: 100%;
   min-height: 20px; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
+  box-sizing: border-box; // Makes inputs behave like true block-level elements
 }
 
 @mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth, $collapseGridGutter:"") {
@@ -127,4 +127,103 @@
   text-indent: 100%;
   overflow: hidden;
   white-space: nowrap;
+}
+
+@mixin font-face(
+  $name,
+  $font-files,
+  $eot: false,
+  $weight: false,
+  $style: false
+) {
+  $iefont: unquote("#{$eot}?#iefix");
+  @font-face {
+    font-family: quote($name);
+    @if $eot {
+      src: font-url($eot);
+      $font-files: font-url($iefont) unquote("format('eot')"), $font-files;
+    }
+    src: $font-files;
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $style {
+      font-style: $style;
+    }
+  }
+}
+
+@mixin inline-block() {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+@mixin clearfix {
+  overflow: hidden;
+}
+
+// Sprites
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-color: transparent;
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite, $width: 'auto', $height: 'auto') {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+
+  @if $width == 'auto' {
+    @include sprite-width($sprite);
+  } @else {
+    width: $width;
+  }
+  @if $height == 'auto' {
+    @include sprite-height($sprite);
+  } @else {
+    height: $height;
+  }
+}
+
+@mixin sprite-position($sprite, $xOffset: null) {
+  $sprite-offset-x: if($xOffset, $xOffset, nth($sprite, 3));
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .rs-icon-#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+@mixin icon($width: 13px, $height: 13px) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  vertical-align: baseline;
+  background-repeat: no-repeat;
 }

@@ -126,7 +126,7 @@ code {
     white-space: nowrap;
     word-wrap: normal;
     font-size: 12px;
-    @include border-radius(3px);
+    border-radius: 3px;
   }
 
   pre code {
@@ -145,7 +145,7 @@ code {
     padding: 5px 10px;
     white-space: pre;
     word-wrap: normal;
-    @include border-radius(3px);
+    border-radius: 3px;
   }
 
 // Typography Classes

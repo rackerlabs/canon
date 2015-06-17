@@ -73,12 +73,12 @@
 
 .rs-facet-toggle-arrow {
   @include icon;
-  @include icon-sprite(arrow-blue-right);
+  @include sprite($arrow-blue-right);
 }
 
 .rs-facet-section.expanded .rs-facet-section-toggle .rs-facet-toggle-arrow {
   @include icon;
-  @include icon-sprite(arrow-blue-up);
+  @include sprite($arrow-blue-up);
 }
 
 .rs-facet-item {
@@ -86,7 +86,7 @@
   padding: 2px 0px 0px 0px;
   display: block;
   cursor: pointer;
-  @include border-radius(3px);
+  border-radius: 3px;
 
   &.hover,
   &:hover {
@@ -152,15 +152,15 @@
   }
 
   .rs-status-ok {
-    @include icon-sprite(status-green);
+    @include sprite($status-green);
   }
 
   .rs-status-warning {
-    @include icon-sprite(status-yellow);
+    @include sprite($status-yellow);
   }
 
   .rs-status-error {
-    @include icon-sprite(status-red);
+    @include sprite($status-red);
   }
 
 }

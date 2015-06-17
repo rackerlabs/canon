@@ -1,13 +1,4 @@
-$icon-spacing: 10px;
-
-@import "icon/*.png";
-
-@mixin icon($width: 13px, $height: 13px) {
-  display: inline-block;
-  width: $width;
-  height: $height;
-  vertical-align: text-top;
-}
+@include sprites($spritesheet-sprites);
 
 .rs-icon-external,
 .rs-icon-external-dark {
@@ -16,21 +7,21 @@ $icon-spacing: 10px;
 }
 
 .rs-icon-external {
-  @include icon-sprite(external-blue);
+  @include sprite($external-blue);
 }
 
 .rs-icon-external-dark {
-  @include icon-sprite(external-dark);
+  @include sprite($external-dark);
 }
 
 .rs-icon-help {
   @include icon;
-  @include icon-sprite(help);
+  @include sprite($help);
   margin-left: 5px;
 }
 
 .rs-icon-error-indicator {
   @include icon;
-  @include icon-sprite(exclamation-sign);
+  @include sprite($exclamation-sign);
   margin-left: 5px;
 }

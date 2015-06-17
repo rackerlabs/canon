@@ -55,12 +55,12 @@ body.rs-responsive {
       display: block;
       width: 100%;
       margin-left: 0;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
     }
     .span-12,
     .rs-row .span-12, .rs-row.collapse .span-12 {
       width: 100%;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
     }
     .rs-row [class*="offset"]:not([class*="small-span-"]):first-child, .rs-row.collapse [class*="offset"]:not([class*="small-span-"]):first-child {
       margin-left: 0;

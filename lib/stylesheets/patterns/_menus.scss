@@ -17,12 +17,12 @@
   min-width: 100%;
   background-color: #fff;
   border: 1px solid $grey400;
+  border-radius: 3px;
+  box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.2);
   list-style: none;
   z-index: $zindexMenu;
 
   @include animate-visibility;
-  @include border-radius(3px);
-  @include box-shadow(0 0 9px 2px rgba(0, 0, 0, 0.2));
 
   a,
   .rs-dropdown-link {
@@ -74,11 +74,8 @@
   .rs-dropdown-menu {
     padding: 0 0 10px;
     border: 0;
+    border-radius: 0 0 3px 3px;
     border-top: 2px solid $red;
-
-    @include border-radius(0);
-    @include border-corner-radius(bottom, left, 3px);
-    @include border-corner-radius(bottom, right, 3px);
 
     a,
     .rs-dropdown-link {
@@ -126,7 +123,7 @@
   }
 
   .rs-icon-external {
-    @include icon-sprite(external);
+    @include sprite($external);
   }
 
   .rs-dropdown-item.disabled {
@@ -180,7 +177,7 @@
         .rs-icon-external-dark {
           visibility: visible;
 
-          @include icon-sprite(external-dark-hover);
+          @include sprite($external-dark-hover);
         }
       }
     }

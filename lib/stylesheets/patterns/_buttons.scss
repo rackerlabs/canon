@@ -20,9 +20,9 @@ input::-moz-focus-inner {
   white-space: nowrap;
 
   @include inline-block;
-  @include background-image(linear-gradient($white, #c5c5c5));
-  @include border-radius(3px);
-  @include text-shadow(0 1px 1px $white);
+  background-image: linear-gradient($white, #c5c5c5);
+  border-radius: 3px;
+  text-shadow: 0 1px 1px $white;
 
   &:hover,
   &.hover {
@@ -30,14 +30,14 @@ input::-moz-focus-inner {
     color: $grey600;
     background-color: #d7d7d7;
 
-    @include background-image(linear-gradient($white, #d7d7d7));
+    background-image: linear-gradient($white, #d7d7d7);
   }
 
   &:active,
   &.active {
     background: #f3f3f3;
 
-    @include box-shadow(0 0 4px 0 rgba(0, 0, 0, 0.3) inset);
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
   }
 
   &[disabled],
@@ -47,7 +47,7 @@ input::-moz-focus-inner {
     border-color: $grey300;
     cursor: default;
 
-    @include box-shadow(none);
+    box-shadow: none;
   }
 }
 
@@ -56,22 +56,22 @@ input::-moz-focus-inner {
   background-color: #333;
   border: 1px solid #333;
 
-  @include background-image(linear-gradient(#666, #333));
-  @include text-shadow(0 -1px 1px rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(#666, #333);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
 
   &:hover,
   &.hover {
     background-color: #555;
     color: $white;
 
-    @include background-image(linear-gradient(#777, #555));
+    background-image: linear-gradient(#777, #555);
   }
 
   &:active,
   &.active {
     background: #666;
 
-    @include box-shadow(0 0 4px 0 rgba(0, 0, 0, 0.6) inset);
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.6);
   }
 
   &[disabled],
@@ -79,7 +79,7 @@ input::-moz-focus-inner {
     color: #ccc;
     background: #999;
     border-color: #666;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 }
 
@@ -88,22 +88,22 @@ input::-moz-focus-inner {
   background-color: #a60004;
   border: 1px solid #a60004;
 
-  @include background-image(linear-gradient(#d81436, #a60004));
-  @include text-shadow(0 -1px 1px rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(#d81436, #a60004);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
 
   &:hover,
   &.hover {
     background-color: #c40022;
     color: $white;
 
-    @include background-image(linear-gradient(#d81436, #c40022));
+    background-image: linear-gradient(#d81436, #c40022);
   }
 
   &:active,
   &.active {
     background: #d81436;
 
-    @include box-shadow(0 0 4px 0 rgba(0, 0, 0, 0.6) inset);
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.6);
   }
 
   &[disabled],
@@ -111,7 +111,7 @@ input::-moz-focus-inner {
     color: #df9faa;
     background: #d81436;
     border-color: #a60004;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 }
 
@@ -152,7 +152,7 @@ input::-moz-focus-inner {
   &:active,
   &.active {
     background: transparent;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 
   &[disabled],
@@ -164,29 +164,27 @@ input::-moz-focus-inner {
 }
 
 .rs-cog {
-  width: 16px;
-  height: 16px;
   margin: 0;
   padding: 0;
-  background-color: none;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 
   @include inline-block;
-  @include icon-sprite(cog);
+  @include sprite($cog, 16px, 16px);
   @include hide-text-content();
 
   &:active,
   &.active,
   &:hover,
   &.hover {
-    @include icon-sprite(cog-hover);
+    @include sprite-position($cog-hover);
   }
 
   &[disabled],
   &.disabled {
     cursor: default;
-    @include icon-sprite(cog-disabled);
+    @include sprite-position($cog-disabled);
   }
 }
 
@@ -195,33 +193,32 @@ input::-moz-focus-inner {
   height: 12px;
   margin: 0;
   padding: 0;
-  background-color: none;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 
   @include inline-block;
-  @include icon-sprite(plus-dotted-grey);
+  @include sprite-image($plus-dotted-grey);
+  @include sprite-position($plus-dotted-grey);
   @include hide-text-content();
 
   &:active,
   &.active,
   &:hover,
   &.hover {
-    @include icon-sprite(plus-dotted-blue);
+    @include sprite-position($plus-dotted-blue);
   }
 }
 
 .rs-delete {
-  width: 16px;
-  height: 16px;
   margin: 0;
   padding: 0;
-  background-color: none;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 
   @include inline-block;
-  @include icon-sprite(minus-circle-808080);
+  @include sprite($minus-circle-808080, 16px, 16px);
   @include hide-text-content();
 
   &:active,
@@ -230,31 +227,26 @@ input::-moz-focus-inner {
   &.hover,
   &:focus,
   &.focus {
-    @include icon-sprite(minus-circle-red);
+    @include sprite-position($minus-circle-red);
   }
 }
 
 .rs-caret {
-  width: 10px;
-  height: 10px;
-
   @include inline-block;
-  @include icon-sprite(caret);
+  @include sprite($caret, 10px, 10px);
 
   &[disabled],
   &.disabled {
     cursor: default;
-    @include icon-sprite(caret-disabled);
+    @include sprite-position($caret-disabled);
   }
 }
 
 .rs-btn-action {
   > .rs-cog {
-    width: 13px;
-    height: 13px;
     margin-top: -2px;
     margin-right: 1px;
-    @include icon-sprite(cog-small);
+    @include sprite($cog-small, 13px, 13px);
   }
 
   > .rs-caret {
@@ -266,12 +258,12 @@ input::-moz-focus-inner {
   &.disabled {
     > .rs-cog {
       cursor: default;
-      @include icon-sprite(cog-small-disabled);
+      @include sprite-position($cog-small-disabled);
     }
 
     > .rs-caret {
       cursor: default;
-      @include icon-sprite(caret-disabled);
+      @include sprite-position($caret-disabled);
     }
   }
 }
@@ -298,15 +290,13 @@ input::-moz-focus-inner {
 }
 
 .rs-edit {
-  width: 19px;
-  height: 19px;
   margin: 0;
   padding: 0;
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
 
-  @include icon-sprite(pencil-666);
+  @include sprite($pencil-666, 19px, 19px);
   @include inline-block();
   @include hide-text-content();
 
@@ -325,7 +315,7 @@ input::-moz-focus-inner {
     border-color: transparent;
     cursor: default;
 
-    @include icon-sprite(pencil-999);
+    @include sprite-position($pencil-999);
   }
 }
 

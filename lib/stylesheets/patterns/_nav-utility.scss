@@ -57,7 +57,7 @@
 
     &.rs-dropdown {
       .rs-caret {
-        @include icon-sprite(caret-nav-down-999);
+        @include sprite-image($caret-nav-down-999);
       }
 
       .rs-dropdown-menu {
@@ -69,7 +69,7 @@
     &.rs-dropdown.hover,
     &.rs-dropdown.active {
       .rs-caret {
-        @include icon-sprite(caret-nav-down-fff);
+        @include sprite-image($caret-nav-down-fff);
       }
     }
 

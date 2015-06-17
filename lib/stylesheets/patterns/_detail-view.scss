@@ -52,7 +52,7 @@
   > .rs-detail-section-header:hover,
   > .rs-detail-section-header:focus {
     outline: none;
-    @include background(linear-gradient(#f7f7f7, #fff));
+    background-image: linear-gradient(#f7f7f7, #fff);
   }
 }
 
@@ -77,7 +77,7 @@
 .rs-collapsible-section.expanded {
   > .rs-detail-section-header {
     > .rs-caret {
-      @include icon-sprite(section-toggle-expanded);
+      @include sprite($section-toggle-expanded);
     }
   }
 
@@ -85,7 +85,7 @@
   > .rs-detail-section-header:hover,
   > .rs-detail-section-header:focus {
     > .rs-caret {
-      @include icon-sprite(section-toggle-expanded-hover);
+      @include sprite($section-toggle-expanded-hover);
     }
   }
 }
@@ -93,7 +93,7 @@
 .rs-collapsible-section.collapsed {
   > .rs-detail-section-header {
     > .rs-caret {
-      @include icon-sprite(section-toggle-collapsed);
+      @include sprite($section-toggle-collapsed);
     }
   }
 
@@ -101,7 +101,7 @@
   > .rs-detail-section-header:hover,
   > .rs-detail-section-header:focus {
     > .rs-caret {
-      @include icon-sprite(section-toggle-collapsed-hover);
+      @include sprite($section-toggle-collapsed-hover);
     }
   }
 }
