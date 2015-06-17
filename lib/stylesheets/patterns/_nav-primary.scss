@@ -11,7 +11,7 @@
 
   .rs-nav-link {
     line-height: 1em;
-    padding: 8px 0 2px 0;
+    padding: 8px 15px 2px 15px;
     color: $nav-primary-link;
     font-size: 18px;
     font-weight: 400;
@@ -29,7 +29,7 @@
     vertical-align: text-bottom;
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: 12px;
     @include icon-sprite-position(caret-primary, 16px);
 
     &:before {
@@ -43,8 +43,8 @@
   }
 
   .rs-nav-item {
-    margin: 0 20px;
     border: 1px solid transparent;
+    margin: 0 5px;
 
     &:hover,
     &.hover {
@@ -73,14 +73,13 @@
     }
 
     &.rs-dropdown {
-      padding-right: 25px;
-
-      .rs-dropdown-menu {
-        margin-top: -2px;
+      & > a,
+      .rs-nav-link {
+        padding-right: 35px;
       }
-
-      &.active .rs-caret {
-        right: -25px;
+      .rs-dropdown-menu {
+        margin: -2px 0 0 0px;
+        right: -15px;
       }
     }
 
