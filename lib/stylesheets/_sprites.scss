@@ -1,7 +1,8 @@
 @include sprites($spritesheet-sprites);
 
 .rs-icon-external,
-.rs-icon-external-dark {
+.rs-icon-external-dark,
+.rs-icon-external-light {
   @include icon;
   margin-left: 5px;
 }
@@ -12,6 +13,10 @@
 
 .rs-icon-external-dark {
   @include sprite($external-dark);
+}
+
+.rs-icon-external-light {
+  @include sprite($external);
 }
 
 .rs-icon-help {
