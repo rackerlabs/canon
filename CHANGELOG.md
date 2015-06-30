@@ -1,3 +1,6 @@
+## v1.8.1 (June 30, 2015)
+- add .rs-icon-external-light for external links on light backgrounds
+
 ## v1.8.0 (June 17, 2015)
 
 - Remove compass from canon
