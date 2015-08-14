@@ -8,16 +8,18 @@ layout: default
     <div class="rs-container">
       <div class="rs-main">
         <div class="rs-content rs-panel">
-        {% for post in site.categories.[page.title] %}
-          <!-- {{ post.title }} -->
-          <div class="header-section" id="{{ post.title | replace: " ", "-" | downcase }}">
-            <div class="header-section-title">{{ post.title }}</div>
-          </div>
-          <div class="website-content-section">
-            <div class="content-section-body">
-              {{ post.content }}
+        {% for post in site.categories.[page.version] %}
+          {% if post.category == page.title %}
+            <!-- {{ post.title }} -->
+            <div class="header-section" id="{{ post.title | replace: " ", "-" | downcase }}">
+              <div class="header-section-title">{{ post.title }}</div>
             </div>
-          </div>
+            <div class="website-content-section">
+              <div class="content-section-body">
+                {{ post.content }}
+              </div>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
