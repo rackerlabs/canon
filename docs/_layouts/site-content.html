@@ -10,7 +10,6 @@ layout: default
         <div class="rs-content rs-panel">
         {% for post in site.categories.[page.version] %}
           {% if post.category == page.title %}
-            <!-- {{ post.title }} -->
             <div class="header-section" id="{{ post.title | replace: " ", "-" | downcase }}">
               <div class="header-section-title">{{ post.title }}</div>
             </div>
