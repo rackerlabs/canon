@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -e
+
+error () {
+  echo -e "\e[31;1m$@\e[0m"
+}
+
+usage () {
+  echo ""
+  echo "Usage: release <channel> <version>"
+  echo ""
+}
+
+if [[ $# -lt 2 ]]; then
+  usage
+  error "release requires a channel and version to be provided."
+fi
+
+CHANNEL="$1"
+VERSION="$2"
+BUILD_PATH="dist/"
+PACKAGE_ROOT="package"
+PACKAGE_PATH="$PACKAGE_ROOT/$CHANNEL/$VERSION"
+
+mkdir -p $PACKAGE_PATH
+cp -R $BUILD_PATH $PACKAGE_PATH
+
+rack files object upload-dir \
+  --username $RACKSPACE_USERNAME \
+  --api-key $RACKSPACE_API_KEY \
+  --container cdn.canon.rax.io \
+  --dir $PACKAGE_ROOT \
+  --region IAD \
+  --recurse
