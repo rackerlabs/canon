@@ -57,7 +57,9 @@ check_version_manager () {
 check_ruby_version () {
   log "Checking Ruby version..."
 
-  if ! [[ "$(ruby --version)" =~ "ruby 2" ]]; then
+  version="$(ruby --version)"
+
+  if ! [[ "$version" =~ "ruby 2" || "$version" =~ "ruby 1.9" ]]; then
     error "\nCanon required Ruby 2.x.x. Please update Ruby and try again.\n"
     exit 1
   fi
