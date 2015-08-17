@@ -76,7 +76,7 @@ check_node_version () {
 
 install_grunt () {
   log "Installing Grunt..."
-  npm install -g grunt-cli
+  npm install -g bower grunt-cli
 }
 
 install_bundler () {
@@ -99,7 +99,7 @@ install_bower_components () {
   node_modules/.bin/bower install
 }
 
-if [[ -t 0 ]]; then
+if [[ $CI != true ]]; then
   show_welcome_message
 fi
 
