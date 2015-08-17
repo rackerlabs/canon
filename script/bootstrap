@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 log () {
   echo -e "\e[1m==> $@\e[0m"
 }
@@ -101,6 +103,15 @@ install_bower_components () {
   node_modules/.bin/bower install
 }
 
+install_rack () {
+  log "Installing Rackspace CLI..."
+
+  echo $PATH
+  mkdir -p $HOME/.bin
+  curl -SL -o $HOME/.bin/rack https://ec4a542dbf90c03b9f75-b342aba65414ad802720b41e8159cf45.ssl.cf5.rackcdn.com/1.0.0-beta.1/Linux/amd64/rack
+  chmod +x $HOME/.bin/rack
+}
+
 if [[ $CI != true ]]; then
   show_welcome_message
 fi
@@ -114,5 +125,6 @@ install_bundler
 install_gems
 install_npm_packages
 install_bower_components
+install_rack
 
 success "\nCanon setup completed successfully!\n"

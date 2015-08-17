@@ -81,14 +81,14 @@ early access channels. These builds are intended for use in production
 environments. Builds in this channel follow semantic versioning and are available
 for download at:
 
-* https://builds.canon.rax.io/stable/vX.X.X/canon.css
+* https://cdn.canon.rax.io/stable/vX.X.X/canon.css
 
 In addition to specific versions, the latest minor and patch release are
 available so that you can automatically take advantage of the latest features
 and bug fixes.
 
-* https://builds.canon.rax.io/stable/vX/canon.css
-* https://builds.canon.rax.io/stable/vX.X/canon.css
+* https://cdn.canon.rax.io/stable/vX/canon.css
+* https://cdn.canon.rax.io/stable/vX.X/canon.css
 
 ### Development
 
@@ -97,4 +97,4 @@ for every single commit to Canon's master branch. Do not use these builds in a
 production environment. They are intended for use by early access consumers in
 order to vet potential releases.
 
-* https://builds.canon.rax.io/development/GIT-SHA/canon.css
+* https://cdn.canon.rax.io/development/GIT-SHA/canon.css

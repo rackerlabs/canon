@@ -18,6 +18,9 @@ env:
 install:
   - script/bootstrap
 
+before_script:
+  - export PATH=$PATH:$HOME/.bin
+
 after_success:
   - git describe --exact-match --abbrev=0 && script/deploy-website
 
