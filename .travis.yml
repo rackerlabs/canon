@@ -18,10 +18,12 @@ install:
 deploy:
 - provider: script
   script: scripts/release stable $TRAVIS_TAG
+  skip_cleanup: true
   on:
     tags: true
 - provider: script
   script: scripts/release development $TRAVIS_COMMIT
+  skip_cleanup: true
   on:
     branch: master
 
