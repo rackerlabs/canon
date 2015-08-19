@@ -69,3 +69,32 @@ Body
 Type can be: Feature, Bug, Style, Test, Maintenance
 ID is the Trello card number being implemented.
 
+## Release Channels
+
+Canon provides builds of our assets that can be downloaded from our CDN. These
+builds are split into the following release channels:
+
+### Stable
+
+Production-ready releases of Canon that have been vetted by consumers of our
+early access channels. These builds are intended for use in production
+environments. Builds in this channel follow semantic versioning and are available
+for download at:
+
+* https://cdn.canon.rax.io/stable/vX.X.X/canon.css
+
+In addition to specific versions, the latest minor and patch release are
+available so that you can automatically take advantage of the latest features
+and bug fixes.
+
+* https://cdn.canon.rax.io/stable/vX/canon.css
+* https://cdn.canon.rax.io/stable/vX.X/canon.css
+
+### Development
+
+The development channel compliments the stable channel by providing every builds
+for every single commit to Canon's master branch. Do not use these builds in a
+production environment. They are intended for use by early access consumers in
+order to vet potential releases.
+
+* https://cdn.canon.rax.io/development/GIT-SHA/canon.css

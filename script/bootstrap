@@ -1,40 +1,33 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env bash
 
-require 'open3'
+set -e
 
-REQUIRED_RUBY_VERSION = /2.*.*/
-REQUIRED_NODE_VERSION = /0.[678(10)].*/
-REQUIRED_PHANTOM_JS_VERSION = /1.[789].*/
+log () {
+  echo -e "\e[1m==> $@\e[0m"
+}
 
-def execute_command(command)
-  Open3.popen3(command) do |stdin, stdout, stderr, thread|
-    thread.value
-  end
-rescue
-  false
-end
+error () {
+  echo -e "\e[31;1m$@\e[0m"
+}
 
-def red(text)
-  "\e[31m#{text}\e[0m"
-end
+success () {
+  echo -e "\e[32;1m$@\e[0m"
+}
 
-def green(text)
-  "\e[32m#{text}\e[0m"
-end
+warn () {
+  echo -e "\e[33;1m$@\e[0m"
+}
 
-def yellow(text)
-  "\e[33m#{text}\e[0m"
-end
+info () {
+  echo -e "\e[36;1m$@\e[0m"
+}
 
-def grey(text)
-  "\e[37m#{text}\e[0m"
-end
+show_welcome_message () {
+  echo ""
+  info "Welcome to Canon!"
+  echo ""
 
-def show_welcome_message
-  puts <<-eos
-
-\e[36mWelcome to Canon!\e[0m
-
+  cat <<-MESSAGE
 Before you get started contributing to Canon, let's make sure that your
 development environment has all the necessary dependencies. This script will:
 
@@ -47,93 +40,91 @@ development environment has all the necessary dependencies. This script will:
   - Install Ruby dependencies
   - Install Node dependencies
   - Install Bower dependencies
+  - Install Rackspace CLI
 
 Press ENTER to continue.
-eos
+MESSAGE
 
-  gets
-end
+  read
+}
 
-def check_version_manager
-  has_rvm = execute_command('rvm -v')
-  has_rbenv = execute_command('rbenv -v')
+check_version_manager () {
+  log "Checking for Ruby version manager..."
 
-  puts grey('>> Checking for version manager...')
+  if [[ -z "$(command -v rvm)" && -z "$(command -v rbenv)" && -z "$(command -v chruby)" ]]; then
+    warn "\nYou don't have a Ruby version manager installed. Proceed with caution.\n"
+  fi
+}
 
-  unless has_rvm || has_rbenv
-    puts yellow("\n   You don't have a version manager installed. Proceed with caution.\n")
-  end
-end
+check_ruby_version () {
+  log "Checking Ruby version..."
 
-def check_ruby_version
-  puts grey('>> Checking Ruby version...')
+  version="$(ruby --version)"
 
-  unless REQUIRED_RUBY_VERSION.match(RUBY_VERSION)
-    abort red("\n   Canon requires Ruby 2.x.x. Please update Ruby and try again.\n")
-  end
-end
+  if ! [[ "$version" =~ "ruby 2" || "$version" =~ "ruby 1.9" ]]; then
+    error "\nCanon required Ruby 2.x.x. Please update Ruby and try again.\n"
+    exit 1
+  fi
+}
 
-def check_node_version
-  puts grey('>> Checking Node version...')
+check_node_version () {
+  log "Checking Node version..."
 
-  unless REQUIRED_NODE_VERSION.match(%x[node -v])
-    abort red("\n   Canon requires Node 0.6.0 or higher. Please update Node and try again.\n")
-  end
-end
+  version="$(node --version)"
 
-def check_phantom_js_version
-  puts grey('>> Checking PhantomJS version...')
+  if ! [[ "$version" =~ "v2" || "$version" =~ "v0.10" ]]; then
+    error "\nCanon requires Node 0.10.0 (or higher) or iojs 2.0.0 (or higher). Please update Node and try again.\n"
+    exit 1
+  fi
+}
 
-  unless REQUIRED_PHANTOM_JS_VERSION.match(%x[phantomjs -v])
-    abort red("\n   Canon requires PhantomJS 1.7.0 or higher. Please update PhantomJS and try again.\n")
-  end
-end
+install_grunt () {
+  log "Installing Grunt..."
+  npm install -g bower grunt-cli
+}
 
-def install_grunt
-  puts grey('>> Installing Grunt...')
+install_bundler () {
+  log "Installing Bundler..."
+  gem install bundler
+}
 
-  execute_command('npm install -g grunt-cli')
-end
+install_gems () {
+  log "Installing Ruby gems..."
+  bundle install
+}
 
-def install_bundler
-  puts grey('>> Installing Bundler...')
+install_npm_packages () {
+  log "Installing NPM packages..."
+  npm install
+}
 
-  execute_command('gem install bundler')
-end
+install_bower_components () {
+  log "Installing Bower components..."
+  node_modules/.bin/bower install
+}
 
-def install_gems
-  puts grey('>> Installing Ruby dependencies...')
+install_rack () {
+  log "Installing Rackspace CLI..."
 
-  execute_command('bundle install')
-end
+  echo $PATH
+  mkdir -p $HOME/.bin
+  curl -SL -o $HOME/.bin/rack https://ec4a542dbf90c03b9f75-b342aba65414ad802720b41e8159cf45.ssl.cf5.rackcdn.com/1.0.0-beta.1/Linux/amd64/rack
+  chmod +x $HOME/.bin/rack
+}
 
-def install_packages
-  puts grey('>> Installing Node dependencies...')
-
-  execute_command('npm install')
-end
-
-def install_components
-  puts grey('>> Installing Node dependencies...')
-
-  execute_command('node_modules/.bin/bower install')
-end
-
-def show_completed_message
-  puts green("\nCanon setup completed successfully!\n")
-end
-
-show_welcome_message
+if [[ $CI != true ]]; then
+  show_welcome_message
+fi
 
 check_version_manager
 check_ruby_version
 check_node_version
-check_phantom_js_version
 
 install_grunt
 install_bundler
 install_gems
-install_packages
-install_components
+install_npm_packages
+install_bower_components
+install_rack
 
-show_completed_message
+success "\nCanon setup completed successfully!\n"
