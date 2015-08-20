@@ -23,21 +23,21 @@ tags : [intro, about, canon]
     </ol>
     <h3>Complex Components:</h3>
     <ul>
-      <li><a href="/ui-components/#details" class="highlight-source" data-highlight-target="create-example-horizontal-form">Details</a></li>
-      <li><a href="/ui-components/#forms" class="highlight-source" data-highlight-target="form-highlight-example">Forms</a></li>
+      <li><a href="../ui-components/#details" class="highlight-source" data-highlight-target="create-example-horizontal-form">Details</a></li>
+      <li><a href="../ui-components/#forms" class="highlight-source" data-highlight-target="form-highlight-example">Forms</a></li>
       <li><a href="#create-view" class="highlight-source" data-highlight-target="create-example-help-sidebar">Help Sidebar</a></li>
-      <li><a href="/ui-components/#tabs" class="highlight-source" data-highlight-target="create-example-tabbed-embedded-table">Tabbed Embedded Tables</a></li>
-      <li><a href="/ui-components/#details" class="highlight-source" data-highlight-target="create-example-add-related">Collapsible Sections</a></li>
-      <li><a href="/ui-components/#tabs" class="highlight-source" data-highlight-target="create-example-embedded-table">Embedded Tables</a>
+      <li><a href="../ui-components/#tabs" class="highlight-source" data-highlight-target="create-example-tabbed-embedded-table">Tabbed Embedded Tables</a></li>
+      <li><a href="../ui-components/#details" class="highlight-source" data-highlight-target="create-example-add-related">Collapsible Sections</a></li>
+      <li><a href="../ui-components/#tabs" class="highlight-source" data-highlight-target="create-example-embedded-table">Embedded Tables</a>
       </li>
     </ul>
     <h3>Simple Components:</h3>
     <ul>
-      <li><a href="/ui-components/#back-link" class="highlight-source" data-highlight-target="create-example-back-link">Back Link</a></li>
-      <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="add-items-popover">Popovers</a></li>
-      <li><a href="/ui-components/#secondary-buttons" class="highlight-source" data-highlight-target="add-items-button">Secondary Buttons</a></li>
-      <li><a href="/ui-components/#button-groups" class="highlight-source" data-highlight-target="create-example-button-group">Button Groups</a></li>
-      <li><a href="/ui-components/#primary-buttons" class="highlight-source" data-highlight-target="create-example-primary-button">Primary Buttons</a></li>
+      <li><a href="../ui-components/#back-link" class="highlight-source" data-highlight-target="create-example-back-link">Back Link</a></li>
+      <li><a href="../ui-components/#popover" class="highlight-source" data-highlight-target="add-items-popover">Popovers</a></li>
+      <li><a href="../ui-components/#secondary-buttons" class="highlight-source" data-highlight-target="add-items-button">Secondary Buttons</a></li>
+      <li><a href="../ui-components/#button-groups" class="highlight-source" data-highlight-target="create-example-button-group">Button Groups</a></li>
+      <li><a href="../ui-components/#primary-buttons" class="highlight-source" data-highlight-target="create-example-primary-button">Primary Buttons</a></li>
     </ul>
     <h4>Adherence Rating: {{ page.adherence }} <span class="rs-icon-help tip" title="{{ site.adherenceRatings[page.adherence] | escape }}"></span></h4>
   </div>

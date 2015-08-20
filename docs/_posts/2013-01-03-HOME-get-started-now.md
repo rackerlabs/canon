@@ -18,14 +18,13 @@ Canon is designed to be conflict-free. Use with your existing framework, like Fo
   <span class="grey">{{ site.CANON.cdnUrl }}</span>/v{{ site.CANON.latest }}//canon.min.css
 </div>
 
-[View All Versions](/get-started/#versioning)
+[View All Versions](/{{site.CANON.versions[0]}}/get-started/#versioning)
 <br><br>
 ### Step 2: Use Canon class names in your HTML
 
-Try implementing Canon in baby steps. For example, start with the "frame" or [App Layout](/app-layout/) before the content areas. This makes changes easier on your users as well.
+Try implementing Canon in baby steps. For example, start with the "frame" or [App Layout](/{{site.CANON.versions[0]}}/app-layout/) before the content areas. This makes changes easier on your users as well.
 <br><br>
 ### Step 3: Sign up for our mailing list
 
 Sign up for <a href="https://lists.rackspace.com/sympa/info/canon-users">canon-users@lists.rackspace.com</a>. For every Canon release,
 we'll send an notice to this email list. It's also a great place for discussion among Canon users across Rackspace.
-

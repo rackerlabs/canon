@@ -82,48 +82,48 @@ checkStatuses:
     <ol>
       <li><strong>Quickly find items</strong>
         <ul>
-          <li><a href="/ui-components/#facets" class="highlight-source" data-highlight-target="facets-example">Facet</a></li>
-          <li><a href="/ui-components/#forms" class="highlight-source" data-highlight-target="list-table-filter">Search</a></li>
-          <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="list-view-sort-example">Sort</a></li>
+          <li><a href="../ui-components/#facets" class="highlight-source" data-highlight-target="facets-example">Facet</a></li>
+          <li><a href="../ui-components/#forms" class="highlight-source" data-highlight-target="list-table-filter">Search</a></li>
+          <li><a href="../ui-components/#tables" class="highlight-source" data-highlight-target="list-view-sort-example">Sort</a></li>
         </ul>
       </li>
       <li><strong>Easily assess item health</strong>
         <ul>
-          <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="row-status-{{page.items[1].id}}">Item Status</a></li>
-          <li><a href="/ui-components/#monitoring-status-list" class="highlight-source" data-highlight-target="status-list-{{page.items[1].id}}">Monitor Health</a></li>
+          <li><a href="../ui-components/#tables" class="highlight-source" data-highlight-target="row-status-{{page.items[1].id}}">Item Status</a></li>
+          <li><a href="../ui-components/#monitoring-status-list" class="highlight-source" data-highlight-target="status-list-{{page.items[1].id}}">Monitor Health</a></li>
         </ul>
       </li>
       <li><strong>Perform actions without drilling down</strong>
         <ul>
-          <li><a href="/ui-components/#action-dropdown" class="highlight-source" data-highlight-target="dropdown-{{page.items[1].id}}">Item Actions</a></li>
-          <li><a href="/ui-components/#buttons" class="highlight-source" data-highlight-target="delete-items-button">Batch Actions</a></li>
+          <li><a href="../ui-components/#action-dropdown" class="highlight-source" data-highlight-target="dropdown-{{page.items[1].id}}">Item Actions</a></li>
+          <li><a href="../ui-components/#buttons" class="highlight-source" data-highlight-target="delete-items-button">Batch Actions</a></li>
         </ul>
       </li>
     </ol>
     <h3>Complex Components:</h3>
     <ul>
-      <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="list-view-table">Table Component</a></li>
-      <li><a href="/ui-components/#facets" class="highlight-source" data-highlight-target="facets-example">Facets Component</a></li>
-      <li><a href="/ui-components/#monitoring-status-list" class="highlight-source" data-highlight-target="status-list-{{page.items[1].id}}">Monitoring Status List</a></li>
+      <li><a href="../ui-components/#tables" class="highlight-source" data-highlight-target="list-view-table">Table Component</a></li>
+      <li><a href="../ui-components/#facets" class="highlight-source" data-highlight-target="facets-example">Facets Component</a></li>
+      <li><a href="../ui-components/#monitoring-status-list" class="highlight-source" data-highlight-target="status-list-{{page.items[1].id}}">Monitoring Status List</a></li>
     </ul>
     <h3>Simple Components:</h3>
     <ul>
-      <li><a href="/ui-components/#typography" class="highlight-source" data-highlight-target="list-view-page-title">Page Title</a></li>
-      <li><a href="/ui-components/#button-groups" class="highlight-source" data-highlight-target="list-view-button-group">Button Group</a></li>
-      <li><a href="/ui-components/#tooltips" id="list-view-tooltip-link">Tooltips</a></li>
-      <li><a href="/ui-components/#tables" class="highlight-source" data-highlight-target="row-status-{{page.items[1].id}}">Table Row Status</a></li>
-      <li><a href="/ui-components/#table-row-selection" class="highlight-source" data-highlight-target="row-check-{{page.items[1].id}}">Table Row Selection</a></li>
-      <li><a href="/ui-components/#action-cogs" class="highlight-source" data-highlight-target="row-cog-{{page.items[1].id}}">Action Cog</a></li>
+      <li><a href="../ui-components/#typography" class="highlight-source" data-highlight-target="list-view-page-title">Page Title</a></li>
+      <li><a href="../ui-components/#button-groups" class="highlight-source" data-highlight-target="list-view-button-group">Button Group</a></li>
+      <li><a href="../ui-components/#tooltips" id="list-view-tooltip-link">Tooltips</a></li>
+      <li><a href="../ui-components/#tables" class="highlight-source" data-highlight-target="row-status-{{page.items[1].id}}">Table Row Status</a></li>
+      <li><a href="../ui-components/#table-row-selection" class="highlight-source" data-highlight-target="row-check-{{page.items[1].id}}">Table Row Selection</a></li>
+      <li><a href="../ui-components/#action-cogs" class="highlight-source" data-highlight-target="row-cog-{{page.items[1].id}}">Action Cog</a></li>
       <li>Dropdowns:
         <ul>
-            <li><a href="/ui-components/#action-dropdown" class="highlight-source" data-highlight-target="dropdown-{{page.items[1].id}}">Action Dropdown</a></li>
+            <li><a href="../ui-components/#action-dropdown" class="highlight-source" data-highlight-target="dropdown-{{page.items[1].id}}">Action Dropdown</a></li>
         </ul>
       </li>
       <li>Popovers:
         <ul>
-            <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="confirm-batch-delete-popover">Batch Action Popovers</a></li>
-            <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="rename-server-popover-list-view">Action Cog Popovers</a></li>
-            <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="create-check-popover-list-view">Inline Popovers</a></li>
+            <li><a href="../ui-components/#popover" class="highlight-source" data-highlight-target="confirm-batch-delete-popover">Batch Action Popovers</a></li>
+            <li><a href="../ui-components/#popover" class="highlight-source" data-highlight-target="rename-server-popover-list-view">Action Cog Popovers</a></li>
+            <li><a href="../ui-components/#popover" class="highlight-source" data-highlight-target="create-check-popover-list-view">Inline Popovers</a></li>
         </ul>
       </li>
     </ul>

@@ -5,7 +5,7 @@ updated: September 17, 2013
 author: Andrew Raiford
 tags : [intro, about, canon]
 ---
-To begin using Canon, start with this basic HTML template that includes everything we mentioned in the [App Layout](/app-layout/) section.
+To begin using Canon, start with this basic HTML template that includes everything we mentioned in the [App Layout](../app-layout/) section.
 
 {% highlight html %}
 <!DOCTYPE html>

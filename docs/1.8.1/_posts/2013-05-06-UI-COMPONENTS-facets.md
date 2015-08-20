@@ -11,7 +11,7 @@ tags : [intro, about, canon]
 
   <div class="span-3">
     <h3>How it works</h3>
-    <p>Facets can be used to apply filters to a <a href="#list-view-table">Table</a>. This is not a standalone component - it should be used as part of the <a href="/ux-patterns/#list-view">List View Pattern</a>.</p>
+    <p>Facets can be used to apply filters to a <a href="#list-view-table">Table</a>. This is not a standalone component - it should be used as part of the <a href="../ux-patterns/#list-view">List View Pattern</a>.</p>
     <h4>Rules for Use</h4>
     <ul>
       <li>The top header should reflect the name of the product - EX: "Filter Servers"<div>If the product name is long and gets truncated, use "Filter List" instead.</div></li>
@@ -41,4 +41,3 @@ tags : [intro, about, canon]
 </div>{% endhighlight %}
   </div>
 </div>
-
