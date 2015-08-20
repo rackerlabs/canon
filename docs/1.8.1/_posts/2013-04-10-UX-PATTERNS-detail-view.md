@@ -17,28 +17,28 @@ tags : [intro, about, canon]
     </ol>
     <h3>Complex Components:</h3>
     <ul>
-      <li><a href="/ui-components/#details" class="highlight-source" data-highlight-target="detail-example-details-component">Details Component</a></li>
-      <li><a href="/ui-components/#embedded-list-table" class="highlight-source" data-highlight-target="detail-example-embedded-list-table">Embedded List Table</a></li>
-      <li><a href="/ux-patterns/#detail-view" class="highlight-source" data-highlight-target="detail-example-help-sidebar">Help Sidebar</a></li>
+      <li><a href="../ui-components/#details" class="highlight-source" data-highlight-target="detail-example-details-component">Details Component</a></li>
+      <li><a href="../ui-components/#embedded-list-table" class="highlight-source" data-highlight-target="detail-example-embedded-list-table">Embedded List Table</a></li>
+      <li><a href="#detail-view" class="highlight-source" data-highlight-target="detail-example-help-sidebar">Help Sidebar</a></li>
     </ul>
     <h3>Simple Components:</h3>
     <ul>
-      <li><a href="/ui-components/#back-link" class="highlight-source" data-highlight-target="detail-example-back-link">Back Link</a></li>
-      <li><a href="/ui-components/#action-buttons" class="highlight-source" data-highlight-target="detail-example-action-button">Action Button</a></li>
-      <li><a href="/ui-components/#status-indicators" class="highlight-source" data-highlight-target="detail-example-status-indicator">Status Indicator</a></li>
-      <li><a href="/ui-components/#edit-button" class="highlight-source" data-highlight-target="detail-example-edit-button">Edit Button</a></li>
-      <li><a href="/ui-components/#action-cogs" class="highlight-source" data-highlight-target="detail-example-action-cog">Action Cog</a></li>
+      <li><a href="../ui-components/#back-link" class="highlight-source" data-highlight-target="detail-example-back-link">Back Link</a></li>
+      <li><a href="../ui-components/#action-buttons" class="highlight-source" data-highlight-target="detail-example-action-button">Action Button</a></li>
+      <li><a href="../ui-components/#status-indicators" class="highlight-source" data-highlight-target="detail-example-status-indicator">Status Indicator</a></li>
+      <li><a href="../ui-components/#edit-button" class="highlight-source" data-highlight-target="detail-example-edit-button">Edit Button</a></li>
+      <li><a href="../ui-components/#action-cogs" class="highlight-source" data-highlight-target="detail-example-action-cog">Action Cog</a></li>
       <li>Dropdowns:
         <ul>
-          <li><a href="/ui-components/#action-dropdown" class="highlight-source" data-highlight-target="detail-example-action-button-dropdown">Actions Dropdown</a></li>
-          <li><a href="/ui-components/#action-dropdown" class="highlight-source" data-highlight-target="detail-example-action-cog-dropdown">Cog Dropdown</a></li>
+          <li><a href="../ui-components/#action-dropdown" class="highlight-source" data-highlight-target="detail-example-action-button-dropdown">Actions Dropdown</a></li>
+          <li><a href="../ui-components/#action-dropdown" class="highlight-source" data-highlight-target="detail-example-action-cog-dropdown">Cog Dropdown</a></li>
         </ul>
       </li>
       <li>Popovers:
         <ul>
-          <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="rename-server-popover">Actions Button Popover</a></li>
-          <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="resize-popover">Item Details Popovers</a></li>
-          <li><a href="/ui-components/#popover" class="highlight-source" data-highlight-target="edit-item-popover">Embedded List Popovers</a></li>
+          <li><a href="../ui-components/#popover" class="highlight-source" data-highlight-target="rename-server-popover">Actions Button Popover</a></li>
+          <li><a href="../ui-components/#popover" class="highlight-source" data-highlight-target="resize-popover">Item Details Popovers</a></li>
+          <li><a href="../ui-components/#popover" class="highlight-source" data-highlight-target="edit-item-popover">Embedded List Popovers</a></li>
         </ul>
       </li>
     </ul>

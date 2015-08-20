@@ -8,7 +8,7 @@ tags : [intro, about, canon]
 
 Inspired by Twitter Bootstrap, Rackspace<span class="super-script">&reg;</span> Canon is a framework of HTML and CSS made by and for designers and developers at Rackspace. 
 
-<p class="max-width-large">The framework provides  <a href="{{ site.baseurl }}/app-layout/">Layouts</a> and <a href="{{ site.baseurl }}/ui-components/">UI Components</a> which are combined to form our library of <a href="{{ site.baseurl }}/ux-patterns/">UX Patterns</a>.  These patterns have been designed and tested by Rackspace<span class="super-script">&reg;</span> Product Design and are currently in use by these Rackspace<span class="super-script">&reg;</span> web applications:</p>
+<p class="max-width-large">The framework provides  <a href="../app-layout/">Layouts</a> and <a href="../ui-components/">UI Components</a> which are combined to form our library of <a href="../ux-patterns/">UX Patterns</a>.  These patterns have been designed and tested by Rackspace<span class="super-script">&reg;</span> Product Design and are currently in use by these Rackspace<span class="super-script">&reg;</span> web applications:</p>
 <ul class="rs-detail-list">
   <li class="rs-detail-item">
     <div class="rs-detail-key"><a target="_blank" href="http://www.rackspace.com/">MyCloud</a></div>

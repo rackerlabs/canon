@@ -16,11 +16,11 @@ tags : [intro, about, canon]
       <li><a href="#detail-view">Detail View</a></li>
       <li><a href="#create-view">Create View</a></li>
     </ul>
-    <p>Actions are kept in context on these pages by way of the <a href="/ui-components/#popover">popover component</a>. Building your application to follow this model will help users keep a consistent mental picture of the application structure and ensure they accomplish their goals quickly and intuitively. </p>
+    <p>Actions are kept in context on these pages by way of the <a href="../ui-components/#popover">popover component</a>. Building your application to follow this model will help users keep a consistent mental picture of the application structure and ensure they accomplish their goals quickly and intuitively. </p>
     <h3>How it works</h3>
     <ul>
       <li>Each large "hub" is related to a UX Pattern (details below on this page)</li>
-      <li>Each "spoke" coming off a hub represents a <a href="{{ site.baseurl }}/ui-components">UI Component</a> within the pattern</li>
+      <li>Each "spoke" coming off a hub represents a <a href="../ui-components">UI Component</a> within the pattern</li>
       <li>Use <a target="blank" href="{{ site.baseurl }}/demos">List Views</a> as navigational hubs and for managing and assessing many items</li>
       <li>Use the <a href="#detail-view">Detail View</a> to present item details and show child items with their own set of actions and details</li>
       <li>Use the <a href="#create-view">Create View</a> when items have complex configuration settings or need a help section to guide users through the creation process</li>
@@ -31,6 +31,3 @@ tags : [intro, about, canon]
     <img src="http://d6028ae8eb433bfc9fc7-a4c1bfca948fa9e57440a42732196fcf.r55.cf1.rackcdn.com/Screen%20Shot%202013-09-30%20at%204.49.55%20PM.png" height="611" width="874">
   </div>
 </div>
-
-
-

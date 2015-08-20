@@ -31,12 +31,26 @@
       <div class="rs-container">
         <ul class="rs-nav">
           <li class="rs-nav-item {% if page.utilitySection == 'Home' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/">Rackspace<span class="super-script">&reg;</span> Canon</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'Get Started' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/get-started">Get Started</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'App Layout' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/app-layout">App Layout</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'UX Patterns' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/ux-patterns">UX Patterns</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'UI Components' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/ui-components">UI Components</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'About Canon' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/about-canon">About Canon</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'Get Started' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/{% if page.version %}{{ page.version }}{% else %}{{ site.CANON.docs_versions[0] }}{% endif %}/get-started">Get Started</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'App Layout' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/{% if page.version %}{{ page.version }}{% else %}{{ site.CANON.docs_versions[0] }}{% endif %}/app-layout">App Layout</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'UX Patterns' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/{% if page.version %}{{ page.version }}{% else %}{{ site.CANON.docs_versions[0] }}{% endif %}/ux-patterns">UX Patterns</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'UI Components' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/{% if page.version %}{{ page.version }}{% else %}{{ site.CANON.docs_versions[0] }}{% endif %}/ui-components">UI Components</a></li>
+          <li class="rs-nav-item {% if page.utilitySection == 'About Canon' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/{% if page.version %}{{ page.version }}{% else %}{{ site.CANON.docs_versions[0] }}{% endif %}/about-canon">About Canon</a></li>
         </ul>
+        {% if page.utilitySection != 'Home' %}
+        <ul class="rs-nav rs-pull-right">
+          <li class="rs-nav-item rs-dropdown rs-utility-dropdown">
+            <a class="rs-nav-link rs-dropdown-toggle" href="javascript:void(0);">Version: {{ page.version }} <i class="rs-caret"></i></a>
+            <ul class="rs-dropdown-menu">
+              {% for version in site.CANON.docs_versions %}
+                <li class="rs-dropdown-item">
+                  <a class="rs-dropdown-link" href="{{site.baseurl}}/{{version}}/{{ page.title | replace: " ", "-" | downcase }}/#{{ post.title | replace: " ", "-" | downcase }}">{{ version }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+        {% endif %}
       </div>
     </div>
     {{ content }}

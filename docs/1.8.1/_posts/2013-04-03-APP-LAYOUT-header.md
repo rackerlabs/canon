@@ -21,7 +21,7 @@ tags : [intro, about, canon]
 		<ul>
 			<li>Customize these sections for your application's categories or products.</li>
 			<li>Highlight the category with an active state so users know what section they are in.</li>
-      <li>Use <a href="/ui-components/#dropdowns">dropdowns</a> when you have 3 or more levels of information/navigation.</li>
+      <li>Use <a href="../ui-components/#dropdowns">dropdowns</a> when you have 3 or more levels of information/navigation.</li>
 		</ul>
 		<b>Secondary Navigation:</b>
 		<ul>

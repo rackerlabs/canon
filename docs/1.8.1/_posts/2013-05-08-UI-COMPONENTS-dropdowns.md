@@ -124,7 +124,7 @@ tags : [intro, about, canon]
 <h3>Primary Dropdown</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Use in combination with the <a href="/app-layout/#header-&-navigation">primary navigation</a> style in the main header of your application.</p>
+    <p>Use in combination with the <a href="../app-layout/#header-&-navigation">primary navigation</a> style in the main header of your application.</p>
     <ul>
       <li>Primary dropdowns are used when your application has more than 5-7 sections, depending on the length of each section name. For example, some applications may only be able to fit 5 sections across the main header.</li>
       <li>Use when your functionality resembles one of a desktop application.</li>
@@ -169,7 +169,7 @@ tags : [intro, about, canon]
 <h3>Utility Dropdown</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Use in combination with the <a href="/app-layout/#header-&-navigation">utility navigation</a> in the top black bar of your application.</p>
+    <p>Use in combination with the <a href="../app-layout/#header-&-navigation">utility navigation</a> in the top black bar of your application.</p>
       <ul>
         <li>Utility dropdowns should be used to organize the right utility nav categories. For example, "Account" will contain pages related to the user's account. "Support" should contain help information, support tickets, etc.</li>
       </ul>
@@ -209,7 +209,7 @@ tags : [intro, about, canon]
 <h3>Action Dropdown</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Use in combination with the <a href="/ui-components/#action-buttons">action buttons</a> and <a href="/ui-components/#action-cogs">action cogs</a> to group the most important actions of your product.</p>
+    <p>Use in combination with the <a href="#action-buttons">action buttons</a> and <a href="#action-cogs">action cogs</a> to group the most important actions of your product.</p>
     <ul>
       <li>Action dropdowns usually spawn popovers with simple forms to help perform basic actions. Consider reserving complicated actions for a Detail View or List Table.</li>
       <li>Actions are grouped using category headers and are often based on the intention of each action. For example, "Rename" is performed to help users "Identify" their products.</li>
