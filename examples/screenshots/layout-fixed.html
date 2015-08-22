@@ -78,24 +78,74 @@
           </li>
           <li class="rs-nav-item rs-dropdown rs-primary-dropdown hover">
             <a class="rs-nav-link" href="#">Link Two <i class="rs-caret"></i></a>
-            <ul class="rs-dropdown-menu">
-              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">One</a></li>
-              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Two</a></li>
-              <li class="rs-divider"></li>
-              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Three</a></li>
-            </ul>
+            <div class="rs-popover" style="visibility: visible;">
+              <div class="rs-popover-arrow rs-popover-arrow-top-left"></div>
+              <div class="rs-popover-content">
+                <div class="rs-nav-popover">
+                  <div class="rs-nav-menu">
+                    <ul class="rs-dropdown-items">
+                      <li class="rs-dropdown-item">
+                        <h4 class="rs-quiet rs-dropdown-category">Cloud Servers</h4>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://mycloud.rackspace.com/cloud/934922/servers" data-subnav="servers">Cloud Servers</a>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://mycloud.rackspace.com/cloud/934922/servers#images" class="rs-dropdown-text" data-subnav="images">Saved Images</a>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://mycloud.rackspace.com/cloud/934922/servers#auto-scale" class="rs-dropdown-link" data-subnav="auto-scale">Auto Scale</a>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://mycloud.rackspace.com/cloud/934922/servers#ssh-keys" class="rs-dropdown-link" data-subnav="ssh-keys">SSH Keys</a>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://intelligence.rackspace.com" class="rs-dropdown-link" data-subnav="cloud-intelligence" target="_blank">Cloud Intelligence<i class="rs-icon-external"></i></a>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <h4 class="rs-quiet rs-dropdown-category">Data Processing</h4>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://mycloud.rackspace.com/cloud/934922/servers#big-data" class="rs-dropdown-link" data-subnav="big-data">
+                          Big Data
+                        </a>
+                        <div class="rs-dropdown-caption">Powered by Apache<span class="super-script">™</span> Hadoop<span class="super-script">®</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rs-task-menu">
+                    <ul class="rs-dropdown-items">
+                      <li class="rs-dropdown-item">
+                        <h4 class="rs-quiet rs-dropdown-category">Create Resources</h4>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://mycloud.rackspace.com/cloud/934922/servers#new" class="rs-dropdown-link" data-subnav="None">Server...</a>
+                      </li>
+                      <li class="rs-dropdown-item">
+                        <a href="https://mycloud.rackspace.com/cloud/934922/load_balancers#new" class="rs-dropdown-link" data-subnav="None">Load Balancer...</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="rs-nav-item rs-dropdown rs-primary-dropdown active">
             <a class="rs-nav-link" href="#">Link Three <i class="rs-caret"></i></a>
-            <ul class="rs-dropdown-menu visible">
-              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">One</a></li>
-              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Two</a></li>
-              <li class="rs-divider"></li>
-              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Three</a></li>
-            </ul>
           </li>
           <li class="rs-nav-item rs-dropdown rs-primary-dropdown disabled">
             <span class="rs-nav-link">Link Four <i class="rs-caret"></i></span>
+          </li>
+          <li class="rs-nav-item rs-dropdown rs-primary-dropdown">
+            <span class="rs-nav-link">Link Five <i class="rs-caret"></i></span>
+            <ul class="rs-dropdown-menu visible">
+              <li class="rs-dropdown-item"><span class="rs-dropdown-category">Links</span></li>
+              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link</a></li>
+              <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link hover">Link (Hover)</a></li>
+              <li class="rs-dropdown-item"><a href="#" class="rs-dropdown-link focus">Link (Focus)</a></li>
+              <li class="rs-dropdown-item"><span class="rs-dropdown-category">External</span></li>
+              <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Link External <i class="rs-icon-external"></i></a></li>
+            </ul>
           </li>
         </ul>
       </div>
