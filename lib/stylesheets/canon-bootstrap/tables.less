@@ -1,0 +1,67 @@
+table.table-bordered {
+  tbody, thead {
+    th, td {
+      border-right:none!important;
+      border-left:none!important;
+    }
+  }
+
+}
+
+
+.rs-table-status {
+  padding: 0!important;
+  width: 10px;
+  position:relative;
+}
+
+.rs-table-checkbox {
+  width: 10px;
+}
+
+.rs-table-radio {
+  width: 10px;
+}
+
+.rs-table-cog {
+  width: 16px;
+}
+
+.rs-table-edit {
+  width: 16px;
+}
+
+.rs-table-delete {
+  width: 16px;
+}
+
+.rs-table-input {
+  & input {
+    margin: 0;
+  }
+}
+
+.rs-table-select {
+  & select {
+    margin: 0;
+  }
+}
+
+
+.rs-table-status-ok {
+  background-color: @brand-success !important;
+  height:auto
+}
+
+.rs-table-status-warning,
+.rs-table-status-processing {
+  background-color: @brand-warning !important;
+}
+
+.rs-table-status-error {
+  background-color: @brand-danger !important;
+}
+
+.rs-table-status-disabled {
+  background-color: @gray-light;
+}

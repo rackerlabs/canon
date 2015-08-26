@@ -1,0 +1,49 @@
+.navbar-height(@height) {
+  @vertical-spacer: (@height - @line-height-computed) / 2;
+
+  min-height: @height;
+
+  .navbar-brand {
+    padding-top: @vertical-spacer;
+    padding-bottom: @vertical-spacer;
+    height: @height;
+  }
+
+  .navbar-nav {
+    margin-top: @vertical-spacer / 2;
+    margin-bottom: @vertical-spacer / 2;
+
+    @media (min-width: @grid-float-breakpoint) {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      > li > a {
+        padding-top: @vertical-spacer;
+        padding-bottom: @vertical-spacer;
+      }
+    }
+  }
+
+  .navbar-form,
+  .navbar-btn {
+    margin-top: floor((@height - @input-height-base) / 2);
+    margin-bottom: floor((@height - @input-height-base) / 2);
+  }
+
+  .navbar-btn {
+    &.btn-sm {
+      margin-top: floor((@height - 30) / 2);
+      margin-bottom: floor((@height - 30) / 2);
+    }
+
+    &.btn-xs {
+      margin-top: floor((@height - 22) / 2);
+      margin-bottom: floor((@height - 22) / 2);
+    }
+  }
+
+  .navbar-text {
+    margin-top: @vertical-spacer;
+    margin-bottom: @vertical-spacer;
+  }
+}

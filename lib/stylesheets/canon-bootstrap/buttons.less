@@ -1,0 +1,201 @@
+.btn-login {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-login {
+  border-radius: 3px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-default {
+  color: #333;
+  text-shadow: 0 1px rgba(255,255,255,0.6);
+  background-color: #ddd;
+  background-image: linear-gradient(to bottom, #eee, #ddd);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .9),
+              inset 0px -2px 0px 0px rgba(0, 0, 0, .05);
+
+  &,
+  &.active,
+  &:active,
+  &.focus,
+  &:focus,
+  &.hover,
+  &:hover,
+  &.disabled,
+  &[disabled] {
+    border-color: #aaa;
+  }
+
+  &.active,
+  &:active,
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-image: linear-gradient(to bottom, #eee, #c9c9c9);
+  }
+
+  &.active,
+  &:active {
+    box-shadow: inset 0px 1px 0px 0px #c9c9c9;
+  }
+
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-color: #c9c9c9;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.btn-primary {
+  background-color: #292929;
+  background-image: linear-gradient(to bottom, #444, #292929);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+              inset 0px -2px 0px 0px rgba(0, 0, 0, 0.55);
+
+  &,
+  &.active,
+  &:active,
+  &.focus,
+  &:focus,
+  &.hover,
+  &:hover,
+  &.disabled,
+  &[disabled] {
+    border-color: #292929;
+  }
+
+  &.active,
+  &:active,
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-image: linear-gradient(to bottom, #535353, #151515);
+  }
+
+  &.active,
+  &:active {
+    box-shadow: inset 0px 1px 0px 0px #151515;
+  }
+
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-color: #151515;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .2);
+  }
+}
+
+.btn-info {
+  background-color: #1E6DC0;
+  background-image: linear-gradient(to bottom, #217AD7, #1E6DC0);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .15),
+              inset 0px -2px 0px 0px rgba(0, 0, 0, .1);
+
+  &,
+  &.active,
+  &:active,
+  &.focus,
+  &:focus,
+  &.hover,
+  &:hover,
+  &.disabled,
+  &[disabled] {
+    border-color: #1E6DC0;
+  }
+
+  &.active,
+  &:active,
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-image: linear-gradient(to bottom, #2b84e1, #1463b6);
+  }
+
+  &.active,
+  &:active {
+    box-shadow: inset 0px 1px 1px 0px #1463b6;
+  }
+
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-color: #1463b6;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .25);
+  }
+}
+
+.btn-danger,
+.btn-login {
+  background-color: #C40021;
+  background-image: linear-gradient(to bottom, #D8002A, #C40021);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .3),
+              inset 0px -2px 0px 0px rgba(0, 0, 0, .1);
+
+  &,
+  &.active,
+  &:active,
+  &.focus,
+  &:focus,
+  &.hover,
+  &:hover,
+  &.disabled,
+  &[disabled] {
+    border-color: #C40021;
+  }
+
+  &.active,
+  &:active,
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-image: linear-gradient(to bottom, #D8002A, #b0000d);
+  }
+
+  &.active,
+  &:active {
+    box-shadow: inset 0px 1px 1px 0px #b0000d;
+  }
+
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    background-color: #b0000d;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.btn-link {
+  color: #1E6DC0;
+
+  &.active,
+  &:active,
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus {
+    color: #1E6DC0;
+    text-decoration: underline;
+    box-shadow: none;
+  }
+
+}
+
+.btn-input {
+  .button-variant(@input-color; @input-bg; @input-border);
+}

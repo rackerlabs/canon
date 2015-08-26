@@ -1,0 +1,65 @@
+.navbar + .navbar {
+  margin-top: -@navbar-margin-bottom;
+}
+
+.navbar-default {
+  border-width: 0 0 1px;
+  box-shadow: inset 0 -1px 0 0 #ddd;
+}
+
+.navbar-inverse {
+  border-width: 0;
+  box-shadow: none;
+}
+
+.navbar-primary,
+.navbar-secondary,
+.navbar-utility,
+.navbar-footer {
+  &:extend(.navbar-default all);
+}
+
+/* HACK: Source Sans Pro doesn't render centered inside the line height so
+ * we apply custom padding values to make it appear visually centered with
+ * text using a different font. */
+
+.navbar-primary {
+  .navbar-height(70px);
+
+  .navbar-nav > li > a {
+    padding-top: 27px;
+    padding-bottom: 23px;
+
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    font-weight: 400;
+    text-shadow: 0 1px #fff;
+  }
+}
+
+.navbar-secondary {
+  .navbar-height(35px);
+
+  .navbar-nav > li > a {
+    padding-top: 8px;
+    padding-bottom: 6px;
+
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 1px #fff;
+  }
+}
+
+.navbar-utility {
+  .navbar-height(40px);
+
+  .navbar-nav > li > a {
+    font-weight: 700;
+    .font-smoothing;
+  }
+}
+
+.navbar-footer {
+  .navbar-height(35px);
+}
