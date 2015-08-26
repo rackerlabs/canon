@@ -18,11 +18,11 @@ Canon is designed to be conflict-free. Use with your existing framework, like Fo
   <span class="grey">{{ site.CANON.cdnUrl }}</span>/v{{ site.CANON.latest }}//canon.min.css
 </div>
 
-[View All Versions](/get-started/#versioning)
+[View All Versions]({{site.baseurl}}/get-started/#versioning)
 <br><br>
 ### Step 2: Use Canon class names in your HTML
 
-Try implementing Canon in baby steps. For example, start with the "frame" or [App Layout](/app-layout/) before the content areas. This makes changes easier on your users as well.
+Try implementing Canon in baby steps. For example, start with the "frame" or [App Layout]({{site.baseurl}}/app-layout/) before the content areas. This makes changes easier on your users as well.
 <br><br>
 ### Step 3: Sign up for our mailing list
 
