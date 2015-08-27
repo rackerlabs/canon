@@ -9,7 +9,7 @@ tags : [intro, about, canon]
 
 <div class="rs-row">
   <div>
-	<p>UX Patterns consist of <a href="/ui-components/">UI Components</a> that have been arranged and combined into templatized views. Our patterns and widgets have been tested and tweaked for optimal usability and to meet user needs. These patterns accelerate design and development processes by providing a framework for most interactions in an application. </p>
+	<p>UX Patterns consist of <a href="{{site.baseurl}}/ui-components/">UI Components</a> that have been arranged and combined into templatized views. Our patterns and widgets have been tested and tweaked for optimal usability and to meet user needs. These patterns accelerate design and development processes by providing a framework for most interactions in an application. </p>
     <h3>How do I use UX patterns?</h3>
     <p class="max-width-large">Different roles benefit in different ways:</p>
 	    <ul>

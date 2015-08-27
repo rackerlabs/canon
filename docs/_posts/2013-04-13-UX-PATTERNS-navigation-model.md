@@ -16,7 +16,7 @@ tags : [intro, about, canon]
       <li><a href="#detail-view">Detail View</a></li>
       <li><a href="#create-view">Create View</a></li>
     </ul>
-    <p>Actions are kept in context on these pages by way of the <a href="/ui-components/#popover">popover component</a>. Building your application to follow this model will help users keep a consistent mental picture of the application structure and ensure they accomplish their goals quickly and intuitively. </p>
+    <p>Actions are kept in context on these pages by way of the <a href="{{site.baseurl}}/ui-components/#popover">popover component</a>. Building your application to follow this model will help users keep a consistent mental picture of the application structure and ensure they accomplish their goals quickly and intuitively. </p>
     <h3>How it works</h3>
     <ul>
       <li>Each large "hub" is related to a UX Pattern (details below on this page)</li>
