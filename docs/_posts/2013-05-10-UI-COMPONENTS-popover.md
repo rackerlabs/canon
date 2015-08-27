@@ -109,12 +109,12 @@ tags : [intro, about, canon]
 	<div class="rs-row">
 		<div class="span-3 section-description">
 			<p>The popover comes with arrows on each top corner.  Depending on the relative location of the generating element, you may want to choose the left or right side arrows.</p>
-			<p><strong>Left and right</strong> side arrows are often useful in the <a href="/ui-components/#details">Details</a> component.
+			<p><strong>Left and right</strong> side arrows are often useful in the <a href="{{site.baseurl}}/ui-components/#details">Details</a> component.
 			<ul>
 				<li>The pover should spawn upon clicking the <a href="#edit-buton">Edit Button</a> in the Key / Value list.</li>
 			</ul>
 			</p>
-			<p><strong>Top arrows</strong> are useful when spawning a popover from a button like the Actions button in <a href="/ui-components/#details">Details</a>.
+			<p><strong>Top arrows</strong> are useful when spawning a popover from a button like the Actions button in <a href="{{site.baseurl}}/ui-components/#details">Details</a>.
 			<ul>
 				<li>The popover should spawn from the <a href="#details">Actions Button</a> after a selection has been made from the dropdown.</li>
 			</ul>

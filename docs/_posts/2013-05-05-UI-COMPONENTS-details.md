@@ -9,7 +9,7 @@ tags : [intro, about, canon]
 <div class="rs-row">
   <div class="span-3">
     <h3>When to use</h3>
-    <p>Use this to display details about a single item or product. Combine this component with the <a href="#action-buttons">action button</a>, <a href="#action-dropdown">action dropdown</a>, <a href="#status-indicators">status indicator, <a href="#embedded-table">embedded tables</a>, and <a href="#popover">popovers</a>. For more information on how to combine components, use the <a href="/ux-patterns/#detail-view">Detail View Pattern</a>. </p>
+    <p>Use this to display details about a single item or product. Combine this component with the <a href="#action-buttons">action button</a>, <a href="#action-dropdown">action dropdown</a>, <a href="#status-indicators">status indicator, <a href="#embedded-table">embedded tables</a>, and <a href="#popover">popovers</a>. For more information on how to combine components, use the <a href="{{site.baseurl}}/ux-patterns/#detail-view">Detail View Pattern</a>. </p>
     <p>The content of a details component is broken into 2 main parts: The <strong>details header</strong> summarizes the item you are viewing. The <strong>details sections</strong> are sub-sections that display status, technical specifications, settings, or tables of data about the product. These are often combined with editable actions that spawn popovers.</p>
     <h5>Details Header</h5>
     <ul>
