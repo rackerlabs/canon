@@ -1,5 +1,5 @@
 .navbar + .navbar {
-  margin-top: -@navbar-margin-bottom;
+  margin-top: -$navbar-margin-bottom;
 }
 
 .navbar-default {
@@ -16,7 +16,7 @@
 .navbar-secondary,
 .navbar-utility,
 .navbar-footer {
-  &:extend(.navbar-default all);
+  @extend .navbar-default;
 }
 
 /* HACK: Source Sans Pro doesn't render centered inside the line height so
@@ -24,7 +24,7 @@
  * text using a different font. */
 
 .navbar-primary {
-  .navbar-height(70px);
+  @include navbar-height(70px);
 
   .navbar-nav > li > a {
     padding-top: 27px;
@@ -38,7 +38,7 @@
 }
 
 .navbar-secondary {
-  .navbar-height(35px);
+  @include navbar-height(35px);
 
   .navbar-nav > li > a {
     padding-top: 8px;
@@ -52,14 +52,14 @@
 }
 
 .navbar-utility {
-  .navbar-height(40px);
+  @include navbar-height(40px);
 
   .navbar-nav > li > a {
     font-weight: 700;
-    .font-smoothing;
+    @include font-smoothing;
   }
 }
 
 .navbar-footer {
-  .navbar-height(35px);
+  @include navbar-height(35px);
 }

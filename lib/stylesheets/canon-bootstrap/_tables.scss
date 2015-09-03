@@ -49,19 +49,19 @@ table.table-bordered {
 
 
 .rs-table-status-ok {
-  background-color: @brand-success !important;
+  background-color: $brand-success !important;
   height:auto
 }
 
 .rs-table-status-warning,
 .rs-table-status-processing {
-  background-color: @brand-warning !important;
+  background-color: $brand-warning !important;
 }
 
 .rs-table-status-error {
-  background-color: @brand-danger !important;
+  background-color: $brand-danger !important;
 }
 
 .rs-table-status-disabled {
-  background-color: @gray-light;
+  background-color: $gray-light;
 }

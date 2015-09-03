@@ -11,7 +11,7 @@ module.exports = function (grunt) {
         src: 'lib/images/icon/*.png',
         dest: 'lib/images/icons.png',
         imgPath: 'icons.png',
-        destCss: 'lib/stylesheets/_spritesheet.scss',
+        destCss: 'lib/stylesheets/canon/_spritesheet.scss',
         padding: 10,
         algorithm: 'top-down',
         cssOpts: {functions: false}
@@ -24,7 +24,8 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/canon.css': 'lib/stylesheets/canon.scss'
+          'dist/canon.css': 'lib/stylesheets/canon/canon.scss',
+          'dist/canon-bootstrap.css': 'lib/stylesheets/canon-bootstrap/canon-bootstrap.scss',
         }
       }
     },

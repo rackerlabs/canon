@@ -1,5 +1,5 @@
 .btn-login {
-  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
 .btn-default,
@@ -197,5 +197,5 @@
 }
 
 .btn-input {
-  .button-variant(@input-color; @input-bg; @input-border);
+  @include button-variant($input-color, $input-bg, $input-border);
 }

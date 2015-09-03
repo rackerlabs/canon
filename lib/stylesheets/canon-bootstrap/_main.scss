@@ -1,6 +1,6 @@
 // Main Content & Sidebar
 .rs-main {
-  .clearfix;
+  @include clearfix;
   margin: 0px 0;
   position: relative;
 
@@ -10,24 +10,24 @@
   }
 
   .rs-inner {
-    margin: @padding-base-horizontal*2;
+    margin: $padding-base-horizontal*2;
   }
 
   > .panel-section {
     &:last-child {
-      .no-seam;
+      @include no-seam;
     }
   }
 
   >header {
-    padding:@padding-base-vertical*4 @padding-base-horizontal*2;
+    padding:$padding-base-vertical*4 $padding-base-horizontal*2;
     h1,h2,h3,h4 {
       margin:0;
     }
   }
 
   >.alert {
-    margin:@padding-base-vertical*4 @padding-base-horizontal*2;
+    margin:$padding-base-vertical*4 $padding-base-horizontal*2;
   }
 }
 
@@ -36,10 +36,10 @@
   // position: absolute;
 
   .rs-inner {
-    margin: 0 @padding-base-horizontal*2 0 0;
+    margin: 0 $padding-base-horizontal*2 0 0;
 
     .rs-panel & {
-      margin: @padding-base-horizontal*2;
+      margin: $padding-base-horizontal*2;
     }
   }
 
@@ -48,24 +48,24 @@
     right: 0;
 
     .rs-inner {
-      margin: 0 0 0 @padding-base-horizontal*2;
+      margin: 0 0 0 $padding-base-horizontal*2;
 
       .rs-panel & {
-        margin: @padding-base-horizontal*2;
+        margin: $padding-base-horizontal*2;
       }
     }
   }
 }
 
 .rs-content {
-  .clearfix;
-  padding: 0 @padding-base-horizontal*2 @padding-base-vertical*4 ;
+  @include clearfix;
+  padding: 0 $padding-base-horizontal*2 $padding-base-vertical*4 ;
 
 }
 
 .rs-control-bar {
-  .row;
-  margin-bottom:@padding-base-vertical*4;
+  @extend row;
+  margin-bottom:$padding-base-vertical*4;
 }
 
 
@@ -75,7 +75,7 @@
 
 
 .page-header {
-  padding: @padding-base-vertical*8 @padding-base-horizontal*2;
+  padding: $padding-base-vertical*8 $padding-base-horizontal*2;
   margin: 0;
   border-bottom: none;
   h1, h2, h3, h4 {

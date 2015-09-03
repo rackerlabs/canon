@@ -27,8 +27,8 @@
     padding: 3px 20px;
     clear: both;
     font-weight: normal;
-    line-height: @line-height-base;
-    color: @dropdown-link-color;
+    line-height: $line-height-base;
+    color: $dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
   }
 }
@@ -37,7 +37,7 @@
 .dropdown-caption {
   display: block;
   color: #999;
-  font-family: @headings-font-family;
+  font-family: $headings-font-family;
   font-size: 12px;
   font-weight: 200;
   padding: 0;
@@ -62,7 +62,7 @@
     color: #ccc;
     padding-bottom: 3px;
     padding-top: 3px;
-    .font-smoothing;
+    @include font-smoothing;
 
     &:hover {
       background-color: #444;
@@ -75,7 +75,7 @@
     color: #ccc;
     padding-bottom: 3px;
     padding-top: 3px;
-    .font-smoothing;
+    @include font-smoothing;
   }
 
   > .divider {
@@ -86,7 +86,7 @@
   }
 
   > li.disabled > a {
-    color: @dropdown-link-disabled-color;
+    color: $dropdown-link-disabled-color;
   }
 }
 
@@ -109,17 +109,17 @@
 
   > li > a {
     color: #333;
-    font-family: @headings-font-family;
+    font-family: $headings-font-family;
     font-size: 16px;
     font-weight: 600;
     padding-bottom: 3px;
     padding-top: 3px;
-    .font-smoothing;
+    @include font-smoothing;
 
     &:hover,
     &:focus {
       background: #f5f5f5;
-      color: @navbar-default-link-active-color;
+      color: $navbar-default-link-active-color;
       text-decoration: none;
     }
   }

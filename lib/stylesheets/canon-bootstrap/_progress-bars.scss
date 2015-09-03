@@ -7,5 +7,5 @@
 // adjusted lineheight offsets the padding in .progress
 .progress-bar {
   box-shadow: 0px 0 0px 1px #fff;
-  line-height: @line-height-computed - 2px;
+  line-height: $line-height-computed - 2px;
 }
