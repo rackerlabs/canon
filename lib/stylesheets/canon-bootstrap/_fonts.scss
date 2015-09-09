@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+
+  src: url('@{font-path}@{header-font-name}.eot');
+  src: url('@{font-path}@{header-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('@{font-path}@{header-font-name}.woff') format('woff'),
+       url('@{font-path}@{header-font-name}.ttf') format('truetype'),
+       url('@{font-path}@{header-font-name}.svg#@{header-font-svg-id}') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+
+  src: url('@{font-path}SourceSansPro-Regular-webfont.eot');
+  src: url('@{font-path}SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('@{font-path}SourceSansPro-Regular-webfont.woff') format('woff'),
+  url('@{font-path}SourceSansPro-Regular-webfont.ttf') format('truetype'),
+  url('@{font-path}SourceSansPro-Regular-webfont.svg#@{header-font-svg-id}') format('svg');
+}
