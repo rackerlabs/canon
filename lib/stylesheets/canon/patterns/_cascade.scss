@@ -1,0 +1,176 @@
+/* cascade */
+$cascade-short-height: 200px;
+$cascade-default-height: 400px;
+$cascade-tall-height: 600px;
+$cascade-header-height: 20px;
+
+
+.rs-cascade {
+  border: 1px solid $grey300;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  height: 400px;
+
+  .rs-overlay {
+    margin: 0;
+    height: 100%;
+  }
+
+  .rs-overlay-content {
+    padding: 0 30px;
+  }
+}
+
+.rs-cascade-column {
+  float: left;
+  height: 100%;
+  min-width: 150px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &:first-child {
+    .rs-cascade-column-header,
+    .rs-cascade-column-content
+    {
+      border-left: none;
+    }
+  }
+}
+
+.rs-cascade-column-header {
+  width: 100%;
+  border-bottom: 1px solid $grey300;
+  border-left: 1px solid $grey300;
+  background: $white;
+  height: $cascade-header-height;
+  overflow: hidden;
+  padding: 0 10px;
+
+}
+
+.rs-cascade-column-content {
+  border-left: 1px solid $grey300;
+  height: $cascade-default-height - $cascade-header-height - 1;
+
+  width: 100%;
+  min-width: 150px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .rs-inner {
+    padding: 20px;
+    margin: 0px;
+  }
+}
+
+.rs-cascade-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rs-cascade-list-item {
+  padding: 0;
+  &:hover,
+  &.hover {
+    .rs-cascade-list-item-content {
+      background-color: $grey175;
+      text-decoration: none;
+    }
+
+    .rs-cascade-arrow {
+      @include sprite($arrow-right-c0c0c0);
+    }
+  }
+  &.disabled,
+  &.disabled:hover,
+  &.disabled.hover {
+    .rs-cascade-list-item-content {
+      background-color: $white;
+      cursor: default;
+    }
+
+    .rs-cascade-list-item-label {
+      color: $grey300;
+    }
+
+    .rs-cascade-arrow {
+      display: none;
+    }
+  }
+  &.selected {
+    .rs-cascade-list-item-content {
+      background-color: $blue;
+    }
+    
+    .rs-cascade-list-item-label {
+      color: #fff;
+    }
+
+    .rs-cascade-arrow {
+      @include sprite($arrow-right-fff);
+    }
+  }
+}
+
+.rs-cascade-list-item-content {
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.rs-cascade-list-item-label {
+  @extend .rs-truncate;
+  color: $grey600;
+}
+
+.rs-cascade-arrow {
+  margin-top: 3px;
+  @extend .rs-pull-right;
+  @include icon;
+  @include sprite($arrow-right-ccc);
+}
+
+.rs-cascade-message {
+  height: 20px;
+  text-align: center;
+  color: $grey500;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Cascade Heights */
+
+.rs-cascade-short {
+  height: $cascade-short-height;
+  .rs-cascade-column-content {
+    height: $cascade-short-height - $cascade-header-height - 1;
+  }
+}
+
+.rs-cascade-tall {
+  height: $cascade-tall-height;
+  .rs-cascade-column-content {
+    height: $cascade-tall-height - $cascade-header-height - 1;
+  }
+}
+.rs-cascade-list-item-icon {
+  .rs-cascade-list-item-content {
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 20px;
+    outline:none;
+  }
+
+  &.generic .rs-cascade-list-item-content {
+    background-image: image-url('icon-generic-32.png');
+  }
+
+}
