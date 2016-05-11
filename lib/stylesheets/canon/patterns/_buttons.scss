@@ -325,3 +325,26 @@ input::-moz-focus-inner {
   margin-top: -1px;
   margin-left: 13px;
 }
+
+.rs-close {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include inline-block;
+  @include sprite($light-grey-x, 16px, 16px);
+  @include hide-text-content();
+
+  &:active,
+  &.active,
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    @include sprite($grey-x, 16px, 16px);
+  }
+}
