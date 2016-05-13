@@ -56,7 +56,6 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.4)
-    fssm (0.2.10)
     github-pages (14)
       RedCloth (= 4.2.9)
       jekyll (= 1.4.3)
@@ -128,7 +127,6 @@ GEM
     ruby-hmac (0.4.0)
     rubyzip (0.9.9)
     safe_yaml (0.9.7)
-    sass (3.2.7)
     sauce (2.4.1)
       childprocess (>= 0.1.6)
       cmdparse (>= 2.0.2)
@@ -169,3 +167,6 @@ DEPENDENCIES
   rspec
   sauce
   sauce-connect
+
+BUNDLED WITH
+   1.12.3

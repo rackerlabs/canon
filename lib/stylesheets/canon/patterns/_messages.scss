@@ -1,0 +1,94 @@
+.rs-message {
+  border: 2px $white solid;
+  margin-top: 10px;
+
+  .rs-close {
+    float: right;
+    margin: 10px;
+  }
+
+  &.rs-status-ok {
+    background-color: $green50;
+  }
+
+  &.rs-status-warning {
+    background-color: $yellow50;
+  }
+
+  &.rs-status-error {
+    background-color: $red50;
+  }
+
+  &.rs-status-info {
+    background-color: $blue50;
+  }
+}
+
+.rs-message-embedded {
+  border-top: 1px $grey100 solid;
+  border-bottom: 1px $grey100 solid;
+  border-left: none;
+  border-right: none;
+
+  .rs-message-content {
+    margin: 30px;
+  }
+
+  .rs-message-title {
+    @extend h4;
+    display: block;
+  }
+
+  .rs-close {
+    margin: 20px 20px 0 00px;
+  }
+
+  p, ul {
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.rs-message-title {
+  display: inline;
+  font-weight: bold;
+  color: $grey600;
+}
+
+.rs-message-description {
+  display: inline;
+  color: $grey600;
+}
+
+.rs-message-content {
+  margin: 7px 10px;
+}
+
+.rs-message-icon {
+  float: left;
+  margin: 10px;
+}
+
+.rs-message-icon ~ .rs-message-content {
+  margin-left: 33px;
+}
+
+.rs-message+.rs-main {
+  margin-top: 10px;
+}
+
+.rs-close ~ .rs-message-content {
+  margin-right: 33px;
+}
+
+.rs-growl-messages {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  max-width: 300px;
+
+  .rs-message-title {
+    display: block;
+  }
+}
