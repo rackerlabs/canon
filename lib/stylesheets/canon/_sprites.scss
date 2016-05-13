@@ -30,3 +30,9 @@
   @include sprite($exclamation-sign);
   margin-left: 5px;
 }
+
+.rs-loading-indicator {
+  @include icon(16px,16px);
+  background-image: url('loading-indicator.gif');
+  margin-left: 5px;
+}
