@@ -126,7 +126,7 @@ GEM
     rspec-mocks (2.13.0)
     ruby-hmac (0.4.0)
     rubyzip (0.9.9)
-    safe_yaml (0.9.7)
+    safe_yaml (1.0.4)
     sauce (2.4.1)
       childprocess (>= 0.1.6)
       cmdparse (>= 2.0.2)
