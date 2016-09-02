@@ -31,7 +31,7 @@
     "grunt-contrib-watch": "~0.5.2",
     "grunt-exec": "~0.4.6",
     "grunt-karma": "~0.6.1",
-    "grunt-sass": "^0.18.1",
+    "grunt-sass": "^1.0.0",
     "grunt-spritesmith": "^4.6.1",
     "jshint": "0.9.1"
   }
