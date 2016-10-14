@@ -114,7 +114,9 @@ install_rack () {
 
 install_aws_cli () {
   log "Installing AWS CLI..."
-
+  pip install virtualenv
+  virtualenv env
+  . env/bin/activate
   pip install awscli
 }
 

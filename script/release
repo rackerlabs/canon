@@ -34,4 +34,5 @@ rack files object upload-dir \
   --region IAD \
   --recurse
 
+. env/bin/activate
 aws s3 sync $PACKAGE_ROOT s3://canon.rackspace.com --region us-west-2
