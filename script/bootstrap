@@ -114,8 +114,7 @@ install_rack () {
 
 install_aws_cli () {
   log "Installing AWS CLI..."
-
-  pip install awscli
+  pip install --user awscli
 }
 
 
