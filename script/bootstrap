@@ -112,6 +112,13 @@ install_rack () {
   chmod +x $HOME/.bin/rack
 }
 
+install_aws_cli () {
+  log "Installing AWS CLI..."
+
+  pip install awscli
+}
+
+
 if [[ $CI != true ]]; then
   show_welcome_message
 fi
@@ -126,5 +133,6 @@ install_gems
 install_npm_packages
 install_bower_components
 install_rack
+install_aws_cli
 
 success "\nCanon setup completed successfully!\n"
