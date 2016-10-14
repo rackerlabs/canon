@@ -2,7 +2,6 @@ language: node_js
 sudo: false
 node_js:
 - '0.10'
-
 env:
   global:
   - secure: gqoFY8iy73+/y85Je8Q19Ijt7Mif7mj7wLvY2iaNEEFTVeHlUMNear5uqHo1kJr/xxDAtynZ+83OTpElNivD/AGdx+ZPpgXEEK0nNdCmOEkHrPGWfRylqxYGcKSYoDNpDWz4MnHq7+wQFVtj5jPgpVob2GhgVBZoNYm+zSfo+C4=
@@ -10,11 +9,11 @@ env:
   - secure: eTQtvsv1T1C1YK38Y6A+tWP5wnzhgAMO6Re9XOicQwW9s+86uBNpFbNlTErbNMFSnHKR7UpcUDmzPt77ahQIDFchnAwiNwJBP1FALFOkt0TZIBdugBHDDP/DzIp5jiwhjVe9XT2gCWB1c6uvUJ9Qb9FygtvKSJ7Lv3+DViyL4To=
   - secure: MMIqP3HXZcMgpHvxl1UAixYpsGxDyuBBcLkoq2VmkU9Fcp/63HenY6voDSKfQC1NVakd+CJphF9bqRfttessgNYY2g+gBmHSHuRJGbZXHgLz4dFCXeqsB5QN+UTqIHOlaxT3hoTwQrJelfIfgtkpjA0OPeFp9Zgmd9BNOubc2c0=
   - secure: ez8hZPE0XR2sS3+keFGmVsZ77dlSJI0DMbSpqmx6GXaY6oium9q0+2Tx271Q4gS8vxfLh1b7OrLM6bEUi+ujciAPMO6PyikcC1TkaxZyDqDsHWWqGyV9TO5Eq0POq1UBAcl/4RqGqsDfS6mXA4eim/J2W7uznOO8Ga8Jy9Z1m+w=
-
+  - secure: rtYpH66XserEtQcGjf/Xm8zAW5uv6euly3OactSBzryLCNG4fEf3aKonyNWnICIPlsF6b3q+7kNOFCEp83rJoZMzaDxq+w0CpJntMGqhvw6abXQkZd1GMrOos48OJEgE4l4glKp82Nd7tWJyWCMwTU3WDKSTDeEFpRZkhoThl9c=
+  - secure: f+t6XIwnI46W+IW4qog7elIjufp8+E2Rdjx7NWKUun47+g4mZTyPBv0ixRbQzOepNSE+tUqESCAIb6AX4zUbAhVfQPCgd5oGOHDfTXQzB9U9TOFX/TBXbUEi2BADi2F7NUSiFvefDUy33ZYFBhFoh9h/QFDRFGrxTWF9dQyIBK0=
 install:
 - export PATH=$PATH:$HOME/.bin
 - script/bootstrap
-
 deploy:
 - provider: script
   script: scripts/release stable $TRAVIS_TAG
@@ -26,7 +25,6 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
-
 notifications:
   email: false
   irc: chat.freenode.net#canon-dev
