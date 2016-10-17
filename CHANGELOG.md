@@ -1,3 +1,8 @@
+## v1.9.0 (October 17, 2016)
+- changes publish to s3
+- add .rs-cascade cascade widget
+- add .rs-message banner messages
+
 ## v1.8.1 (June 30, 2015)
 - add .rs-icon-external-light for external links on light backgrounds
 
