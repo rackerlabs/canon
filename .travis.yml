@@ -16,7 +16,7 @@ install:
 - script/bootstrap
 deploy:
 - provider: script
-  script: scripts/release stable $TRAVIS_TAG
+  script: script/release stable $TRAVIS_TAG
   skip_cleanup: true
   on:
     tags: true
