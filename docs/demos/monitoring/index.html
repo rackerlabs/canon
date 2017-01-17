@@ -1,0 +1,87 @@
+---
+layout: demos
+category: Monitoring
+title: Dashboard
+---
+<div class="rs-main">
+  <div class="rs-content rs-panel">
+    <div class="rs-inner">
+      <ul class="rs-breadcrumbs">
+    <li class="rs-breadcrumb-item">
+      <a href="" class="rs-breadcrumb-link">Rackspace Cloud</a>
+    </li>
+    <li class="rs-breadcrumb-item">
+      <a href="" class="rs-breadcrumb-link">Accounts</a>
+    </li>
+    <li class="rs-breadcrumb-item">
+      <a href="" class="rs-breadcrumb-link">WoW Pre-Production</a>
+    </li>
+    <li class="rs-breadcrumb-item">
+      <span class="rs-breadcrumb-text">Cloud Servers</span>
+    </li>
+  </ul>
+      <h1 class="display">Cloud Servers</h1>
+      <input type="text" class="rs-input-large rs-pull-right" placeholder="Search {{page.servers.size}} Cloud Servers...">
+      <div class="rs-btn-group">
+        <a href="create.html" class="rs-btn rs-btn-primary">Create Server</a>
+        <button class="rs-btn modify-selected" disabled>Delete</button>
+      </div>
+      <div class="rs-list-table rs-select-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="rs-table-status"></td>
+              <th class="rs-table-checkbox"><input type="checkbox" class="select-all" /></td>
+              <th class="rs-table-cog"></th>
+              <th>
+                <a href="#" class="rs-table-sort rs-table-sort-desc">
+                  <span class="rs-table-sort-text">Name</span>
+                  <span class="rs-table-sort-indicator"></span>
+                </a>
+              </th>
+              <th>IP Address</th>
+              <th>Monitoring</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for server in site.data.servers %}
+            {% assign serverStatus = server[1].status %}
+            <tr id="row-{{server[1].id}}">
+              <td class="rs-table-status rs-table-status-{{ server[1].status }} tip" title="{{ page.itemStatuses[serverStatus] }}" data-delay="1" id="row-status-{{server[1].id}}"></td>
+              <td class="rs-table-checkbox"><input type="checkbox" /></td>
+              <td class="rs-table-cog">
+                <div class="rs-dropdown">
+                  <div class="rs-cog rs-dropdown-toggle"></div>
+                  <ul class="rs-dropdown-menu">
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category" id="first">Identify</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Rename Server&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Tag Server&hellip;</a></li>
+                    <li class="rs-dropdown-item"><span class="rs-dropdown-category">Image</span></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Create Image&hellip;</a></li>
+                    <li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Schedule Daily Image&hellip;</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td class="rs-table-link"><a href="{{ site.baseurl }}/demos/details.html">{{ server[1].name }}</a></td>
+              <td class="rs-table-text">{{ server[1].ip }}</td>
+              <td class="rs-table-status-list">
+              <ul class="rs-status-list">
+                {% if server[1].checks %}
+                {% for check in server[1].checks %}
+                <li class="rs-status-list-item tooltip-toggle tip" title="{{ page.checkStatuses[check]}}" data-delay="0">
+                  <div class="rs-icon-status rs-status-{{ check }}"></div>
+                </li>
+                {% endfor %}
+                {% else %}
+                  <button type="button" class="rs-plus tip" title="Create Monitoring Check" data-delay="1"></button>
+                {% endif %}
+              </ul>
+            </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

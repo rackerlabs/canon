@@ -1,0 +1,76 @@
+---
+layout: demos
+primary: Monitoring
+dropdown-title: Monitors
+secondary: Monitors
+---
+{% include demos/secondary_nav.html %}
+<div class="rs-main">
+  <div class="rs-content rs-panel">
+    <div class="rs-inner">
+      <ul class="rs-breadcrumbs">
+        <li class="rs-breadcrumb-item">
+          <a href="" class="rs-breadcrumb-link">Rackspace Cloud</a>
+        </li>
+        <li class="rs-breadcrumb-item">
+          <a href="" class="rs-breadcrumb-link">Accounts</a>
+        </li>
+        <li class="rs-breadcrumb-item">
+          <a href="" class="rs-breadcrumb-link">WoW Pre-Production</a>
+        </li>
+        <li class="rs-breadcrumb-item">
+          <span class="rs-breadcrumb-text">Monitors</span>
+        </li>
+      </ul>
+      <h1 class="display">Monitors</h1>
+      <p>This section contains all of the entities being monitored, including all of your Rackspace cloud servers. While non‑Rackspace products can be monitored, Rackspace technical support may be limited. <a href="">Learn More <i class="rs-icon rs-icon-external-link"></i></a></p>
+      <div class="rs-btn-group">
+        <input type="text" class="rs-input-xlarge rs-pull-right" placeholder="Search {{ site.data.monitors.size }} Monitors...">
+        <button class="rs-btn rs-btn-primary">Create Monitor</button>
+        <button class="rs-btn" disabled>Create Suppression</button>
+        <button class="rs-btn" disabled>Create Checks</button>
+        <button class="rs-btn" disabled>Create Checks</button>
+        <button class="rs-btn" disabled>Delete</button>
+      </div>
+      <!-- Start  Table -->
+      <table class="rs-list-table rs-select-table">
+        <thead>
+          <tr>
+            <th class="rs-table-checkbox"><input type="checkbox" class="select-all"></th>
+            <th class="rs-table-cog"></th>
+            <th>Name</th>
+            <th>Critical Alarms</th>
+            <th>Warning Alarms</th>
+            <th>OK Alarms</th>
+            <th>Disabled Alarms</th>
+            <th>Visualize</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for monitor_hash in site.data.monitors %}
+          {% assign monitor = monitor_hash[1] %}
+          <tr>
+            <td class="rs-table-checkbox"><input type="checkbox" /></td>
+            <td class="rs-table-cog">
+              <div class="rs-dropdown">
+                <div class="rs-cog rs-dropdown-toggle"></div>
+                <ul class="rs-dropdown-menu hidden">
+                  
+                </ul>
+              </div>
+            </td>
+            <td class="rs-table-link"><a href="#">{{monitor.name}}</a></td>
+            <td class="rs-table-text">{% if monitor.critical != '--' %}{% if monitor.critical > 0 %}<span class="rs-status rs-status-error">{{monitor.critical}}</span>{% else %}{{monitor.critical}}{% endif %}{% else %}{{monitor.critical}}{% endif %}</td>
+            <td class="rs-table-text">{% if monitor.warning != '--' %}{% if monitor.warning > 0 %}<span class="rs-status rs-status-warning">{{monitor.warning}}</span>{% else %}{{monitor.warning}}{% endif %}{% else %}{{monitor.warning}}{% endif %}</td>
+            <td class="rs-table-text">{% if monitor.ok != '--' %}{% if monitor.ok > 0 %}<span class="rs-status rs-status-ok">{{monitor.ok}}</span>{% else %}{{monitor.ok}}{% endif %}{% else %}{{monitor.ok}}{% endif %}</td>
+            <td class="rs-table-text">{% if monitor.disabled != '--' %}{% if monitor.disabled > 0 %}<span class="rs-status rs-status-disabled">{{monitor.disabled}}</span>{% else %}{{monitor.disabled}}{% endif %}{% else %}{{monitor.disabled}}{% endif %}</td>
+            <td class="rs-table-link"><a href=""><i class="rs-icon rs-icon-monitoring"></i></a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <!-- End  Table -->
+      
+    </div>
+  </div>
+</div>
