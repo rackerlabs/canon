@@ -1,56 +1,39 @@
 .rs-nav-primary {
   min-height: $app-nav-primary-height;
   z-index: $zindexNavPrimary;
-  @include noise;
+  background-color: $grey975;
 
   .rs-nav {
-    @include seam;
     padding: 0;
-    padding-top: 20px;
   }
 
   .rs-nav-link {
     line-height: 1em;
-    padding: 8px 15px 7px 15px;
-    color: $nav-primary-link;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: $alt-font-family;
+    padding: 26px 20px 24px 20px;
+    margin: 0;
+    color: $grey600;
+    @extend .small;
+    letter-spacing: .1em;
     text-decoration: none;
-    text-shadow: 0 1px $white;
-    border-bottom: 2px solid transparent;
     position: relative;
+    text-transform: uppercase;
   }
 
   .rs-caret {
     display: inline-block;
-    width: 27px;
-    height: 13px;
-    vertical-align: text-bottom;
-    position: absolute;
-    top: 13px;
-    right: 12px;
-    @include sprite-position($caret-primary, 16px);
-
-    &:before {
-      content: "";
-      display: block;
-      width: 27px;
-      height: 14px;
-      position: relative;
-      top: -14px;
-    }
+    vertical-align: middle;
+    font-size: 0.5em;
+    color: $grey500;
   }
 
   .rs-nav-item {
-    border: 1px solid transparent;
-    margin: 0 5px;
 
     &:hover,
     &.hover {
       & > a,
       .rs-nav-link {
-        color: $nav-primary-link-hover;
+        background-color: $grey950;
+        color: $grey0;
       }
     }
 
@@ -58,7 +41,8 @@
     &.active {
       & > a,
       .rs-nav-link {
-        color: $nav-primary-link-active;
+        background-color: $grey950;
+        color: $grey0;
       }
     }
 
@@ -73,13 +57,9 @@
     }
 
     &.rs-dropdown {
-      & > a,
-      .rs-nav-link {
-        padding-right: 35px;
-      }
       .rs-dropdown-menu {
         margin: -2px 0 0 0px;
-        right: -15px;
+        // right: -15px;
       }
     }
 
@@ -87,7 +67,8 @@
     &.rs-dropdown.hover,
     &.rs-dropdown.active {
       .rs-caret {
-        @include sprite-position($caret-primary-active, 16px);
+        @extend .rs-icon;
+        @extend .rs-icon-arrow-down;
       }
     }
 
@@ -99,17 +80,4 @@
   }
 }
 
-.rs-nav-brand {
-  float: left;
 
-  a {
-    background: transparent image-url('logo-rackspace.png') no-repeat center center;
-    width: $nav-branding-width;
-    height: 70px;
-    display: block;
-  }
-
-  & + .rs-nav {
-    padding-left: $nav-branding-width + 20px;
-  }
-}
