@@ -1,13 +1,11 @@
 // Status Label
 .rs-status {
   display: inline;
-  padding: 3px 5px 4px;
-  font-size: 13px;
-  line-height: 20px;
-  color: $white;
+  padding: 0.25em 0.5em;
+  color: $grey0;
   vertical-align: baseline;
   white-space: nowrap;
-  background-color: $grey300;
+  background-color: $grey500;
   border-radius: 3px;
 
   &:empty {
@@ -17,78 +15,78 @@
 
 .rs-status {
   &.rs-status-ok {
-    color: $white;
-    background-color: $green;
+    color: $grey0;
+    background-color: $green700;
   }
 
   &.rs-status-warning {
-    color: $white;
-    background-color: $yellow;
+    color: $grey0;
+    background-color: $yellow900;
   }
 
   &.rs-status-error {
-    color: $white;
-    background-color: $red;
+    color: $grey0;
+    background-color: $red700;
   }
 
   &.rs-status-disabled {
-    color: $white;
-    background: $grey300;
+    color: $grey0;
+    background: $grey500;
   }
 
   &.rs-status-pending {
-    color: $white;
-    background-color: $yellow;
+    color: $grey0;
+    background-color: $yellow900;
   }
 
   &.rs-status-processing {
-    color: $white;
-    background: $yellow image-url('loading-white-yellow.gif') 4px center no-repeat;
+    color: $grey0;
+    background: $yellow900 image-url('loading-white-yellow.gif') 4px center no-repeat;
     padding-left: 20px;
   }
 
   &.rs-status-processing-ok {
-    color: $white;
-    background: $green image-url('loading-white-green.gif') 4px center no-repeat;
+    color: $grey0;
+    background: $green700 image-url('loading-white-green.gif') 4px center no-repeat;
     padding-left: 20px;
   }
 
   &.rs-status-processing-error {
-    color: $white;
-    background: $red image-url('loading-red.gif') 4px center no-repeat;
+    color: $grey0;
+    background: $red700 image-url('loading-red.gif') 4px center no-repeat;
     padding-left: 20px;
   }
 }
 
 // Colored Status Typography
 .rs-status-ok {
-  color: $green;
+  color: $green700;
 }
 
 .rs-status-warning {
-  color: $yellow;
+  color: $yellow900;
 }
 
 .rs-status-error {
-  color: $red;
+  color: $red700;
 }
 
 .rs-status-disabled {
-  color: $grey300;
+  color: $grey500;
 }
 
 .rs-status-pending {
-  color: $yellow;
+  color: $yellow900;
 }
 
 .rs-status-processing {
-  color: $yellow;
+  color: $yellow900;
 }
 
 .rs-status-processing-ok {
-  color: $green;
+  color: $green700;
 }
 
 .rs-status-processing-error {
-  color: $red;
+  color: $red700;
 }
