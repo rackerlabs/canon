@@ -1,12 +1,13 @@
 // Section View
 .rs-detail-section + .rs-detail-section,
 .rs-detail-header + .rs-detail-section {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $grey300;
 }
 
 .rs-detail-section-header {
-  padding: 30px 30px 20px;
-  border-top: 1px solid #fff;
+  padding: 2em 1.5em 1.5em 1.5em;
+  position: relative;
+  
 }
 
 .rs-detail-section-title,
@@ -16,9 +17,7 @@
 
 .rs-detail-section-title {
   margin-right: 10px;
-  font-family: $alt-font-family;
-  font-size: 22px;
-  font-weight: 600;
+  @extend h1.light;
 }
 
 .rs-detail-section-subtitle {
@@ -26,17 +25,17 @@
 }
 
 .rs-detail-section-body {
-  padding: 0 30px;
-  margin: 0 0 30px;
+  padding: 0 1.5em;
+  margin: 0 0 $app-nav-utility-height;
 }
 
 // Collapsible Detail Section
 .rs-collapsible-section {
   > .rs-detail-section-header {
     > .rs-caret {
-      width: 13px;
-      height: 13px;
-      margin: 3px 0 3px 10px;
+      @extend .rs-icon;
+      font-size: 0.625em;
+      color: $grey700;
       float: right;
     }
   }
@@ -52,7 +51,7 @@
   > .rs-detail-section-header:hover,
   > .rs-detail-section-header:focus {
     outline: none;
-    background-image: linear-gradient(#f7f7f7, #fff);
+    background-image: linear-gradient($grey0, $grey50);
   }
 }
 
@@ -77,7 +76,8 @@
 .rs-collapsible-section.expanded {
   > .rs-detail-section-header {
     > .rs-caret {
-      @include sprite($section-toggle-expanded);
+      @extend .rs-icon-arrow-down;
+      opacity: 0.5;
     }
   }
 
@@ -85,7 +85,8 @@
   > .rs-detail-section-header:hover,
   > .rs-detail-section-header:focus {
     > .rs-caret {
-      @include sprite($section-toggle-expanded-hover);
+      opacity: 1;
+      @extend .rs-icon-arrow-down;
     }
   }
 }
@@ -93,7 +94,8 @@
 .rs-collapsible-section.collapsed {
   > .rs-detail-section-header {
     > .rs-caret {
-      @include sprite($section-toggle-collapsed);
+      opacity: 0.5;
+      @extend .rs-icon-arrow-up;
     }
   }
 
@@ -101,7 +103,8 @@
   > .rs-detail-section-header:hover,
   > .rs-detail-section-header:focus {
     > .rs-caret {
-      @include sprite($section-toggle-collapsed-hover);
+      opacity: 0.5;
+      @extend .rs-icon-arrow-up;
     }
   }
 }
@@ -111,45 +114,53 @@
     > .rs-caret {
       width: 16px;
       height: 16px;
-      background: image-url('loading-indicator.gif');
+      background: url('icon-loading-circle.svg') no-repeat;
+      background-size: contain;
+      animation: spin 0.75s linear infinite;
+
+      &:before {
+        content: '';
+      }
     }
   }
 }
 
 // Header Section
 .rs-detail-header {
-  padding: 30px;
-}
-
-.rs-detail-header-title,
-.rs-detail-header-subtitle {
-  font-family: $alt-font-family;
+  padding: 1.875em 1.25em 1.25em 1.25em;
+  position:  relative;
 }
 
 .rs-detail-header-title {
-  font-size: 32px;
-  font-weight: 600;
+  @extend h1.display;
+  margin-bottom: 0.6em;
 }
 
 .rs-detail-header-subtitle {
-  margin: 0 0 5px;
-  color: $grey400;
-  font-size: 14px;
-  font-weight: 600;
+  color: $grey700;
   text-transform: uppercase;
+  font-family: 'Roboto Light';
+  @extend .small;
+  margin-bottom: 0.625em;
 }
 
 .rs-detail-header-actions {
-  @extend %rs-pull-right;
+  position: absolute;
+  right: 1.25em;
+  bottom: 0;
+  margin-bottom: 2.625em;
 }
 
 // Create Sections
 
 .rs-create-header {
-  padding: 30px 30px 0 30px;
+  padding: 0 1.25em 1.25em 1.25em;
+  position:  relative;
 
-  & + .rs-detail-section {
-    border-top: 1px solid #fff;
+  .rs-page-title {
+    @extend h1.display;
+    margin-bottom: 0.6em;
+    margin-top: 0.7em;
   }
 }
 
@@ -174,7 +185,7 @@
 }
 
 .rs-detail-item {
-  margin: 0 0 10px;
+  margin: 0 0 0.875em;
 
   @include micro-clearfix;
 }
@@ -182,7 +193,7 @@
 .rs-detail-key {
   clear: left;
   float: left;
-  color: $grey400;
+  color: $grey700;
   text-align: right;
 }
 
