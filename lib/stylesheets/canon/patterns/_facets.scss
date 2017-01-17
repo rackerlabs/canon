@@ -3,119 +3,149 @@
 
 .rs-facet-title {
   @extend .rs-truncate;
-  font-family: $alt-font-family;
-  font-size: 20px;
-  font-weight: 600;
+  @extend h2;
+  color: $grey800;
   display: block;
-  margin-bottom: 8px;
+  margin-top: 2.875em;
+  margin-bottom: 1.5em;
+  padding: 0 1em;
+}
+
+.rs-facets {
+  margin: 0;
+
+  &.rs-sidebar-fixed {
+    position: fixed;
+    top: $app-nav-utility-height;
+  }
+}
+
+.rs-facet-section-header {
+  padding: 0 $medium-padding;
 }
 
 .rs-facet-section {
-  margin-bottom: 15px;
-
-  .rs-facet-item {
-    margin-bottom: 1px;
-    padding: 2px 0px 0px 10px;
-  }
+  margin-bottom: 1em;
+  width: $rs-sidebar-width;
 }
 
 .rs-facet-section-title {
   @extend .rs-truncate;
-  margin-top: 12px;
-  font-family: $alt-font-family;
-  font-size: 14px;
-  font-weight: 700;
+  @extend h4;
+  color: $grey700;
+  margin-top: 0.875em;
   text-transform: uppercase;
-  padding: 1px 0 3px 0;
+  padding: 0 0 0.25em 0;
 }
 
 .rs-facet-clear-link {
   @extend .rs-pull-right;
   @extend a;
-  font-size: $base-font-size;
+  @extend .small;
   text-transform: lowercase;
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 0.25em;
 }
 
 .rs-facet-section .rs-facet-list {
   margin: 0;
-  padding: 0;
+  padding: 0.5em 0;
   list-style-type: none;
   display: block;
 }
 
 .rs-facet-count {
-  @extend .rs-quiet;
+  @extend .small;
+  @extend .rs-pull-right;
+  color: $grey600;
 }
 
 .rs-facet-label {
   @extend .rs-pull-left;
   @extend .rs-truncate;
-  max-width: 150px;
-  margin-right: 5px;
-  color: $grey500;
+  @extend .small;
+  max-width: $rs-sidebar-width - 2em;
+  color: $grey700;
 }
 
 .rs-facet-section-toggle {
-  color: $blue;
-  height: 18px;
+  color: $cyan700;
+  height: 1.125em;
   cursor: pointer;
+  padding: 0 $medium-padding;
+  @extend .small;
 
   &:hover {
     text-decoration: underline;
   }
 
   .rs-facet-toggle-arrow {
-    margin-left: 7px;
+    margin-left: 0.25em;
+    @extend .extra-small;
   }
 }
 
 .rs-facet-toggle-arrow {
-  @include icon;
-  @include sprite($arrow-blue-right);
+  @extend .rs-icon;
+  @extend .rs-icon-arrow-right;
 }
 
 .rs-facet-section.expanded .rs-facet-section-toggle .rs-facet-toggle-arrow {
-  @include icon;
-  @include sprite($arrow-blue-up);
+  @extend .rs-icon;
+  @extend .rs-icon-arrow-up;
 }
 
 .rs-facet-item {
   overflow: hidden;
-  padding: 2px 0px 0px 0px;
+  padding: 0.1em $medium-padding;
   display: block;
   cursor: pointer;
-  border-radius: 3px;
 
   &.hover,
-  &:hover {
-    background-color: $grey150;
+  &:hover  {
+    background-color: $grey300;
+    color: $grey800;
+  }
+
+  &.hover.disabled,
+  &:hover.disabled {
+    color: $grey800;
+    background-color: transparent;
   }
 
   &.disabled {
 
     &.hover,
     &:hover {
+      cursor: default;
+
       .rs-facet-label {
         color: $grey500;
       }
 
       .rs-facet-count {
-        color: $grey400;
+        color: $grey500;
       }
 
       [class*="rs-status-"] {
         opacity: 1;
       }
+
+      [class*="rs-status-"] {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+        filter: alpha(opacity=30);
+        -moz-opacity: 0.3;
+        -khtml-opacity: 0.3;
+        opacity: 0.3;
+      }
     }
 
     .rs-facet-label {
-      color: $grey300;
+      color: $grey500;
     }
 
     .rs-facet-count {
-      color: $grey300;
+      color: $grey500;
     }
 
     [class*="rs-status-"] {
@@ -128,39 +158,42 @@
   }
 
   &.selected {
-    background-color: $grey250;
-    padding: 2px 0px 0px 10px;
+    background-color: $grey400;
+    padding: 0.1em $medium-padding;
 
     .rs-facet-label {
-      color: $grey600;
+      color: $grey900;
     }
 
     .rs-facet-count {
-      color: $grey500;
+      color: $grey700;
     }
   }
 
   [class*="rs-status-"] {
     @extend .rs-pull-left;
     @include icon;
-    margin: 2px 6px 0px 0px;
+    margin-right: 0.5em;
     vertical-align: bottom;
 
     + .rs-facet-label {
-      max-width: 120px;
+      max-width: 7.5em;
     }
   }
 
   .rs-status-ok {
-    @include sprite($status-green);
+    @extend .rs-icon;
+    @extend .rs-icon-check-circle;
   }
 
   .rs-status-warning {
-    @include sprite($status-yellow);
+    @extend .rs-icon;
+    @extend .rs-icon-warning;
   }
 
   .rs-status-error {
-    @include sprite($status-red);
+    @extend .rs-icon;
+    @extend .rs-icon-error;
   }
 
 }
