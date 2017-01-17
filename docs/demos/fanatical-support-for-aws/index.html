@@ -1,0 +1,49 @@
+---
+layout: demos-left-nav
+utility: Fanatical Support for AWS
+primary: AWS Accounts
+---
+
+  
+  <div class="rs-content rs-panel">
+    <div class="rs-inner">
+      <ul class="rs-breadcrumbs">
+    <li class="rs-breadcrumb-item">
+      <a href="" class="rs-breadcrumb-link">Fanatical Support for AWS</a>
+    </li>
+    <li class="rs-breadcrumb-item">
+      <a href="" class="rs-breadcrumb-link">AWS Accounts</a>
+    </li>
+  </ul>
+      <h1 class="display">AWS Accounts</h1>
+      <div class="rs-btn-group">
+        <input type="text" class="rs-input-xlarge rs-pull-right" placeholder="Search {{site.data.managed-aws-accounts.size}} AWS Accounts...">
+        <a href="create.html" class="rs-btn rs-btn-primary">Add AWS Account</a>
+      </div>
+      <table class="rs-list-table">
+        <thead>
+          <tr>
+            <th>Account Name</th>
+            <th>AWS Account</th>
+            <th>Service Level</th>
+            <th>Spend Analytics</th>
+            <th>AWS Console</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for account_hash in site.data.managed-aws-accounts %}
+          {% assign account_number = account_hash[0] %}
+          {% assign account = account_hash[1] %}
+          <tr>
+            <td class="rs-table-link"><a href="#">{{ account.name }}</a></td>
+            <td class="rs-table-text">{{ account_number }}</td>
+            <td class="rs-table-text">{{ account.service-level }}</td>
+            <td class="rs-table-link"><a href="#">View <i class="rs-icon rs-icon-monitoring"></i></a></td>
+            <td class="rs-table-link"><a href="#">Log In <i class="rs-icon rs-icon-external"></i></a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
