@@ -1,42 +1,141 @@
 .rs-message {
-  border: 2px $white solid;
-  margin-top: 10px;
+  // margin: 1em 1.25em 0 1.25em;
+  border-radius: 2px;
 
-  .rs-close {
-    float: right;
-    margin: 10px;
+  .rs-message-icon {
+    color: $grey0;
+    float: left;
+    margin: 0.875em;
+  }
+
+  a {
+    text-transform: uppercase;
+    color: $grey0;
+  }
+
+  .rs-icon-close {
+    margin: 0.875em 0.875em 0.875em 1.5em;
+    color: $grey0;
+    opacity: 0.5;
+    cursor: pointer;
+    @extend .rs-pull-right;
+
+    &:hover,
+    &.hover {
+      opacity: 1;
+    }
+
+    &:active,
+    &.active {
+      opacity: 0.5;
+    }
   }
 
   &.rs-status-ok {
-    background-color: $green50;
+    background-color: $green700;
+
+    .rs-message-icon {
+      @extend .rs-icon-check-mark;
+    }
   }
 
   &.rs-status-warning {
-    background-color: $yellow50;
+    background-color: $yellow900;
+
+    .rs-message-description,
+    .rs-message-title,
+    .rs-message-icon {
+      color: $grey975;
+    }
+
+    .rs-message-icon {
+      @extend .rs-icon-warning;
+    }
+
   }
 
   &.rs-status-error {
-    background-color: $red50;
+    background-color: $red700;
+
+    .rs-message-icon {
+      @extend .rs-icon-error;
+    }
   }
 
   &.rs-status-info {
-    background-color: $blue50;
+    background-color: $blue500;
+
+    .rs-message-description,
+    .rs-message-title,
+    .rs-icon,
+    .rs-message-action,
+    .rs-icon-close {
+      color: $grey0;
+    }
+
+    .rs-message-icon {
+      @extend .rs-icon-info;
+    }
+  }
+
+  &.rs-message-inline {
+    display: inline-block;
+    background-color: transparent;
+    margin: 1.25em 0;
+    border: none;
+
+    .rs-message-icon {
+      margin: 0 0.5em 0 0;
+    }
+
+    &.rs-status-ok {
+      .rs-message-icon {
+        color: $green700;
+      }
+    }
+    &.rs-status-warning {
+      .rs-message-icon {
+        color: $yellow900;
+      }
+    }
+    &.rs-status-error {
+      .rs-message-icon {
+        color: $red700;
+      }
+    }
+
+    .rs-message-description {
+      color: $grey975;
+    }
+  }
+}
+
+.rs-detail-section-header,
+.rs-detail-section-body {
+  &> .rs-message {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 .rs-message-embedded {
-  border-top: 1px $grey100 solid;
-  border-bottom: 1px $grey100 solid;
-  border-left: none;
-  border-right: none;
+  margin: 0;
+  border-radius: 0;
+
+  &+.rs-detail-section {
+    .rs-detail-section-header {
+      border-top: 1px $grey500 solid;
+    }
+  }
 
   .rs-message-content {
-    margin: 30px;
+    padding: 32px;
   }
 
   .rs-message-title {
-    @extend h4;
+    @extend h3;
     display: block;
+    line-height: 1.5em
   }
 
   .rs-close {
@@ -50,19 +149,28 @@
   }
 }
 
+.rs-detail-header+.rs-message-embedded{
+  border-top: 1px $grey500 solid;
+}
+
 .rs-message-title {
   display: inline;
-  font-weight: bold;
-  color: $grey600;
+  font-family: 'Roboto Medium';
+  color: $grey0;
 }
 
 .rs-message-description {
   display: inline;
-  color: $grey600;
+  color: $grey0;
+  font-family: 'Roboto Light';
+}
+
+.rs-message-action {
+  @extend .rs-pull-right;
 }
 
 .rs-message-content {
-  margin: 7px 10px;
+  padding: 0.875em 1em;
 }
 
 .rs-message-icon {
@@ -71,11 +179,7 @@
 }
 
 .rs-message-icon ~ .rs-message-content {
-  margin-left: 33px;
-}
-
-.rs-message+.rs-main {
-  margin-top: 10px;
+  margin-left: 2em;
 }
 
 .rs-close ~ .rs-message-content {
