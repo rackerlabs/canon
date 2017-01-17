@@ -136,17 +136,15 @@
 @mixin font-face(
   $name,
   $path,
-  $name-concat,
-  $weight: normal,
-  $style: normal
+  $name-concat
 ) {
   $path: $canon-font-path + $path;
   @font-face {
     font-family: #{$name};
     src: url('#{$path}.eot');
     src: url('#{$path}.eot?#iefix') format('eot'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$name-concat}') format('svg');
-    font-weight: $weight;
-    font-style: $style;
+    font-weight: normal;
+    font-style: normal;
   }
 }
 
@@ -163,59 +161,6 @@
   overflow: hidden;
 }
 
-// Sprites
-
-@mixin sprite-width($sprite) {
-  width: nth($sprite, 5);
-}
-
-@mixin sprite-height($sprite) {
-  height: nth($sprite, 6);
-}
-
-@mixin sprite-position($sprite) {
-  $sprite-offset-x: nth($sprite, 3);
-  $sprite-offset-y: nth($sprite, 4);
-  background-position: $sprite-offset-x  $sprite-offset-y;
-}
-
-@mixin sprite-image($sprite) {
-  $sprite-image: nth($sprite, 9);
-  background-color: transparent;
-  background-image: url(#{$canon-image-path}#{$sprite-image});
-}
-
-@mixin sprite($sprite, $width: 'auto', $height: 'auto') {
-  @include sprite-image($sprite);
-  @include sprite-position($sprite);
-  background-repeat: no-repeat;
-
-  @if $width == 'auto' {
-    @include sprite-width($sprite);
-  } @else {
-    width: $width;
-  }
-  @if $height == 'auto' {
-    @include sprite-height($sprite);
-  } @else {
-    height: $height;
-  }
-}
-
-@mixin sprite-position($sprite, $xOffset: null) {
-  $sprite-offset-x: if($xOffset, $xOffset, nth($sprite, 3));
-  $sprite-offset-y: nth($sprite, 4);
-  background-position: $sprite-offset-x  $sprite-offset-y;
-}
-
-@mixin sprites($sprites) {
-  @each $sprite in $sprites {
-    $sprite-name: nth($sprite, 10);
-    .rs-icon-#{$sprite-name} {
-      @include sprite($sprite);
-    }
-  }
-}
 
 @mixin icon($width: 13px, $height: 13px) {
   display: inline-block;
