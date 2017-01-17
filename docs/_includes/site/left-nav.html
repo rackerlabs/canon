@@ -1,0 +1,11 @@
+<ul class="rs-sidebar rs-nav rs-sidebar-fixed">{% for pg in site.pages %}{% if pg.resource == true and pg.category == page.category %}{% assign parentName = pg.title %}{% assign hasChildren = 0 %}{% for children in site.pages %}{% if children.parent == parentName %}{% assign hasChildren = hasChildren | plus: 1%}{% endif %}{% endfor %}{% if hasChildren > 0 %}
+  <li class="rs-sidebar-accordion{% if pg.title == page.title %} active{% endif %}">
+    <a class="rs-nav-link rs-sidebar-accordion-toggle" href="javascript:void(0);">{{pg.title}} <i class="rs-caret"></i></a>
+    <ul class="rs-sidebar-accordion-menu{% if pg.title == page.title %} visible{% else %} hidden{% endif %}">{% for child in site.pages %}{% if child.parent == parentName%}
+      <li class="rs-nav-item"><a class="rs-nav-link" href="{{site.baseurl}}{{site.data.navigation[page.category].url}}{{parentName | downcase | replace: ' ', '-'}}/#{{child.title | downcase | replace: ' ','-'}}">{{child.title}}</a></li>{% endif %}{% endfor %}
+    </ul>
+  </li>{% else %}
+  <li class="rs-nav-item{% if pg.title == page.title %} active{% endif %}">
+    <a class="rs-nav-link" href="{{site.baseurl}}{{pg.url}}">{{pg.title}}</a>
+  </li>{% endif %} {% endif %} {% endfor %}
+</ul>
