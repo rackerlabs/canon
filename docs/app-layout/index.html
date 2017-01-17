@@ -1,13 +1,34 @@
 ---
-layout: canon-content
-title: app layout
-utilitySection: App Layout
+category: App Layout
+layout: default-left-nav
+title: App Layout
 ---
-<div class="site-header-secondary-page">
+<div class="site-header">
   <div class="site-header-content">
     <div class="rs-container">
       <div class="site-header-title-secondary">{{ page.title }}</div>
-      <p class="site-header-title-sub">Fundamental markup for a Rackspace branded experience.</p>
+      <p class="site-header-title-sub">Fundamental framework markup for a Rackspace branded apllication.</p>
+    </div>
+  </div>
+</div>
+<div class="rs-inner">
+  <h1 class="light">Layout Framework</h1>
+  <div class="rs-row">
+    <div class="span-4">
+      <p>The basic layout of Canon consists of 4 parts.</p>
+      <ol>
+        <li><h2 style="margin-bottom: 0;"><a href="{{site.baseurl}}/app-layout/">Utility Navigation</a></h2>
+          consists of links and tools that help the user, such as account details, log out, or help information, but are not the core sections of the application.</li>
+        <li><h2 style="margin-bottom: 0;"><a href="#header-&-navigation">Primary Navigation</a></h2>
+          used for the main sections of the application or for <a href="/ui-components/#dropdowns">dropdown</a> categories that organize sections into higher level groups.</li>
+        <li><h2 style="margin-bottom: 0;"><a href="#content-area">Content Area</a></h2>
+          used for your application's main data and interactions.</li>
+        <li><h2 style="margin-bottom: 0;"><a href="#footer">Footer</a></h2>
+          used for legal information, application news, and feedback links.</li>
+      </ol>
+    </div>
+    <div class="span-8">
+      <img src="{{site.baseurl}}/img/application-layout.png" style="width:100%;">
     </div>
   </div>
 </div>
