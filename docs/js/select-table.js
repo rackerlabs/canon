@@ -40,6 +40,10 @@ $(document).ready(function() {
 		toggleBatchAction(row);
 	});
 
+	$(".rs-select-table .rs-table-cog").click(function(e) {
+		e.stopPropagation();
+	});
+
 	$(".rs-select-table input:checkbox").click(function(e) {
 		var checkbox = $(this);
 		checkbox.closest("tr").toggleClass("selected");
