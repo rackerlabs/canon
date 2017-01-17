@@ -1,27 +1,40 @@
+$cell-padding: 1.25em;
+
 /* Class-Based Styles */
 .rs-list-table,
 %rs-list-table {
   width: 100%;
-  margin-bottom: 20px;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+  margin-top: 1em;
+  margin-bottom: 1.25em;
   text-align: left;
   border-collapse: collapse;
   position: relative;
 }
 
+.rs-tab-content {
+  .rs-list-table,
+  .rs-table,
+  table{
+    margin: 0;
+  }
+}
+
 .rs-table-row,
 %rs-table-row {
   .rs-select-table &:hover,
-  &.hover,
+  &.hover {
+    .rs-table-cell, td {
+      background-color: $grey200;
+    }
+  }
   &.selected {
     .rs-table-cell, td {
-      background-color: $blue5;
+      background-color: $cyan50;
     }
   }
   &.selected:hover, &.selected.hover {
     .rs-table-cell, td:not(.rs-table-status) {
-      background-color: $blue10;
+      background-color: $cyan50;
     }
   }
   &.rs-heartbeat-ok {
@@ -46,60 +59,86 @@
 
 .rs-table-header,
 %rs-table-header {
-  padding: 0 10px;
-  color: $grey500;
-  font-weight: normal;
-  border-bottom: 1px solid $grey50;
+  @extend .small;
+  padding: 0.875em $cell-padding 0.875em $cell-padding;
+  color: $grey800;
+  line-height: 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid $grey300;
   text-align: inherit; // fix for IE (http://haslayout.net/css/Non-Inherited-TH-Text-Align-Bug)
 
   &.rs-table-status:before {
     content: '\00A0 ';
-    width: 10px;
+    width: 0.875em;
     display: block;
   }
 }
 
 .rs-table-cell,
 %rs-table-cell {
-  padding: 10px;
-  border-bottom: 1px solid $grey50;
+  padding: $cell-padding;
+  border-bottom: 1px solid $grey300;
+}
+
+.rs-table-compact {
+  .rs-table-cell:not(.rs-table-status),
+  %rs-table-cell:not(.rs-table-status),
+  td:not(.rs-table-status) {
+    padding: $cell-padding/2;
+    @extend .small;
+  }
+
+  th:not(.rs-table-status),
+  .rs-table-header {
+    @extend .small;
+    padding: 0.4375em $cell-padding/2 0.4375em $cell-padding/2;
+  }
+
+  .rs-table-text,
+  .rs-table-link,
+  .rs-table-link {
+    @extend .small;
+  }
 }
 
 .rs-table-text {
-  padding: 6px 10px;
+  padding: $cell-padding;
+  line-height: 1em;
 }
 
 .rs-table-link {
   > a {
     display: block;
-    margin: -10px;
-    padding: 10px;
+    margin: -$cell-padding;
+    padding: $cell-padding;
   }
 }
 
 .rs-table-status {
   padding: 0;
-  width: 10px;
+  width: 0.875em;
 }
 
-.rs-table-checkbox {
-  width: 10px;
-}
-
-.rs-table-radio {
-  width: 10px;
-}
-
+.rs-table-checkbox,
+.rs-table-radio,
 .rs-table-cog {
-  width: 16px;
+  width: 1em;
+
+  &+td,
+  &+th {
+    padding-left: 0;
+  }
 }
+
 
 .rs-table-edit {
-  width: 16px;
+  width: $cell-padding;
+  text-align: center;
 }
 
 .rs-table-delete {
-  width: 16px;
+  width: $cell-padding;
+  text-align: center;
 }
 
 .rs-table-input {
@@ -115,7 +154,7 @@
 }
 
 .rs-table-status-ok {
-  background-color: $green !important;
+  background-color: $green700 !important;
 
   &.rs-table-status-striped {
     background-image: image-url('table-status-success.gif');
@@ -124,7 +163,7 @@
 
 .rs-table-status-warning,
 .rs-table-status-processing {
-  background-color: $yellow !important;
+  background-color: $yellow900 !important;
 
   &.rs-table-status-striped {
     background-image: image-url('table-status-warning.gif');
@@ -132,7 +171,7 @@
 }
 
 .rs-table-status-error {
-  background-color: $red !important;
+  background-color: $red700 !important;
 
   &.rs-table-status-striped {
     background-image: image-url('table-status-error.gif');
@@ -140,7 +179,7 @@
 }
 
 .rs-table-status-disabled {
-  background-color: $grey300; // TODO This needs to change but want to wait and fix disabled everywhere
+  background-color: $grey400 !important; // TODO This needs to change but want to wait and fix disabled everywhere
 }
 
 /* Table-Based Styles */
@@ -162,11 +201,11 @@ td {
 
 /* Sort Links */
 .rs-table-sort {
-  color: $grey500;
+  color: $grey800;
 
   &.hover,
   &:hover {
-    color: $grey600;
+    color: $grey950;
     text-decoration: none;
   }
 }
@@ -174,6 +213,7 @@ td {
 .rs-table-sort-text,
 .rs-table-sort-indicator {
   display: inline-block;
+  line-height: 1em;
 }
 
 .rs-table-sort-indicator {
@@ -185,34 +225,38 @@ td {
 
 .rs-table-sort-asc,
 .rs-table-sort-desc {
-  color: $grey600;
-  font-weight: bold;
+  color: $grey900;
+  font-family: 'Roboto Medium';
 }
 
 .rs-table-sort-asc > .rs-table-sort-indicator {
-  @include sprite($sort-ascending);
+  @extend .rs-icon;
+  @extend .rs-icon-sort-up;
+  opacity: 0.5;
 }
 
 .rs-table-sort-asc.hover > .rs-table-sort-indicator,
 .rs-table-sort-asc:hover > .rs-table-sort-indicator {
-  @include sprite($sort-ascending-hover);
+  opacity: 1;
 }
 
 .rs-table-sort-desc > .rs-table-sort-indicator {
-  @include sprite($sort-descending);
+  @extend .rs-icon;
+  @extend .rs-icon-sort-down;
+  opacity: 0.5;
 }
 
 .rs-table-sort-desc.hover > .rs-table-sort-indicator,
 .rs-table-sort-desc:hover > .rs-table-sort-indicator {
-  @include sprite($sort-descending-hover);
+  opacity: 1;
 }
 
 /* Base Table Overlay */
 .rs-table-overlay {
   display: table;
   width: 100%;
-  height: 300px;
-  margin-top: -20px;
+  height: 20em;
+  margin-top: -$cell-padding;
 }
 
 .rs-table-overlay-content {
@@ -223,49 +267,52 @@ td {
   text-align: center;
 }
 
-.rs-table-overlay-title, .rs-table-overlay-subtitle {
-  font-family: $alt-font-family;
-}
-
-.rs-table-overlay-title {
-  margin-bottom: 5px;
-  font-weight: 600;
-  font-size: 24px;
-  color: $grey600;
-}
-
 .rs-table-overlay-subtitle {
-  font-size: 18px;
   color: $grey500;
 }
 
+.rs-table-overlay-title {
+  @extend h1.light;
+  margin-bottom: 0.25em;
+  color: $grey800;
+}
+
 .rs-table-overlay-subtitle + .rs-table-overlay-message {
-  margin-top: 50px;
+  margin-top: 8em;
 }
 
 .rs-table-overlay-message {
-  font-size: 13px;
+  @extend .small;
   color: $grey500;
 }
 
 /* Loading Overlay */
-.rs-table-overlay-loading .rs-table-overlay-message {
-  color: $grey500;
-  &:before {
-    background: image-url('clouding@2x.gif') center center no-repeat;
-    background-size: auto 20px;
-    content: "";
-    display: block;
-    height: 20px;
-    width: 100%;
-    position: relative;
-    left: -5px;
+.rs-table-overlay-loading { 
+  position: relative;
+  
+  .rs-table-overlay-message {
+    color: $grey500;
+    padding-top: 2.25em;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      left: 50%;
+      margin-left: -16px;
+      margin-top: -32px;
+      width: 32px;
+      height: 32px;
+      background: url('icon-loading-circle.svg') no-repeat;
+      background-size: contain;
+      animation: spin 0.75s linear infinite;
+    }
   }
 }
 
 /* Loading Error */
 .rs-table-overlay-error .rs-table-overlay-message {
-  color: $red400;
+  color: $red900;
 
   .rs-icon-error-indicator {
     margin: 1px 5px 0 0;
