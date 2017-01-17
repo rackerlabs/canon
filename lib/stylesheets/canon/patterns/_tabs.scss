@@ -1,8 +1,8 @@
 .rs-tabs {
   list-style: none;
   margin: 0;
-  border-left: 1px solid $grey50;
-  border-bottom: 1px solid $grey50;
+  
+  border-bottom: 1px solid $grey300;
   @include micro-clearfix();
 
   & > li {
@@ -11,13 +11,14 @@
 
     & > a {
       display: block;
-      padding: 5px 10px;
-      background-color: #EEE;
-      border-top: 1px solid $grey50;
-      border-right: 1px solid $grey50;
-      border-bottom: 1px solid $grey50;
-      color: #333;
-      font-weight: bold;
+      padding: 0.675em 2em;
+      background-color: $grey50;
+      border: 1px solid $grey300;
+      border-bottom-color: $grey300;
+      border-radius: 2px 2px 0 0;
+      margin-right: 0.25em;
+      color: $grey800;
+      outline: none;
 
       &:hover {
         text-decoration: none;
@@ -25,28 +26,36 @@
     }
 
     &:hover > a, &.hover > a {
-      background-color: #F7F7F7;
+      background-color: $grey25;
     }
 
     &.active > a {
-      background-color: $white;
-      border-bottom: 1px solid $white;
+      background-color: $grey0;
+      border-bottom: 1px solid $grey0;
+      color: $grey975;
     }
   }
 }
 
 .rs-tab-content {
-  border: 1px solid $grey50;
+  border: 1px solid $grey300;
   border-top: none;
+  background-color: $grey0;
 
   .rs-embedded-list-table-wrapper  {
     border: none;
   }
+
 }
 
 .rs-tab-pane {
   display: none;
   @extend %last-child;
+
+  .rs-inner {
+    margin: 0;
+    padding: 1.25em;
+  }
 
   &.active {
     display: block;
