@@ -1,41 +1,42 @@
 // Main Content & Sidebar
 .rs-main {
-  margin: 30px 0;
+  margin: 0;
   position: relative;
   @include micro-clearfix;
 
   &.rs-panel {
-    background-color: #f5f5f5;
-    box-shadow: #c2c2c2 0px 6px 8px 1px;
-    margin-top: 50px;
+    background-color: $grey50;
+    margin-top: 0;
   }
 
   .rs-inner {
-    margin: 30px;
+    margin: 1.5em;
   }
 }
 
 .rs-sidebar {
-  width: 230px;
+  width: $rs-sidebar-width;
   position: absolute;
+  height: 100%;
+  background-color: $grey100;
 
   .rs-inner {
-    margin: 0 30px 0 0;
+    margin: 0 1.25em 0 0;
 
     .rs-panel & {
-      margin: 30px;
+      margin: 1.25em;
     }
   }
 
   &.rs-pull-right {
-    width: 280px;
+    width: $rs-sidebar-pull-right-width;
     right: 0;
 
     .rs-inner {
-      margin: 0 0 0 30px;
+      margin: 0 0 0 1.25em;
 
       .rs-panel & {
-        margin: 30px;
+        margin: 1.25em;
       }
     }
   }
@@ -45,19 +46,15 @@
   @include micro-clearfix;
 
   .rs-main & {
-    min-height: 300px;
-  }
-
-  .rs-panel & {
-    margin-top: -20px;
+    min-height: 20em;
   }
 
   .rs-main .rs-sidebar + & {
-    margin-left: 230px;
+    margin-left: $rs-sidebar-width;
   }
 
   .rs-main .rs-sidebar.rs-pull-right + & {
-    margin-right: 280px;
+    margin-right: $rs-sidebar-pull-right-width;
     margin-left: 0;
   }
 }
