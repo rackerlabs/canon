@@ -4,7 +4,7 @@ html, body {
 
 body {
   min-width: 1070px;
-  @include noise;
+  background-color: $grey50;
 
   &.rs-responsive {
     min-width: 0;
@@ -15,7 +15,7 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto (-$app-footer-height);
+  margin: 0 auto (-1*$app-footer-height);
 }
 
 // .rs-push must be the same height as .rs-footer
@@ -28,7 +28,7 @@ body {
 .rs-container {
   width: 1030px;
   margin: 0 auto;
-  padding: 0 $medium-padding;
+  padding: 0 $small-padding;
   @include micro-clearfix;
 
   @include responsive(){
@@ -56,5 +56,6 @@ body {
         padding: 0 $small-padding;
       }
     }
+
   }
 }
