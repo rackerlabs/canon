@@ -1,0 +1,275 @@
+$checkBoxTop: 0.875em;
+$actionsTop: 0.625em;
+$cardPadding: 0.5em;
+
+.rs-card-list {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  @extend .flex-container;
+  @extend .align-cross-axis-start;
+  @extend .align-main-axis-start;
+}
+
+
+@keyframes moveActions {
+  from { top: 0px; opacity: 0}
+  to   { top: $actionsTop; opacity: 1 }
+}
+
+.rs-card {
+  background-color: $grey0;
+  flex-basis: 20%;
+  min-width: 18.75em;
+  max-width: 25em;
+  margin: 0 1em 1em 0px;
+  border-radius: 0.25em;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  @extend .grow-4;
+
+  &.rs-heartbeat-ok {
+      animation:heartbeat_success 3s;
+      -webkit-animation:heartbeat_success 3s;
+  }
+  &.rs-heartbeat-warning {
+      animation:heartbeat_warning 3s;
+      -webkit-animation:heartbeat_warning 3s;
+  }
+  &.rs-heartbeat-error {
+      animation:heartbeat_error 3s;
+      -webkit-animation:heartbeat_error 3s;
+  }
+
+  &:hover,
+  &.hover {
+
+    .rs {
+      opacity: 0;
+    }
+
+    .rs-card-header {
+      background-color: $grey25;
+    }
+
+    &:not(.selected) {
+      .rs-card-title-actions {
+        animation: moveActions 0.3s alternate;
+        opacity: 1;
+        top: $actionsTop;
+      }
+    }
+    
+
+    &.selected {
+      .rs-card-header {
+        background-color: $blue50;
+      }
+      .rs-card-title-actions {
+        opacity: 1;
+        top: $actionsTop;
+      }
+    }
+
+  }
+
+  &.selected {
+    box-shadow: 0px 2px rgba(30, 110, 193, 1);
+    .rs-card-header {
+      background-color: $blue50;
+    }
+    .rs-card-title-actions {
+      opacity: 1;
+      top: $actionsTop;
+    }
+  }
+
+  &.current {
+    .rs {
+      opacity: 0;
+    }
+
+    .rs-card-header {
+      background-color: $blue700;
+    }
+
+    .rs-dropdown-toggle {
+      border-color: $grey0;
+      opacity: 0.8;
+      color: $grey0;
+
+      &:hover,
+      &.hover,
+      &:active,
+      &.active {
+        color: $grey0;
+        opacity: 1;
+      }
+    }
+
+    .rs-card-title,
+    .rs-card-title a,
+    .rs-card-sub-title {
+      color: $grey0;
+    }
+
+    .rs-card-title-checkbox {
+      color: $grey0;
+    }
+
+    
+  }
+}
+
+
+
+.rs-card-header {
+  transition: background-color 0.3s ease;
+  border-radius: 0.25em;
+  position: relative;
+
+  .rs {
+    font-size: 1em;
+    float: left;
+    margin-right: 5px;
+    vertical-align: baseline;
+  }
+}
+
+.account-markers-list {
+   margin: 0;
+   font-size: 0.875em;
+}
+
+.rs-card-body {
+  min-height: 6.25em;
+  position: relative;
+  overflow: hidden;
+
+  .rs-inner {
+    margin: $cardPadding;
+  }
+}
+
+
+.rs-card-title-checkbox {
+  cursor: pointer;
+  color: $grey900;
+  font-size: 1.25em;
+  margin-right: 0.5em;
+  display: inline-block;
+}
+
+.rs-card-title-actions {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  right: 1em;
+
+  .rs-dropdown-menu {
+    right: 0;
+  }
+
+  .rs-dropdown-toggle {
+    cursor: pointer;
+    font-size: 1.25em;
+    line-height: 1em;
+    color: $grey900;
+    display: inline-block;
+    border-radius: 0.125em;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+      color: $grey800;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.rs-card-footer {
+  position: relative;
+
+  .rs-inner,
+  .rs-btn-group {
+    margin: $cardPadding;
+  }
+}
+
+.rs-card-title {
+  a {
+    color: $grey975;
+    cursor: pointer;
+    transition: color 0.2s ease 0.1s;
+    font-size: 1em;
+    line-height: 1em;
+    font-family: 'Roboto Medium';
+    @extend .rs-truncate;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  display: block;
+  padding: $cardPadding 4em $cardPadding $cardPadding;
+  color: $grey800;
+
+  .rs-card-sub-title {
+    transition: color 0.2s ease 0.1s;
+    font-weight: normal;
+    color: $grey300;
+    @extend .extra-small;
+    display: block;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    @extend .rs-truncate;
+  }
+}
+
+.flip-card {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-card:hover .flipper, .flip-card.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-card, .front, .back {
+  width: 320px;
+  height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
