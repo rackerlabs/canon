@@ -7,12 +7,13 @@
   <title>{{ page.title }} | Canon Demo</title>
   <meta name="viewport" content="width=device-width">
   
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/canon.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/canon.css">
 
   <script type="application/javascript" src="//code.jquery.com/jquery-1.10.0.min.js"></script>
-  <script type="application/javascript" src="{{ site.baseurl }}/assets/canon.min.js"></script>
+  <script type="application/javascript" src="{{ site.baseurl }}/assets/canon.js"></script>
   <script type="application/javascript" src="{{ site.baseurl }}/js/facets.js"></script>
   <script type="application/javascript" src="{{ site.baseurl }}/js/tooltip.js"></script>
+  <script type="application/javascript" src="{{ site.baseurl }}/js/select-table.js"></script>
 
   <script type="application/javascript">
 
@@ -31,20 +32,11 @@
 
   </script>
 </head>
-<body class="rs-fixed">
-  <div class="rs-wrapper">
-    {% include demos/utility_nav.html %}
-    {% include demos/primary_nav.html %}
-    {% include demos/secondary_nav.html %}
-
-    <div class="rs-body">
-      <div class="rs-container">
-        {{ content }}
-      </div>
+<body class="rs-responsive">
+  <div class="rs-wrapper">{% include demos/utility_nav.html %}{% include demos/primary_nav.html %}
+    <div class="rs-body"> {{ content }}</div>
     </div>
     <div class="rs-push"></div>
-  </div>
-
-  {% include demos/footer.html %}
+  </div>{% include demos/footer.html %}
 </body>
 </html>
