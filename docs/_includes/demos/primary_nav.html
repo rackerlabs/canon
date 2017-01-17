@@ -1,55 +1,16 @@
 <div class="rs-nav-primary">
 	<div class="rs-container">
-		<div class="rs-nav-brand">
-			<a href="index.html"></a>
-		</div>
-		<ul class="rs-nav">
-			<li class="rs-dropdown rs-primary-dropdown active">
-				<a class="rs-dropdown-toggle" href="javascript:void(0);">Infrastructure <i class="rs-caret"></i></a>
-				<ul class="rs-dropdown-menu">
-					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Infrastructure</span></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="{{ site.baseurl }}/demos/index.html">Servers</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Load Balancers</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">DNS</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Networks</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Monitoring</a></li>
-					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Automation</span></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Deployments</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Autoscaling</a></li>
+		<ul class="rs-nav">{% for item_hash in site.data.primary-navigation %}{% assign item = item_hash[1] %}{% assign item_name = item_hash[0] %}{% if item.dropdown-sections.size > 0 %}
+			<li class="rs-dropdown rs-primary-dropdown{% if page.primary == item_name %} active{% endif %}">
+				<a class="rs-dropdown-toggle" href="javascript:void(0);">{{ item_name }} <i class="rs-caret"></i></a>
+				<ul class="rs-dropdown-menu">{% for dropdown_section_hash in item.dropdown-sections %}{% assign dropdown_category = dropdown_section_hash[0]%}{% assign dropdown_section = dropdown_section_hash[1] %}
+					<li class="rs-dropdown-item"><span class="rs-dropdown-category">{{dropdown_category}}</span></li>{% for dropdown_item in dropdown_section %}
+					<li class="rs-dropdown-item{% if page.dropdown-title == dropdown_item[0] %} active{% endif %}"><a class="rs-dropdown-link" href="{{ site.baseurl }}/demos/{{ item_name | downcase | replace: ' ','-'}}/{{dropdown_item[1].url}}">{{dropdown_item[0]}}</a></li>{% endfor %}{% endfor %}
 				</ul>
-			</li>
-			<li class="rs-dropdown rs-primary-dropdown">
-				<a class="rs-dropdown-toggle" href="javascript:void(0);">Data Storage <i class="rs-caret"></i></a>
-				<ul class="rs-dropdown-menu">
-					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Databases</span></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">MySQL</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">MongoDB</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Hadoop</a></li>
-					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Content Delivery</span></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Files</a></li>
-					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Data Retention</span></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Block Storage</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Backup</a></li>
-				</ul>
-			</li>
-			<li class="rs-dropdown rs-primary-dropdown">
-				<a class="rs-dropdown-toggle" href="javascript:void(0);">Developer Tools <i class="rs-caret"></i></a>
-				<ul class="rs-dropdown-menu">
-					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Developer Tools</span></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Queueing</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Error Tracking</a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Email Automation</a></li>
-				</ul>
-			</li>
-			<li class="rs-dropdown rs-primary-dropdown">
-				<a class="rs-dropdown-toggle" href="javascript:void(0);">Other Products <i class="rs-caret"></i></a>
-				<ul class="rs-dropdown-menu">
-					<li class="rs-dropdown-item"><span class="rs-dropdown-category">Services</span></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Cloud Drive <i class="rs-icon-external"></i></a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Email &#38; Apps <i class="rs-icon-external"></i></a></li>
-					<li class="rs-dropdown-item"><a class="rs-dropdown-link" href="#">Cloud Sites <i class="rs-icon-external"></i></a></li>
-				</ul>
-			</li>
+			</li>{% else %}
+			<li class="rs-nav-item">
+				<a class="rs-nav-link" href="#">{{ item_name }}</a>
+			</li>{% endif %}{% endfor %}
 		</ul>
 	</div>
 </div>
