@@ -8,9 +8,17 @@
 
   <link rel="stylesheet" type="text/css" href="/canon.css">
   <style>
+
+    h1 {
+      display: block;
+      clear: left;
+      padding: 40px 20px 0px 20px;
+    }
+
     .palette {
       float: left;
       list-style: none;
+      margin: 20px 0 0 20px;
     }
 
     .palette li {
@@ -20,66 +28,95 @@
       margin-top: 1px;
     }
 
-    .palette li:first-child {
-      color: #333;
-      margin-top: 0;
-    }
-
-    .palette li.dark {
-      color: #333;
-    }
-
-    .palette span {
+    .palette li:before {
+      color: #000;
+      padding: 20px 20px 0px 20px;
       display: block;
-      padding: 0 0 30px;
     }
+    .palette li:after {
+      color: #000;
+      padding: 0px 20px 20px 20px;
+      display: block;
+    }
+
   </style>
 </head>
-<body class="rs-responsive" style="background: #fff;">
+<body class="rs-responsive" style="padding:40px;">
+  <h1>Primary Colors</h1>
   <ul class="palette">
-    <li class="dark" style="background: #e3e3e3;">#e3e3e3 <span>$grey50</span></li>
-    <li class="dark" style="background: #d8d8d8;">#d8d8d8 <span>$grey100</span></li>
-    <li class="dark" style="background: #dddddd;">#dddddd <span>$grey200</span></li>
-    <li class="dark" style="background: #cccccc;">#cccccc <span>$grey300</span></li>
-    <li style="background: #999999;">#999999 <span>$grey400</span></li>
-    <li style="background: #666666;">#666666 <span>$grey500</span></li>
-    <li style="background: #333333;">#333333 <span>$grey600</span></li>
+    <li class="fill-cyan50 hex-code color-name"></li>
+    <li class="fill-cyan100 hex-code color-name"></li>
+    <li class="fill-cyan500 hex-code color-name"></li>
+    <li class="fill-cyan700 hex-code color-name"></li>
+    <li class="fill-cyan900 hex-code color-name"></li>
   </ul>
   <ul class="palette">
-    <li style="background: #f8dfe3;">#f8dfe3 <span>$red50</span></li>
-    <li style="background: #de7083;">#de7083 <span>$red100</span></li>
-    <li style="background: #d81436;">#d81436 <span>$red200</span></li>
-    <li style="background: #ce0a2c;">#ce0a2c <span>$red300</span></li>
-    <li style="background: #c40022;">#c40022 <span>$red400</span></li>
-    <li style="background: #b50013;">#b50013 <span>$red500</span></li>
-    <li style="background: #a60004;">#a60004 <span>$red600</span></li>
+    <li class="fill-blue50 hex-code color-name"></li>
+    <li class="fill-blue100 hex-code color-name"></li>
+    <li class="fill-blue500 hex-code color-name"></li>
+    <li class="fill-blue700 hex-code color-name"></li>
+    <li class="fill-blue900 hex-code color-name"></li>
   </ul>
   <ul class="palette">
-    <li style="background: #ffedcf;">#ffedcf <span>$yellow50</span></li>
-    <li style="background: #ffd477;">#ffd477 <span>$yellow100</span></li>
-    <li style="background: #ffbb1e;">#ffbb1e <span>$yellow200</span></li>
-    <li style="background: #ffac0f;">#ffac0f <span>$yellow300</span></li>
-    <li style="background: #ff9d00;">#ff9d00 <span>$yellow400</span></li>
-    <li style="background: #f08e00;">#f08e00 <span>$yellow500</span></li>
-    <li style="background: #e17f00;">#e17f00 <span>$yellow600</span></li>
+    <li class="fill-magenta50 hex-code color-name"></li>
+    <li class="fill-magenta100 hex-code color-name"></li>
+    <li class="fill-magenta500 hex-code color-name"></li>
+    <li class="fill-magenta700 hex-code color-name"></li>
+    <li class="fill-magenta900 hex-code color-name"></li>
   </ul>
   <ul class="palette">
-    <li style="background: #cfefe4;">#cfefe4 <span>$green50</span></li>
-    <li style="background: #72d6b3;">#72d6b3 <span>$green100</span></li>
-    <li style="background: #14bd81;">#14bd81 <span>$green200</span></li>
-    <li style="background: #0ab377;">#0ab377 <span>$green300</span></li>
-    <li style="background: #00a96d;">#00a96d <span>$green400</span></li>
-    <li style="background: #009a5e;">#009a5e <span>$green500</span></li>
-    <li style="background: #008b4f;">#008b4f <span>$green600</span></li>
+    <li class="fill-purple50 hex-code color-name"></li>
+    <li class="fill-purple100 hex-code color-name"></li>
+    <li class="fill-purple500 hex-code color-name"></li>
+    <li class="fill-purple700 hex-code color-name"></li>
+    <li class="fill-purple900 hex-code color-name"></li>
   </ul>
   <ul class="palette">
-    <li style="background: #d5e4f3;">#d5e4f3 <span>$blue50</span></li>
-    <li style="background: #84b3e4;">#84b3e4 <span>$blue100</span></li>
-    <li style="background: #3282d5;">#3282d5 <span>$blue200</span></li>
-    <li style="background: #2878cb;">#2878cb <span>$blue300</span></li>
-    <li style="background: #1e6ec1;">#1e6ec1 <span>$blue400</span></li>
-    <li style="background: #1464b7;">#1464b7 <span>$blue500</span></li>
-    <li style="background: #0a5aad;">#0a5aad <span>$blue600</span></li>
+    <li class="fill-orange50 hex-code color-name"></li>
+    <li class="fill-orange100 hex-code color-name"></li>
+    <li class="fill-orange500 hex-code color-name"></li>
+    <li class="fill-orange700 hex-code color-name"></li>
+    <li class="fill-orange900 hex-code color-name"></li>
+  </ul>
+
+  <h1>Alert Colors</h1>
+  <ul class="palette">
+    <li class="fill-green500 hex-code color-name"></li>
+    <li class="fill-green700 hex-code color-name"></li>
+    <li class="fill-green900 hex-code color-name"></li>
+  </ul>
+  <ul class="palette">
+    <li class="fill-yellow500 hex-code color-name"></li>
+    <li class="fill-yellow700 hex-code color-name"></li>
+    <li class="fill-yellow900 hex-code color-name"></li>
+  </ul>
+  <ul class="palette">
+    <li class="fill-red500 hex-code color-name"></li>
+    <li class="fill-red700 hex-code color-name"></li>
+    <li class="fill-red900 hex-code color-name"></li>
+  </ul>
+
+  <h1>Greyscale Colors</h1>
+  <ul class="palette greyscale">
+    <li class="fill-grey0 hex-code color-name"></li>
+    <li class="fill-grey25 hex-code color-name"></li>
+    <li class="fill-grey50 hex-code color-name"></li>
+
+    <li class="fill-grey100 hex-code color-name"></li>
+    <li class="fill-grey200 hex-code color-name"></li>
+    <li class="fill-grey300 hex-code color-name"></li>
+
+    <li class="fill-grey400 hex-code color-name"></li>
+    <li class="fill-grey500 hex-code color-name"></li>
+    <li class="fill-grey600 hex-code color-name"></li>
+
+    <li class="fill-grey700 hex-code color-name"></li>
+    <li class="fill-grey800 hex-code color-name"></li>
+    <li class="fill-grey900 hex-code color-name"></li>
+
+    <li class="fill-grey950 hex-code color-name"></li>
+    <li class="fill-grey975 hex-code color-name"></li>
+    <li class="fill-grey1000 hex-code color-name"></li>
   </ul>
 </body>
 </html>
