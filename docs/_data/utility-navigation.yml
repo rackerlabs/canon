@@ -1,0 +1,63 @@
+left:
+ Rackspace Cloud:
+  url: ""
+ Fanatical Support for AWS:
+  url: "fanatical-support-for-aws/"
+ More Products:
+  dropdown:
+   Managed 3rd Party:
+    Microsoft Azure:
+     url: 'url'
+    Google Cloud:
+     url: 'url'
+   Rackspace Offerings:
+    Dedicated Hosting:
+     url: 'url'
+    Private Cloud:
+     url: 'url'
+    Rackspace Digital Experience:
+     url: 'url'
+right:
+ Support:
+  dropdown:
+   none-1:
+    Support Tickets:
+     url: 'url'
+   none-2:
+    Knowledge Center:
+     url: 'url'
+    Cloud Community:
+     url: 'url'
+    API Documentation:
+     url: 'url'
+    System Status:
+     url: 'url'
+ 'Account: Pre-Production':
+  dropdown:
+   none-1:
+    'Account: 1234567':
+     url: none
+   none-2:
+    Billing Overview:
+     url: 'url'
+    Account Settings:
+     url: 'url'
+    Users & Permissions:
+     url: 'url'
+    Documents & Forms:
+     url: 'url'
+   none-3:
+    Upgrade Service Level:
+     url: 'url'
+ 'User: Rusty Shackleford':
+  dropdown:
+   none-1:
+    Profile:
+     url: 'url'
+    Permissions:
+     url: 'url'
+    Preferences:
+     url: 'url'
+   none-2:
+    Log Out:
+     url: 'url'

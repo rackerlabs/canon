@@ -1,0 +1,64 @@
+Dashboard:
+ url: "index.html"
+Servers:
+ name: Servers
+ dropdown-sections:
+  Cloud Servers: 
+   Cloud Servers: "index.html"
+   Saved Images: url
+   Auto Scale: url
+   SSH Keys: url
+   Message Queueing: url
+Monitoring:
+ name: Monitoring
+ dropdown-sections:
+  Monitoring: 
+   Dashboard:
+    url: "index.html"
+   Monitors: 
+    url: "monitors.html"
+    secondary-nav:
+     Monitors: url
+     Checks: url
+     Notifications: url
+     Notification Plans: url
+   Alerts:
+    url: "alerts.html"
+   Suppressions:
+    url: "suppressions.html"
+   Data Visualization:
+    url: "data-visualizations.html"
+Networking:
+ dropdown-sections:
+  Networking:
+   Load Balancers: url
+   Networks: url
+   Cloud DNS: url
+   CDN: url
+Storage:
+ dropdown-sections:
+  Block Storage:
+   Storage Volumes: url
+   Snapshots: url
+  Object Storage and CDN:
+   Cloud Files: url
+   CDN: url
+Databases:
+ dropdown-sections:
+  Databases:
+   MySQL: url
+   MongoDB: url
+   Redis: url
+  Data Analytics:
+   Elasticsearch: url
+   Hadoop &#38; Spark: url
+Backups:
+ url: url
+ dropdown-sections:
+  Cloud Server Backups:
+   Backed Up Servers: url
+   Backup Jobs: url
+   Activity Log: url
+   Preferences: url
+  MySQL Backups:
+   MySQL Backups: url

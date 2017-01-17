@@ -1,0 +1,36 @@
+101010101010:
+ name: Pre-Production
+ service-level: Aviator
+202020202020:
+ name: Marketing Dev
+ service-level: Navigator
+303030303030:
+ name: Playground
+ service-level: Aviator
+404040404040:
+ name: Billing Environment
+ service-level: Navigator
+505050505050:
+ name: Production App
+ service-level: Aviator
+606060606060:
+ name: Legal Environment
+ service-level: Navigator
+707070707070:
+ name: Warehouse Internal
+ service-level: Aviator
+808080808080:
+ name: "Bob's Vacation Pics"
+ service-level: Aviator
+909090909090:
+ name: Cats of Instagram Staging
+ service-level: Aviator
+010101010101:
+ name: Dev Environment - West
+ service-level: Aviator
+020202020202:
+ name: UX Design Sandbox
+ service-level: Aviator
+030303030303:
+ name: The Spanish Inquisition
+ service-level: Aviator

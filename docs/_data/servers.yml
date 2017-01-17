@@ -1,0 +1,77 @@
+1:
+ name: My Cloud Server 1
+ ip: 111.222.111
+ status: ok
+ checks: [ok,ok,ok,disabled,disabled,disabled,warning]
+ tags: [Engineering]
+ image: Ubuntu 10.04 LTS
+ flavor: 512 MB Standard
+2:
+ name: My Cloud Server 2
+ ip: 222.111.222
+ status: warning
+ checks: [warning,ok,warning,error,ok,disabled,warning,disabled,disabled,disabled]
+ tags: [Finance, Product]
+ image: Debian 7 Wheezy
+ flavor: 2GB Standard
+3:
+ name: My Cloud Server 3
+ ip: 222.111.222
+ status: error
+ tags: [Engineering, Billing]
+ image: Vyatta Network OS 6.5R2
+ flavor: 2GB Standard
+4:
+ name: My Cloud Server 4
+ ip: 222.111.222
+ status: ok
+ tags: [Billing]
+ image: Ubuntu 10.04 LTS
+ flavor: 2GB Standard
+5:
+ name: My Cloud Server 5
+ ip: 222.111.222
+ status: ok
+ checks: [ok,ok,ok,ok,ok,ok,ok,disabled,warning]
+ tags: [Engineering, Development]
+ image: Debian 7 Wheezy
+ flavor: 512 MB Standard
+6:
+ name: My Cloud Server 6
+ ip: 222.111.222
+ status: warning rs-table-status-striped
+ checks: [ok,warning,warning,error,ok,disabled,warning]
+ tags: [Sales, Staging]
+ image: RHEL 6.5
+ flavor: 2GB Standard
+7:
+ name: My Cloud Server 7
+ ip: 222.111.222
+ status: ok
+ checks: [error,error,ok,error,ok,disabled,warning]
+ tags: [Engineering, Staging]
+ image: Debian 7 Wheezy
+ flavor: 2GB Standard
+8:
+ name: My Cloud Server 8
+ ip: 222.111.222
+ status: ok
+ checks: [ok,ok,ok,error,ok,disabled,warning,ok,warning]
+ tags: [Engineering, Product]
+ image: Ubuntu 10.04 LTS
+ flavor: 512 MB Standard
+9:
+ name: My Cloud Server 9
+ ip: 222.111.222
+ status: ok
+ checks: [ok,ok,ok,error,ok,disabled,warning,ok,error,error]
+ tags: [Production]
+ image: Vyatta Network OS 6.5R2
+ flavor: 2GB Standard
+10:
+ name: My Cloud Server 10
+ ip: 222.111.222
+ status: error
+ tags: [Sales]
+ image: Ubuntu 10.04 LTS
+ flavor: 2GB Standard

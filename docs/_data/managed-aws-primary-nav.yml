@@ -1,0 +1,44 @@
+AWS Accounts:
+ url: 'url'
+Passport:
+ url: 'url'
+Compass:
+ url: 'url'
+Logbook:
+ url: 'url'
+Usage:
+ url: 'url'
+Documentation:
+ children:
+  Getting Started:
+   url: 'url'
+  AWS Accounts:
+   url: 'url'
+  Service Levels:
+   url: 'url'
+  Pricing:
+   url: 'url'
+  Network Configuration:
+   url: 'url'
+  Billing:
+   url: 'url'
+  Reserved Instances:
+   url: 'url'
+  Access and Permissions:
+   url: 'url'
+  Security:
+   url: 'url'
+  Compliance:
+   url: 'url'
+  Rackspace Passport:
+   url: 'url'
+  Rackspace Logbook:
+   url: 'url'
+  Rackspace Compass:
+   url: 'url'
+  Rackspace Watchman:
+   url: 'url'
+  Support:
+   url: 'url'
+Resources:
+ url: 'url'
