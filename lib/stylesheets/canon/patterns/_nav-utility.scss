@@ -1,10 +1,23 @@
 .rs-nav-utility {
   min-height: $app-nav-utility-height;
-  background: #333;
+  background: $grey1000;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   z-index: $zindexNavUtility;
+  @include micro-clearfix;
+
+  .rs-nav-brand {
+    float: left;
+    a {
+      background: transparent image-url('logo-rackspace-white.svg') no-repeat center center;
+      background-size: 116px 26px;
+      width: 120px;
+      margin-right: 1em;
+      height: $app-nav-utility-height;
+      display: block;
+    }
+  }
 
   .rs-nav {
     float: left;
@@ -14,36 +27,64 @@
 
       & > li,
       .rs-list-item {
-        margin: 0 0 0 30px;
       }
     }
   }
 
+  .rs-dropdown-toggle {
+    color: $grey500;
+    font-family: 'Roboto Regular';
+
+    &:hover,
+    &.hover {
+      color: $grey0;
+      background-color: transparent;
+    }
+  }
+
   .rs-nav-link {
-    padding: 10px 0;
-    color: $grey300;
-    font-weight: bold;
+    padding: 0.875em 0;
+    margin: 0 1em;
+    color: $grey500;
     position: relative;
+    @extend .small;
+    font-smoothing: antialiased;
   }
 
   .rs-caret {
     display: inline-block;
-    width: 9px;
-    height: 10px;
-    margin: 0 0 0 5px;
-    vertical-align: text-bottom;
+    color: $grey700;
+    margin: 0 0 0 0.375em;
+    font-size: 0.5em;
+    line-height: 0.5em;
+    vertical-align: middle;
   }
 
   .rs-nav-item {
     position: relative;
-    margin: 0 30px 0 0;
 
     &:hover,
-    &.hover,
+    &.hover {
+      & > a,
+      .rs-nav-link {
+        color: $grey0;
+      }
+    }
+
     &.active {
       & > a,
       .rs-nav-link {
-        color: $white;
+        color: $grey0;
+        &:after {
+          content: '';
+          position: absolute;
+          display: block;
+          bottom: 0%;
+          left: 0%;
+          width: 100%;
+          height: 0.25em;
+          background-color: $red900;
+        }
       }
     }
 
@@ -55,21 +96,11 @@
       }
     }
 
-    &.rs-dropdown {
-      .rs-caret {
-        @include sprite-position($caret-nav-down-999);
-      }
-
-      .rs-dropdown-menu {
-        margin-top: 1px;
-      }
-    }
-
     &.rs-dropdown:hover,
     &.rs-dropdown.hover,
     &.rs-dropdown.active {
       .rs-caret {
-        @include sprite-position($caret-nav-down-fff);
+        color: $grey100;
       }
     }
 
