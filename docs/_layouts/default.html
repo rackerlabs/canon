@@ -1,17 +1,17 @@
+<!DOCTYPE html>
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Rackspace&reg; Canon - The front-end application framework</title>
 
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/canon.min.css">
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/site.css">
+  <link rel="stylesheet" href="{{site.baseurl}}/canon.css">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/site.css">
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/syntax.css">
 
   <script type="application/javascript" src="http://code.jquery.com/jquery-1.10.1.js"></script>
   <script type="application/javascript" src="{{site.baseurl}}/assets/canon.min.js"></script>
   <script type="application/javascript" src="{{site.baseurl}}/js/bootstrap.min.js"></script>
-  <script type="application/javascript" src="{{site.baseurl}}/js/site.js"></script>
   <script type="application/javascript" src="{{site.baseurl}}/js/popover.js"></script>
   <script type="application/javascript" src="{{site.baseurl}}/js/highlighter.js"></script>
   <script type="application/javascript" src="{{site.baseurl}}/js/tooltip.js"></script>
@@ -29,18 +29,11 @@
   <div class="rs-wrapper">
     <div class="rs-nav-utility rs-fixed-top">
       <div class="rs-container">
-        <ul class="rs-nav">
-          <li class="rs-nav-item {% if page.utilitySection == 'Home' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/">Rackspace<span class="super-script">&reg;</span> Canon</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'Get Started' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/get-started">Get Started</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'App Layout' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/app-layout">App Layout</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'UX Patterns' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/ux-patterns">UX Patterns</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'UI Components' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/ui-components">UI Components</a></li>
-          <li class="rs-nav-item {% if page.utilitySection == 'About Canon' %}active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}/about-canon">About Canon</a></li>
+        <ul class="rs-nav">{% for item in site.data.navigation %}
+          <li class="rs-nav-item{% if page.category == item[0] %} active{%endif%}"><a class="rs-nav-link" href="{{site.baseurl}}{{item[1].url}}">{{item[0]}}</a></li>{% endfor %}
         </ul>
       </div>
-    </div>
-    {{ content }}
-    <div class="rs-push"></div>
+    </div>{{ content }}<div class="rs-push"></div>
   </div>
   <div class="rs-nav-footer">
     <div class="rs-container">
@@ -58,11 +51,6 @@
 
     ga('create', 'UA-42051197-2');
     ga('send', 'pageview');
-  </script>
-{% if page.popovers %}
-{% for popover in page.popovers %}
-  {% include popover %}
-{% endfor %}
-{% endif %}
+  </script>{% if page.popovers %}{% for popover in page.popovers %}{% include popover %}{% endfor %}{% endif %}
 </body>
 </html>
