@@ -1,18 +1,28 @@
 .rs-embedded-list-table-wrapper {
-  border: 1px solid $grey50;
+  border: 1px solid $grey300;
+  margin-top: 1.875em;
   overflow: auto;
 
+  .rs-table,
+  .rs-list-table,
+  .rs-table-compact {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .rs-table-overlay {
-    height: 95px;
+    height: 7em;
     margin-top: 0;
   }
 
   .rs-table-overlay-message {
     margin-top: 0;
   }
+}
 
-  .rs-table-overlay-subtitle {
-    font-weight: 600;
+.rs-tab-pane {
+  .rs-embedded-list-table-wrapper:nth-child(1) {
+    margin-top: 0;
   }
 }
 
