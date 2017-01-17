@@ -1,0 +1,170 @@
+/*!
+* # Semantic UI 2.2.4 - Icon
+* http://github.com/semantic-org/semantic-ui/
+*
+*/
+
+
+/*******************************
+Icon
+*******************************/
+
+
+/*
+@font-face {
+font-family: 'DS_icon_font';
+src:  url('../assets/fonts/DS_icon_font.eot?ef6pdt');
+src:  url('../assets/fonts/DS_icon_font.eot?ef6pdt#iefix') format('embedded-opentype'),
+url('../assets/fonts/DS_icon_font.ttf?ef6pdt') format('truetype'),
+url('../assets/fonts/DS_icon_font.woff?ef6pdt') format('woff'),
+url('../assets/fonts/DS_icon_font.svg?ef6pdt#DS_icon_font') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+*/
+
+@include font-face('DS_icon_font', 'DS_icon_font', 'DS_icon_font');
+
+.rs-icon {
+  font-family: 'DS_icon_font';
+  font-style: normal;
+  margin: 0;
+
+  &.rs-icon-check-circle:before {
+    content: "\e925";
+  }
+  &.rs-icon-dropdown-arrow:before {
+    content: "\e927";
+  }
+  &.rs-icon-action-cog:before {
+    content: "\e923";
+  }
+  &.rs-icon-add:before {
+    content: "\e924";
+  }
+  &.rs-icon-info:before {
+    content: "\e926";
+  }
+  &.rs-icon-remove-circle:before {
+    content: "\e915";
+  }
+  &.rs-icon-arrow-down:before {
+    content: "\e900";
+  }
+  &.rs-icon-arrow-left:before {
+    content: "\e901";
+  }
+  &.rs-icon-arrow-right:before {
+    content: "\e902";
+  }
+  &.rs-icon-arrow-up:before {
+    content: "\e903";
+  }
+  &.rs-icon-calendar:before {
+    content: "\e904";
+  }
+  &.rs-icon-check-box-selected:before {
+    content: "\e905";
+  }
+  &.rs-icon-check-box:before {
+    content: "\e906";
+  }
+  &.rs-icon-close:before {
+    content: "\e907";
+  }
+  &.rs-icon-copy:before {
+    content: "\e908";
+  }
+  &.rs-icon-delete:before {
+    content: "\e909";
+  }
+  &.rs-icon-download:before {
+    content: "\e90a";
+  }
+  &.rs-icon-edit:before {
+    content: "\e90b";
+  }
+  &.rs-icon-export:before {
+    content: "\e90c";
+  }
+  &.rs-icon-external-link:before,
+  &.rs-icon-external:before {
+    content: "\e90d";
+  }
+  &.rs-icon-filter:before {
+    content: "\e90e";
+  }
+  &.rs-icon-help:before {
+    content: "\e90f";
+  }
+  &.rs-icon-monitoring:before {
+    content: "\e910";
+  }
+  &.rs-icon-notes:before {
+    content: "\e911";
+  }
+  &.rs-icon-radio-selected:before {
+    content: "\e912";
+  }
+  &.rs-icon-radio:before {
+    content: "\e913";
+  }
+  &.rs-icon-reload:before {
+    content: "\e914";
+  }
+  &.rs-icon-remove:before {
+    content: "\e916";
+  }
+  &.rs-icon-search:before {
+    content: "\e917";
+  }
+  &.rs-icon-servers:before {
+    content: "\e918";
+  }
+  &.rs-icon-sort-down:before {
+    content: "\e919";
+  }
+  &.rs-icon-sort-up:before {
+    content: "\e91a";
+  }
+  &.rs-icon-sort:before {
+    content: "\e91b";
+  }
+  &.rs-icon-support:before {
+    content: "\e91c";
+  }
+  &.rs-icon-tag:before {
+    content: "\e91d";
+  }
+  &.rs-icon-ticket:before {
+    content: "\e91e";
+  }
+  &.rs-icon-user:before {
+    content: "\e91f";
+  }
+  &.rs-icon-warning:before {
+    content: "\e920";
+  }
+  &.rs-icon-check-mark:before {
+    content: "\e921";
+  }
+  &.rs-icon-error:before,
+  &.rs-icon-error-indicator:before {
+    content: "\e922";
+  }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rs-icon.rs-loading-indicator {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('icon-loading-circle.svg');
+  background-size: contain;
+  background-position: 0 0;
+  animation: spin 0.75s linear infinite;
+}
