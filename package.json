@@ -1,7 +1,9 @@
 {
   "name": "canon",
   "version": "1.9.0",
-  "keywords": ["rackspace"],
+  "keywords": [
+    "rackspace"
+  ],
   "license": "Apache License, Version 2.0",
   "repository": {
     "type": "git",
@@ -11,28 +13,30 @@
     "test": "grunt"
   },
   "dependencies": {
-    "almond": "~0.2.5",
-    "klass": "~1.2.3",
-    "requirejs": "~2.1.5"
+    "almond": "latest",
+    "klass": "latest",
+    "requirejs": "latest"
   },
   "devDependencies": {
-    "bower": "1.5.2",
+    "bower": "latest",
     "connect-livereload": "~0.2.0",
-    "font-awesome": "4.3.0",
-    "grunt": "0.4.2",
-    "grunt-autoprefixer": "^3.0.0",
-    "grunt-contrib-clean": "~0.6.0",
+    "font-awesome": "latest",
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-clean": "latest",
     "grunt-contrib-connect": "~0.10.1",
-    "grunt-contrib-copy": "~0.8.0",
-    "grunt-contrib-cssmin": "~0.6.1",
-    "grunt-contrib-jshint": "~0.6.2",
-    "grunt-contrib-requirejs": "~0.4.4",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.5.2",
-    "grunt-exec": "~0.4.6",
-    "grunt-karma": "~0.6.1",
-    "grunt-sass": "^0.18.1",
-    "grunt-spritesmith": "^4.6.1",
-    "jshint": "0.9.1"
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-exec": "latest",
+    "grunt-karma": "latest",
+    "grunt-sass": "latest",
+    "grunt-spritesmith": "latest",
+    "jshint": "latest",
+    "karma": "latest",
+    "node-sass": "latest"
   }
 }
