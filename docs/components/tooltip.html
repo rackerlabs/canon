@@ -1,0 +1,31 @@
+---
+layout: secondary-page
+category: Components
+title: Tooltip
+resource: true
+---
+<div class="rs-inner">
+  <p>Use the tooltip when you want to convey brief snippets of information, to explain an element a bit more, or to display truncated text.</p>
+  <ul>
+    <li>Activates when hovered on with mouse. </li>
+    <li>The tooltip disappears when mouse hovers away, or when clicked in the icon. Tooltip does not reactivate on click.</li>
+    <li>Tooltip should only be used on icon images, text, and table rows; use when see fit.</li>
+    <li>Max width for the tooltip is 27.5em.</li>
+  </ul>
+  <div style="overflow: hidden;">
+    <div class="rs-pull-left" style="margin-right: 2em; width: 26em; height: 10em;">
+      <h2>Example</h2>
+      <div style="position: relative;">
+  {% capture tooltip %}<div class="rs-tooltip visible">
+    <div class="rs-tooltip-inner">
+      You can use the tooltip markup without Javascript.
+    </div>
+  </div>{% endcapture %}{{ tooltip }}</div>
+    </div>
+    <div class="rs-pull-left">
+      <h2>Markup</h2>
+      {% highlight html %}{{ tooltip }}{% endhighlight %}
+    </div>
+  </div>
+</div>
+

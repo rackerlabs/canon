@@ -1,0 +1,19 @@
+---
+layout: secondary-page
+category: Components
+title: Dropdowns
+resource: true
+---
+
+{% for pg in site.pages %}
+{% if pg.parent == page.title %}
+<!-- Start How it Works Detail Section -->
+<div class="rs-detail-section" id="{{pg.title | replace: ' ','-' | downcase}}">
+  <div class="rs-detail-section-header">
+    <div class="rs-detail-section-title">{{pg.title}}</div>
+  </div>
+  <div class="rs-detail-section-body">{{ pg.content }}</div>
+</div>
+<!-- End How it Works Detail Section -->
+{% endif %}
+{% endfor %}

@@ -1,0 +1,123 @@
+---
+layout: secondary-page
+category: Components
+title: Fluid Grid
+resource: true
+---
+
+<div class="rs-detail-section">
+  <div class="rs-detail-section-header">
+    <div class="rs-detail-section-title">Summary</div>
+  </div>
+  <div class="rs-detail-section-body">
+    <p>Canon predefines options for page layout via the <a href="#content-area">content area</a> styles but sometimes a grid system is needed for content within those sections or for custom layouts. As such, Canon includes a responsive 12 column fluid grid.</p>
+    <ul>
+      <li>Create a grid row with the <code>rs-row</code> class</li>
+      <li>Add the appropriate number of <code>span-*</code> columns. As this is a 12-column grid, each <code>span-*</code> spans a number of those 12 columns, and should always add up to 12 for each row</li>
+      <li>The column gutters can be removed by using <code>rs-row-collapse</code> as the row class</li>
+      <li>Offsets can be applied with <code>offset-*</code></li>
+      <li>Nest grids by adding a new row and columns within a <code>span-*</code> column</li>
+    </ul>
+    <p><b>Responsive Options</b></p>
+    <ul>
+      <li>The default <code>span-*</code> columns stack vertically for viewports under 768px</li>
+      <li>To prevent vertical stacking use <code>small-span-*</code> column classes</li>
+    </ul>
+  </div>
+</div>      
+<div class="rs-detail-section">
+  <div class="rs-detail-section-header">
+    <div class="rs-detail-section-title">Grid Options</div>
+  </div>
+  <div class="rs-detail-section-body">
+<h2>Default grid created with a <code>rs-row</code> and <code>span-*</code> columns</h2>
+<div class="rs-row">
+  <div class="span-6">
+    <h3>Example</h3>
+{% capture default %}<div class="rs-row">
+  <div class="span-2">span-2</div>
+  <div class="span-10">span-10</div>
+</div>
+<div class="rs-row">
+  <div class="span-6">span-6</div>
+  <div class="span-6">span-6</div>
+</div>
+<div class="rs-row">
+  <div class="span-4">span-4</div>
+  <div class="span-8">span-8</div>
+</div>{% endcapture %}<div class="show-grid">{{ default }}</div>
+  </div>
+  <div class="span-6">
+    <h3>Markup</h3>
+<div class="collapsible-highlight">{% highlight html %}{{ default }}{% endhighlight %}</div>
+  </div>
+</div>
+<hr>
+<h2>Column offsets via <code>offset-*</code></h2>
+<div class="rs-row">
+  <div class="span-6">
+    <h3>Example</h3>
+{% capture offset %}<div class="rs-row">
+  <div class="span-6">span-6</div>
+  <div class="span-4 offset-2">span-4 offset-2</div>
+</div>
+<div class="rs-row">
+  <div class="span-8 offset-1">span-8 offset-1</div>
+  <div class="span-3">span-3</div>
+</div>{% endcapture %}<div class="show-grid">{{ offset }}</div>
+  </div>
+  <div class="span-6">
+    <h3>Markup</h3>
+<div class="collapsible-highlight">{% highlight html %}{{ offset }}{% endhighlight %}</div>
+  </div>
+</div>
+<hr>
+<h2>Nested Grid</h2>
+<div class="rs-row">
+  <div class="span-6">
+    <h3>Example</h3>
+{% capture nested %}<div class="rs-row">
+  <div class="span-4">span-4
+    <div class="rs-row">
+      <div class="span-6">span-6</div>
+      <div class="span-6">span-6</div>
+    </div>
+  </div>
+  <div class="span-8">span-8
+    <div class="rs-row">
+      <div class="span-4">span-4</div>
+      <div class="span-8">span-8</div>
+    </div>
+  </div>
+</div>{% endcapture %}<div class="show-grid">{{ nested }}</div>
+  </div>
+  <div class="span-6">
+    <h3>Markup</h3>
+<div class="collapsible-highlight">{% highlight html %}{{ nested }}{% endhighlight %}</div>
+  </div>
+</div>
+<hr>
+<h2>Grid without column gutters via <code>rs-row-collapse</code></h2>
+<div class="rs-row">
+  <div class="span-6">
+    <h3>Example</h3>
+{% capture nogutters %}<div class="rs-row-collapse">
+  <div class="span-2">span-2</div>
+  <div class="span-10">span-10</div>
+</div>
+<div class="rs-row-collapse">
+  <div class="span-6">span-6</div>
+  <div class="span-6">span-6</div>
+</div>
+<div class="rs-row-collapse">
+  <div class="span-4">span-4</div>
+  <div class="span-8">span-8</div>
+</div>{% endcapture %}<div class="show-grid">{{ nogutters }}</div>
+  </div>
+  <div class="span-6">
+    <h3>Markup</h3>
+<div class="collapsible-highlight">{% highlight html %}{{ nogutters }}{% endhighlight %}</div>
+  </div>
+</div>
+</div>
+  </div>

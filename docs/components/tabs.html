@@ -1,0 +1,95 @@
+---
+layout: secondary-page
+category: Components
+title: Tabs
+resource: true
+---
+
+<div class="rs-detail-section">
+  <div class="rs-detail-section-header">
+    <div class="rs-detail-section-title">Summary</div>
+  </div>
+  <div class="rs-detail-section-body">
+    <p>Tabs are used to navigate lists of related content. In forms, they are used to categorize and organize similar content. The count for each list is not required, but feel free to use where appropriate.</p>
+    <ul>
+      <li>Use when the content for each tab has similar structure (e.g., list tables).</li>
+      <li>Use when there is not enough space on the page to show all content.</li>
+      <li>Use when the content of each tab can be viewed separately from each other, and doesn't require comparison.</li>
+      <li>Do not use when the content inside each pane would function just as well in its own separate page.</li>
+      <li>Limit to 5-8 sections, depending on the length of each section name.</li>
+    </ul>
+  </div>
+</div>      
+<div class="rs-detail-section">
+  <div class="rs-detail-section-header">
+    <div class="rs-detail-section-title">Example</div>
+  </div>
+  <div class="rs-detail-section-body">
+    {% capture tabs %}<ul class="rs-tabs">
+  <li><a href="#one">First Tab <span class="rs-quiet">(6)</span></a></li>
+  <li class="active"><a href="#two">Active Tab <span class="rs-quiet">(3)</span></a></li>
+  <li><a href="#three">Third Tab <span class="rs-quiet">(5)</span></a></li>
+</ul>
+<div class="rs-tab-content">
+  <div class="rs-tab-pane" id="one">
+    <div class="rs-inner">
+      <p>Tab content pane one</p>
+    </div>
+  </div>
+  <div class="rs-tab-pane active" id="two">
+    <div class="list-table">
+      <div class="rs-detail-section">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <span class="table-sort-text">Name</span>
+                <span class="table-sort-indicator"></span>
+              </th>
+              <th>
+                <span class="table-sort-text">Updated</span>
+                <span class="table-sort-indicator"></span>
+              </th>
+              <th>
+                <span class="table-sort-text">ID</span>
+                <span class="table-sort-indicator"></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#">Table Item 1</a></td>
+              <td>Aug 28, 2013</td>
+              <td>123456</td>
+            </tr>
+            <tr>
+              <td><a href="#">Table Item 2</a></td>
+              <td>Aug 25, 2013</td>
+              <td>789012</td>
+            </tr>
+            <tr>
+              <td><a href="#">Table Item 3</a></td>
+              <td>Jul 14, 2013</td>
+              <td>345678</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="rs-tab-pane" id="three">
+    <div class="rs-inner">
+      <p>Tab content pane three</p>
+    </div>
+  </div>
+</div>{% endcapture %}{{ tabs }}
+  </div>
+</div>
+<div class="rs-detail-section">
+  <div class="rs-detail-section-header">
+    <div class="rs-detail-section-title">Markup</div>
+  </div>
+  <div class="rs-detail-section-body">
+    {% highlight html %}{{ tabs }}{% endhighlight %}
+  </div>
+</div>

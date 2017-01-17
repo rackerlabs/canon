@@ -1,0 +1,39 @@
+---
+layout: default-left-nav
+category: Components
+title: Components
+---
+<div class="site-header">
+  <div class="site-header-content">
+    <div class="rs-container">
+      <div class="site-header-title-secondary">{{page.title}}</div>
+      <p class="site-header-title-sub">Reusable elements built to meet basic web app needs.</p>
+    </div>
+  </div>
+</div>
+<div class="rs-body">
+  <div class="rs-container">
+    <div class="rs-main">
+      <div class="rs-content rs-panel">
+        <div class="rs-detail-section">
+          <div class="rs-detail-section-body">
+            <p>Components are reusable elements that can be combined to form Pages or Page Templates. If you are using these for the first time, please read through the component details carefully. If you need new components/patterns for your app or if would like to participate in creating additional ones, please let us know.</p>
+            <ul class="rs-card-list" style="margin-top: 2em;">{% for component in site.pages %}{% if component.layout == 'secondary-page' %}
+              <li class="rs-card">
+                <div class="rs-card-header">
+                  <div class="rs-card-title"><a href="{{site.baseurl}}{{component.url}}">{{ component.title }}</a></div>
+                </div>
+                <div class="rs-card-body">
+                  <div class="rs-text-center">
+                    <a href="{{site.baseurl}}{{component.url}}"><img src="{{site.baseurl}}/img/thumbnails/{{ component.title | downcase | replace: ' ','-'}}.svg"></a>
+                  </div>
+                </div>
+                <div class="rs-card-footer"></div>
+              </li>{% endif %}{% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
