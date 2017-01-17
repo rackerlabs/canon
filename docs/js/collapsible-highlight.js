@@ -9,7 +9,7 @@ $(document).ready(function() {
       highlight.removeClass('hover');
     });
 
-    var toggle = $('<span class="rs-toggle">Expand</span>');
+    var toggle = $('<span class="rs-toggle">Expand <i class="rs-icon rs-icon-arrow-down"></i></span>');
 
     highlight.append(toggle);
 
@@ -18,9 +18,9 @@ $(document).ready(function() {
       var isExpanded = link.closest('.collapsible-highlight').hasClass('expanded');
 
       if(isExpanded) {
-        link.text('Expand').closest('.collapsible-highlight').removeClass('expanded');
+        link.html('Expand <i class="rs-icon rs-icon-arrow-down"></i>').closest('.collapsible-highlight').removeClass('expanded');
       } else {
-        link.text('Collapse').closest('.collapsible-highlight').addClass('expanded');
+        link.html('Collapse <i class="rs-icon rs-icon-arrow-up"></i>').closest('.collapsible-highlight').addClass('expanded');
       }
     });
   });
