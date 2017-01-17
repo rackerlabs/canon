@@ -1,0 +1,47 @@
+.rs-inner > .rs-breadcrumbs,
+.rs-detail-header > .rs-breadcrumbs {
+  position: absolute;
+  top: 0;
+}
+
+.rs-breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: $zindexNavSecondary;
+}
+
+.rs-breadcrumb-item {
+  @extend .rs-pull-left;
+  position: relative;
+  margin-right: 1em;
+
+  &:after {
+    content: "\e902";
+    position: absolute;
+    left: 100%;
+    top: 0.33em;
+    font-size: 0.5em;
+    @extend .rs-icon;
+    @extend .rs-icon-arrow-right;
+    color: $grey500;
+    margin: 0 0.4em;
+  }
+
+  &:last-child {
+    color: $grey700;
+
+    &:after {
+      content:'';
+      display: none;
+    }
+  }
+}
+
+.rs-breadcrumb-text,
+.rs-breadcrumb-link {
+  font-family: 'Roboto Regular';
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
