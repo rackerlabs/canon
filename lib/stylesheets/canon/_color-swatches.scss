@@ -1,0 +1,71 @@
+@mixin colorPalette($colorName, $hexCode) {
+  .fill-#{$colorName} {
+    background-color: $hexCode;
+
+    &.hex-code:before {
+      content: "" + $hexCode;
+    }
+
+    &.color-name:after {
+      content: "" + $colorName;
+    }
+  }
+}
+
+@include colorPalette('cyan50',$cyan50);
+@include colorPalette('cyan100',$cyan100);
+@include colorPalette('cyan500',$cyan500);
+@include colorPalette('cyan700',$cyan700);
+@include colorPalette('cyan900',$cyan900);
+
+@include colorPalette('blue50',$blue50);
+@include colorPalette('blue100',$blue100);
+@include colorPalette('blue500',$blue500);
+@include colorPalette('blue700',$blue700);
+@include colorPalette('blue900',$blue900); 
+
+@include colorPalette('magenta50',$magenta50);
+@include colorPalette('magenta100',$magenta100);
+@include colorPalette('magenta500',$magenta500);
+@include colorPalette('magenta700',$magenta700);
+@include colorPalette('magenta900',$magenta900); 
+
+@include colorPalette('purple50',$purple50);
+@include colorPalette('purple100',$purple100);
+@include colorPalette('purple500',$purple500);
+@include colorPalette('purple700',$purple700);
+@include colorPalette('purple900',$purple900); 
+
+@include colorPalette('orange50',$orange50);
+@include colorPalette('orange100',$orange100);
+@include colorPalette('orange500',$orange500);
+@include colorPalette('orange700',$orange700);
+@include colorPalette('orange900',$orange900);
+
+@include colorPalette('green500',$green500);
+@include colorPalette('green700',$green700);
+@include colorPalette('green900',$green900);
+
+@include colorPalette('yellow500',$yellow500);
+@include colorPalette('yellow700',$yellow700);
+@include colorPalette('yellow900',$yellow900);
+
+@include colorPalette('red500',$red500);
+@include colorPalette('red700',$red700);
+@include colorPalette('red900',$red900);
+
+@include colorPalette('grey0',$grey0);
+@include colorPalette('grey25',$grey25);
+@include colorPalette('grey50',$grey50);
+@include colorPalette('grey100',$grey100);
+@include colorPalette('grey200',$grey200);
+@include colorPalette('grey300',$grey300);
+@include colorPalette('grey400',$grey400);
+@include colorPalette('grey500',$grey500);
+@include colorPalette('grey600',$grey600);
+@include colorPalette('grey700',$grey700);
+@include colorPalette('grey800',$grey800);
+@include colorPalette('grey900',$grey900);
+@include colorPalette('grey950',$grey950);
+@include colorPalette('grey975',$grey975);
+@include colorPalette('grey1000',$grey1000);
