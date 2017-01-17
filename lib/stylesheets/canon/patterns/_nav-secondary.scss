@@ -1,26 +1,21 @@
 .rs-nav-secondary {
 	min-height: $app-nav-secondary-height;
-	z-index: $zindexNavSecondary;
-	@include noise;
-
-	.rs-nav {
-		@include seam;
-	}
+	z-index: $zindexNavPrimary - 1;
+	background-color: $grey950;
 
 	.rs-nav-link {
 		padding: 2px 6px;
-		color: $nav-primary-link;
+		color: $grey600;
 		text-decoration: none;
-		text-shadow: 0 1px $white;
 	}
 
 	.rs-nav-item {
   	float: left;
-		margin: 5px 30px 5px 0;
-		font-size: 14px;
-		font-weight: 600;
-		font-family: $alt-font-family;
+		margin: 8px 30px 5px 0;
 		position: relative;
+		@extend .extra-small;
+		letter-spacing: .1em;
+		text-transform: uppercase;
 
 		&:first-child {
 			margin-left: 0px;
@@ -30,23 +25,22 @@
   	&.hover {
   		& > a,
   		.rs-nav-link {
-				color: $nav-primary-link-hover;
+				color: $grey50;
   		}
   	}
 
 		&.active {
 			& > a,
 			.rs-nav-link {
-				color: $red;
+				color: $grey0;
 			}
 		}
 
 		&.disabled {
 			& > a,
 			.rs-nav-link {
-				color: #bbb;
+				color: $grey900;
 				cursor: default;
-        text-shadow: 0 1px #f5f5f5;
 			}
 		}
   }
