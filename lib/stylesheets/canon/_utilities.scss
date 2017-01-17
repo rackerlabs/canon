@@ -1,6 +1,5 @@
 .rs-panel {
-  background: $white;
-  box-shadow: #c2c2c2 0px 3px 8px 1px;
+  background: $grey50;
 }
 
 .rs-pull-left, %rs-pull-left {
@@ -18,7 +17,7 @@
 }
 
 .rs-quiet {
-  color: $grey400;
+  color: $grey600;
   font-weight: normal;
 }
 
@@ -46,4 +45,8 @@
 
 .rs-invisible {
   visibility: hidden;
+}
+
+.rs-text-center {
+  text-align: center;
 }
