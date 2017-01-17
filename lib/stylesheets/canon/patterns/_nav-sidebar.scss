@@ -1,0 +1,128 @@
+.rs-sidebar.rs-nav {
+  padding-top: 2.5em;
+  background-color: $grey975;
+  overflow-y: auto;
+
+  &.rs-sidebar-fixed {
+    position: fixed;
+    top: $app-nav-utility-height;
+  }
+
+  .rs-caret {
+    color: $grey400;
+    float: right;
+    font-size: 0.5em;
+  }
+
+  .rs-nav-item {
+    float: none;
+
+    &.active {
+      > .rs-nav-link {
+        background-color: $grey950;
+        color: $grey0;
+      }
+    }
+  }
+
+  .rs-nav-link {
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-size: 1em;
+    color: $grey400;
+    padding-top: 0.28em;
+    padding-right: 1em;
+    padding-bottom: 0.28em;
+
+    @include responsive(){
+    width: auto;
+    @include min-screen($large){
+      & {
+        padding-left: $xlarge-padding;
+      }
+    }
+
+    @include max-screen($large){
+      & {
+        padding-left: $large-padding;
+      }
+    }
+
+    @include max-screen($medium){
+      & {
+        padding-left: $medium-padding;
+      }
+    }
+
+    @include max-screen($small){
+      & {
+        padding-left: $small-padding;
+      }
+    }
+
+  }
+
+    &:hover,
+    &.hover {
+      background-color: $grey900;
+      color: $grey0;
+    }
+  }
+
+  .rs-sidebar-accordion {
+    display: block;
+    float: none;
+
+    &.active {
+      .rs-caret {
+        @extend .rs-icon-arrow-up;
+      }
+    }
+  }
+
+  .rs-sidebar-accordion-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &.hidden {
+      display: none;
+    }
+
+    .rs-nav-link {
+      text-transform: none;
+      padding: 0.24em;
+
+      @include responsive(){
+      width: auto;
+      @include min-screen($large){
+        & {
+          padding-left: $xlarge-padding + 1;
+        }
+      }
+
+      @include max-screen($large){
+        & {
+          padding-left: $large-padding + 1;
+        }
+      }
+
+      @include max-screen($medium){
+        & {
+          padding-left: $medium-padding + 1;
+        }
+      }
+
+      @include max-screen($small){
+        & {
+          padding-left: $small-padding + 1;
+        }
+      }
+
+    }
+    }
+  }
+}
+
