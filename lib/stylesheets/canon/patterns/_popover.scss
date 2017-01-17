@@ -1,55 +1,59 @@
 .rs-popover {
   position: absolute;
-  max-width: 700px;
+  max-width: 45em;
   z-index: $zindexPopovers;
+  border: 1px $grey300 solid;
 
-  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  form,
+  .rs-form,
+  .rs-form-horizontal,
+  .rs-form-vertical {
+    margin-bottom: 0;
+  }
 }
 
 .rs-popover-arrow {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 0.875em;
+  height: 0.875em;
   z-index: $zindexPopovers - 10;
-  background-color: $white;
-  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  border: 1px $grey300 solid;
+  background-color: $grey0;
   transform: rotate(45deg);
 }
 
 .rs-popover-arrow-top-left {
   top: -6px;
-  left: 24px;
+  left: 1.5em;
 }
 
 .rs-popover-arrow-top-right {
   top: -6px;
-  right: 24px;
+  right: 1.5em;
 }
 
 .rs-popover-arrow-left-top {
-  top: 24px;
+  top: 1.5em;
   left: -6px;
 }
 
 .rs-popover-arrow-right-top {
-  top: 24px;
+  top: 1.5em;
   right: -6px;
 }
 
 .rs-popover-content {
   position: relative;
-  background-color: $white;
+  background-color: $grey0;
   z-index: $zindexPopovers;
 }
 
 .rs-popover-body {
-  padding: 20px 20px 0;
-  margin: 0 0 20px;
+  padding: 1.5em 1.5em 0;
+  margin: 0 0 0.75em;
 }
 
 .rs-popover-footer {
-  padding: 10px 20px;
+  padding: 0.75em 1.5em 1.5em 1.5em;
   margin: 0;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
 }
