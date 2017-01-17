@@ -72,10 +72,11 @@ check_node_version () {
 
   version="$(node --version)"
 
-  if ! [[ "$version" =~ "v2" || "$version" =~ "v0.10" ]]; then
-    error "\nCanon requires Node 0.10.0 (or higher) or iojs 2.0.0 (or higher). Please update Node and try again.\n"
-    exit 1
-  fi
+  #if ! [[ "$version" =~ "v2" || "$version" =~ "v0.10" ]]; then
+    #error "\nCanon requires Node 0.10.0 (or higher) or iojs 2.0.0 (or higher). Please update Node and try again.\n"
+    #exit 1
+  #fi
+
 }
 
 install_grunt () {
