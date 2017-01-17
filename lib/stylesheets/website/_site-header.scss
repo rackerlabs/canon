@@ -1,0 +1,48 @@
+.site-header,
+.site-header-secondary-page {
+  min-height: 21.875em;
+  background: url('../img/helix-header.svg') no-repeat center -1px;
+}
+
+.rs-fixed-top+.site-header {
+  margin-top: $app-nav-utility-height;
+}
+
+.site-header-title-pre {
+  font-size: 0.25em;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.site-header-title-sub {
+  text-align: center;
+  font-family: 'Roboto Light';
+}
+
+.site-header-title-primary {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  font-family: 'Roboto Thin';
+  font-size: 4em;
+  color: $grey975;
+  text-transform: uppercase;
+}
+
+.site-header-title-secondary {
+  @extend .site-header-title-primary;
+  margin-top: 2.25em;
+}
+
+.site-header-info-links {
+  a, span {
+    margin: 0 1em;
+    font-family: 'Roboto Light';
+    text-transform: uppercase;
+    font-size: 0.875em;
+  }
+}
+
+.site-header-home {
+
+}

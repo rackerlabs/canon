@@ -14,6 +14,38 @@ pre {
 	padding: 0;
 }
 
+.highlight {
+  pre {
+    max-height: 20em;
+    overflow: auto;
+    padding: 1em;
+    width: auto;
+  }
+}
+
+.rs-toggle {
+  @extend a;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  cursor: pointer !important;
+
+  .rs-icon {
+    font-size: 0.25em;
+  }
+}
+
+.collapsible-highlight {
+  pre {
+    height: 4em;
+  }
+
+  &.expanded {
+    pre {
+      height: auto;
+    }
+  }
+}
+
 code {
 	font-family: "Courier New", Courier, mono;
 }
@@ -24,21 +56,21 @@ pre .tag .title,
 pre .lisp .title,
 pre .clojure .built_in,
 pre .nginx .title {
-  color: #3281D4;
+  color: $blue700;
 }
 
-/* blue = color: #3281D4; */
-/* teal = color: #00C680; */
-/* orange = color: #E95321; */
+/* blue = color: $blue700; */
+/* teal = color: $cyan500; */
+/* orange = color: $orange700; */
 
 pre .attribute, .na
 {
-	color: #00C680;
+	color: $cyan500;
 }
 
 pre .tag .title
 {
-	color: #3281D4;
+	color: $blue700;
 }
 
 pre .string,
@@ -65,7 +97,7 @@ pre .tex .command,
 pre .tex .special,
 pre .erlang_repl .function_or_atom,
 pre .markdown .header, .s {
-  color: #E95321;
+  color: $orange700;
 }
 
 pre .comment,
@@ -87,7 +119,7 @@ pre .go .constant,
 pre .change,
 pre .markdown .bullet,
 pre .markdown .link_url {
-  color: #E95321;
+  color: $orange700;
 }
 
 pre .label,

@@ -1,0 +1,10 @@
+.show-grid {
+  [class*="span-"] {
+    background-color: $blue50;
+    border: 1px $blue100 solid;
+  }
+
+  .rs-row {
+    margin-bottom: 1em;
+  }
+}
