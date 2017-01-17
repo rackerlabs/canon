@@ -3,15 +3,16 @@
 @import "settings";
 @import "mixins";
 @import "custom-fonts";
+@import "icons";
 
-@import "spritesheet";
-@import "sprites";
 @import "base";
 @import "grid";
 @import "layout";
 @import "utilities";
+@import "flex-box";
 @import "animations";
 
+@import "patterns/breadcrumbs";
 @import "patterns/buttons";
 @import "patterns/detail-view";
 @import "patterns/footer";
@@ -24,6 +25,7 @@
 @import "patterns/nav-primary";
 @import "patterns/nav-secondary";
 @import "patterns/nav-utility";
+@import "patterns/nav-sidebar";
 @import "patterns/nav-fixed";
 @import "patterns/popover";
 @import "patterns/progress";
@@ -34,3 +36,6 @@
 @import "patterns/facets";
 @import "patterns/cascade";
 @import "patterns/messages";
+@import "patterns/card-list";
+
+@import "color-swatches";
