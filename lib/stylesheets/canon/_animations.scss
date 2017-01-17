@@ -2,30 +2,30 @@
 
 @keyframes heartbeat_success
 {
-	@include heartbeat($white,$green50,$white);
+	@include heartbeat(transparent,$green500,transparent);
 }
 
 @-webkit-keyframes heartbeat_success
 {
-	@include heartbeat($white,$green50,$white);
+	@include heartbeat(transparent,$green500,transparent);
 }
 
 @keyframes heartbeat_warning
 {
-	@include heartbeat($white,$yellow50,$white);
+	@include heartbeat(transparent,$yellow500,transparent);
 }
 
 @-webkit-keyframes heartbeat_warning
 {
-	@include heartbeat($white,$yellow50,$white);
+	@include heartbeat(transparent,$yellow500,transparent);
 }
 
 @keyframes heartbeat_error
 {
-	@include heartbeat($white,$red50,$white);
+	@include heartbeat(transparent,$red500,transparent);
 }
 
 @-webkit-keyframes heartbeat_error
 {
-	@include heartbeat($white,$red50,$white);
+	@include heartbeat(transparent,$red500,transparent);
 }
