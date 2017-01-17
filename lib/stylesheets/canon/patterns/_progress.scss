@@ -1,53 +1,40 @@
+$progress-bar-height: 0.25em;
+
 .rs-progress {
   position: relative;
-  padding: 2px 1px 2px 2px;
-  max-width: 600px;
+  max-width: 37em;
   @include clearfix;
-}
-
-.rs-progress::before,
-.rs-progress::after {
-  position: absolute;
-  display: block;
-  content: '';
-}
-
-.rs-progress::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 15px;
-  border: 1px solid $grey300;
-}
-
-.rs-progress::after {
-  top: 1px;
-  left: 1px;
-  right: 1px;
-  height: 13px;
-  border: 1px solid $white;
+  vertical-align: text-top;
+  margin-bottom: 0.4em;
 }
 
 .rs-progress-inner {
-  height: 13px;
-  background-color: #eee;
+  height: $progress-bar-height;
+  background-color: $grey200;
   position: relative;
-  z-index: 1;
 }
 
 .rs-segment {
   float: left;
   transition-property: width;
   transition-duration: 1s;
+
+  &+.rs-segment .rs-bar:before {
+    content: '';
+    height: $progress-bar-height;
+    position: absolute;
+    left: 0;
+    border-left: 2px $grey50 solid;
+  }
 }
 
 .rs-bar {
-  height: 13px;
-  border-right: 1px solid $white;
+  height: $progress-bar-height;
+  position: relative;
 }
 
 .rs-bar-info, .rs-bar.rs-status-info  {
-  background: $blue;
+  background: $blue500;
 
   &.rs-bar-striped {
     background: image-url('progress-background-info.gif');
@@ -55,7 +42,7 @@
 }
 
 .rs-bar-ok, .rs-bar.rs-status-ok {
-  background: $green;
+  background: $green700;
 
   &.rs-bar-striped {
     background: image-url('progress-background-success.gif');
@@ -63,7 +50,7 @@
 }
 
 .rs-bar-processing, .rs-bar.rs-status-warning {
-  background: $yellow;
+  background: $yellow900;
 
   &.rs-bar-striped {
     background: image-url('progress-background-warning.gif');
@@ -71,7 +58,7 @@
 }
 
 .rs-bar-error, .rs-bar.rs-status-error {
-  background: $red;
+  background: $red700;
 
   &.rs-bar-striped {
     background: image-url('progress-background-error.gif');
@@ -80,15 +67,15 @@
 
 
 .rs-caption {
-  margin-top: 2px;
-  color: lighten($grey600, 20%);
-  font-size: 11px;
+  margin-top: 0.125em;
+  color: $grey600;
+  @extend .extra-small;
   text-align: center;
 }
 
 .rs-progress-label {
-  margin-right: 6px;
-  display: inline;
+  @extend .extra-small;
+  margin-bottom: 0.25em;
 }
 
 @mixin set-variable-width-progress($width) {
@@ -98,26 +85,26 @@
 
   + .rs-progress-label {
     margin-right: 0;
-    margin-left: 6px;
+    margin-left: 0.625em;
   }
 }
 
 .rs-progress-xsmall {
-  @include set-variable-width-progress(50px)
+  @include set-variable-width-progress(4em)
 }
 
 .rs-progress-small {
-  @include set-variable-width-progress(100px)
+  @include set-variable-width-progress(8em)
 }
 
 .rs-progress-medium {
-  @include set-variable-width-progress(200px)
+  @include set-variable-width-progress(12em)
 }
 
 .rs-progress-large {
-  @include set-variable-width-progress(300px)
+  @include set-variable-width-progress(16em)
 }
 
 .rs-progress-xlarge {
-  @include set-variable-width-progress(400px)
+  @include set-variable-width-progress(20em)
 }
