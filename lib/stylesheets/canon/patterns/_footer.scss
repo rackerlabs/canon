@@ -1,8 +1,11 @@
 .rs-footer,
 .rs-nav-footer {
-  color: $grey400;
-  font-size: 13px;
-  background: $grey600;
+  color: $grey600;
+  @extend .small;
+  background: $grey1000;
+  height: $app-footer-height;
+  overflow: hidden;
+  position: relative;
 
   a {
     color: $grey300;
