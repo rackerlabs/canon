@@ -6,220 +6,225 @@ input::-moz-focus-inner {
 }
 
 .rs-btn {
-  padding: 2px 10px 1px;
+  padding: 0.5em 0.875em;
   margin: 0;
-  color: $grey600;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+  color: $cyan900;
   text-align: center;
   vertical-align: middle;
-  background-color: #c5c5c5;
-  border: 1px solid $grey400;
+  background-color: transparent;
   cursor: pointer;
   white-space: nowrap;
-
+  line-height: 1em;
+  text-transform: uppercase;
+  border: 1px $cyan900 solid;
   @include inline-block;
-  background-image: linear-gradient($white, #c5c5c5);
-  border-radius: 3px;
-  text-shadow: 0 1px 1px $white;
+  border-radius: 2px;
+  outline: none !important;
+  font-weight: 400;
+  @extend .small;
 
   &:hover,
   &.hover {
     text-decoration: none;
-    color: $grey600;
-    background-color: #d7d7d7;
-
-    background-image: linear-gradient($white, #d7d7d7);
+    background-color: $cyan500;
+    border-color: $cyan500;
+    color:$grey0;
   }
 
   &:active,
   &.active {
-    background: #f3f3f3;
-
-    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+    background: $cyan900;
+    border-color: $cyan900;
+    color: $grey0;
   }
 
   &[disabled],
   &.disabled {
-    color: $grey300;
-    background: #f5f5f5;
+    color: $grey800;
+    background: $grey300;
     border-color: $grey300;
     cursor: default;
 
-    box-shadow: none;
+    &.loading {
+      position: relative;
+      padding-right: 2em;
+
+      &:after {
+        position: absolute;
+        right: 0.5em;
+        top: 0.45em;
+        display: block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-image: url('icon-loading-circle.svg');
+        animation: spin 0.75s linear infinite;
+      }
+    }
   }
+
+  &.rs-btn-large {
+    font-size: 1em;
+    padding: 16px;
+  }
+
+  &.rs-btn-small {
+    @extend .extra-small;
+    padding: 4px 8px;
+  }
+
 }
 
 .rs-btn-primary {
-  color: $white;
-  background-color: #333;
-  border: 1px solid #333;
-
-  background-image: linear-gradient(#666, #333);
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
-
-  &:hover,
-  &.hover {
-    background-color: #555;
-    color: $white;
-
-    background-image: linear-gradient(#777, #555);
-  }
-
-  &:active,
-  &.active {
-    background: #666;
-
-    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.6);
-  }
-
-  &[disabled],
-  &.disabled {
-    color: #ccc;
-    background: #999;
-    border-color: #666;
-    box-shadow: none;
-  }
+  color: $grey0;
+  background: $cyan900;
+  border-color: $cyan900;
 }
 
 .rs-btn-login {
-  color: $white;
-  background-color: #a60004;
-  border: 1px solid #a60004;
+  color: $grey0;
+  background-color: $red900;
+  border-color: $red900;
 
-  background-image: linear-gradient(#d81436, #a60004);
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
 
   &:hover,
   &.hover {
-    background-color: #c40022;
-    color: $white;
-
-    background-image: linear-gradient(#d81436, #c40022);
+    background-color: $red700;
+    border-color: $red700;
+    color: $grey0;
   }
 
   &:active,
   &.active {
-    background: #d81436;
-
-    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.6);
+    background-color: $red900;
+    border-color: $red900;
   }
 
   &[disabled],
   &.disabled {
-    color: #df9faa;
-    background: #d81436;
-    border-color: #a60004;
-    box-shadow: none;
+    color: $grey800;
+    background: $grey300;
+    border-color: $grey300;
+    cursor: default;
   }
 }
 
 .rs-link {
   display: inline;
   padding: 0;
-  color: $blue;
+  color: $cyan900;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
 
   &:hover,
   &.hover {
+    color: $cyan500;
     text-decoration: underline;
+    border: 1px solid transparent;
   }
 
   &[disabled],
   &.disabled {
     text-decoration: none;
-    color: $grey300;
+    color: $grey600;
+    border: 1px solid transparent;
   }
 }
 
 .rs-btn-link {
-  height: 25px;
   padding-left: 0;
   padding-right: 0;
-  color: $blue;
+  color: $cyan900;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
 
   &:hover,
   &.hover {
     text-decoration: underline;
     background: transparent;
-    color: $blue;
+    color: $cyan500;
+    border: 1px solid transparent;
   }
 
   &:active,
   &.active {
+    color: $cyan500;
     background: transparent;
-    box-shadow: none;
+    border: 1px solid transparent;
   }
 
   &[disabled],
   &.disabled {
     text-decoration: none;
     background: transparent;
-    color: $grey300;
+    color: $grey600;
+    border: 1px solid transparent;
   }
 }
 
-.rs-cog {
+.rs-cog, a.rs-cog {
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  opacity: 0.5;
+  color: $grey975;
+  outline: none;
+  
+  @extend .rs-icon;
+  @extend .rs-icon-action-cog;
 
-  @include inline-block;
-  @include sprite($cog, 16px, 16px);
-  @include hide-text-content();
+  text-decoration: none;
 
   &:active,
   &.active,
   &:hover,
   &.hover {
-    @include sprite-position($cog-hover);
+    opacity: 1;
+    text-decoration: none;
   }
 
   &[disabled],
   &.disabled {
     cursor: default;
-    @include sprite-position($cog-disabled);
+    opacity: 0.3;
   }
 }
 
-.rs-plus {
-  width: 12px;
-  height: 12px;
+.rs-plus, a.rs-plus {
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: $grey975;
+  opacity: 0.5;
 
-  @include inline-block;
-  @include sprite-image($plus-dotted-grey);
-  @include sprite-position($plus-dotted-grey);
-  @include hide-text-content();
+  @extend .rs-icon;
+  @extend .rs-icon-add;
 
   &:active,
   &.active,
   &:hover,
   &.hover {
-    @include sprite-position($plus-dotted-blue);
+    opacity: 1;
+    text-decoration: none;
   }
 }
 
-.rs-delete {
+.rs-delete, a.rs-delete {
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
+  color: $grey975;
+  opacity: 0.5;
 
-  @include inline-block;
-  @include sprite($minus-circle-808080, 16px, 16px);
-  @include hide-text-content();
+  @extend .rs-icon;
+  @extend .rs-icon-remove-circle;
 
   &:active,
   &.active,
@@ -227,43 +232,64 @@ input::-moz-focus-inner {
   &.hover,
   &:focus,
   &.focus {
-    @include sprite-position($minus-circle-red);
+    color: $red900;
+    opacity: 1;
+    text-decoration: none;
   }
 }
 
 .rs-caret {
-  @include inline-block;
-  @include sprite($caret, 10px, 10px);
+  @extend .rs-icon;
+  @extend .rs-icon-arrow-down;
+  outline: none;
+  color: $grey975;
 
   &[disabled],
   &.disabled {
     cursor: default;
-    @include sprite-position($caret-disabled);
+    opacity: 0.3;
   }
 }
 
 .rs-btn-action {
   > .rs-cog {
-    margin-top: -2px;
-    margin-right: 1px;
-    @include sprite($cog-small, 13px, 13px);
+    margin-right: 0.25em;
+    color: $cyan900;
+    opacity: 1;
+    line-height: 1em;
   }
 
   > .rs-caret {
-    margin-top: 2px;
-    margin-left: 1px;
+    font-size: 0.5em;
+    color: $cyan900;
+    margin-left: 0.875em;
+    line-height: 0.5em;
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &.hover,
+  &:active,
+  &.active {
+    > .rs-caret,
+    > .rs-cog {
+      color: $grey0;
+    }
   }
 
   &[disabled],
   &.disabled {
+
+    color: $grey600;
+
     > .rs-cog {
       cursor: default;
-      @include sprite-position($cog-small-disabled);
+      color: $grey600;
     }
 
     > .rs-caret {
       cursor: default;
-      @include sprite-position($caret-disabled);
+      color: $grey600;
     }
   }
 }
@@ -289,33 +315,40 @@ input::-moz-focus-inner {
   background-image: url('processing-indicator.gif');
 }
 
-.rs-edit {
+.rs-edit, a.rs-edit {
   margin: 0;
-  padding: 0;
+  padding: 0.25em;
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
+  opacity: 0.5;
+  color: $grey975;
+  background-color: transparent;
+  outline: none;
+  border-radius: 2px;
 
-  @include sprite($pencil-666, 19px, 19px);
-  @include inline-block();
-  @include hide-text-content();
+  @extend .rs-icon;
+  @extend .rs-icon-edit;
 
   &:hover,
   &.hover {
     border-color: #d8d8d8;
+    opacity: 1;
+    text-decoration: none;
   }
 
   &:active,
   &.active {
     border-color: transparent;
+    opacity: 0.5;
+    text-decoration: none;
   }
 
   &[disabled],
   &.disabled {
     border-color: transparent;
     cursor: default;
-
-    @include sprite-position($pencil-999);
+    opacity: 0.3;
   }
 }
 
@@ -326,18 +359,18 @@ input::-moz-focus-inner {
   margin-left: 13px;
 }
 
-.rs-close {
-  width: 16px;
-  height: 16px;
+.rs-close, a.rs-close {
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
+  color: $grey975;
+  opacity: 0.5;
 
-  @include inline-block;
-  @include sprite($light-grey-x, 16px, 16px);
-  @include hide-text-content();
+  @extend .rs-icon;
+  @extend .rs-icon-close;
 
   &:active,
   &.active,
@@ -345,6 +378,7 @@ input::-moz-focus-inner {
   &.hover,
   &:focus,
   &.focus {
-    @include sprite($grey-x, 16px, 16px);
+    opacity: 1;
+    text-decoration: none;
   }
 }
