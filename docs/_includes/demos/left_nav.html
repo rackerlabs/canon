@@ -1,0 +1,11 @@
+<ul class="rs-sidebar rs-nav">{% for item_hash in site.data.managed-aws-primary-nav %}{% assign item_name = item_hash[0] %}{% assign item = item_hash[1] %}{% if item.children.size > 0 %}
+  <li class="rs-sidebar-accordion{% if page.primary == item_name %} active{% endif %}">
+    <a class="rs-nav-link rs-sidebar-accordion-toggle" href="javascript:void(0);">{{item_name}} <i class="rs-caret"></i></a>
+    <ul class="rs-sidebar-accordion-menu{% if page.primary == item_name %} visible{% else %} hidden{% endif %}">{% for child_hash in item.children %}{% assign child_name = child_hash[0] %}{% assign child = child_hash[1] %}
+      <li class="rs-nav-item"><a class="rs-nav-link" href="{{site.baseurl}}/{{ child.url }}">{{child_name}}</a></li>{% endfor %}
+    </ul>
+  </li>{% else %}
+  <li class="rs-nav-item{% if page.primary == item_name %} active{% endif %}">
+    <a class="rs-nav-link" href="{{site.baseurl}}/{{item.url}}">{{item_name}}</a>
+  </li>{% endif %}{% endfor %}
+</ul>
