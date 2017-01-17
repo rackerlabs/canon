@@ -16,23 +16,26 @@
 }
 
 .rs-status-list-item .rs-icon-status {
-	width: 6px;
-	height: 6px;
-	margin: 3px;
+	@extend .rs-icon;
+  @extend .extra-small;
+  margin: 0 0.25em 0.25em 0;
+  line-height: 1em;
 }
 
-.rs-icon-status.rs-status-ok {
-  background-color: $green;
-}
+.rs-icon-status {
+  &.rs-status-ok {
+    @extend .rs-icon-check-mark;
+  }
 
-.rs-icon-status.rs-status-warning {
-  background-color: $yellow;
-}
+  &.rs-status-warning {
+    @extend .rs-icon-warning;
+  }
 
-.rs-icon-status.rs-status-error {
-  background-color: $red;
-}
+  &.rs-status-error {
+    @extend .rs-icon-error;
+  }
 
-.rs-icon-status.rs-status-disabled {
-  background-color: $grey300;
+  &.rs-status-disabled {
+    @extend .rs-icon-help;
+  }
 }
