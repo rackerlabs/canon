@@ -81,14 +81,7 @@ early access channels. These builds are intended for use in production
 environments. Builds in this channel follow semantic versioning and are available
 for download at:
 
-https://7b55017658fb54181c3d-df1fe79b1b140fae9a2887c9575df1c1.ssl.cf5.rackcdn.com/stable/vX.X.X/canon.css
-
-In addition to specific versions, the latest minor and patch release are
-available so that you can automatically take advantage of the latest features
-and bug fixes.
-
-* https://7b55017658fb54181c3d-df1fe79b1b140fae9a2887c9575df1c1.ssl.cf5.rackcdn.com/stable/vX/canon.css
-* https://7b55017658fb54181c3d-df1fe79b1b140fae9a2887c9575df1c1.ssl.cf5.rackcdn.com/stable/vX.X/canon.css
+https://d2f1vphzg44t28.cloudfront.net/stable/vX.X.X/canon.min.css
 
 ### Development
 
@@ -97,4 +90,4 @@ for every single commit to Canon's master branch. Do not use these builds in a
 production environment. They are intended for use by early access consumers in
 order to vet potential releases.
 
-* https://7b55017658fb54181c3d-df1fe79b1b140fae9a2887c9575df1c1.ssl.cf5.rackcdn.com/development/GIT-SHA/canon.css
+* https://d2f1vphzg44t28.cloudfront.net/development/GIT-SHA/canon.min.css
