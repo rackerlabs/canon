@@ -1,6 +1,6 @@
 source: "docs"
 destination: "_site"
-baseurl: "http://rackerlabs.github.io/canon"
+baseurl: "//rackerlabs.github.io/canon"
 pygments: true
 permalink: /.tmp/null.html
 markdown: redcarpet
