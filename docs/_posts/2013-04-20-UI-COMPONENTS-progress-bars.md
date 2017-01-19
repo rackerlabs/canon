@@ -200,7 +200,7 @@ tags : [intro, about, canon]
 <h3>Fixed Width + Label</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Most often used in <a href="/ux-patterns/#detail-view">Detail Views</a> when a metric needs to be a fixed size.</p>
+    <p>Most often used in <a href="{{site.baseurl}}/ux-patterns/#detail-view">Detail Views</a> when a metric needs to be a fixed size.</p>
     <p>The label is optional but very useful.</p>
     <p><strong>Available in five sizes:</strong></p>
     <ul>

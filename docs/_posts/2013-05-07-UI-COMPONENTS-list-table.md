@@ -328,7 +328,7 @@ START ROW HEARTBEAT
   <div class="span-3">
     <ul>
       <li>Use the row heartbeat to provide feedback for user-initiated actions on a table row</li>
-      <li>Most often used in the <a href="/ux-patterns/#list-view">List View Pattern</a>, the heartbeat can also be used on embedded tables in a <a href="/ux-patterns/#detail-view">Detail View</a></li>
+      <li>Most often used in the <a href="{{site.baseurl}}/ux-patterns/#list-view">List View Pattern</a>, the heartbeat can also be used on embedded tables in a <a href="{{site.baseurl}}/ux-patterns/#detail-view">Detail View</a></li>
       <li>The Heartbeat is an effective way to show the success, or lack thereof, for events that occur in a table</li>
     </ul>
   </div>
@@ -357,7 +357,7 @@ START FORM ELEMENTS
     </ul>
     <h5>Delete Buttons</h5>
     <ul>
-      <li>Use <a href="/ui-components/#delete-buttons">Delete Buttons</a> to remove simple items from a table without requiring confirmation</li>
+      <li>Use <a href="{{site.baseurl}}/ui-components/#delete-buttons">Delete Buttons</a> to remove simple items from a table without requiring confirmation</li>
       <li>Use when delete is the only action available for an item</li>
       <li>Must be set in the last column of the row</li>
     </ul>

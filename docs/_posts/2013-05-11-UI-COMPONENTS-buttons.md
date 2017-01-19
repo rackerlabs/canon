@@ -260,7 +260,7 @@ tags : [intro, about, canon]
 <h3>Action Buttons</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Use for displaying actions on a Detail View in combination with the <a href="/ui-components/#dropdowns">Action Dropdown</a>.</p><p>The downward pointing rs-caret icon indicates that clicking the button produces a dropdown.</p>
+    <p>Use for displaying actions on a Detail View in combination with the <a href="{{site.baseurl}}/ui-components/#dropdowns">Action Dropdown</a>.</p><p>The downward pointing rs-caret icon indicates that clicking the button produces a dropdown.</p>
   </div>
   <div class="span-8 offset-1">
     <h4>Examples</h4>
@@ -461,7 +461,7 @@ tags : [intro, about, canon]
 <h3>Action Cogs</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Use the rs-cog in combination with the <a href="/ui-components/#dropdowns">Action Dropdown</a>.</p>
+    <p>Use the rs-cog in combination with the <a href="{{site.baseurl}}/ui-components/#dropdowns">Action Dropdown</a>.</p>
     <ul>
       <li>The rs-cog/dropdown combo is used extensively in the List View Pattern to give users a way to perform actions on each row in the list.</li>
       <li>The same list of actions should be available in the <a href="#action-buttons">Action Button</a> in the header of the Detail View.</li>
@@ -530,7 +530,7 @@ tags : [intro, about, canon]
 <div class="rs-row">
   <div class="span-3">
     <ul>
-        <li>Use Delete Buttons to remove a row from a <a href="/ui-components/#table-form-elements">Table</a> without requiring confirmation</li>
+        <li>Use Delete Buttons to remove a row from a <a href="{{site.baseurl}}/ui-components/#table-form-elements">Table</a> without requiring confirmation</li>
         <li>Use when delete is the only action available for an item</li>
         <li>Must be set in the last column of the row</li>
       </ul>
@@ -629,7 +629,7 @@ tags : [intro, about, canon]
 <h3>Edit Button</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Use the rs-edit button in combination with Key/Value lists in the <a href="/ui-components/#details">Details</a> components.</p>
+    <p>Use the rs-edit button in combination with Key/Value lists in the <a href="{{site.baseurl}}/ui-components/#details">Details</a> components.</p>
     <ul>
       <li>When Key/Value items are editable, use the Edit Button to open a popover, modal or new page to update the value.</li>
     </ul>
@@ -696,7 +696,7 @@ tags : [intro, about, canon]
 <h3>Plus Button</h3>
 <div class="rs-row">
   <div class="span-3">
-    <p>Use the rs-plus button in combination with <a href="/ui-components/#monitoring-status-list">Monitoring Status List</a>.</p>
+    <p>Use the rs-plus button in combination with <a href="{{site.baseurl}}/ui-components/#monitoring-status-list">Monitoring Status List</a>.</p>
     <ul>
       <li>If there are no checks on a monitoring-enabled device, use the plus button to let users add checks.</li>
       <li>The Plus Button should spawn a <a href="#popover">Popover</a> for creating a check on the device.</li>
@@ -802,7 +802,7 @@ tags : [intro, about, canon]
     <p>Use a button group to lay out a set of related actions.</p>
     <h4>Guidelines for use</h4>
     <ul>
-      <li>These are most often used in <a href="/ui-components/#popover">Popovers</a> or <a href="/ui-components/#create-form">Create Forms</a> to group the save button and the cancel button</li>
+      <li>These are most often used in <a href="{{site.baseurl}}/ui-components/#popover">Popovers</a> or <a href="{{site.baseurl}}/ui-components/#create-form">Create Forms</a> to group the save button and the cancel button</li>
       <li>A button group should never contain more than one primary button</li>
       <li>The cancel action must always be an <span class="rs-no-wrap">rs-btn-link</span> as shown in the example</li>
     </ul>
